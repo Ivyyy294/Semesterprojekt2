@@ -10,25 +10,19 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d170aec7dfcb81f46b534b51e20e8ab1, type: 3}
-  m_Name: New Narrative
+  m_Name: MyFirstDialog
   m_EditorClassIdentifier: 
   nodeLinks:
-  - baseNodeGuid: 9c10bac8-d1bd-4704-a925-88a4189eb539
+  - baseNodeGuid: 4caf5a8a-30fa-496a-b43a-4f4fa2b6de04
     portName: Next
-    targetNodeGuid: 4caf5a8a-30fa-496a-b43a-4f4fa2b6de04
-  - baseNodeGuid: 4caf5a8a-30fa-496a-b43a-4f4fa2b6de04
-    portName: Hi
     targetNodeGuid: c6ae29b4-0e8e-472a-b0de-9695725816a6
-  - baseNodeGuid: 4caf5a8a-30fa-496a-b43a-4f4fa2b6de04
-    portName: Bye
-    targetNodeGuid: aa1f93da-b92e-4482-b652-6fe094b3ceb7
+  - baseNodeGuid: c6ae29b4-0e8e-472a-b0de-9695725816a6
+    portName: Choice 0
+    targetNodeGuid: cf52200a-92b5-47b5-97a6-927f457968fa
   dialogNodeData:
   - Guid: c6ae29b4-0e8e-472a-b0de-9695725816a6
     DialogText: test2
-    Position: {x: 466, y: 15}
-  - Guid: aa1f93da-b92e-4482-b652-6fe094b3ceb7
-    DialogText: test3
-    Position: {x: 455, y: 214}
-  - Guid: 4caf5a8a-30fa-496a-b43a-4f4fa2b6de04
-    DialogText: test1
-    Position: {x: 226, y: 62}
+    Position: {x: 256, y: 189}
+  - Guid: cf52200a-92b5-47b5-97a6-927f457968fa
+    DialogText: Dialog Node
+    Position: {x: 551, y: 277}

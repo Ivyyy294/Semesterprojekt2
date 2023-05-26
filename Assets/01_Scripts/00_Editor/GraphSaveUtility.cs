@@ -56,7 +56,7 @@ public class GraphSaveUtility
 
 	public void LoadGraph (string fileName)
 	{		
-		 containerCache = UnityEditor.AssetDatabase.LoadAssetAtPath <DialogContainer> (assetFolder + $"{fileName}.asset");
+		containerCache = UnityEditor.AssetDatabase.LoadAssetAtPath <DialogContainer> (assetFolder + $"{fileName}.asset");
 
 		if (containerCache == null)
 		{
@@ -117,7 +117,9 @@ public class GraphSaveUtility
 
 	private void ClearGraph()
 	{
-		Nodes.Find (x => x.entryPoint).GUID = containerCache.nodeLinks[0].baseNodeGuid;
+		//Setzt the root guid if available
+		if (containerCache.nodeLinks.Count > 0)
+			Nodes.Find (x => x.entryPoint).GUID = containerCache.nodeLinks[0].baseNodeGuid;
 
 		foreach (var node in Nodes)
 		{

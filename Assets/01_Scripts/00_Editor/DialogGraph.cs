@@ -12,11 +12,17 @@ public class DialogGraph : EditorWindow
 	private DialogGraphView dialogGraphView;
 	private string fileName = "New Narrative"; 
 
-	[MenuItem ("Graph/Dialog Graph")]
-	public static void OpenDialogGraphWindow()
+	public static void OpenDialogGraphWindow(string assetName)
 	{
-		var window = GetWindow <DialogGraph>();
-		window.titleContent = new GUIContent ("Dialog Graph");
+		if (!string.IsNullOrEmpty (assetName))
+		{
+			var window = GetWindow <DialogGraph>();
+			window.titleContent = new GUIContent ("Dialog Graph [" + assetName + "]");
+			window.fileName = assetName;
+			window.RequestDataOperation (false);
+		}
+		else
+			EditorUtility.DisplayDialog ("Invalid Asset name!", "Please enter a valid file name.", "OK");
 	}
 
 	private void OnEnable()
@@ -26,6 +32,11 @@ public class DialogGraph : EditorWindow
 		GenerateMiniMap();
 	}
 
+	private void OnDisable()
+	{
+		rootVisualElement.Remove (dialogGraphView);
+	}
+
 	private void GenerateMiniMap()
 	{
 		var miniMap = new MiniMap {anchored = true };
@@ -33,10 +44,6 @@ public class DialogGraph : EditorWindow
 		dialogGraphView.Add (miniMap);
 	}
 
-	private void OnDisable()
-	{
-		rootVisualElement.Remove (dialogGraphView);
-	}
 
 	private void ConstructGraphView()
 	{
@@ -49,14 +56,14 @@ public class DialogGraph : EditorWindow
 	{
 		var toolbar = new Toolbar();
 
-		var fileNameTextField = new TextField ("File Name");
-		fileNameTextField.SetValueWithoutNotify (fileName);
-		fileNameTextField.MarkDirtyRepaint();
-		fileNameTextField.RegisterValueChangedCallback (evt => fileName = evt.newValue);
-		toolbar.Add(fileNameTextField);
+		//var fileNameTextField = new TextField ("File Name");
+		//fileNameTextField.SetValueWithoutNotify (fileName);
+		//fileNameTextField.MarkDirtyRepaint();
+		//fileNameTextField.RegisterValueChangedCallback (evt => fileName = evt.newValue);
+		//toolbar.Add(fileNameTextField);
 
 		toolbar.Add (new Button (clickEvent:() => RequestDataOperation(true)) {text = "Save Data"});
-		toolbar.Add (new Button (clickEvent:() => RequestDataOperation(false)) {text = "Load Data"});
+		//toolbar.Add (new Button (clickEvent:() => RequestDataOperation(false)) {text = "Load Data"});
 
 		var nodeCreateButton = new Button ( clickEvent:() =>
 		{

@@ -2,6 +2,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [System.Serializable]
+[CreateAssetMenu (menuName = "Dialog")]
 public class DialogContainer : ScriptableObject
 {
 	public List <NodeLinkData> nodeLinks = new List<NodeLinkData>();

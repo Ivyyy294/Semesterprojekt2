@@ -85,7 +85,9 @@ public class DialogGraphView : GraphView
 		};
 
 		textField.RegisterValueChangedCallback (evt => generatedPort.portName = evt.newValue);
-		generatedPort.contentContainer.Add (new Label ("  "));
+
+		//Invisible Label to enable port drag and drop
+		generatedPort.contentContainer.Add (new Label ("\t\t"));
 		generatedPort.contentContainer.Add (textField);
 
 		var deleteButton = new Button (clickEvent:() => RemovePort (dialogNode, generatedPort))
