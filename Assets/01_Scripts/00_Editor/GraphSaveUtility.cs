@@ -22,11 +22,22 @@ public class GraphSaveUtility
 
 	public void SaveGraph (string fileName)
 	{
+		//Get Asset for saving
+		containerCache = UnityEditor.AssetDatabase.LoadAssetAtPath <DialogContainer> (assetFolder + $"{fileName}.asset");
+
+		if (containerCache == null)
+		{
+			UnityEditor.EditorUtility.DisplayDialog ("File not found!", "Target dialog does not exist!", "OK");
+			return;
+		}
+
+		//No edges no data for saving
 		if (!Edges.Any()) return;
 
 		var dialogContainer = ScriptableObject.CreateInstance <DialogContainer>();
 		var connectedPorts = Edges.Where (x => x.input.node != null).ToArray();
 
+		//Create Link list
 		for (int i = 0; i < connectedPorts.Length; i++)
 		{
 			var outputNode = connectedPorts[i].output.node as DialogNode;
@@ -40,6 +51,7 @@ public class GraphSaveUtility
 			});
 		}
 
+		//Create Node List
 		foreach (var dialogNode in Nodes.Where (node => !node.entryPoint))
 		{
 			dialogContainer.dialogNodeData.Add (new DialogNodeData
@@ -52,12 +64,15 @@ public class GraphSaveUtility
 			});
 		}
 
-		UnityEditor.AssetDatabase.CreateAsset (dialogContainer, assetFolder + $"{fileName}.asset");
+		//Update Scriptable Object
+		containerCache.dialogNodeData = dialogContainer.dialogNodeData;
+		containerCache.nodeLinks = dialogContainer.nodeLinks;
 		UnityEditor.AssetDatabase.SaveAssets();
 	}
 
 	public void LoadGraph (string fileName)
 	{		
+		//Get Asset for loading
 		containerCache = UnityEditor.AssetDatabase.LoadAssetAtPath <DialogContainer> (assetFolder + $"{fileName}.asset");
 
 		if (containerCache == null)
