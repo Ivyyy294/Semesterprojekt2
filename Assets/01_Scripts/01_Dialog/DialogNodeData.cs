@@ -4,6 +4,7 @@ using UnityEngine;
 public class DialogNodeData
 {
 	public string Guid;
+	public string DialogTitle;
 	public string DialogText;
 	public Vector2 Position;
 }

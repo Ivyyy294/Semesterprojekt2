@@ -46,7 +46,9 @@ public class GraphSaveUtility
 			{
 				Guid = dialogNode.GUID,
 				DialogText = dialogNode.dialogText,
-				Position = dialogNode.GetPosition().position
+				Position = dialogNode.GetPosition().position,
+				DialogTitle = dialogNode.title
+				
 			});
 		}
 
@@ -105,9 +107,7 @@ public class GraphSaveUtility
 	{
 		foreach (var nodeData in containerCache.dialogNodeData)
 		{
-			var tmpNode = targetGraphView.CreateDialogNode (nodeData.DialogText);
-			tmpNode.GUID = nodeData.Guid;
-			tmpNode.dialogText = nodeData.DialogText;
+			var tmpNode = targetGraphView.CreateDialogNode (nodeData);
 			targetGraphView.AddElement (tmpNode);
 
 			var nodePorts = containerCache.nodeLinks.Where(x=> x.baseNodeGuid == nodeData.Guid).ToList();

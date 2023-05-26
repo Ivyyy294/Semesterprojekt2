@@ -21,8 +21,14 @@ MonoBehaviour:
     targetNodeGuid: cf52200a-92b5-47b5-97a6-927f457968fa
   dialogNodeData:
   - Guid: c6ae29b4-0e8e-472a-b0de-9695725816a6
-    DialogText: test2
-    Position: {x: 256, y: 189}
+    DialogTitle: D1
+    DialogText: 'Hello there!
+
+      asd
+
+      asd'
+    Position: {x: 250, y: 130}
   - Guid: cf52200a-92b5-47b5-97a6-927f457968fa
+    DialogTitle: Lala
     DialogText: Dialog Node
-    Position: {x: 551, y: 277}
+    Position: {x: 518, y: 210}

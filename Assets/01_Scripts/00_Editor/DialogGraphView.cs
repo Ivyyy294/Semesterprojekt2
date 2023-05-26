@@ -30,36 +30,30 @@ public class DialogGraphView : GraphView
 		AddElement (CreateDialogNode (nodeName));
 	}
 
+	public DialogNode CreateDialogNode (DialogNodeData nodeData)
+	{
+		var dialogNode = new DialogNode
+		{
+			title = nodeData.DialogTitle,
+			dialogText = nodeData.DialogText,
+			GUID = nodeData.Guid
+		};
+
+		InitDialogNode (dialogNode);
+
+		return dialogNode;
+	}
+
 	public DialogNode CreateDialogNode (string nodeName)
 	{
 		var dialogNode = new DialogNode
 		{
 			title = nodeName,
-			dialogText = nodeName,
+			dialogText = "hello world",
 			GUID = System.Guid.NewGuid().ToString()
 		};
 
-		var inputPort = GeneratePort (dialogNode, Direction.Input, Port.Capacity.Multi);
-		inputPort.portName = "Input";
-
-		var button = new Button (clickEvent:() => {AddChoicePort (dialogNode);});
-		button.text = "New Choice";
-		dialogNode.titleContainer.Add (button);
-
-		var textField = new TextField (string.Empty);
-		textField.RegisterValueChangedCallback (evt=>
-		{
-			dialogNode.dialogText = evt.newValue;
-			//dialogNode.title = evt.newValue;
-		});
-		textField.SetValueWithoutNotify (dialogNode.dialogText);
-		
-		dialogNode.mainContainer.Add (textField);
-
-		dialogNode.inputContainer.Add (inputPort);
-		dialogNode.RefreshExpandedState();
-		dialogNode.RefreshPorts();
-		dialogNode.SetPosition (new Rect (Vector2.zero, defaultSize));
+		InitDialogNode (dialogNode);
 
 		return dialogNode;
 	}
@@ -160,5 +154,42 @@ public class DialogGraphView : GraphView
 		node.SetPosition (new Rect (100, 200, 100, 150));
 
 		return node;
+	}
+
+	private void InitDialogNode (DialogNode dialogNode)
+	{
+		//Create Input Port
+
+		var inputPort = GeneratePort (dialogNode, Direction.Input, Port.Capacity.Multi);
+		inputPort.portName = "Input";
+
+		var button = new Button (clickEvent:() => {AddChoicePort (dialogNode);});
+		button.text = "New Choice";
+		dialogNode.titleContainer.Add (button);
+
+		//Title
+		var titleField = new TextField ("Title");
+		titleField.RegisterValueChangedCallback (evt=>
+		{
+			dialogNode.title = evt.newValue;
+		});
+		titleField.SetValueWithoutNotify (dialogNode.title);
+		
+		dialogNode.mainContainer.Add (titleField);
+
+		//Content
+		var textField = new TextField (string.Empty, 200, true, false, default (char));
+		textField.RegisterValueChangedCallback (evt=>
+		{
+			dialogNode.dialogText = evt.newValue;
+		});
+		textField.SetValueWithoutNotify (dialogNode.dialogText);
+		
+		dialogNode.mainContainer.Add (textField);
+
+		dialogNode.inputContainer.Add (inputPort);
+		dialogNode.RefreshExpandedState();
+		dialogNode.RefreshPorts();
+		dialogNode.SetPosition (new Rect (Vector2.zero, defaultSize));
 	}
 }
