@@ -8,7 +8,7 @@ using System.Linq;
 
 public class DialogGraphView : GraphView
 {
-	public readonly Vector2 defaultSize = new Vector2 (150, 200);
+	//public readonly Vector2 defaultSize = new Vector2 (150, 200);
 
 	public DialogGraphView()
 	{
@@ -59,42 +59,44 @@ public class DialogGraphView : GraphView
 	public DialogNode CreateNode (string nodeName, Vector2 pos) 
 	{
 		DialogNode node = CreateDialogNode (nodeName);
-		node.SetPosition (new Rect (pos, defaultSize));
+		node.SetPosition (new Rect (pos, DialogNode.defaultSize));
 
 		return node;
+	}
+
+	public DialogNode CreateDialogNode (string nodeName)
+	{
+		DialogNodeData data = new DialogNodeData
+		{
+			DialogTitle = nodeName,
+			DialogText = "hello world",
+			Guid =  System.Guid.NewGuid().ToString()
+		};
+
+		return CreateDialogNode (data);
 	}
 
 	public DialogNode CreateDialogNode (DialogNodeData nodeData)
 	{
 		var dialogNode = new DialogNode
 		{
-			//title = nodeData.DialogTitle,
+			title = nodeData.DialogTitle,
 			dialogText = nodeData.DialogText,
 			GUID = nodeData.Guid
 		};
 
-		InitDialogNode (dialogNode);
+		dialogNode.Init();
+
+		//Button
+		dialogNode.titleContainer.Add (DialogGraphUtility.CreateButton ("New Choice", onClick:() => {AddChoicePort (dialogNode); }));
 
 		return dialogNode;
 	}
 
-	public DialogNode CreateDialogNode (string nodeName)
-	{
-		var dialogNode = new DialogNode
-		{
-			title = nodeName,
-			dialogText = "hello world",
-			GUID = System.Guid.NewGuid().ToString()
-		};
-
-		InitDialogNode (dialogNode);
-
-		return dialogNode;
-	}
 
 	public void AddChoicePort(DialogNode dialogNode, string overriddenPortName = "")
 	{
-		var generatedPort = GeneratePort (dialogNode, Direction.Output);
+		var generatedPort = DialogGraphUtility.CreatePort (dialogNode, Direction.Output);
 
 		//Remove default name label
 		var oldLabel = generatedPort.contentContainer.Q<Label>("type");
@@ -111,11 +113,8 @@ public class DialogGraphView : GraphView
 		var textField = DialogGraphUtility.CreateTextField (choicePortName, evt => generatedPort.portName = evt.newValue);
 		generatedPort.contentContainer.Add (textField);
 
-		var deleteButton = new Button (clickEvent:() => RemovePort (dialogNode, generatedPort))
-		{
-			text = "X"
-		};
-		generatedPort.contentContainer.Add (deleteButton);
+		//Button
+		generatedPort.contentContainer.Add (DialogGraphUtility.CreateButton ("X", onClick:() =>RemovePort (dialogNode, generatedPort)));
 
 		generatedPort.portName = choicePortName;
 
@@ -155,11 +154,6 @@ public class DialogGraphView : GraphView
 		return compatiblePorts;
 	}
 
-	private Port GeneratePort (DialogNode node, Direction portDirection, Port.Capacity capacity = Port.Capacity.Single)
-	{
-		return node.InstantiatePort (Orientation.Horizontal, portDirection, capacity, typeof (float));
-	}
-
 	private DialogNode GenerateEntryPointNode()
 	{ 
 		var node = new DialogNode
@@ -170,7 +164,7 @@ public class DialogGraphView : GraphView
 			entryPoint = true
 		};
 
-		var generatedPort = GeneratePort (node, Direction.Output);
+		var generatedPort = DialogGraphUtility.CreatePort (node, Direction.Output);
 		generatedPort.portName = "Next";
 		node.outputContainer.Add (generatedPort);
 
@@ -180,33 +174,5 @@ public class DialogGraphView : GraphView
 		node.SetPosition (new Rect (100, 200, 100, 150));
 
 		return node;
-	}
-
-	private void InitDialogNode (DialogNode dialogNode)
-	{
-		//Title
-		var titleField = DialogGraphUtility.CreateTextField ("Title", dialogNode.title, evt=> {dialogNode.title = evt.newValue;});
-		titleField.SetValueWithoutNotify (dialogNode.title);		
-		dialogNode.mainContainer.Add (titleField);
-
-		//Create Input Port
-		var inputPort = GeneratePort (dialogNode, Direction.Input, Port.Capacity.Multi);
-		inputPort.portName = "Input";
-
-		var button = new Button (clickEvent:() => {AddChoicePort (dialogNode);});
-		button.text = "New Choice";
-		dialogNode.titleContainer.Add (button);
-
-
-		//Content
-		Foldout textFoldout = new Foldout {text = "Dialog Text"};
-		textFoldout.Add (DialogGraphUtility.CreateTextArea(dialogNode.dialogText, evt=>{dialogNode.dialogText = evt.newValue;}));
-
-		dialogNode.mainContainer.Add (textFoldout);
-
-		dialogNode.inputContainer.Add (inputPort);
-		dialogNode.RefreshExpandedState();
-		dialogNode.RefreshPorts();
-		dialogNode.SetPosition (new Rect (Vector2.zero, defaultSize));
 	}
 }

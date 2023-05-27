@@ -100,7 +100,7 @@ public class GraphSaveUtility
 				LinkNodes (Nodes[i].outputContainer[j].Q<Port>(), (Port) targetNode.inputContainer[0]);
 
 				targetNode.SetPosition (new Rect (containerCache.dialogNodeData.First (x=>x.Guid == targetNodeGuid).Position,
-					targetGraphView.defaultSize));
+					DialogNode.defaultSize));
 			}
 		}
 	}
