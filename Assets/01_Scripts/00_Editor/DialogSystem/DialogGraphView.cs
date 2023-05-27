@@ -17,6 +17,8 @@ public class DialogGraphView : GraphView
 		this.AddManipulator (new ContentDragger());
 		this.AddManipulator (new SelectionDragger());
 		this.AddManipulator (new RectangleSelector());
+		this.AddManipulator (CreateNodeContextMenu());
+		this.AddManipulator (CreateGroupContextMenu());
 
 		//ToDo fix stylesheet
 		var grid = new GridBackground();
@@ -26,16 +28,47 @@ public class DialogGraphView : GraphView
 		AddElement (GenerateEntryPointNode());
 	}
 
+	private IManipulator CreateNodeContextMenu()
+	{
+		ContextualMenuManipulator contextualMenuManipulator = new ContextualMenuManipulator (
+			menuEvent=> menuEvent.menu.AppendAction ("Add Node", actionEvent=>AddElement (CreateNode("Dialog Node", actionEvent.eventInfo.localMousePosition))));
+
+		return contextualMenuManipulator;
+	}
+
+	private IManipulator CreateGroupContextMenu()
+	{
+		ContextualMenuManipulator contextualMenuManipulator = new ContextualMenuManipulator (
+			menuEvent=> menuEvent.menu.AppendAction ("Add Group", actionEvent=>AddElement (CreateGroup("DialogGroup", actionEvent.eventInfo.localMousePosition))));
+
+		return contextualMenuManipulator;
+	}
+
+	private Group CreateGroup(string title, Vector2 localMousePosition)
+	{
+		Group group = new Group {title = title};
+		group.SetPosition (new Rect (localMousePosition, Vector2.zero));
+		return group;
+	}
+
 	public void CreateNode (string nodeName) 
 	{
 		AddElement (CreateDialogNode (nodeName));
+	}
+
+	public DialogNode CreateNode (string nodeName, Vector2 pos) 
+	{
+		DialogNode node = CreateDialogNode (nodeName);
+		node.SetPosition (new Rect (pos, defaultSize));
+
+		return node;
 	}
 
 	public DialogNode CreateDialogNode (DialogNodeData nodeData)
 	{
 		var dialogNode = new DialogNode
 		{
-			title = nodeData.DialogTitle,
+			//title = nodeData.DialogTitle,
 			dialogText = nodeData.DialogText,
 			GUID = nodeData.Guid
 		};
@@ -73,16 +106,9 @@ public class DialogGraphView : GraphView
 			? $"Choice {outputPortCount}"
 			: overriddenPortName;
 		
-		var textField = new TextField
-		{
-			name = string.Empty,
-			value = choicePortName
-		};
-
-		textField.RegisterValueChangedCallback (evt => generatedPort.portName = evt.newValue);
-
 		//Invisible Label to enable port drag and drop
 		generatedPort.contentContainer.Add (new Label ("\t\t"));
+		var textField = DialogGraphUtility.CreateTextField (choicePortName, evt => generatedPort.portName = evt.newValue);
 		generatedPort.contentContainer.Add (textField);
 
 		var deleteButton = new Button (clickEvent:() => RemovePort (dialogNode, generatedPort))
@@ -158,6 +184,11 @@ public class DialogGraphView : GraphView
 
 	private void InitDialogNode (DialogNode dialogNode)
 	{
+		//Title
+		var titleField = DialogGraphUtility.CreateTextField ("Title", dialogNode.title, evt=> {dialogNode.title = evt.newValue;});
+		titleField.SetValueWithoutNotify (dialogNode.title);		
+		dialogNode.mainContainer.Add (titleField);
+
 		//Create Input Port
 		var inputPort = GeneratePort (dialogNode, Direction.Input, Port.Capacity.Multi);
 		inputPort.portName = "Input";
@@ -166,25 +197,12 @@ public class DialogGraphView : GraphView
 		button.text = "New Choice";
 		dialogNode.titleContainer.Add (button);
 
-		//Title
-		var titleField = new TextField ("Title");
-		titleField.RegisterValueChangedCallback (evt=>
-		{
-			dialogNode.title = evt.newValue;
-		});
-		titleField.SetValueWithoutNotify (dialogNode.title);
-		
-		dialogNode.mainContainer.Add (titleField);
 
 		//Content
-		var textField = new TextField (string.Empty, 200, true, false, default (char));
-		textField.RegisterValueChangedCallback (evt=>
-		{
-			dialogNode.dialogText = evt.newValue;
-		});
-		textField.SetValueWithoutNotify (dialogNode.dialogText);
-		
-		dialogNode.mainContainer.Add (textField);
+		Foldout textFoldout = new Foldout {text = "Dialog Text"};
+		textFoldout.Add (DialogGraphUtility.CreateTextArea(dialogNode.dialogText, evt=>{dialogNode.dialogText = evt.newValue;}));
+
+		dialogNode.mainContainer.Add (textFoldout);
 
 		dialogNode.inputContainer.Add (inputPort);
 		dialogNode.RefreshExpandedState();

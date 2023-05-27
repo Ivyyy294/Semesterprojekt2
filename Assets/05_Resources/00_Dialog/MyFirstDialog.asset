@@ -23,8 +23,10 @@ MonoBehaviour:
   - Guid: cf52200a-92b5-47b5-97a6-927f457968fa
     DialogTitle: Lala
     DialogText: Wie gehts?
-    Position: {x: 518.4, y: 210.4}
+    Position: {x: 518, y: 210}
   - Guid: c6ae29b4-0e8e-472a-b0de-9695725816a6
-    DialogTitle: D1
-    DialogText: Hello there!
-    Position: {x: 250.4, y: 130.4}
+    DialogTitle: asd
+    DialogText: 'Hello there!
+
+      asdd'
+    Position: {x: 250, y: 130}
