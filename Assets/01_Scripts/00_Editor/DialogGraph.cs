@@ -10,19 +10,20 @@ using UnityEngine.UIElements;
 public class DialogGraph : EditorWindow
 {
 	private DialogGraphView dialogGraphView;
-	private string fileName = "New Narrative"; 
+	private DialogContainer cachedContainer;
 
-	public static void OpenDialogGraphWindow(string assetName)
+	public static void OpenDialogGraphWindow(DialogContainer asset)
 	{
-		if (!string.IsNullOrEmpty (assetName))
+		if (asset != null)
 		{
 			var window = GetWindow <DialogGraph>();
+			string assetName = asset.name;
 			window.titleContent = new GUIContent ("Dialog Graph [" + assetName + "]");
-			window.fileName = assetName;
+			window.cachedContainer = asset;
 			window.RequestDataOperation (false);
 		}
 		else
-			EditorUtility.DisplayDialog ("Invalid Asset name!", "Please enter a valid file name.", "OK");
+			EditorUtility.DisplayDialog ("Invalid Asset!", "Please contact Lara!", "OK");
 	}
 
 	private void OnEnable()
@@ -56,14 +57,7 @@ public class DialogGraph : EditorWindow
 	{
 		var toolbar = new Toolbar();
 
-		//var fileNameTextField = new TextField ("File Name");
-		//fileNameTextField.SetValueWithoutNotify (fileName);
-		//fileNameTextField.MarkDirtyRepaint();
-		//fileNameTextField.RegisterValueChangedCallback (evt => fileName = evt.newValue);
-		//toolbar.Add(fileNameTextField);
-
 		toolbar.Add (new Button (clickEvent:() => RequestDataOperation(true)) {text = "Save Data"});
-		//toolbar.Add (new Button (clickEvent:() => RequestDataOperation(false)) {text = "Load Data"});
 
 		var nodeCreateButton = new Button ( clickEvent:() =>
 		{
@@ -78,18 +72,18 @@ public class DialogGraph : EditorWindow
 
 	private void RequestDataOperation(bool save)
 	{
-		if (string.IsNullOrEmpty (fileName))
+		if (cachedContainer == null)
 		{
-			EditorUtility.DisplayDialog ("Invalid file name!", "Please enter a valid file name.", "OK");
+			EditorUtility.DisplayDialog ("Invalid asset!", "Please contact Lara!", "OK");
 			return;
 		}
 
 		var saveUtility = GraphSaveUtility.GetInstance (dialogGraphView);
 
 		if (save)
-			saveUtility.SaveGraph (fileName);
+			saveUtility.SaveGraph (cachedContainer);
 		else
-			saveUtility.LoadGraph (fileName);
+			saveUtility.LoadGraph (cachedContainer);
 	}
 }
    

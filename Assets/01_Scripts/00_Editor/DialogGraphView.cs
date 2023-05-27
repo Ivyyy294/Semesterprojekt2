@@ -18,6 +18,7 @@ public class DialogGraphView : GraphView
 		this.AddManipulator (new SelectionDragger());
 		this.AddManipulator (new RectangleSelector());
 
+		//ToDo fix stylesheet
 		var grid = new GridBackground();
 		Insert (0, grid);
 		grid.StretchToParentSize();
@@ -110,7 +111,6 @@ public class DialogGraphView : GraphView
 			RemoveElement (targetEdge.First());
 		}
 
-
 		dialogNode.outputContainer.Remove (generatedPort);
 		dialogNode.RefreshPorts();
 		dialogNode.RefreshExpandedState();
@@ -159,7 +159,6 @@ public class DialogGraphView : GraphView
 	private void InitDialogNode (DialogNode dialogNode)
 	{
 		//Create Input Port
-
 		var inputPort = GeneratePort (dialogNode, Direction.Input, Port.Capacity.Multi);
 		inputPort.portName = "Input";
 

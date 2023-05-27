@@ -8,7 +8,6 @@ using UnityEngine.UIElements;
 
 public class GraphSaveUtility
 {
-	private string assetFolder = "Assets/05_Resources/00_Dialog/";
 	private DialogGraphView targetGraphView;
 	private DialogContainer containerCache;
 
@@ -20,14 +19,14 @@ public class GraphSaveUtility
 		return new GraphSaveUtility {targetGraphView = target};
 	}
 
-	public void SaveGraph (string fileName)
+	public void SaveGraph (DialogContainer asset)
 	{
 		//Get Asset for saving
-		containerCache = UnityEditor.AssetDatabase.LoadAssetAtPath <DialogContainer> (assetFolder + $"{fileName}.asset");
+		containerCache = asset;
 
 		if (containerCache == null)
 		{
-			UnityEditor.EditorUtility.DisplayDialog ("File not found!", "Target dialog does not exist!", "OK");
+			UnityEditor.EditorUtility.DisplayDialog ("Invalid asset!", "Please contact Lara!", "OK");
 			return;
 		}
 
@@ -67,17 +66,18 @@ public class GraphSaveUtility
 		//Update Scriptable Object
 		containerCache.dialogNodeData = dialogContainer.dialogNodeData;
 		containerCache.nodeLinks = dialogContainer.nodeLinks;
+		UnityEditor.EditorUtility.SetDirty (containerCache);
 		UnityEditor.AssetDatabase.SaveAssets();
 	}
 
-	public void LoadGraph (string fileName)
+	public void LoadGraph (DialogContainer asset)
 	{		
 		//Get Asset for loading
-		containerCache = UnityEditor.AssetDatabase.LoadAssetAtPath <DialogContainer> (assetFolder + $"{fileName}.asset");
+		containerCache = asset;
 
 		if (containerCache == null)
 		{
-			UnityEditor.EditorUtility.DisplayDialog ("File not found!", "Target dialog does not exist!", "OK");
+			UnityEditor.EditorUtility.DisplayDialog ("Invalid asset!", "Please contact Lara!", "OK");
 			return;
 		}
 
