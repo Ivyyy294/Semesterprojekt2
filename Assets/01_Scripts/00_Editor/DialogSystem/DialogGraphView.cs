@@ -39,9 +39,25 @@ public class DialogGraphView : GraphView
 	private IManipulator CreateGroupContextMenu()
 	{
 		ContextualMenuManipulator contextualMenuManipulator = new ContextualMenuManipulator (
-			menuEvent=> menuEvent.menu.AppendAction ("Add Group", actionEvent=>AddElement (DialogGraphUtility.CreateGroup("DialogGroup", actionEvent.eventInfo.localMousePosition))));
+			menuEvent=> menuEvent.menu.AppendAction ("Add Group", actionEvent=>CreateGroup("DialogGroup", actionEvent.eventInfo.localMousePosition)));
 
 		return contextualMenuManipulator;
+	}
+
+	public Group CreateGroup (string title, Vector2 localMousePosition)
+	{
+		Group group = DialogGraphUtility.CreateGroup (title, localMousePosition);
+		AddElement (group);
+
+		foreach (GraphElement selectedElement in selection)
+		{
+			if (!(selectedElement is DialogNode)) continue;
+
+			DialogNode dialogNode = (DialogNode) selectedElement;
+			group.AddElement (dialogNode);
+		}
+
+		return group;
 	}
 
 	public void CreateNode (string nodeName) 

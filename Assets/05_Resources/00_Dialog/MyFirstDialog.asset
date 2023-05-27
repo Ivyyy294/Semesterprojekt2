@@ -44,3 +44,13 @@ MonoBehaviour:
     DialogTitle: Lala
     DialogText: Wie gehts?
     Position: {x: 551, y: 214}
+  - Guid: af88c5cd-47d5-41e2-b8d8-21997c32d15c
+    DialogTitle: Dialog Node
+    DialogText: hello world
+    Position: {x: 191, y: 547}
+  dialogGroupData:
+  - Guid: 
+    name: DialogGroup
+    Position: {x: 166, y: 488}
+    childNodeGuid:
+    - af88c5cd-47d5-41e2-b8d8-21997c32d15c
