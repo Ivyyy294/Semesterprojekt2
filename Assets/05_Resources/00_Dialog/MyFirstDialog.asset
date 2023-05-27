@@ -22,18 +22,25 @@ MonoBehaviour:
   - baseNodeGuid: cf52200a-92b5-47b5-97a6-927f457968fa
     portName: Choice 0
     targetNodeGuid: dad55cd1-d2ed-4af7-86b9-b5508f0acd90
+  - baseNodeGuid: cf52200a-92b5-47b5-97a6-927f457968fa
+    portName: Choice 1
+    targetNodeGuid: a55a705b-c0a6-493b-8e33-fe9865803368
   dialogNodeData:
   - Guid: c6ae29b4-0e8e-472a-b0de-9695725816a6
     DialogTitle: aaddd
     DialogText: 'Hello there!
 
       asdd'
-    Position: {x: 265, y: 146}
-  - Guid: cf52200a-92b5-47b5-97a6-927f457968fa
-    DialogTitle: Lala
-    DialogText: Wie gehts?
-    Position: {x: 529, y: 229}
+    Position: {x: 273, y: 219}
   - Guid: dad55cd1-d2ed-4af7-86b9-b5508f0acd90
     DialogTitle: Dialog Node
     DialogText: hello world
-    Position: {x: 779, y: 260}
+    Position: {x: 815, y: 81}
+  - Guid: a55a705b-c0a6-493b-8e33-fe9865803368
+    DialogTitle: Dialog Node
+    DialogText: hello world
+    Position: {x: 839, y: 441}
+  - Guid: cf52200a-92b5-47b5-97a6-927f457968fa
+    DialogTitle: Lala
+    DialogText: Wie gehts?
+    Position: {x: 551, y: 214}

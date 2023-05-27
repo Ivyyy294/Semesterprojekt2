@@ -7,6 +7,25 @@ using UnityEngine.UIElements;
 
 public static class DialogGraphUtility
 {
+	public static DialogNode CreateDialogNode (DialogNodeData nodeData)
+	{
+		var dialogNode = new DialogNode
+		{
+			title = nodeData.DialogTitle,
+			dialogText = nodeData.DialogText,
+			GUID = nodeData.Guid
+		};
+
+		return dialogNode;
+	}
+
+	public static Group CreateGroup (string title, Vector2 localMousePosition)
+	{
+		Group group = new Group {title = title};
+		group.SetPosition (new Rect (localMousePosition, Vector2.zero));
+		return group;
+	}
+
 	public static Port CreatePort (DialogNode node, Direction portDirection, Port.Capacity capacity = Port.Capacity.Single)
 	{
 		return node.InstantiatePort (Orientation.Horizontal, portDirection, capacity, typeof (float));

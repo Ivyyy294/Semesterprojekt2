@@ -39,16 +39,9 @@ public class DialogGraphView : GraphView
 	private IManipulator CreateGroupContextMenu()
 	{
 		ContextualMenuManipulator contextualMenuManipulator = new ContextualMenuManipulator (
-			menuEvent=> menuEvent.menu.AppendAction ("Add Group", actionEvent=>AddElement (CreateGroup("DialogGroup", actionEvent.eventInfo.localMousePosition))));
+			menuEvent=> menuEvent.menu.AppendAction ("Add Group", actionEvent=>AddElement (DialogGraphUtility.CreateGroup("DialogGroup", actionEvent.eventInfo.localMousePosition))));
 
 		return contextualMenuManipulator;
-	}
-
-	private Group CreateGroup(string title, Vector2 localMousePosition)
-	{
-		Group group = new Group {title = title};
-		group.SetPosition (new Rect (localMousePosition, Vector2.zero));
-		return group;
 	}
 
 	public void CreateNode (string nodeName) 
@@ -78,52 +71,14 @@ public class DialogGraphView : GraphView
 
 	public DialogNode CreateDialogNode (DialogNodeData nodeData)
 	{
-		var dialogNode = new DialogNode
-		{
-			title = nodeData.DialogTitle,
-			dialogText = nodeData.DialogText,
-			GUID = nodeData.Guid
-		};
+		var dialogNode = DialogGraphUtility.CreateDialogNode (nodeData);
 
-		dialogNode.Init();
-
-		//Button
-		dialogNode.titleContainer.Add (DialogGraphUtility.CreateButton ("New Choice", onClick:() => {AddChoicePort (dialogNode); }));
+		dialogNode.Init(this);
 
 		return dialogNode;
 	}
 
-
-	public void AddChoicePort(DialogNode dialogNode, string overriddenPortName = "")
-	{
-		var generatedPort = DialogGraphUtility.CreatePort (dialogNode, Direction.Output);
-
-		//Remove default name label
-		var oldLabel = generatedPort.contentContainer.Q<Label>("type");
-		generatedPort.contentContainer.Remove (oldLabel);
-
-		var outputPortCount = dialogNode.outputContainer.Query ("connector").ToList().Count;
-
-		string choicePortName = string.IsNullOrEmpty (overriddenPortName)
-			? $"Choice {outputPortCount}"
-			: overriddenPortName;
-		
-		//Invisible Label to enable port drag and drop
-		generatedPort.contentContainer.Add (new Label ("\t\t"));
-		var textField = DialogGraphUtility.CreateTextField (choicePortName, evt => generatedPort.portName = evt.newValue);
-		generatedPort.contentContainer.Add (textField);
-
-		//Button
-		generatedPort.contentContainer.Add (DialogGraphUtility.CreateButton ("X", onClick:() =>RemovePort (dialogNode, generatedPort)));
-
-		generatedPort.portName = choicePortName;
-
-		dialogNode.outputContainer.Add (generatedPort);
-		dialogNode.RefreshPorts();
-		dialogNode.RefreshExpandedState();		
-	}
-
-	private void RemovePort(DialogNode dialogNode, Port generatedPort)
+	public void RemovePort(DialogNode dialogNode, Port generatedPort)
 	{
 		var targetEdge = edges.ToList().Where (x=>x.output.portName == generatedPort.portName && x.output.node == generatedPort.node);
 
