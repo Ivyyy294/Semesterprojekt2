@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEditor.Experimental.GraphView;
+using UnityEditor.UIElements;
 using UnityEngine;
 using UnityEngine.UIElements;
 
@@ -29,8 +30,17 @@ public class DialogNode : Node
 		//Content
 		Foldout textFoldout = DialogGraphUtility.CreateFoldout ("Dialog Text");
 		textFoldout.Add (DialogGraphUtility.CreateTextArea(dialogText, evt=>{dialogText = evt.newValue; MarkDirtyRepaint();}));
-
 		mainContainer.Add (textFoldout);
+
+		////Events
+		//Foldout eventsFoldout = DialogGraphUtility.CreateFoldout ("Events", true);
+
+		////Create an input field for Action
+		//var actionField = new ObjectField("Action Input");
+		//actionField.objectType = typeof(DialogContainer);
+		//actionField.RegisterValueChangedCallback(evt => test = evt.newValue as DialogContainer);
+		//eventsFoldout.Add(actionField);
+		//mainContainer.Add (eventsFoldout);
 
 		MarkDirtyRepaint();
 		RefreshExpandedState();
