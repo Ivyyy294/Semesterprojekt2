@@ -20,10 +20,10 @@ public class DialogGraphView : GraphView
 		this.AddManipulator (CreateNodeContextMenu());
 		this.AddManipulator (CreateGroupContextMenu());
 
-		//ToDo fix stylesheet
-		var grid = new GridBackground();
-		Insert (0, grid);
-		grid.StretchToParentSize();
+		////ToDo fix stylesheet
+		//var grid = new GridBackground();
+		//Insert (0, grid);
+		//grid.StretchToParentSize();
 
 		AddElement (GenerateEntryPointNode());
 	}

@@ -17,8 +17,8 @@ public class DialogNode : Node
 		parentView = _parentView;
 
 		//Title
-		var titleField = DialogGraphUtility.CreateTextField ("Title", title, evt=> {title = evt.newValue;});
-		titleField.SetValueWithoutNotify (title);		
+		var titleField = DialogGraphUtility.CreateTextField ("Title", title, evt=> {title = evt.newValue; MarkDirtyRepaint();});
+		//titleField.SetValueWithoutNotify (title);		
 		mainContainer.Add (titleField);
 
 		AddInputPort();
@@ -28,10 +28,11 @@ public class DialogNode : Node
 
 		//Content
 		Foldout textFoldout = DialogGraphUtility.CreateFoldout ("Dialog Text");
-		textFoldout.Add (DialogGraphUtility.CreateTextArea(dialogText, evt=>{dialogText = evt.newValue;}));
+		textFoldout.Add (DialogGraphUtility.CreateTextArea(dialogText, evt=>{dialogText = evt.newValue; MarkDirtyRepaint();}));
 
 		mainContainer.Add (textFoldout);
 
+		MarkDirtyRepaint();
 		RefreshExpandedState();
 		RefreshPorts();
 		SetPosition (new Rect (Vector2.zero, defaultSize));

@@ -58,7 +58,7 @@ public class GraphSaveUtility
 				Guid = dialogNode.GUID,
 				DialogText = dialogNode.dialogText,
 				Position = dialogNode.GetPosition().position,
-				DialogTitle = dialogNode.title				
+				DialogTitle = dialogNode.title
 			});
 		}
 

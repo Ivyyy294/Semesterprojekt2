@@ -16,41 +16,53 @@ MonoBehaviour:
   - baseNodeGuid: 4caf5a8a-30fa-496a-b43a-4f4fa2b6de04
     portName: Next
     targetNodeGuid: c6ae29b4-0e8e-472a-b0de-9695725816a6
+  - baseNodeGuid: dad55cd1-d2ed-4af7-86b9-b5508f0acd90
+    portName: Next
+    targetNodeGuid: af88c5cd-47d5-41e2-b8d8-21997c32d15c
   - baseNodeGuid: c6ae29b4-0e8e-472a-b0de-9695725816a6
-    portName: Choice 0
+    portName: Hi!
     targetNodeGuid: cf52200a-92b5-47b5-97a6-927f457968fa
   - baseNodeGuid: cf52200a-92b5-47b5-97a6-927f457968fa
-    portName: Choice 0
+    portName: Good!
     targetNodeGuid: dad55cd1-d2ed-4af7-86b9-b5508f0acd90
   - baseNodeGuid: cf52200a-92b5-47b5-97a6-927f457968fa
-    portName: Choice 1
+    portName: Actually its Monday...
     targetNodeGuid: a55a705b-c0a6-493b-8e33-fe9865803368
   dialogNodeData:
-  - Guid: c6ae29b4-0e8e-472a-b0de-9695725816a6
-    DialogTitle: aaddd
-    DialogText: 'Hello there!
-
-      asdd'
-    Position: {x: 273, y: 219}
-  - Guid: dad55cd1-d2ed-4af7-86b9-b5508f0acd90
-    DialogTitle: Dialog Node
-    DialogText: hello world
-    Position: {x: 815, y: 81}
-  - Guid: a55a705b-c0a6-493b-8e33-fe9865803368
-    DialogTitle: Dialog Node
-    DialogText: hello world
-    Position: {x: 839, y: 441}
-  - Guid: cf52200a-92b5-47b5-97a6-927f457968fa
-    DialogTitle: Lala
-    DialogText: Wie gehts?
-    Position: {x: 551, y: 214}
   - Guid: af88c5cd-47d5-41e2-b8d8-21997c32d15c
-    DialogTitle: Dialog Node
+    DialogTitle: Dialog 5
     DialogText: hello world
-    Position: {x: 191, y: 547}
+    Position: {x: 1262, y: -119}
+  - Guid: dad55cd1-d2ed-4af7-86b9-b5508f0acd90
+    DialogTitle: Dialog3
+    DialogText: Thats wonderful!
+    Position: {x: 829, y: -33}
+  - Guid: a55a705b-c0a6-493b-8e33-fe9865803368
+    DialogTitle: Dialog 4
+    DialogText: How rude!
+    Position: {x: 808, y: 237}
+  - Guid: cf52200a-92b5-47b5-97a6-927f457968fa
+    DialogTitle: Dialog2
+    DialogText: 'How are you doing today,
+
+      on this beautiful Sunday?'
+    Position: {x: 483, y: 103}
+  - Guid: c6ae29b4-0e8e-472a-b0de-9695725816a6
+    DialogTitle: Dialog1
+    DialogText: Hello there!
+    Position: {x: 223, y: 52}
   dialogGroupData:
   - Guid: 
-    name: DialogGroup
-    Position: {x: 166, y: 488}
+    name: Phase1
+    Position: {x: 75, y: -92.000015}
+    childNodeGuid:
+    - 4caf5a8a-30fa-496a-b43a-4f4fa2b6de04
+    - dad55cd1-d2ed-4af7-86b9-b5508f0acd90
+    - a55a705b-c0a6-493b-8e33-fe9865803368
+    - c6ae29b4-0e8e-472a-b0de-9695725816a6
+    - cf52200a-92b5-47b5-97a6-927f457968fa
+  - Guid: 
+    name: Phase2
+    Position: {x: 1237, y: -178}
     childNodeGuid:
     - af88c5cd-47d5-41e2-b8d8-21997c32d15c
