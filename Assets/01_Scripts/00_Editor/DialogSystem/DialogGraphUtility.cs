@@ -9,13 +9,7 @@ public static class DialogGraphUtility
 {
 	public static DialogNode CreateDialogNode (DialogNodeData nodeData)
 	{
-		var dialogNode = new DialogNode
-		{
-			title = nodeData.DialogTitle,
-			dialogText = nodeData.DialogText,
-			GUID = nodeData.Guid
-		};
-
+		var dialogNode = new DialogNode {data = nodeData};
 		return dialogNode;
 	}
 

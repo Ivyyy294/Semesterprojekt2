@@ -129,10 +129,15 @@ public class DialogGraphView : GraphView
 	{ 
 		var node = new DialogNode
 		{
+			entryPoint = true,
 			title = "START",
-			GUID = System.Guid.NewGuid().ToString(),
-			dialogText = "ENTRYPOINT",
-			entryPoint = true
+
+			data = new DialogNodeData
+			{
+				DialogTitle = "START",
+				Guid = System.Guid.NewGuid().ToString(),
+				DialogText = "ENTRYPOINT",
+			}
 		};
 
 		var generatedPort = DialogGraphUtility.CreatePort (node, Direction.Output);

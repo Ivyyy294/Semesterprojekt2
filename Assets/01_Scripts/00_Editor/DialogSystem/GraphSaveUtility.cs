@@ -44,9 +44,9 @@ public class GraphSaveUtility
 
 			dialogContainer.nodeLinks.Add (new NodeLinkData
 			{
-				baseNodeGuid = outputNode.GUID,
+				baseNodeGuid = outputNode.data.Guid,
 				portName = connectedPorts[i].output.portName,
-				targetNodeGuid = inputNode.GUID
+				targetNodeGuid = inputNode.data.Guid
 			});
 		}
 
@@ -55,10 +55,10 @@ public class GraphSaveUtility
 		{
 			dialogContainer.dialogNodeData.Add (new DialogNodeData
 			{
-				Guid = dialogNode.GUID,
-				DialogText = dialogNode.dialogText,
+				Guid = dialogNode.data.Guid,
+				DialogText = dialogNode.data.DialogText,
 				Position = dialogNode.GetPosition().position,
-				DialogTitle = dialogNode.title
+				DialogTitle = dialogNode.data.DialogTitle
 			});
 		}
 
@@ -78,7 +78,7 @@ public class GraphSaveUtility
 			foreach (var node in i.containedElements)
 			{
 				if (node is DialogNode)
-					tmpGroup.childNodeGuid.Add (((DialogNode)node).GUID);
+					tmpGroup.childNodeGuid.Add (((DialogNode)node).data.Guid);
 			}
 
 			dialogContainer.dialogGroupData.Add (tmpGroup);
@@ -117,7 +117,7 @@ public class GraphSaveUtility
 
 			for (int i = 0; i < Nodes.Count; ++i)
 			{
-				if (group.childNodeGuid.Contains (Nodes[i].GUID))
+				if (group.childNodeGuid.Contains (Nodes[i].data.Guid))
 					tmpGroup.AddElement (Nodes[i]);
 			}
 
@@ -134,12 +134,12 @@ public class GraphSaveUtility
 		for (int i = 0; i < Nodes.Count; ++i)
 		{
 			var k = i; //Prevent access to modified closure
-			var connections = containerCache.nodeLinks.Where(x=>x.baseNodeGuid == Nodes[k].GUID).ToList();
+			var connections = containerCache.nodeLinks.Where(x=>x.baseNodeGuid == Nodes[k].data.Guid).ToList();
 
 			for (int j = 0; j < connections.Count; ++j)
 			{
 				var targetNodeGuid = connections[j].targetNodeGuid;
-				var targetNode = Nodes.First (x=>x.GUID == targetNodeGuid);
+				var targetNode = Nodes.First (x=>x.data.Guid == targetNodeGuid);
 				LinkNodes (Nodes[i].outputContainer[j].Q<Port>(), (Port) targetNode.inputContainer[0]);
 			}
 		}
@@ -175,7 +175,7 @@ public class GraphSaveUtility
 	{
 		//Setzt the root guid if available
 		if (containerCache.nodeLinks.Count > 0)
-			Nodes.Find (x => x.entryPoint).GUID = containerCache.nodeLinks[0].baseNodeGuid;
+			Nodes.Find (x => x.entryPoint).data.Guid = containerCache.nodeLinks[0].baseNodeGuid;
 
 		foreach (var node in Nodes)
 		{

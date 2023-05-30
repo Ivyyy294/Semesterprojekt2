@@ -7,18 +7,22 @@ using UnityEngine.UIElements;
 
 public class DialogNode : Node
 {
-	public string GUID;
-	public string dialogText;
-	public bool entryPoint = false;
+	//Public Values
 	public static readonly Vector2 defaultSize = new Vector2 (150, 200);
+
+	public bool entryPoint = false;
+	public DialogNodeData data;
+	
+	//Private Values
 	private DialogGraphView parentView;
 
-	public void Init (DialogGraphView _parentView)
+	public virtual void Init (DialogGraphView _parentView)
 	{
 		parentView = _parentView;
 
 		//Title
-		var titleField = DialogGraphUtility.CreateTextField ("Title", title, evt=> {title = evt.newValue; MarkDirtyRepaint();});
+		title = data.DialogTitle;
+		var titleField = DialogGraphUtility.CreateTextField ("Title", data.DialogTitle, evt=> {data.DialogTitle = title = evt.newValue; MarkDirtyRepaint();});
 		//titleField.SetValueWithoutNotify (title);		
 		mainContainer.Add (titleField);
 
@@ -29,7 +33,7 @@ public class DialogNode : Node
 
 		//Content
 		Foldout textFoldout = DialogGraphUtility.CreateFoldout ("Dialog Text");
-		textFoldout.Add (DialogGraphUtility.CreateTextArea(dialogText, evt=>{dialogText = evt.newValue; MarkDirtyRepaint();}));
+		textFoldout.Add (DialogGraphUtility.CreateTextArea (data.DialogText, evt=>{data.DialogText = evt.newValue; MarkDirtyRepaint();}));
 		mainContainer.Add (textFoldout);
 
 		////Events
