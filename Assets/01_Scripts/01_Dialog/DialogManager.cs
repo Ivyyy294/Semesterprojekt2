@@ -53,7 +53,10 @@ public class DialogManager : MonoBehaviour
 		//	txtDialog.text = currentNode.DialogText;
 
 		foreach (var i in buttonList)
+		{
 			i.gameObject.SetActive (false);
+			i.GetComponent <Button>().onClick.RemoveAllListeners();
+		}
 
 		for (int i = 0; i < portList.Count; ++i)
 		{
@@ -72,9 +75,13 @@ public class DialogManager : MonoBehaviour
 
 	void SpawnMessage (string text, bool player = false)
 	{
+		ChatMessage msg;
+
 		if (player)
-			Instantiate (messagePlayerTemplate, messageContainer.transform).GetComponentInChildren<TextMeshProUGUI>().text = text;
+			msg = Instantiate (messagePlayerTemplate, messageContainer.transform).GetComponent <ChatMessage>();
 		else
-			Instantiate (messageNpcTemplate, messageContainer.transform).GetComponentInChildren<TextMeshProUGUI>().text = text;
+			msg = Instantiate (messageNpcTemplate, messageContainer.transform).GetComponentInChildren<ChatMessage>();
+
+		msg?.SetText (text);
 	}
 }
