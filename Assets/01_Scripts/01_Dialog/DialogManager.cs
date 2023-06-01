@@ -9,7 +9,10 @@ public class DialogManager : MonoBehaviour
 	[SerializeField] DialogContainer dialogContainer;
 
 	[Header ("Lara values")]
-	[SerializeField] TextMeshProUGUI txtDialog;
+	[SerializeField] GameObject messageContainer;
+	[SerializeField] GameObject messageNpcTemplate;
+	[SerializeField] GameObject messagePlayerTemplate;
+
 	[SerializeField] GameObject buttonContainer;
 
 	private List <GameObject> buttonList = new List<GameObject>();
@@ -45,8 +48,9 @@ public class DialogManager : MonoBehaviour
 		currentNode = dialogContainer.GetDialogNodeData (guid);
 		portList = dialogContainer.GetDialogPorts (currentNode.Guid);
 
-		if (txtDialog != null)
-			txtDialog.text = currentNode.DialogText;
+		SpawnMessage (currentNode.DialogText);
+		//if (txtDialog != null)
+		//	txtDialog.text = currentNode.DialogText;
 
 		foreach (var i in buttonList)
 			i.gameObject.SetActive (false);
@@ -55,8 +59,22 @@ public class DialogManager : MonoBehaviour
 		{
 			NodeLinkData port = portList[i];
 			buttonList[i].gameObject.SetActive(true);
-			buttonList[i].GetComponent<Button>().onClick.AddListener (call:() =>{LoadDialog(port.targetNodeGuid);});
+			buttonList[i].GetComponent<Button>().onClick.AddListener (call:() =>{SpawnPlayerMessage(port);});
 			buttonList[i].GetComponentInChildren<TextMeshProUGUI>().text = port.portName;
 		}
+	}
+
+	void SpawnPlayerMessage (NodeLinkData port)
+	{
+		SpawnMessage (port.portName, true);
+		LoadDialog(port.targetNodeGuid);
+	}
+
+	void SpawnMessage (string text, bool player = false)
+	{
+		if (player)
+			Instantiate (messagePlayerTemplate, messageContainer.transform).GetComponentInChildren<TextMeshProUGUI>().text = text;
+		else
+			Instantiate (messageNpcTemplate, messageContainer.transform).GetComponentInChildren<TextMeshProUGUI>().text = text;
 	}
 }
