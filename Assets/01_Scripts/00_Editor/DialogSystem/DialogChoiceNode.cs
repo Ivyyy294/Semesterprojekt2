@@ -4,7 +4,7 @@ using UnityEditor.Experimental.GraphView;
 using UnityEngine;
 using UnityEngine.UIElements;
 
-public class DialogMultipleChoiceNode : DialogNode
+public class DialogChoiceNode : DialogNode
 {
 	public override void Init(DialogGraphView _parentView)
 	{
@@ -13,28 +13,12 @@ public class DialogMultipleChoiceNode : DialogNode
 		//Title
 		title = data.DialogTitle;
 		var titleField = DialogGraphUtility.CreateTextField ("Title", data.DialogTitle, evt=> {data.DialogTitle = title = evt.newValue; MarkDirtyRepaint();});
-		//titleField.SetValueWithoutNotify (title);		
 		mainContainer.Add (titleField);
 
 		AddInputPort();
 
 		//Button
 		titleContainer.Add (DialogGraphUtility.CreateButton ("New Choice", onClick:() => {CreateChoicePort (); }));
-
-		//Content
-		Foldout textFoldout = DialogGraphUtility.CreateFoldout ("Dialog Text");
-		textFoldout.Add (DialogGraphUtility.CreateTextArea (data.DialogText, evt=>{data.DialogText = evt.newValue; MarkDirtyRepaint();}));
-		mainContainer.Add (textFoldout);
-
-		////Events
-		//Foldout eventsFoldout = DialogGraphUtility.CreateFoldout ("Events", true);
-
-		////Create an input field for Action
-		//var actionField = new ObjectField("Action Input");
-		//actionField.objectType = typeof(DialogContainer);
-		//actionField.RegisterValueChangedCallback(evt => test = evt.newValue as DialogContainer);
-		//eventsFoldout.Add(actionField);
-		//mainContainer.Add (eventsFoldout);
 
 		MarkDirtyRepaint();
 		RefreshExpandedState();

@@ -129,14 +129,14 @@ public class GraphSaveUtility
 	{
 		for (int i = 0; i < Nodes.Count; ++i)
 		{
-			var k = i; //Prevent access to modified closure
-			var connections = containerCache.nodeLinks.Where(x=>x.baseNodeGuid == Nodes[k].data.Guid).ToList();
+			DialogNode tmpNode = Nodes[i];
+			var connections = containerCache.nodeLinks.Where(x=>x.baseNodeGuid == tmpNode.data.Guid).ToList();
 
 			for (int j = 0; j < connections.Count; ++j)
 			{
 				var targetNodeGuid = connections[j].targetNodeGuid;
 				var targetNode = Nodes.First (x=>x.data.Guid == targetNodeGuid);
-				LinkNodes (Nodes[i].outputContainer[j].Q<Port>(), (Port) targetNode.inputContainer[0]);
+				LinkNodes (tmpNode.outputContainer[j].Q<Port>(), (Port) targetNode.inputContainer[0]);
 			}
 		}
 	}
@@ -160,19 +160,19 @@ public class GraphSaveUtility
 		{
 			DialogNode tmpNode;
 
-			if (nodeData.Type == DialogNodeData.NodeType.GameEvent)
+			if (nodeData.Type == DialogNodeData.NodeType.EVENT)
 				tmpNode = targetGraphView.CreateEventNode (nodeData);
-			else if (nodeData.Type == DialogNodeData.NodeType.Auto)
-				tmpNode = DialogTextNode.CreateTextNode (nodeData, targetGraphView);
+			else if (nodeData.Type == DialogNodeData.NodeType.NPC)
+				tmpNode = DialogNpcNode.CreateTextNode (nodeData, targetGraphView);
 			else
-				tmpNode = targetGraphView.CreateDialogNode (nodeData);
+				tmpNode = targetGraphView.CreateChoiceNode (nodeData);
 			
 			targetGraphView.AddElement (tmpNode);
 			tmpNode.SetPosition (new Rect (nodeData.Position, DialogNode.defaultSize));
 
-			if (nodeData.Type == DialogNodeData.NodeType.MultipleChoice)
+			if (nodeData.Type == DialogNodeData.NodeType.CHOICE)
 			{
-				DialogMultipleChoiceNode node = (DialogMultipleChoiceNode) tmpNode;
+				DialogChoiceNode node = (DialogChoiceNode) tmpNode;
 				var nodePorts = containerCache.nodeLinks.Where(x=> x.baseNodeGuid == nodeData.Guid).ToList();
 				nodePorts.ForEach (x=>node.CreateChoicePort (x.portName));
 			}

@@ -4,7 +4,35 @@ using UnityEngine;
 using TMPro;
 using UnityEngine.UI;
 
-public class RecieveNpcMessage : Ivyyy.StateMachine.IState
+public class DefaultState : Ivyyy.StateMachine.IState
+{
+	public string guid;
+	DialogNodeData data;
+	DialogManager manager;
+
+	public void Enter (GameObject obj)
+	{
+		manager = obj.GetComponent <DialogManager>();
+		data = manager.dialogContainer.GetDialogNodeData (guid);
+	}
+
+	public void Update  (GameObject obj)
+	{
+		if (data.Type == DialogNodeData.NodeType.NPC)
+		{
+			manager.npcNodeState.guid = guid;
+			manager.SetState (manager.npcNodeState);
+		}
+		else if (data.Type == DialogNodeData.NodeType.CHOICE)
+		{
+			manager.choiceNodeState.guid = guid;
+			manager.SetState (manager.choiceNodeState);
+		}
+		//else if (data.Type == DialogNodeData.NodeType.EVENT)
+	}
+}
+
+public class NpcNodeState : Ivyyy.StateMachine.IState
 {
 	public string guid;
 
@@ -27,20 +55,18 @@ public class RecieveNpcMessage : Ivyyy.StateMachine.IState
 	{
 		if (chatMessage.Done)
 		{
-			if (data.Type == DialogNodeData.NodeType.MultipleChoice)
-				manager.SetState (new GetPlayerChoice(){guid = data.Guid});
-			else if (data.Type == DialogNodeData.NodeType.Auto)
-			{
-				var portList = manager.dialogContainer.GetDialogPorts (guid);
+			var portList = manager.dialogContainer.GetDialogPorts (guid);
 
-				if (portList.Count > 0)
-					manager.SetState (new RecieveNpcMessage(){guid = portList[0].targetNodeGuid});
+			if (portList.Count > 0)
+			{
+				manager.defaultState.guid = portList[0].targetNodeGuid;
+				manager.SetState (manager.defaultState);
 			}
 		}
 	}
 }
 
-public class GetPlayerChoice : Ivyyy.StateMachine.IState
+public class ChoiceNodeState : Ivyyy.StateMachine.IState
 {
 	public string guid;
 
@@ -69,11 +95,12 @@ public class GetPlayerChoice : Ivyyy.StateMachine.IState
 
 	private void ButtonCallBack (NodeLinkData _port)
 	{
-		manager.SetState (new SentPlayerMessage() {port = _port});
+		manager.playerMessageState.port = _port;
+		manager.SetState (manager.playerMessageState);
 	}
 }
 
-public class SentPlayerMessage : Ivyyy.StateMachine.IState
+public class PlayerMessageState : Ivyyy.StateMachine.IState
 {
 	public NodeLinkData port;
 	DialogManager manager;
@@ -91,7 +118,10 @@ public class SentPlayerMessage : Ivyyy.StateMachine.IState
 	public void Update (GameObject obj)
 	{
 		if (chatMessage.Done)
-			manager.SetState (new RecieveNpcMessage(){guid = port.targetNodeGuid});
+		{
+			manager.defaultState.guid = port.targetNodeGuid;
+			manager.SetState (manager.defaultState);
+		}
 	}
 }
 
@@ -111,6 +141,11 @@ public class DialogManager : MonoBehaviour
 	private Ivyyy.StateMachine.IState currentState;
 	private List <GameObject> buttonList = new List<GameObject>();
 
+	public DefaultState defaultState = new DefaultState();
+	public NpcNodeState npcNodeState = new NpcNodeState();
+	public ChoiceNodeState choiceNodeState = new ChoiceNodeState();
+	public PlayerMessageState playerMessageState = new PlayerMessageState();
+
 	public void SetState (Ivyyy.StateMachine.IState newState)
 	{
 		currentState = newState;
@@ -125,7 +160,8 @@ public class DialogManager : MonoBehaviour
 			for (int i = 0; i < buttonContainer.transform.childCount; ++i)
 				buttonList.Add (buttonContainer.transform.GetChild(i).gameObject);
 
-			SetState (new RecieveNpcMessage() {guid = dialogContainer.GetStartNodeGuid()});
+			defaultState.guid = dialogContainer.GetStartNodeGuid();
+			SetState (defaultState);
 		}
     }
 

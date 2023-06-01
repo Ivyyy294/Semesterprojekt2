@@ -5,7 +5,7 @@ using UnityEditor.UIElements;
 using UnityEngine;
 using UnityEngine.UIElements;
 
-public class DialogTextNode : DialogNode
+public class DialogNpcNode : DialogNode
 {
 	public override void Init(DialogGraphView _parentView)
 	{
@@ -39,30 +39,30 @@ public class DialogTextNode : DialogNode
 		SetPosition (new Rect (Vector2.zero, defaultSize));
 	}
 
-	public static DialogTextNode CreateNode(string nodeName, Vector2 localMousePosition, DialogGraphView _parentView = null)
+	public static DialogNpcNode CreateNode(string nodeName, Vector2 localMousePosition, DialogGraphView _parentView = null)
 	{
-		DialogTextNode node = CreateNode (nodeName, _parentView);
+		DialogNpcNode node = CreateNode (nodeName, _parentView);
 		node.SetPosition (new Rect (localMousePosition, DialogNode.defaultSize));
 
 		return node;
 	}
 
-	public static DialogTextNode CreateNode(string nodeName, DialogGraphView _parentView = null)
+	public static DialogNpcNode CreateNode(string nodeName, DialogGraphView _parentView = null)
 	{
 		DialogNodeData data = new DialogNodeData
 		{
 			DialogTitle = nodeName,
 			DialogText = "hello world",
 			Guid =  System.Guid.NewGuid().ToString(),
-			Type = DialogNodeData.NodeType.Auto
+			Type = DialogNodeData.NodeType.NPC
 		};
 
 		return CreateTextNode (data, _parentView);
 	}
 	
-	public static DialogTextNode CreateTextNode (DialogNodeData data, DialogGraphView _parentView = null)
+	public static DialogNpcNode CreateTextNode (DialogNodeData data, DialogGraphView _parentView = null)
 	{
-		DialogTextNode node = CreateTextNode (data);
+		DialogNpcNode node = CreateTextNode (data);
 
 		if (_parentView != null)
 			node.Init (_parentView);
@@ -70,9 +70,9 @@ public class DialogTextNode : DialogNode
 		return node;
 	}
 
-	public static DialogTextNode CreateTextNode(DialogNodeData data)
+	public static DialogNpcNode CreateTextNode(DialogNodeData data)
 	{
-		var dialogNode = new DialogTextNode {data = data};
+		var dialogNode = new DialogNpcNode {data = data};
 		return dialogNode;
 	}
 }

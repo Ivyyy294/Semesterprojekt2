@@ -33,7 +33,7 @@ public class DialogGraphView : GraphView
 	private IManipulator CreateTextNodeContextMenu()
 	{
 		ContextualMenuManipulator contextualMenuManipulator = new ContextualMenuManipulator (
-			menuEvent=> menuEvent.menu.AppendAction ("Add TextNode", actionEvent=>AddElement (DialogTextNode.CreateNode("Text Node", actionEvent.eventInfo.localMousePosition, this))));
+			menuEvent=> menuEvent.menu.AppendAction ("Add NpcNode", actionEvent=>AddElement (DialogNpcNode.CreateNode("Npc Node", actionEvent.eventInfo.localMousePosition, this))));
 
 		return contextualMenuManipulator;
 	}
@@ -50,7 +50,7 @@ public class DialogGraphView : GraphView
 	private IManipulator CreateNodeContextMenu()
 	{
 		ContextualMenuManipulator contextualMenuManipulator = new ContextualMenuManipulator (
-			menuEvent=> menuEvent.menu.AppendAction ("Add Node", actionEvent=>AddElement (CreateNode("Dialog Node", actionEvent.eventInfo.localMousePosition))));
+			menuEvent=> menuEvent.menu.AppendAction ("Add ChoiceNode", actionEvent=>AddElement (CreateChoiceNode("Choice Node", actionEvent.eventInfo.localMousePosition))));
 
 		return contextualMenuManipulator;
 	}
@@ -69,9 +69,8 @@ public class DialogGraphView : GraphView
 		DialogNodeData data = new DialogNodeData
 		{
 			DialogTitle = nodeName,
-			DialogText = "hello world",
 			Guid =  System.Guid.NewGuid().ToString(),
-			Type = DialogNodeData.NodeType.GameEvent
+			Type = DialogNodeData.NodeType.EVENT
 		};
 
 		return CreateEventNode (data);
@@ -108,35 +107,35 @@ public class DialogGraphView : GraphView
 		return group;
 	}
 
-	public void CreateNode (string nodeName) 
-	{
-		AddElement (CreateDialogNode (nodeName));
-	}
+	//public void CreateChoiceNode (string nodeName) 
+	//{
+	//	AddElement (CreateChoiceNode (nodeName));
+	//}
 
-	public DialogNode CreateNode (string nodeName, Vector2 pos) 
+	public DialogNode CreateChoiceNode (string nodeName, Vector2 pos) 
 	{
-		DialogNode node = CreateDialogNode (nodeName);
+		DialogNode node = CreateChoiceNode (nodeName);
 		node.SetPosition (new Rect (pos, DialogNode.defaultSize));
 
 		return node;
 	}
 
-	public DialogNode CreateDialogNode (string nodeName)
+	public DialogNode CreateChoiceNode (string nodeName)
 	{
 		DialogNodeData data = new DialogNodeData
 		{
 			DialogTitle = nodeName,
 			DialogText = "hello world",
 			Guid =  System.Guid.NewGuid().ToString(),
-			Type = DialogNodeData.NodeType.MultipleChoice
+			Type = DialogNodeData.NodeType.CHOICE
 		};
 
-		return CreateDialogNode (data);
+		return CreateChoiceNode (data);
 	}
 
-	public DialogNode CreateDialogNode (DialogNodeData nodeData)
+	public DialogNode CreateChoiceNode (DialogNodeData nodeData)
 	{
-		var dialogNode = DialogGraphUtility.CreateDialogNode (nodeData);
+		var dialogNode = DialogGraphUtility.CreateChoiceNode (nodeData);
 
 		dialogNode.Init(this);
 

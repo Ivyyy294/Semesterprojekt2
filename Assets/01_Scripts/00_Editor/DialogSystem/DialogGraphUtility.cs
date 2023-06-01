@@ -7,9 +7,9 @@ using UnityEngine.UIElements;
 
 public static class DialogGraphUtility
 {
-	public static DialogNode CreateDialogNode (DialogNodeData nodeData)
+	public static DialogNode CreateChoiceNode (DialogNodeData nodeData)
 	{
-		var dialogNode = new DialogMultipleChoiceNode {data = nodeData};
+		var dialogNode = new DialogChoiceNode {data = nodeData};
 		return dialogNode;
 	}
 

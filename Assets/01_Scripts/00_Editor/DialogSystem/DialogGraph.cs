@@ -59,14 +59,6 @@ public class DialogGraph : EditorWindow
 
 		toolbar.Add (new Button (clickEvent:() => RequestDataOperation(true)) {text = "Save Data"});
 
-		var nodeCreateButton = new Button ( clickEvent:() =>
-		{
-			dialogGraphView.CreateNode("Dialog Node");
-		});
-
-		nodeCreateButton.text = "Create Node";
-		toolbar.Add (nodeCreateButton);
-
 		rootVisualElement.Add (toolbar);
 	}
 

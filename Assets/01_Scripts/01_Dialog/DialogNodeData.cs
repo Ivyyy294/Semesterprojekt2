@@ -6,16 +6,16 @@ public class DialogNodeData
 {
 	public enum NodeType
 	{
-		MultipleChoice,
-		Auto,
-		GameEvent
+		CHOICE,
+		NPC,
+		EVENT
 	}
 
 	//Base Values
 	public string Guid;
 	public string DialogTitle;
 	public Vector2 Position;
-	public NodeType Type = NodeType.MultipleChoice;
+	public NodeType Type = NodeType.CHOICE;
 
 	//Text Node Values
 	public string DialogText;
