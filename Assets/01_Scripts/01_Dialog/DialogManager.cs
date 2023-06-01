@@ -4,20 +4,112 @@ using UnityEngine;
 using TMPro;
 using UnityEngine.UI;
 
+public class RecieveNpcMessage : Ivyyy.StateMachine.IState
+{
+	public string guid;
+
+	DialogNodeData data;
+	ChatMessage chatMessage;
+	DialogManager manager;
+	float timer;
+
+	//ToDo load from node
+	//float responseTime = 0.5f;
+
+	public void Enter (GameObject obj)
+	{
+		manager = obj.GetComponent <DialogManager>();
+		manager.DisableButtons();
+
+		data = manager.dialogContainer.GetDialogNodeData (guid);
+
+		chatMessage = Object.Instantiate (manager.messageNpcTemplate, manager.messageContainer.transform).GetComponentInChildren<ChatMessage>();
+		chatMessage.SetText (data.DialogText);
+	}
+
+	public void Update (GameObject obj)
+	{
+		if (chatMessage.Done)
+			manager.SetState (new GetPlayerChoice(){guid = data.Guid});
+	}
+}
+
+public class GetPlayerChoice : Ivyyy.StateMachine.IState
+{
+	public string guid;
+
+	DialogManager manager;
+	private List <NodeLinkData> portList;
+
+	public void Enter (GameObject obj)
+	{
+		manager = obj.GetComponent <DialogManager>();
+		portList = manager.dialogContainer.GetDialogPorts (guid);
+		InitButtons ();
+	}
+
+	public void Update (GameObject obj) {}
+
+	private void InitButtons()
+	{
+		for (int i = 0; i < portList.Count; ++i)
+		{
+			NodeLinkData port = portList[i];
+			manager.ButtonList[i].gameObject.SetActive(true);
+			manager.ButtonList[i].GetComponent<Button>().onClick.AddListener (call:() =>{ButtonCallBack(port);});
+			manager.ButtonList[i].GetComponentInChildren<TextMeshProUGUI>().text = port.portName;
+		}
+	}
+
+	private void ButtonCallBack (NodeLinkData _port)
+	{
+		manager.SetState (new SentPlayerMessage() {port = _port});
+	}
+}
+
+public class SentPlayerMessage : Ivyyy.StateMachine.IState
+{
+	public NodeLinkData port;
+	DialogManager manager;
+	ChatMessage chatMessage;
+
+	public void Enter (GameObject obj)
+	{
+		manager = obj.GetComponent <DialogManager>();
+		manager.DisableButtons();
+
+		chatMessage = Object.Instantiate (manager.messagePlayerTemplate, manager.messageContainer.transform).GetComponentInChildren<ChatMessage>();
+		chatMessage.SetText (port.portName);
+	}
+
+	public void Update (GameObject obj)
+	{
+		if (chatMessage.Done)
+			manager.SetState (new RecieveNpcMessage(){guid = port.targetNodeGuid});
+	}
+}
+
 public class DialogManager : MonoBehaviour
 {
-	[SerializeField] DialogContainer dialogContainer;
+	//Get
+	public List <GameObject> ButtonList => buttonList;
+
 
 	[Header ("Lara values")]
-	[SerializeField] GameObject messageContainer;
-	[SerializeField] GameObject messageNpcTemplate;
-	[SerializeField] GameObject messagePlayerTemplate;
+	public DialogContainer dialogContainer;
+	public GameObject messageContainer;
+	public GameObject messageNpcTemplate;
+	public GameObject messagePlayerTemplate;
+	public GameObject buttonContainer;
 
-	[SerializeField] GameObject buttonContainer;
-
+	private Ivyyy.StateMachine.IState currentState;
 	private List <GameObject> buttonList = new List<GameObject>();
-	private DialogNodeData currentNode;
-	private List <NodeLinkData> portList;
+
+	public void SetState (Ivyyy.StateMachine.IState newState)
+	{
+		currentState = newState;
+		currentState.Enter(gameObject);
+	}
 
     // Start is called before the first frame update
     void Start()
@@ -27,61 +119,22 @@ public class DialogManager : MonoBehaviour
 			for (int i = 0; i < buttonContainer.transform.childCount; ++i)
 				buttonList.Add (buttonContainer.transform.GetChild(i).gameObject);
 
-			LoadDialog (dialogContainer.GetStartNodeGuid());
+			SetState (new RecieveNpcMessage() {guid = dialogContainer.GetStartNodeGuid()});
 		}
     }
-
-	public void OnButtonPressed (int index)
-	{
-		if (index > -1 && index < portList.Count)
-			LoadDialog (portList[index].targetNodeGuid);
-	}
 
     // Update is called once per frame
     void Update()
     {
-        
+        currentState.Update (gameObject);
     }
 
-	void LoadDialog (string guid)
+	public void DisableButtons ()
 	{
-		currentNode = dialogContainer.GetDialogNodeData (guid);
-		portList = dialogContainer.GetDialogPorts (currentNode.Guid);
-
-		SpawnMessage (currentNode.DialogText);
-		//if (txtDialog != null)
-		//	txtDialog.text = currentNode.DialogText;
-
 		foreach (var i in buttonList)
 		{
 			i.gameObject.SetActive (false);
 			i.GetComponent <Button>().onClick.RemoveAllListeners();
 		}
-
-		for (int i = 0; i < portList.Count; ++i)
-		{
-			NodeLinkData port = portList[i];
-			buttonList[i].gameObject.SetActive(true);
-			buttonList[i].GetComponent<Button>().onClick.AddListener (call:() =>{SpawnPlayerMessage(port);});
-			buttonList[i].GetComponentInChildren<TextMeshProUGUI>().text = port.portName;
-		}
-	}
-
-	void SpawnPlayerMessage (NodeLinkData port)
-	{
-		SpawnMessage (port.portName, true);
-		LoadDialog(port.targetNodeGuid);
-	}
-
-	void SpawnMessage (string text, bool player = false)
-	{
-		ChatMessage msg;
-
-		if (player)
-			msg = Instantiate (messagePlayerTemplate, messageContainer.transform).GetComponent <ChatMessage>();
-		else
-			msg = Instantiate (messageNpcTemplate, messageContainer.transform).GetComponentInChildren<ChatMessage>();
-
-		msg?.SetText (text);
 	}
 }

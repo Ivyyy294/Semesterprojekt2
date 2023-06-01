@@ -16,6 +16,7 @@ public class ChatMessage : MonoBehaviour
 
     public void SetText (string text)
 	{
+		done = false;
 		newText = text;
 		timer = 0f;
 	}
@@ -24,11 +25,10 @@ public class ChatMessage : MonoBehaviour
 	{
 		if (timer < respondTime)
 			timer += Time.deltaTime;
-		else if (!string.IsNullOrEmpty(newText)
-			&& txtField != null)
+		else if (!done)
 		{
 			txtField.text = newText;
-			newText = null;
+			done = true;
 		}
 	}
 }
