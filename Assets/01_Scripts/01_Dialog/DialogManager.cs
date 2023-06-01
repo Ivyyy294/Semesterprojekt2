@@ -28,7 +28,11 @@ public class DefaultState : Ivyyy.StateMachine.IState
 			manager.choiceNodeState.guid = guid;
 			manager.SetState (manager.choiceNodeState);
 		}
-		//else if (data.Type == DialogNodeData.NodeType.EVENT)
+		else if (data.Type == DialogNodeData.NodeType.EVENT)
+		{
+			manager.eventNodeState.guid = guid;
+			manager.SetState (manager.eventNodeState);
+		}
 	}
 }
 
@@ -125,11 +129,35 @@ public class PlayerMessageState : Ivyyy.StateMachine.IState
 	}
 }
 
+public class EventNodeState : Ivyyy.StateMachine.IState
+{
+	public string guid;
+	DialogNodeData data;
+	DialogManager manager;
+
+	public void Enter (GameObject obj)
+	{
+		manager = obj.GetComponent <DialogManager>();
+		data = manager.dialogContainer.GetDialogNodeData (guid);
+		data.GameEvent.Raise();
+	}
+
+	public void Update  (GameObject obj)
+	{
+		var portList = manager.dialogContainer.GetDialogPorts (guid);
+
+		if (portList.Count > 0)
+		{
+			manager.defaultState.guid = portList[0].targetNodeGuid;
+			manager.SetState (manager.defaultState);
+		}
+	}
+}
+
 public class DialogManager : MonoBehaviour
 {
 	//Get
 	public List <GameObject> ButtonList => buttonList;
-
 
 	[Header ("Lara values")]
 	public DialogContainer dialogContainer;
@@ -145,6 +173,7 @@ public class DialogManager : MonoBehaviour
 	public NpcNodeState npcNodeState = new NpcNodeState();
 	public ChoiceNodeState choiceNodeState = new ChoiceNodeState();
 	public PlayerMessageState playerMessageState = new PlayerMessageState();
+	public EventNodeState eventNodeState = new EventNodeState();
 
 	public void SetState (Ivyyy.StateMachine.IState newState)
 	{

@@ -28,40 +28,104 @@ MonoBehaviour:
   - baseNodeGuid: 2e8dfa14-7569-4b2c-8f52-7536dd6b4d19
     portName: Who are you??
     targetNodeGuid: 44187b7e-c103-49de-bbdc-1550b28c5930
+  - baseNodeGuid: 92036d48-e3f1-489d-a202-999ec9e5d156
+    portName: Next
+    targetNodeGuid: 055f5abf-7f26-4345-9adb-b16183cb575f
+  - baseNodeGuid: 055f5abf-7f26-4345-9adb-b16183cb575f
+    portName: Awww yo cute...
+    targetNodeGuid: 5e1fdd36-7a0b-4ad5-9030-8eafdb361e82
+  - baseNodeGuid: 5e1fdd36-7a0b-4ad5-9030-8eafdb361e82
+    portName: Next
+    targetNodeGuid: 1dd474ad-bcec-4392-8cb7-845c78dd3fa7
+  - baseNodeGuid: 1dd474ad-bcec-4392-8cb7-845c78dd3fa7
+    portName: Heck Yeah!
+    targetNodeGuid: a7b5560d-e02a-4573-8c39-ae94ea1b20ce
+  - baseNodeGuid: 1dd474ad-bcec-4392-8cb7-845c78dd3fa7
+    portName: Ne du...
+    targetNodeGuid: dba9b12f-3c04-423a-8239-5bac4cf335f7
   dialogNodeData:
   - Guid: ac7acd63-894e-4a46-be96-2c9c8b18f76e
     DialogTitle: Npc Node
-    Position: {x: 261, y: 171}
+    Position: {x: 245, y: 132}
     Type: 1
     DialogText: Hi gurl :D
     Image: {fileID: 0}
     GameEvent: {fileID: 0}
   - Guid: 473fa8df-8afb-4869-b6fc-ea8b11e2f9f3
     DialogTitle: Npc Node
-    Position: {x: 541, y: 239}
+    Position: {x: 505, y: 123}
     Type: 1
     DialogText: How are you?
     Image: {fileID: 0}
     GameEvent: {fileID: 0}
   - Guid: 2e8dfa14-7569-4b2c-8f52-7536dd6b4d19
     DialogTitle: Choice Node
-    Position: {x: 812, y: 302}
+    Position: {x: 769, y: 131}
     Type: 0
     DialogText: hello world
     Image: {fileID: 0}
     GameEvent: {fileID: 0}
   - Guid: 92036d48-e3f1-489d-a202-999ec9e5d156
     DialogTitle: Npc Node
-    Position: {x: 1133, y: 210}
+    Position: {x: 1058, y: 132}
     Type: 1
-    DialogText: hello world
-    Image: {fileID: 0}
+    DialogText: Do you like penguins?
+    Image: {fileID: 21300000, guid: ec03f79379868c642b48ae5ddc821b6d, type: 3}
     GameEvent: {fileID: 0}
   - Guid: 44187b7e-c103-49de-bbdc-1550b28c5930
     DialogTitle: Npc Node
-    Position: {x: 1122, y: 395}
+    Position: {x: 1077, y: 327}
     Type: 1
     DialogText: How rude!
     Image: {fileID: 0}
     GameEvent: {fileID: 0}
-  dialogGroupData: []
+  - Guid: 055f5abf-7f26-4345-9adb-b16183cb575f
+    DialogTitle: Awww so cute....
+    Position: {x: 1317, y: 132}
+    Type: 0
+    DialogText: hello world
+    Image: {fileID: 0}
+    GameEvent: {fileID: 0}
+  - Guid: 5e1fdd36-7a0b-4ad5-9030-8eafdb361e82
+    DialogTitle: Npc Node
+    Position: {x: 1626, y: 131}
+    Type: 1
+    DialogText: Would you like to go out?
+    Image: {fileID: 0}
+    GameEvent: {fileID: 0}
+  - Guid: a7b5560d-e02a-4573-8c39-ae94ea1b20ce
+    DialogTitle: Event Node
+    Position: {x: 2148, y: 132}
+    Type: 2
+    DialogText: 
+    Image: {fileID: 0}
+    GameEvent: {fileID: 11400000, guid: 6b9f5619b35070c45b9211b6bd6ca736, type: 2}
+  - Guid: 1dd474ad-bcec-4392-8cb7-845c78dd3fa7
+    DialogTitle: Choice Node
+    Position: {x: 1880, y: 171}
+    Type: 0
+    DialogText: hello world
+    Image: {fileID: 0}
+    GameEvent: {fileID: 0}
+  - Guid: dba9b12f-3c04-423a-8239-5bac4cf335f7
+    DialogTitle: Npc Node
+    Position: {x: 2203, y: 292}
+    Type: 1
+    DialogText: :(((
+    Image: {fileID: 0}
+    GameEvent: {fileID: 0}
+  dialogGroupData:
+  - Guid: 
+    name: Day1
+    Position: {x: 220, y: 64}
+    childNodeGuid:
+    - ac7acd63-894e-4a46-be96-2c9c8b18f76e
+    - 473fa8df-8afb-4869-b6fc-ea8b11e2f9f3
+    - 2e8dfa14-7569-4b2c-8f52-7536dd6b4d19
+    - 92036d48-e3f1-489d-a202-999ec9e5d156
+    - 44187b7e-c103-49de-bbdc-1550b28c5930
+    - 055f5abf-7f26-4345-9adb-b16183cb575f
+    - 5e1fdd36-7a0b-4ad5-9030-8eafdb361e82
+    - a7b5560d-e02a-4573-8c39-ae94ea1b20ce
+    - 1dd474ad-bcec-4392-8cb7-845c78dd3fa7
+    - dba9b12f-3c04-423a-8239-5bac4cf335f7

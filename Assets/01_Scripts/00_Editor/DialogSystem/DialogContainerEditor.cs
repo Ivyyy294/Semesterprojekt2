@@ -8,7 +8,7 @@ public class DialogContainerEditor : Editor
 {
 	public override void OnInspectorGUI()
 	{
-		base.OnInspectorGUI();
+		//base.OnInspectorGUI();
 
 		if (GUILayout.Button("Open Custom Graph Window"))
 			DialogGraph.OpenDialogGraphWindow((DialogContainer)target);
