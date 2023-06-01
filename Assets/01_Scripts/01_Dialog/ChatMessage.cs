@@ -2,22 +2,31 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using UnityEngine.UI;
 
 public class ChatMessage : MonoBehaviour
 {
 	[SerializeField] TextMeshProUGUI txtField;
 	[SerializeField] float respondTime;
+	[SerializeField] Image imageObj;
 	
 	public bool Done=>done;
 
 	private bool done;
 	private float timer;
-	private string newText;
+	private DialogNodeData nodeData = null;
 
-    public void SetText (string text)
+	public void SetContent (DialogNodeData data)
 	{
 		done = false;
-		newText = text;
+		nodeData = data;
+		timer = 0f;
+	}
+
+	public void SetContent (string text)
+	{
+		done = false;
+		nodeData = new DialogNodeData() {DialogText = text};
 		timer = 0f;
 	}
 
@@ -27,7 +36,12 @@ public class ChatMessage : MonoBehaviour
 			timer += Time.deltaTime;
 		else if (!done)
 		{
-			txtField.text = newText;
+			if (nodeData != null)
+			{
+				txtField.text = nodeData.DialogText;
+				imageObj.sprite = nodeData.Image;
+			}
+			
 			done = true;
 		}
 	}

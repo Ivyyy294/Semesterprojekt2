@@ -1,7 +1,9 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor.UIElements;
 using UnityEngine;
+using UnityEngine.UIElements;
 
 public class DialogTextNode : DialogNode
 {
@@ -21,6 +23,15 @@ public class DialogTextNode : DialogNode
 
 		//Content
 		mainContainer.Add (DialogGraphUtility.CreateTextArea (data.DialogText, evt=>{data.DialogText = evt.newValue; MarkDirtyRepaint();}));
+
+		//Image
+		Foldout textFoldout = DialogGraphUtility.CreateFoldout ("Image", true);
+		var actionField = new ObjectField();
+		actionField.objectType = typeof(Sprite);
+		actionField.RegisterValueChangedCallback(evt => data.Image = evt.newValue as Sprite);
+		actionField.SetValueWithoutNotify (data.Image);
+		textFoldout.Add (actionField);
+		mainContainer.Add(textFoldout);
 
 		MarkDirtyRepaint();
 		RefreshExpandedState();

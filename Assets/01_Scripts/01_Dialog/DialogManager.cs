@@ -20,7 +20,7 @@ public class RecieveNpcMessage : Ivyyy.StateMachine.IState
 		data = manager.dialogContainer.GetDialogNodeData (guid);
 
 		chatMessage = Object.Instantiate (manager.messageNpcTemplate, manager.messageContainer.transform).GetComponentInChildren<ChatMessage>();
-		chatMessage.SetText (data.DialogText);
+		chatMessage.SetContent (data);
 	}
 
 	public void Update (GameObject obj)
@@ -85,7 +85,7 @@ public class SentPlayerMessage : Ivyyy.StateMachine.IState
 		manager.DisableButtons();
 
 		chatMessage = Object.Instantiate (manager.messagePlayerTemplate, manager.messageContainer.transform).GetComponentInChildren<ChatMessage>();
-		chatMessage.SetText (port.portName);
+		chatMessage.SetContent (port.portName);
 	}
 
 	public void Update (GameObject obj)

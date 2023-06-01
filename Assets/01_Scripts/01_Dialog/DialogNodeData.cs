@@ -17,5 +17,6 @@ public class DialogNodeData
 	public Vector2 Position;
 	public NodeType Type = NodeType.MultipleChoice;
 	public GameEvent GameEvent = null;
+	public Sprite Image;
 }
  

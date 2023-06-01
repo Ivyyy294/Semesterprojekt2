@@ -16,12 +16,6 @@ MonoBehaviour:
   - baseNodeGuid: 4caf5a8a-30fa-496a-b43a-4f4fa2b6de04
     portName: Next
     targetNodeGuid: c6ae29b4-0e8e-472a-b0de-9695725816a6
-  - baseNodeGuid: cf52200a-92b5-47b5-97a6-927f457968fa
-    portName: Actually its Monday...
-    targetNodeGuid: a55a705b-c0a6-493b-8e33-fe9865803368
-  - baseNodeGuid: cf52200a-92b5-47b5-97a6-927f457968fa
-    portName: Good!
-    targetNodeGuid: 5b714bd2-3e6e-4ecd-a022-72e424a64789
   - baseNodeGuid: c6ae29b4-0e8e-472a-b0de-9695725816a6
     portName: Hi!
     targetNodeGuid: cf52200a-92b5-47b5-97a6-927f457968fa
@@ -37,30 +31,23 @@ MonoBehaviour:
   - baseNodeGuid: 5b714bd2-3e6e-4ecd-a022-72e424a64789
     portName: Next
     targetNodeGuid: af88c5cd-47d5-41e2-b8d8-21997c32d15c
-  - baseNodeGuid: a55a705b-c0a6-493b-8e33-fe9865803368
-    portName: Choice 0
-    targetNodeGuid: 8c5fc802-6168-49ff-a20e-656c8334993e
+  - baseNodeGuid: cf52200a-92b5-47b5-97a6-927f457968fa
+    portName: Good!
+    targetNodeGuid: 5b714bd2-3e6e-4ecd-a022-72e424a64789
+  - baseNodeGuid: cf52200a-92b5-47b5-97a6-927f457968fa
+    portName: Actually its Monday...
+    targetNodeGuid: f43fe157-b25c-4732-b0a1-eab1c1e2add4
+  - baseNodeGuid: f43fe157-b25c-4732-b0a1-eab1c1e2add4
+    portName: Next
+    targetNodeGuid: 271f2b17-5ec6-4a78-9b96-8edcc9ee5a33
   dialogNodeData:
-  - Guid: a55a705b-c0a6-493b-8e33-fe9865803368
-    DialogTitle: Dialog 4
-    DialogText: How rude!
-    Position: {x: 851, y: 534}
-    Type: 0
-    GameEvent: {fileID: 0}
-  - Guid: cf52200a-92b5-47b5-97a6-927f457968fa
-    DialogTitle: Dialog2
-    DialogText: 'How are you doing today,
-
-      on this beautiful Sunday?'
-    Position: {x: 526, y: 400}
-    Type: 0
-    GameEvent: {fileID: 0}
   - Guid: c6ae29b4-0e8e-472a-b0de-9695725816a6
     DialogTitle: Dialog1
     DialogText: Hello there!
     Position: {x: 255, y: 304}
     Type: 0
     GameEvent: {fileID: 0}
+    Image: {fileID: 0}
   - Guid: 1eeef698-5edd-4831-8a1c-8be4e5fe59c9
     DialogTitle: Dialog Node
     DialogText: 'Really?!! Im so happy! :D
@@ -69,18 +56,21 @@ MonoBehaviour:
     Position: {x: 1629, y: 141}
     Type: 0
     GameEvent: {fileID: 0}
+    Image: {fileID: 0}
   - Guid: 45fd8858-5f79-41e2-bbc4-4f220ab5de75
     DialogTitle: Dialog Node
     DialogText: ....
     Position: {x: 1629, y: 398}
     Type: 0
     GameEvent: {fileID: 0}
+    Image: {fileID: 0}
   - Guid: 2a9924f8-2613-4d61-9c7a-c6b110cf8ae7
     DialogTitle: Dialog Node
     DialogText: love you <3
     Position: {x: 1932, y: 141}
     Type: 0
     GameEvent: {fileID: 0}
+    Image: {fileID: 0}
   - Guid: af88c5cd-47d5-41e2-b8d8-21997c32d15c
     DialogTitle: Dialog 5
     DialogText: 'I have to confess...
@@ -89,28 +79,47 @@ MonoBehaviour:
     Position: {x: 1248, y: 181}
     Type: 0
     GameEvent: {fileID: 0}
+    Image: {fileID: 0}
   - Guid: 5b714bd2-3e6e-4ecd-a022-72e424a64789
     DialogTitle: Dialog3
     DialogText: Thats wonderful!
     Position: {x: 920, y: 277}
     Type: 1
     GameEvent: {fileID: 0}
-  - Guid: 8c5fc802-6168-49ff-a20e-656c8334993e
+    Image: {fileID: 0}
+  - Guid: cf52200a-92b5-47b5-97a6-927f457968fa
+    DialogTitle: Dialog2
+    DialogText: 'How are you doing today,
+
+      on this beautiful Sunday?'
+    Position: {x: 555, y: 420}
+    Type: 0
+    GameEvent: {fileID: 0}
+    Image: {fileID: 0}
+  - Guid: f43fe157-b25c-4732-b0a1-eab1c1e2add4
     DialogTitle: Text Node
-    DialogText: hello world
-    Position: {x: 1213, y: 595}
+    DialogText: How rude!
+    Position: {x: 895, y: 480}
     Type: 1
     GameEvent: {fileID: 0}
+    Image: {fileID: 0}
+  - Guid: 271f2b17-5ec6-4a78-9b96-8edcc9ee5a33
+    DialogTitle: Text Node
+    DialogText: Take this!
+    Position: {x: 1235, y: 616}
+    Type: 1
+    GameEvent: {fileID: 0}
+    Image: {fileID: 21300000, guid: 70632ddfe8e71b04b8f90ef7e29a9e98, type: 3}
   dialogGroupData:
   - Guid: 
     name: Phase1
     Position: {x: 75, y: 141}
     childNodeGuid:
     - 4caf5a8a-30fa-496a-b43a-4f4fa2b6de04
-    - a55a705b-c0a6-493b-8e33-fe9865803368
-    - cf52200a-92b5-47b5-97a6-927f457968fa
     - c6ae29b4-0e8e-472a-b0de-9695725816a6
     - 5b714bd2-3e6e-4ecd-a022-72e424a64789
+    - cf52200a-92b5-47b5-97a6-927f457968fa
+    - f43fe157-b25c-4732-b0a1-eab1c1e2add4
   - Guid: 
     name: Phase2
     Position: {x: 1223, y: 82}
