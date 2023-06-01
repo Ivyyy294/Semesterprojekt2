@@ -11,12 +11,16 @@ public class DialogNodeData
 		GameEvent
 	}
 
+	//Base Values
 	public string Guid;
 	public string DialogTitle;
-	public string DialogText;
 	public Vector2 Position;
 	public NodeType Type = NodeType.MultipleChoice;
-	public GameEvent GameEvent = null;
+
+	//Text Node Values
+	public string DialogText;
 	public Sprite Image;
+
+	//Event Node Values
+	public GameEvent GameEvent = null;
 }
- 

@@ -25,7 +25,7 @@ public class DialogTextNode : DialogNode
 		mainContainer.Add (DialogGraphUtility.CreateTextArea (data.DialogText, evt=>{data.DialogText = evt.newValue; MarkDirtyRepaint();}));
 
 		//Image
-		Foldout textFoldout = DialogGraphUtility.CreateFoldout ("Image", true);
+		Foldout textFoldout = DialogGraphUtility.CreateFoldout ("Image", data.Image == null);
 		var actionField = new ObjectField();
 		actionField.objectType = typeof(Sprite);
 		actionField.RegisterValueChangedCallback(evt => data.Image = evt.newValue as Sprite);
