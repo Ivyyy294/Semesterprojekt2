@@ -158,9 +158,14 @@ public class GraphSaveUtility
 	{
 		foreach (var nodeData in containerCache.dialogNodeData)
 		{
-			var tmpNode = nodeData.Type == DialogNodeData.NodeType.MultipleChoice
-				? targetGraphView.CreateDialogNode (nodeData)
-				: targetGraphView.CreateEventNode (nodeData);
+			DialogNode tmpNode;
+
+			if (nodeData.Type == DialogNodeData.NodeType.GameEvent)
+				tmpNode = targetGraphView.CreateEventNode (nodeData);
+			else if (nodeData.Type == DialogNodeData.NodeType.Auto)
+				tmpNode = DialogTextNode.CreateTextNode (nodeData, targetGraphView);
+			else
+				tmpNode = targetGraphView.CreateDialogNode (nodeData);
 			
 			targetGraphView.AddElement (tmpNode);
 			tmpNode.SetPosition (new Rect (nodeData.Position, DialogNode.defaultSize));

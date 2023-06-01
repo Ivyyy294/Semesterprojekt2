@@ -7,6 +7,7 @@ public class DialogNodeData
 	public enum NodeType
 	{
 		MultipleChoice,
+		Auto,
 		GameEvent
 	}
 

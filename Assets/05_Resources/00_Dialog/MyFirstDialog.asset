@@ -16,34 +16,31 @@ MonoBehaviour:
   - baseNodeGuid: 4caf5a8a-30fa-496a-b43a-4f4fa2b6de04
     portName: Next
     targetNodeGuid: c6ae29b4-0e8e-472a-b0de-9695725816a6
-  - baseNodeGuid: dad55cd1-d2ed-4af7-86b9-b5508f0acd90
-    portName: Next
-    targetNodeGuid: af88c5cd-47d5-41e2-b8d8-21997c32d15c
-  - baseNodeGuid: cf52200a-92b5-47b5-97a6-927f457968fa
-    portName: Good!
-    targetNodeGuid: dad55cd1-d2ed-4af7-86b9-b5508f0acd90
   - baseNodeGuid: cf52200a-92b5-47b5-97a6-927f457968fa
     portName: Actually its Monday...
     targetNodeGuid: a55a705b-c0a6-493b-8e33-fe9865803368
+  - baseNodeGuid: cf52200a-92b5-47b5-97a6-927f457968fa
+    portName: Good!
+    targetNodeGuid: 5b714bd2-3e6e-4ecd-a022-72e424a64789
   - baseNodeGuid: c6ae29b4-0e8e-472a-b0de-9695725816a6
     portName: Hi!
     targetNodeGuid: cf52200a-92b5-47b5-97a6-927f457968fa
+  - baseNodeGuid: 1eeef698-5edd-4831-8a1c-8be4e5fe59c9
+    portName: Sure!
+    targetNodeGuid: 2a9924f8-2613-4d61-9c7a-c6b110cf8ae7
   - baseNodeGuid: af88c5cd-47d5-41e2-b8d8-21997c32d15c
     portName: awww.. i missed you too!!!
     targetNodeGuid: 1eeef698-5edd-4831-8a1c-8be4e5fe59c9
   - baseNodeGuid: af88c5cd-47d5-41e2-b8d8-21997c32d15c
     portName: Oh... i had no idea
     targetNodeGuid: 45fd8858-5f79-41e2-bbc4-4f220ab5de75
-  - baseNodeGuid: 1eeef698-5edd-4831-8a1c-8be4e5fe59c9
-    portName: Sure!
-    targetNodeGuid: 2a9924f8-2613-4d61-9c7a-c6b110cf8ae7
+  - baseNodeGuid: 5b714bd2-3e6e-4ecd-a022-72e424a64789
+    portName: Next
+    targetNodeGuid: af88c5cd-47d5-41e2-b8d8-21997c32d15c
+  - baseNodeGuid: a55a705b-c0a6-493b-8e33-fe9865803368
+    portName: Choice 0
+    targetNodeGuid: 8c5fc802-6168-49ff-a20e-656c8334993e
   dialogNodeData:
-  - Guid: dad55cd1-d2ed-4af7-86b9-b5508f0acd90
-    DialogTitle: Dialog3
-    DialogText: Thats wonderful!
-    Position: {x: 872, y: 264}
-    Type: 0
-    GameEvent: {fileID: 0}
   - Guid: a55a705b-c0a6-493b-8e33-fe9865803368
     DialogTitle: Dialog 4
     DialogText: How rude!
@@ -62,14 +59,6 @@ MonoBehaviour:
     DialogTitle: Dialog1
     DialogText: Hello there!
     Position: {x: 255, y: 304}
-    Type: 0
-    GameEvent: {fileID: 0}
-  - Guid: af88c5cd-47d5-41e2-b8d8-21997c32d15c
-    DialogTitle: Dialog 5
-    DialogText: 'I have to confess...
-
-      I missed you a lot...'
-    Position: {x: 1226, y: 178}
     Type: 0
     GameEvent: {fileID: 0}
   - Guid: 1eeef698-5edd-4831-8a1c-8be4e5fe59c9
@@ -92,21 +81,41 @@ MonoBehaviour:
     Position: {x: 1932, y: 141}
     Type: 0
     GameEvent: {fileID: 0}
+  - Guid: af88c5cd-47d5-41e2-b8d8-21997c32d15c
+    DialogTitle: Dialog 5
+    DialogText: 'I have to confess...
+
+      I missed you a lot...'
+    Position: {x: 1248, y: 181}
+    Type: 0
+    GameEvent: {fileID: 0}
+  - Guid: 5b714bd2-3e6e-4ecd-a022-72e424a64789
+    DialogTitle: Dialog3
+    DialogText: Thats wonderful!
+    Position: {x: 920, y: 277}
+    Type: 1
+    GameEvent: {fileID: 0}
+  - Guid: 8c5fc802-6168-49ff-a20e-656c8334993e
+    DialogTitle: Text Node
+    DialogText: hello world
+    Position: {x: 1213, y: 595}
+    Type: 1
+    GameEvent: {fileID: 0}
   dialogGroupData:
   - Guid: 
     name: Phase1
     Position: {x: 75, y: 141}
     childNodeGuid:
     - 4caf5a8a-30fa-496a-b43a-4f4fa2b6de04
-    - dad55cd1-d2ed-4af7-86b9-b5508f0acd90
     - a55a705b-c0a6-493b-8e33-fe9865803368
     - cf52200a-92b5-47b5-97a6-927f457968fa
     - c6ae29b4-0e8e-472a-b0de-9695725816a6
+    - 5b714bd2-3e6e-4ecd-a022-72e424a64789
   - Guid: 
     name: Phase2
-    Position: {x: 1201, y: 82}
+    Position: {x: 1223, y: 82}
     childNodeGuid:
-    - af88c5cd-47d5-41e2-b8d8-21997c32d15c
     - 1eeef698-5edd-4831-8a1c-8be4e5fe59c9
     - 45fd8858-5f79-41e2-bbc4-4f220ab5de75
     - 2a9924f8-2613-4d61-9c7a-c6b110cf8ae7
+    - af88c5cd-47d5-41e2-b8d8-21997c32d15c

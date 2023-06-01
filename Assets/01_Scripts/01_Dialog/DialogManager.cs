@@ -11,10 +11,6 @@ public class RecieveNpcMessage : Ivyyy.StateMachine.IState
 	DialogNodeData data;
 	ChatMessage chatMessage;
 	DialogManager manager;
-	float timer;
-
-	//ToDo load from node
-	//float responseTime = 0.5f;
 
 	public void Enter (GameObject obj)
 	{
@@ -30,7 +26,17 @@ public class RecieveNpcMessage : Ivyyy.StateMachine.IState
 	public void Update (GameObject obj)
 	{
 		if (chatMessage.Done)
-			manager.SetState (new GetPlayerChoice(){guid = data.Guid});
+		{
+			if (data.Type == DialogNodeData.NodeType.MultipleChoice)
+				manager.SetState (new GetPlayerChoice(){guid = data.Guid});
+			else if (data.Type == DialogNodeData.NodeType.Auto)
+			{
+				var portList = manager.dialogContainer.GetDialogPorts (guid);
+
+				if (portList.Count > 0)
+					manager.SetState (new RecieveNpcMessage(){guid = portList[0].targetNodeGuid});
+			}
+		}
 	}
 }
 
