@@ -53,13 +53,9 @@ public class GraphSaveUtility
 		//Create Node List
 		foreach (var dialogNode in Nodes.Where (node => !node.entryPoint))
 		{
-			dialogContainer.dialogNodeData.Add (new DialogNodeData
-			{
-				Guid = dialogNode.data.Guid,
-				DialogText = dialogNode.data.DialogText,
-				Position = dialogNode.GetPosition().position,
-				DialogTitle = dialogNode.data.DialogTitle
-			});
+			DialogNodeData newData = dialogNode.data;
+			newData.Position = dialogNode.GetPosition().position;
+			dialogContainer.dialogNodeData.Add (newData);
 		}
 
 		//Create Group List
@@ -162,12 +158,19 @@ public class GraphSaveUtility
 	{
 		foreach (var nodeData in containerCache.dialogNodeData)
 		{
-			var tmpNode = targetGraphView.CreateDialogNode (nodeData);
+			var tmpNode = nodeData.Type == DialogNodeData.NodeType.MultipleChoice
+				? targetGraphView.CreateDialogNode (nodeData)
+				: targetGraphView.CreateEventNode (nodeData);
+			
 			targetGraphView.AddElement (tmpNode);
 			tmpNode.SetPosition (new Rect (nodeData.Position, DialogNode.defaultSize));
 
-			var nodePorts = containerCache.nodeLinks.Where(x=> x.baseNodeGuid == nodeData.Guid).ToList();
-			nodePorts.ForEach (x=>tmpNode.CreateChoicePort (x.portName));
+			if (nodeData.Type == DialogNodeData.NodeType.MultipleChoice)
+			{
+				DialogMultipleChoiceNode node = (DialogMultipleChoiceNode) tmpNode;
+				var nodePorts = containerCache.nodeLinks.Where(x=> x.baseNodeGuid == nodeData.Guid).ToList();
+				nodePorts.ForEach (x=>node.CreateChoicePort (x.portName));
+			}
 		}
 	}
 

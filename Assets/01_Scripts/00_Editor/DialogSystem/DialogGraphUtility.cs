@@ -9,7 +9,13 @@ public static class DialogGraphUtility
 {
 	public static DialogNode CreateDialogNode (DialogNodeData nodeData)
 	{
-		var dialogNode = new DialogNode {data = nodeData};
+		var dialogNode = new DialogMultipleChoiceNode {data = nodeData};
+		return dialogNode;
+	}
+
+	public static DialogEventNode CreateEventNode (DialogNodeData nodeData)
+	{
+		var dialogNode = new DialogEventNode {data = nodeData};
 		return dialogNode;
 	}
 

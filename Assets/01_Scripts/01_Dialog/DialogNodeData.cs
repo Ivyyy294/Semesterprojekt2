@@ -1,4 +1,5 @@
 using UnityEngine;
+using Ivyyy.GameEvent;
 
 [System.Serializable]
 public class DialogNodeData
@@ -14,5 +15,6 @@ public class DialogNodeData
 	public string DialogText;
 	public Vector2 Position;
 	public NodeType Type = NodeType.MultipleChoice;
+	public GameEvent GameEvent = null;
 }
  

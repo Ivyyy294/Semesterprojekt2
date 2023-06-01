@@ -18,6 +18,7 @@ public class DialogGraphView : GraphView
 		this.AddManipulator (new SelectionDragger());
 		this.AddManipulator (new RectangleSelector());
 		this.AddManipulator (CreateNodeContextMenu());
+		this.AddManipulator (CreateEventNodeContextMenu());
 		this.AddManipulator (CreateGroupContextMenu());
 
 		////ToDo fix stylesheet
@@ -26,6 +27,15 @@ public class DialogGraphView : GraphView
 		//grid.StretchToParentSize();
 
 		AddElement (GenerateEntryPointNode());
+	}
+
+	//Context Manipulator
+	private IManipulator CreateEventNodeContextMenu()
+	{
+		ContextualMenuManipulator contextualMenuManipulator = new ContextualMenuManipulator (
+			menuEvent=> menuEvent.menu.AppendAction ("Add EventNode", actionEvent=>AddElement (CreateEventNode("Event Node", actionEvent.eventInfo.localMousePosition))));
+
+		return contextualMenuManipulator;
 	}
 
 	private IManipulator CreateNodeContextMenu()
@@ -42,6 +52,35 @@ public class DialogGraphView : GraphView
 			menuEvent=> menuEvent.menu.AppendAction ("Add Group", actionEvent=>CreateGroup("DialogGroup", actionEvent.eventInfo.localMousePosition)));
 
 		return contextualMenuManipulator;
+	}
+
+	//Create Element Functions
+	public DialogNode CreateEventNode(string nodeName)
+	{
+		DialogNodeData data = new DialogNodeData
+		{
+			DialogTitle = nodeName,
+			DialogText = "hello world",
+			Guid =  System.Guid.NewGuid().ToString(),
+			Type = DialogNodeData.NodeType.GameEvent
+		};
+
+		return CreateEventNode (data);
+	}
+
+	public GraphElement CreateEventNode(string nodeName, Vector2 localMousePosition)
+	{
+		DialogNode node = CreateEventNode (nodeName);
+		node.SetPosition (new Rect (localMousePosition, DialogNode.defaultSize));
+
+		return node;
+	}
+
+	public DialogNode CreateEventNode(DialogNodeData data)
+	{
+		DialogEventNode node = DialogGraphUtility.CreateEventNode (data);
+		node.Init (this);
+		return node;
 	}
 
 	public Group CreateGroup (string title, Vector2 localMousePosition)
@@ -79,7 +118,8 @@ public class DialogGraphView : GraphView
 		{
 			DialogTitle = nodeName,
 			DialogText = "hello world",
-			Guid =  System.Guid.NewGuid().ToString()
+			Guid =  System.Guid.NewGuid().ToString(),
+			Type = DialogNodeData.NodeType.MultipleChoice
 		};
 
 		return CreateDialogNode (data);
@@ -92,6 +132,31 @@ public class DialogGraphView : GraphView
 		dialogNode.Init(this);
 
 		return dialogNode;
+	}
+
+	private DialogNode GenerateEntryPointNode()
+	{ 
+		var node = new DialogNode
+		{
+			entryPoint = true,
+			title = "START",
+
+			data = new DialogNodeData
+			{
+				DialogTitle = "START",
+				Guid = System.Guid.NewGuid().ToString(),
+				DialogText = "ENTRYPOINT",
+			}
+		};
+
+		node.Init (this);
+
+		node.RefreshExpandedState();
+		node.RefreshPorts();
+
+		node.SetPosition (new Rect (100, 200, 100, 150));
+
+		return node;
 	}
 
 	public void RemovePort(DialogNode dialogNode, Port generatedPort)
@@ -123,32 +188,5 @@ public class DialogGraphView : GraphView
 		});
 
 		return compatiblePorts;
-	}
-
-	private DialogNode GenerateEntryPointNode()
-	{ 
-		var node = new DialogNode
-		{
-			entryPoint = true,
-			title = "START",
-
-			data = new DialogNodeData
-			{
-				DialogTitle = "START",
-				Guid = System.Guid.NewGuid().ToString(),
-				DialogText = "ENTRYPOINT",
-			}
-		};
-
-		var generatedPort = DialogGraphUtility.CreatePort (node, Direction.Output);
-		generatedPort.portName = "Next";
-		node.outputContainer.Add (generatedPort);
-
-		node.RefreshExpandedState();
-		node.RefreshPorts();
-
-		node.SetPosition (new Rect (100, 200, 100, 150));
-
-		return node;
 	}
 }
