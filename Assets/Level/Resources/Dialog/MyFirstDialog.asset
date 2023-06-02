@@ -16,18 +16,6 @@ MonoBehaviour:
   - baseNodeGuid: af88c5cd-47d5-41e2-b8d8-21997c32d15c
     portName: Next
     targetNodeGuid: ac7acd63-894e-4a46-be96-2c9c8b18f76e
-  - baseNodeGuid: ac7acd63-894e-4a46-be96-2c9c8b18f76e
-    portName: Next
-    targetNodeGuid: 473fa8df-8afb-4869-b6fc-ea8b11e2f9f3
-  - baseNodeGuid: 473fa8df-8afb-4869-b6fc-ea8b11e2f9f3
-    portName: Next
-    targetNodeGuid: 2e8dfa14-7569-4b2c-8f52-7536dd6b4d19
-  - baseNodeGuid: 2e8dfa14-7569-4b2c-8f52-7536dd6b4d19
-    portName: Im fine thanks!
-    targetNodeGuid: 92036d48-e3f1-489d-a202-999ec9e5d156
-  - baseNodeGuid: 2e8dfa14-7569-4b2c-8f52-7536dd6b4d19
-    portName: Who are you??
-    targetNodeGuid: 44187b7e-c103-49de-bbdc-1550b28c5930
   - baseNodeGuid: 92036d48-e3f1-489d-a202-999ec9e5d156
     portName: Next
     targetNodeGuid: 055f5abf-7f26-4345-9adb-b16183cb575f
@@ -43,6 +31,18 @@ MonoBehaviour:
   - baseNodeGuid: 055f5abf-7f26-4345-9adb-b16183cb575f
     portName: Awww so cute...
     targetNodeGuid: 5e1fdd36-7a0b-4ad5-9030-8eafdb361e82
+  - baseNodeGuid: 473fa8df-8afb-4869-b6fc-ea8b11e2f9f3
+    portName: Next
+    targetNodeGuid: 2e8dfa14-7569-4b2c-8f52-7536dd6b4d19
+  - baseNodeGuid: ac7acd63-894e-4a46-be96-2c9c8b18f76e
+    portName: Next
+    targetNodeGuid: 473fa8df-8afb-4869-b6fc-ea8b11e2f9f3
+  - baseNodeGuid: 2e8dfa14-7569-4b2c-8f52-7536dd6b4d19
+    portName: Im fine thanks!
+    targetNodeGuid: 92036d48-e3f1-489d-a202-999ec9e5d156
+  - baseNodeGuid: 2e8dfa14-7569-4b2c-8f52-7536dd6b4d19
+    portName: Who are you??
+    targetNodeGuid: 44187b7e-c103-49de-bbdc-1550b28c5930
   dialogNodeData:
   - Guid: 92036d48-e3f1-489d-a202-999ec9e5d156
     DialogTitle: Npc Node
@@ -119,13 +119,13 @@ MonoBehaviour:
     name: Day1
     Position: {x: 224, y: 54}
     childNodeGuid:
-    - ac7acd63-894e-4a46-be96-2c9c8b18f76e
-    - 473fa8df-8afb-4869-b6fc-ea8b11e2f9f3
-    - 2e8dfa14-7569-4b2c-8f52-7536dd6b4d19
     - 92036d48-e3f1-489d-a202-999ec9e5d156
     - 44187b7e-c103-49de-bbdc-1550b28c5930
     - 5e1fdd36-7a0b-4ad5-9030-8eafdb361e82
-    - a7b5560d-e02a-4573-8c39-ae94ea1b20ce
     - 1dd474ad-bcec-4392-8cb7-845c78dd3fa7
     - dba9b12f-3c04-423a-8239-5bac4cf335f7
     - 055f5abf-7f26-4345-9adb-b16183cb575f
+    - 473fa8df-8afb-4869-b6fc-ea8b11e2f9f3
+    - ac7acd63-894e-4a46-be96-2c9c8b18f76e
+    - 2e8dfa14-7569-4b2c-8f52-7536dd6b4d19
+    - a7b5560d-e02a-4573-8c39-ae94ea1b20ce
