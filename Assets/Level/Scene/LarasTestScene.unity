@@ -173,7 +173,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1841819967}
-        m_TargetAssemblyTypeName: DialogManager, Assembly-CSharp
+        m_TargetAssemblyTypeName: ChatTerminalUi, Assembly-CSharp
         m_MethodName: Show
         m_Mode: 6
         m_Arguments:
@@ -201,7 +201,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1841819967}
-        m_TargetAssemblyTypeName: DialogManager, Assembly-CSharp
+        m_TargetAssemblyTypeName: ChatTerminalUi, Assembly-CSharp
         m_MethodName: Show
         m_Mode: 6
         m_Arguments:

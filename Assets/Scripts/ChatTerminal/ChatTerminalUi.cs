@@ -8,11 +8,11 @@ public class DefaultState : Ivyyy.StateMachine.IState
 {
 	public string guid;
 	DialogNodeData data;
-	DialogManager manager;
+	ChatTerminalUi manager;
 
 	public void Enter (GameObject obj)
 	{
-		manager = obj.GetComponent <DialogManager>();
+		manager = obj.GetComponent <ChatTerminalUi>();
 		data = manager.dialogContainer.GetDialogNodeData (guid);
 	}
 
@@ -42,11 +42,11 @@ public class NpcNodeState : Ivyyy.StateMachine.IState
 
 	DialogNodeData data;
 	ChatMessage chatMessage;
-	DialogManager manager;
+	ChatTerminalUi manager;
 
 	public void Enter (GameObject obj)
 	{
-		manager = obj.GetComponent <DialogManager>();
+		manager = obj.GetComponent <ChatTerminalUi>();
 		manager.DisableButtons();
 
 		data = manager.dialogContainer.GetDialogNodeData (guid);
@@ -74,12 +74,12 @@ public class ChoiceNodeState : Ivyyy.StateMachine.IState
 {
 	public string guid;
 
-	DialogManager manager;
+	ChatTerminalUi manager;
 	private List <NodeLinkData> portList;
 
 	public void Enter (GameObject obj)
 	{
-		manager = obj.GetComponent <DialogManager>();
+		manager = obj.GetComponent <ChatTerminalUi>();
 		portList = manager.dialogContainer.GetDialogPorts (guid);
 		InitButtons ();
 	}
@@ -107,12 +107,12 @@ public class ChoiceNodeState : Ivyyy.StateMachine.IState
 public class PlayerMessageState : Ivyyy.StateMachine.IState
 {
 	public NodeLinkData port;
-	DialogManager manager;
+	ChatTerminalUi manager;
 	ChatMessage chatMessage;
 
 	public void Enter (GameObject obj)
 	{
-		manager = obj.GetComponent <DialogManager>();
+		manager = obj.GetComponent <ChatTerminalUi>();
 		manager.DisableButtons();
 
 		chatMessage = Object.Instantiate (manager.messagePlayerTemplate, manager.messageContainer.transform).GetComponentInChildren<ChatMessage>();
@@ -133,11 +133,11 @@ public class EventNodeState : Ivyyy.StateMachine.IState
 {
 	public string guid;
 	DialogNodeData data;
-	DialogManager manager;
+	ChatTerminalUi manager;
 
 	public void Enter (GameObject obj)
 	{
-		manager = obj.GetComponent <DialogManager>();
+		manager = obj.GetComponent <ChatTerminalUi>();
 		data = manager.dialogContainer.GetDialogNodeData (guid);
 		data.GameEvent.Raise();
 	}
@@ -155,7 +155,7 @@ public class EventNodeState : Ivyyy.StateMachine.IState
 }
 
 
-public class DialogManager : MonoBehaviour
+public class ChatTerminalUi : MonoBehaviour
 {
 	//Get
 	public List <GameObject> ButtonList => buttonList;
