@@ -166,6 +166,7 @@ public class ChatTerminalUi : MonoBehaviour
 	public GameObject messageNpcTemplate;
 	public GameObject messagePlayerTemplate;
 	public GameObject buttonContainer;
+	public Ivyyy.GameEvent.GameEvent closeEvent;
 
 	private Ivyyy.StateMachine.IState currentState;
 	private List <GameObject> buttonList = new List<GameObject>();
@@ -180,6 +181,11 @@ public class ChatTerminalUi : MonoBehaviour
 	public void Show(bool val)
 	{
 		gameObject.SetActive (val);
+	}
+
+	public void RaiseCloseEvent()
+	{
+		closeEvent.Raise();
 	}
 
 	public void SetState (Ivyyy.StateMachine.IState newState)

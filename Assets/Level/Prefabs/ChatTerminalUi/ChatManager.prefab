@@ -380,6 +380,7 @@ MonoBehaviour:
   messageNpcTemplate: {fileID: 3610416349394782399, guid: e922a3a924d008c4498e07ac8da7569a, type: 3}
   messagePlayerTemplate: {fileID: 2641701109228213657, guid: 40bf2ec6f30a14b419d2443cfd078608, type: 3}
   buttonContainer: {fileID: 4511592564799787525}
+  closeEvent: {fileID: 11400000, guid: 2db1e2cec386b954ba5ea4c67080e35a, type: 2}
 --- !u!1 &7280975888437155686
 GameObject:
   m_ObjectHideFlags: 0
@@ -641,8 +642,8 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 4511592564968888214}
         m_TargetAssemblyTypeName: ChatTerminalUi, Assembly-CSharp
-        m_MethodName: Show
-        m_Mode: 6
+        m_MethodName: RaiseCloseEvent
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
