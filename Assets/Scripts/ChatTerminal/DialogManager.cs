@@ -154,6 +154,7 @@ public class EventNodeState : Ivyyy.StateMachine.IState
 	}
 }
 
+
 public class DialogManager : MonoBehaviour
 {
 	//Get
@@ -175,14 +176,39 @@ public class DialogManager : MonoBehaviour
 	public PlayerMessageState playerMessageState = new PlayerMessageState();
 	public EventNodeState eventNodeState = new EventNodeState();
 
+	//Public Functions
+	public void Show(bool val)
+	{
+		gameObject.SetActive (val);
+	}
+
 	public void SetState (Ivyyy.StateMachine.IState newState)
 	{
 		currentState = newState;
 		currentState.Enter(gameObject);
 	}
 
-    // Start is called before the first frame update
-    void Start()
+	public void DisableButtons ()
+	{
+		foreach (var i in buttonList)
+		{
+			i.gameObject.SetActive (false);
+			i.GetComponent <Button>().onClick.RemoveAllListeners();
+		}
+	}
+
+	//Private Functions
+	private void OnEnable()
+	{
+		Cursor.lockState = CursorLockMode.Confined;
+	}
+
+	private void OnDisable()
+	{
+		Cursor.lockState = CursorLockMode.Locked;
+	}
+
+	void Start()
     {
         if (dialogContainer != null)
 		{
@@ -194,18 +220,9 @@ public class DialogManager : MonoBehaviour
 		}
     }
 
-    // Update is called once per frame
     void Update()
     {
         currentState.Update (gameObject);
     }
 
-	public void DisableButtons ()
-	{
-		foreach (var i in buttonList)
-		{
-			i.gameObject.SetActive (false);
-			i.GetComponent <Button>().onClick.RemoveAllListeners();
-		}
-	}
 }
