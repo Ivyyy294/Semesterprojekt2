@@ -17,4 +17,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Level/Scene/NovasTestScene.unity
     guid: 9a0e570407c503a469d4ce2a28900684
+  - enabled: 0
+    path: Assets/Level/Scene/MenuTestScene.unity
+    guid: 2fb9b8681b7413347a168c784074ba89
   m_configObjects: {}

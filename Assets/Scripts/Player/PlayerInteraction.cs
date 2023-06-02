@@ -2,12 +2,16 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using Ivyyy.Interfaces;
+using Ivyyy.GameEvent;
 
 public class PlayerInteraction : MonoBehaviour
 {
 	[SerializeField] float range;
 	[SerializeField] KeyCode interactKey;
-	//[SerializeField] PauseMenu pauseMenu;
+	[SerializeField] KeyCode pauseKey;
+	
+	[Header ("Lara Values")]
+	[SerializeField] GameEvent showPauseMenu;
 
 	private Transform cameraTrans;
 
@@ -25,8 +29,8 @@ public class PlayerInteraction : MonoBehaviour
 			if (Input.GetKeyDown (interactKey))
 				Interact();
 
-			//if (Input.GetKeyDown (KeyCode.Escape))
-			//	pauseMenu.gameObject.SetActive (true);
+			if (Input.GetKeyDown (KeyCode.Escape))
+				showPauseMenu?.Raise();
 		}
     }
 
