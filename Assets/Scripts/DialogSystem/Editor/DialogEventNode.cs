@@ -31,4 +31,31 @@ public class DialogEventNode : DialogNode
 		RefreshPorts();
 		SetPosition (new Rect (Vector2.zero, defaultSize));
 	}
+
+	public static DialogEventNode CreateEventNode(string nodeName, DialogGraphView _parentView = null)
+	{
+		DialogNodeData data = new DialogNodeData
+		{
+			DialogTitle = nodeName,
+			Guid =  System.Guid.NewGuid().ToString(),
+			Type = DialogNodeData.NodeType.RAISE_EVENT
+		};
+
+		return CreateEventNode (data);
+	}
+
+	public static DialogEventNode CreateEventNode(string nodeName, Vector2 localMousePosition, DialogGraphView _parentView = null)
+	{
+		DialogEventNode node = CreateEventNode (nodeName);
+		node.SetPosition (new Rect (localMousePosition, DialogNode.defaultSize));
+
+		return node;
+	}
+
+	public static DialogEventNode CreateEventNode(DialogNodeData data, DialogGraphView _parentView = null)
+	{
+		DialogEventNode node = DialogGraphUtility.CreateEventNode (data);
+		node.Init (_parentView);
+		return node;
+	}
 }

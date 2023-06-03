@@ -42,7 +42,7 @@ public class DialogGraphView : GraphView
 	private IManipulator CreateEventNodeContextMenu()
 	{
 		ContextualMenuManipulator contextualMenuManipulator = new ContextualMenuManipulator (
-			menuEvent=> menuEvent.menu.AppendAction ("Add EventNode", actionEvent=>AddElement (CreateEventNode("Event Node", actionEvent.eventInfo.localMousePosition))));
+			menuEvent=> menuEvent.menu.AppendAction ("Add EventNode", actionEvent=>AddElement (DialogEventNode.CreateEventNode("Event Node", actionEvent.eventInfo.localMousePosition))));
 
 		return contextualMenuManipulator;
 	}
@@ -61,34 +61,6 @@ public class DialogGraphView : GraphView
 			menuEvent=> menuEvent.menu.AppendAction ("Add Group", actionEvent=>CreateGroup("DialogGroup", actionEvent.eventInfo.localMousePosition)));
 
 		return contextualMenuManipulator;
-	}
-
-	//Create Element Functions
-	public DialogNode CreateEventNode(string nodeName)
-	{
-		DialogNodeData data = new DialogNodeData
-		{
-			DialogTitle = nodeName,
-			Guid =  System.Guid.NewGuid().ToString(),
-			Type = DialogNodeData.NodeType.EVENT
-		};
-
-		return CreateEventNode (data);
-	}
-
-	public GraphElement CreateEventNode(string nodeName, Vector2 localMousePosition)
-	{
-		DialogNode node = CreateEventNode (nodeName);
-		node.SetPosition (new Rect (localMousePosition, DialogNode.defaultSize));
-
-		return node;
-	}
-
-	public DialogNode CreateEventNode(DialogNodeData data)
-	{
-		DialogEventNode node = DialogGraphUtility.CreateEventNode (data);
-		node.Init (this);
-		return node;
 	}
 
 	public Group CreateGroup (string title, Vector2 localMousePosition)

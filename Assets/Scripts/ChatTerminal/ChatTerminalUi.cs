@@ -28,7 +28,7 @@ public class DefaultState : BaseState
 			manager.SetState (manager.npcNodeState);
 		else if (node.data.Type == DialogNodeData.NodeType.CHOICE)
 			manager.SetState (manager.choiceNodeState);
-		else if (node.data.Type == DialogNodeData.NodeType.EVENT)
+		else if (node.data.Type == DialogNodeData.NodeType.RAISE_EVENT)
 			manager.SetState (manager.eventNodeState);
 	}
 }

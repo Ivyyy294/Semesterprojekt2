@@ -8,7 +8,8 @@ public class DialogNodeData
 	{
 		CHOICE,
 		NPC,
-		EVENT
+		RAISE_EVENT,
+		LISTEN_EVENT
 	}
 
 	//Base Values
