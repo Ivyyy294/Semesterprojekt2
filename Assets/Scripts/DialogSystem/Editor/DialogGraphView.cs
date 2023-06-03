@@ -19,7 +19,8 @@ public class DialogGraphView : GraphView
 		this.AddManipulator (new RectangleSelector());
 		this.AddManipulator (CreateNodeContextMenu());
 		this.AddManipulator (CreateTextNodeContextMenu());
-		this.AddManipulator (CreateEventNodeContextMenu());
+		this.AddManipulator (CreateRaiseEventNodeContextMenu());
+		this.AddManipulator (CreateListenEventNodeContextMenu());
 		this.AddManipulator (CreateGroupContextMenu());
 
 		////ToDo fix stylesheet
@@ -30,19 +31,27 @@ public class DialogGraphView : GraphView
 		AddElement (GenerateEntryPointNode());
 	}
 
+	private IManipulator CreateListenEventNodeContextMenu()
+	{
+		ContextualMenuManipulator contextualMenuManipulator = new ContextualMenuManipulator (
+			menuEvent=> menuEvent.menu.AppendAction ("Add ListenEventNode", actionEvent=>AddElement (DialogEventNode.CreateListenEventNode("ListenEventNode", actionEvent.eventInfo.localMousePosition))));
+
+		return contextualMenuManipulator;
+	}
+
 	private IManipulator CreateTextNodeContextMenu()
 	{
 		ContextualMenuManipulator contextualMenuManipulator = new ContextualMenuManipulator (
-			menuEvent=> menuEvent.menu.AppendAction ("Add NpcNode", actionEvent=>AddElement (DialogNpcNode.CreateNode("Npc Node", actionEvent.eventInfo.localMousePosition, this))));
+			menuEvent=> menuEvent.menu.AppendAction ("Add NpcNode", actionEvent=>AddElement (DialogNpcNode.CreateNode("NpcNode", actionEvent.eventInfo.localMousePosition, this))));
 
 		return contextualMenuManipulator;
 	}
 
 	//Context Manipulator
-	private IManipulator CreateEventNodeContextMenu()
+	private IManipulator CreateRaiseEventNodeContextMenu()
 	{
 		ContextualMenuManipulator contextualMenuManipulator = new ContextualMenuManipulator (
-			menuEvent=> menuEvent.menu.AppendAction ("Add EventNode", actionEvent=>AddElement (DialogEventNode.CreateEventNode("Event Node", actionEvent.eventInfo.localMousePosition))));
+			menuEvent=> menuEvent.menu.AppendAction ("Add RaiseEventNode", actionEvent=>AddElement (DialogEventNode.CreateRaiseEventNode("RaiseEventNode", actionEvent.eventInfo.localMousePosition))));
 
 		return contextualMenuManipulator;
 	}
@@ -50,7 +59,7 @@ public class DialogGraphView : GraphView
 	private IManipulator CreateNodeContextMenu()
 	{
 		ContextualMenuManipulator contextualMenuManipulator = new ContextualMenuManipulator (
-			menuEvent=> menuEvent.menu.AppendAction ("Add ChoiceNode", actionEvent=>AddElement (CreateChoiceNode("Choice Node", actionEvent.eventInfo.localMousePosition))));
+			menuEvent=> menuEvent.menu.AppendAction ("Add ChoiceNode", actionEvent=>AddElement (CreateChoiceNode("ChoiceNode", actionEvent.eventInfo.localMousePosition))));
 
 		return contextualMenuManipulator;
 	}

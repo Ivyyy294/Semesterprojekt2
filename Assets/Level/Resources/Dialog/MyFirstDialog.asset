@@ -52,6 +52,12 @@ MonoBehaviour:
   - baseNodeGuid: 8f8934f2-e73f-4ab5-8b33-66c608ee54c3
     portName: Next
     targetNodeGuid: dba9b12f-3c04-423a-8239-5bac4cf335f7
+  - baseNodeGuid: dba9b12f-3c04-423a-8239-5bac4cf335f7
+    portName: Next
+    targetNodeGuid: 41d9bef6-0975-4f47-b1ed-688548397b55
+  - baseNodeGuid: 41d9bef6-0975-4f47-b1ed-688548397b55
+    portName: Next
+    targetNodeGuid: 3a18816c-408d-42fb-83e8-5729776e9dbb
   dialogNodeData:
   - Guid: 92036d48-e3f1-489d-a202-999ec9e5d156
     DialogTitle: Npc Node
@@ -117,7 +123,7 @@ MonoBehaviour:
     Image: {fileID: 0}
     GameEvent: {fileID: 0}
   - Guid: a7b5560d-e02a-4573-8c39-ae94ea1b20ce
-    DialogTitle: Event Node
+    DialogTitle: RaiseEventNode
     Position: {x: 2191, y: 113}
     Type: 2
     DialogText: 
@@ -128,6 +134,20 @@ MonoBehaviour:
     Position: {x: 1626, y: 327}
     Type: 1
     DialogText: Why are you like this?
+    Image: {fileID: 0}
+    GameEvent: {fileID: 0}
+  - Guid: 41d9bef6-0975-4f47-b1ed-688548397b55
+    DialogTitle: ListenEventNode
+    Position: {x: 2637, y: 292}
+    Type: 3
+    DialogText: 
+    Image: {fileID: 0}
+    GameEvent: {fileID: 11400000, guid: 6b9f5619b35070c45b9211b6bd6ca736, type: 2}
+  - Guid: 3a18816c-408d-42fb-83e8-5729776e9dbb
+    DialogTitle: NpcNode
+    Position: {x: 3051, y: 302}
+    Type: 1
+    DialogText: Test Listen Event
     Image: {fileID: 0}
     GameEvent: {fileID: 0}
   dialogGroupData:

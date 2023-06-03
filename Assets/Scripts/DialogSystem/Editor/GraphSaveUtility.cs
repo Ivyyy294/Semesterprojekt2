@@ -160,7 +160,8 @@ public class GraphSaveUtility
 		{
 			DialogNode tmpNode;
 
-			if (nodeData.Type == DialogNodeData.NodeType.RAISE_EVENT)
+			if (nodeData.Type == DialogNodeData.NodeType.RAISE_EVENT
+				|| nodeData.Type == DialogNodeData.NodeType.LISTEN_EVENT)
 				tmpNode = DialogEventNode.CreateEventNode (nodeData, targetGraphView);
 			else if (nodeData.Type == DialogNodeData.NodeType.NPC)
 				tmpNode = DialogNpcNode.CreateTextNode (nodeData, targetGraphView);

@@ -32,7 +32,15 @@ public class DialogEventNode : DialogNode
 		SetPosition (new Rect (Vector2.zero, defaultSize));
 	}
 
-	public static DialogEventNode CreateEventNode(string nodeName, DialogGraphView _parentView = null)
+	public static DialogEventNode CreateEventNode(DialogNodeData data, DialogGraphView _parentView = null)
+	{
+		DialogEventNode node = DialogGraphUtility.CreateEventNode (data);
+		node.Init (_parentView);
+		return node;
+	}
+
+	//Create Raise Event Node
+	public static DialogEventNode CreateRaiseEventNode(string nodeName, DialogGraphView _parentView = null)
 	{
 		DialogNodeData data = new DialogNodeData
 		{
@@ -41,21 +49,35 @@ public class DialogEventNode : DialogNode
 			Type = DialogNodeData.NodeType.RAISE_EVENT
 		};
 
-		return CreateEventNode (data);
+		return CreateEventNode (data, _parentView);
 	}
 
-	public static DialogEventNode CreateEventNode(string nodeName, Vector2 localMousePosition, DialogGraphView _parentView = null)
+	public static DialogEventNode CreateRaiseEventNode(string nodeName, Vector2 localMousePosition, DialogGraphView _parentView = null)
 	{
-		DialogEventNode node = CreateEventNode (nodeName);
+		DialogEventNode node = CreateRaiseEventNode (nodeName, _parentView);
 		node.SetPosition (new Rect (localMousePosition, DialogNode.defaultSize));
 
 		return node;
 	}
 
-	public static DialogEventNode CreateEventNode(DialogNodeData data, DialogGraphView _parentView = null)
+	//Create Listen Event Node
+	public static DialogEventNode CreateListenEventNode(string nodeName, DialogGraphView _parentView = null)
 	{
-		DialogEventNode node = DialogGraphUtility.CreateEventNode (data);
-		node.Init (_parentView);
+		DialogNodeData data = new DialogNodeData
+		{
+			DialogTitle = nodeName,
+			Guid =  System.Guid.NewGuid().ToString(),
+			Type = DialogNodeData.NodeType.LISTEN_EVENT
+		};
+
+		return CreateEventNode (data, _parentView);
+	}
+
+	public static DialogEventNode CreateListenEventNode(string nodeName, Vector2 localMousePosition, DialogGraphView _parentView = null)
+	{
+		DialogEventNode node = CreateListenEventNode (nodeName, _parentView);
+		node.SetPosition (new Rect (localMousePosition, DialogNode.defaultSize));
+
 		return node;
 	}
 }

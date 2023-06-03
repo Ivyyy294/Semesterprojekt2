@@ -29,7 +29,9 @@ public class DefaultState : BaseState
 		else if (node.data.Type == DialogNodeData.NodeType.CHOICE)
 			manager.SetState (manager.choiceNodeState);
 		else if (node.data.Type == DialogNodeData.NodeType.RAISE_EVENT)
-			manager.SetState (manager.eventNodeState);
+			manager.SetState (manager.raiseEventNodeState);
+		else if (node.data.Type == DialogNodeData.NodeType.LISTEN_EVENT)
+			manager.SetState (manager.listenEventNodeState);
 	}
 }
 
@@ -113,7 +115,7 @@ public class ChoiceNodeState : BaseState
 	}
 }
 
-public class EventNodeState : BaseState
+public class RaiseEventNodeState : BaseState
 {
 	public override void Enter (GameObject obj)
 	{
@@ -128,6 +130,32 @@ public class EventNodeState : BaseState
 	}
 }
 
+public class ListenEventNodeState : BaseState, Ivyyy.GameEvent.IGameEventListener
+{
+	bool done;
+
+	public override void Enter (GameObject obj)
+	{
+		base.Enter (obj);
+		done = false;
+		node.data.GameEvent.RegisterListener (this);
+	}
+
+	public override void Update  (GameObject obj)
+	{
+		if (done)
+		{
+			node.data.GameEvent.UnregisterListener (this);
+			manager.DialogTree.Next();
+			manager.SetState (manager.defaultState);
+		}
+	}
+
+	public void OnEventRaised()
+	{
+		done = true;
+	}
+}
 
 public class ChatTerminalUi : MonoBehaviour
 {
@@ -144,7 +172,8 @@ public class ChatTerminalUi : MonoBehaviour
 	public DefaultState defaultState = new DefaultState();
 	public NpcNodeState npcNodeState = new NpcNodeState();
 	public ChoiceNodeState choiceNodeState = new ChoiceNodeState();
-	public EventNodeState eventNodeState = new EventNodeState();
+	public RaiseEventNodeState raiseEventNodeState = new RaiseEventNodeState();
+	public ListenEventNodeState listenEventNodeState = new ListenEventNodeState();
 
 	private Ivyyy.StateMachine.IState currentState;
 	
