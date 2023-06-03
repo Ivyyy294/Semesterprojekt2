@@ -31,6 +31,9 @@ MonoBehaviour:
   - baseNodeGuid: 1dd474ad-bcec-4392-8cb7-845c78dd3fa7
     portName: Ne du...
     targetNodeGuid: dba9b12f-3c04-423a-8239-5bac4cf335f7
+  - baseNodeGuid: dba9b12f-3c04-423a-8239-5bac4cf335f7
+    portName: Next
+    targetNodeGuid: 41d9bef6-0975-4f47-b1ed-688548397b55
   - baseNodeGuid: 055f5abf-7f26-4345-9adb-b16183cb575f
     portName: Awww so cute...
     targetNodeGuid: 5e1fdd36-7a0b-4ad5-9030-8eafdb361e82
@@ -52,9 +55,6 @@ MonoBehaviour:
   - baseNodeGuid: 8f8934f2-e73f-4ab5-8b33-66c608ee54c3
     portName: Next
     targetNodeGuid: dba9b12f-3c04-423a-8239-5bac4cf335f7
-  - baseNodeGuid: dba9b12f-3c04-423a-8239-5bac4cf335f7
-    portName: Next
-    targetNodeGuid: 41d9bef6-0975-4f47-b1ed-688548397b55
   - baseNodeGuid: 41d9bef6-0975-4f47-b1ed-688548397b55
     portName: Next
     targetNodeGuid: 3a18816c-408d-42fb-83e8-5729776e9dbb
@@ -65,13 +65,6 @@ MonoBehaviour:
     Type: 1
     DialogText: Do you like penguins?
     Image: {fileID: 21300000, guid: ec03f79379868c642b48ae5ddc821b6d, type: 3}
-    GameEvent: {fileID: 0}
-  - Guid: 44187b7e-c103-49de-bbdc-1550b28c5930
-    DialogTitle: Npc Node
-    Position: {x: 1077, y: 327}
-    Type: 1
-    DialogText: How rude!
-    Image: {fileID: 0}
     GameEvent: {fileID: 0}
   - Guid: 5e1fdd36-7a0b-4ad5-9030-8eafdb361e82
     DialogTitle: Npc Node
@@ -136,13 +129,6 @@ MonoBehaviour:
     DialogText: Why are you like this?
     Image: {fileID: 0}
     GameEvent: {fileID: 0}
-  - Guid: 41d9bef6-0975-4f47-b1ed-688548397b55
-    DialogTitle: ListenEventNode
-    Position: {x: 2637, y: 292}
-    Type: 3
-    DialogText: 
-    Image: {fileID: 0}
-    GameEvent: {fileID: 11400000, guid: 6b9f5619b35070c45b9211b6bd6ca736, type: 2}
   - Guid: 3a18816c-408d-42fb-83e8-5729776e9dbb
     DialogTitle: NpcNode
     Position: {x: 3051, y: 302}
@@ -150,6 +136,20 @@ MonoBehaviour:
     DialogText: Test Listen Event
     Image: {fileID: 0}
     GameEvent: {fileID: 0}
+  - Guid: 44187b7e-c103-49de-bbdc-1550b28c5930
+    DialogTitle: Npc Node
+    Position: {x: 1079, y: 315}
+    Type: 1
+    DialogText: How rude!
+    Image: {fileID: 0}
+    GameEvent: {fileID: 0}
+  - Guid: 41d9bef6-0975-4f47-b1ed-688548397b55
+    DialogTitle: ListenEventNode
+    Position: {x: 2619, y: 292}
+    Type: 3
+    DialogText: 
+    Image: {fileID: 0}
+    GameEvent: {fileID: 11400000, guid: 6b9f5619b35070c45b9211b6bd6ca736, type: 2}
   dialogGroupData:
   - Guid: 
     name: Day1

@@ -13,12 +13,6 @@ public static class DialogGraphUtility
 		return dialogNode;
 	}
 
-	public static DialogEventNode CreateEventNode (DialogNodeData nodeData)
-	{
-		var dialogNode = new DialogEventNode {data = nodeData};
-		return dialogNode;
-	}
-
 	public static Group CreateGroup (string title, Vector2 localMousePosition)
 	{
 		Group group = new Group {title = title};

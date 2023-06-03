@@ -5,6 +5,7 @@ using UnityEngine.UIElements;
 using UnityEngine;
 using System;
 using System.Linq;
+using UnityEditor;
 
 public class DialogGraphView : GraphView
 {
@@ -29,12 +30,19 @@ public class DialogGraphView : GraphView
 		//grid.StretchToParentSize();
 
 		AddElement (GenerateEntryPointNode());
+		AddStyles();
+	}
+
+	private void AddStyles()
+	{
+		StyleSheet nodeStyleSheet = (StyleSheet) EditorGUIUtility.Load ("DSNodeStyles.uss");
+		styleSheets.Add (nodeStyleSheet);
 	}
 
 	private IManipulator CreateListenEventNodeContextMenu()
 	{
 		ContextualMenuManipulator contextualMenuManipulator = new ContextualMenuManipulator (
-			menuEvent=> menuEvent.menu.AppendAction ("Add ListenEventNode", actionEvent=>AddElement (DialogEventNode.CreateListenEventNode("ListenEventNode", actionEvent.eventInfo.localMousePosition))));
+			menuEvent=> menuEvent.menu.AppendAction ("Add ListenEventNode", actionEvent=>AddElement (DialogListenEventNode.Create("ListenEventNode", actionEvent.eventInfo.localMousePosition))));
 
 		return contextualMenuManipulator;
 	}
@@ -51,7 +59,7 @@ public class DialogGraphView : GraphView
 	private IManipulator CreateRaiseEventNodeContextMenu()
 	{
 		ContextualMenuManipulator contextualMenuManipulator = new ContextualMenuManipulator (
-			menuEvent=> menuEvent.menu.AppendAction ("Add RaiseEventNode", actionEvent=>AddElement (DialogEventNode.CreateRaiseEventNode("RaiseEventNode", actionEvent.eventInfo.localMousePosition))));
+			menuEvent=> menuEvent.menu.AppendAction ("Add RaiseEventNode", actionEvent=>AddElement (DialogRaiseEventNode.Create("RaiseEventNode", actionEvent.eventInfo.localMousePosition))));
 
 		return contextualMenuManipulator;
 	}

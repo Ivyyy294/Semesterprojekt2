@@ -130,6 +130,7 @@ public class RaiseEventNodeState : BaseState
 	}
 }
 
+//ToDo it should be able to jump into every ListenEventNodeState at any time
 public class ListenEventNodeState : BaseState, Ivyyy.GameEvent.IGameEventListener
 {
 	bool done;

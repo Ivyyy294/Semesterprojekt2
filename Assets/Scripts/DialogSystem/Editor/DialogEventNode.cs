@@ -5,7 +5,7 @@ using UnityEngine;
 using UnityEngine.UIElements;
 using Ivyyy.GameEvent;
 
-public class DialogEventNode : DialogNode
+public abstract class DialogEventNode : DialogNode
 {
     public override void Init(DialogGraphView _parentView)
 	{
@@ -31,16 +31,19 @@ public class DialogEventNode : DialogNode
 		RefreshPorts();
 		SetPosition (new Rect (Vector2.zero, defaultSize));
 	}
+}
 
-	public static DialogEventNode CreateEventNode(DialogNodeData data, DialogGraphView _parentView = null)
+public class DialogRaiseEventNode : DialogEventNode
+{ 
+	public static DialogEventNode Create(DialogNodeData data, DialogGraphView _parentView = null)
 	{
-		DialogEventNode node = DialogGraphUtility.CreateEventNode (data);
+		DialogRaiseEventNode node = new DialogRaiseEventNode() {data = data};
 		node.Init (_parentView);
 		return node;
 	}
 
 	//Create Raise Event Node
-	public static DialogEventNode CreateRaiseEventNode(string nodeName, DialogGraphView _parentView = null)
+	public static DialogEventNode Create(string nodeName, DialogGraphView _parentView = null)
 	{
 		DialogNodeData data = new DialogNodeData
 		{
@@ -49,19 +52,22 @@ public class DialogEventNode : DialogNode
 			Type = DialogNodeData.NodeType.RAISE_EVENT
 		};
 
-		return CreateEventNode (data, _parentView);
+		return Create (data, _parentView);
 	}
 
-	public static DialogEventNode CreateRaiseEventNode(string nodeName, Vector2 localMousePosition, DialogGraphView _parentView = null)
+	public static DialogEventNode Create(string nodeName, Vector2 localMousePosition, DialogGraphView _parentView = null)
 	{
-		DialogEventNode node = CreateRaiseEventNode (nodeName, _parentView);
+		DialogEventNode node = Create (nodeName, _parentView);
 		node.SetPosition (new Rect (localMousePosition, DialogNode.defaultSize));
 
 		return node;
 	}
+}
 
+public class DialogListenEventNode : DialogEventNode
+{
 	//Create Listen Event Node
-	public static DialogEventNode CreateListenEventNode(string nodeName, DialogGraphView _parentView = null)
+	public static DialogListenEventNode Create(string nodeName, DialogGraphView _parentView = null)
 	{
 		DialogNodeData data = new DialogNodeData
 		{
@@ -70,14 +76,21 @@ public class DialogEventNode : DialogNode
 			Type = DialogNodeData.NodeType.LISTEN_EVENT
 		};
 
-		return CreateEventNode (data, _parentView);
+		return Create (data, _parentView);
 	}
 
-	public static DialogEventNode CreateListenEventNode(string nodeName, Vector2 localMousePosition, DialogGraphView _parentView = null)
+	public static DialogListenEventNode Create(string nodeName, Vector2 localMousePosition, DialogGraphView _parentView = null)
 	{
-		DialogEventNode node = CreateListenEventNode (nodeName, _parentView);
+		DialogListenEventNode node = Create (nodeName, _parentView);
 		node.SetPosition (new Rect (localMousePosition, DialogNode.defaultSize));
 
+		return node;
+	}
+
+	public static DialogListenEventNode Create(DialogNodeData data, DialogGraphView _parentView = null)
+	{
+		DialogListenEventNode node = new DialogListenEventNode {data = data};
+		node.Init (_parentView);
 		return node;
 	}
 }
