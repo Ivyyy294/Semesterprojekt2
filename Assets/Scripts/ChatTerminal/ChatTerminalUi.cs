@@ -4,178 +4,155 @@ using UnityEngine;
 using TMPro;
 using UnityEngine.UI;
 
-public class DefaultState : Ivyyy.StateMachine.IState
+public abstract class BaseState: Ivyyy.StateMachine.IState
 {
-	public string guid;
-	DialogNodeData data;
-	ChatTerminalUi manager;
+	protected DialogTree.Node node;
+	protected ChatTerminalUi manager;
 
-	public void Enter (GameObject obj)
+	public virtual void Enter (GameObject obj)
 	{
 		manager = obj.GetComponent <ChatTerminalUi>();
-		data = manager.dialogContainer.GetDialogNodeData (guid);
+		node = manager.DialogTree.CurrentNode();
 	}
 
-	public void Update  (GameObject obj)
+	public abstract void Update  (GameObject obj);
+}
+
+public class DefaultState : BaseState
+{
+	public override void Update  (GameObject obj)
 	{
-		if (data.Type == DialogNodeData.NodeType.NPC)
-		{
-			manager.npcNodeState.guid = guid;
+		if (node.data == null)
+			return;
+		else if (node.data.Type == DialogNodeData.NodeType.NPC)
 			manager.SetState (manager.npcNodeState);
-		}
-		else if (data.Type == DialogNodeData.NodeType.CHOICE)
-		{
-			manager.choiceNodeState.guid = guid;
+		else if (node.data.Type == DialogNodeData.NodeType.CHOICE)
 			manager.SetState (manager.choiceNodeState);
-		}
-		else if (data.Type == DialogNodeData.NodeType.EVENT)
-		{
-			manager.eventNodeState.guid = guid;
+		else if (node.data.Type == DialogNodeData.NodeType.EVENT)
 			manager.SetState (manager.eventNodeState);
-		}
 	}
 }
 
-public class NpcNodeState : Ivyyy.StateMachine.IState
+public class NpcNodeState : BaseState
 {
-	public string guid;
-
-	DialogNodeData data;
 	ChatMessage chatMessage;
-	ChatTerminalUi manager;
 
-	public void Enter (GameObject obj)
+	public override void Enter (GameObject obj)
 	{
-		manager = obj.GetComponent <ChatTerminalUi>();
-		manager.DisableButtons();
+		base.Enter (obj);
 
-		data = manager.dialogContainer.GetDialogNodeData (guid);
-
+		//manager.DisableButtons();
 		chatMessage = Object.Instantiate (manager.messageNpcTemplate, manager.messageContainer.transform).GetComponentInChildren<ChatMessage>();
-		chatMessage.SetContent (data);
+		chatMessage.SetContent (node.data);
 	}
 
-	public void Update (GameObject obj)
+	public override void Update (GameObject obj)
 	{
 		if (chatMessage.Done)
 		{
-			var portList = manager.dialogContainer.GetDialogPorts (guid);
-
-			if (portList.Count > 0)
+			if (node.ports.Count > 0)
 			{
-				manager.defaultState.guid = portList[0].targetNodeGuid;
+				manager.DialogTree.Next();
 				manager.SetState (manager.defaultState);
 			}
 		}
 	}
 }
 
-public class ChoiceNodeState : Ivyyy.StateMachine.IState
+public class ChoiceNodeState : BaseState
 {
-	public string guid;
+	ChatMessage chatMessage;
+	int portSelected;
 
-	ChatTerminalUi manager;
-	private List <NodeLinkData> portList;
-
-	public void Enter (GameObject obj)
+	public override void Enter (GameObject obj)
 	{
-		manager = obj.GetComponent <ChatTerminalUi>();
-		portList = manager.dialogContainer.GetDialogPorts (guid);
+		base.Enter (obj);
+
+		chatMessage = null;
+		portSelected = -1;
+
 		InitButtons ();
 	}
 
-	public void Update (GameObject obj) {}
-
-	private void InitButtons()
+	public override void Update (GameObject obj)
 	{
-		for (int i = 0; i < portList.Count; ++i)
+		if (portSelected != -1 && chatMessage != null && chatMessage.Done)
 		{
-			NodeLinkData port = portList[i];
+			manager.DialogTree.Next (portSelected);
+			manager.SetState(manager.defaultState);
+		}
+	}
+
+	private void InitButtons ()
+	{
+		for (int i = 0; i < node.ports.Count; ++i)
+		{
+			int portNr = i;
+			NodeLinkData port = node.ports[i];
 			manager.ButtonList[i].gameObject.SetActive(true);
-			manager.ButtonList[i].GetComponent<Button>().onClick.AddListener (call:() =>{ButtonCallBack(port);});
+			manager.ButtonList[i].GetComponent<Button>().onClick.AddListener (call:() =>{ButtonCallBack(portNr);});
 			manager.ButtonList[i].GetComponentInChildren<TextMeshProUGUI>().text = port.portName;
 		}
 	}
 
-	private void ButtonCallBack (NodeLinkData _port)
+	private void DisableButtons ()
 	{
-		manager.playerMessageState.port = _port;
-		manager.SetState (manager.playerMessageState);
+		foreach (var i in manager.ButtonList)
+		{
+			i.gameObject.SetActive (false);
+			i.GetComponent <Button>().onClick.RemoveAllListeners();
+		}
 	}
-}
 
-public class PlayerMessageState : Ivyyy.StateMachine.IState
-{
-	public NodeLinkData port;
-	ChatTerminalUi manager;
-	ChatMessage chatMessage;
-
-	public void Enter (GameObject obj)
+	private void ButtonCallBack (int port)
 	{
-		manager = obj.GetComponent <ChatTerminalUi>();
-		manager.DisableButtons();
-
+		DisableButtons();
+		portSelected = port;
 		chatMessage = Object.Instantiate (manager.messagePlayerTemplate, manager.messageContainer.transform).GetComponentInChildren<ChatMessage>();
-		chatMessage.SetContent (port.portName);
-	}
-
-	public void Update (GameObject obj)
-	{
-		if (chatMessage.Done)
-		{
-			manager.defaultState.guid = port.targetNodeGuid;
-			manager.SetState (manager.defaultState);
-		}
+		chatMessage.SetContent (node.ports[port].portName);
 	}
 }
 
-public class EventNodeState : Ivyyy.StateMachine.IState
+public class EventNodeState : BaseState
 {
-	public string guid;
-	DialogNodeData data;
-	ChatTerminalUi manager;
-
-	public void Enter (GameObject obj)
+	public override void Enter (GameObject obj)
 	{
-		manager = obj.GetComponent <ChatTerminalUi>();
-		data = manager.dialogContainer.GetDialogNodeData (guid);
-		data.GameEvent.Raise();
+		base.Enter (obj);
+		node.data.GameEvent.Raise();
 	}
 
-	public void Update  (GameObject obj)
+	public override void Update  (GameObject obj)
 	{
-		var portList = manager.dialogContainer.GetDialogPorts (guid);
-
-		if (portList.Count > 0)
-		{
-			manager.defaultState.guid = portList[0].targetNodeGuid;
-			manager.SetState (manager.defaultState);
-		}
+		manager.DialogTree.Next();
+		manager.SetState (manager.defaultState);
 	}
 }
 
 
 public class ChatTerminalUi : MonoBehaviour
 {
-	//Get
-	public List <GameObject> ButtonList => buttonList;
+	[SerializeField] DialogContainer dialogContainer;
 
 	[Header ("Lara values")]
-	public DialogContainer dialogContainer;
 	public GameObject messageContainer;
 	public GameObject messageNpcTemplate;
 	public GameObject messagePlayerTemplate;
-	public GameObject buttonContainer;
-	public Ivyyy.GameEvent.GameEvent closeEvent;
 
-	private Ivyyy.StateMachine.IState currentState;
-	private List <GameObject> buttonList = new List<GameObject>();
+	[SerializeField] Ivyyy.GameEvent.GameEvent closeEvent;
+	[SerializeField] GameObject buttonContainer;
 
 	public DefaultState defaultState = new DefaultState();
 	public NpcNodeState npcNodeState = new NpcNodeState();
 	public ChoiceNodeState choiceNodeState = new ChoiceNodeState();
-	public PlayerMessageState playerMessageState = new PlayerMessageState();
 	public EventNodeState eventNodeState = new EventNodeState();
+
+	private Ivyyy.StateMachine.IState currentState;
+	
+	private DialogTree dialogTree = new DialogTree();
+	public DialogTree DialogTree => dialogTree;
+
+	private List <GameObject> buttonList = new List<GameObject>();
+	public List <GameObject> ButtonList => buttonList;
 
 	//Public Functions
 	public void Show(bool val)
@@ -194,15 +171,6 @@ public class ChatTerminalUi : MonoBehaviour
 		currentState.Enter(gameObject);
 	}
 
-	public void DisableButtons ()
-	{
-		foreach (var i in buttonList)
-		{
-			i.gameObject.SetActive (false);
-			i.GetComponent <Button>().onClick.RemoveAllListeners();
-		}
-	}
-
 	//Private Functions
 	private void OnEnable()
 	{
@@ -216,12 +184,15 @@ public class ChatTerminalUi : MonoBehaviour
 
 	void Start()
     {
+		buttonList.Clear();
+
+		for (int i = 0; i < buttonContainer.transform.childCount; ++i)
+			buttonList.Add (buttonContainer.transform.GetChild(i).gameObject);
+
         if (dialogContainer != null)
 		{
-			for (int i = 0; i < buttonContainer.transform.childCount; ++i)
-				buttonList.Add (buttonContainer.transform.GetChild(i).gameObject);
-
-			defaultState.guid = dialogContainer.GetStartNodeGuid();
+			dialogTree.dialogContainer = dialogContainer;
+			dialogTree.Next();
 			SetState (defaultState);
 		}
     }

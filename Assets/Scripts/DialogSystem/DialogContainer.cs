@@ -30,8 +30,9 @@ public class DialogContainer : ScriptableObject
 
 	public List <NodeLinkData> GetDialogPorts (string guid)
 	{
-		var portList = nodeLinks.Where(x=> x.baseNodeGuid == guid).ToList();
+		if (!string.IsNullOrEmpty (guid))
+			return nodeLinks.Where(x=> x.baseNodeGuid == guid).ToList();
 
-		return portList;
+		return null;
 	}
 }
