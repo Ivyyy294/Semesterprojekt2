@@ -40,7 +40,7 @@ public class DialogGraphView : GraphView
 	private IManipulator CreateListenEventNodeContextMenu()
 	{
 		ContextualMenuManipulator contextualMenuManipulator = new ContextualMenuManipulator (
-			menuEvent=> menuEvent.menu.AppendAction ("Add ListenEventNode", actionEvent=>AddElement (DialogListenEventNode.Create("ListenEventNode", actionEvent.eventInfo.localMousePosition))));
+			menuEvent=> menuEvent.menu.AppendAction ("Add ListenEventNode", actionEvent=>AddElement (DialogListenEventNode.Create("ListenEventNode", GetLocalMousePosition (actionEvent.eventInfo.localMousePosition)))));
 
 		return contextualMenuManipulator;
 	}
@@ -48,7 +48,7 @@ public class DialogGraphView : GraphView
 	private IManipulator CreateTextNodeContextMenu()
 	{
 		ContextualMenuManipulator contextualMenuManipulator = new ContextualMenuManipulator (
-			menuEvent=> menuEvent.menu.AppendAction ("Add NpcNode", actionEvent=>AddElement (DialogNpcNode.CreateNode("NpcNode", actionEvent.eventInfo.localMousePosition, this))));
+			menuEvent=> menuEvent.menu.AppendAction ("Add NpcNode", actionEvent=>AddElement (DialogNpcNode.CreateNode("NpcNode", GetLocalMousePosition (actionEvent.eventInfo.localMousePosition), this))));
 
 		return contextualMenuManipulator;
 	}
@@ -57,7 +57,7 @@ public class DialogGraphView : GraphView
 	private IManipulator CreateRaiseEventNodeContextMenu()
 	{
 		ContextualMenuManipulator contextualMenuManipulator = new ContextualMenuManipulator (
-			menuEvent=> menuEvent.menu.AppendAction ("Add RaiseEventNode", actionEvent=>AddElement (DialogRaiseEventNode.Create("RaiseEventNode", actionEvent.eventInfo.localMousePosition))));
+			menuEvent=> menuEvent.menu.AppendAction ("Add RaiseEventNode", actionEvent=>AddElement (DialogRaiseEventNode.Create("RaiseEventNode", GetLocalMousePosition (actionEvent.eventInfo.localMousePosition)))));
 
 		return contextualMenuManipulator;
 	}
@@ -65,7 +65,7 @@ public class DialogGraphView : GraphView
 	private IManipulator CreateNodeContextMenu()
 	{
 		ContextualMenuManipulator contextualMenuManipulator = new ContextualMenuManipulator (
-			menuEvent=> menuEvent.menu.AppendAction ("Add ChoiceNode", actionEvent=>AddElement (CreateChoiceNode("ChoiceNode", actionEvent.eventInfo.localMousePosition))));
+			menuEvent=> menuEvent.menu.AppendAction ("Add ChoiceNode", actionEvent=>AddElement (CreateChoiceNode("ChoiceNode", GetLocalMousePosition (actionEvent.eventInfo.localMousePosition)))));
 
 		return contextualMenuManipulator;
 	}
@@ -73,10 +73,17 @@ public class DialogGraphView : GraphView
 	private IManipulator CreateGroupContextMenu()
 	{
 		ContextualMenuManipulator contextualMenuManipulator = new ContextualMenuManipulator (
-			menuEvent=> menuEvent.menu.AppendAction ("Add Group", actionEvent=>CreateGroup("DialogGroup", actionEvent.eventInfo.localMousePosition)));
+			menuEvent=> menuEvent.menu.AppendAction ("Add Group", actionEvent=>CreateGroup("DialogGroup", GetLocalMousePosition (actionEvent.eventInfo.localMousePosition))));
 
 		return contextualMenuManipulator;
 	}
+
+	public Vector2 GetLocalMousePosition(Vector2 mousePosition)
+    {
+        Vector2 worldMousePosition = mousePosition;
+        Vector2 localMousePosition = contentViewContainer.WorldToLocal(worldMousePosition);
+        return localMousePosition;
+    }
 
 	public Group CreateGroup (string title, Vector2 localMousePosition)
 	{
