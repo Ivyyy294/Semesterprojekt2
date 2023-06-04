@@ -247,6 +247,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   scenesToLoad:
+  - LarasTestScene
+  sceneAssets:
   - {fileID: 102900000, guid: c5b5a186b46add84c83c5b1d2162a7e0, type: 3}
 --- !u!4 &1563870121
 Transform:

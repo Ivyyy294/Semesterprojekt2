@@ -168,6 +168,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   scenesToLoad:
+  - LeoniesScene
+  sceneAssets:
   - {fileID: 102900000, guid: cfe89bb85f673084da2895a97e5e0eee, type: 3}
 --- !u!1 &1317619998
 GameObject:

@@ -5,8 +5,6 @@ using UnityEngine.SceneManagement;
 
 public class Menu : MonoBehaviour
 {
-	[SerializeField] UnityEditor.SceneAsset gameScene;
-
 	public void Start()
 	{
 		Cursor.lockState = CursorLockMode.Confined;
@@ -14,12 +12,12 @@ public class Menu : MonoBehaviour
 
 	public void OnNewGameButton()
 	{
-		SceneManager.LoadScene (gameScene.name);
+		SceneManager.LoadScene (1);
 	}
 
 	public void OnContinueButton()
 	{
-		SceneManager.LoadScene (gameScene.name);
+		SceneManager.LoadScene (1);
 	}
 
     public void OnExitButton()

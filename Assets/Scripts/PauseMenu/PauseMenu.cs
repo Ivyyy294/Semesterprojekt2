@@ -8,7 +8,6 @@ using UnityEngine.SceneManagement;
 public class PauseMenu : MonoBehaviour
 {
 	[SerializeField] GameEvent closeEvent;
-	[SerializeField] SceneAsset menuScene;
 
 	public void OnContinue()
 	{
@@ -17,8 +16,7 @@ public class PauseMenu : MonoBehaviour
 
 	public void OnMenu()
 	{
-		if (menuScene != null)
-			SceneManager.LoadScene (menuScene.name);
+		SceneManager.LoadScene (0);
 	}
 
 	public void OnExit()
