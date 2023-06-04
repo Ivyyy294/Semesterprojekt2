@@ -24,4 +24,18 @@ public class DialogNodeData
 
 	//Event Node Values
 	public GameEvent GameEvent = null;
+
+	public DialogNodeData Copy ()
+	{
+		DialogNodeData data = new DialogNodeData();
+		data.Guid = Guid;
+		data.DialogTitle = DialogTitle;
+		data.Position = Position;
+		data.Type = Type;
+		data.DialogText = DialogText;
+		data.Image = Image;
+		data.GameEvent = GameEvent;
+
+		return data;
+	}
 }

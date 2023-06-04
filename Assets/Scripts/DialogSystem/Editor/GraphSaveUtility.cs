@@ -21,6 +21,7 @@ public class GraphSaveUtility
 
 	public void SaveGraph (DialogContainer asset)
 	{
+		Debug.Log ("Save called");
 		//Get Asset for saving
 		containerCache = asset;
 
@@ -155,22 +156,25 @@ public class GraphSaveUtility
 		{
 			DialogNode tmpNode;
 
-			if (nodeData.Type == DialogNodeData.NodeType.RAISE_EVENT)
-				tmpNode = DialogRaiseEventNode.Create (nodeData, targetGraphView);
-			else if (nodeData.Type == DialogNodeData.NodeType.LISTEN_EVENT)
-				tmpNode = DialogListenEventNode.Create (nodeData, targetGraphView);
-			else if (nodeData.Type == DialogNodeData.NodeType.NPC)
-				tmpNode = DialogNpcNode.CreateTextNode (nodeData, targetGraphView);
+			//Create a copy of data to prevent accidental override
+			DialogNodeData data = nodeData.Copy();
+
+			if (data.Type == DialogNodeData.NodeType.RAISE_EVENT)
+				tmpNode = DialogRaiseEventNode.Create (data, targetGraphView);
+			else if (data.Type == DialogNodeData.NodeType.LISTEN_EVENT)
+				tmpNode = DialogListenEventNode.Create (data, targetGraphView);
+			else if (data.Type == DialogNodeData.NodeType.NPC)
+				tmpNode = DialogNpcNode.CreateTextNode (data, targetGraphView);
 			else
-				tmpNode = targetGraphView.CreateChoiceNode (nodeData);
+				tmpNode = targetGraphView.CreateChoiceNode (data);
 			
 			targetGraphView.AddElement (tmpNode);
-			tmpNode.SetPosition (new Rect (nodeData.Position, DialogNode.defaultSize));
+			tmpNode.SetPosition (new Rect (data.Position, DialogNode.defaultSize));
 
-			if (nodeData.Type == DialogNodeData.NodeType.CHOICE)
+			if (data.Type == DialogNodeData.NodeType.CHOICE)
 			{
 				DialogChoiceNode node = (DialogChoiceNode) tmpNode;
-				var nodePorts = containerCache.nodeLinks.Where(x=> x.baseNodeGuid == nodeData.Guid).ToList();
+				var nodePorts = containerCache.nodeLinks.Where(x=> x.baseNodeGuid == data.Guid).ToList();
 				nodePorts.ForEach (x=>node.CreateChoicePort (x.portName));
 			}
 		}
