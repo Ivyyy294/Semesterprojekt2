@@ -48,7 +48,7 @@ public class DialogGraphView : GraphView
 	private IManipulator CreateTextNodeContextMenu()
 	{
 		ContextualMenuManipulator contextualMenuManipulator = new ContextualMenuManipulator (
-			menuEvent=> menuEvent.menu.AppendAction ("Add NpcNode", actionEvent=>AddElement (DialogNpcNode.CreateNode("NpcNode", GetLocalMousePosition (actionEvent.eventInfo.localMousePosition), this))));
+			menuEvent=> menuEvent.menu.AppendAction ("Add NpcNode", actionEvent=>AddElement (DialogNpcNode.Create("NpcNode", GetLocalMousePosition (actionEvent.eventInfo.localMousePosition)))));
 
 		return contextualMenuManipulator;
 	}
@@ -65,7 +65,7 @@ public class DialogGraphView : GraphView
 	private IManipulator CreateNodeContextMenu()
 	{
 		ContextualMenuManipulator contextualMenuManipulator = new ContextualMenuManipulator (
-			menuEvent=> menuEvent.menu.AppendAction ("Add ChoiceNode", actionEvent=>AddElement (CreateChoiceNode("ChoiceNode", GetLocalMousePosition (actionEvent.eventInfo.localMousePosition)))));
+			menuEvent=> menuEvent.menu.AppendAction ("Add ChoiceNode", actionEvent=>AddElement (DialogChoiceNode.Create("ChoiceNode", GetLocalMousePosition (actionEvent.eventInfo.localMousePosition), this))));
 
 		return contextualMenuManipulator;
 	}
@@ -101,41 +101,6 @@ public class DialogGraphView : GraphView
 		return group;
 	}
 
-	//public void CreateChoiceNode (string nodeName) 
-	//{
-	//	AddElement (CreateChoiceNode (nodeName));
-	//}
-
-	public DialogNode CreateChoiceNode (string nodeName, Vector2 pos) 
-	{
-		DialogNode node = CreateChoiceNode (nodeName);
-		node.SetPosition (new Rect (pos, DialogNode.defaultSize));
-
-		return node;
-	}
-
-	public DialogNode CreateChoiceNode (string nodeName)
-	{
-		DialogNodeData data = new DialogNodeData
-		{
-			DialogTitle = nodeName,
-			DialogText = "hello world",
-			Guid =  System.Guid.NewGuid().ToString(),
-			Type = DialogNodeData.NodeType.CHOICE
-		};
-
-		return CreateChoiceNode (data);
-	}
-
-	public DialogNode CreateChoiceNode (DialogNodeData nodeData)
-	{
-		var dialogNode = DialogGraphUtility.CreateChoiceNode (nodeData);
-
-		dialogNode.Init(this);
-
-		return dialogNode;
-	}
-
 	private DialogNode GenerateEntryPointNode()
 	{ 
 		var node = new DialogNode
@@ -151,7 +116,7 @@ public class DialogGraphView : GraphView
 			}
 		};
 
-		node.Init (this);
+		node.Init ();
 
 		node.RefreshExpandedState();
 		node.RefreshPorts();

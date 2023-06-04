@@ -160,13 +160,13 @@ public class GraphSaveUtility
 			DialogNodeData data = nodeData.Copy();
 
 			if (data.Type == DialogNodeData.NodeType.RAISE_EVENT)
-				tmpNode = DialogRaiseEventNode.Create (data, targetGraphView);
+				tmpNode = DialogRaiseEventNode.Create (data);
 			else if (data.Type == DialogNodeData.NodeType.LISTEN_EVENT)
-				tmpNode = DialogListenEventNode.Create (data, targetGraphView);
+				tmpNode = DialogListenEventNode.Create (data);
 			else if (data.Type == DialogNodeData.NodeType.NPC)
-				tmpNode = DialogNpcNode.CreateTextNode (data, targetGraphView);
+				tmpNode = DialogNpcNode.Create (data);
 			else
-				tmpNode = targetGraphView.CreateChoiceNode (data);
+				tmpNode = DialogChoiceNode.Create (data, targetGraphView);
 			
 			targetGraphView.AddElement (tmpNode);
 			tmpNode.SetPosition (new Rect (data.Position, DialogNode.defaultSize));

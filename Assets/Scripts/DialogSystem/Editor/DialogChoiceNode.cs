@@ -6,10 +6,11 @@ using UnityEngine.UIElements;
 
 public class DialogChoiceNode : DialogNode
 {
-	public override void Init(DialogGraphView _parentView)
-	{
-		parentView = _parentView;
+	//Protected Values
+	public DialogGraphView parentView;
 
+	public override void Init()
+	{
 		//Title
 		title = data.DialogTitle;
 		var titleField = DialogGraphUtility.CreateTextField ("Title", data.DialogTitle, evt=> {data.DialogTitle = title = evt.newValue; MarkDirtyRepaint();});
@@ -53,5 +54,35 @@ public class DialogChoiceNode : DialogNode
 		outputContainer.Add (generatedPort);
 		RefreshPorts();
 		RefreshExpandedState();		
+	}
+
+	public static DialogNode Create (string nodeName, Vector2 pos, DialogGraphView _parentView) 
+	{
+		DialogNode node = Create (nodeName, _parentView);
+		node.SetPosition (new Rect (pos, DialogNode.defaultSize));
+
+		return node;
+	}
+
+	public static DialogNode Create (string nodeName, DialogGraphView _parentView)
+	{
+		DialogNodeData data = new DialogNodeData
+		{
+			DialogTitle = nodeName,
+			DialogText = "hello world",
+			Guid =  System.Guid.NewGuid().ToString(),
+			Type = DialogNodeData.NodeType.CHOICE
+		};
+
+		return Create (data, _parentView);
+	}
+
+	public static DialogNode Create (DialogNodeData nodeData, DialogGraphView _parentView)
+	{
+		var dialogNode = new DialogChoiceNode {data = nodeData, parentView = _parentView};
+
+		dialogNode.Init();
+
+		return dialogNode;
 	}
 }

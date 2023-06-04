@@ -14,17 +14,12 @@ public class DialogNode : Node
 	public DialogNodeData data;
 	
 	//Public Functions
-	public virtual void Init (DialogGraphView _parentView)
+	public virtual void Init ()
 	{
-		parentView = _parentView;
-
 		var generatedPort = DialogGraphUtility.CreatePort (this, Direction.Output);
 		generatedPort.portName = "Next";
 		outputContainer.Add (generatedPort);
 	}
-	
-	//Protected Values
-	protected DialogGraphView parentView;
 
 	protected void AddInputPort ()
 	{

@@ -7,12 +7,6 @@ using UnityEngine.UIElements;
 
 public static class DialogGraphUtility
 {
-	public static DialogNode CreateChoiceNode (DialogNodeData nodeData)
-	{
-		var dialogNode = new DialogChoiceNode {data = nodeData};
-		return dialogNode;
-	}
-
 	public static Group CreateGroup (string title, Vector2 localMousePosition)
 	{
 		Group group = new Group {title = title};
