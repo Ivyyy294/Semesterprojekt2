@@ -1,3 +1,13 @@
+/*
+* #unity-text-input
+{
+	border-radius: 4px;
+	max-width: 240px;
+	min-width: 100px;
+	padding: 2px;
+}
+*/
+
 /*DialogNpcNode*/
 
 DialogNpcNode #title

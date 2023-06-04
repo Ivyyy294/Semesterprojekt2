@@ -19,9 +19,6 @@ MonoBehaviour:
   - baseNodeGuid: 92036d48-e3f1-489d-a202-999ec9e5d156
     portName: Next
     targetNodeGuid: 055f5abf-7f26-4345-9adb-b16183cb575f
-  - baseNodeGuid: 44187b7e-c103-49de-bbdc-1550b28c5930
-    portName: Next
-    targetNodeGuid: 8f8934f2-e73f-4ab5-8b33-66c608ee54c3
   - baseNodeGuid: 5e1fdd36-7a0b-4ad5-9030-8eafdb361e82
     portName: Next
     targetNodeGuid: 1dd474ad-bcec-4392-8cb7-845c78dd3fa7
@@ -55,6 +52,9 @@ MonoBehaviour:
   - baseNodeGuid: 8f8934f2-e73f-4ab5-8b33-66c608ee54c3
     portName: Next
     targetNodeGuid: dba9b12f-3c04-423a-8239-5bac4cf335f7
+  - baseNodeGuid: 44187b7e-c103-49de-bbdc-1550b28c5930
+    portName: Next
+    targetNodeGuid: 8f8934f2-e73f-4ab5-8b33-66c608ee54c3
   - baseNodeGuid: 41d9bef6-0975-4f47-b1ed-688548397b55
     portName: Next
     targetNodeGuid: 3a18816c-408d-42fb-83e8-5729776e9dbb
@@ -156,7 +156,6 @@ MonoBehaviour:
     Position: {x: 224, y: 54}
     childNodeGuid:
     - 92036d48-e3f1-489d-a202-999ec9e5d156
-    - 44187b7e-c103-49de-bbdc-1550b28c5930
     - 5e1fdd36-7a0b-4ad5-9030-8eafdb361e82
     - 1dd474ad-bcec-4392-8cb7-845c78dd3fa7
     - dba9b12f-3c04-423a-8239-5bac4cf335f7
@@ -166,3 +165,4 @@ MonoBehaviour:
     - 2e8dfa14-7569-4b2c-8f52-7536dd6b4d19
     - a7b5560d-e02a-4573-8c39-ae94ea1b20ce
     - 8f8934f2-e73f-4ab5-8b33-66c608ee54c3
+    - 44187b7e-c103-49de-bbdc-1550b28c5930
