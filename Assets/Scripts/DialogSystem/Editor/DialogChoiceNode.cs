@@ -42,9 +42,9 @@ public class DialogChoiceNode : DialogNode
 		
 		//Invisible Label to enable port drag and drop
 		generatedPort.contentContainer.Add (new Label ("\t\t"));
-		var textField = DialogGraphUtility.CreateTextField (choicePortName, evt => generatedPort.portName = evt.newValue);
+		var textField = DialogGraphUtility.CreateTextArea (choicePortName, evt => {generatedPort.portName = evt.newValue; MarkDirtyRepaint();});
 		generatedPort.contentContainer.Add (textField);
-
+		
 		//Button
 		generatedPort.contentContainer.Add (DialogGraphUtility.CreateButton ("X", onClick:() =>parentView.RemovePort (this, generatedPort)));
 

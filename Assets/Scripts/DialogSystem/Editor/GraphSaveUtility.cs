@@ -58,12 +58,7 @@ public class GraphSaveUtility
 			dialogContainer.dialogNodeData.Add (newData);
 		}
 
-		//Create Group List
-		VisualElement root = targetGraphView.contentViewContainer;
-		List<Group> groupList = new List<Group>();
-		root.Query<Group>().ForEach(group => groupList.Add(group));
-
-		foreach (Group i in groupList)
+		foreach (Group i in Groups())
 		{
 			DialogGroupData tmpGroup = new DialogGroupData
 			{
@@ -196,5 +191,16 @@ public class GraphSaveUtility
 
 			targetGraphView.RemoveElement (node);
 		}
+
+		foreach (Group group in Groups())
+			targetGraphView.RemoveElement (group);
+	}
+
+	private List <Group> Groups ()
+	{
+		VisualElement root = targetGraphView.contentViewContainer;
+		List<Group> groupList = new List<Group>();
+		root.Query<Group>().ForEach(group => groupList.Add(group));
+		return groupList;
 	}
 }

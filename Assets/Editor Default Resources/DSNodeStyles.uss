@@ -8,8 +8,13 @@
 }
 */
 
-/*DialogNpcNode*/
+/*Port Settings*/
+.port.output {
+  height: auto;
+  padding: 2px;
+}
 
+/*DialogNpcNode*/
 DialogNpcNode #title
 {
 	background-color: #4DA5F8;

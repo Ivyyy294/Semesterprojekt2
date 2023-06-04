@@ -9,8 +9,6 @@ using UnityEditor;
 
 public class DialogGraphView : GraphView
 {
-	//public readonly Vector2 defaultSize = new Vector2 (150, 200);
-
 	public DialogGraphView()
 	{
 		SetupZoom (ContentZoomer.DefaultMinScale, ContentZoomer.DefaultMaxScale);
