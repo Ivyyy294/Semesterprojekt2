@@ -64,4 +64,12 @@ public static class DialogGraphUtility
 
 		return textArea;
 	}
+
+	public static VisualElement CreateDropDownField (string name, List <string> options, EventCallback <ChangeEvent<string>> onValueChanged = null)
+	{
+        // Create the dropdown field
+        DropdownField dropdownField = new DropdownField(name, options, 0);
+        dropdownField.RegisterValueChangedCallback(onValueChanged);
+		return dropdownField;
+	}
 }

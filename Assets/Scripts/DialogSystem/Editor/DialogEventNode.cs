@@ -14,7 +14,6 @@ public abstract class DialogEventNode : DialogNode
 		//Title
 		title = data.DialogTitle;
 		var titleField = DialogGraphUtility.CreateTextField ("Title", data.DialogTitle, evt=> {data.DialogTitle = title = evt.newValue; MarkDirtyRepaint();});
-		//titleField.SetValueWithoutNotify (title);
 		mainContainer.Add (titleField);
 
 		AddInputPort();
