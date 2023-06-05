@@ -52,7 +52,7 @@ MonoBehaviour:
   - baseNodeGuid: 44187b7e-c103-49de-bbdc-1550b28c5930
     portName: Next
     targetNodeGuid: 8f8934f2-e73f-4ab5-8b33-66c608ee54c3
-  - baseNodeGuid: a7b5560d-e02a-4573-8c39-ae94ea1b20ce
+  - baseNodeGuid: dd313c69-3e74-4bbc-9b63-c1f84b60b8f3
     portName: Next
     targetNodeGuid: 841e0089-2da3-494e-a9b6-32a4c69ffee7
   - baseNodeGuid: 841e0089-2da3-494e-a9b6-32a4c69ffee7
@@ -61,9 +61,12 @@ MonoBehaviour:
   - baseNodeGuid: 841e0089-2da3-494e-a9b6-32a4c69ffee7
     portName: False
     targetNodeGuid: 3264cb8a-2dc4-4916-851b-8f2b4aeb413d
+  - baseNodeGuid: a7b5560d-e02a-4573-8c39-ae94ea1b20ce
+    portName: Next
+    targetNodeGuid: dd313c69-3e74-4bbc-9b63-c1f84b60b8f3
   - baseNodeGuid: dba9b12f-3c04-423a-8239-5bac4cf335f7
     portName: Next
-    targetNodeGuid: 841e0089-2da3-494e-a9b6-32a4c69ffee7
+    targetNodeGuid: dd313c69-3e74-4bbc-9b63-c1f84b60b8f3
   dialogNodeData:
   - Guid: 92036d48-e3f1-489d-a202-999ec9e5d156
     DialogTitle: Npc Node
@@ -92,17 +95,6 @@ MonoBehaviour:
     Position: {x: 1880, y: 171}
     Type: 0
     DialogText: hello world
-    Image: {fileID: 0}
-    GameEvent: {fileID: 0}
-    BlackBoardProperty:
-      name: 
-      comparisonTyp: 0
-      iVal: 0
-  - Guid: dba9b12f-3c04-423a-8239-5bac4cf335f7
-    DialogTitle: Npc Node
-    Position: {x: 2203, y: 292}
-    Type: 1
-    DialogText: :(((
     Image: {fileID: 0}
     GameEvent: {fileID: 0}
     BlackBoardProperty:
@@ -175,44 +167,66 @@ MonoBehaviour:
       name: 
       comparisonTyp: 0
       iVal: 0
-  - Guid: a7b5560d-e02a-4573-8c39-ae94ea1b20ce
-    DialogTitle: RaiseEventNode
-    Position: {x: 2203, y: 89}
-    Type: 2
-    DialogText: 
+  - Guid: dba9b12f-3c04-423a-8239-5bac4cf335f7
+    DialogTitle: Npc Node
+    Position: {x: 2247, y: 300}
+    Type: 1
+    DialogText: :(((
     Image: {fileID: 0}
-    GameEvent: {fileID: 11400000, guid: 6b9f5619b35070c45b9211b6bd6ca736, type: 2}
+    GameEvent: {fileID: 0}
     BlackBoardProperty:
       name: 
       comparisonTyp: 0
       iVal: 0
-  - Guid: 841e0089-2da3-494e-a9b6-32a4c69ffee7
-    DialogTitle: LogicNode
-    Position: {x: 2654, y: 5}
-    Type: 4
+  - Guid: a7b5560d-e02a-4573-8c39-ae94ea1b20ce
+    DialogTitle: RaiseEventNode
+    Position: {x: 2202, y: 80}
+    Type: 2
     DialogText: 
     Image: {fileID: 0}
-    GameEvent: {fileID: 0}
-    BlackBoardProperty:
-      name: VALUE
-      comparisonTyp: 1
-      iVal: 0
-  - Guid: 3264cb8a-2dc4-4916-851b-8f2b4aeb413d
-    DialogTitle: NpcNode
-    Position: {x: 2998, y: 101}
-    Type: 1
-    DialogText: False
-    Image: {fileID: 0}
-    GameEvent: {fileID: 0}
+    GameEvent: {fileID: 11400000, guid: 238faa4adf35dca499684132f6fda548, type: 2}
     BlackBoardProperty:
       name: 
       comparisonTyp: 0
       iVal: 0
   - Guid: 4dabef00-585b-4290-8eae-aa532249c09f
     DialogTitle: NpcNode
-    Position: {x: 2966, y: -100}
+    Position: {x: 3621, y: 61}
     Type: 1
-    DialogText: True
+    DialogText: i love you <3
+    Image: {fileID: 0}
+    GameEvent: {fileID: 0}
+    BlackBoardProperty:
+      name: 
+      comparisonTyp: 0
+      iVal: 0
+  - Guid: dd313c69-3e74-4bbc-9b63-c1f84b60b8f3
+    DialogTitle: WaitNode
+    Position: {x: 2932, y: 197}
+    Type: 5
+    DialogText: 
+    Image: {fileID: 0}
+    GameEvent: {fileID: 0}
+    BlackBoardProperty:
+      name: Day1Complete
+      comparisonTyp: 0
+      iVal: 1
+  - Guid: 841e0089-2da3-494e-a9b6-32a4c69ffee7
+    DialogTitle: LogicNode
+    Position: {x: 3287, y: 166}
+    Type: 4
+    DialogText: 
+    Image: {fileID: 0}
+    GameEvent: {fileID: 0}
+    BlackBoardProperty:
+      name: Friendship
+      comparisonTyp: 1
+      iVal: 0
+  - Guid: 3264cb8a-2dc4-4916-851b-8f2b4aeb413d
+    DialogTitle: NpcNode
+    Position: {x: 3621, y: 277}
+    Type: 1
+    DialogText: I hate you!
     Image: {fileID: 0}
     GameEvent: {fileID: 0}
     BlackBoardProperty:
@@ -222,19 +236,19 @@ MonoBehaviour:
   dialogGroupData:
   - Guid: 
     name: Day1
-    Position: {x: 224, y: 30}
+    Position: {x: 224, y: 21}
     childNodeGuid:
     - 92036d48-e3f1-489d-a202-999ec9e5d156
     - 5e1fdd36-7a0b-4ad5-9030-8eafdb361e82
     - 1dd474ad-bcec-4392-8cb7-845c78dd3fa7
-    - dba9b12f-3c04-423a-8239-5bac4cf335f7
     - 055f5abf-7f26-4345-9adb-b16183cb575f
     - 473fa8df-8afb-4869-b6fc-ea8b11e2f9f3
     - ac7acd63-894e-4a46-be96-2c9c8b18f76e
     - 2e8dfa14-7569-4b2c-8f52-7536dd6b4d19
     - 8f8934f2-e73f-4ab5-8b33-66c608ee54c3
     - 44187b7e-c103-49de-bbdc-1550b28c5930
+    - dba9b12f-3c04-423a-8239-5bac4cf335f7
     - a7b5560d-e02a-4573-8c39-ae94ea1b20ce
   exposedProperties:
-  - VALUE
-  - Bla
+  - Friendship
+  - Day1Complete

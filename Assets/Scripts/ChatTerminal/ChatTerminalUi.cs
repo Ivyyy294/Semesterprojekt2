@@ -34,6 +34,8 @@ public class DefaultState : BaseState
 			manager.SetState (manager.listenEventNodeState);
 		else if (node.data.Type == DialogNodeData.NodeType.LOGIC)
 			manager.SetState (manager.logicNodeState);
+		else if (node.data.Type == DialogNodeData.NodeType.WAIT)
+			manager.SetState (manager.waitNodeState);
 	}
 }
 
@@ -122,7 +124,7 @@ public class RaiseEventNodeState : BaseState
 	public override void Enter (GameObject obj)
 	{
 		base.Enter (obj);
-		node.data.GameEvent.Raise();
+		node.data.GameEvent?.Raise();
 	}
 
 	public override void Update  (GameObject obj)
@@ -167,14 +169,7 @@ public class LogicNodeState : BaseState
 		BlackBoardProperty checkValue = node.data.BlackBoardProperty;
 		BlackBoardProperty property = BlackBoard.Me().GetProperty (checkValue.name);
 
-		if (checkValue.comparisonTyp == BlackBoardProperty.ComparisonTyp.EQUAL
-			&& checkValue.iVal == property.iVal)
-			True();
-		else if (checkValue.comparisonTyp == BlackBoardProperty.ComparisonTyp.GREATER
-			&& property.iVal > checkValue.iVal)
-			True();
-		else if (checkValue.comparisonTyp == BlackBoardProperty.ComparisonTyp.LESS
-			&& property.iVal < checkValue.iVal)
+		if (property.Compare (checkValue))
 			True();
 		else
 			False();
@@ -190,6 +185,21 @@ public class LogicNodeState : BaseState
 	{
 		manager.DialogTree.Next(1);
 		manager.SetState (manager.defaultState);
+	}
+}
+
+public class WaitNodeState : BaseState
+{
+	public override void Update  (GameObject obj)
+	{
+		BlackBoardProperty checkValue = node.data.BlackBoardProperty;
+		BlackBoardProperty property = BlackBoard.Me().GetProperty (checkValue.name);
+
+		if (property.Compare (checkValue))
+		{
+			manager.DialogTree.Next(0);
+			manager.SetState (manager.defaultState);
+		}
 	}
 }
 
@@ -211,6 +221,7 @@ public class ChatTerminalUi : MonoBehaviour
 	public RaiseEventNodeState raiseEventNodeState = new RaiseEventNodeState();
 	public ListenEventNodeState listenEventNodeState = new ListenEventNodeState();
 	public LogicNodeState logicNodeState = new LogicNodeState();
+	public WaitNodeState waitNodeState = new WaitNodeState();
 
 	private Ivyyy.StateMachine.IState currentState;
 	
@@ -268,4 +279,8 @@ public class ChatTerminalUi : MonoBehaviour
         currentState.Update (gameObject);
     }
 
+	internal void SetState(object waitNodeState)
+	{
+		throw new System.NotImplementedException();
+	}
 }

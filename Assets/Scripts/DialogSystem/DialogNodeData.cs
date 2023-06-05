@@ -10,7 +10,8 @@ public class DialogNodeData
 		NPC,
 		RAISE_EVENT,
 		LISTEN_EVENT,
-		LOGIC
+		LOGIC,
+		WAIT
 	}
 
 	//Base Values

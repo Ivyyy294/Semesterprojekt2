@@ -179,6 +179,8 @@ public class GraphSaveUtility
 				tmpNode = DialogNpcNode.Create (data);
 			else if (data.Type == DialogNodeData.NodeType.LOGIC)
 				tmpNode = DialogLogicNode.Create (data, targetGraphView);
+			else if (data.Type == DialogNodeData.NodeType.WAIT)
+				tmpNode = DialogWaitNode.Create (data, targetGraphView);
 			else
 				tmpNode = DialogChoiceNode.Create (data, targetGraphView);
 			

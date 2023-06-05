@@ -76,6 +76,17 @@ DialogLogicNode #title-label
 	color: #000000;
 }
 
+/*DialogListenEventNode*/
+DialogWaitNode #title
+{
+	background-color: #FFF356;
+}
+
+DialogWaitNode #title-label
+{
+	color: #000000;
+}
+
 /*
 //CONTAINERS
 

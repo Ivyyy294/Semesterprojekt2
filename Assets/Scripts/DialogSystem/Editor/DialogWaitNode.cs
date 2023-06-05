@@ -1,12 +1,8 @@
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-using UnityEditor.UIElements;
-using UnityEngine.UIElements;
-using UnityEditor;
 using System;
+using UnityEngine;
+using UnityEngine.UIElements;
 
-public class DialogLogicNode : DialogNode
+public class DialogWaitNode : DialogNode
 {
 	DialogGraphView dialogGraphView;
 
@@ -14,8 +10,7 @@ public class DialogLogicNode : DialogNode
 	{
 		AddTitleEditField();
 		AddInputPort();
-		AddOutputPort ("True");
-		AddOutputPort ("False");
+		AddOutputPort ("Next");
 
 		Foldout textFoldout = DialogGraphUtility.CreateFoldout ("Settings");
 
@@ -39,24 +34,24 @@ public class DialogLogicNode : DialogNode
 		RefreshPorts();
 	}
 
-	public static DialogLogicNode Create(string nodeName, Vector2 localMousePosition, DialogGraphView dialogGraphView)
+	public static DialogWaitNode Create(string nodeName, Vector2 localMousePosition, DialogGraphView dialogGraphView)
 	{
 		DialogNodeData data = new DialogNodeData
 		{
 			DialogTitle = nodeName,
 			Guid =  System.Guid.NewGuid().ToString(),
-			Type = DialogNodeData.NodeType.LOGIC
+			Type = DialogNodeData.NodeType.WAIT
 		};
 
-		DialogLogicNode node = Create (data, dialogGraphView);
+		DialogWaitNode node = Create (data, dialogGraphView);
 		node.SetPosition (new Rect (localMousePosition, DialogNode.defaultSize));
 
 		return node;
 	}
 
-	public static DialogLogicNode Create (DialogNodeData data, DialogGraphView dialogGraphView)
+	public static DialogWaitNode Create (DialogNodeData data, DialogGraphView dialogGraphView)
 	{
-		DialogLogicNode node = new DialogLogicNode {data = data, dialogGraphView = dialogGraphView};
+		DialogWaitNode node = new DialogWaitNode {data = data, dialogGraphView = dialogGraphView};
 		node.Init ();
 
 		return node;
