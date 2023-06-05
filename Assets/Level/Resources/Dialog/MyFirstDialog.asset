@@ -61,6 +61,12 @@ MonoBehaviour:
   - baseNodeGuid: a7b5560d-e02a-4573-8c39-ae94ea1b20ce
     portName: Next
     targetNodeGuid: 841e0089-2da3-494e-a9b6-32a4c69ffee7
+  - baseNodeGuid: 841e0089-2da3-494e-a9b6-32a4c69ffee7
+    portName: True
+    targetNodeGuid: 4dabef00-585b-4290-8eae-aa532249c09f
+  - baseNodeGuid: 841e0089-2da3-494e-a9b6-32a4c69ffee7
+    portName: False
+    targetNodeGuid: 3264cb8a-2dc4-4916-851b-8f2b4aeb413d
   dialogNodeData:
   - Guid: 92036d48-e3f1-489d-a202-999ec9e5d156
     DialogTitle: Npc Node
@@ -207,15 +213,37 @@ MonoBehaviour:
       iVal: 0
   - Guid: 841e0089-2da3-494e-a9b6-32a4c69ffee7
     DialogTitle: LogicNode
-    Position: {x: 2660, y: 36}
+    Position: {x: 2654, y: 5}
     Type: 4
     DialogText: 
     Image: {fileID: 0}
     GameEvent: {fileID: 0}
     BlackBoardProperty:
-      name: Bla
+      name: VALUE
       comparisonTyp: 1
-      iVal: 5
+      iVal: 0
+  - Guid: 3264cb8a-2dc4-4916-851b-8f2b4aeb413d
+    DialogTitle: NpcNode
+    Position: {x: 2998, y: 101}
+    Type: 1
+    DialogText: False
+    Image: {fileID: 0}
+    GameEvent: {fileID: 0}
+    BlackBoardProperty:
+      name: 
+      comparisonTyp: 0
+      iVal: 0
+  - Guid: 4dabef00-585b-4290-8eae-aa532249c09f
+    DialogTitle: NpcNode
+    Position: {x: 2966, y: -100}
+    Type: 1
+    DialogText: True
+    Image: {fileID: 0}
+    GameEvent: {fileID: 0}
+    BlackBoardProperty:
+      name: 
+      comparisonTyp: 0
+      iVal: 0
   dialogGroupData:
   - Guid: 
     name: Day1

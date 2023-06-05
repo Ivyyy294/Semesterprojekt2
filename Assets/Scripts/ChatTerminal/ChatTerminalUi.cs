@@ -32,6 +32,8 @@ public class DefaultState : BaseState
 			manager.SetState (manager.raiseEventNodeState);
 		else if (node.data.Type == DialogNodeData.NodeType.LISTEN_EVENT)
 			manager.SetState (manager.listenEventNodeState);
+		else if (node.data.Type == DialogNodeData.NodeType.LOGIC)
+			manager.SetState (manager.logicNodeState);
 	}
 }
 
@@ -158,6 +160,39 @@ public class ListenEventNodeState : BaseState, Ivyyy.GameEvent.IGameEventListene
 	}
 }
 
+public class LogicNodeState : BaseState
+{
+	public override void Update  (GameObject obj)
+	{
+		BlackBoardProperty checkValue = node.data.BlackBoardProperty;
+		BlackBoardProperty property = BlackBoard.Me().GetProperty (checkValue.name);
+
+		if (checkValue.comparisonTyp == BlackBoardProperty.ComparisonTyp.EQUAL
+			&& checkValue.iVal == property.iVal)
+			True();
+		else if (checkValue.comparisonTyp == BlackBoardProperty.ComparisonTyp.GREATER
+			&& property.iVal > checkValue.iVal)
+			True();
+		else if (checkValue.comparisonTyp == BlackBoardProperty.ComparisonTyp.LESS
+			&& property.iVal < checkValue.iVal)
+			True();
+		else
+			False();
+	}
+
+	private void True()
+	{
+		manager.DialogTree.Next(0);
+		manager.SetState (manager.defaultState);
+	}
+
+	private void False()
+	{
+		manager.DialogTree.Next(1);
+		manager.SetState (manager.defaultState);
+	}
+}
+
 public class ChatTerminalUi : MonoBehaviour
 {
 	[SerializeField] DialogContainer dialogContainer;
@@ -175,6 +210,7 @@ public class ChatTerminalUi : MonoBehaviour
 	public ChoiceNodeState choiceNodeState = new ChoiceNodeState();
 	public RaiseEventNodeState raiseEventNodeState = new RaiseEventNodeState();
 	public ListenEventNodeState listenEventNodeState = new ListenEventNodeState();
+	public LogicNodeState logicNodeState = new LogicNodeState();
 
 	private Ivyyy.StateMachine.IState currentState;
 	
