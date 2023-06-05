@@ -12,11 +12,13 @@ public class Menu : MonoBehaviour
 
 	public void OnNewGameButton()
 	{
+		BlackBoard.Me().Clear();
 		SceneManager.LoadScene (1);
 	}
 
 	public void OnContinueButton()
 	{
+		BlackBoard.Me().Clear();
 		SceneManager.LoadScene (1);
 	}
 
