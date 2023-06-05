@@ -9,7 +9,8 @@ public class DialogNodeData
 		CHOICE,
 		NPC,
 		RAISE_EVENT,
-		LISTEN_EVENT
+		LISTEN_EVENT,
+		LOGIC
 	}
 
 	//Base Values
@@ -25,6 +26,9 @@ public class DialogNodeData
 	//Event Node Values
 	public GameEvent GameEvent = null;
 
+	//Logic Node Values
+	public BlackBoardProperty BlackBoardProperty = new BlackBoardProperty();
+
 	public DialogNodeData Copy ()
 	{
 		DialogNodeData data = new DialogNodeData();
@@ -35,6 +39,7 @@ public class DialogNodeData
 		data.DialogText = DialogText;
 		data.Image = Image;
 		data.GameEvent = GameEvent;
+		data.BlackBoardProperty = BlackBoardProperty;
 
 		return data;
 	}

@@ -16,9 +16,7 @@ public class DialogNode : Node
 	//Public Functions
 	public virtual void Init ()
 	{
-		var generatedPort = DialogGraphUtility.CreatePort (this, Direction.Output);
-		generatedPort.portName = "Next";
-		outputContainer.Add (generatedPort);
+		AddOutputPort ("Next");
 	}
 
 	protected void AddInputPort ()
@@ -27,5 +25,20 @@ public class DialogNode : Node
 		var inputPort = DialogGraphUtility.CreatePort (this, Direction.Input, Port.Capacity.Multi);
 		inputPort.portName = "Input";
 		inputContainer.Add (inputPort);
+	}
+
+	protected void AddTitleEditField()
+	{
+		//Title
+		title = data.DialogTitle;
+		var titleField = DialogGraphUtility.CreateTextField ("Title", data.DialogTitle, evt=> {data.DialogTitle = title = evt.newValue; MarkDirtyRepaint();});
+		mainContainer.Add (titleField);
+	}
+
+	protected void AddOutputPort (string name)
+	{
+		var generatedPort = DialogGraphUtility.CreatePort (this, Direction.Output);
+		generatedPort.portName = name;
+		outputContainer.Add (generatedPort);
 	}
 }
