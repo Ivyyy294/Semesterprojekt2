@@ -213,13 +213,13 @@ MonoBehaviour:
     Image: {fileID: 0}
     GameEvent: {fileID: 0}
     BlackBoardProperty:
-      name: 
-      comparisonTyp: 0
-      iVal: 0
+      name: Bla
+      comparisonTyp: 1
+      iVal: 5
   dialogGroupData:
   - Guid: 
     name: Day1
-    Position: {x: 224, y: 29.999977}
+    Position: {x: 224, y: 30}
     childNodeGuid:
     - 92036d48-e3f1-489d-a202-999ec9e5d156
     - 5e1fdd36-7a0b-4ad5-9030-8eafdb361e82
@@ -229,6 +229,9 @@ MonoBehaviour:
     - 473fa8df-8afb-4869-b6fc-ea8b11e2f9f3
     - ac7acd63-894e-4a46-be96-2c9c8b18f76e
     - 2e8dfa14-7569-4b2c-8f52-7536dd6b4d19
-    - a7b5560d-e02a-4573-8c39-ae94ea1b20ce
     - 8f8934f2-e73f-4ab5-8b33-66c608ee54c3
     - 44187b7e-c103-49de-bbdc-1550b28c5930
+    - a7b5560d-e02a-4573-8c39-ae94ea1b20ce
+  exposedProperties:
+  - VALUE
+  - Bla

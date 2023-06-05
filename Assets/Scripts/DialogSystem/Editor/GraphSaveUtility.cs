@@ -76,10 +76,14 @@ public class GraphSaveUtility
 			dialogContainer.dialogGroupData.Add (tmpGroup);
 		}
 
+		foreach (string i in targetGraphView.blackBoardProperties)
+			dialogContainer.exposedProperties.Add (i);
+
 		//Update Scriptable Object
 		containerCache.dialogNodeData = dialogContainer.dialogNodeData;
 		containerCache.nodeLinks = dialogContainer.nodeLinks;
 		containerCache.dialogGroupData = dialogContainer.dialogGroupData;
+		containerCache.exposedProperties = dialogContainer.exposedProperties;
 		UnityEditor.EditorUtility.SetDirty (containerCache);
 		UnityEditor.AssetDatabase.SaveAssets();
 	}
@@ -96,9 +100,17 @@ public class GraphSaveUtility
 		}
 
 		ClearGraph();
+
+		CreateBlackBoard();
 		CreateNodes();
 		ConnectNodes();
 		CreateGroups();
+	}
+
+	private void CreateBlackBoard()
+	{
+		foreach (string i in containerCache.exposedProperties)
+			targetGraphView.AddPropertyToBlackBoard (i);
 	}
 
 	private void CreateGroups()
@@ -166,7 +178,7 @@ public class GraphSaveUtility
 			else if (data.Type == DialogNodeData.NodeType.NPC)
 				tmpNode = DialogNpcNode.Create (data);
 			else if (data.Type == DialogNodeData.NodeType.LOGIC)
-				tmpNode = DialogLogicNode.Create (data);
+				tmpNode = DialogLogicNode.Create (data, targetGraphView);
 			else
 				tmpNode = DialogChoiceNode.Create (data, targetGraphView);
 			
@@ -200,6 +212,8 @@ public class GraphSaveUtility
 
 		foreach (Group group in Groups())
 			targetGraphView.RemoveElement (group);
+
+		targetGraphView.ClearBlackBoard();
 	}
 
 	private List <Group> Groups ()

@@ -8,7 +8,9 @@ using System;
 
 public class DialogLogicNode : DialogNode
 {
-     public override void Init()
+	DialogGraphView dialogGraphView;
+
+    public override void Init ()
 	{
 		AddTitleEditField();
 		AddInputPort();
@@ -18,21 +20,16 @@ public class DialogLogicNode : DialogNode
 		Foldout textFoldout = DialogGraphUtility.CreateFoldout ("Settings");
 
 		//Name
-		TextField txtName = DialogGraphUtility.CreateTextField ("Name", data.BlackBoardProperty.name, evt=>{data.BlackBoardProperty.name = evt.newValue; MarkDirtyRepaint();});
-		txtName.MarkDirtyRepaint();
-		textFoldout.Add (txtName);
+		int indexName = dialogGraphView.blackBoardProperties.IndexOf (data.BlackBoardProperty.name);
+		textFoldout.Add (DialogGraphUtility.CreateDropDownField ("Name", dialogGraphView.blackBoardProperties, indexName, onValueChanged=>{data.BlackBoardProperty.name = onValueChanged.newValue; MarkDirtyRepaint();}));
 
 		//Comparison
-		List <string> optionList = new List<string>();
-		optionList.Add (BlackBoardProperty.ComparisonTyp.EQUAL.ToString());
-		optionList.Add (BlackBoardProperty.ComparisonTyp.GREATER.ToString());
-		optionList.Add (BlackBoardProperty.ComparisonTyp.LESS.ToString());
-
-		textFoldout.Add (DialogGraphUtility.CreateDropDownField ("Comparison", optionList, onValueChanged => {Enum.TryParse <BlackBoardProperty.ComparisonTyp> (onValueChanged.newValue, out data.BlackBoardProperty.comparisonTyp);}));
+		int indexTyp = (int) data.BlackBoardProperty.comparisonTyp;
+		textFoldout.Add (DialogGraphUtility.CreateDropDownField ("Comparison", GetComparisonList(), indexTyp, onValueChanged => {Enum.TryParse <BlackBoardProperty.ComparisonTyp> (onValueChanged.newValue, out data.BlackBoardProperty.comparisonTyp);}));
 
 		//Value
 		//ToDo check if value is valid
-		TextField txtValue = DialogGraphUtility.CreateTextField ("Value", data.BlackBoardProperty.name, evt=>{data.BlackBoardProperty.iVal = int.Parse (evt.newValue); MarkDirtyRepaint();});
+		TextField txtValue = DialogGraphUtility.CreateTextField ("Value", data.BlackBoardProperty.iVal.ToString(), evt=>{data.BlackBoardProperty.iVal = int.Parse (evt.newValue); MarkDirtyRepaint();});
 		textFoldout.Add (txtValue);
 
 		mainContainer.Add (textFoldout);
@@ -42,7 +39,7 @@ public class DialogLogicNode : DialogNode
 		RefreshPorts();
 	}
 
-	public static DialogLogicNode Create(string nodeName, Vector2 localMousePosition)
+	public static DialogLogicNode Create(string nodeName, Vector2 localMousePosition, DialogGraphView dialogGraphView)
 	{
 		DialogNodeData data = new DialogNodeData
 		{
@@ -51,17 +48,26 @@ public class DialogLogicNode : DialogNode
 			Type = DialogNodeData.NodeType.LOGIC
 		};
 
-		DialogLogicNode node = Create (data);
+		DialogLogicNode node = Create (data, dialogGraphView);
 		node.SetPosition (new Rect (localMousePosition, DialogNode.defaultSize));
 
 		return node;
 	}
 
-	public static DialogLogicNode Create (DialogNodeData data)
+	public static DialogLogicNode Create (DialogNodeData data, DialogGraphView dialogGraphView)
 	{
-		DialogLogicNode node = new DialogLogicNode {data = data};
+		DialogLogicNode node = new DialogLogicNode {data = data, dialogGraphView = dialogGraphView};
 		node.Init ();
 
 		return node;
+	}
+
+	public List <string> GetComparisonList()
+	{
+		List <string> optionList = new List<string>();
+		optionList.Add (BlackBoardProperty.ComparisonTyp.EQUAL.ToString());
+		optionList.Add (BlackBoardProperty.ComparisonTyp.GREATER.ToString());
+		optionList.Add (BlackBoardProperty.ComparisonTyp.LESS.ToString());
+		return optionList;
 	}
 }

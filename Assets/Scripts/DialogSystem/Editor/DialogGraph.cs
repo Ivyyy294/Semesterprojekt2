@@ -31,6 +31,32 @@ public class DialogGraph : EditorWindow
 		ConstructGraphView();
 		GenerateToolbar();
 		GenerateMiniMap();
+		GenerateBlackBoard();
+	}
+
+	private void GenerateBlackBoard()
+	{
+		var blackBoard = new Blackboard(dialogGraphView);
+		blackBoard.Add (new BlackboardSection () {title = "Exposed Properties"});
+		blackBoard.SetPosition (new Rect (10, 200, 200, 140));
+		blackBoard.addItemRequested = blackBoard1 => {dialogGraphView.AddPropertyToBlackBoard("VALUE");};
+		blackBoard.editTextRequested = (blackBoard1, element, newValue) =>
+		{
+			string oldName = ((BlackboardField)element).text;
+
+			if (dialogGraphView.blackBoardProperties.Contains (newValue))
+			{
+				EditorUtility.DisplayDialog ("Error", "This property name already exists, please chose another one!", "OK");
+				return;
+			}
+
+			((BlackboardField)element).text = newValue;
+			dialogGraphView.blackBoardProperties.Remove (oldName);
+			dialogGraphView.blackBoardProperties.Add (newValue);
+		};
+
+		dialogGraphView.Add (blackBoard);
+		dialogGraphView.blackboard = blackBoard;
 	}
 
 	private void OnDisable()

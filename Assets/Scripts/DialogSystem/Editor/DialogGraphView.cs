@@ -9,6 +9,9 @@ using UnityEditor;
 
 public class DialogGraphView : GraphView
 {
+	public Blackboard blackboard;
+	public List <string> blackBoardProperties = new List<string>();
+
 	public DialogGraphView()
 	{
 		SetupZoom (ContentZoomer.DefaultMinScale, ContentZoomer.DefaultMaxScale);
@@ -32,7 +35,85 @@ public class DialogGraphView : GraphView
 		AddStyles();
 	}
 
+	public void ClearBlackBoard()
+	{
+		blackBoardProperties.Clear();
+		blackboard.Clear();
+	}
 
+	public void AddPropertyToBlackBoard(string v)
+	{
+		while (blackBoardProperties.Contains (v))
+			v += "(1)";
+
+		blackBoardProperties.Add (v);
+
+		VisualElement container = new VisualElement ();
+		BlackboardField blackboardField = new BlackboardField { text = v};
+		container.Add (blackboardField);
+		//container.Add (DialogGraphUtility.CreateButton ("X", onClick:()=>
+		//{
+		//	blackBoardProperties.Remove (v);
+		//	blackboard.Remove (container);
+		//}));
+		blackboard.Add (container);
+	}
+
+	public Vector2 GetLocalMousePosition(Vector2 mousePosition)
+    {
+        Vector2 worldMousePosition = mousePosition;
+        Vector2 localMousePosition = contentViewContainer.WorldToLocal(worldMousePosition);
+        return localMousePosition;
+    }
+
+	public Group CreateGroup (string title, Vector2 localMousePosition)
+	{
+		Group group = DialogGraphUtility.CreateGroup (title, localMousePosition);
+		AddElement (group);
+
+		foreach (GraphElement selectedElement in selection)
+		{
+			if (!(selectedElement is DialogNode)) continue;
+
+			DialogNode dialogNode = (DialogNode) selectedElement;
+			group.AddElement (dialogNode);
+		}
+
+		return group;
+	}
+
+	public void RemovePort(DialogNode dialogNode, Port generatedPort)
+	{
+		var targetEdge = edges.ToList().Where (x=>x.output.portName == generatedPort.portName && x.output.node == generatedPort.node);
+
+		//remove edges first
+		if (targetEdge.Any())
+		{
+			var edge = targetEdge.First();
+			edge.input.Disconnect (edge);
+
+			RemoveElement (targetEdge.First());
+		}
+
+		dialogNode.outputContainer.Remove (generatedPort);
+		dialogNode.RefreshPorts();
+		dialogNode.RefreshExpandedState();
+	}
+
+	public override List<Port> GetCompatiblePorts(Port startPort, NodeAdapter nodeAdapter)
+	{
+		var compatiblePorts = new List <Port>();
+
+		ports.ForEach (port =>
+		{
+			if (startPort != port && startPort.node != port.node)
+				compatiblePorts.Add (port);
+		});
+
+		return compatiblePorts;
+	}
+
+	//Private Functions
 	private void AddStyles()
 	{
 		StyleSheet nodeStyleSheet = (StyleSheet) EditorGUIUtility.Load ("DSNodeStyles.uss");
@@ -42,7 +123,7 @@ public class DialogGraphView : GraphView
 	private IManipulator CreateLogicNodeContextMenu()
 	{
 		ContextualMenuManipulator contextualMenuManipulator = new ContextualMenuManipulator (
-			menuEvent=> menuEvent.menu.AppendAction ("Add LogicNode", actionEvent=>AddElement (DialogLogicNode.Create("LogicNode", GetLocalMousePosition (actionEvent.eventInfo.localMousePosition)))));
+			menuEvent=> menuEvent.menu.AppendAction ("Add LogicNode", actionEvent=>AddElement (DialogLogicNode.Create("LogicNode", GetLocalMousePosition (actionEvent.eventInfo.localMousePosition), this))));
 
 		return contextualMenuManipulator;
 	}
@@ -88,29 +169,6 @@ public class DialogGraphView : GraphView
 		return contextualMenuManipulator;
 	}
 
-	public Vector2 GetLocalMousePosition(Vector2 mousePosition)
-    {
-        Vector2 worldMousePosition = mousePosition;
-        Vector2 localMousePosition = contentViewContainer.WorldToLocal(worldMousePosition);
-        return localMousePosition;
-    }
-
-	public Group CreateGroup (string title, Vector2 localMousePosition)
-	{
-		Group group = DialogGraphUtility.CreateGroup (title, localMousePosition);
-		AddElement (group);
-
-		foreach (GraphElement selectedElement in selection)
-		{
-			if (!(selectedElement is DialogNode)) continue;
-
-			DialogNode dialogNode = (DialogNode) selectedElement;
-			group.AddElement (dialogNode);
-		}
-
-		return group;
-	}
-
 	private DialogNode GenerateEntryPointNode()
 	{ 
 		var node = new DialogNode
@@ -134,36 +192,5 @@ public class DialogGraphView : GraphView
 		node.SetPosition (new Rect (100, 200, 100, 150));
 
 		return node;
-	}
-
-	public void RemovePort(DialogNode dialogNode, Port generatedPort)
-	{
-		var targetEdge = edges.ToList().Where (x=>x.output.portName == generatedPort.portName && x.output.node == generatedPort.node);
-
-		//remove edges first
-		if (targetEdge.Any())
-		{
-			var edge = targetEdge.First();
-			edge.input.Disconnect (edge);
-
-			RemoveElement (targetEdge.First());
-		}
-
-		dialogNode.outputContainer.Remove (generatedPort);
-		dialogNode.RefreshPorts();
-		dialogNode.RefreshExpandedState();
-	}
-
-	public override List<Port> GetCompatiblePorts(Port startPort, NodeAdapter nodeAdapter)
-	{
-		var compatiblePorts = new List <Port>();
-
-		ports.ForEach (port =>
-		{
-			if (startPort != port && startPort.node != port.node)
-				compatiblePorts.Add (port);
-		});
-
-		return compatiblePorts;
 	}
 }
