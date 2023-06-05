@@ -35,6 +35,7 @@ public class GraphSaveUtility
 		if (!Edges.Any()) return;
 
 		var dialogContainer = ScriptableObject.CreateInstance <DialogContainer>();
+		dialogContainer.blackBoardList = ScriptableObject.CreateInstance <BlackBoardList>();
 		var connectedPorts = Edges.Where (x => x.input.node != null).ToArray();
 
 		//Create Link list
@@ -77,13 +78,18 @@ public class GraphSaveUtility
 		}
 
 		foreach (string i in targetGraphView.blackBoardProperties)
-			dialogContainer.exposedProperties.Add (i);
+			dialogContainer.blackBoardList.propertyList.Add (i);
 
 		//Update Scriptable Object
 		containerCache.dialogNodeData = dialogContainer.dialogNodeData;
 		containerCache.nodeLinks = dialogContainer.nodeLinks;
 		containerCache.dialogGroupData = dialogContainer.dialogGroupData;
-		containerCache.exposedProperties = dialogContainer.exposedProperties;
+
+		if (containerCache.blackBoardList != null)
+			containerCache.blackBoardList.propertyList = dialogContainer.blackBoardList.propertyList;
+		else
+			UnityEditor.EditorUtility.DisplayDialog ("Invalid BlackBoard!", "BlackBoard values couldn't be saved!", "OK");
+
 		UnityEditor.EditorUtility.SetDirty (containerCache);
 		UnityEditor.AssetDatabase.SaveAssets();
 	}
@@ -109,8 +115,11 @@ public class GraphSaveUtility
 
 	private void CreateBlackBoard()
 	{
-		foreach (string i in containerCache.exposedProperties)
-			targetGraphView.AddPropertyToBlackBoard (i);
+		if (containerCache.blackBoardList!=null)
+		{
+			foreach (string i in containerCache.blackBoardList.propertyList)
+				targetGraphView.AddPropertyToBlackBoard (i);
+		}
 	}
 
 	private void CreateGroups()

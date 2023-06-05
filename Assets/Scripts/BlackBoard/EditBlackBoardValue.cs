@@ -3,26 +3,15 @@ using System.Collections.Generic;
 using UnityEngine;
 using Ivyyy.GameEvent;
 
-public class BlackBoardEventListener : MonoBehaviour, IGameEventListener
+public class EditBlackBoardValue : MonoBehaviour
 {
-	[SerializeField] GameEvent gameEvent;
-
+	public BlackBoardList blackBoardList;
 	[SerializeField] string propertyName;
 	[SerializeField] BlackBoard.EditTyp editTyp;
 	[SerializeField] int value;
 
-	public void OnEventRaised()
+	public void ModifyValue()
 	{
 		BlackBoard.Me().EditValue (propertyName, editTyp, value);
-	}
-
-	private void OnEnable()
-	{
-		gameEvent.RegisterListener(this);
-	}
-
-	private void OnDisable()
-	{
-		gameEvent.UnregisterListener(this);
 	}
 }
