@@ -504,13 +504,17 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9098869910340354469, guid: 33af2b7fc2656c843abd8e92faa7b4bd, type: 3}
+      propertyPath: propertyGuid
+      value: bbc194c8-0d2d-454c-982a-33ab95d05896
+      objectReference: {fileID: 0}
+    - target: {fileID: 9098869910340354469, guid: 33af2b7fc2656c843abd8e92faa7b4bd, type: 3}
       propertyPath: propertyName
       value: Day
       objectReference: {fileID: 0}
     - target: {fileID: 9098869910340354469, guid: 33af2b7fc2656c843abd8e92faa7b4bd, type: 3}
       propertyPath: blackBoardList
       value: 
-      objectReference: {fileID: 11400000, guid: df3e4881f5a446446b6754fa97ac5b16, type: 2}
+      objectReference: {fileID: 11400000, guid: c289dd2bc5fda5942acc2419a6f68abb, type: 2}
     - target: {fileID: 9098869910340354470, guid: 33af2b7fc2656c843abd8e92faa7b4bd, type: 3}
       propertyPath: gameEvent
       value: 
@@ -558,7 +562,7 @@ Transform:
   - {fileID: 187803364}
   - {fileID: 1452995623}
   m_Father: {fileID: 1714012853}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1534867938
 GameObject:
@@ -998,7 +1002,6 @@ Transform:
   m_Children:
   - {fileID: 1317619999}
   - {fileID: 1407291838}
-  - {fileID: 2127590802}
   - {fileID: 1517132748}
   m_Father: {fileID: 0}
   m_RootOrder: 4
@@ -1014,66 +1017,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e9a63aec05431c8408db0e15f45bafbb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!1 &2127590801
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 2127590802}
-  - component: {fileID: 2127590803}
-  m_Layer: 0
-  m_Name: SetValueTest
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &2127590802
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2127590801}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 1714012853}
-  m_RootOrder: 2
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &2127590803
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2127590801}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7a1d18488b0649147a4b6dea6447213e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  gameEvent: {fileID: 11400000, guid: 6b9f5619b35070c45b9211b6bd6ca736, type: 2}
-  response:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: 
-        m_MethodName: 
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: 
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
 --- !u!1001 &4511592564077618600
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1447,9 +1390,13 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9098869910340354469, guid: 33af2b7fc2656c843abd8e92faa7b4bd, type: 3}
+      propertyPath: propertyGuid
+      value: b9a65873-36d0-4f9f-8b98-dd958b54b3de
+      objectReference: {fileID: 0}
+    - target: {fileID: 9098869910340354469, guid: 33af2b7fc2656c843abd8e92faa7b4bd, type: 3}
       propertyPath: blackBoardList
       value: 
-      objectReference: {fileID: 11400000, guid: df3e4881f5a446446b6754fa97ac5b16, type: 2}
+      objectReference: {fileID: 11400000, guid: c289dd2bc5fda5942acc2419a6f68abb, type: 2}
     - target: {fileID: 9098869910340354470, guid: 33af2b7fc2656c843abd8e92faa7b4bd, type: 3}
       propertyPath: gameEvent
       value: 

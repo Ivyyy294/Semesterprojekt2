@@ -13,8 +13,17 @@ public class BlackBoard
 	}
 
 	private static BlackBoard me;
-	private List <BlackBoardProperty> properties = new List <BlackBoardProperty>();
-	private BlackBoard(){}
+	public Dictionary <string, BlackBoardProperty> properties = new Dictionary <string, BlackBoardProperty>();
+
+	private BlackBoard()
+	{
+		foreach (BlackBoardList list in BlackBoardList.instances)
+		{
+			//Create a working copy of the BlackBoardProperty
+			foreach (var i in list.data)
+				properties.Add (i.guid, new BlackBoardProperty{name = i.name, guid = i.guid});
+		}
+	}
 
 	public static BlackBoard Me ()
 	{
@@ -29,29 +38,28 @@ public class BlackBoard
 		properties.Clear();
 	}
 
-	public void EditValue (string name, EditTyp editTyp, int val)
+	public void EditValue (string guid, EditTyp editTyp, int val)
 	{
-		BlackBoardProperty tmp = GetProperty (name);
+		BlackBoardProperty tmp = GetProperty (guid);
 
-		if (editTyp == EditTyp.SET)
-			tmp.iVal = val;
-		else if (editTyp == EditTyp.INCREASE)
-			tmp.iVal += val;
+		if (tmp == null)
+			Debug.LogError ("Invalid BlackBoardProperty!");
 		else
-			tmp.iVal -= val;
+		{
+			if (editTyp == EditTyp.SET)
+				tmp.iVal = val;
+			else if (editTyp == EditTyp.INCREASE)
+				tmp.iVal += val;
+			else
+				tmp.iVal -= val;
+		}
 	}
 
-	public BlackBoardProperty GetProperty (string name)
+	public BlackBoardProperty GetProperty (string guid)
 	{
-		foreach (BlackBoardProperty i in properties)
-		{
-			if (i.name == name)
-				return i;
-		}
+		if (properties.ContainsKey (guid))
+			return properties[guid];
 
-		BlackBoardProperty tmp = new BlackBoardProperty() {name = name};
-		properties.Add (tmp);
-
-		return tmp;
+		return null;
 	}
 }

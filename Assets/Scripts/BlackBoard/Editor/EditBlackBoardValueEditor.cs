@@ -15,10 +15,11 @@ public class EditBlackBoardValueEditor : Editor
 
 		if (obj.blackBoardList != null)
 		{
-			SerializedProperty name = serializedObject.FindProperty("propertyName");
-			int index = obj.blackBoardList.propertyList.IndexOf (name.stringValue);
-			index = EditorGUILayout.Popup ("Name", index, obj.blackBoardList.propertyList.ToArray());
-			name.stringValue = obj.blackBoardList.propertyList[index];
+			SerializedProperty guid = serializedObject.FindProperty("propertyGuid");
+
+			int index = obj.blackBoardList.GetGuidIndex (guid.stringValue);
+			index = EditorGUILayout.Popup ("Name", index, obj.blackBoardList.GetPropertyNameList().ToArray());
+			guid.stringValue = obj.blackBoardList.GetIndexGuid (index);
 			EditorGUILayout.PropertyField(serializedObject.FindProperty("editTyp"));
 			EditorGUILayout.PropertyField(serializedObject.FindProperty("value"));
 		}

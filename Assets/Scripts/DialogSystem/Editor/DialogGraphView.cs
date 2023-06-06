@@ -10,7 +10,7 @@ using UnityEditor;
 public class DialogGraphView : GraphView
 {
 	public Blackboard blackboard;
-	public List <string> blackBoardProperties = new List<string>();
+	public BlackBoardList blackBoardProperties = ScriptableObject.CreateInstance <BlackBoardList>();
 
 	public DialogGraphView()
 	{
@@ -38,26 +38,44 @@ public class DialogGraphView : GraphView
 
 	public void ClearBlackBoard()
 	{
-		blackBoardProperties.Clear();
+		blackBoardProperties.data.Clear();
 		blackboard.Clear();
 	}
 
-	public void AddPropertyToBlackBoard(string v)
+	public void AddPropertyToBlackBoard(string v, string guid = null)
 	{
-		while (blackBoardProperties.Contains (v))
+		while (blackBoardProperties.data.Any (x=>x.name == v))
 			v += "(1)";
 
-		blackBoardProperties.Add (v);
+		BlackBoardProperty newData = blackBoardProperties.AddValue (v, guid);
 
 		VisualElement container = new VisualElement ();
-		BlackboardField blackboardField = new BlackboardField { text = v};
+		BlackboardField blackboardField = new BlackboardField { text = newData.name, typeText = newData.guid};
+
+		blackboardField.Add(DialogGraphUtility.CreateButton("X", onClick: () =>
+		{
+			if (IsBlackBoardPropertyInUse(blackboardField.typeText))
+				EditorUtility.DisplayDialog ("Error", "The value cannot be deleted because it is still used in the dialogue!", "OK");
+			else
+			{
+				if (EditorUtility.DisplayDialog ("Warning", "Deleting this value can lead to data loss in external dialogues. Are you sure you want to delete the value?", "Yes", "Cancel"))
+				{
+					blackBoardProperties.RemoveValue(blackboardField.typeText);
+					blackboard.Remove(container);
+				}
+			}
+		}));
+
 		container.Add (blackboardField);
-		//container.Add (DialogGraphUtility.CreateButton ("X", onClick:()=>
-		//{
-		//	blackBoardProperties.Remove (v);
-		//	blackboard.Remove (container);
-		//}));
 		blackboard.Add (container);
+
+		RefreshBlackBoardProperties();
+	}
+
+	public void RefreshBlackBoardProperties ()
+	{
+		foreach (DialogNode node in nodes.Cast <DialogNode>())
+			node.RefreshBlackBoardProperties();
 	}
 
 	public Vector2 GetLocalMousePosition(Vector2 mousePosition)
@@ -201,5 +219,16 @@ public class DialogGraphView : GraphView
 		node.SetPosition (new Rect (100, 200, 100, 150));
 
 		return node;
+	}
+
+	private bool IsBlackBoardPropertyInUse(string guid)
+	{
+		foreach (DialogNode node in nodes.Cast <DialogNode>())
+		{
+			if (node.IsBlackBoardPropertyInUse (guid))
+				return true;
+		}
+
+		return false;
 	}
 }

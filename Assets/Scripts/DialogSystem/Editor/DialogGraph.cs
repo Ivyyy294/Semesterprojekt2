@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEditor;
 using UnityEditor.Experimental.GraphView;
 using UnityEditor.UIElements;
@@ -42,17 +43,18 @@ public class DialogGraph : EditorWindow
 		blackBoard.addItemRequested = blackBoard1 => {dialogGraphView.AddPropertyToBlackBoard("VALUE");};
 		blackBoard.editTextRequested = (blackBoard1, element, newValue) =>
 		{
-			string oldName = ((BlackboardField)element).text;
+			BlackboardField blackboardField = (BlackboardField)element;
+			string oldName = blackboardField.text;
 
-			if (dialogGraphView.blackBoardProperties.Contains (newValue))
+			if (dialogGraphView.blackBoardProperties.data.Any(x=>x.name == newValue))
 			{
 				EditorUtility.DisplayDialog ("Error", "This property name already exists, please chose another one!", "OK");
 				return;
 			}
 
-			((BlackboardField)element).text = newValue;
-			dialogGraphView.blackBoardProperties.Remove (oldName);
-			dialogGraphView.blackBoardProperties.Add (newValue);
+			blackboardField.text = newValue;
+			dialogGraphView.blackBoardProperties.ChangeData (newValue, blackboardField.typeText);
+			dialogGraphView.RefreshBlackBoardProperties();
 		};
 
 		dialogGraphView.Add (blackBoard);
@@ -74,7 +76,7 @@ public class DialogGraph : EditorWindow
 
 	private void ConstructGraphView()
 	{
-		dialogGraphView = new DialogGraphView {name = "Dialog Graph" };
+		dialogGraphView = new DialogGraphView {name = "Dialog Graph"};
 		dialogGraphView.StretchToParentSize();
 		rootVisualElement.Add (dialogGraphView);
 	}

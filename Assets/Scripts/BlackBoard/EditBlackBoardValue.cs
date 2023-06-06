@@ -6,12 +6,12 @@ using Ivyyy.GameEvent;
 public class EditBlackBoardValue : MonoBehaviour
 {
 	public BlackBoardList blackBoardList;
-	[SerializeField] string propertyName;
+	[SerializeField] string propertyGuid;
 	[SerializeField] BlackBoard.EditTyp editTyp;
 	[SerializeField] int value;
 
 	public void ModifyValue()
 	{
-		BlackBoard.Me().EditValue (propertyName, editTyp, value);
+		BlackBoard.Me().EditValue (propertyGuid, editTyp, value);
 	}
 }
