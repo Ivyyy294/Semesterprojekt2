@@ -12,3 +12,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 21ecb098e7688f840810a874f3b63042, type: 3}
   m_Name: Dialog
   m_EditorClassIdentifier: 
+  data:
+  - name: Day
+    guid: 2f3a5ce9-bea6-4266-b092-fba01b30baa7
+    comparisonTyp: 0
+    iVal: 0
+  - name: Friendship
+    guid: cbfede91-3164-44b6-baf4-13d5385fb779
+    comparisonTyp: 0
+    iVal: 0

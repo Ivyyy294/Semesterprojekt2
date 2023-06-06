@@ -58,15 +58,15 @@ MonoBehaviour:
   - baseNodeGuid: a7b5560d-e02a-4573-8c39-ae94ea1b20ce
     portName: Next
     targetNodeGuid: dd313c69-3e74-4bbc-9b63-c1f84b60b8f3
-  - baseNodeGuid: dd313c69-3e74-4bbc-9b63-c1f84b60b8f3
-    portName: Next
-    targetNodeGuid: 841e0089-2da3-494e-a9b6-32a4c69ffee7
   - baseNodeGuid: 841e0089-2da3-494e-a9b6-32a4c69ffee7
     portName: True
     targetNodeGuid: 4dabef00-585b-4290-8eae-aa532249c09f
   - baseNodeGuid: 841e0089-2da3-494e-a9b6-32a4c69ffee7
     portName: False
     targetNodeGuid: 3264cb8a-2dc4-4916-851b-8f2b4aeb413d
+  - baseNodeGuid: dd313c69-3e74-4bbc-9b63-c1f84b60b8f3
+    portName: Next
+    targetNodeGuid: 841e0089-2da3-494e-a9b6-32a4c69ffee7
   dialogNodeData:
   - Guid: 5e1fdd36-7a0b-4ad5-9030-8eafdb361e82
     DialogTitle: Npc Node
@@ -224,18 +224,6 @@ MonoBehaviour:
       guid: 
       comparisonTyp: 0
       iVal: 0
-  - Guid: dd313c69-3e74-4bbc-9b63-c1f84b60b8f3
-    DialogTitle: WaitNode
-    Position: {x: 2782, y: -81}
-    Type: 5
-    DialogText: 
-    Image: {fileID: 0}
-    GameEvent: {fileID: 0}
-    BlackBoardProperty:
-      name: Day
-      guid: bbc194c8-0d2d-454c-982a-33ab95d05896
-      comparisonTyp: 0
-      iVal: 1
   - Guid: 841e0089-2da3-494e-a9b6-32a4c69ffee7
     DialogTitle: LogicNode
     Position: {x: 3126, y: -177}
@@ -245,7 +233,19 @@ MonoBehaviour:
     GameEvent: {fileID: 0}
     BlackBoardProperty:
       name: Friendship
-      guid: b9a65873-36d0-4f9f-8b98-dd958b54b3de
+      guid: cbfede91-3164-44b6-baf4-13d5385fb779
+      comparisonTyp: 1
+      iVal: 0
+  - Guid: dd313c69-3e74-4bbc-9b63-c1f84b60b8f3
+    DialogTitle: WaitNode
+    Position: {x: 2782, y: -81}
+    Type: 5
+    DialogText: 
+    Image: {fileID: 0}
+    GameEvent: {fileID: 0}
+    BlackBoardProperty:
+      name: Day
+      guid: 2f3a5ce9-bea6-4266-b092-fba01b30baa7
       comparisonTyp: 0
       iVal: 0
   dialogGroupData:
@@ -270,6 +270,6 @@ MonoBehaviour:
     childNodeGuid:
     - 4dabef00-585b-4290-8eae-aa532249c09f
     - 3264cb8a-2dc4-4916-851b-8f2b4aeb413d
-    - dd313c69-3e74-4bbc-9b63-c1f84b60b8f3
     - 841e0089-2da3-494e-a9b6-32a4c69ffee7
+    - dd313c69-3e74-4bbc-9b63-c1f84b60b8f3
   blackBoardList: {fileID: 11400000, guid: c289dd2bc5fda5942acc2419a6f68abb, type: 2}

@@ -44,6 +44,7 @@ public class DialogGraph : EditorWindow
 		blackBoard.editTextRequested = (blackBoard1, element, newValue) =>
 		{
 			BlackboardField blackboardField = (BlackboardField)element;
+
 			string oldName = blackboardField.text;
 
 			if (dialogGraphView.blackBoardProperties.data.Any(x=>x.name == newValue))

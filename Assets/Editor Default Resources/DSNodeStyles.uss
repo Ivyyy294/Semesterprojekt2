@@ -16,6 +16,11 @@ GridBackground
     --spacing: 50;
 }
 
+Blackboard #typeLabel
+{
+	display: none;
+}
+
 /*Port Settings*/
 .port.output {
   height: auto;
