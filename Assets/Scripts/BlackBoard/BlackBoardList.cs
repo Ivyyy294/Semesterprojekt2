@@ -85,7 +85,7 @@ public class BlackBoardList : ScriptableObject
 
 	public string GetIndexGuid (int index)
 	{
-		if (index < data.Count)
+		if (index >= 0 && index < data.Count)
 			return data.ElementAt (index).guid;
 		else
 			return null;

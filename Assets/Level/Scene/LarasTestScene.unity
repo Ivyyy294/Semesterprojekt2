@@ -505,7 +505,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9098869910340354469, guid: 33af2b7fc2656c843abd8e92faa7b4bd, type: 3}
       propertyPath: propertyGuid
-      value: bbc194c8-0d2d-454c-982a-33ab95d05896
+      value: 2f3a5ce9-bea6-4266-b092-fba01b30baa7
       objectReference: {fileID: 0}
     - target: {fileID: 9098869910340354469, guid: 33af2b7fc2656c843abd8e92faa7b4bd, type: 3}
       propertyPath: propertyName
@@ -1391,7 +1391,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9098869910340354469, guid: 33af2b7fc2656c843abd8e92faa7b4bd, type: 3}
       propertyPath: propertyGuid
-      value: b9a65873-36d0-4f9f-8b98-dd958b54b3de
+      value: cbfede91-3164-44b6-baf4-13d5385fb779
       objectReference: {fileID: 0}
     - target: {fileID: 9098869910340354469, guid: 33af2b7fc2656c843abd8e92faa7b4bd, type: 3}
       propertyPath: blackBoardList

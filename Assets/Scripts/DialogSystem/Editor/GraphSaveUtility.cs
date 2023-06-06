@@ -77,28 +77,26 @@ public class GraphSaveUtility
 			dialogContainer.dialogGroupData.Add (tmpGroup);
 		}
 
-		foreach (var i in targetGraphView.blackBoardProperties.data)
-		{
-			if (containerCache.blackBoardList.data.Any(x=>x.guid == i.guid))
-				containerCache.blackBoardList.ChangeData (i.name, i.guid);
-			else
-				containerCache.blackBoardList.AddValue (i.name, i.guid);
-		}
-		//dialogContainer.blackBoardList.properties = targetGraphView.blackBoardProperties;
+		SaveBlackBoard();
 
 		//Update Scriptable Object
 		containerCache.dialogNodeData = dialogContainer.dialogNodeData;
 		containerCache.nodeLinks = dialogContainer.nodeLinks;
 		containerCache.dialogGroupData = dialogContainer.dialogGroupData;
-		//containerCache.blackBoardList.properties = targetGraphView.blackBoardProperties;
-
-		//if (containerCache.blackBoardList != null)
-		//	containerCache.blackBoardList.properties = dialogContainer.blackBoardList.properties;
-		//else
-		//	UnityEditor.EditorUtility.DisplayDialog ("Invalid BlackBoard!", "BlackBoard values couldn't be saved!", "OK");
 
 		UnityEditor.EditorUtility.SetDirty (containerCache);
 		UnityEditor.AssetDatabase.SaveAssets();
+	}
+
+	private void SaveBlackBoard()
+	{
+		//Update Values
+		containerCache.blackBoardList.data.Clear();
+
+		foreach (var i in targetGraphView.blackBoardProperties.data)
+			containerCache.blackBoardList.AddValue(i.name, i.guid);
+
+		UnityEditor.EditorUtility.SetDirty (containerCache.blackBoardList);
 	}
 
 	public void LoadGraph (DialogContainer asset)
