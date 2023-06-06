@@ -1,10 +1,12 @@
 using System;
+using System.Linq;
 using UnityEngine;
 using UnityEngine.UIElements;
 
 public class DialogWaitNode : DialogNode
 {
 	DialogGraphView dialogGraphView;
+	DropdownField dropdownField;
 
     public override void Init ()
 	{
@@ -15,8 +17,9 @@ public class DialogWaitNode : DialogNode
 		Foldout textFoldout = DialogGraphUtility.CreateFoldout ("Settings");
 
 		//Name
-		int indexName = dialogGraphView.blackBoardProperties.IndexOf (data.BlackBoardProperty.name);
-		textFoldout.Add (DialogGraphUtility.CreateDropDownField ("Name", dialogGraphView.blackBoardProperties, indexName, onValueChanged=>{data.BlackBoardProperty.name = onValueChanged.newValue; MarkDirtyRepaint();}));
+		int indexName = dialogGraphView.blackBoardProperties.GetGuidIndex(data.BlackBoardProperty.guid);
+		dropdownField = DialogGraphUtility.CreateDropDownField ("Name", dialogGraphView.blackBoardProperties.GetPropertyNameList(), indexName, onValueChanged=>{OnValueChanged(onValueChanged.newValue);});
+		textFoldout.Add (dropdownField);
 
 		//Comparison
 		int indexTyp = (int) data.BlackBoardProperty.comparisonTyp;
@@ -32,6 +35,19 @@ public class DialogWaitNode : DialogNode
 		MarkDirtyRepaint();
 		RefreshExpandedState();
 		RefreshPorts();
+	}
+
+	public override bool IsBlackBoardPropertyInUse(string guid)
+	{
+		return data.BlackBoardProperty.guid == guid;
+	}
+
+	public override void RefreshBlackBoardProperties ()
+	{
+		int index = dropdownField.index;
+		dropdownField.choices = dialogGraphView.blackBoardProperties.GetPropertyNameList();
+		dropdownField.index = index;
+		dropdownField.MarkDirtyRepaint();
 	}
 
 	public static DialogWaitNode Create(string nodeName, Vector2 localMousePosition, DialogGraphView dialogGraphView)
@@ -55,5 +71,11 @@ public class DialogWaitNode : DialogNode
 		node.Init ();
 
 		return node;
+	}
+
+	private void OnValueChanged (string newName)
+	{
+		data.BlackBoardProperty = dialogGraphView.blackBoardProperties.data.First(x=>x.name == newName);
+		MarkDirtyRepaint();
 	}
 }

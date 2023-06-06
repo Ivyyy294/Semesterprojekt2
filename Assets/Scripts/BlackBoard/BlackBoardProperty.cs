@@ -13,6 +13,7 @@ public class BlackBoardProperty
 	}
 
 	public string name;
+	public string guid;
 	public ComparisonTyp comparisonTyp;
 	public int iVal;
 

@@ -14,6 +14,9 @@ public class DialogNode : Node
 	public DialogNodeData data;
 	
 	//Public Functions
+	public virtual bool IsBlackBoardPropertyInUse (string guid) {return false;}
+	public virtual void RefreshBlackBoardProperties () {}
+
 	public virtual void Init ()
 	{
 		AddOutputPort ("Next");

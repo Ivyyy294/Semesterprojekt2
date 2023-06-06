@@ -167,7 +167,7 @@ public class LogicNodeState : BaseState
 	public override void Update  (GameObject obj)
 	{
 		BlackBoardProperty checkValue = node.data.BlackBoardProperty;
-		BlackBoardProperty property = BlackBoard.Me().GetProperty (checkValue.name);
+		BlackBoardProperty property = BlackBoard.Me().GetProperty (checkValue.guid);
 
 		if (property.Compare (checkValue))
 			True();
@@ -193,7 +193,7 @@ public class WaitNodeState : BaseState
 	public override void Update  (GameObject obj)
 	{
 		BlackBoardProperty checkValue = node.data.BlackBoardProperty;
-		BlackBoardProperty property = BlackBoard.Me().GetProperty (checkValue.name);
+		BlackBoardProperty property = BlackBoard.Me().GetProperty (checkValue.guid);
 
 		if (property.Compare (checkValue))
 		{
