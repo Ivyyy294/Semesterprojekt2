@@ -246,7 +246,7 @@ MonoBehaviour:
     BlackBoardProperty:
       name: Day
       guid: 2f3a5ce9-bea6-4266-b092-fba01b30baa7
-      comparisonTyp: 0
+      comparisonTyp: 1
       iVal: 0
   dialogGroupData:
   - Guid: 

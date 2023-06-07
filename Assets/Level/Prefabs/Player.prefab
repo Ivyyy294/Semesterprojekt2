@@ -218,7 +218,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   baseSpeed: 5
   sprintSpeed: -1
-  gravity: 1
+  gravity: 9.81
   jumpHeight: 1
   jumpNumber: -1
   aJump: []
