@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.021345869, g: 0.078081585, b: 0.22388227, a: 1}
+  m_IndirectSpecularColor: {r: 0.02134593, g: 0.0780817, b: 0.22388308, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -246,10 +246,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 06f98f345a13f534f8b56e60b504b5b1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  scenesToLoad:
-  - LarasTestScene
-  sceneAssets:
-  - {fileID: 102900000, guid: c5b5a186b46add84c83c5b1d2162a7e0, type: 3}
+  scenesToLoad: []
+  sceneAssets: []
 --- !u!4 &1563870121
 Transform:
   m_ObjectHideFlags: 0
