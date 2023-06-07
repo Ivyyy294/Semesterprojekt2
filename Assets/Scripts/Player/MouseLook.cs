@@ -5,8 +5,8 @@ using System.IO;
 
 public class MouseLook : MonoBehaviour
 {
-	Transform cameraTrans;
 	float verticalRotation;
+	[SerializeField] Transform cameraTrans;
 	[SerializeField] float maxVerticalAngle = 80f;
 
 	[Range (0.1f, 2f)]
@@ -19,7 +19,7 @@ public class MouseLook : MonoBehaviour
     void Start()
     {
 		Cursor.lockState = CursorLockMode.Locked;
-		cameraTrans = Camera.main.transform;
+		//cameraTrans = Camera.main.transform;
     }
 
     // Update is called once per frame
