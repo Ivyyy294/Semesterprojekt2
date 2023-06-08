@@ -54,7 +54,6 @@ public class PowerDownState : IState
 	{
 		terminalObj = obj.GetComponent<ChatTerminalObj>();
 		terminalObj.terminalCamera.Priority = 0;
-		terminalObj.terminalUI.SetActive (false);
 		timer = 0f;
 	}
 
@@ -74,7 +73,7 @@ public class OnlineState : IState
 	public void Enter (GameObject obj)
 	{
 		terminalObj = obj.GetComponent<ChatTerminalObj>();
-		terminalObj.terminalUI.SetActive (true);
+		terminalObj.terminalUiShow?.Raise();
 	}
 
 	public void Update (GameObject obj)
@@ -89,12 +88,11 @@ public class ChatTerminalObj : MonoBehaviour, Ivyyy.Interfaces.InteractableObjec
 	[Header ("Lara Values")]
 	public GameEvent eventLockPlayer;
 	public GameEvent eventReleasePlayer;
+	public GameEvent terminalUiShow;
 	public float minTransitionTime = 1f;
 	[Space()]
 	public CinemachineVirtualCamera terminalCamera;
 	public CinemachineBrain cinemachineBrain;
-	[Space()]
-	public GameObject terminalUI;
 
 	public bool active;
 	public static OfflineState offlineState = new OfflineState();
@@ -107,6 +105,9 @@ public class ChatTerminalObj : MonoBehaviour, Ivyyy.Interfaces.InteractableObjec
 	private void Start()
 	{
 		SetState (new OfflineState());
+
+		if (cinemachineBrain == null)
+			cinemachineBrain = Camera.main.GetComponent<CinemachineBrain>();
 	}
 
 	public void Update()
