@@ -1,0 +1,17 @@
+<svg width="276" height="89" viewBox="0 0 276 89" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M5 5H271V84H5V5Z" fill="#888888"/>
+<path d="M10 0.334961H266V5.00029H271V9.99316H266V5.32784H10V10H5V5H10V0.334961Z" fill="black"/>
+<path d="M5 10V79H0V10H5Z" fill="black"/>
+<path d="M271 79H276V10H271V79Z" fill="black"/>
+<path d="M271 83.9932H266V79.0003L271 79V83.9932Z" fill="black"/>
+<path d="M266 84H10V88.9929H266V84Z" fill="black"/>
+<path d="M10 83.9932H5V79L10 79.0003V83.9932Z" fill="black"/>
+<rect x="261" y="10.3125" width="5" height="68.6877" fill="#BCBCBC"/>
+<path d="M10 74H266V78.9774H10V74Z" fill="#BCBCBC"/>
+<rect x="15" y="84" width="5" height="74" transform="rotate(180 15 84)" fill="#666666"/>
+<rect x="271" y="14.9775" width="256" height="4.97737" transform="rotate(180 271 14.9775)" fill="#666666"/>
+<rect x="5" y="10" width="5" height="69" fill="#444444"/>
+<rect x="10" y="5" width="256" height="5" fill="#444444"/>
+<path d="M10 74H15V78.9774H10V74Z" fill="white" fill-opacity="0.25"/>
+<path d="M261 10H266V14.9774H261V10Z" fill="white" fill-opacity="0.25"/>
+</svg>
