@@ -526,6 +526,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   closeEvent: {fileID: 11400000, guid: 50642faa1d0089f4c9d0cf52d959887b, type: 2}
+  loadMenu: {fileID: 11400000, guid: edc833ab6630c9b43bbf56dfb180dfbf, type: 2}
+  closeGame: {fileID: 11400000, guid: 0138fde21d9e0f74389debde818f3132, type: 2}
 --- !u!1 &1454864805930369405
 GameObject:
   m_ObjectHideFlags: 0

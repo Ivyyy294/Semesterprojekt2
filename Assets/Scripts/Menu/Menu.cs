@@ -1,3 +1,4 @@
+using Ivyyy.GameEvent;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -5,6 +6,11 @@ using UnityEngine.SceneManagement;
 
 public class Menu : MonoBehaviour
 {
+	[Header ("Lara Values")]
+	[SerializeField] GameEvent newGame;
+	[SerializeField] GameEvent continueGame;
+	[SerializeField] GameEvent closeGame;
+
 	public void Start()
 	{
 		Cursor.lockState = CursorLockMode.Confined;
@@ -13,17 +19,17 @@ public class Menu : MonoBehaviour
 	public void OnNewGameButton()
 	{
 		BlackBoard.Me().Clear();
-		SceneManager.LoadScene (1);
+		newGame?.Raise();
 	}
 
 	public void OnContinueButton()
 	{
 		BlackBoard.Me().Clear();
-		SceneManager.LoadScene (1);
+		continueGame?.Raise();
 	}
 
     public void OnExitButton()
 	{
-		Application.Quit();
+		closeGame?.Raise();
 	}
 }

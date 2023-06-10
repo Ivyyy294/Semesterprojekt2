@@ -7,7 +7,10 @@ using UnityEngine.SceneManagement;
 
 public class PauseMenu : MonoBehaviour
 {
+	[Header ("Lara Values")]
 	[SerializeField] GameEvent closeEvent;
+	[SerializeField] GameEvent loadMenu;
+	[SerializeField] GameEvent closeGame;
 
 	public void OnContinue()
 	{
@@ -16,12 +19,12 @@ public class PauseMenu : MonoBehaviour
 
 	public void OnMenu()
 	{
-		SceneManager.LoadScene (0);
+		loadMenu?.Raise();
 	}
 
 	public void OnExit()
 	{
-		Application.Quit();
+		closeGame?.Raise();
 	}
 
 	private void OnEnable()
