@@ -468,9 +468,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 8278205127881763719}
         m_TargetAssemblyTypeName: Menu, Assembly-CSharp
-        m_MethodName: OnNewGameButton
+        m_MethodName: 
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -602,9 +602,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: Menu, Assembly-CSharp
-        m_MethodName: OnNewGameButton
+      - m_Target: {fileID: 3032876987770061404}
+        m_TargetAssemblyTypeName: PauseMenu, Assembly-CSharp
+        m_MethodName: OnMenu
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -871,9 +871,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 8278205127881763719}
         m_TargetAssemblyTypeName: Menu, Assembly-CSharp
-        m_MethodName: OnNewGameButton
+        m_MethodName: 
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1275,9 +1275,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: Menu, Assembly-CSharp
-        m_MethodName: OnNewGameButton
+      - m_Target: {fileID: 3032876987770061404}
+        m_TargetAssemblyTypeName: PauseMenu, Assembly-CSharp
+        m_MethodName: OnExit
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1299,6 +1299,7 @@ GameObject:
   - component: {fileID: 7720703152681948652}
   - component: {fileID: 2447567188668660490}
   - component: {fileID: 3174480884447478291}
+  - component: {fileID: 3032876987770061404}
   m_Layer: 5
   m_Name: PauseScreen_Ui
   m_TagString: Untagged
@@ -1393,3 +1394,18 @@ MonoBehaviour:
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 4294967295
+--- !u!114 &3032876987770061404
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8278205127881763719}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 258c1e5b16e2ccf48a2625e22fcaf4bd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  closeEvent: {fileID: 11400000, guid: 50642faa1d0089f4c9d0cf52d959887b, type: 2}
+  loadMenu: {fileID: 11400000, guid: edc833ab6630c9b43bbf56dfb180dfbf, type: 2}
+  closeGame: {fileID: 11400000, guid: 0138fde21d9e0f74389debde818f3132, type: 2}
