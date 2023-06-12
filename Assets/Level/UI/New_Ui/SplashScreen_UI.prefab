@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 49988205109641180}
   - component: {fileID: 2902793335034687270}
   - component: {fileID: 2008847690435508971}
+  - component: {fileID: 6104806823768631263}
   m_Layer: 5
   m_Name: SplashScreen_UI
   m_TagString: Untagged
@@ -103,6 +104,19 @@ MonoBehaviour:
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 4294967295
+--- !u!114 &6104806823768631263
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 172765446261351009}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e89b8c93d6d3dec42888511b0ad73800, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  showMenuGameEvent: {fileID: 11400000, guid: edc833ab6630c9b43bbf56dfb180dfbf, type: 2}
 --- !u!1 &254914236933163265
 GameObject:
   m_ObjectHideFlags: 0

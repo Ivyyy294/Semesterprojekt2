@@ -212,7 +212,6 @@ public class ChatTerminalUi : MonoBehaviour
 	public GameObject messageNpcTemplate;
 	public GameObject messagePlayerTemplate;
 
-	[SerializeField] Ivyyy.GameEvent.GameEvent closeEvent;
 	[SerializeField] GameObject buttonContainer;
 
 	public DefaultState defaultState = new DefaultState();
@@ -232,16 +231,6 @@ public class ChatTerminalUi : MonoBehaviour
 	public List <GameObject> ButtonList => buttonList;
 
 	//Public Functions
-	public void Show(bool val)
-	{
-		gameObject.SetActive (val);
-	}
-
-	public void RaiseCloseEvent()
-	{
-		closeEvent.Raise();
-	}
-
 	public void SetState (Ivyyy.StateMachine.IState newState)
 	{
 		currentState = newState;
@@ -249,16 +238,6 @@ public class ChatTerminalUi : MonoBehaviour
 	}
 
 	//Private Functions
-	private void OnEnable()
-	{
-		Cursor.lockState = CursorLockMode.Confined;
-	}
-
-	private void OnDisable()
-	{
-		Cursor.lockState = CursorLockMode.Locked;
-	}
-
 	void Start()
     {
 		buttonList.Clear();

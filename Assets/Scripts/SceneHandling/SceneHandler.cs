@@ -7,8 +7,9 @@ using Ivyyy.SaveGameSystem;
 public class SceneHandler : MonoBehaviour
 {
 	[Header ("Lara Values")]
-	[SerializeField] int indexMenuScene = 1;
-	[SerializeField] int indexGameScene = 2;
+	[SerializeField] int indexSplashScene = 1;
+	[SerializeField] int indexMenuScene = 2;
+	[SerializeField] int indexGameScene = 3;
 	public bool loadGame = false;
 
 	int currentSceneIndex = -1;
@@ -34,7 +35,7 @@ public class SceneHandler : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-		SwitchScene (indexMenuScene);
+		SwitchScene (indexSplashScene);
     }
 
 	void SwitchScene (int newIndex)
