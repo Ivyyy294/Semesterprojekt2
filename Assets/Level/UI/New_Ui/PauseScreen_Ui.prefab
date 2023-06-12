@@ -468,9 +468,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 8278205127881763719}
-        m_TargetAssemblyTypeName: Menu, Assembly-CSharp
-        m_MethodName: 
+      - m_Target: {fileID: 3032876987770061404}
+        m_TargetAssemblyTypeName: PauseMenu, Assembly-CSharp
+        m_MethodName: OnSettings
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1406,6 +1406,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 258c1e5b16e2ccf48a2625e22fcaf4bd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  showSettings: {fileID: 11400000, guid: 95f3ac4f80c962943bc010a45dcad792, type: 2}
   closeEvent: {fileID: 11400000, guid: 50642faa1d0089f4c9d0cf52d959887b, type: 2}
   loadMenu: {fileID: 11400000, guid: edc833ab6630c9b43bbf56dfb180dfbf, type: 2}
   closeGame: {fileID: 11400000, guid: 0138fde21d9e0f74389debde818f3132, type: 2}

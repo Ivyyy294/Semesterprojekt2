@@ -8,9 +8,15 @@ using UnityEngine.SceneManagement;
 public class PauseMenu : MonoBehaviour
 {
 	[Header ("Lara Values")]
+	[SerializeField] GameEvent showSettings;
 	[SerializeField] GameEvent closeEvent;
 	[SerializeField] GameEvent loadMenu;
 	[SerializeField] GameEvent closeGame;
+
+	public void OnSettings()
+	{
+		showSettings?.Raise();
+	}
 
 	public void OnContinue()
 	{
