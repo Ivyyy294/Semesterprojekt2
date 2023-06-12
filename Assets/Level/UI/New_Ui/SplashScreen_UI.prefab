@@ -129,7 +129,7 @@ GameObject:
   - component: {fileID: 742819440394410321}
   - component: {fileID: 2328350314697682334}
   m_Layer: 5
-  m_Name: Title (1)
+  m_Name: PressX
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -183,7 +183,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Press any button to start
+  m_text: Press any button to sign in...
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 9fbb59e2067242a429e588557304ef33, type: 2}
   m_sharedMaterial: {fileID: 8583548167123439438, guid: 9fbb59e2067242a429e588557304ef33, type: 2}
@@ -394,7 +394,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Game Title
+  m_text: P.U.C.K ATTACK
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 9fbb59e2067242a429e588557304ef33, type: 2}
   m_sharedMaterial: {fileID: 8583548167123439438, guid: 9fbb59e2067242a429e588557304ef33, type: 2}

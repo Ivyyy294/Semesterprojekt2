@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 1467215222844062233}
   - component: {fileID: 8146506454581942486}
   m_Layer: 5
-  m_Name: Controlls_Button
+  m_Name: Controls_Button
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -37,8 +37,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -553.0001, y: 260}
-  m_SizeDelta: {x: 544.8373, y: 90.7461}
+  m_AnchoredPosition: {x: -700, y: 260}
+  m_SizeDelta: {x: 363.2802, y: 90.7461}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &1926321294082321502
 CanvasRenderer:
@@ -171,8 +171,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -553.0001, y: 0}
-  m_SizeDelta: {x: 544.8373, y: 90.7461}
+  m_AnchoredPosition: {x: 60, y: 260}
+  m_SizeDelta: {x: 363.2802, y: 90.7461}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &8214647829769454600
 CanvasRenderer:
@@ -334,7 +334,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Controlls
+  m_text: Controls
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 9fbb59e2067242a429e588557304ef33, type: 2}
   m_sharedMaterial: {fileID: 8583548167123439438, guid: 9fbb59e2067242a429e588557304ef33, type: 2}
@@ -575,8 +575,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -553.0001, y: 130}
-  m_SizeDelta: {x: 544.8373, y: 90.7461}
+  m_AnchoredPosition: {x: -320, y: 260}
+  m_SizeDelta: {x: 363.2802, y: 90.7461}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &1903577587051613086
 CanvasRenderer:
@@ -1566,8 +1566,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -553.0001, y: -130}
-  m_SizeDelta: {x: 544.8373, y: 90.7461}
+  m_AnchoredPosition: {x: 440, y: 260}
+  m_SizeDelta: {x: 363.2802, y: 90.7461}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &1000282255729329969
 CanvasRenderer:
