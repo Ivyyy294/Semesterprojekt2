@@ -9,6 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8876999371915281622}
+  - component: {fileID: 2263134548048337475}
   m_Layer: 5
   m_Name: Partner_Container
   m_TagString: Untagged
@@ -38,6 +39,21 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 744.1199, y: 69}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &2263134548048337475
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1075436441059836512}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 13c9e1106973b2240a6a4e3993b22b5b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  txtField: {fileID: 1560761990709671170}
+  respondTime: 0.5
+  imageObj: {fileID: 4289682561233577095}
 --- !u!1 &1560761990297634843
 GameObject:
   m_ObjectHideFlags: 0
@@ -131,12 +147,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Padding:
-    m_Left: 16
-    m_Right: 8
-    m_Top: 8
-    m_Bottom: 8
+    m_Left: 32
+    m_Right: 16
+    m_Top: 16
+    m_Bottom: 16
   m_ChildAlignment: 0
-  m_Spacing: 8
+  m_Spacing: 16
   m_ChildForceExpandWidth: 1
   m_ChildForceExpandHeight: 1
   m_ChildControlWidth: 1
@@ -194,8 +210,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 338.15494, y: 0}
-  m_SizeDelta: {x: 644.3099, y: 0}
+  m_AnchoredPosition: {x: 342.15494, y: 0}
+  m_SizeDelta: {x: 620.3099, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &1560761990709671181
 CanvasRenderer:
@@ -225,7 +241,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy
+  m_text: ...
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 9fbb59e2067242a429e588557304ef33, type: 2}
   m_sharedMaterial: {fileID: 8583548167123439438, guid: 9fbb59e2067242a429e588557304ef33, type: 2}

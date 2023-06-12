@@ -35,7 +35,8 @@ public class BlackBoard
 
 	public void Clear()
 	{
-		properties.Clear();
+		foreach (var i in properties)
+			i.Value.iVal = 0;
 	}
 
 	public void EditValue (string guid, EditTyp editTyp, int val)

@@ -7,11 +7,11 @@ using UnityEngine.UI;
 public abstract class BaseState: Ivyyy.StateMachine.IState
 {
 	protected DialogTree.Node node;
-	protected ChatTerminalUi manager;
+	protected Chat manager;
 
 	public virtual void Enter (GameObject obj)
 	{
-		manager = obj.GetComponent <ChatTerminalUi>();
+		manager = obj.GetComponent <Chat>();
 		node = manager.DialogTree.CurrentNode();
 	}
 
@@ -203,7 +203,7 @@ public class WaitNodeState : BaseState
 	}
 }
 
-public class ChatTerminalUi : MonoBehaviour
+public class Chat : MonoBehaviour
 {
 	[SerializeField] DialogContainer dialogContainer;
 

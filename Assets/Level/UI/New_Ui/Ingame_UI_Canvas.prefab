@@ -459,7 +459,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &6085631415684835818
 RectTransform:
   m_ObjectHideFlags: 0
@@ -581,7 +581,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &6085631415743311017
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2041,7 +2041,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &6085631416822785288
 RectTransform:
   m_ObjectHideFlags: 0
@@ -3550,6 +3550,14 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3653177693993004735, guid: c051b9109194667479caf338d5c7080e, type: 3}
+      propertyPath: buttonContainer
+      value: 
+      objectReference: {fileID: 6085631416892648656}
+    - target: {fileID: 3653177693993004735, guid: c051b9109194667479caf338d5c7080e, type: 3}
+      propertyPath: dialogContainer
+      value: 
+      objectReference: {fileID: 11400000, guid: d20359569e4b7e647a0f9878cfe3dd0f, type: 2}
     - target: {fileID: 3711493247757057352, guid: c051b9109194667479caf338d5c7080e, type: 3}
       propertyPath: m_AnchorMax.x
       value: 1
@@ -3705,6 +3713,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Chat1
       objectReference: {fileID: 0}
+    - target: {fileID: 3653177693993004735, guid: c051b9109194667479caf338d5c7080e, type: 3}
+      propertyPath: buttonContainer
+      value: 
+      objectReference: {fileID: 6085631416892648656}
+    - target: {fileID: 3653177693993004735, guid: c051b9109194667479caf338d5c7080e, type: 3}
+      propertyPath: dialogContainer
+      value: 
+      objectReference: {fileID: 11400000, guid: d20359569e4b7e647a0f9878cfe3dd0f, type: 2}
     - target: {fileID: 3711493247757057352, guid: c051b9109194667479caf338d5c7080e, type: 3}
       propertyPath: m_AnchorMax.x
       value: 0
@@ -3864,6 +3880,14 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3653177693993004735, guid: c051b9109194667479caf338d5c7080e, type: 3}
+      propertyPath: buttonContainer
+      value: 
+      objectReference: {fileID: 6085631416892648656}
+    - target: {fileID: 3653177693993004735, guid: c051b9109194667479caf338d5c7080e, type: 3}
+      propertyPath: dialogContainer
+      value: 
+      objectReference: {fileID: 11400000, guid: d20359569e4b7e647a0f9878cfe3dd0f, type: 2}
     - target: {fileID: 3711493247757057352, guid: c051b9109194667479caf338d5c7080e, type: 3}
       propertyPath: m_AnchorMax.x
       value: 1
@@ -4027,6 +4051,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Answer_Button
       objectReference: {fileID: 0}
+    - target: {fileID: 2709989566998458683, guid: 01d982b0228ebcd43936fcc91beffdc7, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 01d982b0228ebcd43936fcc91beffdc7, type: 3}
 --- !u!114 &6085631417418033252 stripped
@@ -4144,6 +4172,14 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3653177693993004735, guid: c051b9109194667479caf338d5c7080e, type: 3}
+      propertyPath: buttonContainer
+      value: 
+      objectReference: {fileID: 6085631416892648656}
+    - target: {fileID: 3653177693993004735, guid: c051b9109194667479caf338d5c7080e, type: 3}
+      propertyPath: dialogContainer
+      value: 
+      objectReference: {fileID: 11400000, guid: d20359569e4b7e647a0f9878cfe3dd0f, type: 2}
     - target: {fileID: 3711493247757057352, guid: c051b9109194667479caf338d5c7080e, type: 3}
       propertyPath: m_AnchorMax.x
       value: 1

@@ -304,6 +304,7 @@ GameObject:
   - component: {fileID: 5479846821463539182}
   - component: {fileID: 8762967472018731989}
   - component: {fileID: 5763385654250130329}
+  - component: {fileID: 3653177693993004735}
   m_Layer: 5
   m_Name: Chat_Container
   m_TagString: Untagged
@@ -402,6 +403,23 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &3653177693993004735
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3197828220797673412}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9a63aec05431c8408db0e15f45bafbb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogContainer: {fileID: 0}
+  messageContainer: {fileID: 8188302510291224142}
+  messageNpcTemplate: {fileID: 1075436441059836512, guid: 8265db336072c6c40bd9d2f2ec17a4cc, type: 3}
+  messagePlayerTemplate: {fileID: 7577303488300203282, guid: 9589fbed519bcdb4abae3fde6c713d30, type: 3}
+  buttonContainer: {fileID: 0}
 --- !u!1 &6775873565858132153
 GameObject:
   m_ObjectHideFlags: 0
