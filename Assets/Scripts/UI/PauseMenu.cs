@@ -38,4 +38,10 @@ public class PauseMenu : MonoBehaviour
 		Time.timeScale = 1f;
 		Cursor.lockState = CursorLockMode.Locked;
 	}
+
+	private void Update()
+	{
+		if (Input.GetKeyDown (KeyCode.Escape))
+			OnContinue();
+	}
 }
