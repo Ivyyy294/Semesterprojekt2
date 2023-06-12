@@ -5,14 +5,14 @@ using UnityEngine;
 public class PuckTerminal : MonoBehaviour
 {
 	[SerializeField] Ivyyy.GameEvent.GameEvent closeEvent;
+	[SerializeField] Ivyyy.GameEvent.GameEvent settingsEvent;
 
-	//Public Funtions
-	//public void Show(bool val)
-	//{
-	//	gameObject.SetActive (val);
-	//}
+	public void OnSettings()
+	{
+		settingsEvent?.Raise();
+	}
 
-	public void RaiseCloseEvent()
+	public void OnClose()
 	{
 		closeEvent.Raise();
 	}

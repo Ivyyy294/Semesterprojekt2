@@ -159,7 +159,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 6085631415460590852}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 2374498164008061587}
+        m_TargetAssemblyTypeName: PuckTerminal, Assembly-CSharp
+        m_MethodName: OnSettings
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &6085631415478846464
 GameObject:
   m_ObjectHideFlags: 0
@@ -284,7 +296,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 2374498164008061587}
         m_TargetAssemblyTypeName: PuckTerminal, Assembly-CSharp
-        m_MethodName: RaiseCloseEvent
+        m_MethodName: OnClose
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1728,6 +1740,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   closeEvent: {fileID: 11400000, guid: 7829666ef44af2a4588008d9cc30d898, type: 2}
+  settingsEvent: {fileID: 11400000, guid: 95f3ac4f80c962943bc010a45dcad792, type: 2}
 --- !u!1 &6085631416626395987
 GameObject:
   m_ObjectHideFlags: 0
