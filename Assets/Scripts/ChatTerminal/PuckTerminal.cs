@@ -12,6 +12,8 @@ public struct ChatObjContainer
 
 public class PuckTerminal : MonoBehaviour
 {
+	public ChatObjContainer[] dialogList;
+
 	[Header ("Lara Values")]
 	[SerializeField] Ivyyy.GameEvent.GameEvent closeEvent;
 	[SerializeField] Ivyyy.GameEvent.GameEvent settingsEvent;
@@ -19,7 +21,6 @@ public class PuckTerminal : MonoBehaviour
 	[SerializeField] GameObject buttonContainer;
 	[SerializeField] GameObject chatContainer;
 
-	public ChatObjContainer[] dialogList;
 	int currentIndex = -1;
 
 	private List <Button> buttonObjList = new List<Button>();
