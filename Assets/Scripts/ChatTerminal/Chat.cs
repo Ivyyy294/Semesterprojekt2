@@ -106,7 +106,7 @@ public class ChoiceNodeState : BaseState
 		manager.DisableButtons();
 		portSelected = port;
 		chatMessage = Object.Instantiate (manager.messagePlayerTemplate, manager.messageContainer.transform).GetComponentInChildren<ChatMessage>();
-		chatMessage.SetContent (node.ports[port].portName);
+		chatMessage.SetContent (node.ports[port].portName, 0.5f);
 	}
 }
 

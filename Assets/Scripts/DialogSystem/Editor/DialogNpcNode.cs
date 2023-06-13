@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UIElements;
 using UnityEditor.UIElements;
+using UnityEditor;
 
 public class DialogNpcNode : DialogNode
 {
@@ -22,13 +23,36 @@ public class DialogNpcNode : DialogNode
 		//Content
 		mainContainer.Add (DialogGraphUtility.CreateTextArea (data.DialogText, evt=>{data.DialogText = evt.newValue; MarkDirtyRepaint();}));
 
+		Foldout textFoldout = DialogGraphUtility.CreateFoldout ("More", data.Image == null);
+		
 		//Image
-		Foldout textFoldout = DialogGraphUtility.CreateFoldout ("Image", data.Image == null);
 		var actionField = new ObjectField();
 		actionField.objectType = typeof(Sprite);
 		actionField.RegisterValueChangedCallback(evt => data.Image = evt.newValue as Sprite);
 		actionField.SetValueWithoutNotify (data.Image);
 		textFoldout.Add (actionField);
+
+		TextField respondTime = DialogGraphUtility.CreateTextField ("Cutsom respond time", data.customRespondTime.ToString());
+		respondTime.RegisterValueChangedCallback (evt=>
+		{
+			string value = evt.newValue.Replace ('.', ',');
+
+			if (string.IsNullOrEmpty (value))
+			{
+				data.customRespondTime = 0f;
+				respondTime.SetValueWithoutNotify ("0");
+				return;
+			}
+
+			float tmp;
+
+			if (!float.TryParse (value, out tmp))
+				respondTime.SetValueWithoutNotify (evt.previousValue);
+			else
+				data.customRespondTime = tmp;
+		});
+		textFoldout.Add (respondTime);
+
 		mainContainer.Add(textFoldout);
 
 		MarkDirtyRepaint();

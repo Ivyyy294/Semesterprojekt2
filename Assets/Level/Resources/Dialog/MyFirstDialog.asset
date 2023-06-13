@@ -74,6 +74,7 @@ MonoBehaviour:
     Type: 1
     DialogText: Would you like to go out?
     Image: {fileID: 0}
+    customRespondTime: 0
     GameEvent: {fileID: 0}
     BlackBoardProperty:
       name: 
@@ -86,6 +87,7 @@ MonoBehaviour:
     Type: 0
     DialogText: hello world
     Image: {fileID: 0}
+    customRespondTime: 0
     GameEvent: {fileID: 0}
     BlackBoardProperty:
       name: 
@@ -98,6 +100,7 @@ MonoBehaviour:
     Type: 1
     DialogText: Why are you like this?
     Image: {fileID: 0}
+    customRespondTime: 0
     GameEvent: {fileID: 0}
     BlackBoardProperty:
       name: 
@@ -110,6 +113,7 @@ MonoBehaviour:
     Type: 1
     DialogText: :(((
     Image: {fileID: 0}
+    customRespondTime: 0
     GameEvent: {fileID: 0}
     BlackBoardProperty:
       name: 
@@ -122,6 +126,7 @@ MonoBehaviour:
     Type: 1
     DialogText: i love you <3
     Image: {fileID: 0}
+    customRespondTime: 0
     GameEvent: {fileID: 0}
     BlackBoardProperty:
       name: 
@@ -134,6 +139,7 @@ MonoBehaviour:
     Type: 1
     DialogText: I hate you!
     Image: {fileID: 0}
+    customRespondTime: 0
     GameEvent: {fileID: 0}
     BlackBoardProperty:
       name: 
@@ -146,6 +152,7 @@ MonoBehaviour:
     Type: 1
     DialogText: Hi gurl :D
     Image: {fileID: 0}
+    customRespondTime: 0
     GameEvent: {fileID: 0}
     BlackBoardProperty:
       name: 
@@ -158,6 +165,7 @@ MonoBehaviour:
     Type: 1
     DialogText: How are you?
     Image: {fileID: 0}
+    customRespondTime: 0
     GameEvent: {fileID: 0}
     BlackBoardProperty:
       name: 
@@ -170,6 +178,7 @@ MonoBehaviour:
     Type: 0
     DialogText: hello world
     Image: {fileID: 0}
+    customRespondTime: 0
     GameEvent: {fileID: 0}
     BlackBoardProperty:
       name: 
@@ -182,6 +191,7 @@ MonoBehaviour:
     Type: 1
     DialogText: How rude!
     Image: {fileID: 0}
+    customRespondTime: 0
     GameEvent: {fileID: 0}
     BlackBoardProperty:
       name: 
@@ -194,6 +204,7 @@ MonoBehaviour:
     Type: 1
     DialogText: Do you like penguins?
     Image: {fileID: 21300000, guid: ec03f79379868c642b48ae5ddc821b6d, type: 3}
+    customRespondTime: 0
     GameEvent: {fileID: 0}
     BlackBoardProperty:
       name: 
@@ -206,6 +217,7 @@ MonoBehaviour:
     Type: 0
     DialogText: hello world
     Image: {fileID: 0}
+    customRespondTime: 0
     GameEvent: {fileID: 0}
     BlackBoardProperty:
       name: 
@@ -218,6 +230,7 @@ MonoBehaviour:
     Type: 2
     DialogText: 
     Image: {fileID: 0}
+    customRespondTime: 0
     GameEvent: {fileID: 11400000, guid: 238faa4adf35dca499684132f6fda548, type: 2}
     BlackBoardProperty:
       name: 
@@ -230,6 +243,7 @@ MonoBehaviour:
     Type: 4
     DialogText: 
     Image: {fileID: 0}
+    customRespondTime: 0
     GameEvent: {fileID: 0}
     BlackBoardProperty:
       name: Friendship
@@ -242,6 +256,7 @@ MonoBehaviour:
     Type: 5
     DialogText: 
     Image: {fileID: 0}
+    customRespondTime: 0
     GameEvent: {fileID: 0}
     BlackBoardProperty:
       name: Day

@@ -6,30 +6,42 @@ using UnityEngine.UI;
 
 public class ChatMessage : MonoBehaviour
 {
+	//[SerializeField] float minRespondTime = 0.5f;
+	[SerializeField] float timePerChar = 0.1f;
+
+	[Header ("Lara Values")]
 	[SerializeField] TextMeshProUGUI txtField;
-	[SerializeField] float respondTime;
 	[SerializeField] Image imageObj;
 	
 	public bool Done=>done;
-
 	private bool done;
 	private float timer;
 	private DialogNodeData nodeData = null;
+	private float respondTime = 0f;
 
+	//Public Functions
 	public void SetContent (DialogNodeData data, bool force = false)
 	{
 		done = false;
 		nodeData = data;
+		respondTime = CalculateRespondTime ();
 		timer = force ? respondTime : 0f;
+	}
+
+	public void SetContent (string text, float respondTime, bool force = false)
+	{
+		nodeData = new DialogNodeData() {DialogText = text};
+		nodeData.customRespondTime = respondTime;
+		SetContent (nodeData);
 	}
 
 	public void SetContent (string text, bool force = false)
 	{
-		done = false;
 		nodeData = new DialogNodeData() {DialogText = text};
-		timer = force ? respondTime : 0f;
+		SetContent (nodeData, force);
 	}
 
+	//Private Functions
 	private void Update()
 	{
 		if (timer < respondTime)
@@ -51,5 +63,13 @@ public class ChatMessage : MonoBehaviour
 			Canvas.ForceUpdateCanvases();
 			done = true;
 		}
+	}
+
+	private float CalculateRespondTime()
+	{
+		if (nodeData.customRespondTime > 0f)
+			return nodeData.customRespondTime;
+		else
+			return nodeData.DialogText.Length * timePerChar;
 	}
 }
