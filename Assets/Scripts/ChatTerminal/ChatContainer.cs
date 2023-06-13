@@ -5,15 +5,18 @@ using UnityEngine;
 public class ChatContainer : MonoBehaviour
 {
 	[SerializeField] GameObject[] chatContainer;
-    int currentIndex;
+    int currentIndex = 0;
 
 	public void SetActiveChat (int index)
 	{
-		if (index >= 0 && index < chatContainer.Length && index != currentIndex)
+		if (index >= 0 && index < chatContainer.Length)
 		{
-			chatContainer[currentIndex].SetActive (false);
-			chatContainer[index].SetActive (true);
-			currentIndex = index;
+			if (currentIndex != index)
+			{
+				chatContainer[currentIndex].SetActive (false);
+				chatContainer[index].SetActive (true);
+				currentIndex = index;
+			}
 		}
 		else
 			Debug.LogError ("Invalid Error!");

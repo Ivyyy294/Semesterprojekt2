@@ -90,7 +90,7 @@ public class ChoiceNodeState : BaseState
 		}
 	}
 
-	private void InitButtons ()
+	public void InitButtons ()
 	{
 		for (int i = 0; i < node.ports.Count; ++i)
 		{
@@ -102,18 +102,9 @@ public class ChoiceNodeState : BaseState
 		}
 	}
 
-	private void DisableButtons ()
-	{
-		foreach (var i in manager.ButtonList)
-		{
-			i.gameObject.SetActive (false);
-			i.GetComponent <Button>().onClick.RemoveAllListeners();
-		}
-	}
-
 	private void ButtonCallBack (int port)
 	{
-		DisableButtons();
+		manager.DisableButtons();
 		portSelected = port;
 		chatMessage = Object.Instantiate (manager.messagePlayerTemplate, manager.messageContainer.transform).GetComponentInChildren<ChatMessage>();
 		chatMessage.SetContent (node.ports[port].portName);
@@ -237,14 +228,20 @@ public class Chat : MonoBehaviour
 		currentState = newState;
 		currentState.Enter(gameObject);
 	}
+	
+	public void DisableButtons ()
+	{
+		foreach (var i in buttonList)
+		{
+			i.gameObject.SetActive (false);
+			i.GetComponent <Button>().onClick.RemoveAllListeners();
+		}
+	}
 
 	//Private Functions
 	void Start()
     {
-		buttonList.Clear();
-
-		for (int i = 0; i < buttonContainer.transform.childCount; ++i)
-			buttonList.Add (buttonContainer.transform.GetChild(i).gameObject);
+		InitButtonList();
 
         if (dialogContainer != null)
 		{
@@ -259,8 +256,22 @@ public class Chat : MonoBehaviour
         currentState.Update (gameObject);
     }
 
-	internal void SetState(object waitNodeState)
+	void OnEnable()
 	{
-		throw new System.NotImplementedException();
+		if (buttonList.Count == 0)
+			InitButtonList();
+		//Reinitilize keys
+		DisableButtons();
+
+		if (currentState == choiceNodeState)
+			choiceNodeState.InitButtons();
+	}
+
+	void InitButtonList()
+	{
+		buttonList.Clear();
+
+		for (int i = 0; i < buttonContainer.transform.childCount; ++i)
+			buttonList.Add (buttonContainer.transform.GetChild(i).gameObject);
 	}
 }
