@@ -196,7 +196,7 @@ public class WaitNodeState : BaseState
 
 public class Chat : MonoBehaviour
 {
-	[SerializeField] DialogContainer dialogContainer;
+	public DialogContainer dialogContainer;
 
 	[Header ("Lara values")]
 	public GameObject messageContainer;
@@ -256,6 +256,10 @@ public class Chat : MonoBehaviour
 				}
 			}
 		}
+
+		//If the last node is an NPC node, move to the next Node to avoid duplicated messages
+		if (dialogTree.CurrentNode().data != null && dialogTree.CurrentNode().data.Type == DialogNodeData.NodeType.NPC)
+			dialogTree.Next();
 	}
 
 	public void SetState (Ivyyy.StateMachine.IState newState)

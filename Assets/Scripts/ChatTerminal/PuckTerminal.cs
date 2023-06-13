@@ -6,19 +6,26 @@ using UnityEngine.UI;
 [System.Serializable]
 public struct ChatObjContainer
 {
-	public Button buttonObj;
-	public Chat chatObj;
+	public DialogContainer dialog;
 	public bool available;
 }
 
 public class PuckTerminal : MonoBehaviour
 {
+	[Header ("Lara Values")]
 	[SerializeField] Ivyyy.GameEvent.GameEvent closeEvent;
 	[SerializeField] Ivyyy.GameEvent.GameEvent settingsEvent;
 	
-	public ChatObjContainer[] chatObjContainers;
+	[SerializeField] GameObject buttonContainer;
+	[SerializeField] GameObject chatContainer;
+
+	public ChatObjContainer[] dialogList;
 	int currentIndex = -1;
 
+	private List <Button> buttonObjList = new List<Button>();
+	private List <Chat> chatObjList = new List<Chat>();
+
+	//Public Values
 	public void OnSettings()
 	{
 		settingsEvent?.Raise();
@@ -31,14 +38,14 @@ public class PuckTerminal : MonoBehaviour
 
 	public void SetActiveChat (int index)
 	{
-		if (index >= 0 && index < chatObjContainers.Length)
+		if (index >= 0 && index < dialogList.Length)
 		{
-			if (currentIndex != index && chatObjContainers[index].available)
+			if (currentIndex != index && dialogList[index].available)
 			{
 				if (currentIndex != -1)
-					chatObjContainers[currentIndex].chatObj.gameObject.SetActive (false);
+					chatObjList[currentIndex].gameObject.SetActive (false);
 				
-				chatObjContainers[index].chatObj.gameObject.SetActive (true);
+				chatObjList[index].gameObject.SetActive (true);
 				currentIndex = index;
 			}
 		}
@@ -48,22 +55,26 @@ public class PuckTerminal : MonoBehaviour
 
 	public void UnlockChat (int index)
 	{
-		if (index >= 0 && index < chatObjContainers.Length)
+		if (index >= 0 && index < dialogList.Length)
 		{
-			chatObjContainers[index].buttonObj.gameObject.SetActive(true);
-			chatObjContainers[index].available = true;
+			buttonObjList[index].gameObject.SetActive(true);
+			dialogList[index].available = true;
 		}
+	}
+
+	public Chat GetChatObj (int index)
+	{
+		//Making sure chatObjList is valid
+		if (chatObjList.Count == 0)
+			InitObjLists();
+
+		return chatObjList[index];
 	}
 
 	//Private Functions
 	private void Start()
 	{
-		foreach (var i in chatObjContainers)
-		{
-			i.buttonObj.gameObject.SetActive (i.available);
-			i.chatObj.gameObject.SetActive (false);
-		}
-
+		InitObjLists();
 		SetActiveChat (0);
 	}
 
@@ -78,6 +89,32 @@ public class PuckTerminal : MonoBehaviour
 	}
 	private void FixedUpdate()
 	{
-		Canvas.ForceUpdateCanvases();
+		//Updating button visiblity
+		for (int i = 0; i < dialogList.Length; ++i)
+			buttonObjList[i].gameObject.SetActive (dialogList[i].available);
+	}
+
+	private void InitObjLists ()
+	{
+		//ButtonList
+		foreach (Button i in buttonContainer.GetComponentsInChildren <Button>())
+		{
+			i.gameObject.SetActive (false);
+			buttonObjList.Add (i);
+		}
+
+		//ChatList
+		foreach (Chat i in chatContainer.GetComponentsInChildren <Chat>())
+		{
+			i.gameObject.SetActive (false);
+			chatObjList.Add (i);
+		}
+
+		for (int i = 0; i < dialogList.Length; ++i)
+		{
+			int chatNr = i;
+			buttonObjList[i].onClick.AddListener (call:() =>{SetActiveChat (chatNr);});
+			chatObjList[i].dialogContainer = dialogList[i].dialog;
+		}
 	}
 }

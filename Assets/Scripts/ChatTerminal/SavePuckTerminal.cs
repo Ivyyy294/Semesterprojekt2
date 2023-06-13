@@ -23,23 +23,28 @@ public class SavePuckTerminal : SaveableObject
 
 	void SaveChats(Payload payload)
 	{
-		for (int i = 0; i < puckTerminal.chatObjContainers.Length; ++i)
+		for (int i = 0; i < puckTerminal.dialogList.Length; ++i)
 		{
-			Chat chat = puckTerminal.chatObjContainers[i].chatObj;
+			Chat chat = puckTerminal.GetChatObj (i);
 			string nodeName = "Node" + i.ToString();
 
 			if (chat != null)
 			{
+				//Removes the empty end Node
+				if (chat.DialogTree.nodesVisited.Count > 0 && chat.DialogTree.nodesVisited.Peek().data == null)
+					chat.DialogTree.nodesVisited.Pop();
+
 				DialogTree.Node[] nodeArray = chat.DialogTree.nodesVisited.ToArray();
 				int nodeCount = nodeArray.Length;
 				payload.Add ( nodeName + "Count", nodeCount);
-				payload.Add (nodeName + "Available", puckTerminal.chatObjContainers[i].available);
+				payload.Add (nodeName + "Available", puckTerminal.dialogList[i].available);
 
 				//Save items in reverse order
 				for (int j = 0; j < nodeCount; ++j)
 				{
 					int index = nodeCount -1 - j;
-					payload.Add (nodeName + "Chat" + j, chat.DialogTree.nodesVisited.ToArray()[index].data.Guid);
+					DialogTree.Node node = chat.DialogTree.nodesVisited.ToArray()[index];
+					payload.Add (nodeName + "Chat" + j, node.data.Guid);
 				}
 			}
 		}
@@ -47,13 +52,13 @@ public class SavePuckTerminal : SaveableObject
 
 	void LoadChats (Payload val)
 	{
-		for (int i = 0; i < puckTerminal.chatObjContainers.Length; ++i)
+		for (int i = 0; i < puckTerminal.dialogList.Length; ++i)
 		{
-			Chat chat = puckTerminal.chatObjContainers[i].chatObj;
+			Chat chat = puckTerminal.GetChatObj(i);
 			string nodeName = "Node" + i.ToString();
 
 			int nodeCount = int.Parse (val.data[nodeName + "Count"]);
-			puckTerminal.chatObjContainers[i].available = bool.Parse (val.data[nodeName + "Available"]);
+			puckTerminal.dialogList[i].available = bool.Parse (val.data[nodeName + "Available"]);
 
 			chat.DialogTree.nodesVisited.Clear();
 
@@ -64,6 +69,5 @@ public class SavePuckTerminal : SaveableObject
 
 			chat?.LoadSaveGame (nodeList);
 		}
-
 	}
 }
