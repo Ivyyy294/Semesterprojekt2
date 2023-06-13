@@ -50,6 +50,7 @@ public class NpcNodeState : BaseState
 		//manager.DisableButtons();
 		chatMessage = Object.Instantiate (manager.messageNpcTemplate, manager.messageContainer.transform).GetComponentInChildren<ChatMessage>();
 		chatMessage.SetContent (node.data);
+		Canvas.ForceUpdateCanvases();
 	}
 
 	public override void Update (GameObject obj)

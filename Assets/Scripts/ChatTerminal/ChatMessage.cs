@@ -39,9 +39,16 @@ public class ChatMessage : MonoBehaviour
 			if (nodeData != null)
 			{
 				txtField.text = nodeData.DialogText;
-				imageObj.sprite = nodeData.Image;
+				imageObj.gameObject.SetActive (true);
+
+				if (nodeData.Image != null)
+				{
+					imageObj.gameObject.SetActive (true);
+					imageObj.sprite = nodeData.Image;
+				}
 			}
 			
+			Canvas.ForceUpdateCanvases();
 			done = true;
 		}
 	}

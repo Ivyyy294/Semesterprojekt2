@@ -27,4 +27,8 @@ public class PuckTerminal : MonoBehaviour
 	{
 		Cursor.lockState = CursorLockMode.Locked;
 	}
+	private void FixedUpdate()
+	{
+		Canvas.ForceUpdateCanvases();
+	}
 }
