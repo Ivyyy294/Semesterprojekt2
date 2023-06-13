@@ -46,6 +46,15 @@ public class PuckTerminal : MonoBehaviour
 			Debug.LogError ("Invalid Error!");
 	}
 
+	public void UnlockChat (int index)
+	{
+		if (index >= 0 && index < chatObjContainers.Length)
+		{
+			chatObjContainers[index].buttonObj.gameObject.SetActive(true);
+			chatObjContainers[index].available = true;
+		}
+	}
+
 	//Private Functions
 	private void Start()
 	{
