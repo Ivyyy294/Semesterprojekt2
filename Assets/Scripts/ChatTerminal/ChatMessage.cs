@@ -16,18 +16,18 @@ public class ChatMessage : MonoBehaviour
 	private float timer;
 	private DialogNodeData nodeData = null;
 
-	public void SetContent (DialogNodeData data)
+	public void SetContent (DialogNodeData data, bool force = false)
 	{
 		done = false;
 		nodeData = data;
-		timer = 0f;
+		timer = force ? respondTime : 0f;
 	}
 
-	public void SetContent (string text)
+	public void SetContent (string text, bool force = false)
 	{
 		done = false;
 		nodeData = new DialogNodeData() {DialogText = text};
-		timer = 0f;
+		timer = force ? respondTime : 0f;
 	}
 
 	private void Update()

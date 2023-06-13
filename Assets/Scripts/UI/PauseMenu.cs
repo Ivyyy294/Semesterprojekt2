@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEditor;
 using UnityEngine;
-using UnityEngine.SceneManagement;
+using Ivyyy.SaveGameSystem;
 
 public class PauseMenu : MonoBehaviour
 {
@@ -25,6 +25,7 @@ public class PauseMenu : MonoBehaviour
 
 	public void OnMenu()
 	{
+		SaveGameManager.Me().SaveGameState();
 		loadMenu?.Raise();
 	}
 

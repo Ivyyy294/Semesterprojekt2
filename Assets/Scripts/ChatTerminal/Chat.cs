@@ -47,7 +47,6 @@ public class NpcNodeState : BaseState
 	{
 		base.Enter (obj);
 
-		//manager.DisableButtons();
 		chatMessage = Object.Instantiate (manager.messageNpcTemplate, manager.messageContainer.transform).GetComponentInChildren<ChatMessage>();
 		chatMessage.SetContent (node.data);
 		Canvas.ForceUpdateCanvases();
@@ -223,6 +222,42 @@ public class Chat : MonoBehaviour
 	public List <GameObject> ButtonList => buttonList;
 
 	//Public Functions
+	public void LoadSaveGame (List <string> nodeList)
+	{
+		Init();
+		dialogTree.nodesVisited.Clear();
+
+		for (int i = 0; i < nodeList.Count; ++i)
+		{
+			dialogTree.Next (nodeList[i]);
+			DialogTree.Node node = dialogTree.CurrentNode();
+
+			if (node.data.Type == DialogNodeData.NodeType.NPC)
+			{
+				ChatMessage chatMessage = Object.Instantiate (messageNpcTemplate, messageContainer.transform).GetComponentInChildren<ChatMessage>();
+				chatMessage.SetContent (node.data, true);
+			}
+
+			else if (node.data.Type == DialogNodeData.NodeType.CHOICE)
+			{
+				int nextIndex = i + 1;
+
+				if (nextIndex < nodeList.Count)
+				{
+					string nextGuid = dialogTree.dialogContainer.GetDialogNodeData (nodeList[nextIndex]).Guid;
+
+					ChatMessage chatMessage = Object.Instantiate (messagePlayerTemplate, messageContainer.transform).GetComponentInChildren<ChatMessage>();
+
+					foreach (var port in node.ports)
+					{
+						if (nextGuid == port.targetNodeGuid)
+							chatMessage.SetContent (port.portName, true);
+					}
+				}
+			}
+		}
+	}
+
 	public void SetState (Ivyyy.StateMachine.IState newState)
 	{
 		currentState = newState;
@@ -241,14 +276,12 @@ public class Chat : MonoBehaviour
 	//Private Functions
 	void Start()
     {
-		InitButtonList();
+		Init();
 
-        if (dialogContainer != null)
-		{
-			dialogTree.dialogContainer = dialogContainer;
+		if (dialogTree.nodesVisited.Count == 0)
 			dialogTree.Next();
-			SetState (defaultState);
-		}
+
+		SetState (defaultState);
     }
 
     void Update()
@@ -265,6 +298,14 @@ public class Chat : MonoBehaviour
 
 		if (currentState == choiceNodeState)
 			choiceNodeState.InitButtons();
+	}
+
+	private void Init()
+	{
+		InitButtonList();
+
+        if (dialogContainer != null)
+			dialogTree.dialogContainer = dialogContainer;
 	}
 
 	void InitButtonList()

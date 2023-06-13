@@ -13,10 +13,19 @@ public class DialogTree
 
 	public DialogContainer dialogContainer;
 
-	//Private Values
-	Stack <Node> nodesVisited = new Stack<Node>();
+	public Stack <Node> nodesVisited = new Stack<Node>();
 
 	//Traverse to the next Node
+	public void Next (string guid)
+	{
+		DialogNodeData dialogNodeData = dialogContainer.GetDialogNodeData (guid);
+
+		if (dialogNodeData != null)
+			nodesVisited.Push (new Node() {data = dialogNodeData, ports = dialogContainer.GetDialogPorts (guid)});
+		else
+			Debug.LogError("Invalid guid!");
+	}
+
 	public void Next (int portIndex = 0)
 	{
 		string guid = null;
