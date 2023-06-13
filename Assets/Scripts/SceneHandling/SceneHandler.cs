@@ -10,21 +10,30 @@ public class SceneHandler : MonoBehaviour
 	[SerializeField] int indexSplashScene = 1;
 	[SerializeField] int indexMenuScene = 2;
 	[SerializeField] int indexGameScene = 3;
+	[SerializeField] int indexTutorialScene = 4;
 	public bool loadGame = false;
 
 	int currentSceneIndex = -1;
+
+	public void LoadTutorial()
+	{
+		SwitchScene (indexTutorialScene);
+	}
 
 	public void LoadMenu()
 	{
 		SwitchScene (indexMenuScene);
 	}
 
-	public void LoadGame (bool newGame = false)
+	public void NewGame ()
 	{
 		SwitchScene (indexGameScene);
+	}
 
-		if (!newGame)
-			SaveGameManager.Me().ScheduledLoadGame();
+	public void LoadGame ()
+	{
+		SwitchScene (indexGameScene);
+		SaveGameManager.Me().ScheduledLoadGame();
 	}
 
 	public void CloseGame()
