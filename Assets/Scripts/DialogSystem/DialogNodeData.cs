@@ -23,6 +23,7 @@ public class DialogNodeData
 	//Text Node Values
 	public string DialogText;
 	public Sprite Image;
+	public float customRespondTime = 0f;
 
 	//Event Node Values
 	public GameEvent GameEvent = null;
@@ -41,6 +42,7 @@ public class DialogNodeData
 		data.Image = Image;
 		data.GameEvent = GameEvent;
 		data.BlackBoardProperty = BlackBoardProperty;
+		data.customRespondTime = customRespondTime;
 
 		return data;
 	}

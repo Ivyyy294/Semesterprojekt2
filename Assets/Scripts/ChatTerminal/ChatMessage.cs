@@ -6,30 +6,42 @@ using UnityEngine.UI;
 
 public class ChatMessage : MonoBehaviour
 {
+	//[SerializeField] float minRespondTime = 0.5f;
+	[SerializeField] float timePerChar = 0.1f;
+
+	[Header ("Lara Values")]
 	[SerializeField] TextMeshProUGUI txtField;
-	[SerializeField] float respondTime;
 	[SerializeField] Image imageObj;
 	
 	public bool Done=>done;
-
 	private bool done;
 	private float timer;
 	private DialogNodeData nodeData = null;
+	private float respondTime = 0f;
 
-	public void SetContent (DialogNodeData data)
+	//Public Functions
+	public void SetContent (DialogNodeData data, bool force = false)
 	{
 		done = false;
 		nodeData = data;
-		timer = 0f;
+		respondTime = CalculateRespondTime ();
+		timer = force ? respondTime : 0f;
 	}
 
-	public void SetContent (string text)
+	public void SetContent (string text, float respondTime, bool force = false)
 	{
-		done = false;
 		nodeData = new DialogNodeData() {DialogText = text};
-		timer = 0f;
+		nodeData.customRespondTime = respondTime;
+		SetContent (nodeData);
 	}
 
+	public void SetContent (string text, bool force = false)
+	{
+		nodeData = new DialogNodeData() {DialogText = text};
+		SetContent (nodeData, force);
+	}
+
+	//Private Functions
 	private void Update()
 	{
 		if (timer < respondTime)
@@ -39,10 +51,25 @@ public class ChatMessage : MonoBehaviour
 			if (nodeData != null)
 			{
 				txtField.text = nodeData.DialogText;
-				imageObj.sprite = nodeData.Image;
+				imageObj.gameObject.SetActive (true);
+
+				if (nodeData.Image != null)
+				{
+					imageObj.gameObject.SetActive (true);
+					imageObj.sprite = nodeData.Image;
+				}
 			}
 			
+			Canvas.ForceUpdateCanvases();
 			done = true;
 		}
+	}
+
+	private float CalculateRespondTime()
+	{
+		if (nodeData.customRespondTime > 0f)
+			return nodeData.customRespondTime;
+		else
+			return nodeData.DialogText.Length * timePerChar;
 	}
 }

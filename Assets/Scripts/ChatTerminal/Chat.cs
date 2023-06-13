@@ -47,9 +47,9 @@ public class NpcNodeState : BaseState
 	{
 		base.Enter (obj);
 
-		//manager.DisableButtons();
 		chatMessage = Object.Instantiate (manager.messageNpcTemplate, manager.messageContainer.transform).GetComponentInChildren<ChatMessage>();
 		chatMessage.SetContent (node.data);
+		Canvas.ForceUpdateCanvases();
 	}
 
 	public override void Update (GameObject obj)
@@ -89,7 +89,7 @@ public class ChoiceNodeState : BaseState
 		}
 	}
 
-	private void InitButtons ()
+	public void InitButtons ()
 	{
 		for (int i = 0; i < node.ports.Count; ++i)
 		{
@@ -101,21 +101,12 @@ public class ChoiceNodeState : BaseState
 		}
 	}
 
-	private void DisableButtons ()
-	{
-		foreach (var i in manager.ButtonList)
-		{
-			i.gameObject.SetActive (false);
-			i.GetComponent <Button>().onClick.RemoveAllListeners();
-		}
-	}
-
 	private void ButtonCallBack (int port)
 	{
-		DisableButtons();
+		manager.DisableButtons();
 		portSelected = port;
 		chatMessage = Object.Instantiate (manager.messagePlayerTemplate, manager.messageContainer.transform).GetComponentInChildren<ChatMessage>();
-		chatMessage.SetContent (node.ports[port].portName);
+		chatMessage.SetContent (node.ports[port].portName, 0.5f);
 	}
 }
 
@@ -205,7 +196,7 @@ public class WaitNodeState : BaseState
 
 public class Chat : MonoBehaviour
 {
-	[SerializeField] DialogContainer dialogContainer;
+	public DialogContainer dialogContainer;
 
 	[Header ("Lara values")]
 	public GameObject messageContainer;
@@ -231,26 +222,70 @@ public class Chat : MonoBehaviour
 	public List <GameObject> ButtonList => buttonList;
 
 	//Public Functions
+	public void LoadSaveGame (List <string> nodeList)
+	{
+		Init();
+		dialogTree.nodesVisited.Clear();
+
+		for (int i = 0; i < nodeList.Count; ++i)
+		{
+			dialogTree.Next (nodeList[i]);
+			DialogTree.Node node = dialogTree.CurrentNode();
+
+			if (node.data.Type == DialogNodeData.NodeType.NPC)
+			{
+				ChatMessage chatMessage = Object.Instantiate (messageNpcTemplate, messageContainer.transform).GetComponentInChildren<ChatMessage>();
+				chatMessage.SetContent (node.data, true);
+			}
+
+			else if (node.data.Type == DialogNodeData.NodeType.CHOICE)
+			{
+				int nextIndex = i + 1;
+
+				if (nextIndex < nodeList.Count)
+				{
+					string nextGuid = dialogTree.dialogContainer.GetDialogNodeData (nodeList[nextIndex]).Guid;
+
+					ChatMessage chatMessage = Object.Instantiate (messagePlayerTemplate, messageContainer.transform).GetComponentInChildren<ChatMessage>();
+
+					foreach (var port in node.ports)
+					{
+						if (nextGuid == port.targetNodeGuid)
+							chatMessage.SetContent (port.portName, true);
+					}
+				}
+			}
+		}
+
+		//If the last node is an NPC node, move to the next Node to avoid duplicated messages
+		if (dialogTree.CurrentNode().data != null && dialogTree.CurrentNode().data.Type == DialogNodeData.NodeType.NPC)
+			dialogTree.Next();
+	}
+
 	public void SetState (Ivyyy.StateMachine.IState newState)
 	{
 		currentState = newState;
 		currentState.Enter(gameObject);
 	}
+	
+	public void DisableButtons ()
+	{
+		foreach (var i in buttonList)
+		{
+			i.gameObject.SetActive (false);
+			i.GetComponent <Button>().onClick.RemoveAllListeners();
+		}
+	}
 
 	//Private Functions
 	void Start()
     {
-		buttonList.Clear();
+		Init();
 
-		for (int i = 0; i < buttonContainer.transform.childCount; ++i)
-			buttonList.Add (buttonContainer.transform.GetChild(i).gameObject);
-
-        if (dialogContainer != null)
-		{
-			dialogTree.dialogContainer = dialogContainer;
+		if (dialogTree.nodesVisited.Count == 0)
 			dialogTree.Next();
-			SetState (defaultState);
-		}
+
+		SetState (defaultState);
     }
 
     void Update()
@@ -258,8 +293,30 @@ public class Chat : MonoBehaviour
         currentState.Update (gameObject);
     }
 
-	internal void SetState(object waitNodeState)
+	void OnEnable()
 	{
-		throw new System.NotImplementedException();
+		if (buttonList.Count == 0)
+			InitButtonList();
+		//Reinitilize keys
+		DisableButtons();
+
+		if (currentState == choiceNodeState)
+			choiceNodeState.InitButtons();
+	}
+
+	private void Init()
+	{
+		InitButtonList();
+
+        if (dialogContainer != null)
+			dialogTree.dialogContainer = dialogContainer;
+	}
+
+	void InitButtonList()
+	{
+		buttonList.Clear();
+
+		for (int i = 0; i < buttonContainer.transform.childCount; ++i)
+			buttonList.Add (buttonContainer.transform.GetChild(i).gameObject);
 	}
 }

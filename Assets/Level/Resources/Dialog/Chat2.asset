@@ -1,0 +1,34 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d170aec7dfcb81f46b534b51e20e8ab1, type: 3}
+  m_Name: Chat2
+  m_EditorClassIdentifier: 
+  nodeLinks:
+  - baseNodeGuid: a31ea04e-24f9-4654-b61b-88a9fc788043
+    portName: Next
+    targetNodeGuid: c58fb037-50ae-4b79-a78f-45dfefe703e7
+  dialogNodeData:
+  - Guid: c58fb037-50ae-4b79-a78f-45dfefe703e7
+    DialogTitle: NpcNode
+    Position: {x: 373, y: 137}
+    Type: 1
+    DialogText: hello world
+    Image: {fileID: 0}
+    customRespondTime: 0
+    GameEvent: {fileID: 0}
+    BlackBoardProperty:
+      name: 
+      guid: 
+      comparisonTyp: 0
+      iVal: 0
+  dialogGroupData: []
+  blackBoardList: {fileID: 11400000, guid: c289dd2bc5fda5942acc2419a6f68abb, type: 2}
