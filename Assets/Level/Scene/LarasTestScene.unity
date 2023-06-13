@@ -528,6 +528,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 378654365096912121, guid: ae46210e68ea0974fb795edade1a5d7a, type: 3}
+      propertyPath: uniqueId
+      value: e0260174-ef61-4036-bb8f-58d74d813235
+      objectReference: {fileID: 0}
     - target: {fileID: 889851113588252776, guid: ae46210e68ea0974fb795edade1a5d7a, type: 3}
       propertyPath: m_SizeDelta.y
       value: 32
@@ -898,7 +902,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4722045721485774787, guid: ae46210e68ea0974fb795edade1a5d7a, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4832856115135497954, guid: ae46210e68ea0974fb795edade1a5d7a, type: 3}
       propertyPath: m_AnchorMax.y
@@ -992,9 +996,13 @@ PrefabInstance:
       propertyPath: m_SizeDelta.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6004618870404990885, guid: ae46210e68ea0974fb795edade1a5d7a, type: 3}
+      propertyPath: chatObjContainers.Array.data[1].available
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6057506597730582633, guid: ae46210e68ea0974fb795edade1a5d7a, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6153957841269993054, guid: ae46210e68ea0974fb795edade1a5d7a, type: 3}
       propertyPath: m_SizeDelta.y
@@ -1158,7 +1166,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9000157735030441578, guid: ae46210e68ea0974fb795edade1a5d7a, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9007138846901686755, guid: ae46210e68ea0974fb795edade1a5d7a, type: 3}
       propertyPath: m_SizeDelta.y

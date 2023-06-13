@@ -1,11 +1,23 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
+
+[System.Serializable]
+public struct ChatObjContainer
+{
+	public Button buttonObj;
+	public Chat chatObj;
+	public bool available;
+}
 
 public class PuckTerminal : MonoBehaviour
 {
 	[SerializeField] Ivyyy.GameEvent.GameEvent closeEvent;
 	[SerializeField] Ivyyy.GameEvent.GameEvent settingsEvent;
+	
+	public ChatObjContainer[] chatObjContainers;
+	int currentIndex = -1;
 
 	public void OnSettings()
 	{
@@ -17,7 +29,35 @@ public class PuckTerminal : MonoBehaviour
 		closeEvent.Raise();
 	}
 
+	public void SetActiveChat (int index)
+	{
+		if (index >= 0 && index < chatObjContainers.Length)
+		{
+			if (currentIndex != index && chatObjContainers[index].available)
+			{
+				if (currentIndex != -1)
+					chatObjContainers[currentIndex].chatObj.gameObject.SetActive (false);
+				
+				chatObjContainers[index].chatObj.gameObject.SetActive (true);
+				currentIndex = index;
+			}
+		}
+		else
+			Debug.LogError ("Invalid Error!");
+	}
+
 	//Private Functions
+	private void Start()
+	{
+		foreach (var i in chatObjContainers)
+		{
+			i.buttonObj.gameObject.SetActive (i.available);
+			i.chatObj.gameObject.SetActive (false);
+		}
+
+		SetActiveChat (0);
+	}
+
 	private void OnEnable()
 	{
 		Cursor.lockState = CursorLockMode.Confined;
