@@ -45,8 +45,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 82dc8a4f2b48e10448d062319b3c3291, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  blackBoardList: {fileID: 0}
-  propertyName: Friendship
+  blackBoardList: {fileID: 11400000, guid: c289dd2bc5fda5942acc2419a6f68abb, type: 2}
+  propertyGuid: 
   editTyp: 1
   value: 1
 --- !u!114 &9098869910340354470

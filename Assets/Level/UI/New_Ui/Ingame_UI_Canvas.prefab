@@ -3581,6 +3581,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 6085631416892648656}
     - target: {fileID: 5089038799910411011, guid: 682409253ecf4fb4fb03ae738519a88a, type: 3}
+      propertyPath: dialogContainer
+      value: 
+      objectReference: {fileID: 11400000, guid: 21e654bf03a1a12439849ba9fe40099e, type: 2}
+    - target: {fileID: 5089038799910411011, guid: 682409253ecf4fb4fb03ae738519a88a, type: 3}
       propertyPath: messageNpcTemplate
       value: 
       objectReference: {fileID: 1075436441059836512, guid: 8265db336072c6c40bd9d2f2ec17a4cc, type: 3}
@@ -3725,6 +3729,10 @@ PrefabInstance:
       propertyPath: buttonContainer
       value: 
       objectReference: {fileID: 6085631416892648656}
+    - target: {fileID: 5089038799910411011, guid: 682409253ecf4fb4fb03ae738519a88a, type: 3}
+      propertyPath: dialogContainer
+      value: 
+      objectReference: {fileID: 11400000, guid: 1a14329931a410248958381af5f5cf16, type: 2}
     - target: {fileID: 5089038799910411011, guid: 682409253ecf4fb4fb03ae738519a88a, type: 3}
       propertyPath: messageNpcTemplate
       value: 
@@ -4019,6 +4027,10 @@ PrefabInstance:
       propertyPath: buttonContainer
       value: 
       objectReference: {fileID: 6085631416892648656}
+    - target: {fileID: 5089038799910411011, guid: 682409253ecf4fb4fb03ae738519a88a, type: 3}
+      propertyPath: dialogContainer
+      value: 
+      objectReference: {fileID: 11400000, guid: d83b06bf2deaead47aab7dc1a2721435, type: 2}
     - target: {fileID: 5089038799910411011, guid: 682409253ecf4fb4fb03ae738519a88a, type: 3}
       propertyPath: messageNpcTemplate
       value: 
