@@ -499,6 +499,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5592896851645612692, guid: ff85ae1c9a614274c9faea59b955948b, type: 3}
+      propertyPath: newGame
+      value: 
+      objectReference: {fileID: 11400000, guid: defaed6811f9a52438837896eaa4f058, type: 2}
+    - target: {fileID: 5592896851645612692, guid: ff85ae1c9a614274c9faea59b955948b, type: 3}
       propertyPath: closeGame
       value: 
       objectReference: {fileID: 11400000, guid: 0138fde21d9e0f74389debde818f3132, type: 2}
