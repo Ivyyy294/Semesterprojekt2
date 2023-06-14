@@ -16,141 +16,30 @@ MonoBehaviour:
   - baseNodeGuid: af88c5cd-47d5-41e2-b8d8-21997c32d15c
     portName: Next
     targetNodeGuid: ac7acd63-894e-4a46-be96-2c9c8b18f76e
-  - baseNodeGuid: 5e1fdd36-7a0b-4ad5-9030-8eafdb361e82
-    portName: Next
-    targetNodeGuid: 1dd474ad-bcec-4392-8cb7-845c78dd3fa7
-  - baseNodeGuid: 055f5abf-7f26-4345-9adb-b16183cb575f
-    portName: Awww so cute...
-    targetNodeGuid: 5e1fdd36-7a0b-4ad5-9030-8eafdb361e82
-  - baseNodeGuid: 055f5abf-7f26-4345-9adb-b16183cb575f
-    portName: Thats an owl...
-    targetNodeGuid: 8f8934f2-e73f-4ab5-8b33-66c608ee54c3
-  - baseNodeGuid: 8f8934f2-e73f-4ab5-8b33-66c608ee54c3
-    portName: Next
-    targetNodeGuid: dba9b12f-3c04-423a-8239-5bac4cf335f7
-  - baseNodeGuid: dba9b12f-3c04-423a-8239-5bac4cf335f7
-    portName: Next
-    targetNodeGuid: dd313c69-3e74-4bbc-9b63-c1f84b60b8f3
   - baseNodeGuid: ac7acd63-894e-4a46-be96-2c9c8b18f76e
     portName: Next
-    targetNodeGuid: 473fa8df-8afb-4869-b6fc-ea8b11e2f9f3
-  - baseNodeGuid: 473fa8df-8afb-4869-b6fc-ea8b11e2f9f3
+    targetNodeGuid: d5d203e8-8790-41e5-a40d-f79e7c2518f7
+  - baseNodeGuid: 4e92bff7-1fbe-4e4b-a64e-414216bd2c1e
     portName: Next
-    targetNodeGuid: 2e8dfa14-7569-4b2c-8f52-7536dd6b4d19
-  - baseNodeGuid: 2e8dfa14-7569-4b2c-8f52-7536dd6b4d19
-    portName: Im fine thanks!
-    targetNodeGuid: 92036d48-e3f1-489d-a202-999ec9e5d156
-  - baseNodeGuid: 2e8dfa14-7569-4b2c-8f52-7536dd6b4d19
-    portName: Who are you??
-    targetNodeGuid: 44187b7e-c103-49de-bbdc-1550b28c5930
-  - baseNodeGuid: 44187b7e-c103-49de-bbdc-1550b28c5930
+    targetNodeGuid: faff51f4-377e-4692-ab7c-c7f30acf902b
+  - baseNodeGuid: d5d203e8-8790-41e5-a40d-f79e7c2518f7
+    portName: Hi Lysander!
+    targetNodeGuid: 4e92bff7-1fbe-4e4b-a64e-414216bd2c1e
+  - baseNodeGuid: d5d203e8-8790-41e5-a40d-f79e7c2518f7
+    portName: Good... morning?
+    targetNodeGuid: 4e92bff7-1fbe-4e4b-a64e-414216bd2c1e
+  - baseNodeGuid: d5d203e8-8790-41e5-a40d-f79e7c2518f7
+    portName: hello
+    targetNodeGuid: 4e92bff7-1fbe-4e4b-a64e-414216bd2c1e
+  - baseNodeGuid: faff51f4-377e-4692-ab7c-c7f30acf902b
     portName: Next
-    targetNodeGuid: 8f8934f2-e73f-4ab5-8b33-66c608ee54c3
-  - baseNodeGuid: 92036d48-e3f1-489d-a202-999ec9e5d156
-    portName: Next
-    targetNodeGuid: 055f5abf-7f26-4345-9adb-b16183cb575f
-  - baseNodeGuid: 1dd474ad-bcec-4392-8cb7-845c78dd3fa7
-    portName: Heck Yeah!
-    targetNodeGuid: a7b5560d-e02a-4573-8c39-ae94ea1b20ce
-  - baseNodeGuid: 1dd474ad-bcec-4392-8cb7-845c78dd3fa7
-    portName: Ne du...
-    targetNodeGuid: dba9b12f-3c04-423a-8239-5bac4cf335f7
-  - baseNodeGuid: a7b5560d-e02a-4573-8c39-ae94ea1b20ce
-    portName: Next
-    targetNodeGuid: dd313c69-3e74-4bbc-9b63-c1f84b60b8f3
-  - baseNodeGuid: 841e0089-2da3-494e-a9b6-32a4c69ffee7
-    portName: True
-    targetNodeGuid: 4dabef00-585b-4290-8eae-aa532249c09f
-  - baseNodeGuid: 841e0089-2da3-494e-a9b6-32a4c69ffee7
-    portName: False
-    targetNodeGuid: 3264cb8a-2dc4-4916-851b-8f2b4aeb413d
-  - baseNodeGuid: dd313c69-3e74-4bbc-9b63-c1f84b60b8f3
-    portName: Next
-    targetNodeGuid: 841e0089-2da3-494e-a9b6-32a4c69ffee7
+    targetNodeGuid: 7560b853-2f0b-4e85-bbd8-9ac281ba7e5c
   dialogNodeData:
-  - Guid: 5e1fdd36-7a0b-4ad5-9030-8eafdb361e82
-    DialogTitle: Npc Node
-    Position: {x: 1687, y: -202}
-    Type: 1
-    DialogText: Would you like to go out?
-    Image: {fileID: 0}
-    customRespondTime: 0
-    GameEvent: {fileID: 0}
-    BlackBoardProperty:
-      name: 
-      guid: 
-      comparisonTyp: 0
-      iVal: 0
-  - Guid: 055f5abf-7f26-4345-9adb-b16183cb575f
-    DialogTitle: Awww so cute....
-    Position: {x: 1378, y: -201}
-    Type: 0
-    DialogText: hello world
-    Image: {fileID: 0}
-    customRespondTime: 0
-    GameEvent: {fileID: 0}
-    BlackBoardProperty:
-      name: 
-      guid: 
-      comparisonTyp: 0
-      iVal: 0
-  - Guid: 8f8934f2-e73f-4ab5-8b33-66c608ee54c3
-    DialogTitle: Npc Node
-    Position: {x: 1687, y: -6}
-    Type: 1
-    DialogText: Why are you like this?
-    Image: {fileID: 0}
-    customRespondTime: 0
-    GameEvent: {fileID: 0}
-    BlackBoardProperty:
-      name: 
-      guid: 
-      comparisonTyp: 0
-      iVal: 0
-  - Guid: dba9b12f-3c04-423a-8239-5bac4cf335f7
-    DialogTitle: Npc Node
-    Position: {x: 2308, y: -33}
-    Type: 1
-    DialogText: :(((
-    Image: {fileID: 0}
-    customRespondTime: 0
-    GameEvent: {fileID: 0}
-    BlackBoardProperty:
-      name: 
-      guid: 
-      comparisonTyp: 0
-      iVal: 0
-  - Guid: 4dabef00-585b-4290-8eae-aa532249c09f
-    DialogTitle: NpcNode
-    Position: {x: 3469, y: -217}
-    Type: 1
-    DialogText: i love you <3
-    Image: {fileID: 0}
-    customRespondTime: 0
-    GameEvent: {fileID: 0}
-    BlackBoardProperty:
-      name: 
-      guid: 
-      comparisonTyp: 0
-      iVal: 0
-  - Guid: 3264cb8a-2dc4-4916-851b-8f2b4aeb413d
-    DialogTitle: NpcNode
-    Position: {x: 3469, y: -1}
-    Type: 1
-    DialogText: I hate you!
-    Image: {fileID: 0}
-    customRespondTime: 0
-    GameEvent: {fileID: 0}
-    BlackBoardProperty:
-      name: 
-      guid: 
-      comparisonTyp: 0
-      iVal: 0
   - Guid: ac7acd63-894e-4a46-be96-2c9c8b18f76e
     DialogTitle: Npc Node
-    Position: {x: 320, y: -202}
+    Position: {x: 320, y: -201.6}
     Type: 1
-    DialogText: Hi gurl :D
+    DialogText: hello
     Image: {fileID: 0}
     customRespondTime: 0
     GameEvent: {fileID: 0}
@@ -159,11 +48,11 @@ MonoBehaviour:
       guid: 
       comparisonTyp: 0
       iVal: 0
-  - Guid: 473fa8df-8afb-4869-b6fc-ea8b11e2f9f3
-    DialogTitle: Npc Node
-    Position: {x: 567, y: -30}
+  - Guid: 4e92bff7-1fbe-4e4b-a64e-414216bd2c1e
+    DialogTitle: NpcNode
+    Position: {x: 928, y: -201.6}
     Type: 1
-    DialogText: How are you?
+    DialogText: "man what a whacky start, right\r"
     Image: {fileID: 0}
     customRespondTime: 0
     GameEvent: {fileID: 0}
@@ -172,9 +61,9 @@ MonoBehaviour:
       guid: 
       comparisonTyp: 0
       iVal: 0
-  - Guid: 2e8dfa14-7569-4b2c-8f52-7536dd6b4d19
-    DialogTitle: Choice Node
-    Position: {x: 821, y: -213}
+  - Guid: d5d203e8-8790-41e5-a40d-f79e7c2518f7
+    DialogTitle: ChoiceNode
+    Position: {x: 586.4, y: -201.6}
     Type: 0
     DialogText: hello world
     Image: {fileID: 0}
@@ -185,11 +74,11 @@ MonoBehaviour:
       guid: 
       comparisonTyp: 0
       iVal: 0
-  - Guid: 44187b7e-c103-49de-bbdc-1550b28c5930
-    DialogTitle: Npc Node
-    Position: {x: 1103, y: -21}
+  - Guid: faff51f4-377e-4692-ab7c-c7f30acf902b
+    DialogTitle: NpcNode
+    Position: {x: 1220, y: -201.6}
     Type: 1
-    DialogText: How rude!
+    DialogText: this cryer sleep thing really messed with my head
     Image: {fileID: 0}
     customRespondTime: 0
     GameEvent: {fileID: 0}
@@ -198,22 +87,9 @@ MonoBehaviour:
       guid: 
       comparisonTyp: 0
       iVal: 0
-  - Guid: 92036d48-e3f1-489d-a202-999ec9e5d156
-    DialogTitle: Npc Node
-    Position: {x: 1103, y: -213}
-    Type: 1
-    DialogText: Do you like penguins?
-    Image: {fileID: 21300000, guid: ec03f79379868c642b48ae5ddc821b6d, type: 3}
-    customRespondTime: 0
-    GameEvent: {fileID: 0}
-    BlackBoardProperty:
-      name: 
-      guid: 
-      comparisonTyp: 0
-      iVal: 0
-  - Guid: 1dd474ad-bcec-4392-8cb7-845c78dd3fa7
-    DialogTitle: Choice Node
-    Position: {x: 1971, y: -136}
+  - Guid: 7560b853-2f0b-4e85-bbd8-9ac281ba7e5c
+    DialogTitle: ChoiceNode
+    Position: {x: 1559.2, y: -201.6}
     Type: 0
     DialogText: hello world
     Image: {fileID: 0}
@@ -223,68 +99,12 @@ MonoBehaviour:
       name: 
       guid: 
       comparisonTyp: 0
-      iVal: 0
-  - Guid: a7b5560d-e02a-4573-8c39-ae94ea1b20ce
-    DialogTitle: RaiseEventNode
-    Position: {x: 2270, y: -223}
-    Type: 2
-    DialogText: 
-    Image: {fileID: 0}
-    customRespondTime: 0
-    GameEvent: {fileID: 11400000, guid: 238faa4adf35dca499684132f6fda548, type: 2}
-    BlackBoardProperty:
-      name: 
-      guid: 
-      comparisonTyp: 0
-      iVal: 0
-  - Guid: 841e0089-2da3-494e-a9b6-32a4c69ffee7
-    DialogTitle: LogicNode
-    Position: {x: 3126, y: -177}
-    Type: 4
-    DialogText: 
-    Image: {fileID: 0}
-    customRespondTime: 0
-    GameEvent: {fileID: 0}
-    BlackBoardProperty:
-      name: Friendship
-      guid: cbfede91-3164-44b6-baf4-13d5385fb779
-      comparisonTyp: 1
-      iVal: 0
-  - Guid: dd313c69-3e74-4bbc-9b63-c1f84b60b8f3
-    DialogTitle: WaitNode
-    Position: {x: 2782, y: -81}
-    Type: 5
-    DialogText: 
-    Image: {fileID: 0}
-    customRespondTime: 0
-    GameEvent: {fileID: 0}
-    BlackBoardProperty:
-      name: Day
-      guid: 2f3a5ce9-bea6-4266-b092-fba01b30baa7
-      comparisonTyp: 1
       iVal: 0
   dialogGroupData:
   - Guid: 
-    name: Day1
-    Position: {x: 295, y: -282}
+    name: First Dialog
+    Position: {x: 294.4, y: -261.60004}
     childNodeGuid:
-    - 5e1fdd36-7a0b-4ad5-9030-8eafdb361e82
-    - 055f5abf-7f26-4345-9adb-b16183cb575f
-    - 8f8934f2-e73f-4ab5-8b33-66c608ee54c3
-    - dba9b12f-3c04-423a-8239-5bac4cf335f7
     - ac7acd63-894e-4a46-be96-2c9c8b18f76e
-    - 473fa8df-8afb-4869-b6fc-ea8b11e2f9f3
-    - 2e8dfa14-7569-4b2c-8f52-7536dd6b4d19
-    - 44187b7e-c103-49de-bbdc-1550b28c5930
-    - 92036d48-e3f1-489d-a202-999ec9e5d156
-    - 1dd474ad-bcec-4392-8cb7-845c78dd3fa7
-    - a7b5560d-e02a-4573-8c39-ae94ea1b20ce
-  - Guid: 
-    name: Day2
-    Position: {x: 2757, y: -276}
-    childNodeGuid:
-    - 4dabef00-585b-4290-8eae-aa532249c09f
-    - 3264cb8a-2dc4-4916-851b-8f2b4aeb413d
-    - 841e0089-2da3-494e-a9b6-32a4c69ffee7
-    - dd313c69-3e74-4bbc-9b63-c1f84b60b8f3
+    - d5d203e8-8790-41e5-a40d-f79e7c2518f7
   blackBoardList: {fileID: 11400000, guid: c289dd2bc5fda5942acc2419a6f68abb, type: 2}
