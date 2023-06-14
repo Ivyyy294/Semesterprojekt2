@@ -98,7 +98,7 @@ public class ChoiceNodeState : BaseState
 			NodeLinkData port = node.ports[i];
 			manager.ButtonList[i].gameObject.SetActive(true);
 			manager.ButtonList[i].GetComponent<Button>().onClick.AddListener (call:() =>{ButtonCallBack(portNr);});
-			manager.ButtonList[i].GetComponentInChildren<TextMeshProUGUI>().text = port.portName;
+			manager.ButtonList[i].GetComponentInChildren<TextMeshProUGUI>().text = (i + 1).ToString() + ") " + port.portName;
 		}
 	}
 

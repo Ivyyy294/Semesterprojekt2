@@ -53,8 +53,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 13c9e1106973b2240a6a4e3993b22b5b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  timePerChar: 0.1
   txtField: {fileID: 1560761990709671170}
-  respondTime: 1
   imageObj: {fileID: 4289682561233577095}
 --- !u!114 &1164800972861784650
 MonoBehaviour:
