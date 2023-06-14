@@ -22,6 +22,7 @@ public class PuckTerminal : MonoBehaviour
 	[SerializeField] GameObject chatContainer;
 
 	int currentIndex = -1;
+	bool initDone = false;
 
 	private List <Button> buttonObjList = new List<Button>();
 	private List <Chat> chatObjList = new List<Chat>();
@@ -97,25 +98,43 @@ public class PuckTerminal : MonoBehaviour
 
 	private void InitObjLists ()
 	{
-		//ButtonList
-		foreach (Button i in buttonContainer.GetComponentsInChildren <Button>())
+		if (!initDone)
 		{
-			i.gameObject.SetActive (false);
-			buttonObjList.Add (i);
-		}
+			buttonObjList.Clear();
 
-		//ChatList
-		foreach (Chat i in chatContainer.GetComponentsInChildren <Chat>())
-		{
-			i.gameObject.SetActive (false);
-			chatObjList.Add (i);
-		}
+			//ButtonList
+			for (int i = 0; i < buttonContainer.transform.childCount; ++i)
+			{
+				Button button = buttonContainer.transform.GetChild(i).GetComponent <Button>();
 
-		for (int i = 0; i < dialogList.Length; ++i)
-		{
-			int chatNr = i;
-			buttonObjList[i].onClick.AddListener (call:() =>{SetActiveChat (chatNr);});
-			chatObjList[i].dialogContainer = dialogList[i].dialog;
+				if (button != null)
+				{
+					button.gameObject.SetActive (false);
+					buttonObjList.Add (button);
+				}
+			}
+
+			//ChatList
+			chatObjList.Clear();
+			for (int i = 0; i < chatContainer.transform.childCount; ++i)
+			{
+				Chat chat = chatContainer.transform.GetChild(i).GetComponent <Chat>();
+
+				if (chat != null)
+				{
+					chat.gameObject.SetActive (false);
+					chatObjList.Add (chat);
+				}
+			}
+
+			for (int i = 0; i < dialogList.Length; ++i)
+			{
+				int chatNr = i;
+				buttonObjList[i].onClick.AddListener (call:() =>{SetActiveChat (chatNr);});
+				chatObjList[i].dialogContainer = dialogList[i].dialog;
+			}
+
+			initDone = true;
 		}
 	}
 }
