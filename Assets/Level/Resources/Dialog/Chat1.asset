@@ -34,10 +34,35 @@ MonoBehaviour:
   - baseNodeGuid: faff51f4-377e-4692-ab7c-c7f30acf902b
     portName: Next
     targetNodeGuid: 7560b853-2f0b-4e85-bbd8-9ac281ba7e5c
+  - baseNodeGuid: de9e6395-f6fb-4143-8212-2a7da659f83d
+    portName: Next
+    targetNodeGuid: cd2505b0-822b-4de7-aa6a-5127f579c0ca
+  - baseNodeGuid: 7560b853-2f0b-4e85-bbd8-9ac281ba7e5c
+    portName: 'Yeah, same. I''ll see if I can figure out the coffee machine. '
+    targetNodeGuid: de9e6395-f6fb-4143-8212-2a7da659f83d
+  - baseNodeGuid: 7560b853-2f0b-4e85-bbd8-9ac281ba7e5c
+    portName: Do you mean cryo sleep?
+    targetNodeGuid: cd2505b0-822b-4de7-aa6a-5127f579c0ca
+  - baseNodeGuid: 7560b853-2f0b-4e85-bbd8-9ac281ba7e5c
+    portName: I didn't think it would be *this* rough, but then again, our departure
+      was very last minute.
+    targetNodeGuid: cd2505b0-822b-4de7-aa6a-5127f579c0ca
+  - baseNodeGuid: cd2505b0-822b-4de7-aa6a-5127f579c0ca
+    portName: Next
+    targetNodeGuid: 0be1f806-562b-4adb-99fa-e11163b589a0
+  - baseNodeGuid: 0be1f806-562b-4adb-99fa-e11163b589a0
+    portName: Tough it out big guy :P
+    targetNodeGuid: 3a024425-ee36-47bc-a6ab-9bf7030eb99c
+  - baseNodeGuid: 0be1f806-562b-4adb-99fa-e11163b589a0
+    portName: Ah that must be weird. I'm sure it'll be better soon.
+    targetNodeGuid: 22a3b96a-3d7b-4516-a300-0ca1955bb750
+  - baseNodeGuid: 0be1f806-562b-4adb-99fa-e11163b589a0
+    portName: Try moving around a bit, maybe it'll help.
+    targetNodeGuid: bef6feb3-4b36-498d-ab8b-46c75822408f
   dialogNodeData:
   - Guid: ac7acd63-894e-4a46-be96-2c9c8b18f76e
     DialogTitle: Npc Node
-    Position: {x: 320, y: -201.6}
+    Position: {x: 320, y: -201.59999}
     Type: 1
     DialogText: hello
     Image: {fileID: 0}
@@ -50,7 +75,7 @@ MonoBehaviour:
       iVal: 0
   - Guid: 4e92bff7-1fbe-4e4b-a64e-414216bd2c1e
     DialogTitle: NpcNode
-    Position: {x: 928, y: -201.6}
+    Position: {x: 928, y: -201.59999}
     Type: 1
     DialogText: "man what a whacky start, right\r"
     Image: {fileID: 0}
@@ -63,7 +88,7 @@ MonoBehaviour:
       iVal: 0
   - Guid: d5d203e8-8790-41e5-a40d-f79e7c2518f7
     DialogTitle: ChoiceNode
-    Position: {x: 586.4, y: -201.6}
+    Position: {x: 586.4, y: -201.59999}
     Type: 0
     DialogText: hello world
     Image: {fileID: 0}
@@ -76,7 +101,7 @@ MonoBehaviour:
       iVal: 0
   - Guid: faff51f4-377e-4692-ab7c-c7f30acf902b
     DialogTitle: NpcNode
-    Position: {x: 1220, y: -201.6}
+    Position: {x: 1220, y: -201.59999}
     Type: 1
     DialogText: this cryer sleep thing really messed with my head
     Image: {fileID: 0}
@@ -87,10 +112,88 @@ MonoBehaviour:
       guid: 
       comparisonTyp: 0
       iVal: 0
+  - Guid: de9e6395-f6fb-4143-8212-2a7da659f83d
+    DialogTitle: NpcNode
+    Position: {x: 2324.8, y: -335.2}
+    Type: 1
+    DialogText: really? its cryo??
+    Image: {fileID: 0}
+    customRespondTime: 0
+    GameEvent: {fileID: 0}
+    BlackBoardProperty:
+      name: 
+      guid: 
+      comparisonTyp: 0
+      iVal: 0
   - Guid: 7560b853-2f0b-4e85-bbd8-9ac281ba7e5c
     DialogTitle: ChoiceNode
-    Position: {x: 1559.2, y: -201.6}
+    Position: {x: 1584, y: -201.59999}
     Type: 0
+    DialogText: hello world
+    Image: {fileID: 0}
+    customRespondTime: 0
+    GameEvent: {fileID: 0}
+    BlackBoardProperty:
+      name: 
+      guid: 
+      comparisonTyp: 0
+      iVal: 0
+  - Guid: cd2505b0-822b-4de7-aa6a-5127f579c0ca
+    DialogTitle: NpcNode
+    Position: {x: 2591.2, y: -179.2}
+    Type: 1
+    DialogText: my arms still dont feel right, like theyre not really mine
+    Image: {fileID: 0}
+    customRespondTime: 0
+    GameEvent: {fileID: 0}
+    BlackBoardProperty:
+      name: 
+      guid: 
+      comparisonTyp: 0
+      iVal: 0
+  - Guid: 0be1f806-562b-4adb-99fa-e11163b589a0
+    DialogTitle: ChoiceNode
+    Position: {x: 2988.8, y: -179.2}
+    Type: 0
+    DialogText: hello world
+    Image: {fileID: 0}
+    customRespondTime: 0
+    GameEvent: {fileID: 0}
+    BlackBoardProperty:
+      name: 
+      guid: 
+      comparisonTyp: 0
+      iVal: 0
+  - Guid: 3a024425-ee36-47bc-a6ab-9bf7030eb99c
+    DialogTitle: NpcNode
+    Position: {x: 3503.2, y: -23.2}
+    Type: 1
+    DialogText: '>:)'
+    Image: {fileID: 0}
+    customRespondTime: 0
+    GameEvent: {fileID: 0}
+    BlackBoardProperty:
+      name: 
+      guid: 
+      comparisonTyp: 0
+      iVal: 0
+  - Guid: 22a3b96a-3d7b-4516-a300-0ca1955bb750
+    DialogTitle: NpcNode
+    Position: {x: 3503.2, y: -179.2}
+    Type: 1
+    DialogText: thanks
+    Image: {fileID: 0}
+    customRespondTime: 0
+    GameEvent: {fileID: 0}
+    BlackBoardProperty:
+      name: 
+      guid: 
+      comparisonTyp: 0
+      iVal: 0
+  - Guid: bef6feb3-4b36-498d-ab8b-46c75822408f
+    DialogTitle: NpcNode
+    Position: {x: 3503.2, y: -341.6}
+    Type: 1
     DialogText: hello world
     Image: {fileID: 0}
     customRespondTime: 0
@@ -103,7 +206,7 @@ MonoBehaviour:
   dialogGroupData:
   - Guid: 
     name: First Dialog
-    Position: {x: 294.4, y: -261.60004}
+    Position: {x: 294.4, y: -261.59998}
     childNodeGuid:
     - ac7acd63-894e-4a46-be96-2c9c8b18f76e
     - d5d203e8-8790-41e5-a40d-f79e7c2518f7
