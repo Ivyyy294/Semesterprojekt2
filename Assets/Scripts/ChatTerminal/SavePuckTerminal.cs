@@ -30,23 +30,11 @@ public class SavePuckTerminal : SaveableObject
 
 			if (chat != null)
 			{
-				//Removes the empty end Node
-				if (chat.DialogTree.nodesVisited.Count > 0 && chat.DialogTree.nodesVisited.Peek().data == null)
-					chat.DialogTree.nodesVisited.Pop();
-
-				DialogTree.Node[] nodeArray = chat.DialogTree.nodesVisited.ToArray();
-				int nodeCount = nodeArray.Length;
-				payload.Add ( nodeName + "Count", nodeCount);
-				payload.Add (nodeName + "Available", puckTerminal.dialogList[i].available);
-
-				//Save items in reverse order
-				for (int j = 0; j < nodeCount; ++j)
-				{
-					int index = nodeCount -1 - j;
-					DialogTree.Node node = chat.DialogTree.nodesVisited.ToArray()[index];
-					payload.Add (nodeName + "Chat" + j, node.data.Guid);
-				}
+				Payload chatPayload = chat.GetPayload (nodeName);
+				chatPayload.Add ("Available", puckTerminal.dialogList[i].available);				
+				payload.Add (nodeName, chatPayload.GetSerializedData());
 			}
+
 		}
 	}
 
@@ -57,17 +45,10 @@ public class SavePuckTerminal : SaveableObject
 			Chat chat = puckTerminal.GetChatObj(i);
 			string nodeName = "Node" + i.ToString();
 
-			int nodeCount = int.Parse (val.data[nodeName + "Count"]);
-			puckTerminal.dialogList[i].available = bool.Parse (val.data[nodeName + "Available"]);
-
-			chat.DialogTree.nodesVisited.Clear();
-
-			List <string> nodeList = new List<string>();
-
-			for (int j = 0; j < nodeCount; ++j)
-				nodeList.Add (val.data[nodeName + "Chat" + j.ToString()]);
-
-			chat?.LoadSaveGame (nodeList);
+			string data = val.data[nodeName];
+			Payload chatPayload = Payload.GetData(data);
+			chat.LoadObject (chatPayload);
+			puckTerminal.dialogList[i].available = bool.Parse (chatPayload.data["Available"]);
 		}
 	}
 }

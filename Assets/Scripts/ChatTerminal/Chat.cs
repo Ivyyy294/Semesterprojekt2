@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 using UnityEngine.UI;
+using Ivyyy.SaveGameSystem;
 
 public abstract class BaseState: Ivyyy.StateMachine.IState
 {
@@ -222,44 +223,41 @@ public class Chat : MonoBehaviour
 	public List <GameObject> ButtonList => buttonList;
 
 	//Public Functions
-	public void LoadSaveGame (List <string> nodeList)
+	public Payload GetPayload (string nodeName)
 	{
-		Init();
-		dialogTree.nodesVisited.Clear();
+		Payload chatPayload = new Payload(nodeName);
 
-		for (int i = 0; i < nodeList.Count; ++i)
+		//Removes the empty end Node
+		if (DialogTree.nodesVisited.Count > 0 && DialogTree.nodesVisited.Peek().data == null)
+			DialogTree.nodesVisited.Pop();
+
+		DialogTree.Node[] nodeArray = DialogTree.nodesVisited.ToArray();
+		int nodeCount = nodeArray.Length;
+		chatPayload.Add ("Count", nodeCount);
+
+		//Save items in reverse order
+		for (int j = 0; j < nodeCount; ++j)
 		{
-			dialogTree.Next (nodeList[i]);
-			DialogTree.Node node = dialogTree.CurrentNode();
-
-			if (node.data.Type == DialogNodeData.NodeType.NPC)
-			{
-				ChatMessage chatMessage = Object.Instantiate (messageNpcTemplate, messageContainer.transform).GetComponentInChildren<ChatMessage>();
-				chatMessage.SetContent (node.data, true);
-			}
-
-			else if (node.data.Type == DialogNodeData.NodeType.CHOICE)
-			{
-				int nextIndex = i + 1;
-
-				if (nextIndex < nodeList.Count)
-				{
-					string nextGuid = dialogTree.dialogContainer.GetDialogNodeData (nodeList[nextIndex]).Guid;
-
-					ChatMessage chatMessage = Object.Instantiate (messagePlayerTemplate, messageContainer.transform).GetComponentInChildren<ChatMessage>();
-
-					foreach (var port in node.ports)
-					{
-						if (nextGuid == port.targetNodeGuid)
-							chatMessage.SetContent (port.portName, true);
-					}
-				}
-			}
+			int index = nodeCount -1 - j;
+			DialogTree.Node node = DialogTree.nodesVisited.ToArray()[index];
+			chatPayload.Add ("Chat" + j, node.data.Guid);
 		}
 
-		//If the last node is an NPC node, move to the next Node to avoid duplicated messages
-		if (dialogTree.CurrentNode().data != null && dialogTree.CurrentNode().data.Type == DialogNodeData.NodeType.NPC)
-			dialogTree.Next();
+		return chatPayload;
+	}
+
+	public void LoadObject (Payload val)
+	{
+		int nodeCount = int.Parse (val.data["Count"]);
+
+		DialogTree.nodesVisited.Clear();
+
+		List <string> nodeList = new List<string>();
+
+		for (int j = 0; j < nodeCount; ++j)
+			nodeList.Add (val.data["Chat" + j.ToString()]);
+
+		LoadSaveGame (nodeList);
 	}
 
 	public void SetState (Ivyyy.StateMachine.IState newState)
@@ -318,5 +316,45 @@ public class Chat : MonoBehaviour
 
 		for (int i = 0; i < buttonContainer.transform.childCount; ++i)
 			buttonList.Add (buttonContainer.transform.GetChild(i).gameObject);
+	}
+
+	void LoadSaveGame (List <string> nodeList)
+	{
+		Init();
+		dialogTree.nodesVisited.Clear();
+
+		for (int i = 0; i < nodeList.Count; ++i)
+		{
+			dialogTree.Next (nodeList[i]);
+			DialogTree.Node node = dialogTree.CurrentNode();
+
+			if (node.data.Type == DialogNodeData.NodeType.NPC)
+			{
+				ChatMessage chatMessage = Object.Instantiate (messageNpcTemplate, messageContainer.transform).GetComponentInChildren<ChatMessage>();
+				chatMessage.SetContent (node.data, true);
+			}
+
+			else if (node.data.Type == DialogNodeData.NodeType.CHOICE)
+			{
+				int nextIndex = i + 1;
+
+				if (nextIndex < nodeList.Count)
+				{
+					string nextGuid = dialogTree.dialogContainer.GetDialogNodeData (nodeList[nextIndex]).Guid;
+
+					ChatMessage chatMessage = Object.Instantiate (messagePlayerTemplate, messageContainer.transform).GetComponentInChildren<ChatMessage>();
+
+					foreach (var port in node.ports)
+					{
+						if (nextGuid == port.targetNodeGuid)
+							chatMessage.SetContent (port.portName, true);
+					}
+				}
+			}
+		}
+
+		//If the last node is an NPC node, move to the next Node to avoid duplicated messages
+		if (dialogTree.CurrentNode().data != null && dialogTree.CurrentNode().data.Type == DialogNodeData.NodeType.NPC)
+			dialogTree.Next();
 	}
 }
