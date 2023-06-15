@@ -9,10 +9,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: eef6a1b70d7212d4c82e998decb46125, type: 3}
-  m_Name: MenuMusic
+  m_Script: {fileID: 11500000, guid: 6f7490679cbb0ec49b5d45a66e74b10e, type: 3}
+  m_Name: Suite_No_3_D_Major
   m_EditorClassIdentifier: 
-  musicClip: {fileID: 8300000, guid: 7a97ba70cf1947748accc4fe25fe55f1, type: 3}
-  volume: 0.5
-  pitch: 1
+  audioClips:
+  - {fileID: 8300000, guid: 7a97ba70cf1947748accc4fe25fe55f1, type: 3}
+  playStyle: 0
+  audioTyp: 1
   loop: 0
+  volume: {x: 0.5, y: 0.5}
+  pitch: {x: 1, y: 1}

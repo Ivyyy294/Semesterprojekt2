@@ -2,17 +2,17 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class MusicPlayer : MonoBehaviour
+public class AudioPlayer : MonoBehaviour
 {
-    [SerializeField] MusicAsset musicAsset;
+    [SerializeField] AudioAsset audioAsset;
 
 	private void OnEnable()
 	{
-		musicAsset?.Play();
+		audioAsset?.Play();
 	}
 
 	private void OnDestroy()
 	{
-		musicAsset?.Stop();
+		audioAsset?.Stop();
 	}
 }

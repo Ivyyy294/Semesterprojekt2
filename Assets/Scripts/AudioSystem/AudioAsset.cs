@@ -3,9 +3,17 @@ using System.Collections.Generic;
 using UnityEditor;
 using UnityEngine;
 
-[CreateAssetMenu (fileName = "NewSoundEffectAsset", menuName = "SoundEffectAsset")]
+[CreateAssetMenu (fileName = "NewAudioAsset", menuName = "AudioAsset")]
 public class AudioAsset : ScriptableObject
 {
+	public enum AudioTyp
+	{
+		SFX,
+		MUSIC,
+		AMBIENT,
+		UI
+	}
+
 	public enum PlayStyle
 	{
 		RANDOM,
@@ -14,36 +22,44 @@ public class AudioAsset : ScriptableObject
 	}
 
     public AudioClip[] audioClips;
+	[SerializeField] PlayStyle playStyle = PlayStyle.RANDOM;
+	[Space]
+	public AudioTyp audioTyp = AudioTyp.SFX;
+	[HideInInspector] public bool loop = false;
 	[HideInInspector] public Vector2 volume = new Vector2 (0.5f, 0.5f);
 	[HideInInspector] public Vector2 pitch = new Vector2 (1f, 1f);
-	[SerializeField] PlayStyle playStyle = PlayStyle.RANDOM;
 
 	private Stack <AudioClip> clipBuffer = new Stack <AudioClip>();
 	private PlayStyle oldPlayStyle;
 
+	private AudioSource stableSource;
+
 #if UNITY_EDITOR
-	private AudioSource previewer;
-
-	private void OnEnable()
-	{
-		previewer = EditorUtility.CreateGameObjectWithHideFlags ("AudioPreview", HideFlags.HideAndDontSave, typeof (AudioSource)).GetComponent <AudioSource>();
-	}
-
-	private void OnDisable()
-	{
-		DestroyImmediate (previewer.gameObject);
-	}
-
 	public void PlayPreview()
 	{
-		Play (previewer);
+		Play (stableSource);
 	}
 
 	public void StopPreview()
 	{
-		previewer.Stop();
+		Stop();
+	}
+
+	private void OnDisable()
+	{
+			DestroyImmediate (stableSource.gameObject);
+	}
+#else
+	private void OnDisable()
+	{
+		Destroy (stableSource.gameObject);
 	}
 #endif
+
+	private void OnEnable()
+	{
+		stableSource = EditorUtility.CreateGameObjectWithHideFlags ("AudioPreview", HideFlags.HideAndDontSave, typeof (AudioSource)).GetComponent <AudioSource>();
+	}
 
 	public void Play (AudioSource audioSource = null)
 	{
@@ -52,7 +68,9 @@ public class AudioAsset : ScriptableObject
 			if (clipBuffer.Count == 0 || oldPlayStyle != playStyle)
 				ShuffleAudioClips();
 
-			AudioSource source = audioSource;
+			bool isSfx = audioTyp == AudioTyp.MUSIC || audioTyp == AudioTyp.AMBIENT;
+
+			AudioSource source = isSfx ? stableSource : audioSource;
 
 			if (source == null)
 			{
@@ -63,15 +81,21 @@ public class AudioAsset : ScriptableObject
 			source.clip = clipBuffer.Pop();
 			source.volume = Random.Range (volume.x, volume.y);
 			source.pitch = Random.Range (pitch.x, pitch.y);
+			source.loop = isSfx ? false : loop;
 			source.Play();
 
-#if UNITY_EDITOR
-			if (audioSource == previewer)
+			//Prevents stable source from being deleted
+			if (audioSource == stableSource)
 				return;
-#endif
 
+			//Delete tmp audio source after playing
 			Destroy (source.gameObject, source.clip.length / source.pitch);
 		}
+	}
+
+	public void Stop()
+	{
+		stableSource.Stop();
 	}
 
 	private void ShuffleAudioClips()
