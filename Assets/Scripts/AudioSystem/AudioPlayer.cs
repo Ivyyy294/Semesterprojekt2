@@ -6,12 +6,17 @@ public class AudioPlayer : MonoBehaviour
 {
     [SerializeField] AudioAsset audioAsset;
 
-	private void OnEnable()
+	public void Play()
 	{
 		audioAsset?.Play();
 	}
 
-	private void OnDestroy()
+	public void PlayAtPos (Vector3 pos)
+	{
+		audioAsset?.PlayAtPos(pos);
+	}
+
+	public void Stop()
 	{
 		audioAsset?.Stop();
 	}

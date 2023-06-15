@@ -2,9 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using Ivyyy.Interfaces;
-public class DoorTerminal : MonoBehaviour, InteractableObject
+public class DoorTerminal : AudioPlayer, InteractableObject
 {
-	[SerializeField] AudioAsset audioAsset;
 	[SerializeField] float coolDown = 0.5f;
 	float timer = 0f;
 
@@ -12,7 +11,7 @@ public class DoorTerminal : MonoBehaviour, InteractableObject
 	{
 		if (timer >= coolDown)
 		{
-			audioAsset?.Play();
+			PlayAtPos(transform.position);
 			timer = 0f;
 		}
 	}
