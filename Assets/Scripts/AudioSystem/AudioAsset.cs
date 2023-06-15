@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEditor;
 using UnityEngine;
 
-[CreateAssetMenu (fileName = "NewAudioAsset", menuName = "AudioAsset")]
+[CreateAssetMenu (fileName = "NewSoundEffectAsset", menuName = "SoundEffectAsset")]
 public class AudioAsset : ScriptableObject
 {
 	public enum PlayStyle
