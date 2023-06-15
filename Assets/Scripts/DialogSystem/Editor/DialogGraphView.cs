@@ -25,6 +25,7 @@ public class DialogGraphView : GraphView
 		//this.AddManipulator (CreateListenEventNodeContextMenu());
 		this.AddManipulator (CreateLogicNodeContextMenu());
 		this.AddManipulator (CreateWaitNodeContextMenu());
+		this.AddManipulator (CreatePuckNodeContextMenu());
 		this.AddManipulator (CreateGroupContextMenu());
 
 		////ToDo fix stylesheet
@@ -137,6 +138,14 @@ public class DialogGraphView : GraphView
 	{
 		StyleSheet nodeStyleSheet = (StyleSheet) EditorGUIUtility.Load ("DSNodeStyles.uss");
 		styleSheets.Add (nodeStyleSheet);
+	}
+
+	private IManipulator CreatePuckNodeContextMenu()
+	{
+		ContextualMenuManipulator contextualMenuManipulator = new ContextualMenuManipulator (
+			menuEvent=> menuEvent.menu.AppendAction ("Add PuckNode", actionEvent=>AddElement (DialogPuckNode.Create("PuckNode", GetLocalMousePosition (actionEvent.eventInfo.localMousePosition)))));
+
+		return contextualMenuManipulator;
 	}
 
 	private IManipulator CreateWaitNodeContextMenu()

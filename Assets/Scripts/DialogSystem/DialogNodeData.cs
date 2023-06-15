@@ -11,7 +11,8 @@ public class DialogNodeData
 		RAISE_EVENT,
 		LISTEN_EVENT,
 		LOGIC,
-		WAIT
+		WAIT,
+		PUCK
 	}
 
 	//Base Values
@@ -31,6 +32,10 @@ public class DialogNodeData
 	//Logic Node Values
 	public BlackBoardProperty BlackBoardProperty = new BlackBoardProperty();
 
+	//PUCK Node
+	public AudioAsset audioAsset;
+	public Puck.Emotion emotion = Puck.Emotion.HAPPY;
+
 	public DialogNodeData Copy ()
 	{
 		DialogNodeData data = new DialogNodeData();
@@ -43,6 +48,8 @@ public class DialogNodeData
 		data.GameEvent = GameEvent;
 		data.BlackBoardProperty = BlackBoardProperty;
 		data.customRespondTime = customRespondTime;
+		data.audioAsset = audioAsset;
+		data.emotion = emotion;
 
 		return data;
 	}

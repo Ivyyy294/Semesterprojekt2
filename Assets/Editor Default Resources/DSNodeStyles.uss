@@ -92,6 +92,16 @@ DialogWaitNode #title-label
 	color: #000000;
 }
 
+/*PuckNode*/
+DialogPuckNode #title
+{
+	background-color: #00FFF0;
+}
+
+DialogPuckNode #title-label
+{
+	color: #000000;
+}
 /*
 //CONTAINERS
 
