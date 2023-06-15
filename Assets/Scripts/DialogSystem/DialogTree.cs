@@ -34,6 +34,16 @@ public class DialogTree
 	public void Next (int portIndex = 0)
 	{
 		if (dialogContainer != null)
+			nodesVisited.Push (Peek (portIndex));
+		else
+			Debug.LogError("Invalid dialogContainer!");
+	}
+
+	public DialogTree.Node Peek (int portIndex = 0)
+	{
+		Node node = new Node();
+
+		if (dialogContainer != null)
 		{
 			string guid = null;
 
@@ -43,10 +53,12 @@ public class DialogTree
 				&& portIndex < nodesVisited.Peek().ports.Count)
 				guid = nodesVisited.Peek().ports[portIndex].targetNodeGuid;
 
-			nodesVisited.Push (new Node() {data = dialogContainer.GetDialogNodeData (guid), ports = dialogContainer.GetDialogPorts (guid)});
+			node = new Node() {data = dialogContainer.GetDialogNodeData (guid), ports = dialogContainer.GetDialogPorts (guid)};
 		}
 		else
 			Debug.LogError("Invalid dialogContainer!");
+
+		return node;
 	}
 
 	//Returns the current Node or null if no Node is available

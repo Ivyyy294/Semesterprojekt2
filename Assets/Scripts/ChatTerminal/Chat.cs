@@ -58,15 +58,16 @@ public class NpcNodeState : BaseState
 	{
 		if (chatMessage.Done)
 		{
-			manager.DialogTree.Next();
+			DialogTree.Node nextNode = manager.DialogTree.Peek();
 
-			bool wait = manager.DialogTree.CurrentNode().data != null
-				&& manager.DialogTree.CurrentNode().data.Type == DialogNodeData.NodeType.NPC;
+			bool wait = nextNode.data != null
+				&& nextNode.data.Type == DialogNodeData.NodeType.NPC;
 
 			if (wait && timer < manager.delayNpcMessage)
 				timer += Time.deltaTime;
 			else if (node.ports.Count > 0)
 			{
+				manager.DialogTree.Next();
 				manager.SetState (manager.defaultState);
 			}
 		}
