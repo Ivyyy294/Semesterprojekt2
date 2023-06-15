@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d170aec7dfcb81f46b534b51e20e8ab1, type: 3}
-  m_Name: Chat2
+  m_Name: Chat2_Hermia
   m_EditorClassIdentifier: 
   nodeLinks:
   - baseNodeGuid: a31ea04e-24f9-4654-b61b-88a9fc788043
