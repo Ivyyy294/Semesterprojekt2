@@ -54,7 +54,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   minRespondTime: 0.5
-  timePerChar: 0.1
+  timePerChar: 0.02
   txtField: {fileID: 1560761990709671170}
   imageObj: {fileID: 4289682561233577095}
 --- !u!114 &1164800972861784650

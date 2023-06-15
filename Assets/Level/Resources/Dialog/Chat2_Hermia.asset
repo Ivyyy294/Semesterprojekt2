@@ -15,13 +15,39 @@ MonoBehaviour:
   nodeLinks:
   - baseNodeGuid: a31ea04e-24f9-4654-b61b-88a9fc788043
     portName: Next
-    targetNodeGuid: c58fb037-50ae-4b79-a78f-45dfefe703e7
+    targetNodeGuid: 9850f2b4-69e8-4e54-a02e-2ec15e9867f1
   dialogNodeData:
-  - Guid: c58fb037-50ae-4b79-a78f-45dfefe703e7
-    DialogTitle: NpcNode
-    Position: {x: 373, y: 137}
-    Type: 1
+  - Guid: c2927472-9216-4ecb-bccc-8d51fee9c6b8
+    DialogTitle: WaitNode
+    Position: {x: 228.8, y: 9.6}
+    Type: 5
+    DialogText: 
+    Image: {fileID: 0}
+    customRespondTime: 0
+    GameEvent: {fileID: 0}
+    BlackBoardProperty:
+      name: 
+      guid: 
+      comparisonTyp: 0
+      iVal: 0
+  - Guid: 9850f2b4-69e8-4e54-a02e-2ec15e9867f1
+    DialogTitle: ChoiceNode
+    Position: {x: 257.6, y: 200}
+    Type: 0
     DialogText: hello world
+    Image: {fileID: 0}
+    customRespondTime: 0
+    GameEvent: {fileID: 0}
+    BlackBoardProperty:
+      name: 
+      guid: 
+      comparisonTyp: 0
+      iVal: 0
+  - Guid: 10c7a9c0-438b-4a93-a9c4-4673bdf69681
+    DialogTitle: NpcNode
+    Position: {x: 628, y: 168}
+    Type: 1
+    DialogText: Be right there
     Image: {fileID: 0}
     customRespondTime: 0
     GameEvent: {fileID: 0}
