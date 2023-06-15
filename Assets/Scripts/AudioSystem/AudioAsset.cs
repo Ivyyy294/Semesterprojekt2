@@ -122,9 +122,8 @@ public class AudioAsset : ScriptableObject
 			source.maxDistance = maxDistance;
 			source.rolloffMode = AudioRolloffMode.Linear;
 
-			source.Play();
-
 			Subtitle.SetText (subtitle);
+			source.Play();
 
 			//Prevents stable source from being deleted
 			if (source == stableSource)

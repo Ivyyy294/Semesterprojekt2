@@ -22,7 +22,7 @@ public class DialogPuckNode : DialogNode
 		var actionField = new ObjectField("AudioAsset");
 		actionField.objectType = typeof(AudioAsset);
 		actionField.RegisterValueChangedCallback(evt => data.audioAsset = evt.newValue as AudioAsset);
-		actionField.SetValueWithoutNotify (data.GameEvent);
+		actionField.SetValueWithoutNotify (data.audioAsset);
 		mainContainer.Add(actionField);
 
 		//Emotion

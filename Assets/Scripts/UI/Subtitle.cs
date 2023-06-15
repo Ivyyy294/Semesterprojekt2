@@ -24,6 +24,7 @@ public class Subtitle : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+		GetComponent<Canvas>().sortingOrder = 2;
         instances.Add (this);
     }
 
