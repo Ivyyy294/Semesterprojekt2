@@ -18,7 +18,47 @@ MonoBehaviour:
     targetNodeGuid: bb93f785-e00a-4aac-a0fc-753056451563
   - baseNodeGuid: bb93f785-e00a-4aac-a0fc-753056451563
     portName: Next
-    targetNodeGuid: 70223eb3-3a7c-418c-957d-a2802de942a9
+    targetNodeGuid: 20ff768d-0629-4c10-aafc-9ae8476edb77
+  - baseNodeGuid: 20ff768d-0629-4c10-aafc-9ae8476edb77
+    portName: Hey Demetrius.
+    targetNodeGuid: 4bfba334-e23a-405d-a1e8-b7678606b4d4
+  - baseNodeGuid: 20ff768d-0629-4c10-aafc-9ae8476edb77
+    portName: You up yet?
+    targetNodeGuid: 4bfba334-e23a-405d-a1e8-b7678606b4d4
+  - baseNodeGuid: 20ff768d-0629-4c10-aafc-9ae8476edb77
+    portName: Morning
+    targetNodeGuid: 4bfba334-e23a-405d-a1e8-b7678606b4d4
+  - baseNodeGuid: 4bfba334-e23a-405d-a1e8-b7678606b4d4
+    portName: Next
+    targetNodeGuid: 5ce4be09-d3df-4831-ab9d-b4389773dab2
+  - baseNodeGuid: 5ce4be09-d3df-4831-ab9d-b4389773dab2
+    portName: Next
+    targetNodeGuid: 79bdcf4d-6619-47e6-a2db-ebc0bcd1de84
+  - baseNodeGuid: 79bdcf4d-6619-47e6-a2db-ebc0bcd1de84
+    portName: Leaving the ship in one piece, are you?
+    targetNodeGuid: 669a9861-424c-477c-a27d-2db5edc86b9a
+  - baseNodeGuid: 79bdcf4d-6619-47e6-a2db-ebc0bcd1de84
+    portName: Any luck figuring out the whole isolation situation?
+    targetNodeGuid: 4eaafba8-f22c-44e2-866d-cffe0109c278
+  - baseNodeGuid: 79bdcf4d-6619-47e6-a2db-ebc0bcd1de84
+    portName: How did you like being frozen?
+    targetNodeGuid: 7bbb20bb-bde0-41eb-9066-86ad317d1ff3
+  - baseNodeGuid: 7bbb20bb-bde0-41eb-9066-86ad317d1ff3
+    portName: Next
+    targetNodeGuid: 7343a857-3e4b-4718-8a63-ed52fc31d5a5
+  - baseNodeGuid: 7343a857-3e4b-4718-8a63-ed52fc31d5a5
+    portName: Next
+    targetNodeGuid: d985a7f3-178f-4bd2-a6d5-1d4d605c84f1
+  - baseNodeGuid: d985a7f3-178f-4bd2-a6d5-1d4d605c84f1
+    portName: Maybe the display is broken?
+    targetNodeGuid: 740c07e4-d9ee-42af-a088-aa91c5181b46
+  - baseNodeGuid: d985a7f3-178f-4bd2-a6d5-1d4d605c84f1
+    portName: Could it have something to do with this isolation? Maybe something
+      is not right?
+    targetNodeGuid: 7ba0f159-3431-4aa9-9e0f-7b60be78732c
+  - baseNodeGuid: d985a7f3-178f-4bd2-a6d5-1d4d605c84f1
+    portName: That's what we get for choosing the cheaper option :')
+    targetNodeGuid: 43333b6d-3e7b-48f4-8dd8-61f0ddeab9f0
   dialogNodeData:
   - Guid: bb93f785-e00a-4aac-a0fc-753056451563
     DialogTitle: WaitNode
@@ -33,11 +73,160 @@ MonoBehaviour:
       guid: 95bdf4c3-b071-463a-aa9a-86b98645620a
       comparisonTyp: 0
       iVal: 1
-  - Guid: 70223eb3-3a7c-418c-957d-a2802de942a9
+  - Guid: 20ff768d-0629-4c10-aafc-9ae8476edb77
+    DialogTitle: ChoiceNode
+    Position: {x: 632.8, y: 177.59999}
+    Type: 0
+    DialogText: hello world
+    Image: {fileID: 0}
+    customRespondTime: 0
+    GameEvent: {fileID: 0}
+    BlackBoardProperty:
+      name: 
+      guid: 
+      comparisonTyp: 0
+      iVal: 0
+  - Guid: 4bfba334-e23a-405d-a1e8-b7678606b4d4
     DialogTitle: NpcNode
-    Position: {x: 676.8, y: 168}
+    Position: {x: 932, y: 177.59999}
     Type: 1
-    DialogText: yippie
+    DialogText: Be right there
+    Image: {fileID: 0}
+    customRespondTime: 0
+    GameEvent: {fileID: 0}
+    BlackBoardProperty:
+      name: 
+      guid: 
+      comparisonTyp: 0
+      iVal: 0
+  - Guid: 5ce4be09-d3df-4831-ab9d-b4389773dab2
+    DialogTitle: NpcNode
+    Position: {x: 1188.8, y: 177.59999}
+    Type: 1
+    DialogText: What's up?
+    Image: {fileID: 0}
+    customRespondTime: 0
+    GameEvent: {fileID: 0}
+    BlackBoardProperty:
+      name: 
+      guid: 
+      comparisonTyp: 0
+      iVal: 0
+  - Guid: 79bdcf4d-6619-47e6-a2db-ebc0bcd1de84
+    DialogTitle: ChoiceNode
+    Position: {x: 1436.8, y: 177.59999}
+    Type: 0
+    DialogText: hello world
+    Image: {fileID: 0}
+    customRespondTime: 0
+    GameEvent: {fileID: 0}
+    BlackBoardProperty:
+      name: 
+      guid: 
+      comparisonTyp: 0
+      iVal: 0
+  - Guid: 4eaafba8-f22c-44e2-866d-cffe0109c278
+    DialogTitle: NpcNode
+    Position: {x: 1965.6, y: 177.59999}
+    Type: 1
+    DialogText: Not really; this P.U.C.K prevents any interference with the door
+      controls.
+    Image: {fileID: 0}
+    customRespondTime: 0
+    GameEvent: {fileID: 0}
+    BlackBoardProperty:
+      name: 
+      guid: 
+      comparisonTyp: 0
+      iVal: 0
+  - Guid: 669a9861-424c-477c-a27d-2db5edc86b9a
+    DialogTitle: NpcNode
+    Position: {x: 1965.6, y: 0}
+    Type: 1
+    DialogText: We really should have taken the more expensive option.
+    Image: {fileID: 0}
+    customRespondTime: 0
+    GameEvent: {fileID: 0}
+    BlackBoardProperty:
+      name: 
+      guid: 
+      comparisonTyp: 0
+      iVal: 0
+  - Guid: 7bbb20bb-bde0-41eb-9066-86ad317d1ff3
+    DialogTitle: NpcNode
+    Position: {x: 1965.6, y: 366.40002}
+    Type: 1
+    DialogText: 'It was not my first time actually. I volunteered it for a study
+      once. But this was definitely more intense. '
+    Image: {fileID: 0}
+    customRespondTime: 0
+    GameEvent: {fileID: 0}
+    BlackBoardProperty:
+      name: 
+      guid: 
+      comparisonTyp: 0
+      iVal: 0
+  - Guid: 7343a857-3e4b-4718-8a63-ed52fc31d5a5
+    DialogTitle: NpcNode
+    Position: {x: 2596.8, y: 366.40002}
+    Type: 1
+    DialogText: 'Speaking of which, why are we not frozen right now? It says we''re
+      only a third of the way to Titania.
+
+'
+    Image: {fileID: 0}
+    customRespondTime: 0
+    GameEvent: {fileID: 0}
+    BlackBoardProperty:
+      name: 
+      guid: 
+      comparisonTyp: 0
+      iVal: 0
+  - Guid: d985a7f3-178f-4bd2-a6d5-1d4d605c84f1
+    DialogTitle: ChoiceNode
+    Position: {x: 3225.6, y: 366.40002}
+    Type: 0
+    DialogText: hello world
+    Image: {fileID: 0}
+    customRespondTime: 0
+    GameEvent: {fileID: 0}
+    BlackBoardProperty:
+      name: 
+      guid: 
+      comparisonTyp: 0
+      iVal: 0
+  - Guid: 740c07e4-d9ee-42af-a088-aa91c5181b46
+    DialogTitle: NpcNode
+    Position: {x: 3889.6, y: 219.2}
+    Type: 1
+    DialogText: Doubt it; the systems seem to be working flawlessly. I only wish
+      I could disable the annoying AI
+    Image: {fileID: 0}
+    customRespondTime: 0
+    GameEvent: {fileID: 0}
+    BlackBoardProperty:
+      name: 
+      guid: 
+      comparisonTyp: 0
+      iVal: 0
+  - Guid: 7ba0f159-3431-4aa9-9e0f-7b60be78732c
+    DialogTitle: NpcNode
+    Position: {x: 3889.6, y: 380.80002}
+    Type: 1
+    DialogText: Why do you think that? Didn't the vendor say it was standard procedure?
+    Image: {fileID: 0}
+    customRespondTime: 0
+    GameEvent: {fileID: 0}
+    BlackBoardProperty:
+      name: 
+      guid: 
+      comparisonTyp: 0
+      iVal: 0
+  - Guid: 43333b6d-3e7b-48f4-8dd8-61f0ddeab9f0
+    DialogTitle: NpcNode
+    Position: {x: 3889.6, y: 540.8}
+    Type: 1
+    DialogText: You can say that again.
     Image: {fileID: 0}
     customRespondTime: 0
     GameEvent: {fileID: 0}
