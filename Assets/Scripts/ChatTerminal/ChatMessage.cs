@@ -6,7 +6,7 @@ using UnityEngine.UI;
 
 public class ChatMessage : MonoBehaviour
 {
-	//[SerializeField] float minRespondTime = 0.5f;
+	[SerializeField] float minRespondTime = 0.5f;
 	[SerializeField] float timePerChar = 0.1f;
 
 	[Header ("Lara Values")]
@@ -26,13 +26,6 @@ public class ChatMessage : MonoBehaviour
 		nodeData = data;
 		respondTime = CalculateRespondTime ();
 		timer = force ? respondTime : 0f;
-	}
-
-	public void SetContent (string text, float respondTime, bool force = false)
-	{
-		nodeData = new DialogNodeData() {DialogText = text};
-		nodeData.customRespondTime = respondTime;
-		SetContent (nodeData);
 	}
 
 	public void SetContent (string text, bool force = false)
@@ -70,6 +63,6 @@ public class ChatMessage : MonoBehaviour
 		if (nodeData.customRespondTime > 0f)
 			return nodeData.customRespondTime;
 		else
-			return nodeData.DialogText.Length * timePerChar;
+			return minRespondTime + nodeData.DialogText.Length * timePerChar;
 	}
 }
