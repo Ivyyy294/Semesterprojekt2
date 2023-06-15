@@ -19,3 +19,6 @@ MonoBehaviour:
   loop: 0
   volume: {x: 0.49991488, y: 0.49991488}
   pitch: {x: 1, y: 1}
+  spatial: 1
+  minDistance: 0.5
+  maxDistance: 20

@@ -20,6 +20,8 @@ public class AudioAssetEditor : Editor
 		else
 			MusicEditor(audioAsset);
 
+		SpatialEditor(audioAsset);
+
 		serializedObject.ApplyModifiedProperties();
 
 		if (GUILayout.Button("Play Preview"))
@@ -70,5 +72,30 @@ public class AudioAssetEditor : Editor
 		pitch = EditorGUILayout.Slider(labelPitch, pitch, 0f, 2f);
 		audioAsset.pitch.x = pitch;
 		audioAsset.pitch.y = pitch;
+	}
+
+	void SpatialEditor(AudioAsset audioAsset)
+	{
+		EditorGUILayout.Space();
+		SerializedProperty yourBoolVariable = serializedObject.FindProperty("spatial");
+		EditorGUILayout.PropertyField(yourBoolVariable, new GUIContent("spatial"));
+		serializedObject.ApplyModifiedProperties();
+
+		if (audioAsset.spatial)
+		{
+			SerializedProperty minDistance = serializedObject.FindProperty("minDistance");
+			SerializedProperty maxDistance = serializedObject.FindProperty("maxDistance");
+
+			EditorGUILayout.PropertyField(minDistance, new GUIContent("minDistance"));
+			EditorGUILayout.PropertyField(maxDistance, new GUIContent("maxDistance"));
+
+			if (minDistance.floatValue < 0f)
+				minDistance.floatValue = 0f;
+
+			if (maxDistance.floatValue < 0f)
+				maxDistance.floatValue = 0f;
+		}
+
+		EditorGUILayout.Space();
 	}
 }

@@ -28,6 +28,9 @@ public class AudioAsset : ScriptableObject
 	[HideInInspector] public bool loop = false;
 	[HideInInspector] public Vector2 volume = new Vector2 (0.5f, 0.5f);
 	[HideInInspector] public Vector2 pitch = new Vector2 (1f, 1f);
+	[HideInInspector] public bool spatial = false;
+	[HideInInspector] public float minDistance = 0.5f;
+	[HideInInspector] public float maxDistance = 500f;
 
 	private Stack <AudioClip> clipBuffer = new Stack <AudioClip>();
 	private PlayStyle oldPlayStyle;
@@ -111,6 +114,11 @@ public class AudioAsset : ScriptableObject
 			source.volume = Random.Range (volume.x, volume.y);
 			source.pitch = Random.Range (pitch.x, pitch.y);
 			source.loop = IsSFX() ? false : loop;
+			source.spatialBlend = spatial ? 1f : 0f;
+			source.minDistance = minDistance;
+			source.maxDistance = maxDistance;
+			source.rolloffMode = AudioRolloffMode.Linear;
+
 			source.Play();
 
 			//Prevents stable source from being deleted

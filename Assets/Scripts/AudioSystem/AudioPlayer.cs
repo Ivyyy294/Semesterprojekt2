@@ -11,6 +11,11 @@ public class AudioPlayer : MonoBehaviour
 		audioAsset?.Play();
 	}
 
+	public void PlayAtPos ()
+	{
+		audioAsset?.PlayAtPos(transform.position);
+	}
+
 	public void PlayAtPos (Vector3 pos)
 	{
 		audioAsset?.PlayAtPos(pos);
@@ -19,5 +24,16 @@ public class AudioPlayer : MonoBehaviour
 	public void Stop()
 	{
 		audioAsset?.Stop();
+	}
+
+	private void OnDrawGizmos()
+	{
+		if (audioAsset != null && audioAsset.spatial)
+		{
+			Gizmos.color = Color.red;
+			Gizmos.DrawWireSphere(transform.position, audioAsset.minDistance);
+			Gizmos.color = Color.yellow;
+			Gizmos.DrawWireSphere(transform.position, audioAsset.maxDistance);
+		}
 	}
 }
