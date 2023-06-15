@@ -111,7 +111,7 @@ public class AudioAsset : ScriptableObject
 				ShuffleAudioClips();
 
 			source.clip = clipBuffer.Pop();
-			source.volume = Random.Range (volume.x, volume.y);
+			source.volume = Random.Range (volume.x, volume.y) * GetVolumeFactor();
 			source.pitch = Random.Range (pitch.x, pitch.y);
 			source.loop = IsSFX() ? false : loop;
 			source.spatialBlend = spatial ? 1f : 0f;
@@ -134,6 +134,18 @@ public class AudioAsset : ScriptableObject
 	private void OnEnable()
 	{
 		stableSource = EditorUtility.CreateGameObjectWithHideFlags ("AudioPreview", HideFlags.HideAndDontSave, typeof (AudioSource)).GetComponent <AudioSource>();
+	}
+
+	private float GetVolumeFactor()
+	{
+		if (audioTyp == AudioTyp.SFX)
+			return AudioSettings.Me().sfxVolume;
+		else if (audioTyp == AudioTyp.MUSIC)
+			return AudioSettings.Me().musicVolume;
+		else if (audioTyp == AudioTyp.AMBIENT)
+			return AudioSettings.Me().ambientVolume;
+		else
+			return AudioSettings.Me().uiVolume;
 	}
 
 	private void ShuffleAudioClips()
