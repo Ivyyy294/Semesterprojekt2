@@ -43,11 +43,12 @@ public class DefaultState : BaseState
 public class NpcNodeState : BaseState
 {
 	ChatMessage chatMessage;
+	float timer;
 
 	public override void Enter (GameObject obj)
 	{
 		base.Enter (obj);
-
+		timer = 0f;
 		chatMessage = Object.Instantiate (manager.messageNpcTemplate, manager.messageContainer.transform).GetComponentInChildren<ChatMessage>();
 		chatMessage.SetContent (node.data);
 		Canvas.ForceUpdateCanvases();
@@ -57,9 +58,15 @@ public class NpcNodeState : BaseState
 	{
 		if (chatMessage.Done)
 		{
-			if (node.ports.Count > 0)
+			manager.DialogTree.Next();
+
+			bool wait = manager.DialogTree.CurrentNode().data != null
+				&& manager.DialogTree.CurrentNode().data.Type == DialogNodeData.NodeType.NPC;
+
+			if (wait && timer < manager.delayNpcMessage)
+				timer += Time.deltaTime;
+			else if (node.ports.Count > 0)
 			{
-				manager.DialogTree.Next();
 				manager.SetState (manager.defaultState);
 			}
 		}
@@ -70,11 +77,13 @@ public class ChoiceNodeState : BaseState
 {
 	ChatMessage chatMessage;
 	int portSelected;
+	float timer = 0f;
 
 	public override void Enter (GameObject obj)
 	{
 		base.Enter (obj);
 
+		timer = 0f;
 		chatMessage = null;
 		portSelected = -1;
 
@@ -85,8 +94,13 @@ public class ChoiceNodeState : BaseState
 	{
 		if (portSelected != -1 && chatMessage != null && chatMessage.Done)
 		{
-			manager.DialogTree.Next (portSelected);
-			manager.SetState(manager.defaultState);
+			if (timer <= manager.delayPlayerMessage)
+				timer += Time.deltaTime;
+			else
+			{
+				manager.DialogTree.Next (portSelected);
+				manager.SetState(manager.defaultState);
+			}
 		}
 	}
 
@@ -198,6 +212,8 @@ public class WaitNodeState : BaseState
 public class Chat : MonoBehaviour
 {
 	public DialogContainer dialogContainer;
+	public float delayPlayerMessage = 0.5f;
+	public float delayNpcMessage = 0.5f;
 
 	[Header ("Lara values")]
 	public GameObject messageContainer;

@@ -39,7 +39,8 @@ public class DialogTree
 
 			if (nodesVisited.Count == 0)
 				guid = dialogContainer.GetStartNodeGuid();
-			else if (portIndex >= 0 && portIndex < nodesVisited.Peek().ports.Count)
+			else if (portIndex >= 0 && nodesVisited.Peek().ports != null
+				&& portIndex < nodesVisited.Peek().ports.Count)
 				guid = nodesVisited.Peek().ports[portIndex].targetNodeGuid;
 
 			nodesVisited.Push (new Node() {data = dialogContainer.GetDialogNodeData (guid), ports = dialogContainer.GetDialogPorts (guid)});

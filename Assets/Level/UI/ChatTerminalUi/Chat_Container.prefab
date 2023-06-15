@@ -52,6 +52,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogContainer: {fileID: 11400000, guid: d20359569e4b7e647a0f9878cfe3dd0f, type: 2}
+  delayPlayerMessage: 1
+  delayNpcMessage: 1
   messageContainer: {fileID: 5804524917878496070}
   messageNpcTemplate: {fileID: 1075436441059836512, guid: 8265db336072c6c40bd9d2f2ec17a4cc, type: 3}
   messagePlayerTemplate: {fileID: 7577303488300203282, guid: 9589fbed519bcdb4abae3fde6c713d30, type: 3}
