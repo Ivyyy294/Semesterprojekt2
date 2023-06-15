@@ -19,6 +19,16 @@ public abstract class BaseState: Ivyyy.StateMachine.IState
 	public abstract void Update  (GameObject obj);
 }
 
+public class PuckState : BaseState
+{
+	public override void Update  (GameObject obj)
+	{
+		node.data.audioAsset.Play();
+		manager.DialogTree.Next();
+		manager.SetState (manager.defaultState);
+	}
+}
+
 public class DefaultState : BaseState
 {
 	public override void Update  (GameObject obj)
@@ -37,6 +47,8 @@ public class DefaultState : BaseState
 			manager.SetState (manager.logicNodeState);
 		else if (node.data.Type == DialogNodeData.NodeType.WAIT)
 			manager.SetState (manager.waitNodeState);
+		else if (node.data.Type == DialogNodeData.NodeType.PUCK)
+			manager.SetState (manager.puckState);
 	}
 }
 
@@ -230,6 +242,7 @@ public class Chat : MonoBehaviour
 	public ListenEventNodeState listenEventNodeState = new ListenEventNodeState();
 	public LogicNodeState logicNodeState = new LogicNodeState();
 	public WaitNodeState waitNodeState = new WaitNodeState();
+	public PuckState puckState = new PuckState();
 
 	private Ivyyy.StateMachine.IState currentState;
 	

@@ -10,6 +10,7 @@ public class AudioSettings
 	public float musicVolume;
 	public float ambientVolume;
 	public float uiVolume;
+	public float voiceLine;
 
 	//Public Functions
 	public static AudioSettings Me()
@@ -26,6 +27,7 @@ public class AudioSettings
 		PlayerPrefs.SetFloat("musicVolume", musicVolume);
 		PlayerPrefs.SetFloat("ambientVolume", ambientVolume);
 		PlayerPrefs.SetFloat("uiVolume", uiVolume);
+		PlayerPrefs.SetFloat("voiceLine", voiceLine);
         PlayerPrefs.Save();
 	}
 
@@ -41,6 +43,7 @@ public class AudioSettings
 		musicVolume = LoadValue ("musicVolume");
 		ambientVolume = LoadValue ("ambientVolume");
 		uiVolume = LoadValue ("uiVolume");
+		voiceLine = LoadValue ("voiceLine");
 	}
 
 

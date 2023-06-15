@@ -14,6 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   audioClips:
   - {fileID: 8300000, guid: 79c6e10702e67df419d9f7b3f41f2412, type: 3}
+  subtitle: '[Access Denied]'
   playStyle: 0
   audioTyp: 0
   loop: 0

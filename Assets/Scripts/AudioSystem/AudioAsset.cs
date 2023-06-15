@@ -11,7 +11,8 @@ public class AudioAsset : ScriptableObject
 		SFX,
 		MUSIC,
 		AMBIENT,
-		UI
+		UI,
+		VOICE_LINE
 	}
 
 	public enum PlayStyle
@@ -22,6 +23,8 @@ public class AudioAsset : ScriptableObject
 	}
 
     public AudioClip[] audioClips;
+	public string subtitle;
+	[Space]
 	[SerializeField] PlayStyle playStyle = PlayStyle.RANDOM;
 	[Space]
 	public AudioTyp audioTyp = AudioTyp.SFX;
@@ -119,6 +122,7 @@ public class AudioAsset : ScriptableObject
 			source.maxDistance = maxDistance;
 			source.rolloffMode = AudioRolloffMode.Linear;
 
+			Subtitle.SetText (subtitle);
 			source.Play();
 
 			//Prevents stable source from being deleted
