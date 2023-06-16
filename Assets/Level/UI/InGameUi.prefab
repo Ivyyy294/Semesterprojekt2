@@ -556,7 +556,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9098869910340354469, guid: 33af2b7fc2656c843abd8e92faa7b4bd, type: 3}
       propertyPath: propertyGuid
-      value: 6750ede4-9857-474c-9a25-c38cbc4146d7
+      value: 62d7b466-8b9f-4209-b999-4bc0f4c5912b
       objectReference: {fileID: 0}
     - target: {fileID: 9098869910340354470, guid: 33af2b7fc2656c843abd8e92faa7b4bd, type: 3}
       propertyPath: gameEvent

@@ -12,4 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 21ecb098e7688f840810a874f3b63042, type: 3}
   m_Name: Dialog
   m_EditorClassIdentifier: 
-  data: []
+  data:
+  - name: DemetriusProgress
+    guid: 62d7b466-8b9f-4209-b999-4bc0f4c5912b
+    comparisonTyp: 0
+    iVal: 0

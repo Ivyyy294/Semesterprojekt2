@@ -70,9 +70,11 @@ MonoBehaviour:
     GameEvent: {fileID: 0}
     BlackBoardProperty:
       name: DemetriusProgress
-      guid: 95bdf4c3-b071-463a-aa9a-86b98645620a
+      guid: 62d7b466-8b9f-4209-b999-4bc0f4c5912b
       comparisonTyp: 0
       iVal: 1
+    audioAsset: {fileID: 0}
+    emotion: 0
   - Guid: 20ff768d-0629-4c10-aafc-9ae8476edb77
     DialogTitle: ChoiceNode
     Position: {x: 632.8, y: 177.59999}
@@ -86,6 +88,8 @@ MonoBehaviour:
       guid: 
       comparisonTyp: 0
       iVal: 0
+    audioAsset: {fileID: 0}
+    emotion: 0
   - Guid: 4bfba334-e23a-405d-a1e8-b7678606b4d4
     DialogTitle: NpcNode
     Position: {x: 932, y: 177.59999}
@@ -99,6 +103,8 @@ MonoBehaviour:
       guid: 
       comparisonTyp: 0
       iVal: 0
+    audioAsset: {fileID: 0}
+    emotion: 0
   - Guid: 5ce4be09-d3df-4831-ab9d-b4389773dab2
     DialogTitle: NpcNode
     Position: {x: 1188.8, y: 177.59999}
@@ -112,6 +118,8 @@ MonoBehaviour:
       guid: 
       comparisonTyp: 0
       iVal: 0
+    audioAsset: {fileID: 0}
+    emotion: 0
   - Guid: 79bdcf4d-6619-47e6-a2db-ebc0bcd1de84
     DialogTitle: ChoiceNode
     Position: {x: 1436.8, y: 177.59999}
@@ -125,6 +133,8 @@ MonoBehaviour:
       guid: 
       comparisonTyp: 0
       iVal: 0
+    audioAsset: {fileID: 0}
+    emotion: 0
   - Guid: 4eaafba8-f22c-44e2-866d-cffe0109c278
     DialogTitle: NpcNode
     Position: {x: 1965.6, y: 177.59999}
@@ -139,6 +149,8 @@ MonoBehaviour:
       guid: 
       comparisonTyp: 0
       iVal: 0
+    audioAsset: {fileID: 0}
+    emotion: 0
   - Guid: 669a9861-424c-477c-a27d-2db5edc86b9a
     DialogTitle: NpcNode
     Position: {x: 1965.6, y: 0}
@@ -152,6 +164,8 @@ MonoBehaviour:
       guid: 
       comparisonTyp: 0
       iVal: 0
+    audioAsset: {fileID: 0}
+    emotion: 0
   - Guid: 7bbb20bb-bde0-41eb-9066-86ad317d1ff3
     DialogTitle: NpcNode
     Position: {x: 1965.6, y: 366.40002}
@@ -166,6 +180,8 @@ MonoBehaviour:
       guid: 
       comparisonTyp: 0
       iVal: 0
+    audioAsset: {fileID: 0}
+    emotion: 0
   - Guid: 7343a857-3e4b-4718-8a63-ed52fc31d5a5
     DialogTitle: NpcNode
     Position: {x: 2596.8, y: 366.40002}
@@ -182,6 +198,8 @@ MonoBehaviour:
       guid: 
       comparisonTyp: 0
       iVal: 0
+    audioAsset: {fileID: 0}
+    emotion: 0
   - Guid: d985a7f3-178f-4bd2-a6d5-1d4d605c84f1
     DialogTitle: ChoiceNode
     Position: {x: 3225.6, y: 366.40002}
@@ -195,6 +213,8 @@ MonoBehaviour:
       guid: 
       comparisonTyp: 0
       iVal: 0
+    audioAsset: {fileID: 0}
+    emotion: 0
   - Guid: 740c07e4-d9ee-42af-a088-aa91c5181b46
     DialogTitle: NpcNode
     Position: {x: 3889.6, y: 219.2}
@@ -209,6 +229,8 @@ MonoBehaviour:
       guid: 
       comparisonTyp: 0
       iVal: 0
+    audioAsset: {fileID: 0}
+    emotion: 0
   - Guid: 7ba0f159-3431-4aa9-9e0f-7b60be78732c
     DialogTitle: NpcNode
     Position: {x: 3889.6, y: 380.80002}
@@ -222,6 +244,8 @@ MonoBehaviour:
       guid: 
       comparisonTyp: 0
       iVal: 0
+    audioAsset: {fileID: 0}
+    emotion: 0
   - Guid: 43333b6d-3e7b-48f4-8dd8-61f0ddeab9f0
     DialogTitle: NpcNode
     Position: {x: 3889.6, y: 540.8}
@@ -235,5 +259,7 @@ MonoBehaviour:
       guid: 
       comparisonTyp: 0
       iVal: 0
+    audioAsset: {fileID: 0}
+    emotion: 0
   dialogGroupData: []
   blackBoardList: {fileID: 11400000, guid: c289dd2bc5fda5942acc2419a6f68abb, type: 2}
