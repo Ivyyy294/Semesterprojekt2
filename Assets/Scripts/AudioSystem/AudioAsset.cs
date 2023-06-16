@@ -21,7 +21,6 @@ public class AudioAsset : ScriptableObject
 		IN_ORDER,
 		REVERSE
 	}
-
     public AudioClip[] audioClips;
 	public string subtitle;
 	[Space]
@@ -43,22 +42,16 @@ public class AudioAsset : ScriptableObject
 #if UNITY_EDITOR
 	public void PlayPreview()
 	{
+		//Play preview without spatial
+		bool spatialBackup = spatial;
+		spatial = false;
 		Play (stableSource);
+		spatial = spatialBackup;
 	}
 
 	public void StopPreview()
 	{
 		Stop();
-	}
-
-	private void OnDisable()
-	{
-			DestroyImmediate (stableSource.gameObject);
-	}
-#else
-	private void OnDisable()
-	{
-		Destroy (stableSource.gameObject);
 	}
 #endif
 
@@ -85,10 +78,7 @@ public class AudioAsset : ScriptableObject
 			AudioSource source = IsSFX() ? stableSource : audioSource;
 
 			if (source == null)
-			{
-				var obj = new GameObject ("Sound", typeof (AudioSource));
-				source = obj.GetComponent <AudioSource>();
-			}
+				source = CreateAudioSource();
 
 			source.transform.position = pos;
 			PlayIntern (source);
@@ -101,6 +91,16 @@ public class AudioAsset : ScriptableObject
 	}
 
 	//Private Functions
+	private void OnEnable()
+	{
+		stableSource = CreateAudioSource();
+	}
+
+	private void OnDisable()
+	{
+		Destroy (stableSource.gameObject);
+	}
+
 	private bool IsSFX()
 	{
 		return audioTyp == AudioTyp.MUSIC || audioTyp == AudioTyp.AMBIENT;
@@ -133,11 +133,6 @@ public class AudioAsset : ScriptableObject
 			Destroy (source.gameObject, source.clip.length / source.pitch);
 		}
 
-	}
-
-	private void OnEnable()
-	{
-		stableSource = EditorUtility.CreateGameObjectWithHideFlags ("AudioPreview", HideFlags.HideAndDontSave, typeof (AudioSource)).GetComponent <AudioSource>();
 	}
 
 	private float GetVolumeFactor()
@@ -178,5 +173,12 @@ public class AudioAsset : ScriptableObject
 		}
 
 		oldPlayStyle = playStyle;
+	}
+
+	AudioSource CreateAudioSource()
+	{
+		var obj = new GameObject ("AudioAssetSource", typeof (AudioSource));
+		obj.hideFlags = HideFlags.HideAndDontSave;
+		return obj.GetComponent <AudioSource>();
 	}
 }
