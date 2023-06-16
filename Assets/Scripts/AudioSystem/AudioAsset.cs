@@ -21,6 +21,7 @@ public class AudioAsset : ScriptableObject
 		IN_ORDER,
 		REVERSE
 	}
+
     public AudioClip[] audioClips;
 	public string subtitle;
 	[Space]
@@ -36,8 +37,7 @@ public class AudioAsset : ScriptableObject
 
 	private Stack <AudioClip> clipBuffer = new Stack <AudioClip>();
 	private PlayStyle oldPlayStyle;
-
-	private AudioSource stableSource;
+	private AudioAssetHelper stableSource;
 
 #if UNITY_EDITOR
 	public void PlayPreview()
@@ -55,27 +55,24 @@ public class AudioAsset : ScriptableObject
 	}
 #endif
 
-	public void Play (AudioSource audioSource = null)
+	public void Play (AudioAssetHelper audioSource = null)
 	{
 		if (audioClips.Length > 0)
 		{
-			AudioSource source = IsSFX() ? stableSource : audioSource;
+			AudioAssetHelper source = IsSFX() ? stableSource : audioSource;
 
 			if (source == null)
-			{
-				var obj = new GameObject ("Sound", typeof (AudioSource));
-				source = obj.GetComponent <AudioSource>();
-			}
+				source = CreateAudioSource();
 
 			PlayIntern (source);
 		}
 	}
 
-	public void PlayAtPos(Vector3 pos, AudioSource audioSource = null)
+	public void PlayAtPos(Vector3 pos, AudioAssetHelper audioSource = null)
 	{
 		if (audioClips.Length > 0)
 		{
-			AudioSource source = IsSFX() ? stableSource : audioSource;
+			AudioAssetHelper source = IsSFX() ? stableSource : audioSource;
 
 			if (source == null)
 				source = CreateAudioSource();
@@ -110,45 +107,36 @@ public class AudioAsset : ScriptableObject
 		return audioTyp == AudioTyp.MUSIC || audioTyp == AudioTyp.AMBIENT;
 	}
 
-	private void PlayIntern(AudioSource source)
+	private void PlayIntern(AudioAssetHelper source)
 	{
 		if (audioClips.Length > 0)
 		{
 			if (clipBuffer.Count == 0 || oldPlayStyle != playStyle)
 				ShuffleAudioClips();
 
-			source.clip = clipBuffer.Pop();
-			source.volume = Random.Range (volume.x, volume.y) * GetVolumeFactor();
-			source.pitch = Random.Range (pitch.x, pitch.y);
-			source.loop = IsSFX() ? false : loop;
-			source.spatialBlend = spatial ? 1f : 0f;
-			source.minDistance = minDistance;
-			source.maxDistance = maxDistance;
-			source.rolloffMode = AudioRolloffMode.Linear;
+			source.settings = new AudioAssetHelper.Settings()
+			{
+				clip = clipBuffer.Pop(),
+				subtitle = subtitle,
+				audioTyp = audioTyp,
+				loop = IsSFX() ? false : loop,
+				volume = Random.Range (volume.x, volume.y),
+				pitch = Random.Range (pitch.x, pitch.y),
+				spatial = spatial,
+				minDistance = minDistance,
+				maxDistance = maxDistance
+			};
 
-			Subtitle.SetText (subtitle);
-			source.Play();
+			source.Play ();
 
 			//Prevents stable source from being deleted
 			if (source == stableSource)
 				return;
 
 			//Delete tmp audio source after playing
-			Destroy (source.gameObject, source.clip.length / source.pitch);
+			Destroy (source.gameObject, source.settings.clip.length / source.settings.pitch);
 		}
 
-	}
-
-	private float GetVolumeFactor()
-	{
-		if (audioTyp == AudioTyp.SFX)
-			return AudioSettings.Me().sfxVolume;
-		else if (audioTyp == AudioTyp.MUSIC)
-			return AudioSettings.Me().musicVolume;
-		else if (audioTyp == AudioTyp.AMBIENT)
-			return AudioSettings.Me().ambientVolume;
-		else
-			return AudioSettings.Me().uiVolume;
 	}
 
 	private void ShuffleAudioClips()
@@ -179,10 +167,10 @@ public class AudioAsset : ScriptableObject
 		oldPlayStyle = playStyle;
 	}
 
-	AudioSource CreateAudioSource()
+	AudioAssetHelper CreateAudioSource()
 	{
-		var obj = new GameObject ("AudioAssetSource", typeof (AudioSource));
+		var obj = new GameObject ("AudioAssetSource", typeof (AudioAssetHelper));
 		obj.hideFlags = HideFlags.HideAndDontSave;
-		return obj.GetComponent <AudioSource>();
+		return obj.GetComponent <AudioAssetHelper>();
 	}
 }
