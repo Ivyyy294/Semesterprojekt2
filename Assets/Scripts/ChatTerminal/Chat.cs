@@ -214,7 +214,7 @@ public class WaitNodeState : BaseState
 		BlackBoardProperty checkValue = node.data.BlackBoardProperty;
 		BlackBoardProperty property = BlackBoard.Me().GetProperty (checkValue.guid);
 
-		if (property.Compare (checkValue))
+		if (property != null && property.Compare (checkValue))
 		{
 			manager.DialogTree.Next(0);
 			manager.SetState (manager.defaultState);

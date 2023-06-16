@@ -98,7 +98,11 @@ public class AudioAsset : ScriptableObject
 
 	private void OnDisable()
 	{
-		Destroy (stableSource.gameObject);
+		#if UNITY_EDITOR
+			DestroyImmediate (stableSource.gameObject);
+		#else
+			Destroy (stableSource.gameObject);
+		#endif
 	}
 
 	private bool IsSFX()
