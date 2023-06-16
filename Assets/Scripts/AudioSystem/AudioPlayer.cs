@@ -5,25 +5,49 @@ using UnityEngine;
 public class AudioPlayer : MonoBehaviour
 {
     [SerializeField] AudioAsset audioAsset;
+	private AudioSource audioSource;
+	private float fadeTime;
+	private float baseVolume;
+	bool fadeOut = false;
 
+	//Public Functions
 	public void Play()
 	{
-		audioAsset?.Play();
-	}
-
-	public void PlayAtPos ()
-	{
-		audioAsset?.PlayAtPos(transform.position);
-	}
-
-	public void PlayAtPos (Vector3 pos)
-	{
-		audioAsset?.PlayAtPos(pos);
+		audioAsset?.Play(audioSource);
+		baseVolume = audioSource.volume;
 	}
 
 	public void Stop()
 	{
-		audioAsset?.Stop();
+		audioSource.Stop();
+	}
+
+	public void FadeOut (float time)
+	{
+		fadeTime = time;
+		fadeOut = true;
+	}
+	
+	//Private Functions
+	private void Start()
+	{
+		audioSource = gameObject.AddComponent (typeof (AudioSource)) as AudioSource;
+	}
+
+	private void Update()
+	{
+		if (fadeOut && audioSource.isPlaying)
+		{
+			if (audioSource.volume > 0f)
+				audioSource.volume -= baseVolume * Time.deltaTime / fadeTime;
+			else
+			{
+				audioSource.Stop();
+				fadeOut = false;
+			}
+		}
+		else if (audioAsset != null && audioSource.isPlaying)
+			audioSource.volume = baseVolume * audioAsset.GetVolumeFactor();
 	}
 
 	private void OnDrawGizmos()

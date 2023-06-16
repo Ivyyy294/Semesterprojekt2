@@ -11,7 +11,7 @@ public class DoorTerminal : AudioPlayer, InteractableObject
 	{
 		if (timer >= coolDown)
 		{
-			PlayAtPos(transform.position);
+			Play();
 			timer = 0f;
 		}
 	}

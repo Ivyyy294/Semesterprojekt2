@@ -37,106 +37,85 @@ public class AudioAsset : ScriptableObject
 
 	private Stack <AudioClip> clipBuffer = new Stack <AudioClip>();
 	private PlayStyle oldPlayStyle;
-	private AudioAssetHelper stableSource;
 
 #if UNITY_EDITOR
-	public void PlayPreview()
-	{
-		//Play preview without spatial
-		bool spatialBackup = spatial;
-		spatial = false;
-		Play (stableSource);
-		spatial = spatialBackup;
-	}
+	private AudioSource preview;
 
-	public void StopPreview()
-	{
-		Stop();
-	}
-#endif
-
-	public void Play (AudioAssetHelper audioSource = null)
-	{
-		if (audioClips.Length > 0)
-		{
-			AudioAssetHelper source = IsSFX() ? stableSource : audioSource;
-
-			if (source == null)
-				source = CreateAudioSource();
-
-			PlayIntern (source);
-		}
-	}
-
-	public void PlayAtPos(Vector3 pos, AudioAssetHelper audioSource = null)
-	{
-		if (audioClips.Length > 0)
-		{
-			AudioAssetHelper source = IsSFX() ? stableSource : audioSource;
-
-			if (source == null)
-				source = CreateAudioSource();
-
-			source.transform.position = pos;
-			PlayIntern (source);
-		}
-	}
-
-	public void Stop()
-	{
-		stableSource.Stop();
-	}
-
-	//Private Functions
 	private void OnEnable()
 	{
-		stableSource = CreateAudioSource();
+		preview = CreateAudioSource();
 	}
 
 	private void OnDisable()
 	{
-		#if UNITY_EDITOR
-			DestroyImmediate (stableSource.gameObject);
-		#else
-			Destroy (stableSource.gameObject);
-		#endif
+		DestroyImmediate (preview);
 	}
 
-	private bool IsSFX()
+	public void PlayPreview()
 	{
-		return audioTyp == AudioTyp.MUSIC || audioTyp == AudioTyp.AMBIENT;
+		//Play preview without spatial
+		Play (preview).spatialBlend = 0f;;
 	}
 
-	private void PlayIntern(AudioAssetHelper source)
+	public void StopPreview()
 	{
+		preview.Stop();
+	}
+#endif
+
+	public AudioSource Play (AudioSource audioSource = null)
+	{
+		AudioSource source = audioSource;
+
+		if (source == null)
+			source = CreateAudioSource();
+		
 		if (audioClips.Length > 0)
 		{
 			if (clipBuffer.Count == 0 || oldPlayStyle != playStyle)
 				ShuffleAudioClips();
 
-			source.settings = new AudioAssetHelper.Settings()
-			{
-				clip = clipBuffer.Pop(),
-				subtitle = subtitle,
-				audioTyp = audioTyp,
-				loop = IsSFX() ? false : loop,
-				volume = Random.Range (volume.x, volume.y),
-				pitch = Random.Range (pitch.x, pitch.y),
-				spatial = spatial,
-				minDistance = minDistance,
-				maxDistance = maxDistance
-			};
+			source.clip = clipBuffer.Pop();
+			//Only Allow loop with externen AudioSource
+			source.loop = audioSource != null && loop;
+			source.volume = Random.Range (volume.x, volume.y) * GetVolumeFactor();
+			source.pitch = Random.Range (pitch.x, pitch.y);
+			source.spatialBlend = spatial ? 1f : 0f;
+			source.minDistance = minDistance;
+			source.maxDistance = maxDistance;
+			source.rolloffMode = AudioRolloffMode.Linear;
 
-			source.Play ();
+			Subtitle.SetText (subtitle);
+			audioSource.Play ();
 
+#if UNITY_EDITOR
 			//Prevents stable source from being deleted
-			if (source == stableSource)
-				return;
-
+			if (audioSource == preview)
+				return source;
+#endif
 			//Delete tmp audio source after playing
-			Destroy (source.gameObject, source.settings.clip.length / source.settings.pitch);
+			if (audioSource == null)
+				Destroy (source.gameObject, source.clip.length / source.pitch);
 		}
 
+		return source;
+	}
+
+	public void PlayAtPos(Vector3 pos)
+	{
+		Play ().transform.position = pos;
+	}
+
+	public float GetVolumeFactor()
+	{
+		if (audioTyp == AudioAsset.AudioTyp.SFX)
+			return AudioSettings.Me().sfxVolume;
+		else if (audioTyp == AudioAsset.AudioTyp.MUSIC)
+			return AudioSettings.Me().musicVolume;
+		else if (audioTyp == AudioAsset.AudioTyp.AMBIENT)
+			return AudioSettings.Me().ambientVolume;
+		else
+			return AudioSettings.Me().uiVolume;
 	}
 
 	private void ShuffleAudioClips()
@@ -167,10 +146,10 @@ public class AudioAsset : ScriptableObject
 		oldPlayStyle = playStyle;
 	}
 
-	AudioAssetHelper CreateAudioSource()
+	AudioSource CreateAudioSource()
 	{
-		var obj = new GameObject ("AudioAssetSource", typeof (AudioAssetHelper));
+		var obj = new GameObject ("AudioAssetSource", typeof (AudioSource));
 		obj.hideFlags = HideFlags.HideAndDontSave;
-		return obj.GetComponent <AudioAssetHelper>();
+		return obj.GetComponent <AudioSource>();
 	}
 }
