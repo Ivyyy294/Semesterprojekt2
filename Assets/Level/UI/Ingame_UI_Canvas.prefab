@@ -494,6 +494,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 11400000, guid: fc84f4413ed79e544bca5cac7c3a8472, type: 2}
+        m_TargetAssemblyTypeName: AudioAsset, Assembly-CSharp
+        m_MethodName: PlayOneShot
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &6085631415478846464
 GameObject:
   m_ObjectHideFlags: 0
@@ -619,6 +631,18 @@ MonoBehaviour:
       - m_Target: {fileID: 2374498164008061587}
         m_TargetAssemblyTypeName: PuckTerminal, Assembly-CSharp
         m_MethodName: OnClose
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 11400000, guid: fc84f4413ed79e544bca5cac7c3a8472, type: 2}
+        m_TargetAssemblyTypeName: AudioAsset, Assembly-CSharp
+        m_MethodName: PlayOneShot
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1489,7 +1513,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 6085631416547860704}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 11400000, guid: fc84f4413ed79e544bca5cac7c3a8472, type: 2}
+        m_TargetAssemblyTypeName: AudioAsset, Assembly-CSharp
+        m_MethodName: PlayOneShot
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &6085631416565928903
 GameObject:
   m_ObjectHideFlags: 0
@@ -2305,7 +2341,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 6085631417080430904}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 11400000, guid: fc84f4413ed79e544bca5cac7c3a8472, type: 2}
+        m_TargetAssemblyTypeName: AudioAsset, Assembly-CSharp
+        m_MethodName: PlayOneShot
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &6085631417084820601
 GameObject:
   m_ObjectHideFlags: 0
@@ -2503,7 +2551,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 6085631417134319837}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 11400000, guid: fc84f4413ed79e544bca5cac7c3a8472, type: 2}
+        m_TargetAssemblyTypeName: AudioAsset, Assembly-CSharp
+        m_MethodName: PlayOneShot
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &6085631417229248679
 GameObject:
   m_ObjectHideFlags: 0
@@ -3425,27 +3485,27 @@ PrefabInstance:
       objectReference: {fileID: 6085631416547860707}
     - target: {fileID: 7173554934744272397, guid: 70375655aeca7dc44a1eba79320978f0, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7173554934744272397, guid: 70375655aeca7dc44a1eba79320978f0, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
-      value: 3
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7173554934744272397, guid: 70375655aeca7dc44a1eba79320978f0, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 2374498164008061587}
+      objectReference: {fileID: 11400000, guid: fc84f4413ed79e544bca5cac7c3a8472, type: 2}
     - target: {fileID: 7173554934744272397, guid: 70375655aeca7dc44a1eba79320978f0, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 7173554934744272397, guid: 70375655aeca7dc44a1eba79320978f0, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: SetActiveChat
+      value: PlayOneShot
       objectReference: {fileID: 0}
     - target: {fileID: 7173554934744272397, guid: 70375655aeca7dc44a1eba79320978f0, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: PuckTerminal, Assembly-CSharp
+      value: AudioAsset, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 7173554934744272397, guid: 70375655aeca7dc44a1eba79320978f0, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName

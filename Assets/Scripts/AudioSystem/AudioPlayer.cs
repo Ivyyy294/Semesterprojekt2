@@ -5,6 +5,7 @@ using UnityEngine;
 public class AudioPlayer : MonoBehaviour
 {
     [SerializeField] AudioAsset audioAsset;
+	[SerializeField] bool playOnAwake = false;
 	private AudioSource audioSource;
 	private float fadeTime;
 	private float baseVolume;
@@ -13,8 +14,11 @@ public class AudioPlayer : MonoBehaviour
 	//Public Functions
 	public void Play()
 	{
-		audioAsset?.Play(audioSource);
-		baseVolume = audioSource.volume;
+		if (!audioSource.isPlaying)
+		{
+			audioAsset?.Play(audioSource);
+			baseVolume = audioSource.volume;
+		}
 	}
 
 	public void Stop()
@@ -32,6 +36,11 @@ public class AudioPlayer : MonoBehaviour
 	private void Start()
 	{
 		audioSource = gameObject.AddComponent (typeof (AudioSource)) as AudioSource;
+		audioSource.playOnAwake = false;
+		audioSource.Stop();
+
+		if (playOnAwake)
+			Play();
 	}
 
 	private void Update()

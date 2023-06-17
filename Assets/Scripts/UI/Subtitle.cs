@@ -15,7 +15,7 @@ public class Subtitle : MonoBehaviour
 	{
 		foreach (Subtitle i in instances)
 		{
-			i.textObj.text = text;
+			i.textObj.text = "[" + text + "]";
 			i.textObj.gameObject.SetActive(true);
 			i.timer = 0f;
 		}

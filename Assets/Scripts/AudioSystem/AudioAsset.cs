@@ -63,6 +63,11 @@ public class AudioAsset : ScriptableObject
 	}
 #endif
 
+	public void PlayOneShot()
+	{
+		Play (null);
+	}
+
 	public AudioSource Play (AudioSource audioSource = null)
 	{
 		AudioSource source = audioSource;
@@ -86,7 +91,7 @@ public class AudioAsset : ScriptableObject
 			source.rolloffMode = AudioRolloffMode.Linear;
 
 			Subtitle.SetText (subtitle);
-			audioSource.Play ();
+			source.Play ();
 
 #if UNITY_EDITOR
 			//Prevents stable source from being deleted
