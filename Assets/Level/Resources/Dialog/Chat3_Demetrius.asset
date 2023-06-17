@@ -71,39 +71,18 @@ MonoBehaviour:
   - baseNodeGuid: 2e70c489-fc69-446d-a30f-276ab0b313d2
     portName: Next
     targetNodeGuid: 5ce4be09-d3df-4831-ab9d-b4389773dab2
-  - baseNodeGuid: a523bfaf-f118-46f0-a715-0538f48ddfdf
-    portName: I don't know, Lysander was talking to him I think.
-    targetNodeGuid: b629496a-8d34-406a-8679-ccb996320a82
-  - baseNodeGuid: a523bfaf-f118-46f0-a715-0538f48ddfdf
-    portName: Just a thought. It'll be fine.
-    targetNodeGuid: b629496a-8d34-406a-8679-ccb996320a82
-  - baseNodeGuid: a523bfaf-f118-46f0-a715-0538f48ddfdf
-    portName: I am a little worried to be honest.
-    targetNodeGuid: 2b24f8ad-2bb0-4311-b2c3-0eb7695926f1
-  - baseNodeGuid: b629496a-8d34-406a-8679-ccb996320a82
-    portName: Next
-    targetNodeGuid: 63615971-dc0c-4419-b168-cce7f8dc5d37
-  - baseNodeGuid: 5453fabe-f66d-4d2f-8426-30138e0b6a64
-    portName: What are you gonna do?
-    targetNodeGuid: 1b118c26-4d54-47f4-b5a7-7708976e19c6
-  - baseNodeGuid: 5453fabe-f66d-4d2f-8426-30138e0b6a64
-    portName: Just leave it for now, please...
-    targetNodeGuid: 1b118c26-4d54-47f4-b5a7-7708976e19c6
-  - baseNodeGuid: 5453fabe-f66d-4d2f-8426-30138e0b6a64
-    portName: Can't wait
-    targetNodeGuid: 1b118c26-4d54-47f4-b5a7-7708976e19c6
   - baseNodeGuid: 63615971-dc0c-4419-b168-cce7f8dc5d37
     portName: Next
     targetNodeGuid: 5453fabe-f66d-4d2f-8426-30138e0b6a64
+  - baseNodeGuid: 4eaafba8-f22c-44e2-866d-cffe0109c278
+    portName: Next
+    targetNodeGuid: 801d32f4-462d-4f2d-a05f-eb14fd9f4b29
   - baseNodeGuid: 669a9861-424c-477c-a27d-2db5edc86b9a
     portName: Next
     targetNodeGuid: 801d32f4-462d-4f2d-a05f-eb14fd9f4b29
   - baseNodeGuid: 801d32f4-462d-4f2d-a05f-eb14fd9f4b29
     portName: Next
     targetNodeGuid: f38c8eef-d3eb-466d-8458-3fbec29fe7ef
-  - baseNodeGuid: f38c8eef-d3eb-466d-8458-3fbec29fe7ef
-    portName: Next
-    targetNodeGuid: 6651c660-7e65-49fd-8b45-df83ea7e5347
   - baseNodeGuid: 6651c660-7e65-49fd-8b45-df83ea7e5347
     portName: It's kinda cute.
     targetNodeGuid: 6b549ee7-02dd-476f-b6fd-3ede4f27620d
@@ -140,6 +119,9 @@ MonoBehaviour:
   - baseNodeGuid: 98bc0c28-327b-4b5f-a234-d97f7cade701
     portName: Next
     targetNodeGuid: b44f01b2-93f0-4743-b92a-3b363ac15866
+  - baseNodeGuid: f38c8eef-d3eb-466d-8458-3fbec29fe7ef
+    portName: Next
+    targetNodeGuid: 6651c660-7e65-49fd-8b45-df83ea7e5347
   - baseNodeGuid: b44f01b2-93f0-4743-b92a-3b363ac15866
     portName: Okay...
     targetNodeGuid: 63615971-dc0c-4419-b168-cce7f8dc5d37
@@ -149,15 +131,36 @@ MonoBehaviour:
   - baseNodeGuid: 98b318bf-48f9-4a92-97a4-6f99be3e0f2a
     portName: Next
     targetNodeGuid: 63615971-dc0c-4419-b168-cce7f8dc5d37
+  - baseNodeGuid: a523bfaf-f118-46f0-a715-0538f48ddfdf
+    portName: I don't know, Lysander was talking to him I think.
+    targetNodeGuid: b629496a-8d34-406a-8679-ccb996320a82
+  - baseNodeGuid: a523bfaf-f118-46f0-a715-0538f48ddfdf
+    portName: Just a thought. It'll be fine.
+    targetNodeGuid: b629496a-8d34-406a-8679-ccb996320a82
+  - baseNodeGuid: a523bfaf-f118-46f0-a715-0538f48ddfdf
+    portName: I am a little worried to be honest.
+    targetNodeGuid: 2b24f8ad-2bb0-4311-b2c3-0eb7695926f1
+  - baseNodeGuid: b629496a-8d34-406a-8679-ccb996320a82
+    portName: Next
+    targetNodeGuid: 63615971-dc0c-4419-b168-cce7f8dc5d37
   - baseNodeGuid: 2b24f8ad-2bb0-4311-b2c3-0eb7695926f1
     portName: Next
     targetNodeGuid: 63615971-dc0c-4419-b168-cce7f8dc5d37
+  - baseNodeGuid: 5453fabe-f66d-4d2f-8426-30138e0b6a64
+    portName: What are you gonna do?
+    targetNodeGuid: d28edd8e-a673-417f-9260-1e8858b7fdb3
+  - baseNodeGuid: 5453fabe-f66d-4d2f-8426-30138e0b6a64
+    portName: Just leave it for now, please...
+    targetNodeGuid: d28edd8e-a673-417f-9260-1e8858b7fdb3
+  - baseNodeGuid: 5453fabe-f66d-4d2f-8426-30138e0b6a64
+    portName: Can't wait
+    targetNodeGuid: d28edd8e-a673-417f-9260-1e8858b7fdb3
   - baseNodeGuid: 1b118c26-4d54-47f4-b5a7-7708976e19c6
     portName: Next
-    targetNodeGuid: d28edd8e-a673-417f-9260-1e8858b7fdb3
+    targetNodeGuid: 94da53d9-03e2-41e3-a28e-1ce954ed3530
   - baseNodeGuid: d28edd8e-a673-417f-9260-1e8858b7fdb3
     portName: Next
-    targetNodeGuid: 94da53d9-03e2-41e3-a28e-1ce954ed3530
+    targetNodeGuid: 1b118c26-4d54-47f4-b5a7-7708976e19c6
   dialogNodeData:
   - Guid: bb93f785-e00a-4aac-a0fc-753056451563
     DialogTitle: WaitNode
@@ -646,8 +649,8 @@ MonoBehaviour:
     audioAsset: {fileID: 0}
     emotion: 0
   - Guid: 1b118c26-4d54-47f4-b5a7-7708976e19c6
-    DialogTitle: Door opening etc
-    Position: {x: 6305.6, y: -8.799999}
+    DialogTitle: Light flickers, toilet door closes
+    Position: {x: 6692.8, y: -8.799999}
     Type: 2
     DialogText: 
     Image: {fileID: 0}
@@ -661,8 +664,8 @@ MonoBehaviour:
     audioAsset: {fileID: 0}
     emotion: 0
   - Guid: d28edd8e-a673-417f-9260-1e8858b7fdb3
-    DialogTitle: Wait for sound to finish playing
-    Position: {x: 6670.4, y: -8.799999}
+    DialogTitle: Wait for other dialogs
+    Position: {x: 6315.2, y: -40.8}
     Type: 5
     DialogText: 
     Image: {fileID: 0}
@@ -672,12 +675,12 @@ MonoBehaviour:
       name: 
       guid: 
       comparisonTyp: 0
-      iVal: 0
+      iVal: 2
     audioAsset: {fileID: 0}
     emotion: 0
   - Guid: 94da53d9-03e2-41e3-a28e-1ce954ed3530
     DialogTitle: ChoiceNode
-    Position: {x: 7096, y: -8.799999}
+    Position: {x: 7086.4, y: -8.799999}
     Type: 0
     DialogText: hello world
     Image: {fileID: 0}

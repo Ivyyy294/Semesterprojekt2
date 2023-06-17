@@ -15,11 +15,23 @@ MonoBehaviour:
   nodeLinks:
   - baseNodeGuid: a31ea04e-24f9-4654-b61b-88a9fc788043
     portName: Next
+    targetNodeGuid: c2927472-9216-4ecb-bccc-8d51fee9c6b8
+  - baseNodeGuid: c2927472-9216-4ecb-bccc-8d51fee9c6b8
+    portName: Next
     targetNodeGuid: 9850f2b4-69e8-4e54-a02e-2ec15e9867f1
+  - baseNodeGuid: 9850f2b4-69e8-4e54-a02e-2ec15e9867f1
+    portName: May thy illustrious grace feel greeted, Madam Hermia
+    targetNodeGuid: 9556fb16-6a62-40e7-bb8a-138a836c037b
+  - baseNodeGuid: 9556fb16-6a62-40e7-bb8a-138a836c037b
+    portName: Next
+    targetNodeGuid: a7cbe6a6-7a1d-4e41-b5c9-14c79e5f19d4
+  - baseNodeGuid: a7cbe6a6-7a1d-4e41-b5c9-14c79e5f19d4
+    portName: Next
+    targetNodeGuid: 794c454e-5d6b-41f5-8deb-0de92f060c70
   dialogNodeData:
   - Guid: c2927472-9216-4ecb-bccc-8d51fee9c6b8
-    DialogTitle: WaitNode
-    Position: {x: 228.8, y: 9.6}
+    DialogTitle: Wait for Lysander 1 finish
+    Position: {x: 235.2, y: 171.2}
     Type: 5
     DialogText: 
     Image: {fileID: 0}
@@ -30,9 +42,11 @@ MonoBehaviour:
       guid: 
       comparisonTyp: 0
       iVal: 0
+    audioAsset: {fileID: 0}
+    emotion: 0
   - Guid: 9850f2b4-69e8-4e54-a02e-2ec15e9867f1
     DialogTitle: ChoiceNode
-    Position: {x: 257.6, y: 200}
+    Position: {x: 641.6, y: 171.2}
     Type: 0
     DialogText: hello world
     Image: {fileID: 0}
@@ -43,11 +57,14 @@ MonoBehaviour:
       guid: 
       comparisonTyp: 0
       iVal: 0
-  - Guid: 10c7a9c0-438b-4a93-a9c4-4673bdf69681
+    audioAsset: {fileID: 0}
+    emotion: 0
+  - Guid: 9556fb16-6a62-40e7-bb8a-138a836c037b
     DialogTitle: NpcNode
-    Position: {x: 628, y: 168}
+    Position: {x: 1195.2, y: -118.399994}
     Type: 1
-    DialogText: Be right there
+    DialogText: Splendid! Thy body hath finally been freed from the bitter cold grasp
+      of ice!
     Image: {fileID: 0}
     customRespondTime: 0
     GameEvent: {fileID: 0}
@@ -56,5 +73,37 @@ MonoBehaviour:
       guid: 
       comparisonTyp: 0
       iVal: 0
+    audioAsset: {fileID: 0}
+    emotion: 0
+  - Guid: a7cbe6a6-7a1d-4e41-b5c9-14c79e5f19d4
+    DialogTitle: NpcNode
+    Position: {x: 1679.2, y: -118.399994}
+    Type: 1
+    DialogText: How art thee? Any ailments thou wisheth to address?
+    Image: {fileID: 0}
+    customRespondTime: 0
+    GameEvent: {fileID: 0}
+    BlackBoardProperty:
+      name: 
+      guid: 
+      comparisonTyp: 0
+      iVal: 0
+    audioAsset: {fileID: 0}
+    emotion: 0
+  - Guid: 794c454e-5d6b-41f5-8deb-0de92f060c70
+    DialogTitle: ChoiceNode
+    Position: {x: 2079.2, y: -246.40001}
+    Type: 0
+    DialogText: hello world
+    Image: {fileID: 0}
+    customRespondTime: 0
+    GameEvent: {fileID: 0}
+    BlackBoardProperty:
+      name: 
+      guid: 
+      comparisonTyp: 0
+      iVal: 0
+    audioAsset: {fileID: 0}
+    emotion: 0
   dialogGroupData: []
   blackBoardList: {fileID: 11400000, guid: c289dd2bc5fda5942acc2419a6f68abb, type: 2}
