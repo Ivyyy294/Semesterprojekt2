@@ -32,6 +32,8 @@ public class AudioPlayer : MonoBehaviour
 		fadeOut = true;
 	}
 	
+	public bool IsPlaying () {return audioSource.isPlaying;}
+
 	//Private Functions
 	private void Start()
 	{
