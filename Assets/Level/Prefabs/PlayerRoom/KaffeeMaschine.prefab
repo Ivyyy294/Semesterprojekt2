@@ -9,6 +9,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8884450904677707014}
+  - component: {fileID: 2861738750059881042}
+  - component: {fileID: 3299040006872246743}
+  - component: {fileID: 5025006497975676301}
   m_Layer: 0
   m_Name: KaffeeMaschine
   m_TagString: Untagged
@@ -32,6 +35,63 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2861738750059881042
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5298218261082774631}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b0668c38364f0e04f921b60b31452cd7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  audioAsset: {fileID: 0}
+  playOnAwake: 0
+--- !u!114 &3299040006872246743
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5298218261082774631}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8b7e28bd9a529714196f78146f5e856e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  puckState:
+    audioAsset: {fileID: 11400000, guid: 193f29cad9b678a4ea7b76b1c2e918fb, type: 2}
+    closeTerminalEvent: {fileID: 11400000, guid: 7829666ef44af2a4588008d9cc30d898, type: 2}
+--- !u!114 &5025006497975676301
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5298218261082774631}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7a1d18488b0649147a4b6dea6447213e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameEvent: {fileID: 11400000, guid: c60515c775a300b4ebdc05a8bce4c0ab, type: 2}
+  response:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 3299040006872246743}
+        m_TargetAssemblyTypeName: CoffeMachine, Assembly-CSharp
+        m_MethodName: EnterPuckState
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1001 &3089874364134382442
 PrefabInstance:
   m_ObjectHideFlags: 0
