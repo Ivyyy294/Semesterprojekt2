@@ -112,7 +112,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b0668c38364f0e04f921b60b31452cd7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  audioAsset: {fileID: 0}
+  audioAsset: {fileID: 11400000, guid: 193f29cad9b678a4ea7b76b1c2e918fb, type: 2}
   playOnAwake: 0
 --- !u!114 &5198814307144678719
 MonoBehaviour:
