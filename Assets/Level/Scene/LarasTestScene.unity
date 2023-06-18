@@ -618,7 +618,7 @@ Light:
   m_Type: 1
   m_Shape: 0
   m_Color: {r: 1, g: 0.95686275, b: 0.8392157, a: 1}
-  m_Intensity: 1
+  m_Intensity: 0.5
   m_Range: 10
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
@@ -723,6 +723,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 469722319890521089, guid: cbc17c2b942c75242850f0bbb7667649, type: 3}
+      propertyPath: audioAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: 193f29cad9b678a4ea7b76b1c2e918fb, type: 2}
     - target: {fileID: 4289919757083979123, guid: cbc17c2b942c75242850f0bbb7667649, type: 3}
       propertyPath: cinemachineBrain
       value: 
