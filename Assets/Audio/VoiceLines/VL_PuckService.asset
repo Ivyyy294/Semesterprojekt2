@@ -13,14 +13,14 @@ MonoBehaviour:
   m_Name: VL_PuckService
   m_EditorClassIdentifier: 
   audioClips:
-  - {fileID: 8300000, guid: 82bcd3cc8cf79e047a778541b8988ee2, type: 3}
+  - {fileID: 8300000, guid: 8c57ce160c9d31243876bfd3c9f306c3, type: 3}
   subtitle: 'To all passengers on board: my manufacturer strongly advice against
     modifying any of the ship`s equipment, especially the one currently responsible
     for your very survival!'
   playStyle: 0
   audioTyp: 4
   loop: 0
-  volume: {x: 0.5, y: 0.5}
+  volume: {x: 1, y: 1}
   pitch: {x: 1, y: 1}
   spatial: 0
   minDistance: 0.5
