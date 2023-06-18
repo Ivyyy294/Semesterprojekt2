@@ -553,12 +553,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 994550350}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -3.8581686, y: 0.18333323, z: -5.0986576}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 1423460381}
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &994550353
 MonoBehaviour:
@@ -679,8 +680,8 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_Father: {fileID: 994550352}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 40.578, y: -154.966, z: -139.243}
 --- !u!1 &1904734294
 GameObject:
@@ -713,7 +714,7 @@ Transform:
   - {fileID: 26363661}
   - {fileID: 691237748}
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &2000020345
 PrefabInstance:
@@ -726,9 +727,13 @@ PrefabInstance:
       propertyPath: cinemachineBrain
       value: 
       objectReference: {fileID: 851242532}
+    - target: {fileID: 5803543954318268142, guid: cbc17c2b942c75242850f0bbb7667649, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7053959207452852874, guid: cbc17c2b942c75242850f0bbb7667649, type: 3}
       propertyPath: m_RootOrder
-      value: 6
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 7053959207452852874, guid: cbc17c2b942c75242850f0bbb7667649, type: 3}
       propertyPath: m_LocalPosition.x
@@ -768,6 +773,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7053959207452852874, guid: cbc17c2b942c75242850f0bbb7667649, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7128190821138543975, guid: cbc17c2b942c75242850f0bbb7667649, type: 3}
+      propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8831366323530898775, guid: cbc17c2b942c75242850f0bbb7667649, type: 3}
