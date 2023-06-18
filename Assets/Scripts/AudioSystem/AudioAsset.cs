@@ -89,8 +89,6 @@ public class AudioAsset : ScriptableObject
 			source.minDistance = minDistance;
 			source.maxDistance = maxDistance;
 			source.rolloffMode = AudioRolloffMode.Linear;
-
-			Subtitle.SetText (subtitle);
 			source.Play ();
 
 #if UNITY_EDITOR
@@ -102,6 +100,8 @@ public class AudioAsset : ScriptableObject
 			if (audioSource == null)
 				Destroy (source.gameObject, source.clip.length / source.pitch);
 		}
+		
+		Subtitle.SetText (subtitle);
 
 		return source;
 	}

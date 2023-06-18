@@ -121,9 +121,13 @@ public class ChatTerminalObj : MonoBehaviour, Ivyyy.Interfaces.InteractableObjec
 		currentState.Enter(gameObject);
 	}
 
+	public void ShutDown()
+	{
+		active = false;
+	}
 
 	public void Interact()
 	{
-		active = !active;
+		active = true;
 	}
 }

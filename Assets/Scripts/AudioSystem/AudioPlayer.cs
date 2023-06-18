@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class AudioPlayer : MonoBehaviour
 {
-    [SerializeField] AudioAsset audioAsset;
+    [SerializeField]  AudioAsset audioAsset;
 	[SerializeField] bool playOnAwake = false;
 	private AudioSource audioSource;
 	private float fadeTime;
@@ -19,6 +19,12 @@ public class AudioPlayer : MonoBehaviour
 			audioAsset?.Play(audioSource);
 			baseVolume = audioSource.volume;
 		}
+	}
+
+	public void Play(AudioAsset newAudioAsset)
+	{
+		audioAsset = newAudioAsset;
+		Play();
 	}
 
 	public void Stop()
@@ -61,7 +67,7 @@ public class AudioPlayer : MonoBehaviour
 			audioSource.volume = baseVolume * audioAsset.GetVolumeFactor();
 	}
 
-	private void OnDrawGizmos()
+	private void OnDrawGizmosSelected()
 	{
 		if (audioAsset != null && audioAsset.spatial)
 		{

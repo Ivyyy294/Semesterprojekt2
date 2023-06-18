@@ -5,225 +5,224 @@ using TMPro;
 using UnityEngine.UI;
 using Ivyyy.SaveGameSystem;
 
-public abstract class BaseState: Ivyyy.StateMachine.IState
+public class Chat : MonoBehaviour
 {
-	protected DialogTree.Node node;
-	protected Chat manager;
-
-	public virtual void Enter (GameObject obj)
+	public abstract class BaseState: Ivyyy.StateMachine.IState
 	{
-		manager = obj.GetComponent <Chat>();
-		node = manager.DialogTree.CurrentNode();
-	}
+		protected DialogTree.Node node;
+		protected Chat manager;
 
-	public abstract void Update  (GameObject obj);
-}
-
-public class PuckState : BaseState
-{
-	public override void Update  (GameObject obj)
-	{
-		node.data.audioAsset.Play();
-		manager.DialogTree.Next();
-		manager.SetState (manager.defaultState);
-	}
-}
-
-public class DefaultState : BaseState
-{
-	public override void Update  (GameObject obj)
-	{
-		if (node.data == null)
-			return;
-		else if (node.data.Type == DialogNodeData.NodeType.NPC)
-			manager.SetState (manager.npcNodeState);
-		else if (node.data.Type == DialogNodeData.NodeType.CHOICE)
-			manager.SetState (manager.choiceNodeState);
-		else if (node.data.Type == DialogNodeData.NodeType.RAISE_EVENT)
-			manager.SetState (manager.raiseEventNodeState);
-		else if (node.data.Type == DialogNodeData.NodeType.LISTEN_EVENT)
-			manager.SetState (manager.listenEventNodeState);
-		else if (node.data.Type == DialogNodeData.NodeType.LOGIC)
-			manager.SetState (manager.logicNodeState);
-		else if (node.data.Type == DialogNodeData.NodeType.WAIT)
-			manager.SetState (manager.waitNodeState);
-		else if (node.data.Type == DialogNodeData.NodeType.PUCK)
-			manager.SetState (manager.puckState);
-	}
-}
-
-public class NpcNodeState : BaseState
-{
-	ChatMessage chatMessage;
-	float timer;
-
-	public override void Enter (GameObject obj)
-	{
-		base.Enter (obj);
-		timer = 0f;
-		chatMessage = Object.Instantiate (manager.messageNpcTemplate, manager.messageContainer.transform).GetComponentInChildren<ChatMessage>();
-		chatMessage.SetContent (node.data);
-		Canvas.ForceUpdateCanvases();
-	}
-
-	public override void Update (GameObject obj)
-	{
-		if (chatMessage.Done)
+		public virtual void Enter (GameObject obj)
 		{
-			DialogTree.Node nextNode = manager.DialogTree.Peek();
-
-			bool wait = nextNode.data != null
-				&& nextNode.data.Type == DialogNodeData.NodeType.NPC;
-
-			if (wait && timer < manager.delayNpcMessage)
-				timer += Time.deltaTime;
-			else if (node.ports.Count > 0)
-			{
-				manager.DialogTree.Next();
-				manager.SetState (manager.defaultState);
-			}
+			manager = obj.GetComponent <Chat>();
+			node = manager.DialogTree.CurrentNode();
 		}
-	}
-}
 
-public class ChoiceNodeState : BaseState
-{
-	ChatMessage chatMessage;
-	int portSelected;
-	float timer = 0f;
-
-	public override void Enter (GameObject obj)
-	{
-		base.Enter (obj);
-
-		timer = 0f;
-		chatMessage = null;
-		portSelected = -1;
-
-		InitButtons ();
+		public abstract void Update  (GameObject obj);
 	}
 
-	public override void Update (GameObject obj)
+	public class PuckState : BaseState
 	{
-		if (portSelected != -1 && chatMessage != null && chatMessage.Done)
+		public override void Update  (GameObject obj)
 		{
-			if (timer <= manager.delayPlayerMessage)
-				timer += Time.deltaTime;
-			else
-			{
-				manager.DialogTree.Next (portSelected);
-				manager.SetState(manager.defaultState);
-			}
-		}
-	}
-
-	public void InitButtons ()
-	{
-		for (int i = 0; i < node.ports.Count; ++i)
-		{
-			int portNr = i;
-			NodeLinkData port = node.ports[i];
-			manager.ButtonList[i].gameObject.SetActive(true);
-			manager.ButtonList[i].GetComponent<Button>().onClick.AddListener (call:() =>{ButtonCallBack(portNr);});
-			manager.ButtonList[i].GetComponentInChildren<TextMeshProUGUI>().text = (i + 1).ToString() + ") " + port.portName;
-		}
-	}
-
-	private void ButtonCallBack (int port)
-	{
-		manager.DisableButtons();
-		portSelected = port;
-		chatMessage = Object.Instantiate (manager.messagePlayerTemplate, manager.messageContainer.transform).GetComponentInChildren<ChatMessage>();
-		chatMessage.SetContent (node.ports[port].portName);
-	}
-}
-
-public class RaiseEventNodeState : BaseState
-{
-	public override void Enter (GameObject obj)
-	{
-		base.Enter (obj);
-		node.data.GameEvent?.Raise();
-	}
-
-	public override void Update  (GameObject obj)
-	{
-		manager.DialogTree.Next();
-		manager.SetState (manager.defaultState);
-	}
-}
-
-//ToDo it should be able to jump into every ListenEventNodeState at any time
-public class ListenEventNodeState : BaseState, Ivyyy.GameEvent.IGameEventListener
-{
-	bool done;
-
-	public override void Enter (GameObject obj)
-	{
-		base.Enter (obj);
-		done = false;
-		node.data.GameEvent.RegisterListener (this);
-	}
-
-	public override void Update  (GameObject obj)
-	{
-		if (done)
-		{
-			node.data.GameEvent.UnregisterListener (this);
+			node.data.audioAsset.Play();
 			manager.DialogTree.Next();
 			manager.SetState (manager.defaultState);
 		}
 	}
 
-	public void OnEventRaised()
+	public class DefaultState : BaseState
 	{
-		done = true;
-	}
-}
-
-public class LogicNodeState : BaseState
-{
-	public override void Update  (GameObject obj)
-	{
-		BlackBoardProperty checkValue = node.data.BlackBoardProperty;
-		BlackBoardProperty property = BlackBoard.Me().GetProperty (checkValue.guid);
-
-		if (property.Compare (checkValue))
-			True();
-		else
-			False();
-	}
-
-	private void True()
-	{
-		manager.DialogTree.Next(0);
-		manager.SetState (manager.defaultState);
+		public override void Update  (GameObject obj)
+		{
+			if (node.data == null)
+				return;
+			else if (node.data.Type == DialogNodeData.NodeType.NPC)
+				manager.SetState (manager.npcNodeState);
+			else if (node.data.Type == DialogNodeData.NodeType.CHOICE)
+				manager.SetState (manager.choiceNodeState);
+			else if (node.data.Type == DialogNodeData.NodeType.RAISE_EVENT)
+				manager.SetState (manager.raiseEventNodeState);
+			else if (node.data.Type == DialogNodeData.NodeType.LISTEN_EVENT)
+				manager.SetState (manager.listenEventNodeState);
+			else if (node.data.Type == DialogNodeData.NodeType.LOGIC)
+				manager.SetState (manager.logicNodeState);
+			else if (node.data.Type == DialogNodeData.NodeType.WAIT)
+				manager.SetState (manager.waitNodeState);
+			else if (node.data.Type == DialogNodeData.NodeType.PUCK)
+				manager.SetState (manager.puckState);
+		}
 	}
 
-	private void False()
+	public class NpcNodeState : BaseState
 	{
-		manager.DialogTree.Next(1);
-		manager.SetState (manager.defaultState);
+		ChatMessage chatMessage;
+		float timer;
+
+		public override void Enter (GameObject obj)
+		{
+			base.Enter (obj);
+			timer = 0f;
+			chatMessage = Object.Instantiate (manager.messageNpcTemplate, manager.messageContainer.transform).GetComponentInChildren<ChatMessage>();
+			chatMessage.SetContent (node.data);
+			Canvas.ForceUpdateCanvases();
+		}
+
+		public override void Update (GameObject obj)
+		{
+			if (chatMessage.Done)
+			{
+				DialogTree.Node nextNode = manager.DialogTree.Peek();
+
+				bool wait = nextNode.data != null
+					&& nextNode.data.Type == DialogNodeData.NodeType.NPC;
+
+				if (wait && timer < manager.delayNpcMessage)
+					timer += Time.deltaTime;
+				else if (node.ports.Count > 0)
+				{
+					manager.DialogTree.Next();
+					manager.SetState (manager.defaultState);
+				}
+			}
+		}
 	}
-}
 
-public class WaitNodeState : BaseState
-{
-	public override void Update  (GameObject obj)
+	public class ChoiceNodeState : BaseState
 	{
-		BlackBoardProperty checkValue = node.data.BlackBoardProperty;
-		BlackBoardProperty property = BlackBoard.Me().GetProperty (checkValue.guid);
+		ChatMessage chatMessage;
+		int portSelected;
+		float timer = 0f;
 
-		if (property != null && property.Compare (checkValue))
+		public override void Enter (GameObject obj)
+		{
+			base.Enter (obj);
+
+			timer = 0f;
+			chatMessage = null;
+			portSelected = -1;
+
+			InitButtons ();
+		}
+
+		public override void Update (GameObject obj)
+		{
+			if (portSelected != -1 && chatMessage != null && chatMessage.Done)
+			{
+				if (timer <= manager.delayPlayerMessage)
+					timer += Time.deltaTime;
+				else
+				{
+					manager.DialogTree.Next (portSelected);
+					manager.SetState(manager.defaultState);
+				}
+			}
+		}
+
+		public void InitButtons ()
+		{
+			for (int i = 0; i < node.ports.Count; ++i)
+			{
+				int portNr = i;
+				NodeLinkData port = node.ports[i];
+				manager.ButtonList[i].gameObject.SetActive(true);
+				manager.ButtonList[i].GetComponent<Button>().onClick.AddListener (call:() =>{ButtonCallBack(portNr);});
+				manager.ButtonList[i].GetComponentInChildren<TextMeshProUGUI>().text = (i + 1).ToString() + ") " + port.portName;
+			}
+		}
+
+		private void ButtonCallBack (int port)
+		{
+			manager.DisableButtons();
+			portSelected = port;
+			chatMessage = Object.Instantiate (manager.messagePlayerTemplate, manager.messageContainer.transform).GetComponentInChildren<ChatMessage>();
+			chatMessage.SetContent (node.ports[port].portName);
+		}
+	}
+
+	public class RaiseEventNodeState : BaseState
+	{
+		public override void Enter (GameObject obj)
+		{
+			base.Enter (obj);
+			node.data.GameEvent?.Raise();
+		}
+
+		public override void Update  (GameObject obj)
+		{
+			manager.DialogTree.Next();
+			manager.SetState (manager.defaultState);
+		}
+	}
+
+	//ToDo it should be able to jump into every ListenEventNodeState at any time
+	public class ListenEventNodeState : BaseState, Ivyyy.GameEvent.IGameEventListener
+	{
+		bool done;
+
+		public override void Enter (GameObject obj)
+		{
+			base.Enter (obj);
+			done = false;
+			node.data.GameEvent.RegisterListener (this);
+		}
+
+		public override void Update  (GameObject obj)
+		{
+			if (done)
+			{
+				node.data.GameEvent.UnregisterListener (this);
+				manager.DialogTree.Next();
+				manager.SetState (manager.defaultState);
+			}
+		}
+
+		public void OnEventRaised()
+		{
+			done = true;
+		}
+	}
+
+	public class LogicNodeState : BaseState
+	{
+		public override void Update  (GameObject obj)
+		{
+			BlackBoardProperty checkValue = node.data.BlackBoardProperty;
+			BlackBoardProperty property = BlackBoard.Me().GetProperty (checkValue.guid);
+
+			if (property.Compare (checkValue))
+				True();
+			else
+				False();
+		}
+
+		private void True()
 		{
 			manager.DialogTree.Next(0);
 			manager.SetState (manager.defaultState);
 		}
-	}
-}
 
-public class Chat : MonoBehaviour
-{
+		private void False()
+		{
+			manager.DialogTree.Next(1);
+			manager.SetState (manager.defaultState);
+		}
+	}
+
+	public class WaitNodeState : BaseState
+	{
+		public override void Update  (GameObject obj)
+		{
+			BlackBoardProperty checkValue = node.data.BlackBoardProperty;
+			BlackBoardProperty property = BlackBoard.Me().GetProperty (checkValue.guid);
+
+			if (property != null && property.Compare (checkValue))
+			{
+				manager.DialogTree.Next(0);
+				manager.SetState (manager.defaultState);
+			}
+		}
+	}
 	public DialogContainer dialogContainer;
 	public float delayPlayerMessage = 0.5f;
 	public float delayNpcMessage = 0.5f;
