@@ -10,16 +10,15 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6f7490679cbb0ec49b5d45a66e74b10e, type: 3}
-  m_Name: AccessDenied
+  m_Name: SFX_PuckCoffeAudio
   m_EditorClassIdentifier: 
-  audioClips:
-  - {fileID: 8300000, guid: 79c6e10702e67df419d9f7b3f41f2412, type: 3}
-  subtitle: Access Denied
+  audioClips: []
+  subtitle: One bean-infused jumpstart, coming right up!
   playStyle: 0
   audioTyp: 0
   loop: 0
-  volume: {x: 0.49991488, y: 0.49991488}
+  volume: {x: 0.5, y: 0.5}
   pitch: {x: 1, y: 1}
-  spatial: 1
-  minDistance: 0.77
-  maxDistance: 20
+  spatial: 0
+  minDistance: 0.5
+  maxDistance: 500

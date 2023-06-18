@@ -14,7 +14,6 @@ GameObject:
   - component: {fileID: 8162466846410683096}
   - component: {fileID: 3090176120141104036}
   - component: {fileID: 5198814307144678719}
-  - component: {fileID: 388662380962488935}
   m_Layer: 0
   m_Name: CoffeMachine
   m_TagString: Untagged
@@ -130,31 +129,3 @@ MonoBehaviour:
   puckState:
     audioAsset: {fileID: 11400000, guid: 02154548e21397f4685d034aef62ac4e, type: 2}
     closeTerminalEvent: {fileID: 11400000, guid: 7829666ef44af2a4588008d9cc30d898, type: 2}
---- !u!114 &388662380962488935
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1743034582567821262}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7a1d18488b0649147a4b6dea6447213e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  gameEvent: {fileID: 11400000, guid: c60515c775a300b4ebdc05a8bce4c0ab, type: 2}
-  response:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 5198814307144678719}
-        m_TargetAssemblyTypeName: CoffeMachine, Assembly-CSharp
-        m_MethodName: EnterPuckState
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
