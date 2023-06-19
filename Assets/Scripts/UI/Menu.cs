@@ -2,7 +2,8 @@ using Ivyyy.GameEvent;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.SceneManagement;
+using Ivyyy.SaveGameSystem;
+using UnityEngine.UI;
 
 public class Menu : MonoBehaviour
 {
@@ -10,10 +11,13 @@ public class Menu : MonoBehaviour
 	[SerializeField] GameEvent newGame;
 	[SerializeField] GameEvent continueGame;
 	[SerializeField] GameEvent closeGame;
+	[SerializeField] GameObject continueButton;
+
 
 	public void Start()
 	{
 		Cursor.lockState = CursorLockMode.Confined;
+		continueButton.GetComponent<Button>().interactable = SaveGameManager.Me().SaveGameAvailable();
 	}
 
 	public void OnNewGameButton()

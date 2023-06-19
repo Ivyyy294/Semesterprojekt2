@@ -946,6 +946,7 @@ MonoBehaviour:
   newGame: {fileID: 11400000, guid: 954a56bd96d9a464bb298f82f775b613, type: 2}
   continueGame: {fileID: 11400000, guid: 0ad92ee396bd5e44ca78909d97247119, type: 2}
   closeGame: {fileID: 11400000, guid: 0138fde21d9e0f74389debde818f3132, type: 2}
+  continueButton: {fileID: 7780903170862829638}
 --- !u!1 &5771930690712389718
 GameObject:
   m_ObjectHideFlags: 0
