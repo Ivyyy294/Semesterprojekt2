@@ -13,8 +13,8 @@ public class DialogContainer : ScriptableObject
 
 	public string GetStartNodeGuid ()
 	{
-		if (nodeLinks.Count > 0)
-			return nodeLinks[0].targetNodeGuid;
+		if (dialogNodeData.Any(x=>x.Type == DialogNodeData.NodeType.START))
+			return dialogNodeData.First(x=>x.Type == DialogNodeData.NodeType.START).Guid;
 		else
 			return default (string);
 	}

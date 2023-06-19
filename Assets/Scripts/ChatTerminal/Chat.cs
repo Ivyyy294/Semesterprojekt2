@@ -51,6 +51,11 @@ public class Chat : MonoBehaviour
 				manager.SetState (manager.waitNodeState);
 			else if (node.data.Type == DialogNodeData.NodeType.PUCK)
 				manager.SetState (manager.puckState);
+			else if (node.data.Type == DialogNodeData.NodeType.START)
+			{
+				manager.DialogTree.Next();
+				node = manager.DialogTree.CurrentNode();
+			}
 		}
 	}
 
