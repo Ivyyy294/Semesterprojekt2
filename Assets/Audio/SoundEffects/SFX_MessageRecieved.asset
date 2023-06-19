@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   audioClips:
   - {fileID: 8300000, guid: 7c779a62b0425ca49bb8465a5d6b00ae, type: 3}
-  subtitle: 
+  subtitle: New Message
   playStyle: 0
   audioTyp: 0
   loop: 0
