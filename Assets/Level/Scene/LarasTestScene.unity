@@ -681,6 +681,18 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 3934365786011713983, guid: cbc17c2b942c75242850f0bbb7667649, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.85
+      objectReference: {fileID: 0}
+    - target: {fileID: 3934365786011713983, guid: cbc17c2b942c75242850f0bbb7667649, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.32
+      objectReference: {fileID: 0}
+    - target: {fileID: 3934365786011713983, guid: cbc17c2b942c75242850f0bbb7667649, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.12
+      objectReference: {fileID: 0}
     - target: {fileID: 4289919757083979123, guid: cbc17c2b942c75242850f0bbb7667649, type: 3}
       propertyPath: cinemachineBrain
       value: 
