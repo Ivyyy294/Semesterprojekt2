@@ -59,7 +59,7 @@ public class PuckTerminal : MonoBehaviour
 	{
 		if (index >= 0 && index < dialogList.Length)
 		{
-			buttonObjList[index].gameObject.SetActive(true);
+			buttonObjList[index].interactable = true;
 			dialogList[index].available = true;
 		}
 	}
@@ -93,7 +93,7 @@ public class PuckTerminal : MonoBehaviour
 	{
 		//Updating button visiblity
 		for (int i = 0; i < dialogList.Length; ++i)
-			buttonObjList[i].gameObject.SetActive (dialogList[i].available);
+			buttonObjList[i].interactable = dialogList[i].available;
 	}
 
 	private void InitObjLists ()
@@ -109,7 +109,8 @@ public class PuckTerminal : MonoBehaviour
 
 				if (button != null)
 				{
-					button.gameObject.SetActive (false);
+					button.interactable = false;
+					//button.gameObject.SetActive (false);
 					buttonObjList.Add (button);
 				}
 			}
