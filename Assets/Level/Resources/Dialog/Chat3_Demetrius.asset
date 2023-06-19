@@ -195,7 +195,7 @@ MonoBehaviour:
     Type: 1
     DialogText: What's up?
     Image: {fileID: 0}
-    customRespondTime: 0
+    customRespondTime: 20
     GameEvent: {fileID: 0}
     BlackBoardProperty:
       name: 
