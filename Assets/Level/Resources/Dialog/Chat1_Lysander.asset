@@ -13,9 +13,6 @@ MonoBehaviour:
   m_Name: Chat1_Lysander
   m_EditorClassIdentifier: 
   nodeLinks:
-  - baseNodeGuid: af88c5cd-47d5-41e2-b8d8-21997c32d15c
-    portName: Next
-    targetNodeGuid: ac7acd63-894e-4a46-be96-2c9c8b18f76e
   - baseNodeGuid: ac7acd63-894e-4a46-be96-2c9c8b18f76e
     portName: Next
     targetNodeGuid: d5d203e8-8790-41e5-a40d-f79e7c2518f7
@@ -152,12 +149,15 @@ MonoBehaviour:
   - baseNodeGuid: 05a6ef28-7044-4d40-b03c-2b4a80112f3a
     portName: Do you know if any others are awake yet?
     targetNodeGuid: 7fb2d1da-4140-4989-bf7e-28c722a4c90a
-  - baseNodeGuid: 68f675f1-f7cc-4d0e-82c0-3888a040aee7
-    portName: Next
-    targetNodeGuid: 846bdb2b-0367-4010-a800-17baec48f3c3
   - baseNodeGuid: 8a57a009-6769-48f4-968f-9c09c33f1508
     portName: Next
     targetNodeGuid: cd2505b0-822b-4de7-aa6a-5127f579c0ca
+  - baseNodeGuid: 68f675f1-f7cc-4d0e-82c0-3888a040aee7
+    portName: Next
+    targetNodeGuid: 846bdb2b-0367-4010-a800-17baec48f3c3
+  - baseNodeGuid: 01f137fe-53d0-4651-90a6-01768da51246
+    portName: Next
+    targetNodeGuid: ac7acd63-894e-4a46-be96-2c9c8b18f76e
   dialogNodeData:
   - Guid: ac7acd63-894e-4a46-be96-2c9c8b18f76e
     DialogTitle: Npc Node
@@ -699,6 +699,21 @@ MonoBehaviour:
       iVal: 0
     audioAsset: {fileID: 0}
     emotion: 0
+  - Guid: 01f137fe-53d0-4651-90a6-01768da51246
+    DialogTitle: START
+    Position: {x: 100, y: 200}
+    Type: 7
+    DialogText: ENTRYPOINT
+    Image: {fileID: 0}
+    customRespondTime: 0
+    GameEvent: {fileID: 0}
+    BlackBoardProperty:
+      name: 
+      guid: 
+      comparisonTyp: 0
+      iVal: 0
+    audioAsset: {fileID: 0}
+    emotion: 0
   dialogGroupData:
   - Guid: 
     name: Day 1.1
@@ -736,8 +751,8 @@ MonoBehaviour:
     - 23537181-20f4-464e-8559-5a99235b2bef
     - 14a9c182-1a59-4add-b121-31609dec5c19
     - 7c9ef1bc-153e-43dd-b1ed-d27e176ce886
-    - 846bdb2b-0367-4010-a800-17baec48f3c3
     - 05a6ef28-7044-4d40-b03c-2b4a80112f3a
-    - 68f675f1-f7cc-4d0e-82c0-3888a040aee7
     - 8a57a009-6769-48f4-968f-9c09c33f1508
+    - 68f675f1-f7cc-4d0e-82c0-3888a040aee7
+    - 846bdb2b-0367-4010-a800-17baec48f3c3
   blackBoardList: {fileID: 11400000, guid: c289dd2bc5fda5942acc2419a6f68abb, type: 2}

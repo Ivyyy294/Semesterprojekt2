@@ -53,7 +53,7 @@ public class GraphSaveUtility
 		}
 
 		//Create Node List
-		foreach (var dialogNode in Nodes.Where (node => !node.entryPoint))
+		foreach (var dialogNode in Nodes)
 		{
 			DialogNodeData newData = dialogNode.data;
 			newData.Position = dialogNode.GetPosition().position;
@@ -177,6 +177,8 @@ public class GraphSaveUtility
 
 	private void CreateNodes()
 	{
+		bool createEntryNode = true;
+
 		foreach (var nodeData in containerCache.dialogNodeData)
 		{
 			DialogNode tmpNode;
@@ -196,8 +198,16 @@ public class GraphSaveUtility
 				tmpNode = DialogWaitNode.Create (data, targetGraphView);
 			else if (data.Type == DialogNodeData.NodeType.PUCK)
 				tmpNode = DialogPuckNode.Create (data);
-			else
+			else if (data.Type == DialogNodeData.NodeType.CHOICE)
 				tmpNode = DialogChoiceNode.Create (data, targetGraphView);
+			else if (data.Type == DialogNodeData.NodeType.START)
+			{
+				tmpNode = targetGraphView.GenerateEntryPointNode();
+				tmpNode.data = data;
+				createEntryNode = false;
+			}
+			else
+				continue;
 			
 			targetGraphView.AddElement (tmpNode);
 			tmpNode.SetPosition (new Rect (data.Position, DialogNode.defaultSize));
@@ -209,21 +219,17 @@ public class GraphSaveUtility
 				nodePorts.ForEach (x=>node.CreateChoicePort (x.portName));
 			}
 		}
+
+		if (createEntryNode)
+			targetGraphView.AddElement (targetGraphView.GenerateEntryPointNode());
 	}
 
 	private void ClearGraph()
 	{
-		//Setzt the root guid if available
-		if (containerCache.nodeLinks.Count > 0)
-			Nodes.Find (x => x.entryPoint).data.Guid = containerCache.nodeLinks[0].baseNodeGuid;
-
 		foreach (var node in Nodes)
 		{
-			if (node.entryPoint) continue;
-
 			//Remove Edges
 			Edges.Where (x => x.input.node ==node).ToList().ForEach(edge=>targetGraphView.RemoveElement(edge));
-
 			targetGraphView.RemoveElement (node);
 		}
 

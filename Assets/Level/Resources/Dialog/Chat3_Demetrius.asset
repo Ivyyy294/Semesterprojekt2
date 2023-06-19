@@ -13,9 +13,6 @@ MonoBehaviour:
   m_Name: Chat3_Demetrius
   m_EditorClassIdentifier: 
   nodeLinks:
-  - baseNodeGuid: bb93f785-e00a-4aac-a0fc-753056451563
-    portName: Next
-    targetNodeGuid: 20ff768d-0629-4c10-aafc-9ae8476edb77
   - baseNodeGuid: 20ff768d-0629-4c10-aafc-9ae8476edb77
     portName: Hey Demetrius.
     targetNodeGuid: 4bfba334-e23a-405d-a1e8-b7678606b4d4
@@ -65,9 +62,6 @@ MonoBehaviour:
   - baseNodeGuid: 43333b6d-3e7b-48f4-8dd8-61f0ddeab9f0
     portName: Next
     targetNodeGuid: 63615971-dc0c-4419-b168-cce7f8dc5d37
-  - baseNodeGuid: 2e70c489-fc69-446d-a30f-276ab0b313d2
-    portName: Next
-    targetNodeGuid: 5ce4be09-d3df-4831-ab9d-b4389773dab2
   - baseNodeGuid: 63615971-dc0c-4419-b168-cce7f8dc5d37
     portName: Next
     targetNodeGuid: 5453fabe-f66d-4d2f-8426-30138e0b6a64
@@ -158,6 +152,12 @@ MonoBehaviour:
   - baseNodeGuid: d28edd8e-a673-417f-9260-1e8858b7fdb3
     portName: Next
     targetNodeGuid: 1b118c26-4d54-47f4-b5a7-7708976e19c6
+  - baseNodeGuid: 2e70c489-fc69-446d-a30f-276ab0b313d2
+    portName: Next
+    targetNodeGuid: 5ce4be09-d3df-4831-ab9d-b4389773dab2
+  - baseNodeGuid: 0df5c60d-1189-456d-bbfe-4ab164e3f801
+    portName: Next
+    targetNodeGuid: 20ff768d-0629-4c10-aafc-9ae8476edb77
   dialogNodeData:
   - Guid: 20ff768d-0629-4c10-aafc-9ae8476edb77
     DialogTitle: ChoiceNode
@@ -668,6 +668,21 @@ MonoBehaviour:
     Image: {fileID: 0}
     customRespondTime: 0
     GameEvent: {fileID: 11400000, guid: 4ee126d9d70adab47bf071260ffd2d38, type: 2}
+    BlackBoardProperty:
+      name: 
+      guid: 
+      comparisonTyp: 0
+      iVal: 0
+    audioAsset: {fileID: 0}
+    emotion: 0
+  - Guid: 0df5c60d-1189-456d-bbfe-4ab164e3f801
+    DialogTitle: START
+    Position: {x: 100, y: 200}
+    Type: 7
+    DialogText: ENTRYPOINT
+    Image: {fileID: 0}
+    customRespondTime: 0
+    GameEvent: {fileID: 0}
     BlackBoardProperty:
       name: 
       guid: 

@@ -13,9 +13,6 @@ MonoBehaviour:
   m_Name: Chat2_Hermia
   m_EditorClassIdentifier: 
   nodeLinks:
-  - baseNodeGuid: c2927472-9216-4ecb-bccc-8d51fee9c6b8
-    portName: Next
-    targetNodeGuid: 9850f2b4-69e8-4e54-a02e-2ec15e9867f1
   - baseNodeGuid: 9850f2b4-69e8-4e54-a02e-2ec15e9867f1
     portName: May thy illustrious grace feel greeted, Madam Hermia
     targetNodeGuid: 9556fb16-6a62-40e7-bb8a-138a836c037b
@@ -25,6 +22,9 @@ MonoBehaviour:
   - baseNodeGuid: a7cbe6a6-7a1d-4e41-b5c9-14c79e5f19d4
     portName: Next
     targetNodeGuid: 794c454e-5d6b-41f5-8deb-0de92f060c70
+  - baseNodeGuid: 30f60bfd-356c-4186-b199-f29e35efb023
+    portName: Next
+    targetNodeGuid: 9850f2b4-69e8-4e54-a02e-2ec15e9867f1
   dialogNodeData:
   - Guid: 9850f2b4-69e8-4e54-a02e-2ec15e9867f1
     DialogTitle: ChoiceNode
@@ -77,6 +77,21 @@ MonoBehaviour:
     Position: {x: 2079, y: -246}
     Type: 0
     DialogText: hello world
+    Image: {fileID: 0}
+    customRespondTime: 0
+    GameEvent: {fileID: 0}
+    BlackBoardProperty:
+      name: 
+      guid: 
+      comparisonTyp: 0
+      iVal: 0
+    audioAsset: {fileID: 0}
+    emotion: 0
+  - Guid: 30f60bfd-356c-4186-b199-f29e35efb023
+    DialogTitle: START
+    Position: {x: 100, y: 200}
+    Type: 7
+    DialogText: ENTRYPOINT
     Image: {fileID: 0}
     customRespondTime: 0
     GameEvent: {fileID: 0}

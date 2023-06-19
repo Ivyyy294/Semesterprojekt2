@@ -12,7 +12,8 @@ public class DialogNodeData
 		LISTEN_EVENT,
 		LOGIC,
 		WAIT,
-		PUCK
+		PUCK,
+		START
 	}
 
 	//Base Values

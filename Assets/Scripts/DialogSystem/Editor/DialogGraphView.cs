@@ -33,7 +33,7 @@ public class DialogGraphView : GraphView
 		//Insert (0, grid);
 		//grid.StretchToParentSize();
 
-		AddElement (GenerateEntryPointNode());
+		//AddElement (GenerateEntryPointNode());
 		AddStyles();
 	}
 
@@ -205,7 +205,7 @@ public class DialogGraphView : GraphView
 		return contextualMenuManipulator;
 	}
 
-	private DialogNode GenerateEntryPointNode()
+	public DialogNode GenerateEntryPointNode()
 	{ 
 		var node = new DialogNode
 		{
@@ -217,6 +217,7 @@ public class DialogGraphView : GraphView
 				DialogTitle = "START",
 				Guid = System.Guid.NewGuid().ToString(),
 				DialogText = "ENTRYPOINT",
+				Type = DialogNodeData.NodeType.START
 			}
 		};
 
