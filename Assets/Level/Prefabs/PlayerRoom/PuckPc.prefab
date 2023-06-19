@@ -300,10 +300,18 @@ PrefabInstance:
       propertyPath: m_ConstrainProportionsScale
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: -804731622281664130, guid: c3c167dd24466874db7d35e66edf10a3, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 2845b7965ba1c6849b4fbd967d80bb07, type: 2}
     - target: {fileID: 919132149155446097, guid: c3c167dd24466874db7d35e66edf10a3, type: 3}
       propertyPath: m_Name
       value: puck1
       objectReference: {fileID: 0}
+    - target: {fileID: 8823642267606928500, guid: c3c167dd24466874db7d35e66edf10a3, type: 3}
+      propertyPath: m_Materials.Array.data[1]
+      value: 
+      objectReference: {fileID: 2100000, guid: 2845b7965ba1c6849b4fbd967d80bb07, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c3c167dd24466874db7d35e66edf10a3, type: 3}
 --- !u!4 &4056181083207152585 stripped
