@@ -26,7 +26,9 @@ public class ChatMessage : MonoBehaviour
 		done = false;
 		nodeData = data;
 		respondTime = CalculateRespondTime ();
-		timer = force ? respondTime : 0f;
+
+		if (force)
+			SetContentIntern (true);
 	}
 
 	public void SetContent (string text, bool force = false)
@@ -41,23 +43,7 @@ public class ChatMessage : MonoBehaviour
 		if (timer < respondTime)
 			timer += Time.deltaTime;
 		else if (!done)
-		{
-			if (nodeData != null)
-			{
-				txtField.text = nodeData.DialogText;
-				imageObj.gameObject.SetActive (true);
-				audioAsset?.Play();
-
-				if (nodeData.Image != null)
-				{
-					imageObj.gameObject.SetActive (true);
-					imageObj.sprite = nodeData.Image;
-				}
-			}
-			
-			Canvas.ForceUpdateCanvases();
-			done = true;
-		}
+			SetContentIntern();
 	}
 
 	private float CalculateRespondTime()
@@ -66,5 +52,26 @@ public class ChatMessage : MonoBehaviour
 			return nodeData.customRespondTime;
 		else
 			return minRespondTime + nodeData.DialogText.Length * timePerChar;
+	}
+
+	private void SetContentIntern (bool silent = false)
+	{
+		if (nodeData != null)
+		{
+			txtField.text = nodeData.DialogText;
+			imageObj.gameObject.SetActive (true);
+
+			if (!silent)
+				audioAsset?.Play();
+
+			if (nodeData.Image != null)
+			{
+				imageObj.gameObject.SetActive (true);
+				imageObj.sprite = nodeData.Image;
+			}
+
+			Canvas.ForceUpdateCanvases();
+			done = true;
+		}
 	}
 }
