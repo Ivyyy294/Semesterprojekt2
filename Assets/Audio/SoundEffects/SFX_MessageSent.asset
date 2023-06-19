@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6f7490679cbb0ec49b5d45a66e74b10e, type: 3}
+  m_Name: SFX_MessageSent
+  m_EditorClassIdentifier: 
+  audioClips:
+  - {fileID: 8300000, guid: dd9b8d7d03fcce64f9a7137dd8070dab, type: 3}
+  subtitle: 
+  playStyle: 0
+  audioTyp: 3
+  loop: 0
+  volume: {x: 0.13674977, y: 0.16141412}
+  pitch: {x: 1.0986573, y: 1.0986573}
+  spatial: 0
+  minDistance: 0.5
+  maxDistance: 500

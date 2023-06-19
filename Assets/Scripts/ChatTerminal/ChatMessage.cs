@@ -8,6 +8,7 @@ public class ChatMessage : MonoBehaviour
 {
 	[SerializeField] float minRespondTime = 0.5f;
 	[SerializeField] float timePerChar = 0.1f;
+	[SerializeField] AudioAsset audioAsset;
 
 	[Header ("Lara Values")]
 	[SerializeField] TextMeshProUGUI txtField;
@@ -45,6 +46,7 @@ public class ChatMessage : MonoBehaviour
 			{
 				txtField.text = nodeData.DialogText;
 				imageObj.gameObject.SetActive (true);
+				audioAsset?.Play();
 
 				if (nodeData.Image != null)
 				{

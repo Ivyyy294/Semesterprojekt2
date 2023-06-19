@@ -134,8 +134,8 @@ RectTransform:
   m_Father: {fileID: 4373267799486173068}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
   m_AnchoredPosition: {x: 673.5, y: 0}
   m_SizeDelta: {x: 103.16, y: 0}
   m_Pivot: {x: 1, y: 1}
@@ -483,6 +483,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   minRespondTime: 0
   timePerChar: 0
+  audioAsset: {fileID: 11400000, guid: fc84f4413ed79e544bca5cac7c3a8472, type: 2}
   txtField: {fileID: 5551333699606907536}
   imageObj: {fileID: 2503426378581378694}
 --- !u!114 &8529109700553244970

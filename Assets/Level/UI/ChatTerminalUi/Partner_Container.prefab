@@ -55,6 +55,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   minRespondTime: 0.5
   timePerChar: 0.02
+  audioAsset: {fileID: 11400000, guid: 4f969615658670a41a24bb6268746f46, type: 2}
   txtField: {fileID: 1560761990709671170}
   imageObj: {fileID: 4289682561233577095}
 --- !u!114 &1164800972861784650
@@ -136,8 +137,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 69, y: 0}
+  m_SizeDelta: {x: 103.16, y: 0}
   m_Pivot: {x: 0, y: 1}
 --- !u!222 &1560761990297634820
 CanvasRenderer:
