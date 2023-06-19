@@ -293,7 +293,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2869877031089535329, guid: ae46210e68ea0974fb795edade1a5d7a, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 3.3300056
+      value: 3.34
       objectReference: {fileID: 0}
     - target: {fileID: 2869877031089535329, guid: ae46210e68ea0974fb795edade1a5d7a, type: 3}
       propertyPath: m_AnchoredPosition.y
@@ -665,6 +665,10 @@ PrefabInstance:
       propertyPath: m_Priority
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1195127030458268027, guid: cbc17c2b942c75242850f0bbb7667649, type: 3}
+      propertyPath: m_Lens.FieldOfView
+      value: 60
+      objectReference: {fileID: 0}
     - target: {fileID: 1633489655172781927, guid: cbc17c2b942c75242850f0bbb7667649, type: 3}
       propertyPath: tagList.Array.size
       value: 1
@@ -683,7 +687,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3934365786011713983, guid: cbc17c2b942c75242850f0bbb7667649, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.85
+      value: -0.9
       objectReference: {fileID: 0}
     - target: {fileID: 3934365786011713983, guid: cbc17c2b942c75242850f0bbb7667649, type: 3}
       propertyPath: m_LocalPosition.y
@@ -691,7 +695,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3934365786011713983, guid: cbc17c2b942c75242850f0bbb7667649, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0.12
+      value: 0.18
       objectReference: {fileID: 0}
     - target: {fileID: 4289919757083979123, guid: cbc17c2b942c75242850f0bbb7667649, type: 3}
       propertyPath: cinemachineBrain
