@@ -6,11 +6,11 @@ public class AudioSettings
 {
 	private static AudioSettings me;
 
-	public float sfxVolume;
-	public float musicVolume;
-	public float ambientVolume;
-	public float uiVolume;
-	public float voiceLine;
+	public float sfxVolume = 1f;
+	public float musicVolume = 1f;
+	public float ambientVolume = 1f;
+	public float uiVolume = 1f;
+	public float voiceLine = 1f;
 
 	//Public Functions
 	public static AudioSettings Me()

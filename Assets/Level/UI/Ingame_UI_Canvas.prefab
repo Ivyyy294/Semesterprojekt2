@@ -159,7 +159,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 5585670239321610016}
   m_Direction: 3
   m_Value: 0.5
-  m_Size: 0.61021066
+  m_Size: 0.6686995
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -3514,7 +3514,7 @@ PrefabInstance:
     - target: {fileID: 7173554934744272397, guid: 70375655aeca7dc44a1eba79320978f0, type: 3}
       propertyPath: m_SpriteState.m_SelectedSprite
       value: 
-      objectReference: {fileID: 21300000, guid: 328ad52b15cc608479604e95113df92b, type: 3}
+      objectReference: {fileID: 0}
     - target: {fileID: 7173554934744272397, guid: 70375655aeca7dc44a1eba79320978f0, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
       value: 1
@@ -4072,7 +4072,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8670917129151422362, guid: ac7dc3ae85635774ab524325f9ad46fd, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 0
+      value: 781.6814
       objectReference: {fileID: 0}
     - target: {fileID: 8670917129151422362, guid: ac7dc3ae85635774ab524325f9ad46fd, type: 3}
       propertyPath: m_SizeDelta.y
@@ -4108,7 +4108,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8670917129151422362, guid: ac7dc3ae85635774ab524325f9ad46fd, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 0
+      value: 390.8407
       objectReference: {fileID: 0}
     - target: {fileID: 8670917129151422362, guid: ac7dc3ae85635774ab524325f9ad46fd, type: 3}
       propertyPath: m_AnchoredPosition.y
