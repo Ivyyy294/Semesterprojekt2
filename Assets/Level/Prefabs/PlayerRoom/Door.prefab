@@ -46,6 +46,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   animator: {fileID: 4444553188247717738}
+  audioAsset: {fileID: 11400000, guid: 168a7024ab849cb40b0e3cd0454b4d8f, type: 2}
   active: 0
 --- !u!1001 &4734891801652215550
 PrefabInstance:

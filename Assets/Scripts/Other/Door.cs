@@ -6,11 +6,15 @@ using Ivyyy.Interfaces;
 public class Door : MonoBehaviour, InteractableObject
 {
 	[SerializeField] Animator animator;
+	[SerializeField] AudioAsset audioAsset;
 	public bool active = false;
 
     public void Interact()
 	{
 		active = !active;
+
+		if(active)
+			audioAsset?.Play();
 	}
 
 	void Update()
