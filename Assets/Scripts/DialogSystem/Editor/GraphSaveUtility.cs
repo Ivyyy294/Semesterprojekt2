@@ -200,6 +200,8 @@ public class GraphSaveUtility
 				tmpNode = DialogPuckNode.Create (data);
 			else if (data.Type == DialogNodeData.NodeType.CHOICE)
 				tmpNode = DialogChoiceNode.Create (data, targetGraphView);
+			else if (data.Type == DialogNodeData.NodeType.EDIT_VALUE)
+				tmpNode = DialogEditValueNode.Create (data, targetGraphView);
 			else if (data.Type == DialogNodeData.NodeType.START)
 			{
 				tmpNode = targetGraphView.GenerateEntryPointNode();

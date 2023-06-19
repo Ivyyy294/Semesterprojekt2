@@ -25,6 +25,7 @@ public class DialogGraphView : GraphView
 		//this.AddManipulator (CreateListenEventNodeContextMenu());
 		this.AddManipulator (CreateLogicNodeContextMenu());
 		this.AddManipulator (CreateWaitNodeContextMenu());
+		this.AddManipulator (CreateEditValueNodeContextMenu());
 		this.AddManipulator (CreatePuckNodeContextMenu());
 		this.AddManipulator (CreateGroupContextMenu());
 
@@ -179,8 +180,15 @@ public class DialogGraphView : GraphView
 
 		return contextualMenuManipulator;
 	}
+	
+	private IManipulator CreateEditValueNodeContextMenu()
+	{
+		ContextualMenuManipulator contextualMenuManipulator = new ContextualMenuManipulator (
+			menuEvent=> menuEvent.menu.AppendAction ("Add EditValueNode", actionEvent=>AddElement (DialogEditValueNode.Create("EditValueNode", GetLocalMousePosition (actionEvent.eventInfo.localMousePosition), this))));
 
-	//Context Manipulator
+		return contextualMenuManipulator;
+	}
+
 	private IManipulator CreateRaiseEventNodeContextMenu()
 	{
 		ContextualMenuManipulator contextualMenuManipulator = new ContextualMenuManipulator (

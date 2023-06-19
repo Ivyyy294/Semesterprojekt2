@@ -13,7 +13,8 @@ public class DialogNodeData
 		LOGIC,
 		WAIT,
 		PUCK,
-		START
+		START,
+		EDIT_VALUE
 	}
 
 	//Base Values
@@ -37,6 +38,9 @@ public class DialogNodeData
 	public AudioAsset audioAsset;
 	public Puck.Emotion emotion = Puck.Emotion.HAPPY;
 
+	//Edit Value Node
+	public BlackBoard.EditTyp editTyp;
+
 	public DialogNodeData Copy ()
 	{
 		DialogNodeData data = new DialogNodeData();
@@ -51,6 +55,7 @@ public class DialogNodeData
 		data.customRespondTime = customRespondTime;
 		data.audioAsset = audioAsset;
 		data.emotion = emotion;
+		data.editTyp = editTyp;
 
 		return data;
 	}

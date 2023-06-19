@@ -102,6 +102,17 @@ DialogPuckNode #title-label
 {
 	color: #000000;
 }
+
+/*DialogEditValueNode*/
+DialogEditValueNode #title
+{
+	background-color: #FF9400;
+}
+
+DialogEditValueNode #title-label
+{
+	color: #000000;
+}
 /*
 //CONTAINERS
 

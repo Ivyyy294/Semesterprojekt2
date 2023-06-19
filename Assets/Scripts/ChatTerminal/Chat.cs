@@ -51,6 +51,8 @@ public class Chat : MonoBehaviour
 				manager.SetState (manager.waitNodeState);
 			else if (node.data.Type == DialogNodeData.NodeType.PUCK)
 				manager.SetState (manager.puckState);
+			else if (node.data.Type == DialogNodeData.NodeType.EDIT_VALUE)
+				manager.SetState (manager.editValueNodeState);
 			else if (node.data.Type == DialogNodeData.NodeType.START)
 			{
 				manager.DialogTree.Next();
@@ -228,6 +230,18 @@ public class Chat : MonoBehaviour
 			}
 		}
 	}
+
+	public class EditValueNodeState : BaseState
+	{
+		public override void Update  (GameObject obj)
+		{
+			BlackBoardProperty checkValue = node.data.BlackBoardProperty;
+			BlackBoard.Me().EditValue (checkValue.guid, node.data.editTyp, checkValue.iVal);
+			manager.DialogTree.Next(0);
+			manager.SetState (manager.defaultState);
+		}
+	}
+
 	public DialogContainer dialogContainer;
 	public float delayPlayerMessage = 0.5f;
 	public float delayNpcMessage = 0.5f;
@@ -247,6 +261,7 @@ public class Chat : MonoBehaviour
 	public LogicNodeState logicNodeState = new LogicNodeState();
 	public WaitNodeState waitNodeState = new WaitNodeState();
 	public PuckState puckState = new PuckState();
+	public EditValueNodeState editValueNodeState = new EditValueNodeState();
 
 	private Ivyyy.StateMachine.IState currentState;
 	
