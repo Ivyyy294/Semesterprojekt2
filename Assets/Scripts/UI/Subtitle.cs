@@ -3,42 +3,74 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 
+public class SubtitleData
+{
+	public string text;
+	public float displayTime;
+	public int priority;
+	public float timer = 0f;
+}
+
 public class Subtitle : MonoBehaviour
 {
-	private static List <Subtitle> instances = new List<Subtitle>();
+	private static Subtitle me;
 
 	[SerializeField] TextMeshProUGUI textObj;
-	[SerializeField] float lifeTime = 0.5f;
-	private float timer;
+	private SubtitleData dataQueue;
 
-	public static void SetText (string text)
+	public void Add (string text, float _displayTime = 0.5f, int priority = 0)
 	{
-		foreach (Subtitle i in instances)
+		if (dataQueue == null || priority >= dataQueue.priority)
+			dataQueue = new SubtitleData {text = text, displayTime = _displayTime, priority = priority}; 
+	}
+
+	public static Subtitle Me()
+	{
+		if (me == null)
 		{
-			i.textObj.text = "[" + text + "]";
-			i.textObj.gameObject.SetActive(true);
-			i.timer = 0f;
+			me = new GameObject ("Subtitle", typeof (Subtitle)).GetComponent<Subtitle>();
+			me.gameObject.hideFlags = HideFlags.HideAndDontSave;
+			DontDestroyOnLoad (me);
 		}
+
+		return me;
 	}
 
     // Start is called before the first frame update
     void Start()
     {
+		if (me == null)
+			me = this;
+		else if (me != null && me != this)
+			Destroy (this.gameObject);
+
 		GetComponent<Canvas>().sortingOrder = 2;
-        instances.Add (this);
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (timer < lifeTime)
-			timer += Time.deltaTime;
-		else if (textObj.gameObject.activeInHierarchy)
-			textObj.gameObject.SetActive (false);
-    }
+		if (dataQueue == null)
+			textObj.gameObject.transform.parent.gameObject.SetActive (false);
+		else
+		{
+			if (!textObj.gameObject.activeInHierarchy)
+				textObj.gameObject.transform.parent.gameObject.SetActive (true);
 
-	private void OnDestroy()
-	{
-		instances.Remove(this);
-	}
+			SubtitleData current = dataQueue;
+
+			if (current.timer < current.displayTime)
+			{
+				if (current.timer == 0f)
+				{
+					textObj.SetText ("[" + current.text + "]");
+					Canvas.ForceUpdateCanvases();
+				}
+				
+				current.timer += Time.deltaTime;
+			}
+			else
+				dataQueue = null;
+		}
+    }
 }

@@ -100,8 +100,8 @@ public class AudioAsset : ScriptableObject
 			if (audioSource == null)
 				Destroy (source.gameObject, source.clip.length / source.pitch);
 		}
-		
-		Subtitle.SetText (subtitle);
+		//Shows the Subtitle even when clip is null as a placeholder
+		ShowSubtitle (source);
 
 		return source;
 	}
@@ -123,6 +123,7 @@ public class AudioAsset : ScriptableObject
 			return AudioSettings.Me().uiVolume;
 	}
 
+	//Private FUnctions
 	private void ShuffleAudioClips()
 	{
 		clipBuffer.Clear();
@@ -156,5 +157,24 @@ public class AudioAsset : ScriptableObject
 		var obj = new GameObject ("AudioAssetSource", typeof (AudioSource));
 		obj.hideFlags = HideFlags.HideAndDontSave;
 		return obj.GetComponent <AudioSource>();
+	}
+
+	void ShowSubtitle (AudioSource source)
+	{
+		float minTime = 0.75f;
+
+		float playTime = (audioTyp != AudioTyp.MUSIC && audioTyp != AudioTyp.AMBIENT) ? source.clip.length / source.pitch : minTime;
+
+		//Making sure the subtile is readable for at lest 1 second
+		playTime = Mathf.Max (minTime, playTime);
+
+		int priority = 0;
+
+		if (audioTyp == AudioTyp.VOICE_LINE)
+			priority = 2;
+		if (audioTyp != AudioTyp.AMBIENT)
+			priority = 1;
+
+		Subtitle.Me().Add (subtitle, playTime, priority);
 	}
 }
