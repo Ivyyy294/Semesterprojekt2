@@ -3,9 +3,10 @@ using System.Collections.Generic;
 using UnityEngine;
 using Ivyyy.StateMachine;
 using Ivyyy.GameEvent;
+using Ivyyy.Interfaces;
 
 [RequireComponent (typeof(AudioPlayer))]
-public class CoffeMachine : MonoBehaviour
+public class CoffeMachine : MonoBehaviour, InteractableObject
 {
 	public abstract class BaseState : Ivyyy.StateMachine.IState
 	{
@@ -24,11 +25,21 @@ public class CoffeMachine : MonoBehaviour
 	{
 	}
 
+	[System.Serializable]
 	public class ActiveState : BaseState
 	{
+		public AudioAsset audioAsset;
+
+		public override void Enter (GameObject obj)
+		{
+			base.Enter(obj);
+			coffeMachine.audioPlayer.Play (audioAsset);
+		}
+
 		public override void Update(GameObject obj)
 		{
-			coffeMachine.SetState (coffeMachine.idleState);
+			if (!coffeMachine.audioPlayer.IsPlaying())
+				coffeMachine.SetState (coffeMachine.idleState);
 		}
 	}
 
@@ -47,7 +58,8 @@ public class CoffeMachine : MonoBehaviour
 
 		public override void Update(GameObject obj)
 		{
-			coffeMachine.SetState (coffeMachine.activeState);
+			if (!coffeMachine.audioPlayer.IsPlaying())
+				coffeMachine.SetState (coffeMachine.activeState);
 		}
 	}
 
@@ -59,6 +71,12 @@ public class CoffeMachine : MonoBehaviour
 	private BaseState currentState;
 
 	//Public Functions
+	public void Interact()
+	{
+		if (currentState == idleState)
+			SetState (activeState);
+	}
+
 	public void EnterPuckState()
 	{
 		SetState (puckState);

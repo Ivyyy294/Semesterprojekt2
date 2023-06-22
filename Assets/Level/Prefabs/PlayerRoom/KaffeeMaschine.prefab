@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 8884450904677707014}
   - component: {fileID: 2861738750059881042}
   - component: {fileID: 3299040006872246743}
+  - component: {fileID: 1030318063231016270}
   m_Layer: 0
   m_Name: KaffeeMaschine
   m_TagString: Untagged
@@ -63,6 +64,21 @@ MonoBehaviour:
   puckState:
     audioAsset: {fileID: 11400000, guid: 193f29cad9b678a4ea7b76b1c2e918fb, type: 2}
     closeTerminalEvent: {fileID: 11400000, guid: 7829666ef44af2a4588008d9cc30d898, type: 2}
+  activeState:
+    audioAsset: {fileID: 11400000, guid: c70951bc1bd216d4889db75ac49a95f2, type: 2}
+--- !u!65 &1030318063231016270
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5298218261082774631}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.46, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1001 &3089874364134382442
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -76,15 +92,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: e7cda79fa0a5cf040b38f2708b26c5b1, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: -2.22
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: e7cda79fa0a5cf040b38f2708b26c5b1, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: -2.75
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: e7cda79fa0a5cf040b38f2708b26c5b1, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: -13.48
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: e7cda79fa0a5cf040b38f2708b26c5b1, type: 3}
       propertyPath: m_LocalRotation.w
