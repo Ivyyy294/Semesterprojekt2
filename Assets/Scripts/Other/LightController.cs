@@ -18,6 +18,11 @@ public class LightController : MonoBehaviour
 		animator.SetTrigger("Announcement");
 	}
 
+	public void EnterGlitchState()
+	{
+		animator.SetTrigger ("Glitch");
+	}
+
 	//Private Functions
     // Start is called before the first frame update
     void Start()
