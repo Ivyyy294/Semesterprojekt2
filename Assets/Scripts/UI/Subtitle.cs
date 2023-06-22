@@ -18,23 +18,26 @@ public class Subtitle : MonoBehaviour
 	[SerializeField] TextMeshProUGUI textObj;
 	private SubtitleData dataQueue;
 
-	public void Add (string text, float _displayTime = 0.5f, int priority = 0)
+	public static void Add (string text, float _displayTime = 0.5f, int priority = 0)
 	{
-		if (dataQueue == null || priority >= dataQueue.priority)
-			dataQueue = new SubtitleData {text = text, displayTime = _displayTime, priority = priority}; 
-	}
-
-	public static Subtitle Me()
-	{
-		if (me == null)
+		if (me != null)
 		{
-			me = new GameObject ("Subtitle", typeof (Subtitle)).GetComponent<Subtitle>();
-			me.gameObject.hideFlags = HideFlags.HideAndDontSave;
-			DontDestroyOnLoad (me);
+			if (me.dataQueue == null || priority >= me.dataQueue.priority)
+				me.dataQueue = new SubtitleData {text = text, displayTime = _displayTime, priority = priority}; 
 		}
-
-		return me;
 	}
+
+	//public static Subtitle Me()
+	//{
+	//	if (me == null)
+	//	{
+	//		me = new GameObject ("Subtitle", typeof (Subtitle)).GetComponent<Subtitle>();
+	//		me.gameObject.hideFlags = HideFlags.HideAndDontSave;
+	//		DontDestroyOnLoad (me);
+	//	}
+
+	//	return me;
+	//}
 
     // Start is called before the first frame update
     void Start()

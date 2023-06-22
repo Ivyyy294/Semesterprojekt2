@@ -175,6 +175,6 @@ public class AudioAsset : ScriptableObject
 		if (audioTyp != AudioTyp.AMBIENT)
 			priority = 1;
 
-		Subtitle.Me().Add (subtitle, playTime, priority);
+		Subtitle.Add (subtitle, playTime, priority);
 	}
 }

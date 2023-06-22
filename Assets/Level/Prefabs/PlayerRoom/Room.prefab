@@ -292,6 +292,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5563979005378923190}
   - component: {fileID: 1835700772797283506}
+  - component: {fileID: 8596160363308706755}
   m_Layer: 0
   m_Name: LightSetup
   m_TagString: Untagged
@@ -337,8 +338,28 @@ MonoBehaviour:
   - {fileID: 5313414117461526010}
   - {fileID: 2576034110089300900}
   announcementState:
-    targetIntensity: 2.5
+    targetIntensity: 0
     transitionTime: 1
+--- !u!95 &8596160363308706755
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5983954498364158865}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 49a8c6f7dd8ba4549bf9adc3ffebbacd, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &6827852919969844202
 GameObject:
   m_ObjectHideFlags: 0
