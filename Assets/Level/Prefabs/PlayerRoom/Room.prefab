@@ -332,14 +332,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6941c40ea77dd904e9859ad3483c39d0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  lights:
-  - {fileID: 4549167198485911839}
-  - {fileID: 6792845159130846081}
-  - {fileID: 5313414117461526010}
-  - {fileID: 2576034110089300900}
-  announcementState:
-    targetIntensity: 0
-    transitionTime: 1
+  animator: {fileID: 0}
 --- !u!95 &8596160363308706755
 Animator:
   serializedVersion: 4
