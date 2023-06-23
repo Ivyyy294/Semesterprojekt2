@@ -55,9 +55,6 @@ public class CoffeMachine : FiniteStateMachine, InteractableObject
 			base.Enter(obj);
 			closeTerminalEvent?.Raise();
 
-			if (coffeMachine.audioPlayer.IsPlaying())
-				coffeMachine.audioPlayer.Stop();
-
 			coffeMachine.audioPlayer.Play (audioAsset);
 		}
 

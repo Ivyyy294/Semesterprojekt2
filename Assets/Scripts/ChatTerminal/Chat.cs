@@ -4,8 +4,9 @@ using UnityEngine;
 using TMPro;
 using UnityEngine.UI;
 using Ivyyy.SaveGameSystem;
+using Ivyyy.StateMachine;
 
-public class Chat : MonoBehaviour
+public class Chat : FiniteStateMachine
 {
 	public abstract class BaseState: Ivyyy.StateMachine.IState
 	{
@@ -29,7 +30,7 @@ public class Chat : MonoBehaviour
 		{
 			node.data.audioAsset.Play();
 			manager.DialogTree.Next();
-			manager.SetState (manager.defaultState);
+			manager.EnterState (manager.defaultState);
 		}
 	}
 
@@ -40,21 +41,21 @@ public class Chat : MonoBehaviour
 			if (node.data == null)
 				return;
 			else if (node.data.Type == DialogNodeData.NodeType.NPC)
-				manager.SetState (manager.npcNodeState);
+				manager.EnterState (manager.npcNodeState);
 			else if (node.data.Type == DialogNodeData.NodeType.CHOICE)
-				manager.SetState (manager.choiceNodeState);
+				manager.EnterState (manager.choiceNodeState);
 			else if (node.data.Type == DialogNodeData.NodeType.RAISE_EVENT)
-				manager.SetState (manager.raiseEventNodeState);
+				manager.EnterState (manager.raiseEventNodeState);
 			else if (node.data.Type == DialogNodeData.NodeType.LISTEN_EVENT)
-				manager.SetState (manager.listenEventNodeState);
+				manager.EnterState (manager.listenEventNodeState);
 			else if (node.data.Type == DialogNodeData.NodeType.LOGIC)
-				manager.SetState (manager.logicNodeState);
+				manager.EnterState (manager.logicNodeState);
 			else if (node.data.Type == DialogNodeData.NodeType.WAIT)
-				manager.SetState (manager.waitNodeState);
+				manager.EnterState (manager.waitNodeState);
 			else if (node.data.Type == DialogNodeData.NodeType.PUCK)
-				manager.SetState (manager.puckState);
+				manager.EnterState (manager.puckState);
 			else if (node.data.Type == DialogNodeData.NodeType.EDIT_VALUE)
-				manager.SetState (manager.editValueNodeState);
+				manager.EnterState (manager.editValueNodeState);
 			else if (node.data.Type == DialogNodeData.NodeType.START)
 			{
 				manager.DialogTree.Next();
@@ -91,7 +92,7 @@ public class Chat : MonoBehaviour
 				else if (node.ports.Count > 0)
 				{
 					manager.DialogTree.Next();
-					manager.SetState (manager.defaultState);
+					manager.EnterState (manager.defaultState);
 				}
 			}
 		}
@@ -123,7 +124,7 @@ public class Chat : MonoBehaviour
 				else
 				{
 					manager.DialogTree.Next (portSelected);
-					manager.SetState(manager.defaultState);
+					manager.EnterState(manager.defaultState);
 				}
 			}
 		}
@@ -160,7 +161,7 @@ public class Chat : MonoBehaviour
 		public override void Update  (GameObject obj)
 		{
 			manager.DialogTree.Next();
-			manager.SetState (manager.defaultState);
+			manager.EnterState (manager.defaultState);
 		}
 	}
 
@@ -182,7 +183,7 @@ public class Chat : MonoBehaviour
 			{
 				node.data.GameEvent.UnregisterListener (this);
 				manager.DialogTree.Next();
-				manager.SetState (manager.defaultState);
+				manager.EnterState (manager.defaultState);
 			}
 		}
 
@@ -208,13 +209,13 @@ public class Chat : MonoBehaviour
 		private void True()
 		{
 			manager.DialogTree.Next(0);
-			manager.SetState (manager.defaultState);
+			manager.EnterState (manager.defaultState);
 		}
 
 		private void False()
 		{
 			manager.DialogTree.Next(1);
-			manager.SetState (manager.defaultState);
+			manager.EnterState (manager.defaultState);
 		}
 	}
 
@@ -228,7 +229,7 @@ public class Chat : MonoBehaviour
 			if (property != null && property.Compare (checkValue))
 			{
 				manager.DialogTree.Next(0);
-				manager.SetState (manager.defaultState);
+				manager.EnterState (manager.defaultState);
 			}
 		}
 	}
@@ -240,7 +241,7 @@ public class Chat : MonoBehaviour
 			BlackBoardProperty checkValue = node.data.BlackBoardProperty;
 			BlackBoard.Me().EditValue (checkValue.guid, node.data.editTyp, checkValue.iVal);
 			manager.DialogTree.Next(0);
-			manager.SetState (manager.defaultState);
+			manager.EnterState (manager.defaultState);
 		}
 	}
 
@@ -264,8 +265,6 @@ public class Chat : MonoBehaviour
 	public WaitNodeState waitNodeState = new WaitNodeState();
 	public PuckState puckState = new PuckState();
 	public EditValueNodeState editValueNodeState = new EditValueNodeState();
-
-	private Ivyyy.StateMachine.IState currentState;
 	
 	private DialogTree dialogTree = new DialogTree();
 	public DialogTree DialogTree => dialogTree;
@@ -310,12 +309,6 @@ public class Chat : MonoBehaviour
 
 		LoadSaveGame (nodeList);
 	}
-
-	public void SetState (Ivyyy.StateMachine.IState newState)
-	{
-		currentState = newState;
-		currentState.Enter(gameObject);
-	}
 	
 	public void DisableButtons ()
 	{
@@ -334,12 +327,7 @@ public class Chat : MonoBehaviour
 		if (dialogTree.nodesVisited.Count == 0)
 			dialogTree.Next();
 
-		SetState (defaultState);
-    }
-
-    void Update()
-    {
-        currentState.Update (gameObject);
+		EnterState (defaultState);
     }
 
 	void OnEnable()
