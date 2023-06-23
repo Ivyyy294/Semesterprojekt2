@@ -63,4 +63,9 @@ public class BlackBoard
 
 		return null;
 	}
+
+	public  Dictionary <string, BlackBoardProperty> GetProperties()
+	{
+		return properties;
+	}
 }
