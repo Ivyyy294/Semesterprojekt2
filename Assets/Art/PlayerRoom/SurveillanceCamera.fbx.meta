@@ -9,11 +9,6 @@ ModelImporter:
       assembly: UnityEngine.CoreModule
       name: Grey
     second: {fileID: 2100000, guid: 4b77841c8e06c7e4296a5498b12b09a9, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: Red
-    second: {fileID: 2100000, guid: e8de20e1ce6f5bc49b6b686185f50724, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
