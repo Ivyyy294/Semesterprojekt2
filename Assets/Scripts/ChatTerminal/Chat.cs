@@ -19,6 +19,8 @@ public class Chat : MonoBehaviour
 		}
 
 		public abstract void Update  (GameObject obj);
+
+		public virtual void Exit(GameObject obj) {}
 	}
 
 	public class PuckState : BaseState

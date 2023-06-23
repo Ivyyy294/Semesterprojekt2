@@ -21,6 +21,8 @@ public class OfflineState : IState
 		if (terminalObj.active)
 			terminalObj.SetState (ChatTerminalObj.powerUpState);
 	}
+
+	public void Exit(GameObject obj){}
 }
 
 public class PowerUpState : IState
@@ -43,6 +45,7 @@ public class PowerUpState : IState
 		else
 			timer += Time.deltaTime;
 	}
+	public void Exit(GameObject obj){}
 }
 
 public class PowerDownState : IState
@@ -64,6 +67,8 @@ public class PowerDownState : IState
 		else
 			timer += Time.deltaTime;
 	}
+
+	public void Exit(GameObject obj){}
 }
 
 public class OnlineState : IState
@@ -81,6 +86,8 @@ public class OnlineState : IState
 		if (!terminalObj.active)
 			terminalObj.SetState (ChatTerminalObj.powerDownState);
 	}
+
+	public void Exit(GameObject obj){}
 }
 
 public class ChatTerminalObj : MonoBehaviour, Ivyyy.Interfaces.InteractableObject

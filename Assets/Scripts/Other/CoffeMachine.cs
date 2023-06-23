@@ -17,8 +17,9 @@ public class CoffeMachine : MonoBehaviour, InteractableObject
 			coffeMachine = obj.GetComponent <CoffeMachine>();
 		}
 
-		public virtual void Update  (GameObject obj)
-		{ }
+		public virtual void Update  (GameObject obj) {}
+
+		public void Exit(GameObject obj){}
 	}
 
 	public class IdleState : BaseState

@@ -249,17 +249,17 @@ MonoBehaviour:
   response:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1186137878}
-        m_TargetAssemblyTypeName: LightController, Assembly-CSharp
-        m_MethodName: EnterGlitchState
-        m_Mode: 1
+      - m_Target: {fileID: 1186137879}
+        m_TargetAssemblyTypeName: Door, Assembly-CSharp
+        m_MethodName: SetGlitch
+        m_Mode: 6
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
-          m_BoolArgument: 0
+          m_BoolArgument: 1
         m_CallState: 2
 --- !u!1 &1009180586
 GameObject:
@@ -441,6 +441,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6941c40ea77dd904e9859ad3483c39d0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1186137879 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1664681744319641297, guid: cbc17c2b942c75242850f0bbb7667649, type: 3}
+  m_PrefabInstance: {fileID: 1186137876}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1f535d222e3c7a841bf8d9f21c1e4d48, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1001 &1267065488
