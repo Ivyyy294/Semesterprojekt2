@@ -146,10 +146,26 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 385414173286675544, guid: e78fcf00c50443349939baa985f481f8, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 4b77841c8e06c7e4296a5498b12b09a9, type: 2}
     - target: {fileID: 919132149155446097, guid: e78fcf00c50443349939baa985f481f8, type: 3}
       propertyPath: m_Name
       value: ChatTerminal
       objectReference: {fileID: 0}
+    - target: {fileID: 1061828306914329639, guid: e78fcf00c50443349939baa985f481f8, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: c8801e35ea1fdbd48b652e447e081dce, type: 2}
+    - target: {fileID: 5010388647522574072, guid: e78fcf00c50443349939baa985f481f8, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 2f2bf8b308aaa114986f1f57797be749, type: 2}
+    - target: {fileID: 7160024507426785956, guid: e78fcf00c50443349939baa985f481f8, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 4b77841c8e06c7e4296a5498b12b09a9, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e78fcf00c50443349939baa985f481f8, type: 3}
 --- !u!4 &3871323832572493380 stripped

@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7104437260872435666}
   - component: {fileID: 2576034110089300900}
+  - component: {fileID: 1888803494746467083}
   m_Layer: 0
   m_Name: LightCryoRoom
   m_TagString: Untagged
@@ -94,6 +95,26 @@ Light:
   m_UseViewFrustumForShadowCasterCull: 1
   m_ShadowRadius: 0
   m_ShadowAngle: 0
+--- !u!114 &1888803494746467083
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 262329408422526498}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 474bcb49853aa07438625e644c072ee6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Version: 1
+  m_UsePipelineSettings: 1
+  m_AdditionalLightsShadowResolutionTier: 2
+  m_LightLayerMask: 1
+  m_CustomShadowLayers: 0
+  m_ShadowLayerMask: 1
+  m_LightCookieSize: {x: 1, y: 1}
+  m_LightCookieOffset: {x: 0, y: 0}
 --- !u!1 &2123410464353275547
 GameObject:
   m_ObjectHideFlags: 0
@@ -104,6 +125,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2366381720485311777}
   - component: {fileID: 4549167198485911839}
+  - component: {fileID: 1333158721804637207}
   m_Layer: 0
   m_Name: LightRoom
   m_TagString: Untagged
@@ -139,7 +161,7 @@ Light:
   m_Shape: 0
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_Intensity: 1.74
-  m_Range: 18.4
+  m_Range: 7.66
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
   m_CookieSize: 10
@@ -188,6 +210,26 @@ Light:
   m_UseViewFrustumForShadowCasterCull: 1
   m_ShadowRadius: 0
   m_ShadowAngle: 0
+--- !u!114 &1333158721804637207
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2123410464353275547}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 474bcb49853aa07438625e644c072ee6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Version: 1
+  m_UsePipelineSettings: 1
+  m_AdditionalLightsShadowResolutionTier: 2
+  m_LightLayerMask: 1
+  m_CustomShadowLayers: 0
+  m_ShadowLayerMask: 1
+  m_LightCookieSize: {x: 1, y: 1}
+  m_LightCookieOffset: {x: 0, y: 0}
 --- !u!1 &4395809517659214304
 GameObject:
   m_ObjectHideFlags: 0
@@ -198,6 +240,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1598115126293223842}
   - component: {fileID: 5313414117461526010}
+  - component: {fileID: 3071063410576512871}
   m_Layer: 0
   m_Name: LightDoorway
   m_TagString: Untagged
@@ -282,6 +325,75 @@ Light:
   m_UseViewFrustumForShadowCasterCull: 1
   m_ShadowRadius: 0
   m_ShadowAngle: 0
+--- !u!114 &3071063410576512871
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4395809517659214304}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 474bcb49853aa07438625e644c072ee6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Version: 1
+  m_UsePipelineSettings: 1
+  m_AdditionalLightsShadowResolutionTier: 2
+  m_LightLayerMask: 1
+  m_CustomShadowLayers: 0
+  m_ShadowLayerMask: 1
+  m_LightCookieSize: {x: 1, y: 1}
+  m_LightCookieOffset: {x: 0, y: 0}
+--- !u!1 &4594445155391387604
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4828017596950160886}
+  - component: {fileID: 114843502898718462}
+  m_Layer: 0
+  m_Name: Global Volume
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4828017596950160886
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4594445155391387604}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -70.75502, y: -11.057928, z: -79.11585}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 7053959207452852874}
+  m_RootOrder: 15
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &114843502898718462
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4594445155391387604}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 172515602e62fb746b5d573b38a5fe58, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_IsGlobal: 1
+  priority: 0
+  blendDistance: 0
+  weight: 1
+  sharedProfile: {fileID: 11400000, guid: c59667b4ff1eae141bed33c5c7dcca35, type: 2}
 --- !u!1 &5055263671718610903
 GameObject:
   m_ObjectHideFlags: 0
@@ -292,6 +404,7 @@ GameObject:
   m_Component:
   - component: {fileID: 558651917719903633}
   - component: {fileID: 7866595961821623828}
+  - component: {fileID: 4278701959358239816}
   m_Layer: 0
   m_Name: LightBed
   m_TagString: Untagged
@@ -376,6 +489,26 @@ Light:
   m_UseViewFrustumForShadowCasterCull: 1
   m_ShadowRadius: 0
   m_ShadowAngle: 0
+--- !u!114 &4278701959358239816
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5055263671718610903}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 474bcb49853aa07438625e644c072ee6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Version: 1
+  m_UsePipelineSettings: 1
+  m_AdditionalLightsShadowResolutionTier: 2
+  m_LightLayerMask: 1
+  m_CustomShadowLayers: 0
+  m_ShadowLayerMask: 1
+  m_LightCookieSize: {x: 1, y: 1}
+  m_LightCookieOffset: {x: 0, y: 0}
 --- !u!1 &5983954498364158865
 GameObject:
   m_ObjectHideFlags: 0
@@ -564,6 +697,7 @@ GameObject:
   m_Component:
   - component: {fileID: 9112356285634500465}
   - component: {fileID: 8436444957314161428}
+  - component: {fileID: 480459519892750861}
   m_Layer: 0
   m_Name: StarLight
   m_TagString: Untagged
@@ -648,6 +782,26 @@ Light:
   m_UseViewFrustumForShadowCasterCull: 1
   m_ShadowRadius: 0
   m_ShadowAngle: 0
+--- !u!114 &480459519892750861
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8008912800355687997}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 474bcb49853aa07438625e644c072ee6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Version: 1
+  m_UsePipelineSettings: 1
+  m_AdditionalLightsShadowResolutionTier: 2
+  m_LightLayerMask: 1
+  m_CustomShadowLayers: 0
+  m_ShadowLayerMask: 1
+  m_LightCookieSize: {x: 1, y: 1}
+  m_LightCookieOffset: {x: 0, y: 0}
 --- !u!1 &8164680346880958129
 GameObject:
   m_ObjectHideFlags: 0
@@ -658,6 +812,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6087102093206783211}
   - component: {fileID: 6792845159130846081}
+  - component: {fileID: 8434670714888021000}
   m_Layer: 0
   m_Name: LightCryoStation
   m_TagString: Untagged
@@ -742,6 +897,26 @@ Light:
   m_UseViewFrustumForShadowCasterCull: 1
   m_ShadowRadius: 0
   m_ShadowAngle: 0
+--- !u!114 &8434670714888021000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8164680346880958129}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 474bcb49853aa07438625e644c072ee6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Version: 1
+  m_UsePipelineSettings: 1
+  m_AdditionalLightsShadowResolutionTier: 2
+  m_LightLayerMask: 1
+  m_CustomShadowLayers: 0
+  m_ShadowLayerMask: 1
+  m_LightCookieSize: {x: 1, y: 1}
+  m_LightCookieOffset: {x: 0, y: 0}
 --- !u!1 &8831366323530898775
 GameObject:
   m_ObjectHideFlags: 0
@@ -785,6 +960,7 @@ Transform:
   - {fileID: 4015248178681232223}
   - {fileID: 2265370868594478334}
   - {fileID: 2143632795593072503}
+  - {fileID: 4828017596950160886}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -913,33 +1089,41 @@ PrefabInstance:
       propertyPath: m_Name
       value: SurveillanceCamera
       objectReference: {fileID: 0}
+    - target: {fileID: 3158265712597312315, guid: c8c7a6a25e4d4f847917a30fac8e5d2d, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3177909059891241617, guid: c8c7a6a25e4d4f847917a30fac8e5d2d, type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3411919613921466237, guid: c8c7a6a25e4d4f847917a30fac8e5d2d, type: 3}
       propertyPath: m_RootOrder
       value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 3411919613921466237, guid: c8c7a6a25e4d4f847917a30fac8e5d2d, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 8.19
+      value: 8.38
       objectReference: {fileID: 0}
     - target: {fileID: 3411919613921466237, guid: c8c7a6a25e4d4f847917a30fac8e5d2d, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 6.1
+      value: 5.7573156
       objectReference: {fileID: 0}
     - target: {fileID: 3411919613921466237, guid: c8c7a6a25e4d4f847917a30fac8e5d2d, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -11.32
+      value: -11.165
       objectReference: {fileID: 0}
     - target: {fileID: 3411919613921466237, guid: c8c7a6a25e4d4f847917a30fac8e5d2d, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.6428468
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3411919613921466237, guid: c8c7a6a25e4d4f847917a30fac8e5d2d, type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0
+      value: -0.7071068
       objectReference: {fileID: 0}
     - target: {fileID: 3411919613921466237, guid: c8c7a6a25e4d4f847917a30fac8e5d2d, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.7659947
+      value: 0.7071068
       objectReference: {fileID: 0}
     - target: {fileID: 3411919613921466237, guid: c8c7a6a25e4d4f847917a30fac8e5d2d, type: 3}
       propertyPath: m_LocalRotation.z
@@ -951,10 +1135,22 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3411919613921466237, guid: c8c7a6a25e4d4f847917a30fac8e5d2d, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: 99.991
+      value: 180
       objectReference: {fileID: 0}
     - target: {fileID: 3411919613921466237, guid: c8c7a6a25e4d4f847917a30fac8e5d2d, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: -90
+      objectReference: {fileID: 0}
+    - target: {fileID: 8043945467922556127, guid: c8c7a6a25e4d4f847917a30fac8e5d2d, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8679682062888493385, guid: c8c7a6a25e4d4f847917a30fac8e5d2d, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8679682062888493385, guid: c8c7a6a25e4d4f847917a30fac8e5d2d, type: 3}
+      propertyPath: m_LocalRotation.x
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -1986,10 +2182,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: ChatTerminal
       objectReference: {fileID: 0}
+    - target: {fileID: 3993085215141981687, guid: 1d348f68e0ab10947896335babf33b43, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 4b77841c8e06c7e4296a5498b12b09a9, type: 2}
     - target: {fileID: 4363797578099498376, guid: 1d348f68e0ab10947896335babf33b43, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 67acd62d7a6910044bf5e78ac25179d7, type: 2}
+    - target: {fileID: 5867778703588725515, guid: 1d348f68e0ab10947896335babf33b43, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 4b77841c8e06c7e4296a5498b12b09a9, type: 2}
     - target: {fileID: 7874346427099478651, guid: 1d348f68e0ab10947896335babf33b43, type: 3}
       propertyPath: m_RootOrder
       value: 4

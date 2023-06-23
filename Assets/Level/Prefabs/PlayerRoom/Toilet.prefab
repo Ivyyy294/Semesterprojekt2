@@ -39,6 +39,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 6234935545682448073}
     m_Modifications:
+    - target: {fileID: -8831762423203448578, guid: 229cdb81fcf86414b81e3c7e51e1a82b, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 4b77841c8e06c7e4296a5498b12b09a9, type: 2}
     - target: {fileID: -8679921383154817045, guid: 229cdb81fcf86414b81e3c7e51e1a82b, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -83,10 +87,26 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -5971410051629635644, guid: 229cdb81fcf86414b81e3c7e51e1a82b, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 4b77841c8e06c7e4296a5498b12b09a9, type: 2}
+    - target: {fileID: -5754732837579649886, guid: 229cdb81fcf86414b81e3c7e51e1a82b, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 4b77841c8e06c7e4296a5498b12b09a9, type: 2}
     - target: {fileID: 919132149155446097, guid: 229cdb81fcf86414b81e3c7e51e1a82b, type: 3}
       propertyPath: m_Name
       value: Toilet
       objectReference: {fileID: 0}
+    - target: {fileID: 974584544777506935, guid: 229cdb81fcf86414b81e3c7e51e1a82b, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 4b77841c8e06c7e4296a5498b12b09a9, type: 2}
+    - target: {fileID: 8616184511030011274, guid: 229cdb81fcf86414b81e3c7e51e1a82b, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 4b77841c8e06c7e4296a5498b12b09a9, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 229cdb81fcf86414b81e3c7e51e1a82b, type: 3}
 --- !u!4 &1005060766053150337 stripped
