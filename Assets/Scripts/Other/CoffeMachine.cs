@@ -6,7 +6,7 @@ using Ivyyy.GameEvent;
 using Ivyyy.Interfaces;
 
 [RequireComponent (typeof(AudioPlayer))]
-public class CoffeMachine : MonoBehaviour, InteractableObject
+public class CoffeMachine : FiniteStateMachine, InteractableObject
 {
 	public abstract class BaseState : Ivyyy.StateMachine.IState
 	{
@@ -40,7 +40,7 @@ public class CoffeMachine : MonoBehaviour, InteractableObject
 		public override void Update(GameObject obj)
 		{
 			if (!coffeMachine.audioPlayer.IsPlaying())
-				coffeMachine.SetState (coffeMachine.idleState);
+				coffeMachine.EnterState (coffeMachine.idleState);
 		}
 	}
 
@@ -54,13 +54,17 @@ public class CoffeMachine : MonoBehaviour, InteractableObject
 		{
 			base.Enter(obj);
 			closeTerminalEvent?.Raise();
+
+			if (coffeMachine.audioPlayer.IsPlaying())
+				coffeMachine.audioPlayer.Stop();
+
 			coffeMachine.audioPlayer.Play (audioAsset);
 		}
 
 		public override void Update(GameObject obj)
 		{
 			if (!coffeMachine.audioPlayer.IsPlaying())
-				coffeMachine.SetState (coffeMachine.activeState);
+				coffeMachine.EnterState (coffeMachine.activeState);
 		}
 	}
 
@@ -69,36 +73,24 @@ public class CoffeMachine : MonoBehaviour, InteractableObject
 	public ActiveState activeState = new ActiveState();
 
 	private AudioPlayer audioPlayer;
-	private BaseState currentState;
 
 	//Public Functions
 	public void Interact()
 	{
 		if (currentState == idleState)
-			SetState (activeState);
+			EnterState (activeState);
 	}
 
 	public void EnterPuckState()
 	{
-		SetState (puckState);
+		EnterState (puckState);
 	}
 
-	//Private Functions
-	void SetState (BaseState newState)
-	{
-		currentState = newState;
-		currentState.Enter(gameObject);
-	}
     // Start is called before the first frame update
     void Start()
     {
 		audioPlayer = GetComponent <AudioPlayer>();
-		SetState (idleState);
+		EnterState (idleState);
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-		currentState.Update (gameObject);
-    }
 }

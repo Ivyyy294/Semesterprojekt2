@@ -24,6 +24,10 @@ public class AudioPlayer : MonoBehaviour
 	public void Play(AudioAsset newAudioAsset)
 	{
 		audioAsset = newAudioAsset;
+
+		if (audioSource.isPlaying)
+			audioSource.Stop();
+
 		Play();
 	}
 
