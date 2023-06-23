@@ -1133,6 +1133,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SurveillanceCamera (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: b9e716849f7e76f4881b17fbb1bbeff2, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b9e716849f7e76f4881b17fbb1bbeff2, type: 3}
 --- !u!1001 &1792595646015745058
@@ -2790,6 +2794,63 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4814344913878381430, guid: 0c30e22ba89055b41aa46975bf4e9286, type: 3}
   m_PrefabInstance: {fileID: 8202314375858907132}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &8918108047744306660
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 4015248178681232223}
+    m_Modifications:
+    - target: {fileID: -8679921383154817045, guid: ed598b5f5cc4c8543bce33f2d96bee23, type: 3}
+      propertyPath: m_RootOrder
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: ed598b5f5cc4c8543bce33f2d96bee23, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: ed598b5f5cc4c8543bce33f2d96bee23, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: ed598b5f5cc4c8543bce33f2d96bee23, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: ed598b5f5cc4c8543bce33f2d96bee23, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: ed598b5f5cc4c8543bce33f2d96bee23, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: ed598b5f5cc4c8543bce33f2d96bee23, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: ed598b5f5cc4c8543bce33f2d96bee23, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: ed598b5f5cc4c8543bce33f2d96bee23, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: ed598b5f5cc4c8543bce33f2d96bee23, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: ed598b5f5cc4c8543bce33f2d96bee23, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: ed598b5f5cc4c8543bce33f2d96bee23, type: 3}
+      propertyPath: m_Name
+      value: SurveillanceCamera 1
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: ed598b5f5cc4c8543bce33f2d96bee23, type: 3}
 --- !u!1001 &9165741582410665879
 PrefabInstance:
   m_ObjectHideFlags: 0
