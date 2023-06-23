@@ -19,7 +19,7 @@ public class CoffeMachine : FiniteStateMachine, InteractableObject
 
 		public virtual void Update  (GameObject obj) {}
 
-		public void Exit(GameObject obj){}
+		public virtual void Exit(GameObject obj){}
 	}
 
 	public class IdleState : BaseState
@@ -30,17 +30,24 @@ public class CoffeMachine : FiniteStateMachine, InteractableObject
 	public class ActiveState : BaseState
 	{
 		public AudioAsset audioAsset;
+		public GameObject coffeParticle;
 
 		public override void Enter (GameObject obj)
 		{
 			base.Enter(obj);
 			coffeMachine.audioPlayer.Play (audioAsset);
+			coffeParticle.SetActive (true);
 		}
 
 		public override void Update(GameObject obj)
 		{
 			if (!coffeMachine.audioPlayer.IsPlaying())
 				coffeMachine.EnterState (coffeMachine.idleState);
+		}
+
+		public override void Exit(GameObject obj)
+		{
+			coffeParticle.SetActive (false);
 		}
 	}
 
