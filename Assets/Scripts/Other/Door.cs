@@ -5,20 +5,24 @@ using Ivyyy.Interfaces;
 
 public class Door : MonoBehaviour, InteractableObject
 {
-	[SerializeField] Animator animator;
 	[SerializeField] AudioAsset audioAsset;
-	public bool active = false;
+	public Animator animator;
+	bool active = false;
+	bool glitch = false;
 
     public void Interact()
 	{
 		active = !active;
+	}
 
-		if(active)
-			audioAsset?.Play();
+	public void SetGlitch (bool val)
+	{
+		glitch = val;
 	}
 
 	void Update()
 	{		
+		animator.SetBool ("glitch", glitch);
 		animator.SetBool ("open", active);
 	}
 }
