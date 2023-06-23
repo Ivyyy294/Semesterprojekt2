@@ -52,6 +52,8 @@ public static class Puck
 
 	public static void RegisterInterface (PuckInterface puckInterface)
 	{
+		//Makes sure the Interfaces start with the active emotion
+		puckInterface.OnEmotionChanged (currentEmotion);
 		interfaces.Add (puckInterface);
 	}
 

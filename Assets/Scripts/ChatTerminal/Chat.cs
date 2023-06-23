@@ -28,7 +28,8 @@ public class Chat : FiniteStateMachine
 	{
 		public override void Update  (GameObject obj)
 		{
-			node.data.audioAsset.Play();
+			node.data.audioAsset?.Play();
+			Puck.SetEmotion (node.data.emotion);
 			manager.DialogTree.Next();
 			manager.EnterState (manager.defaultState);
 		}

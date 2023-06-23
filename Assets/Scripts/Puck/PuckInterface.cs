@@ -9,10 +9,10 @@ public class PuckInterface : MonoBehaviour
 	//Protected Functions
 	public void OnEmotionChanged (Puck.Emotion emotion)
 	{
-		if (animator = null)
-			animator.SetTrigger (emotion.ToString());
-		else
+		if (animator == null)
 			Debug.LogError("Missing Animator!");
+		else
+			animator.SetTrigger (emotion.ToString());
 	}
 
 	//Private Functions
