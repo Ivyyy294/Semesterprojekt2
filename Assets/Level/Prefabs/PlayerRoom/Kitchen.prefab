@@ -12,6 +12,8 @@ GameObject:
   - component: {fileID: 1149104741775298562}
   - component: {fileID: 4458264743929763543}
   - component: {fileID: 4868580846357583709}
+  - component: {fileID: 6529256532887364899}
+  - component: {fileID: 5579512217433403318}
   m_Layer: 0
   m_Name: Kitchen
   m_TagString: Untagged
@@ -80,6 +82,32 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1.5, z: 2.3}
   m_Center: {x: 0.72, y: 0.75, z: 0}
+--- !u!114 &6529256532887364899
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3563858868685035001}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c9bfb26f4d6ca2c40a45574f163b4622, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  kitchen: {fileID: 4458264743929763543}
+--- !u!114 &5579512217433403318
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3563858868685035001}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d89678cbabb9cc3469cd0d7e743930f4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  uniqueId: b3e480ad-7f56-424a-bfad-76ab7a856895
 --- !u!1001 &5684343632192367764
 PrefabInstance:
   m_ObjectHideFlags: 0

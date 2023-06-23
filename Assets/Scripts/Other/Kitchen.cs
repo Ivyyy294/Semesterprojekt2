@@ -8,6 +8,8 @@ public class Kitchen : MonoBehaviour, InteractableObject
 	bool active = false;
 	Animator animator;
 
+	public bool IsActive() {return active;}
+
 	public void Interact()
 	{
 		active = !active;
