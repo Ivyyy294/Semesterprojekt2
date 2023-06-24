@@ -18,10 +18,7 @@ public class CameraSensor : MonoBehaviour
 		ConeMesh tmp = ConeMesh.CreateConeMesh (radius, height, segments);
 		tmp.Translate (transform.position);
 		tmp.RotateMesh (transform.rotation);
-		//targetPos = (targetPos - transform.position).normalized * height;
-		//Quaternion rotation = Quaternion.LookRotation (targetPos - transform.position);
-		//coneMesh.RotateMesh (transform.rotation);
-		//tmp = RotateMesh (tmp, rotation);
+
 		Vector3 origin = tmp.mesh.vertices[segments +1];
 		bool hit = ScanIntern (origin, targetPos);
 

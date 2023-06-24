@@ -58,19 +58,11 @@ public class SurveillanceCamera : MonoBehaviour
 
 	bool Search ()
 	{
-		return rayOrigin.GetComponent<CameraSensor>().Scan(playerTransform.position);
-		//Vector3 direction = playerTransform.position - rayOrigin.position;
-		//Ray ray = new Ray (rayOrigin.position, direction);
+		bool hit = rayOrigin.GetComponent<CameraSensor>().Scan(Camera.main.transform.position);
+		
+		if (!hit)
+			hit = rayOrigin.GetComponent<CameraSensor>().Scan(playerTransform.position);
 
-		//RaycastHit hit;
-
-		//bool inRange = false;
-
-		//if (Physics.Raycast(ray, out hit, range))
-		//	inRange = hit.collider.CompareTag ("Player");
-
-		//Debug.DrawRay (ray.origin, ray.direction * range, inRange ? Color.green : Color.red);
-
-		//return inRange;
+		return hit;
 	}
 }
