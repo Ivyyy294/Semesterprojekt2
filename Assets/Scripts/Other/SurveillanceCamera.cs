@@ -8,7 +8,6 @@ using Ivyyy.Interfaces;
 public class SurveillanceCamera : MonoBehaviour
 {
 	[SerializeField] float speed = 20f;
-	[SerializeField] float range = 50f;
 	[SerializeField] Transform rayOrigin;
 	private Transform playerTransform;
 
@@ -59,18 +58,19 @@ public class SurveillanceCamera : MonoBehaviour
 
 	bool Search ()
 	{
-		Vector3 direction = playerTransform.position - rayOrigin.position;
-		Ray ray = new Ray (rayOrigin.position, direction);
+		return rayOrigin.GetComponent<CameraSensor>().Scan(playerTransform.position);
+		//Vector3 direction = playerTransform.position - rayOrigin.position;
+		//Ray ray = new Ray (rayOrigin.position, direction);
 
-		RaycastHit hit;
+		//RaycastHit hit;
 
-		bool inRange = false;
+		//bool inRange = false;
 
-		if (Physics.Raycast(ray, out hit, range))
-			inRange = hit.collider.CompareTag ("Player");
+		//if (Physics.Raycast(ray, out hit, range))
+		//	inRange = hit.collider.CompareTag ("Player");
 
-		Debug.DrawRay (ray.origin, ray.direction * range, inRange ? Color.green : Color.red);
+		//Debug.DrawRay (ray.origin, ray.direction * range, inRange ? Color.green : Color.red);
 
-		return inRange;
+		//return inRange;
 	}
 }
