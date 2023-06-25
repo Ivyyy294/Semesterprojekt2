@@ -9,7 +9,11 @@ public class SurveillanceCamera : MonoBehaviour
 {
 	[SerializeField] float speed = 20f;
 	[SerializeField] Transform rayOrigin;
+	[SerializeField] float minPlayerLostTime;
+	[SerializeField] AudioAsset playerFound;
+
 	private Transform playerTransform;
+	float timerPlayerLost = 0f;
 
 	enum State
 	{
@@ -53,7 +57,15 @@ public class SurveillanceCamera : MonoBehaviour
 	void Idle()
 	{
         if (Search())
+		{
+			if (timerPlayerLost >= minPlayerLostTime)
+				playerFound?.PlayAtPos(transform.position);
+
+			timerPlayerLost = 0f;
 			currentState = State.TRACKING;
+		}
+		else
+			timerPlayerLost += Time.deltaTime;
 	}
 
 	bool Search ()

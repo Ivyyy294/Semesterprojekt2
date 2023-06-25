@@ -429,6 +429,10 @@ PrefabInstance:
       propertyPath: active
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2093660303019496264, guid: cbc17c2b942c75242850f0bbb7667649, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2136593070208726432, guid: cbc17c2b942c75242850f0bbb7667649, type: 3}
       propertyPath: uniqueId
       value: dcd1859c-af0a-402c-bcc2-e5d086aff4da
@@ -440,6 +444,10 @@ PrefabInstance:
     - target: {fileID: 3088055313369875259, guid: cbc17c2b942c75242850f0bbb7667649, type: 3}
       propertyPath: m_Enabled
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3629102663084056609, guid: cbc17c2b942c75242850f0bbb7667649, type: 3}
+      propertyPath: uniqueId
+      value: 1cffc9fd-387b-4bea-a3e5-c9fe9db5c13e
       objectReference: {fileID: 0}
     - target: {fileID: 3934365786011713983, guid: cbc17c2b942c75242850f0bbb7667649, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1080,6 +1088,10 @@ PrefabInstance:
     - target: {fileID: 2822974353734741425, guid: bcecf68e23d4cfb43bdb02c73daaa06f, type: 3}
       propertyPath: near clip plane
       value: 0.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4793543703543644874, guid: bcecf68e23d4cfb43bdb02c73daaa06f, type: 3}
+      propertyPath: hideState.speed
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 5386439339678460319, guid: bcecf68e23d4cfb43bdb02c73daaa06f, type: 3}
       propertyPath: m_LocalPosition.y

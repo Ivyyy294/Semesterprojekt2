@@ -72,43 +72,59 @@ public class AudioAsset : ScriptableObject
 	{
 		AudioSource source = audioSource;
 
-		if (source == null)
-			source = CreateAudioSource();
-		
+	
 		if (audioClips.Length > 0)
 		{
 			if (clipBuffer.Count == 0 || oldPlayStyle != playStyle)
 				ShuffleAudioClips();
 
-			source.clip = clipBuffer.Pop();
-			//Only Allow loop with externen AudioSource
-			source.loop = audioSource != null && loop;
-			source.volume = Random.Range (volume.x, volume.y) * GetVolumeFactor();
-			source.pitch = Random.Range (pitch.x, pitch.y);
-			source.spatialBlend = spatial ? 1f : 0f;
-			source.minDistance = minDistance;
-			source.maxDistance = maxDistance;
-			source.rolloffMode = AudioRolloffMode.Linear;
-			source.Play ();
+			AudioClip clip = clipBuffer.Pop();
 
-#if UNITY_EDITOR
-			//Prevents stable source from being deleted
-			if (audioSource == preview)
-				return source;
-#endif
-			//Delete tmp audio source after playing
-			if (audioSource == null)
-				Destroy (source.gameObject, source.clip.length / source.pitch);
+			if (clip != null)
+			{
+				if (source == null)
+					source = CreateAudioSource();
+
+				source.clip = clip;
+				//Only Allow loop with externen AudioSource
+				source.loop = audioSource != null && loop;
+				source.volume = Random.Range (volume.x, volume.y) * GetVolumeFactor();
+				source.pitch = Random.Range (pitch.x, pitch.y);
+				source.spatialBlend = spatial ? 1f : 0f;
+				source.minDistance = minDistance;
+				source.maxDistance = maxDistance;
+				source.rolloffMode = AudioRolloffMode.Linear;
+				source.Play ();
+
+	#if UNITY_EDITOR
+				//Prevents stable source from being deleted
+				if (audioSource == preview)
+					return source;
+	#endif
+				//Delete tmp audio source after playing
+				if (audioSource == null)
+					Destroy (source.gameObject, source.clip.length / source.pitch);
+			}
+			else
+				Debug.LogError("Invalid CLip!");
 		}
 		//Shows the Subtitle even when clip is null as a placeholder
-		ShowSubtitle (source);
+
+		if (audioTyp != AudioTyp.MUSIC && audioTyp != AudioTyp.AMBIENT && source != null && source.clip != null)
+			ShowSubtitle (source.clip.length / source.pitch);
+		else 
+			ShowSubtitle ();
+
 
 		return source;
 	}
 
 	public void PlayAtPos(Vector3 pos)
 	{
-		Play ().transform.position = pos;
+		AudioSource tmp = Play ();
+
+		if (tmp!= null)
+			tmp.transform.position = pos;
 	}
 
 	public float GetVolumeFactor()
@@ -159,12 +175,9 @@ public class AudioAsset : ScriptableObject
 		return obj.GetComponent <AudioSource>();
 	}
 
-	void ShowSubtitle (AudioSource source)
+	void ShowSubtitle (float playTime = 0f)
 	{
 		float minTime = 0.75f;
-
-		float playTime = (audioTyp != AudioTyp.MUSIC && audioTyp != AudioTyp.AMBIENT) ? source.clip.length / source.pitch : minTime;
-
 		//Making sure the subtile is readable for at lest 1 second
 		playTime = Mathf.Max (minTime, playTime);
 

@@ -17,7 +17,7 @@ MonoBehaviour:
   subtitle: Scifi Ambient
   playStyle: 0
   audioTyp: 2
-  loop: 0
+  loop: 1
   volume: {x: 0.05, y: 0.05}
   pitch: {x: 0.7, y: 0.7}
   spatial: 0
