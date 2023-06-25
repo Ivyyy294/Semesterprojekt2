@@ -51,8 +51,12 @@ public class CameraSensor : MonoBehaviour
 	private void OnDrawGizmosSelected()
 	{
 		ConeMesh coneMesh = ConeMesh.CreateConeMesh (radius, height, segments);
+		coneMesh.Translate (transform.position);
+		coneMesh.RotateMesh (transform.rotation);
+
 		Gizmos.color = Color.red;
 		Gizmos.DrawLine(transform.position, transform.position + (transform.forward * height));
-		Gizmos.DrawWireMesh(coneMesh.mesh, transform.position, transform.rotation);
+		Gizmos.DrawWireMesh (coneMesh.mesh);
+		//Gizmos.DrawWireMesh(coneMesh.mesh, transform.position, transform.rotation);
 	}
 }
