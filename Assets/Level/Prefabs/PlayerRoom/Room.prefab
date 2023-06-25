@@ -1085,6 +1085,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 7053959207452852874}
     m_Modifications:
+    - target: {fileID: 2345450757206685582, guid: c8c7a6a25e4d4f847917a30fac8e5d2d, type: 3}
+      propertyPath: minPlayerLostTime
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 3158265712597312315, guid: c8c7a6a25e4d4f847917a30fac8e5d2d, type: 3}
       propertyPath: m_Name
       value: SurveillanceCamera

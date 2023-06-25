@@ -365,6 +365,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 0.5
   rayOrigin: {fileID: 4231597929507306644}
+  minPlayerLostTime: 20
+  playerFound: {fileID: 11400000, guid: 10278b1e6537e1c4d8d7b18a38c5aca7, type: 2}
 --- !u!1 &8149566826729601171
 GameObject:
   m_ObjectHideFlags: 0

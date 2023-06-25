@@ -14,9 +14,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   audioClips:
   - {fileID: 8300000, guid: 8c57ce160c9d31243876bfd3c9f306c3, type: 3}
-  subtitle: 'To all passengers on board: my manufacturer strongly advice against
-    modifying any of the ship`s equipment, especially the one currently responsible
-    for your very survival!'
+  subtitle: 'P.U.C.K: "To all passengers on board: my manufacturer strongly advice
+    against modifying any of the ship`s equipment, especially the one currently responsible
+    for your very survival!"'
   playStyle: 0
   audioTyp: 4
   loop: 0
