@@ -5,6 +5,7 @@ TagManager:
   serializedVersion: 2
   tags:
   - "\t\t\tmanager.ButtonList[i].GetComponentInChildren<TextMeshProUGUI>().SetLayoutDirty();\r\n"
+  - AllwaysInteractable
   layers:
   - Default
   - TransparentFX

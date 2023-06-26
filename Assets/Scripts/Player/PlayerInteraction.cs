@@ -9,7 +9,8 @@ public class PlayerInteraction : MonoBehaviour
 	[SerializeField] float range;
 	[SerializeField] KeyCode interactKey;
 	[SerializeField] KeyCode pauseKey;
-	
+	public string tagFilter;
+
 	[Header ("Lara Values")]
 	[SerializeField] GameEvent showPauseMenu;
 	[SerializeField] InteractTextOverlay interactTextOverlay;
@@ -60,8 +61,9 @@ public class PlayerInteraction : MonoBehaviour
 		if (Physics.Raycast(ray, out hit, range))
 		{
 			interactableObject = hit.transform.gameObject.GetComponent<InteractableObject>();
-			
-			if (interactableObject != null && ((MonoBehaviour)interactableObject).enabled)
+			MonoBehaviour behaviour = (MonoBehaviour)interactableObject;
+
+			if (interactableObject != null && behaviour.enabled && (string.IsNullOrEmpty(tagFilter) || behaviour.CompareTag (tagFilter)))
 				inRange = true;
 		}
 		else

@@ -72,11 +72,22 @@ public class Room : FiniteStateMachine
 
 	}
 
+	[System.Serializable]
 	public class DayState : BaseState
 	{
+		[SerializeField] string propertyName;
+		[SerializeField] int threshold;
+
+		public override void Enter(GameObject obj)
+		{
+			base.Enter(obj);
+		}
+
 		public override void Update (GameObject obj)
 		{
-			if (room.night == true)
+			BlackBoardProperty property = BlackBoard.Me().GetPropertyByName (propertyName);
+
+			if (property != null && property.iVal >= threshold)
 				room.EnterState (room.nightState);
 		}
 	}
@@ -89,26 +100,14 @@ public class Room : FiniteStateMachine
 		public override void Enter (GameObject obj)
 		{
 			base.Enter (obj);
-			SetInteractableObjects (false);
+			nextDayTrigger.SetActive (true);
+			Player.Me().BlockInteractions (true);
 		}
 
 		public override void Exit(GameObject obj)
 		{
-			SetInteractableObjects (true);
-			room.night = false;
-		}
-
-		void SetInteractableObjects (bool enabled)
-		{
-			nextDayTrigger?.SetActive (!enabled);
-
-			foreach (var i in interactableObjects)
-			{
-				MonoBehaviour behaviour = i.GetComponentInChildren<InteractableObject>() as MonoBehaviour;
-
-				if (behaviour != null)
-					behaviour.enabled = enabled;
-			}
+			nextDayTrigger.SetActive (false);
+			Player.Me().BlockInteractions (false);
 		}
 	}
 
@@ -156,8 +155,6 @@ public class Room : FiniteStateMachine
 		}
 	}
 
-	public bool night = false;
-	[Header ("Lara Values")]
 	public WakeUpState wakeUpState = new WakeUpState();
 	public NightState nightState = new NightState();
 	public DayState dayState = new DayState();

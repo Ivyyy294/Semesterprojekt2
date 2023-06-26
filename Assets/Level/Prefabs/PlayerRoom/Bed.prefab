@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 3991076097587241784}
   m_Layer: 0
   m_Name: NextDayTrigger
-  m_TagString: Untagged
+  m_TagString: AllwaysInteractable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

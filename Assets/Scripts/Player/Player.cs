@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Ivyyy.StateMachine;
 
 public class Player : MonoBehaviour
 {
@@ -27,6 +28,14 @@ public class Player : MonoBehaviour
 		characterController.enabled = true;
 		mouseLook.enabled = true;
 		playerInteraction.enabled = true;
+	}
+
+	public void BlockInteractions (bool val)
+	{
+		if (val)
+			playerInteraction.tagFilter = "AllwaysInteractable";
+		else
+			playerInteraction.tagFilter = null;
 	}
 
     // Start is called before the first frame update

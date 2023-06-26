@@ -325,9 +325,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1b5fb878103c982488c5b1cdab03dbca, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  range: 5
+  range: 2
   interactKey: 102
   pauseKey: 27
+  tagFilter: 
   showPauseMenu: {fileID: 11400000, guid: 3a4a4b92ef13d3640a40dbee10ccd068, type: 2}
   interactTextOverlay: {fileID: 4793543703543644874}
 --- !u!114 &8956879903244738488

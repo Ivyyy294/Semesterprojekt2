@@ -595,8 +595,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   animator: {fileID: 0}
-  tunnelLightOn: 1
-  tunnelLight: {fileID: 8845738361208217310}
 --- !u!95 &8596160363308706755
 Animator:
   serializedVersion: 4
@@ -1356,7 +1354,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2324029556a63a74f90834e0f34aedb8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  night: 0
   wakeUpState:
     animationCurve:
       serializedVersion: 2
@@ -1365,17 +1362,23 @@ MonoBehaviour:
       m_PostInfinity: 2
       m_RotationOrder: 4
     PlayerSpawnPos: {fileID: 5523221964214666887}
+    image: {fileID: 0}
   nightState:
     interactableObjects: []
     nextDayTrigger: {fileID: 0}
+  dayState:
+    propertyName: ProgressDay1
+    threshold: 1
   transitionState:
+    image: {fileID: 0}
+    txt: {fileID: 0}
     animationCurve:
       serializedVersion: 2
       m_Curve: []
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-  image: {fileID: 0}
+    txtTime: 0
 --- !u!1 &8845738361208217310
 GameObject:
   m_ObjectHideFlags: 0

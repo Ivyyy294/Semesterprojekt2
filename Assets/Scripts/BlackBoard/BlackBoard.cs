@@ -56,6 +56,17 @@ public class BlackBoard
 		}
 	}
 
+	public BlackBoardProperty GetPropertyByName (string name)
+	{
+		foreach (var i in properties)
+		{
+			if (i.Value.name == name)
+				return i.Value;
+		}
+
+		return null;
+	}
+
 	public BlackBoardProperty GetProperty (string guid)
 	{
 		if (properties.ContainsKey (guid))
