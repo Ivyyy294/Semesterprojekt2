@@ -61,7 +61,7 @@ public class PlayerInteraction : MonoBehaviour
 		{
 			interactableObject = hit.transform.gameObject.GetComponent<InteractableObject>();
 			
-			if (interactableObject != null)
+			if (interactableObject != null && ((MonoBehaviour)interactableObject).enabled)
 				inRange = true;
 		}
 		else

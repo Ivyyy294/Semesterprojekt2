@@ -509,6 +509,37 @@ MonoBehaviour:
   m_ShadowLayerMask: 1
   m_LightCookieSize: {x: 1, y: 1}
   m_LightCookieOffset: {x: 0, y: 0}
+--- !u!1 &5592197603480357656
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5523221964214666887}
+  m_Layer: 0
+  m_Name: PlayerSpawn
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5523221964214666887
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5592197603480357656}
+  m_LocalRotation: {x: 0, y: -0.7071068, z: 0, w: 0.7071068}
+  m_LocalPosition: {x: 16.27615, y: 2.6269064, z: -13.856088}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 1
+  m_Children: []
+  m_Father: {fileID: 7053959207452852874}
+  m_RootOrder: 17
+  m_LocalEulerAnglesHint: {x: 0, y: -90, z: 0}
 --- !u!1 &5983954498364158865
 GameObject:
   m_ObjectHideFlags: 0
@@ -564,6 +595,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   animator: {fileID: 0}
+  tunnelLightOn: 1
+  tunnelLight: {fileID: 8845738361208217310}
 --- !u!95 &8596160363308706755
 Animator:
   serializedVersion: 4
@@ -1270,6 +1303,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7053959207452852874}
+  - component: {fileID: 2565798720408585157}
   m_Layer: 0
   m_Name: Room
   m_TagString: Untagged
@@ -1306,9 +1340,42 @@ Transform:
   - {fileID: 2143632795593072503}
   - {fileID: 4828017596950160886}
   - {fileID: 4233683020594215914}
+  - {fileID: 5523221964214666887}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2565798720408585157
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8831366323530898775}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2324029556a63a74f90834e0f34aedb8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  night: 0
+  wakeUpState:
+    animationCurve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    PlayerSpawnPos: {fileID: 5523221964214666887}
+  nightState:
+    interactableObjects: []
+    nextDayTrigger: {fileID: 0}
+  transitionState:
+    animationCurve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+  image: {fileID: 0}
 --- !u!1 &8845738361208217310
 GameObject:
   m_ObjectHideFlags: 0
