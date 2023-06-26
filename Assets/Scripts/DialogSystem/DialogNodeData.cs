@@ -14,7 +14,8 @@ public class DialogNodeData
 		WAIT,
 		PUCK,
 		START,
-		EDIT_VALUE
+		EDIT_VALUE,
+		PLAYER_AUTO
 	}
 
 	//Base Values

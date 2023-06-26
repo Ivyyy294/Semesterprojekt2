@@ -27,6 +27,7 @@ public class DialogGraphView : GraphView
 		this.AddManipulator (CreateWaitNodeContextMenu());
 		this.AddManipulator (CreateEditValueNodeContextMenu());
 		this.AddManipulator (CreatePuckNodeContextMenu());
+		this.AddManipulator (CreatePlayerAutoContextMenu());
 		this.AddManipulator (CreateGroupContextMenu());
 
 		////ToDo fix stylesheet
@@ -140,6 +141,15 @@ public class DialogGraphView : GraphView
 		StyleSheet nodeStyleSheet = (StyleSheet) EditorGUIUtility.Load ("DSNodeStyles.uss");
 		styleSheets.Add (nodeStyleSheet);
 	}
+
+	private IManipulator CreatePlayerAutoContextMenu()
+	{
+		ContextualMenuManipulator contextualMenuManipulator = new ContextualMenuManipulator (
+			menuEvent=> menuEvent.menu.AppendAction ("Add PlayerAutoNode", actionEvent=>AddElement (DialogPlayerAutoNode.Create("PlayerAutoNode", GetLocalMousePosition (actionEvent.eventInfo.localMousePosition)))));
+
+		return contextualMenuManipulator;
+	}
+
 
 	private IManipulator CreatePuckNodeContextMenu()
 	{

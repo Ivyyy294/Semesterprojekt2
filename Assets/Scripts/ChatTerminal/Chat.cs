@@ -57,6 +57,8 @@ public class Chat : FiniteStateMachine
 				manager.EnterState (manager.puckState);
 			else if (node.data.Type == DialogNodeData.NodeType.EDIT_VALUE)
 				manager.EnterState (manager.editValueNodeState);
+			else if (node.data.Type == DialogNodeData.NodeType.PLAYER_AUTO)
+				manager.EnterState (manager.playerAutoNodeState);
 			else if (node.data.Type == DialogNodeData.NodeType.START)
 			{
 				manager.DialogTree.Next();
@@ -65,8 +67,10 @@ public class Chat : FiniteStateMachine
 		}
 	}
 
+	[System.Serializable]
 	public class NpcNodeState : BaseState
 	{
+		public GameObject msgPrefab;
 		ChatMessage chatMessage;
 		float timer;
 
@@ -74,7 +78,7 @@ public class Chat : FiniteStateMachine
 		{
 			base.Enter (obj);
 			timer = 0f;
-			chatMessage = Object.Instantiate (manager.messageNpcTemplate, manager.messageContainer.transform).GetComponentInChildren<ChatMessage>();
+			chatMessage = Object.Instantiate (msgPrefab, manager.messageContainer.transform).GetComponentInChildren<ChatMessage>();
 			chatMessage.SetContent (node.data);
 			Canvas.ForceUpdateCanvases();
 		}
@@ -86,7 +90,8 @@ public class Chat : FiniteStateMachine
 				DialogTree.Node nextNode = manager.DialogTree.Peek();
 
 				bool wait = nextNode.data != null
-					&& nextNode.data.Type == DialogNodeData.NodeType.NPC;
+					&& (nextNode.data.Type == DialogNodeData.NodeType.NPC
+					|| nextNode.data.Type == DialogNodeData.NodeType.PLAYER_AUTO);
 
 				if (wait && timer < manager.delayNpcMessage)
 					timer += Time.deltaTime;
@@ -99,8 +104,10 @@ public class Chat : FiniteStateMachine
 		}
 	}
 
+	[System.Serializable]
 	public class ChoiceNodeState : BaseState
 	{
+		public GameObject msgPrefab;
 		ChatMessage chatMessage;
 		int portSelected;
 		float timer = 0f;
@@ -146,7 +153,7 @@ public class Chat : FiniteStateMachine
 		{
 			manager.DisableButtons();
 			portSelected = port;
-			chatMessage = Object.Instantiate (manager.messagePlayerTemplate, manager.messageContainer.transform).GetComponentInChildren<ChatMessage>();
+			chatMessage = Object.Instantiate (msgPrefab, manager.messageContainer.transform).GetComponentInChildren<ChatMessage>();
 			chatMessage.SetContent (node.ports[port].portName);
 		}
 	}
@@ -246,15 +253,49 @@ public class Chat : FiniteStateMachine
 		}
 	}
 
+	[System.Serializable]
+	public class PlayerAutoNodeState : BaseState
+	{
+		public GameObject msgPrefab;
+		ChatMessage chatMessage;
+		float timer;
+
+		public override void Enter (GameObject obj)
+		{
+			base.Enter (obj);
+			timer = 0f;
+			chatMessage = Object.Instantiate (msgPrefab, manager.messageContainer.transform).GetComponentInChildren<ChatMessage>();
+			chatMessage.SetContent (node.data);
+			Canvas.ForceUpdateCanvases();
+		}
+
+		public override void Update (GameObject obj)
+		{
+			if (chatMessage.Done)
+			{
+				DialogTree.Node nextNode = manager.DialogTree.Peek();
+
+				bool wait = nextNode.data != null
+					&& (nextNode.data.Type == DialogNodeData.NodeType.NPC
+					|| nextNode.data.Type == DialogNodeData.NodeType.PLAYER_AUTO);
+
+				if (wait && timer < manager.delayPlayerMessage)
+					timer += Time.deltaTime;
+				else if (node.ports.Count > 0)
+				{
+					manager.DialogTree.Next();
+					manager.EnterState (manager.defaultState);
+				}
+			}
+		}
+	}
+
 	public DialogContainer dialogContainer;
 	public float delayPlayerMessage = 0.5f;
 	public float delayNpcMessage = 0.5f;
 
 	[Header ("Lara values")]
 	public GameObject messageContainer;
-	public GameObject messageNpcTemplate;
-	public GameObject messagePlayerTemplate;
-
 	[SerializeField] GameObject buttonContainer;
 
 	public DefaultState defaultState = new DefaultState();
@@ -266,6 +307,7 @@ public class Chat : FiniteStateMachine
 	public WaitNodeState waitNodeState = new WaitNodeState();
 	public PuckState puckState = new PuckState();
 	public EditValueNodeState editValueNodeState = new EditValueNodeState();
+	public PlayerAutoNodeState playerAutoNodeState = new PlayerAutoNodeState();
 	
 	private DialogTree dialogTree = new DialogTree();
 	public DialogTree DialogTree => dialogTree;
@@ -370,10 +412,14 @@ public class Chat : FiniteStateMachine
 
 			if (node.data.Type == DialogNodeData.NodeType.NPC)
 			{
-				ChatMessage chatMessage = Object.Instantiate (messageNpcTemplate, messageContainer.transform).GetComponentInChildren<ChatMessage>();
+				ChatMessage chatMessage = Object.Instantiate (npcNodeState.msgPrefab, messageContainer.transform).GetComponentInChildren<ChatMessage>();
 				chatMessage.SetContent (node.data, true);
 			}
-
+			else if (node.data.Type == DialogNodeData.NodeType.PLAYER_AUTO)
+			{
+				ChatMessage chatMessage = Object.Instantiate (playerAutoNodeState.msgPrefab, messageContainer.transform).GetComponentInChildren<ChatMessage>();
+				chatMessage.SetContent (node.data, true);
+			}
 			else if (node.data.Type == DialogNodeData.NodeType.CHOICE)
 			{
 				int nextIndex = i + 1;
@@ -382,7 +428,7 @@ public class Chat : FiniteStateMachine
 				{
 					string nextGuid = dialogTree.dialogContainer.GetDialogNodeData (nodeList[nextIndex]).Guid;
 
-					ChatMessage chatMessage = Object.Instantiate (messagePlayerTemplate, messageContainer.transform).GetComponentInChildren<ChatMessage>();
+					ChatMessage chatMessage = Object.Instantiate (choiceNodeState.msgPrefab, messageContainer.transform).GetComponentInChildren<ChatMessage>();
 
 					foreach (var port in node.ports)
 					{
@@ -394,7 +440,8 @@ public class Chat : FiniteStateMachine
 		}
 
 		//If the last node is an NPC node, move to the next Node to avoid duplicated messages
-		if (dialogTree.CurrentNode().data != null && dialogTree.CurrentNode().data.Type == DialogNodeData.NodeType.NPC)
+		if (dialogTree.CurrentNode().data != null && (dialogTree.CurrentNode().data.Type == DialogNodeData.NodeType.NPC
+			|| dialogTree.CurrentNode().data.Type == DialogNodeData.NodeType.PLAYER_AUTO))
 			dialogTree.Next();
 	}
 }

@@ -135,6 +135,18 @@ DialogEditValueNode #title-label
 {
 	color: #000000;
 }
+
+/*DialogPlayerAutoNode*/
+DialogPlayerAutoNode #title
+{
+	background-color: #96FF00;
+}
+
+DialogPlayerAutoNode #title-label
+{
+	color: #000000;
+}
+
 /*
 //CONTAINERS
 

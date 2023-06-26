@@ -134,8 +134,8 @@ RectTransform:
   m_Father: {fileID: 4373267799486173068}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 673.5, y: 0}
   m_SizeDelta: {x: 103.16, y: 0}
   m_Pivot: {x: 1, y: 1}
@@ -441,7 +441,7 @@ GameObject:
   - component: {fileID: 8529109700553244970}
   - component: {fileID: 3018072430484459647}
   m_Layer: 5
-  m_Name: User_Container
+  m_Name: PlayerChoiceMsg
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

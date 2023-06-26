@@ -55,9 +55,13 @@ MonoBehaviour:
   delayPlayerMessage: 1
   delayNpcMessage: 2
   messageContainer: {fileID: 5804524917878496070}
-  messageNpcTemplate: {fileID: 1075436441059836512, guid: 8265db336072c6c40bd9d2f2ec17a4cc, type: 3}
-  messagePlayerTemplate: {fileID: 7577303488300203282, guid: 9589fbed519bcdb4abae3fde6c713d30, type: 3}
   buttonContainer: {fileID: 0}
+  npcNodeState:
+    msgPrefab: {fileID: 1075436441059836512, guid: 8265db336072c6c40bd9d2f2ec17a4cc, type: 3}
+  choiceNodeState:
+    msgPrefab: {fileID: 7577303488300203282, guid: 9589fbed519bcdb4abae3fde6c713d30, type: 3}
+  playerAutoNodeState:
+    msgPrefab: {fileID: 7577303488300203282, guid: c9ce1bbdefb84f643aea7f6fee1d89be, type: 3}
 --- !u!1 &1071400245446531008
 GameObject:
   m_ObjectHideFlags: 0
