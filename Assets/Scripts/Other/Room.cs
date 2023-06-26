@@ -119,20 +119,24 @@ public class Room : FiniteStateMachine
 	public class TransitionState : BaseState
 	{
 		[SerializeField] Image image;
+		[SerializeField] GameObject txt;
 		[SerializeField] AnimationCurve animationCurve;
+		[SerializeField] float txtTime;
 		float timer;
+		float timerTxt;
 
 		public override void Enter(GameObject obj)
 		{
 			base.Enter(obj);
 			characterController.enabled = false;
 			timer = 0f;
+			timerTxt = 0f;
 			image.gameObject.SetActive (true);
 		}
 
 		public override void Update(GameObject obj)
 		{
-			if (timer < animationCurve.keys[animationCurve.length -1].time)
+			if (timer <= animationCurve.keys[animationCurve.length -1].time)
 			{
 				Color color = image.color;
 				color.a = animationCurve.Evaluate (timer);
@@ -140,8 +144,18 @@ public class Room : FiniteStateMachine
 
 				timer += Time.deltaTime;
 			}
-			else
+			else if (timerTxt <= txtTime)
+			{
+				txt.SetActive (true);
+				timerTxt += Time.deltaTime;
+			}
+			else 
 				room.EnterState (room.wakeUpState);
+		}
+
+		public override void Exit(GameObject obj)
+		{
+			txt.SetActive (false);
 		}
 	}
 

@@ -484,9 +484,17 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1267065489}
     - target: {fileID: 2565798720408585157, guid: cbc17c2b942c75242850f0bbb7667649, type: 3}
+      propertyPath: transitionState.txt
+      value: 
+      objectReference: {fileID: 1267065490}
+    - target: {fileID: 2565798720408585157, guid: cbc17c2b942c75242850f0bbb7667649, type: 3}
       propertyPath: transitionState.image
       value: 
       objectReference: {fileID: 1267065489}
+    - target: {fileID: 2565798720408585157, guid: cbc17c2b942c75242850f0bbb7667649, type: 3}
+      propertyPath: transitionState.txtTime
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 2565798720408585157, guid: cbc17c2b942c75242850f0bbb7667649, type: 3}
       propertyPath: nightState.nextDayTrigger
       value: 
@@ -911,6 +919,10 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: -0.000061035156
       objectReference: {fileID: 0}
+    - target: {fileID: 1689729475850910880, guid: ae46210e68ea0974fb795edade1a5d7a, type: 3}
+      propertyPath: m_Name
+      value: BlackFade_UI
+      objectReference: {fileID: 0}
     - target: {fileID: 1852701145404479110, guid: ae46210e68ea0974fb795edade1a5d7a, type: 3}
       propertyPath: m_AnchorMax.x
       value: 0
@@ -1252,6 +1264,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &1267065490 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1165894274858518910, guid: ae46210e68ea0974fb795edade1a5d7a, type: 3}
+  m_PrefabInstance: {fileID: 1267065488}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1515561018
 PrefabInstance:
   m_ObjectHideFlags: 0
