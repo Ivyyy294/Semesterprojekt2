@@ -13,7 +13,7 @@ public class OfflineState : IState
 	{
 		terminalObj = obj.GetComponent<ChatTerminalObj>();
 		terminalObj.terminalCamera.Priority = 0;
-		terminalObj.eventReleasePlayer?.Raise();
+		Player.Me().Unlock();
 	}
 
 	public void Update (GameObject obj)
@@ -33,7 +33,7 @@ public class PowerUpState : IState
 	public void Enter (GameObject obj)
 	{
 		terminalObj = obj.GetComponent<ChatTerminalObj>();
-		terminalObj.eventLockPlayer?.Raise();
+		Player.Me().Lock();
 		terminalObj.terminalCamera.Priority = 2;
 		timer = 0f;
 	}
@@ -93,8 +93,6 @@ public class OnlineState : IState
 public class ChatTerminalObj : MonoBehaviour, Ivyyy.Interfaces.InteractableObject
 {
 	[Header ("Lara Values")]
-	public GameEvent eventLockPlayer;
-	public GameEvent eventReleasePlayer;
 	public GameEvent terminalUiShow;
 	public float minTransitionTime = 1f;
 	[Space()]

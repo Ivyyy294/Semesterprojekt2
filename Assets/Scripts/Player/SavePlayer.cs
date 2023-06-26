@@ -18,7 +18,7 @@ public class SavePlayer : SaveableObject
 		p.Add ("posZ", transform.position.z);
 
 		//Rotation
-		p.Add ("rotX", mouseLook.GetRotationX());
+		//p.Add ("rotX", mouseLook.GetRotationX());
 		p.Add ("rotY", mouseLook.GetRotationY());
 
 		return p;
@@ -34,7 +34,7 @@ public class SavePlayer : SaveableObject
 		player.SetPosition(loadedPos);
 
 		//Rotation
-		mouseLook.SetRotationX (float.Parse(val.data["rotX"]));
+		//mouseLook.SetRotationX (float.Parse(val.data["rotX"]));
 		mouseLook.SetRotationY (float.Parse(val.data["rotY"]));
 	}
 }

@@ -41,12 +41,11 @@ public class InteractableCamera : FiniteStateMachine, InteractableObject
 	[System.Serializable]
 	public class EaseInState : BaseState
 	{
-		[SerializeField] GameEvent lockPlayer;
 		CinemachineBrain cinemachineBrain;
 		public override void Enter (GameObject obj)
 		{
 			base.Enter(obj);
-			lockPlayer?.Raise();
+			Player.Me().Lock();
 			interactableCamera?.cameraContainer.SetActive(true);
 			cinemachineBrain = Camera.main.GetComponent<CinemachineBrain>();
 		}
@@ -83,7 +82,6 @@ public class InteractableCamera : FiniteStateMachine, InteractableObject
 	[System.Serializable]
 	public class EaseOutState : BaseState
 	{
-		[SerializeField] GameEvent releasePlayer;
 		CinemachineBrain cinemachineBrain;
 		public override void Enter (GameObject obj)
 		{
@@ -96,7 +94,7 @@ public class InteractableCamera : FiniteStateMachine, InteractableObject
 		{
 			if (cinemachineBrain != null && !cinemachineBrain.IsBlending)
 			{
-				releasePlayer?.Raise();
+				Player.Me().Unlock();
 				interactableCamera.EnterState (interactableCamera.inactiveState);
 			}
 		}

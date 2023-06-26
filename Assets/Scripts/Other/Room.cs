@@ -12,13 +12,9 @@ public class Room : FiniteStateMachine
 	public class BaseState : IState
 	{
 		protected Room room;
-		protected CharacterController characterController;
 		public virtual void Enter (GameObject obj)
 		{
 			room = obj.GetComponent <Room>();
-
-			Transform player = Camera.main.transform.parent;
-			characterController = player?.GetComponent <CharacterController>();
 		}
 
 		public virtual void Update (GameObject obj)
@@ -44,12 +40,13 @@ public class Room : FiniteStateMachine
 
 			timer = 0f;
 			image.gameObject.SetActive (true);
-			characterController.enabled = false;
+
+			Player.Me().Lock();
 
 			if (!SaveGameManager.Me().LoadGameScheduled)
 			{
-				characterController.transform.position = PlayerSpawnPos.position;
-				characterController.transform.forward = PlayerSpawnPos.forward;
+				Player.Me().transform.position = PlayerSpawnPos.position;
+				Player.Me().transform.forward = PlayerSpawnPos.forward;
 			}
 		}
 
@@ -69,7 +66,7 @@ public class Room : FiniteStateMachine
 
 		public override void Exit(GameObject obj)
 		{
-			characterController.enabled = true;
+			Player.Me().Unlock();
 			image.gameObject.SetActive (false);
 		}
 
@@ -128,7 +125,7 @@ public class Room : FiniteStateMachine
 		public override void Enter(GameObject obj)
 		{
 			base.Enter(obj);
-			characterController.enabled = false;
+			Player.Me().Lock();
 			timer = 0f;
 			timerTxt = 0f;
 			image.gameObject.SetActive (true);
