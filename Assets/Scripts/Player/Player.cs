@@ -13,6 +13,9 @@ public class Player : MonoBehaviour
 
 	public static Player Me()
 	{
+		if (me == null)
+			me = Camera.main.transform.parent.GetComponent <Player>();
+
 		return me;
 	}
 
@@ -39,7 +42,7 @@ public class Player : MonoBehaviour
 	}
 
     // Start is called before the first frame update
-    void Start()
+    void Awake()
     {
         if (me== null)
 		{

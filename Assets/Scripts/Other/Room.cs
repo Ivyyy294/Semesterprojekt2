@@ -42,12 +42,8 @@ public class Room : FiniteStateMachine
 			image.gameObject.SetActive (true);
 
 			Player.Me().Lock();
-
-			if (!SaveGameManager.Me().LoadGameScheduled)
-			{
-				Player.Me().transform.position = PlayerSpawnPos.position;
-				Player.Me().transform.forward = PlayerSpawnPos.forward;
-			}
+			Player.Me().transform.position = PlayerSpawnPos.position;
+			Player.Me().transform.forward = PlayerSpawnPos.forward;
 
 			room.lightController.EnterNormalState();
 		}
@@ -168,6 +164,7 @@ public class Room : FiniteStateMachine
 	public DayState dayState = new DayState();
 	public TransitionState transitionState = new TransitionState();
 	public LightController lightController;
+	//public Player player;
 
 	public void EnterNight()
 	{
