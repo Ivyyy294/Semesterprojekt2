@@ -2,11 +2,13 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using Ivyyy.StateMachine;
+using Ivyyy.Core;
 
 public class Player : MonoBehaviour
 {
 	private static Player me;
 
+	private PlayerMovement3D playerMovement3D;
 	private CharacterController characterController;
 	private MouseLook mouseLook;
 	private PlayerInteraction playerInteraction;
@@ -21,14 +23,14 @@ public class Player : MonoBehaviour
 
 	public void Lock ()
 	{
-		characterController.enabled = false;
+		playerMovement3D.enabled = false;
 		mouseLook.enabled = false;
 		playerInteraction.enabled = false;
 	}
 
 	public void Unlock ()
 	{
-		characterController.enabled = true;
+		playerMovement3D.enabled = true;
 		mouseLook.enabled = true;
 		playerInteraction.enabled = true;
 	}
@@ -51,6 +53,7 @@ public class Player : MonoBehaviour
 			characterController = GetComponent <CharacterController>();
 			mouseLook = GetComponent <MouseLook>();
 			playerInteraction = GetComponent <PlayerInteraction>();
+			playerMovement3D = GetComponent <PlayerMovement3D>();
 		}
 		else
 			Destroy(this);

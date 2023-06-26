@@ -441,7 +441,8 @@ public class Chat : FiniteStateMachine
 
 		//If the last node is an NPC node, move to the next Node to avoid duplicated messages
 		if (dialogTree.CurrentNode().data != null && (dialogTree.CurrentNode().data.Type == DialogNodeData.NodeType.NPC
-			|| dialogTree.CurrentNode().data.Type == DialogNodeData.NodeType.PLAYER_AUTO))
+			|| dialogTree.CurrentNode().data.Type == DialogNodeData.NodeType.PLAYER_AUTO
+			|| dialogTree.CurrentNode().data.Type == DialogNodeData.NodeType.RAISE_EVENT))
 			dialogTree.Next();
 	}
 }
