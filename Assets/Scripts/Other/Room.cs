@@ -48,6 +48,8 @@ public class Room : FiniteStateMachine
 				Player.Me().transform.position = PlayerSpawnPos.position;
 				Player.Me().transform.forward = PlayerSpawnPos.forward;
 			}
+
+			room.lightController.EnterNormalState();
 		}
 
 		public override void Update (GameObject obj)
@@ -77,6 +79,7 @@ public class Room : FiniteStateMachine
 	{
 		[SerializeField] string propertyName;
 		[SerializeField] int threshold;
+		public bool done;
 
 		public override void Enter(GameObject obj)
 		{
@@ -85,23 +88,28 @@ public class Room : FiniteStateMachine
 
 		public override void Update (GameObject obj)
 		{
-			BlackBoardProperty property = BlackBoard.Me().GetPropertyByName (propertyName);
-
-			if (property != null && property.iVal >= threshold)
+			if (done)
 				room.EnterState (room.nightState);
+		}
+
+		public override void Exit(GameObject obj)
+		{
+			done = false;
 		}
 	}
 
 	[System.Serializable]
 	public class NightState : BaseState
 	{
-		[SerializeField] GameObject[] interactableObjects;
 		[SerializeField] GameObject nextDayTrigger;
+		[SerializeField] AudioAsset audioAsset;
 		public override void Enter (GameObject obj)
 		{
 			base.Enter (obj);
 			nextDayTrigger.SetActive (true);
 			Player.Me().BlockInteractions (true);
+			room.lightController.EnterNightState();
+			audioAsset?.Play();
 		}
 
 		public override void Exit(GameObject obj)
@@ -159,6 +167,12 @@ public class Room : FiniteStateMachine
 	public NightState nightState = new NightState();
 	public DayState dayState = new DayState();
 	public TransitionState transitionState = new TransitionState();
+	public LightController lightController;
+
+	public void EnterNight()
+	{
+		dayState.done = true;
+	}
 
 	public void NextDay()
 	{

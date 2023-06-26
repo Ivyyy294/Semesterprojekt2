@@ -1302,6 +1302,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7053959207452852874}
   - component: {fileID: 2565798720408585157}
+  - component: {fileID: 1651334367672359633}
   m_Layer: 0
   m_Name: Room
   m_TagString: Untagged
@@ -1364,11 +1365,12 @@ MonoBehaviour:
     PlayerSpawnPos: {fileID: 5523221964214666887}
     image: {fileID: 0}
   nightState:
-    interactableObjects: []
     nextDayTrigger: {fileID: 0}
+    audioAsset: {fileID: 11400000, guid: 4c9245077c3986f44b34c86a7debac58, type: 2}
   dayState:
     propertyName: ProgressDay1
     threshold: 1
+    done: 0
   transitionState:
     image: {fileID: 0}
     txt: {fileID: 0}
@@ -1379,6 +1381,35 @@ MonoBehaviour:
       m_PostInfinity: 2
       m_RotationOrder: 4
     txtTime: 0
+  lightController: {fileID: 1835700772797283506}
+--- !u!114 &1651334367672359633
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8831366323530898775}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7a1d18488b0649147a4b6dea6447213e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameEvent: {fileID: 11400000, guid: 0b80ddc51b8a1c34c8cd80164e3e0b69, type: 2}
+  response:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 2565798720408585157}
+        m_TargetAssemblyTypeName: Room, Assembly-CSharp
+        m_MethodName: EnterNight
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &8845738361208217310
 GameObject:
   m_ObjectHideFlags: 0
