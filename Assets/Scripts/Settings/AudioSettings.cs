@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class AudioSettings
+public class AudioSettings : ISettingContainer
 {
 	public float sfxVolume = 1f;
 	public float musicVolume = 1f;
@@ -13,12 +13,12 @@ public class AudioSettings
 
 	public void SaveSettings()
 	{
-		PlayerPrefs.SetFloat("sfxVolume", sfxVolume);
-		PlayerPrefs.SetFloat("musicVolume", musicVolume);
-		PlayerPrefs.SetFloat("ambientVolume", ambientVolume);
-		PlayerPrefs.SetFloat("uiVolume", uiVolume);
-		PlayerPrefs.SetFloat("voiceLine", voiceLine);
-		PlayerPrefs.SetFloat ("subtitle", subtitle ? 1f : 0f);
+		PlayerPrefs.SetFloat("IvyyySfxVolume", sfxVolume);
+		PlayerPrefs.SetFloat("IvyyyMusicVolume", musicVolume);
+		PlayerPrefs.SetFloat("IvyyyAmbientVolume", ambientVolume);
+		PlayerPrefs.SetFloat("IvyyyUiVolume", uiVolume);
+		PlayerPrefs.SetFloat("IvyyyVoiceLine", voiceLine);
+		PlayerPrefs.SetFloat ("IvyyySubtitle", subtitle ? 1f : 0f);
         PlayerPrefs.Save();
 	}
 
@@ -28,14 +28,14 @@ public class AudioSettings
     }
 
     //Private Functions
-	void LoadSettings()
+	public void LoadSettings()
 	{
-		sfxVolume = LoadValue ("sfxVolume");
-		musicVolume = LoadValue ("musicVolume");
-		ambientVolume = LoadValue ("ambientVolume");
-		uiVolume = LoadValue ("uiVolume");
-		voiceLine = LoadValue ("voiceLine");
-		subtitle = LoadValue ("subtitle") > 0f ? true: false;
+		sfxVolume = LoadValue ("IvyyySfxVolume");
+		musicVolume = LoadValue ("IvyyyMusicVolume");
+		ambientVolume = LoadValue ("IvyyyAmbientVolume");
+		uiVolume = LoadValue ("IvyyyUiVolume");
+		voiceLine = LoadValue ("IvyyyVoiceLine");
+		subtitle = LoadValue ("IvyyySubtitle") > 0f ? true: false;
 	}
 
 	float LoadValue (string key)
