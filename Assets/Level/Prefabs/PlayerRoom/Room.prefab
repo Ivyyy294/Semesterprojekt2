@@ -4174,6 +4174,34 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 5382060655138142036}
     m_Modifications:
+    - target: {fileID: 2002579846601805503, guid: aa98ea2e382f27c4994f5b0e2e793d8f, type: 3}
+      propertyPath: nextDayEvent.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2002579846601805503, guid: aa98ea2e382f27c4994f5b0e2e793d8f, type: 3}
+      propertyPath: nextDayEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2002579846601805503, guid: aa98ea2e382f27c4994f5b0e2e793d8f, type: 3}
+      propertyPath: nextDayEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 2565798720408585157}
+    - target: {fileID: 2002579846601805503, guid: aa98ea2e382f27c4994f5b0e2e793d8f, type: 3}
+      propertyPath: nextDayEvent.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2002579846601805503, guid: aa98ea2e382f27c4994f5b0e2e793d8f, type: 3}
+      propertyPath: nextDayEvent.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: NextDay
+      objectReference: {fileID: 0}
+    - target: {fileID: 2002579846601805503, guid: aa98ea2e382f27c4994f5b0e2e793d8f, type: 3}
+      propertyPath: nextDayEvent.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: Room, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 2002579846601805503, guid: aa98ea2e382f27c4994f5b0e2e793d8f, type: 3}
+      propertyPath: nextDayEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 5117231642060841804, guid: aa98ea2e382f27c4994f5b0e2e793d8f, type: 3}
       propertyPath: m_Name
       value: NextDayTrigger
