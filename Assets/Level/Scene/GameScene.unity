@@ -1396,6 +1396,10 @@ PrefabInstance:
       propertyPath: m_LocalPosition.y
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 7806118516149597095, guid: bcecf68e23d4cfb43bdb02c73daaa06f, type: 3}
+      propertyPath: m_CustomBlends
+      value: 
+      objectReference: {fileID: 11400000, guid: ef8a20fbbd567ed4393dd9ec7d1a7b81, type: 2}
     - target: {fileID: 8956879903244738488, guid: bcecf68e23d4cfb43bdb02c73daaa06f, type: 3}
       propertyPath: uniqueId
       value: 8ec7ccc1-746a-4068-9be9-0df9815644d2

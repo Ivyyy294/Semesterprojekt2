@@ -1356,6 +1356,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   wakeUpState:
+    lightController: {fileID: 1835700772797283506}
     animationCurve:
       serializedVersion: 2
       m_Curve: []
@@ -1367,6 +1368,7 @@ MonoBehaviour:
   nightState:
     nextDayTrigger: {fileID: 0}
     audioAsset: {fileID: 11400000, guid: 4c9245077c3986f44b34c86a7debac58, type: 2}
+    lightController: {fileID: 1835700772797283506}
   dayState:
     propertyName: ProgressDay1
     threshold: 1
@@ -1380,8 +1382,8 @@ MonoBehaviour:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
+    nextDayTrigger: {fileID: 1180345983960718880}
     txtTime: 0
-  lightController: {fileID: 1835700772797283506}
 --- !u!114 &1651334367672359633
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3259,6 +3261,11 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: 5f05d32f544d5a54dbf418066e0bc33d, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b682a561b7a1b264fb54ac1dff7d90bf, type: 3}
+--- !u!1 &1180345983960718880 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6808788492586380941, guid: b682a561b7a1b264fb54ac1dff7d90bf, type: 3}
+  m_PrefabInstance: {fileID: 5628588468929654957}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &7103152164888370460 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3210983137070722481, guid: b682a561b7a1b264fb54ac1dff7d90bf, type: 3}

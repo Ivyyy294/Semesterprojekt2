@@ -6,10 +6,27 @@ using UnityEngine.Events;
 
 public class NextDayTrigger : MonoBehaviour, InteractableObject
 {
-	public UnityEvent nextDayEvent;
+	[SerializeField] UnityEvent nextDayEvent;
+	[SerializeField] GameObject vCamera;
+	[SerializeField] float minAnimationtime = 0.5f;
+	float timer;
 
 	public void Interact()
 	{
-		nextDayEvent?.Invoke();
+		vCamera.SetActive(true);
+		timer = 0f;
+	}
+
+	private void OnEnable()
+	{
+		vCamera.SetActive(false);
+	}
+
+	private void Update()
+	{
+		if (timer < minAnimationtime)
+			timer += Time.deltaTime;
+		else if (vCamera.activeInHierarchy && !Camera.main.GetComponent<Cinemachine.CinemachineBrain>().IsBlending)
+			nextDayEvent?.Invoke();
 	}
 }

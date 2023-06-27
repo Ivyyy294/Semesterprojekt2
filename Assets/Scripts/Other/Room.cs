@@ -29,10 +29,11 @@ public class Room : FiniteStateMachine
 	[System.Serializable]
 	public class WakeUpState : BaseState
 	{
+		[SerializeField] LightController lightController;
 		[SerializeField] AnimationCurve animationCurve;
-		float timer;
 		[SerializeField] Transform PlayerSpawnPos;
 		[SerializeField] Image image;
+		float timer;
 
 		public override void Enter (GameObject obj)
 		{
@@ -45,7 +46,7 @@ public class Room : FiniteStateMachine
 			Player.Me().transform.position = PlayerSpawnPos.position;
 			Player.Me().transform.forward = PlayerSpawnPos.forward;
 
-			room.lightController.EnterNormalState();
+			lightController.EnterNormalState();
 		}
 
 		public override void Update (GameObject obj)
@@ -99,18 +100,19 @@ public class Room : FiniteStateMachine
 	{
 		[SerializeField] GameObject nextDayTrigger;
 		[SerializeField] AudioAsset audioAsset;
+		[SerializeField] LightController lightController;
+
 		public override void Enter (GameObject obj)
 		{
 			base.Enter (obj);
 			nextDayTrigger.SetActive (true);
 			Player.Me().BlockInteractions (true);
-			room.lightController.EnterNightState();
+			lightController.EnterNightState();
 			audioAsset?.Play();
 		}
 
 		public override void Exit(GameObject obj)
 		{
-			nextDayTrigger.SetActive (false);
 			Player.Me().BlockInteractions (false);
 		}
 	}
@@ -121,6 +123,7 @@ public class Room : FiniteStateMachine
 		[SerializeField] Image image;
 		[SerializeField] GameObject txt;
 		[SerializeField] AnimationCurve animationCurve;
+		[SerializeField] GameObject nextDayTrigger;
 		[SerializeField] float txtTime;
 		float timer;
 		float timerTxt;
@@ -155,6 +158,7 @@ public class Room : FiniteStateMachine
 
 		public override void Exit(GameObject obj)
 		{
+			nextDayTrigger.SetActive (false);
 			txt.SetActive (false);
 		}
 	}
@@ -163,7 +167,6 @@ public class Room : FiniteStateMachine
 	public NightState nightState = new NightState();
 	public DayState dayState = new DayState();
 	public TransitionState transitionState = new TransitionState();
-	public LightController lightController;
 	//public Player player;
 
 	public void EnterNight()
