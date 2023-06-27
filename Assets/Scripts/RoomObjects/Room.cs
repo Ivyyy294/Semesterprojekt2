@@ -27,27 +27,40 @@ public class Room : FiniteStateMachine
 	}
 
 	[System.Serializable]
-	public class WakeUpState : BaseState
+	public class InitValuesState : BaseState
 	{
-		[SerializeField] LightController lightController;
-		[SerializeField] AnimationCurve animationCurve;
 		[SerializeField] Transform PlayerSpawnPos;
+		[SerializeField] LightController lightController;
+
+		public override void Enter(GameObject obj)
+		{
+			base.Enter(obj);
+
+			Player.Me().Lock();
+			Player.Me().transform.position = PlayerSpawnPos.position;
+			Player.Me().transform.forward = PlayerSpawnPos.forward;
+			lightController.EnterNormalState();
+		}
+
+		public override void Update(GameObject obj)
+		{
+			room.cryoDoor.SetOpen (true);
+			room.EnterState (room.choseDayState);
+		}
+	}
+
+	[System.Serializable]
+	public class ChoseDayState : BaseState
+	{
+		[SerializeField] AnimationCurve animationCurve;
 		[SerializeField] Image image;
 		float timer;
 
 		public override void Enter (GameObject obj)
 		{
 			base.Enter (obj);
-
 			timer = 0f;
 			image.gameObject.SetActive (true);
-
-			Player.Me().Lock();
-			Player.Me().transform.position = PlayerSpawnPos.position;
-			Player.Me().transform.forward = PlayerSpawnPos.forward;
-
-			room.cryoDoor.SetOpen (true);
-			lightController.EnterNormalState();
 		}
 
 		public override void Update (GameObject obj)
@@ -155,7 +168,7 @@ public class Room : FiniteStateMachine
 				timerTxt += Time.deltaTime;
 			}
 			else 
-				room.EnterState (room.wakeUpState);
+				room.EnterState (room.initValuesState);
 		}
 
 		public override void Exit(GameObject obj)
@@ -169,10 +182,11 @@ public class Room : FiniteStateMachine
 	public CryoDoor cryoDoor;
 	
 	[Header ("Room States")]
-	public WakeUpState wakeUpState = new WakeUpState();
+	public ChoseDayState choseDayState = new ChoseDayState();
 	public NightState nightState = new NightState();
 	public DayState dayState = new DayState();
 	public TransitionState transitionState = new TransitionState();
+	public InitValuesState initValuesState = new InitValuesState();
 
 	//public Player player;
 
@@ -187,9 +201,19 @@ public class Room : FiniteStateMachine
 			EnterState (transitionState);
 	}
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        EnterState (wakeUpState);
-    }
+	protected override void Update()
+	{
+		if (currentState == null)
+		{
+			if (SaveGameManager.Me().LoadGameScheduled)
+			{
+				SaveGameManager.Me().LoadGameState();
+				EnterState (choseDayState);
+			}
+			else
+				EnterState (initValuesState);
+		}
+		else
+			base.Update();
+	}
 }

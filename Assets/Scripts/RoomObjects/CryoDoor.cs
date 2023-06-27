@@ -8,6 +8,13 @@ public class CryoDoor : MonoBehaviour
 	[SerializeField] AudioPlayer audioPlayer;
 	Animator animator;
 	bool open = false;
+	public bool Open => open;
+
+	public void SpawnOpen()
+	{
+		open = true;
+		animator.SetTrigger ("SpawnOpen");
+	}
 
 	public void SetOpen(bool val)
 	{

@@ -1588,8 +1588,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cryoDoor: {fileID: 6334317424693014758}
-  wakeUpState:
-    lightController: {fileID: 1835700772797283506}
+  choseDayState:
     animationCurve:
       serializedVersion: 2
       m_Curve:
@@ -1614,7 +1613,6 @@ MonoBehaviour:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-    PlayerSpawnPos: {fileID: 5523221964214666887}
     image: {fileID: 8887352609928016420}
   nightState:
     nextDayTrigger: {fileID: 2990337048767106947}
@@ -1653,6 +1651,9 @@ MonoBehaviour:
       m_RotationOrder: 4
     nextDayTrigger: {fileID: 2990337048767106947}
     txtTime: 0
+  initValuesState:
+    PlayerSpawnPos: {fileID: 5523221964214666887}
+    lightController: {fileID: 1835700772797283506}
 --- !u!114 &1651334367672359633
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4310,6 +4311,10 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: c8801e35ea1fdbd48b652e447e081dce, type: 2}
+    - target: {fileID: 3149837088311231510, guid: 0c30e22ba89055b41aa46975bf4e9286, type: 3}
+      propertyPath: uniqueId
+      value: 6514b92d-aa4c-451c-a776-1a6352bf8a65
+      objectReference: {fileID: 0}
     - target: {fileID: 3220900562035659616, guid: 0c30e22ba89055b41aa46975bf4e9286, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
