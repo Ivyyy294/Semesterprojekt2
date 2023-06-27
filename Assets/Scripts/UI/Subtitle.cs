@@ -53,7 +53,7 @@ public class Subtitle : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-		if (dataQueue == null)
+		if (dataQueue == null || !AudioSettings.Me().subtitle)
 			textObj.gameObject.transform.parent.gameObject.SetActive (false);
 		else
 		{

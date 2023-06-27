@@ -11,6 +11,7 @@ public class AudioSettings
 	public float ambientVolume = 1f;
 	public float uiVolume = 1f;
 	public float voiceLine = 1f;
+	public bool subtitle = true;
 
 	//Public Functions
 	public static AudioSettings Me()
@@ -28,6 +29,7 @@ public class AudioSettings
 		PlayerPrefs.SetFloat("ambientVolume", ambientVolume);
 		PlayerPrefs.SetFloat("uiVolume", uiVolume);
 		PlayerPrefs.SetFloat("voiceLine", voiceLine);
+		PlayerPrefs.SetInt ("subtitle", subtitle ? 1 : 0);
         PlayerPrefs.Save();
 	}
 
@@ -44,6 +46,7 @@ public class AudioSettings
 		ambientVolume = LoadValue ("ambientVolume");
 		uiVolume = LoadValue ("uiVolume");
 		voiceLine = LoadValue ("voiceLine");
+		subtitle = LoadValue ("subtitle") > 0f ? true: false;
 	}
 
 
