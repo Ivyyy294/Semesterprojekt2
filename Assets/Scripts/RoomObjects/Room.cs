@@ -46,6 +46,7 @@ public class Room : FiniteStateMachine
 			Player.Me().transform.position = PlayerSpawnPos.position;
 			Player.Me().transform.forward = PlayerSpawnPos.forward;
 
+			room.cryoDoor.SetOpen (true);
 			lightController.EnterNormalState();
 		}
 
@@ -131,6 +132,7 @@ public class Room : FiniteStateMachine
 		public override void Enter(GameObject obj)
 		{
 			base.Enter(obj);
+			room.cryoDoor.SetOpen (false);
 			Player.Me().Lock();
 			timer = 0f;
 			timerTxt = 0f;
@@ -163,10 +165,15 @@ public class Room : FiniteStateMachine
 		}
 	}
 
+	[Header ("Room Objects")]
+	public CryoDoor cryoDoor;
+	
+	[Header ("Room States")]
 	public WakeUpState wakeUpState = new WakeUpState();
 	public NightState nightState = new NightState();
 	public DayState dayState = new DayState();
 	public TransitionState transitionState = new TransitionState();
+
 	//public Player player;
 
 	public void EnterNight()

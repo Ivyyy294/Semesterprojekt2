@@ -1587,6 +1587,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2324029556a63a74f90834e0f34aedb8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  cryoDoor: {fileID: 6334317424693014758}
   wakeUpState:
     lightController: {fileID: 1835700772797283506}
     animationCurve:
@@ -1632,14 +1633,14 @@ MonoBehaviour:
       - serializedVersion: 3
         time: 0
         value: 0
-        inSlope: 1
-        outSlope: 1
+        inSlope: 0.5
+        outSlope: 0.5
         tangentMode: 34
         weightedMode: 0
         inWeight: 0
         outWeight: 0.33333334
       - serializedVersion: 3
-        time: 1
+        time: 2
         value: 1
         inSlope: 0
         outSlope: 0
@@ -4528,6 +4529,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4814344913878381430, guid: 0c30e22ba89055b41aa46975bf4e9286, type: 3}
   m_PrefabInstance: {fileID: 8202314375858907132}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &6334317424693014758 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2755214874127800090, guid: 0c30e22ba89055b41aa46975bf4e9286, type: 3}
+  m_PrefabInstance: {fileID: 8202314375858907132}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b55d8934f2be1ed42ab9231472045dcd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &9165741582410665879
 PrefabInstance:
   m_ObjectHideFlags: 0

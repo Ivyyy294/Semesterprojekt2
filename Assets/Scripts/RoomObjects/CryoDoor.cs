@@ -3,18 +3,26 @@ using System.Collections.Generic;
 using UnityEngine;
 using Ivyyy.Interfaces;
 
-public class CryoDoor : MonoBehaviour, InteractableObject
+public class CryoDoor : MonoBehaviour
 {
+	[SerializeField] AudioPlayer audioPlayer;
 	Animator animator;
 	bool open = false;
-	public void Interact()
+
+	public void SetOpen(bool val)
 	{
-		open = !open;
+		open = val;
 
 		if (open)
 			animator?.SetTrigger("Open");
 		else
 			animator?.SetTrigger ("Close");
+	}
+
+	public void PlaySound()
+	{
+		if (audioPlayer != null)
+			audioPlayer.Play();
 	}
 
     // Start is called before the first frame update

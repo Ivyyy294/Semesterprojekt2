@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 4814344913878381430}
   - component: {fileID: 8411835354514230645}
   - component: {fileID: 2755214874127800090}
+  - component: {fileID: 2365347263827117576}
   m_Layer: 0
   m_Name: CryoStation
   m_TagString: Untagged
@@ -69,6 +70,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b55d8934f2be1ed42ab9231472045dcd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  audioPlayer: {fileID: 2365347263827117576}
+--- !u!114 &2365347263827117576
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6440840097477770730}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b0668c38364f0e04f921b60b31452cd7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  audioAsset: {fileID: 11400000, guid: b4324ee4c46f7e948bce461756bed4f4, type: 2}
+  playOnAwake: 0
 --- !u!1 &7640753914224147235
 GameObject:
   m_ObjectHideFlags: 0
