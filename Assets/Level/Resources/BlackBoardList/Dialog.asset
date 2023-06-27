@@ -29,3 +29,11 @@ MonoBehaviour:
     guid: bff17bdc-8445-4bc1-bba6-fc7930581c17
     comparisonTyp: 0
     iVal: 0
+  - name: HermiaLOVE
+    guid: 0353c128-c99b-4828-967c-baad81410aff
+    comparisonTyp: 0
+    iVal: 0
+  - name: LysanderLOVE
+    guid: 1e97b23e-b453-4c53-b865-51e15d3caacb
+    comparisonTyp: 0
+    iVal: 0
