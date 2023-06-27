@@ -130,13 +130,13 @@ public class AudioAsset : ScriptableObject
 	public float GetVolumeFactor()
 	{
 		if (audioTyp == AudioAsset.AudioTyp.SFX)
-			return AudioSettings.Me().sfxVolume;
+			return GameSettings.Me().audioSettings.sfxVolume;
 		else if (audioTyp == AudioAsset.AudioTyp.MUSIC)
-			return AudioSettings.Me().musicVolume;
+			return GameSettings.Me().audioSettings.musicVolume;
 		else if (audioTyp == AudioAsset.AudioTyp.AMBIENT)
-			return AudioSettings.Me().ambientVolume;
+			return GameSettings.Me().audioSettings.ambientVolume;
 		else
-			return AudioSettings.Me().uiVolume;
+			return GameSettings.Me().audioSettings.uiVolume;
 	}
 
 	//Private FUnctions

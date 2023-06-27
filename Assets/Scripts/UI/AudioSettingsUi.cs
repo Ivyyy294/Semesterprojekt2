@@ -16,7 +16,7 @@ public class AudioSettingsUi : MonoBehaviour
 
 	private void OnEnable()
 	{
-		audioSettings = AudioSettings.Me();
+		audioSettings = GameSettings.Me().audioSettings;
 		musicSetting.value = audioSettings.musicVolume * 10f;
 		ambientSetting.value = audioSettings.ambientVolume * 10f;
 		sfxSetting.value = audioSettings.sfxVolume * 10f;

@@ -4,23 +4,12 @@ using UnityEngine;
 
 public class AudioSettings
 {
-	private static AudioSettings me;
-
 	public float sfxVolume = 1f;
 	public float musicVolume = 1f;
 	public float ambientVolume = 1f;
 	public float uiVolume = 1f;
 	public float voiceLine = 1f;
 	public bool subtitle = true;
-
-	//Public Functions
-	public static AudioSettings Me()
-	{
-		if (me == null)
-			me = new AudioSettings();
-
-		return me;
-	}
 
 	public void SaveSettings()
 	{
@@ -29,16 +18,16 @@ public class AudioSettings
 		PlayerPrefs.SetFloat("ambientVolume", ambientVolume);
 		PlayerPrefs.SetFloat("uiVolume", uiVolume);
 		PlayerPrefs.SetFloat("voiceLine", voiceLine);
-		PlayerPrefs.SetInt ("subtitle", subtitle ? 1 : 0);
+		PlayerPrefs.SetFloat ("subtitle", subtitle ? 1f : 0f);
         PlayerPrefs.Save();
 	}
 
-    //Private Functions
-    AudioSettings()
+    public AudioSettings()
     {
 		LoadSettings();
     }
 
+    //Private Functions
 	void LoadSettings()
 	{
 		sfxVolume = LoadValue ("sfxVolume");
@@ -48,7 +37,6 @@ public class AudioSettings
 		voiceLine = LoadValue ("voiceLine");
 		subtitle = LoadValue ("subtitle") > 0f ? true: false;
 	}
-
 
 	float LoadValue (string key)
 	{
