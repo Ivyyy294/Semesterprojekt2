@@ -15,6 +15,13 @@ public class MouseLook : MonoBehaviour
 	public float GetRotationX() { return verticalRotation;}
 	public float GetRotationY() { return transform.rotation.eulerAngles.y;}
 
+	public void ResetRotation()
+	{
+		verticalRotation = 0f;
+		SetRotationX (0f);
+		SetRotationX (0f);
+	}
+
     // Start is called before the first frame update
     void Start()
     {

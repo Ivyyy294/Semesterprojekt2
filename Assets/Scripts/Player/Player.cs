@@ -10,7 +10,7 @@ public class Player : MonoBehaviour
 
 	private PlayerMovement3D playerMovement3D;
 	private CharacterController characterController;
-	private MouseLook mouseLook;
+	public MouseLook mouseLook;
 	private PlayerInteraction playerInteraction;
 
 	public static Player Me()

@@ -66,7 +66,10 @@ public class InteractableCamera : FiniteStateMachine, InteractableObject
 			base.Enter(obj);
 
 			if (mouseLook)
+			{
+				mouseLook.ResetRotation();
 				mouseLook.enabled = true;
+			}
 		}
 
 		public override void Update (GameObject obj)
@@ -82,10 +85,18 @@ public class InteractableCamera : FiniteStateMachine, InteractableObject
 	[System.Serializable]
 	public class EaseOutState : BaseState
 	{
+		public bool applyForwardToPlayer = true;
 		CinemachineBrain cinemachineBrain;
 		public override void Enter (GameObject obj)
 		{
 			base.Enter(obj);
+			
+			if (applyForwardToPlayer)
+			{
+				Player.Me().mouseLook.ResetRotation();
+				Player.Me().transform.forward = interactableCamera.cameraContainer.transform.forward;
+			}
+
 			interactableCamera?.cameraContainer.SetActive(false);
 			cinemachineBrain = Camera.main.GetComponent<CinemachineBrain>();
 		}
