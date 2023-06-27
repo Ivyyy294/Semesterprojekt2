@@ -17,3 +17,15 @@ MonoBehaviour:
     guid: 62d7b466-8b9f-4209-b999-4bc0f4c5912b
     comparisonTyp: 0
     iVal: 0
+  - name: ResponseMorning
+    guid: ea72edd5-107a-4b7a-8846-738efbfe1283
+    comparisonTyp: 0
+    iVal: 0
+  - name: ResponseHey
+    guid: 598991bb-e3e6-433f-a0da-0540e5c0ad28
+    comparisonTyp: 0
+    iVal: 0
+  - name: DemetriusLoveYou
+    guid: bff17bdc-8445-4bc1-bba6-fc7930581c17
+    comparisonTyp: 0
+    iVal: 0
