@@ -11,6 +11,7 @@ public class NextDayTrigger : MonoBehaviour, InteractableObject
 	[SerializeField] GameObject vCamera;
 	[SerializeField] float minAnimationtime = 0.5f;
 	float timer;
+	bool done = false;
 
 	public void Interact()
 	{
@@ -21,13 +22,20 @@ public class NextDayTrigger : MonoBehaviour, InteractableObject
 	private void OnEnable()
 	{
 		vCamera.SetActive(false);
+		done = false;
 	}
 
 	private void Update()
 	{
-		if (timer < minAnimationtime)
-			timer += Time.deltaTime;
-		else if (vCamera.activeInHierarchy && !Camera.main.GetComponent<Cinemachine.CinemachineBrain>().IsBlending)
-			nextDayEvent?.Raise();
+		if (!done)
+		{
+			if (timer < minAnimationtime)
+				timer += Time.deltaTime;
+			else if (vCamera.activeInHierarchy && !Camera.main.GetComponent<Cinemachine.CinemachineBrain>().IsBlending)
+			{
+				nextDayEvent?.Raise();
+				done = true;
+			}
+		}
 	}
 }
