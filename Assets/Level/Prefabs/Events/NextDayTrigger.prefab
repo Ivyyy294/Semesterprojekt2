@@ -154,9 +154,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 389ab2e390b44b64e990a358977c57ca, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nextDayEvent:
-    m_PersistentCalls:
-      m_Calls: []
+  nextDayEvent: {fileID: 11400000, guid: a82f1a9cb6231dc478acb6231e11328a, type: 2}
   vCamera: {fileID: 7385247096303880795}
   minAnimationtime: 0.5
 --- !u!1 &7385247096303880795
