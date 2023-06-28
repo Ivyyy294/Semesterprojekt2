@@ -25,7 +25,6 @@ public class PauseMenu : MonoBehaviour
 
 	public void OnMenu()
 	{
-		SaveGameManager.Me().SaveGameState();
 		loadMenu?.Raise();
 	}
 

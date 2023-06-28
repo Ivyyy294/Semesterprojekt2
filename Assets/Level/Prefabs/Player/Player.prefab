@@ -87,8 +87,6 @@ GameObject:
   - component: {fileID: 2822974353037048381}
   - component: {fileID: 2822974353037048382}
   - component: {fileID: 1551877892312807625}
-  - component: {fileID: 8956879903244738488}
-  - component: {fileID: 2336488752468556957}
   - component: {fileID: 7528221354851280470}
   m_Layer: 0
   m_Name: Player
@@ -331,33 +329,6 @@ MonoBehaviour:
   tagFilter: 
   showPauseMenu: {fileID: 11400000, guid: 3a4a4b92ef13d3640a40dbee10ccd068, type: 2}
   interactTextOverlay: {fileID: 4793543703543644874}
---- !u!114 &8956879903244738488
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2822974353037048372}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d89678cbabb9cc3469cd0d7e743930f4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  uniqueId: 0ba859ed-b510-47f0-a67b-ae968d37ccf5
---- !u!114 &2336488752468556957
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2822974353037048372}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 17db9b12ad389924f929d566b3bf4640, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  player: {fileID: 2822974353037048381}
-  mouseLook: {fileID: 2822974353037048382}
 --- !u!114 &7528221354851280470
 MonoBehaviour:
   m_ObjectHideFlags: 0

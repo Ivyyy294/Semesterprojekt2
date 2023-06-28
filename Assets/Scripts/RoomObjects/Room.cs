@@ -114,6 +114,11 @@ public class Room : MonoBehaviour
 	[System.Serializable]
 	public class ChoseDayState : BaseState
 	{
+		public override void Enter(GameObject obj)
+		{
+			base.Enter(obj);
+		}
+
 		public override void Update (GameObject obj)
 		{
 			if (room.currentDay == CurrentDay.DAY1)
@@ -205,6 +210,8 @@ public class Room : MonoBehaviour
 					room.currentDay = CurrentDay.DAY2;
 				else if (room.currentDay == CurrentDay.DAY2)
 					room.currentDay = CurrentDay.DAY3;
+
+				SaveGameManager.Me().SaveGameState();
 
 				room.PopState();
 			}
@@ -341,17 +348,17 @@ public class Room : MonoBehaviour
 		states.Pop().Exit(gameObject);
 	}
 
+	private void Start()
+	{
+		PushState (choseDayState);
+	}
+
 	//public Player player;
 	protected void Update()
 	{
-		if (states.Count == 0)
-		{
-			if (SaveGameManager.Me().LoadGameScheduled)
-				SaveGameManager.Me().LoadGameState();
+		if (SaveGameManager.Me().LoadGameScheduled)
+			SaveGameManager.Me().LoadGameState();
 			
-			PushState (choseDayState);
-		}
-		else
-			states.Peek().Update(gameObject);
+		states.Peek().Update(gameObject);
 	}
 }
