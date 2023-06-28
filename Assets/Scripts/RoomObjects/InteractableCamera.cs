@@ -25,15 +25,17 @@ public class InteractableCamera : FiniteStateMachine, InteractableObject
 
 	public class InactiveState : BaseState
 	{
+		public bool activate;
+
 		public override void Enter (GameObject obj)
 		{
 			base.Enter (obj);
-			interactableCamera.active = false;
+			activate = false;
 		}
 
 		public override void Update (GameObject obj)
 		{
-			if (interactableCamera.active)
+			if (activate)
 				interactableCamera.EnterState (interactableCamera.easeInState);
 		}
 	}
@@ -126,13 +128,11 @@ public class InteractableCamera : FiniteStateMachine, InteractableObject
 	public ActiveState activeState = new ActiveState();
 	public EaseOutState easeOutState = new EaseOutState();
 	public GameObject cameraContainer;
-	public bool active;
 	public Quaternion defaultRotation;
 
 	public void Interact()
 	{
-		if (!active)
-			active = true;
+		inactiveState.activate = true;
 		
 		if (cameraContainer!= null)
 			defaultRotation = cameraContainer.transform.rotation;

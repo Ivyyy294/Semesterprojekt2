@@ -309,7 +309,7 @@ public class Room : PushdownAutomata
 	{
 		DAY1,
 		DAY2,
-		DAY3
+		DAY3,
 	}
 
 	public CurrentDay currentDay = CurrentDay.DAY1;
