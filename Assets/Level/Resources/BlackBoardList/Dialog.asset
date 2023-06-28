@@ -37,3 +37,11 @@ MonoBehaviour:
     guid: 1e97b23e-b453-4c53-b865-51e15d3caacb
     comparisonTyp: 0
     iVal: 0
+  - name: ProgressDay2
+    guid: 20c3be41-b2a7-4954-841a-d5d011a21c09
+    comparisonTyp: 0
+    iVal: 0
+  - name: DayCounter
+    guid: f54546e2-7b9a-43bb-842f-b2f9c6896ebe
+    comparisonTyp: 0
+    iVal: 0

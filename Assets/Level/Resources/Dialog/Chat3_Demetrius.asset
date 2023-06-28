@@ -197,6 +197,9 @@ MonoBehaviour:
   - baseNodeGuid: 8e631d21-6b04-449f-97b3-d6eeda456b01
     portName: Next
     targetNodeGuid: c6a093e6-c04d-421a-b1d3-c321ff5d971a
+  - baseNodeGuid: c6a093e6-c04d-421a-b1d3-c321ff5d971a
+    portName: Next
+    targetNodeGuid: 87eb9754-1af5-41ba-b0c4-bbacda8e9df8
   - baseNodeGuid: ea90e205-fbfa-4eec-8640-f2a347b5fd85
     portName: 'Why now? Why did you wait until now to tell me? '
     targetNodeGuid: 8eab4bd9-ccd7-447e-bc2d-fc6c7b3fe0fa
@@ -245,9 +248,6 @@ MonoBehaviour:
   - baseNodeGuid: cae9d6c3-6775-462d-8f85-af3d0b9f8bec
     portName: Next
     targetNodeGuid: 5c793be5-da60-4be1-9550-517442bc9886
-  - baseNodeGuid: 5c793be5-da60-4be1-9550-517442bc9886
-    portName: Next
-    targetNodeGuid: bd7a1182-0427-4e88-9fdb-563c1d170aef
   - baseNodeGuid: b4c6e565-d236-412b-b93c-0f68104f064c
     portName: Next
     targetNodeGuid: 5c793be5-da60-4be1-9550-517442bc9886
@@ -267,10 +267,10 @@ MonoBehaviour:
     portName: Please don't write me again
     targetNodeGuid: 0557843f-ca11-49ca-bb74-8e28bd0efe6f
   - baseNodeGuid: cb85b609-2bd8-4c8a-b773-712d1ec31192
-    portName: We will talk later
+    portName: We will talk later.
     targetNodeGuid: 14fc796b-2f6d-4b54-9f54-a52b04990839
   - baseNodeGuid: cb85b609-2bd8-4c8a-b773-712d1ec31192
-    portName: I need to think
+    portName: I need to think.
     targetNodeGuid: 4cdd0bfc-8c35-4764-9c17-eda165f4aeed
   - baseNodeGuid: 4cdd0bfc-8c35-4764-9c17-eda165f4aeed
     portName: Next
@@ -284,12 +284,18 @@ MonoBehaviour:
   - baseNodeGuid: 645c509f-218d-44e4-a575-b34f16b6d8b1
     portName: I just didn't expect it.
     targetNodeGuid: f216088f-e81a-4ce3-af7a-75462924e3f4
-  - baseNodeGuid: c6a093e6-c04d-421a-b1d3-c321ff5d971a
-    portName: Next
-    targetNodeGuid: 87eb9754-1af5-41ba-b0c4-bbacda8e9df8
   - baseNodeGuid: 87eb9754-1af5-41ba-b0c4-bbacda8e9df8
     portName: Next
     targetNodeGuid: ea90e205-fbfa-4eec-8640-f2a347b5fd85
+  - baseNodeGuid: ea90e205-fbfa-4eec-8640-f2a347b5fd85
+    portName: I do not love you anymore.
+    targetNodeGuid: eb489853-66db-4270-9200-3014df1f6166
+  - baseNodeGuid: 5c793be5-da60-4be1-9550-517442bc9886
+    portName: Next
+    targetNodeGuid: 3e6db2f9-82b8-4285-bef1-26635d295d92
+  - baseNodeGuid: 3e6db2f9-82b8-4285-bef1-26635d295d92
+    portName: Next
+    targetNodeGuid: bd7a1182-0427-4e88-9fdb-563c1d170aef
   dialogNodeData:
   - Guid: 4bfba334-e23a-405d-a1e8-b7678606b4d4
     DialogTitle: NpcNode
@@ -1050,22 +1056,6 @@ MonoBehaviour:
     audioAsset: {fileID: 0}
     emotion: 12
     editTyp: 0
-  - Guid: 62a33561-770a-4666-bdfd-04538d08f7e1
-    DialogTitle: PlayerAutoNode
-    Position: {x: 4612, y: 1435.2}
-    Type: 9
-    DialogText: Not if this is the only reason you came.
-    Image: {fileID: 0}
-    customRespondTime: 0
-    GameEvent: {fileID: 0}
-    BlackBoardProperty:
-      name: 
-      guid: 
-      comparisonTyp: 0
-      iVal: 0
-    audioAsset: {fileID: 0}
-    emotion: 12
-    editTyp: 0
   - Guid: 5e15f5e5-8e64-4759-a26d-8fd1ec763463
     DialogTitle: NpcNode
     Position: {x: 4913.6, y: 1198.3999}
@@ -1215,9 +1205,8 @@ MonoBehaviour:
     DialogTitle: NpcNode
     Position: {x: 6189.6, y: 900.8}
     Type: 1
-    DialogText: Helena, I love you more than anything in the world. How can you not
-      see that? I know you feel the same about me. Otherwise you wouldn't have invited
-      me here.
+    DialogText: 'Helena, I love you more than anything in the world. How can you
+      not see that? I know you feel the same about me. '
     Image: {fileID: 0}
     customRespondTime: 0
     GameEvent: {fileID: 0}
@@ -1234,22 +1223,6 @@ MonoBehaviour:
     Position: {x: 6299.2, y: 1568.7999}
     Type: 1
     DialogText: It could be, if you let it happen.
-    Image: {fileID: 0}
-    customRespondTime: 0
-    GameEvent: {fileID: 0}
-    BlackBoardProperty:
-      name: 
-      guid: 
-      comparisonTyp: 0
-      iVal: 0
-    audioAsset: {fileID: 0}
-    emotion: 12
-    editTyp: 0
-  - Guid: bd7a1182-0427-4e88-9fdb-563c1d170aef
-    DialogTitle: ChoiceNode
-    Position: {x: 6529.6, y: 916}
-    Type: 0
-    DialogText: hello world
     Image: {fileID: 0}
     customRespondTime: 0
     GameEvent: {fileID: 0}
@@ -1282,22 +1255,6 @@ MonoBehaviour:
     Position: {x: 7334.4, y: 958.4}
     Type: 1
     DialogText: Why can't we talk about it now?
-    Image: {fileID: 0}
-    customRespondTime: 0
-    GameEvent: {fileID: 0}
-    BlackBoardProperty:
-      name: 
-      guid: 
-      comparisonTyp: 0
-      iVal: 0
-    audioAsset: {fileID: 0}
-    emotion: 12
-    editTyp: 0
-  - Guid: cb85b609-2bd8-4c8a-b773-712d1ec31192
-    DialogTitle: ChoiceNode
-    Position: {x: 6948, y: 921.60004}
-    Type: 0
-    DialogText: hello world
     Image: {fileID: 0}
     customRespondTime: 0
     GameEvent: {fileID: 0}
@@ -1370,6 +1327,70 @@ MonoBehaviour:
       guid: bff17bdc-8445-4bc1-bba6-fc7930581c17
       comparisonTyp: 0
       iVal: 1
+    audioAsset: {fileID: 0}
+    emotion: 12
+    editTyp: 0
+  - Guid: 62a33561-770a-4666-bdfd-04538d08f7e1
+    DialogTitle: PlayerAutoNode
+    Position: {x: 4612, y: 1587.2}
+    Type: 9
+    DialogText: Not if this is the only reason you came.
+    Image: {fileID: 0}
+    customRespondTime: 0
+    GameEvent: {fileID: 0}
+    BlackBoardProperty:
+      name: 
+      guid: 
+      comparisonTyp: 0
+      iVal: 0
+    audioAsset: {fileID: 0}
+    emotion: 12
+    editTyp: 0
+  - Guid: 3e6db2f9-82b8-4285-bef1-26635d295d92
+    DialogTitle: NpcNode
+    Position: {x: 6513.6, y: 939.2}
+    Type: 1
+    DialogText: Otherwise you wouldn't have invited me here.
+    Image: {fileID: 0}
+    customRespondTime: 0
+    GameEvent: {fileID: 0}
+    BlackBoardProperty:
+      name: 
+      guid: 
+      comparisonTyp: 0
+      iVal: 0
+    audioAsset: {fileID: 0}
+    emotion: 12
+    editTyp: 0
+  - Guid: bd7a1182-0427-4e88-9fdb-563c1d170aef
+    DialogTitle: ChoiceNode
+    Position: {x: 6725.6, y: 1197.6}
+    Type: 0
+    DialogText: hello world
+    Image: {fileID: 0}
+    customRespondTime: 0
+    GameEvent: {fileID: 0}
+    BlackBoardProperty:
+      name: 
+      guid: 
+      comparisonTyp: 0
+      iVal: 0
+    audioAsset: {fileID: 0}
+    emotion: 12
+    editTyp: 0
+  - Guid: cb85b609-2bd8-4c8a-b773-712d1ec31192
+    DialogTitle: ChoiceNode
+    Position: {x: 6948, y: 921.60004}
+    Type: 0
+    DialogText: hello world
+    Image: {fileID: 0}
+    customRespondTime: 0
+    GameEvent: {fileID: 0}
+    BlackBoardProperty:
+      name: 
+      guid: 
+      comparisonTyp: 0
+      iVal: 0
     audioAsset: {fileID: 0}
     emotion: 12
     editTyp: 0

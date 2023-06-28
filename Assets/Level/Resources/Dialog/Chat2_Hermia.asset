@@ -118,18 +118,6 @@ MonoBehaviour:
   - baseNodeGuid: 10d65dc7-06fc-4b03-a124-f024e640b3a8
     portName: Next
     targetNodeGuid: b9a4cbef-c4c6-4e53-a9c1-2506e59c3d3e
-  - baseNodeGuid: e8bb3e00-44d5-4455-b9f5-08372f755f90
-    portName: Next
-    targetNodeGuid: 70c2ac8c-dbcd-4c66-88b2-d4d6ec6b5f2d
-  - baseNodeGuid: b1e69932-c2e6-481f-bfdb-2ef2dda0bc43
-    portName: Next
-    targetNodeGuid: 4dc8ef3b-9354-424c-9b1a-2cad04343fcc
-  - baseNodeGuid: 4dc8ef3b-9354-424c-9b1a-2cad04343fcc
-    portName: Next
-    targetNodeGuid: b9a4cbef-c4c6-4e53-a9c1-2506e59c3d3e
-  - baseNodeGuid: cd21dfec-0dba-4d77-8d67-e620b90f51fa
-    portName: Next
-    targetNodeGuid: 8fabd7c6-23ba-4545-924d-c66dad7c2e62
   - baseNodeGuid: b9a4cbef-c4c6-4e53-a9c1-2506e59c3d3e
     portName: It's all just a bit much
     targetNodeGuid: e8bb3e00-44d5-4455-b9f5-08372f755f90
@@ -139,6 +127,24 @@ MonoBehaviour:
   - baseNodeGuid: b9a4cbef-c4c6-4e53-a9c1-2506e59c3d3e
     portName: Demetrius is acting strange...
     targetNodeGuid: 9ddbd0d2-5160-40e2-8323-f8d066eeaa02
+  - baseNodeGuid: e8bb3e00-44d5-4455-b9f5-08372f755f90
+    portName: Next
+    targetNodeGuid: 70c2ac8c-dbcd-4c66-88b2-d4d6ec6b5f2d
+  - baseNodeGuid: 70c2ac8c-dbcd-4c66-88b2-d4d6ec6b5f2d
+    portName: Next
+    targetNodeGuid: c7a5ef4a-859a-4347-87fc-44d4918022af
+  - baseNodeGuid: b1e69932-c2e6-481f-bfdb-2ef2dda0bc43
+    portName: Next
+    targetNodeGuid: 4dc8ef3b-9354-424c-9b1a-2cad04343fcc
+  - baseNodeGuid: 4dc8ef3b-9354-424c-9b1a-2cad04343fcc
+    portName: Next
+    targetNodeGuid: b9a4cbef-c4c6-4e53-a9c1-2506e59c3d3e
+  - baseNodeGuid: cd21dfec-0dba-4d77-8d67-e620b90f51fa
+    portName: Next
+    targetNodeGuid: 8fabd7c6-23ba-4545-924d-c66dad7c2e62
+  - baseNodeGuid: 9ddbd0d2-5160-40e2-8323-f8d066eeaa02
+    portName: Next
+    targetNodeGuid: a024440e-c96a-4e6d-91da-953421f6e657
   - baseNodeGuid: 10e3f0ca-b030-4490-a04b-c8ceab06ce8f
     portName: What, what?
     targetNodeGuid: b395698f-f24b-4e42-89ed-3d186da973bf
@@ -151,21 +157,18 @@ MonoBehaviour:
   - baseNodeGuid: 23fc4d97-674d-4376-bff1-26b794c024fa
     portName: Next
     targetNodeGuid: c7a5ef4a-859a-4347-87fc-44d4918022af
-  - baseNodeGuid: 9ddbd0d2-5160-40e2-8323-f8d066eeaa02
-    portName: Next
-    targetNodeGuid: a024440e-c96a-4e6d-91da-953421f6e657
   - baseNodeGuid: c7a5ef4a-859a-4347-87fc-44d4918022af
     portName: Demetrius seems obsessed with me
     targetNodeGuid: 54b2c7b9-4752-424c-849e-a48a775c0fe6
   - baseNodeGuid: c7a5ef4a-859a-4347-87fc-44d4918022af
     portName: Demetrius says he still loves me
     targetNodeGuid: dc23e22d-79d8-4919-89b6-69b5d77daa6b
-  - baseNodeGuid: dc23e22d-79d8-4919-89b6-69b5d77daa6b
-    portName: Next
-    targetNodeGuid: 587260b5-c5a3-48a1-8926-f4781a6b4474
   - baseNodeGuid: c7a5ef4a-859a-4347-87fc-44d4918022af
     portName: Demetrius is scaring me
     targetNodeGuid: 51ad9b6e-b529-4db4-8077-555beef676e3
+  - baseNodeGuid: dc23e22d-79d8-4919-89b6-69b5d77daa6b
+    portName: Next
+    targetNodeGuid: 587260b5-c5a3-48a1-8926-f4781a6b4474
   - baseNodeGuid: 51ad9b6e-b529-4db4-8077-555beef676e3
     portName: Next
     targetNodeGuid: de44ba23-05e7-43ae-84fc-2bee4ec26fbc
@@ -175,9 +178,15 @@ MonoBehaviour:
   - baseNodeGuid: a6f343e5-1ce7-408a-b153-28fa17693fce
     portName: Next
     targetNodeGuid: 7f3c4aa2-59fe-49c8-9338-db5fbf9532be
-  - baseNodeGuid: 587260b5-c5a3-48a1-8926-f4781a6b4474
-    portName: I do not love him.
-    targetNodeGuid: 5ccf0b01-5fe5-4d23-a5fb-11d9b40bccf4
+  - baseNodeGuid: 7f3c4aa2-59fe-49c8-9338-db5fbf9532be
+    portName: He is just being pushy
+    targetNodeGuid: 4cc6629a-748e-408d-abcd-c887cf4653bf
+  - baseNodeGuid: 7f3c4aa2-59fe-49c8-9338-db5fbf9532be
+    portName: Uhh, never mind
+    targetNodeGuid: 4cc6629a-748e-408d-abcd-c887cf4653bf
+  - baseNodeGuid: 7f3c4aa2-59fe-49c8-9338-db5fbf9532be
+    portName: Nothing bad.
+    targetNodeGuid: 4cc6629a-748e-408d-abcd-c887cf4653bf
   - baseNodeGuid: 5ccf0b01-5fe5-4d23-a5fb-11d9b40bccf4
     portName: Next
     targetNodeGuid: b8d376b4-b19f-4f93-8def-6f5b3cdf1484
@@ -187,9 +196,114 @@ MonoBehaviour:
   - baseNodeGuid: d7cbe1f5-d231-43a1-b550-9ec0b890a4fc
     portName: Next
     targetNodeGuid: 467150de-27fe-4cbc-a8b2-c0738d70be36
-  - baseNodeGuid: 7f3c4aa2-59fe-49c8-9338-db5fbf9532be
-    portName: He is just being pushy
+  - baseNodeGuid: b6fdbf74-eeb3-4792-8924-b73e26373b75
+    portName: It's you.
+    targetNodeGuid: 56b01e8f-1134-48d1-9c06-bf4c0f004d6f
+  - baseNodeGuid: b6fdbf74-eeb3-4792-8924-b73e26373b75
+    portName: It's Lysander.
+    targetNodeGuid: 225ebc08-8ef4-438b-8712-cc78253cd45f
+  - baseNodeGuid: b6fdbf74-eeb3-4792-8924-b73e26373b75
+    portName: It's Puck
+    targetNodeGuid: 8fa0f51d-0156-4c02-81e7-3129572e029d
+  - baseNodeGuid: b6fdbf74-eeb3-4792-8924-b73e26373b75
+    portName: I don't wanna say.
+    targetNodeGuid: a0cc0cea-43dc-4cb6-9474-862bbf3c7be7
+  - baseNodeGuid: 467150de-27fe-4cbc-a8b2-c0738d70be36
+    portName: There is.
+    targetNodeGuid: b6fdbf74-eeb3-4792-8924-b73e26373b75
+  - baseNodeGuid: 467150de-27fe-4cbc-a8b2-c0738d70be36
+    portName: It's fine.
+    targetNodeGuid: b6fdbf74-eeb3-4792-8924-b73e26373b75
+  - baseNodeGuid: 467150de-27fe-4cbc-a8b2-c0738d70be36
+    portName: Thank you.
+    targetNodeGuid: a81ff2e1-d4b3-4ab7-94df-79812435aeb5
+  - baseNodeGuid: 27779494-989b-4314-8e72-7475db657f1a
+    portName: Next
+    targetNodeGuid: b6fdbf74-eeb3-4792-8924-b73e26373b75
+  - baseNodeGuid: 587260b5-c5a3-48a1-8926-f4781a6b4474
+    portName: I do not love him.
+    targetNodeGuid: 5ccf0b01-5fe5-4d23-a5fb-11d9b40bccf4
+  - baseNodeGuid: 587260b5-c5a3-48a1-8926-f4781a6b4474
+    portName: I am interested in someone else..
+    targetNodeGuid: 27779494-989b-4314-8e72-7475db657f1a
+  - baseNodeGuid: 587260b5-c5a3-48a1-8926-f4781a6b4474
+    portName: He is being pushy.
+    targetNodeGuid: 86891125-758d-4614-b65d-7e2e1d4f7356
+  - baseNodeGuid: 86891125-758d-4614-b65d-7e2e1d4f7356
+    portName: Next
+    targetNodeGuid: d48f22e1-bfef-4f59-b872-8f441978c021
+  - baseNodeGuid: d48f22e1-bfef-4f59-b872-8f441978c021
+    portName: Next
+    targetNodeGuid: 8cbc16a0-4117-4e85-9e00-5bf7925bbbff
+  - baseNodeGuid: 8cbc16a0-4117-4e85-9e00-5bf7925bbbff
+    portName: Next
+    targetNodeGuid: d7ecd608-f9fe-402f-bcf5-d718b0a5b7dc
+  - baseNodeGuid: a81ff2e1-d4b3-4ab7-94df-79812435aeb5
+    portName: Next
+    targetNodeGuid: c105dc44-6666-422d-860a-5ee192b6850c
+  - baseNodeGuid: bbb57f93-7c5e-4929-acee-9a80ab25cd0e
+    portName: Next
+    targetNodeGuid: c3f91666-760e-4852-80c3-a907cb01ea1b
+  - baseNodeGuid: 1331a108-7271-415c-8c97-7157a0f455b1
+    portName: Next
+    targetNodeGuid: bbb57f93-7c5e-4929-acee-9a80ab25cd0e
+  - baseNodeGuid: d7ecd608-f9fe-402f-bcf5-d718b0a5b7dc
+    portName: Yes, he wasn't like this before.
     targetNodeGuid: 4cc6629a-748e-408d-abcd-c887cf4653bf
+  - baseNodeGuid: d7ecd608-f9fe-402f-bcf5-d718b0a5b7dc
+    portName: Maybe the cryo sleep messed with him?
+    targetNodeGuid: 1331a108-7271-415c-8c97-7157a0f455b1
+  - baseNodeGuid: d7ecd608-f9fe-402f-bcf5-d718b0a5b7dc
+    portName: It's fine. I can handle him
+    targetNodeGuid: 4cc6629a-748e-408d-abcd-c887cf4653bf
+  - baseNodeGuid: ba159baf-d4dc-4857-8878-e45f4fc88518
+    portName: Next
+    targetNodeGuid: b864cfd3-28ae-478f-b84d-2b292de60a50
+  - baseNodeGuid: b864cfd3-28ae-478f-b84d-2b292de60a50
+    portName: Next
+    targetNodeGuid: a33116da-f638-4026-aa15-51b3c74198fc
+  - baseNodeGuid: 8fa0f51d-0156-4c02-81e7-3129572e029d
+    portName: Next
+    targetNodeGuid: ba159baf-d4dc-4857-8878-e45f4fc88518
+  - baseNodeGuid: a0cc0cea-43dc-4cb6-9474-862bbf3c7be7
+    portName: Next
+    targetNodeGuid: a0f3244f-d739-42dc-9209-2d1737d3693d
+  - baseNodeGuid: a0f3244f-d739-42dc-9209-2d1737d3693d
+    portName: Next
+    targetNodeGuid: 59bf8b86-470d-43ad-a780-0434356224c7
+  - baseNodeGuid: 225ebc08-8ef4-438b-8712-cc78253cd45f
+    portName: Next
+    targetNodeGuid: d87256f7-284a-44a7-b6a8-eb295546ecdd
+  - baseNodeGuid: d87256f7-284a-44a7-b6a8-eb295546ecdd
+    portName: True
+    targetNodeGuid: e185e031-4e47-4bbb-ac83-c29121791485
+  - baseNodeGuid: d87256f7-284a-44a7-b6a8-eb295546ecdd
+    portName: False
+    targetNodeGuid: 0a85d7fc-f730-441c-ba06-8cfbc275b1a9
+  - baseNodeGuid: e185e031-4e47-4bbb-ac83-c29121791485
+    portName: I will wait until I can tell him in person.
+    targetNodeGuid: 73c2efc9-ec9e-4ae1-9e09-2d8bf8f47bc0
+  - baseNodeGuid: e185e031-4e47-4bbb-ac83-c29121791485
+    portName: Not yet.
+    targetNodeGuid: 73c2efc9-ec9e-4ae1-9e09-2d8bf8f47bc0
+  - baseNodeGuid: e185e031-4e47-4bbb-ac83-c29121791485
+    portName: I'll tell him.
+    targetNodeGuid: 73c2efc9-ec9e-4ae1-9e09-2d8bf8f47bc0
+  - baseNodeGuid: 73c2efc9-ec9e-4ae1-9e09-2d8bf8f47bc0
+    portName: Next
+    targetNodeGuid: cdbf3365-0b52-4382-91a0-6b50e0903d15
+  - baseNodeGuid: 34bef878-5503-4c2b-b105-c211d224021b
+    portName: Me too :)
+    targetNodeGuid: 7215646e-b447-48d9-96d2-f62880487afd
+  - baseNodeGuid: 34bef878-5503-4c2b-b105-c211d224021b
+    portName: I feel weird after Demetrius
+    targetNodeGuid: d7ecf994-3c25-4468-9408-d49b7d1c4f39
+  - baseNodeGuid: 7215646e-b447-48d9-96d2-f62880487afd
+    portName: Next
+    targetNodeGuid: c105dc44-6666-422d-860a-5ee192b6850c
+  - baseNodeGuid: d7ecf994-3c25-4468-9408-d49b7d1c4f39
+    portName: Next
+    targetNodeGuid: c105dc44-6666-422d-860a-5ee192b6850c
   - baseNodeGuid: 4cc6629a-748e-408d-abcd-c887cf4653bf
     portName: Next
     targetNodeGuid: c105dc44-6666-422d-860a-5ee192b6850c
@@ -214,129 +328,75 @@ MonoBehaviour:
   - baseNodeGuid: 07712749-a6da-4b6b-8c95-e06635aafee4
     portName: Next
     targetNodeGuid: 1ac903dd-7b2c-4528-b6db-37ba5e339569
-  - baseNodeGuid: 467150de-27fe-4cbc-a8b2-c0738d70be36
-    portName: There is.
-    targetNodeGuid: b6fdbf74-eeb3-4792-8924-b73e26373b75
-  - baseNodeGuid: 467150de-27fe-4cbc-a8b2-c0738d70be36
-    portName: It's fine.
-    targetNodeGuid: b6fdbf74-eeb3-4792-8924-b73e26373b75
-  - baseNodeGuid: 467150de-27fe-4cbc-a8b2-c0738d70be36
-    portName: Thank you.
-    targetNodeGuid: a81ff2e1-d4b3-4ab7-94df-79812435aeb5
-  - baseNodeGuid: a81ff2e1-d4b3-4ab7-94df-79812435aeb5
-    portName: Next
-    targetNodeGuid: c105dc44-6666-422d-860a-5ee192b6850c
-  - baseNodeGuid: b6fdbf74-eeb3-4792-8924-b73e26373b75
-    portName: It's you.
-    targetNodeGuid: 56b01e8f-1134-48d1-9c06-bf4c0f004d6f
-  - baseNodeGuid: b6fdbf74-eeb3-4792-8924-b73e26373b75
-    portName: It's Lysander.
-    targetNodeGuid: 225ebc08-8ef4-438b-8712-cc78253cd45f
-  - baseNodeGuid: b6fdbf74-eeb3-4792-8924-b73e26373b75
-    portName: It's P.U.C.K.
-    targetNodeGuid: 8fa0f51d-0156-4c02-81e7-3129572e029d
-  - baseNodeGuid: 8fa0f51d-0156-4c02-81e7-3129572e029d
-    portName: Next
-    targetNodeGuid: ba159baf-d4dc-4857-8878-e45f4fc88518
-  - baseNodeGuid: ba159baf-d4dc-4857-8878-e45f4fc88518
-    portName: Next
-    targetNodeGuid: b864cfd3-28ae-478f-b84d-2b292de60a50
-  - baseNodeGuid: 587260b5-c5a3-48a1-8926-f4781a6b4474
-    portName: I am interested in someone else..
-    targetNodeGuid: 27779494-989b-4314-8e72-7475db657f1a
-  - baseNodeGuid: 27779494-989b-4314-8e72-7475db657f1a
-    portName: Next
-    targetNodeGuid: b6fdbf74-eeb3-4792-8924-b73e26373b75
-  - baseNodeGuid: 587260b5-c5a3-48a1-8926-f4781a6b4474
-    portName: He is being pushy.
-    targetNodeGuid: 86891125-758d-4614-b65d-7e2e1d4f7356
-  - baseNodeGuid: 86891125-758d-4614-b65d-7e2e1d4f7356
-    portName: Next
-    targetNodeGuid: d48f22e1-bfef-4f59-b872-8f441978c021
-  - baseNodeGuid: d48f22e1-bfef-4f59-b872-8f441978c021
-    portName: Next
-    targetNodeGuid: 8cbc16a0-4117-4e85-9e00-5bf7925bbbff
-  - baseNodeGuid: 8cbc16a0-4117-4e85-9e00-5bf7925bbbff
-    portName: Next
-    targetNodeGuid: d7ecd608-f9fe-402f-bcf5-d718b0a5b7dc
-  - baseNodeGuid: d7ecd608-f9fe-402f-bcf5-d718b0a5b7dc
-    portName: Yes, he wasn't like this before.
-    targetNodeGuid: 4cc6629a-748e-408d-abcd-c887cf4653bf
-  - baseNodeGuid: d7ecd608-f9fe-402f-bcf5-d718b0a5b7dc
-    portName: Maybe the cryo sleep messed with him?
-    targetNodeGuid: 1331a108-7271-415c-8c97-7157a0f455b1
-  - baseNodeGuid: 1331a108-7271-415c-8c97-7157a0f455b1
-    portName: Next
-    targetNodeGuid: bbb57f93-7c5e-4929-acee-9a80ab25cd0e
-  - baseNodeGuid: bbb57f93-7c5e-4929-acee-9a80ab25cd0e
-    portName: Next
-    targetNodeGuid: c3f91666-760e-4852-80c3-a907cb01ea1b
-  - baseNodeGuid: d7ecd608-f9fe-402f-bcf5-d718b0a5b7dc
-    portName: It's fine. I can handle him
-    targetNodeGuid: 4cc6629a-748e-408d-abcd-c887cf4653bf
-  - baseNodeGuid: 7f3c4aa2-59fe-49c8-9338-db5fbf9532be
-    portName: Uhh, never mind
-    targetNodeGuid: 4cc6629a-748e-408d-abcd-c887cf4653bf
-  - baseNodeGuid: 7f3c4aa2-59fe-49c8-9338-db5fbf9532be
-    portName: Nothing bad.
-    targetNodeGuid: 4cc6629a-748e-408d-abcd-c887cf4653bf
-  - baseNodeGuid: b6fdbf74-eeb3-4792-8924-b73e26373b75
-    portName: I don't wanna say.
-    targetNodeGuid: a0cc0cea-43dc-4cb6-9474-862bbf3c7be7
-  - baseNodeGuid: a0cc0cea-43dc-4cb6-9474-862bbf3c7be7
-    portName: Next
-    targetNodeGuid: a0f3244f-d739-42dc-9209-2d1737d3693d
-  - baseNodeGuid: a0f3244f-d739-42dc-9209-2d1737d3693d
-    portName: Next
-    targetNodeGuid: 59bf8b86-470d-43ad-a780-0434356224c7
-  - baseNodeGuid: 225ebc08-8ef4-438b-8712-cc78253cd45f
-    portName: Next
-    targetNodeGuid: d87256f7-284a-44a7-b6a8-eb295546ecdd
-  - baseNodeGuid: d87256f7-284a-44a7-b6a8-eb295546ecdd
-    portName: True
-    targetNodeGuid: e185e031-4e47-4bbb-ac83-c29121791485
-  - baseNodeGuid: e185e031-4e47-4bbb-ac83-c29121791485
-    portName: I will wait until I can tell him in person.
-    targetNodeGuid: 73c2efc9-ec9e-4ae1-9e09-2d8bf8f47bc0
-  - baseNodeGuid: e185e031-4e47-4bbb-ac83-c29121791485
-    portName: Not yet.
-    targetNodeGuid: 73c2efc9-ec9e-4ae1-9e09-2d8bf8f47bc0
-  - baseNodeGuid: 73c2efc9-ec9e-4ae1-9e09-2d8bf8f47bc0
-    portName: Next
-    targetNodeGuid: cdbf3365-0b52-4382-91a0-6b50e0903d15
-  - baseNodeGuid: e185e031-4e47-4bbb-ac83-c29121791485
-    portName: I'll tell him.
-    targetNodeGuid: 73c2efc9-ec9e-4ae1-9e09-2d8bf8f47bc0
-  - baseNodeGuid: d87256f7-284a-44a7-b6a8-eb295546ecdd
-    portName: False
-    targetNodeGuid: 0a85d7fc-f730-441c-ba06-8cfbc275b1a9
   - baseNodeGuid: cdbf3365-0b52-4382-91a0-6b50e0903d15
     portName: Next
     targetNodeGuid: 34bef878-5503-4c2b-b105-c211d224021b
-  - baseNodeGuid: 34bef878-5503-4c2b-b105-c211d224021b
-    portName: Me too :)
-    targetNodeGuid: 7215646e-b447-48d9-96d2-f62880487afd
-  - baseNodeGuid: 34bef878-5503-4c2b-b105-c211d224021b
-    portName: I feel weird after Demetrius
-    targetNodeGuid: d7ecf994-3c25-4468-9408-d49b7d1c4f39
-  - baseNodeGuid: 7215646e-b447-48d9-96d2-f62880487afd
-    portName: Next
-    targetNodeGuid: c105dc44-6666-422d-860a-5ee192b6850c
-  - baseNodeGuid: d7ecf994-3c25-4468-9408-d49b7d1c4f39
-    portName: Next
-    targetNodeGuid: c105dc44-6666-422d-860a-5ee192b6850c
   - baseNodeGuid: 0a85d7fc-f730-441c-ba06-8cfbc275b1a9
     portName: Yes
     targetNodeGuid: cdbf3365-0b52-4382-91a0-6b50e0903d15
   - baseNodeGuid: 0a85d7fc-f730-441c-ba06-8cfbc275b1a9
     portName: Not yet.
     targetNodeGuid: 73c2efc9-ec9e-4ae1-9e09-2d8bf8f47bc0
-  - baseNodeGuid: b864cfd3-28ae-478f-b84d-2b292de60a50
+  - baseNodeGuid: 59bf8b86-470d-43ad-a780-0434356224c7
+    portName: Okay...
+    targetNodeGuid: d4013411-5473-44e3-a236-c3751a72e218
+  - baseNodeGuid: 59bf8b86-470d-43ad-a780-0434356224c7
+    portName: Hermia...
+    targetNodeGuid: d0f62e89-d4b4-4054-82c2-d0e6cd2b5eb2
+  - baseNodeGuid: d4013411-5473-44e3-a236-c3751a72e218
     portName: Next
-    targetNodeGuid: a33116da-f638-4026-aa15-51b3c74198fc
-  - baseNodeGuid: 70c2ac8c-dbcd-4c66-88b2-d4d6ec6b5f2d
+    targetNodeGuid: 83d53bb3-fff2-44ad-a25e-3ef7a47cb01d
+  - baseNodeGuid: 83d53bb3-fff2-44ad-a25e-3ef7a47cb01d
+    portName: It is...
+    targetNodeGuid: f5e1ae36-ca90-4e21-85e0-95c9117e9075
+  - baseNodeGuid: 83d53bb3-fff2-44ad-a25e-3ef7a47cb01d
+    portName: Nope :)
+    targetNodeGuid: 3fa88499-3c72-4482-b005-e84a48939243
+  - baseNodeGuid: d0f62e89-d4b4-4054-82c2-d0e6cd2b5eb2
     portName: Next
-    targetNodeGuid: c7a5ef4a-859a-4347-87fc-44d4918022af
+    targetNodeGuid: 7215646e-b447-48d9-96d2-f62880487afd
+  - baseNodeGuid: a33116da-f638-4026-aa15-51b3c74198fc
+    portName: The Ship AI...
+    targetNodeGuid: a2c96e3e-a73e-4d8d-aaa1-cd2cbbb44a13
+  - baseNodeGuid: a33116da-f638-4026-aa15-51b3c74198fc
+    portName: Ahh, now you ruined my joke
+    targetNodeGuid: f00b48ef-8f57-4c09-9761-71d84ab158c7
+  - baseNodeGuid: a2c96e3e-a73e-4d8d-aaa1-cd2cbbb44a13
+    portName: Next
+    targetNodeGuid: c8ec585b-a2a0-4a8f-a75e-9b9890627e73
+  - baseNodeGuid: c8ec585b-a2a0-4a8f-a75e-9b9890627e73
+    portName: Next
+    targetNodeGuid: 7466d33a-ae9e-40a3-aaac-80b7da0d7454
+  - baseNodeGuid: 7466d33a-ae9e-40a3-aaac-80b7da0d7454
+    portName: Next
+    targetNodeGuid: 89b595ac-35fe-4339-865e-863bdff3e63d
+  - baseNodeGuid: 89b595ac-35fe-4339-865e-863bdff3e63d
+    portName: Next
+    targetNodeGuid: 02bc3bb5-e552-4ae6-bb88-459f7f343660
+  - baseNodeGuid: f00b48ef-8f57-4c09-9761-71d84ab158c7
+    portName: Next
+    targetNodeGuid: 907ab6a2-cfe5-4f61-9b49-a49c4db48702
+  - baseNodeGuid: 907ab6a2-cfe5-4f61-9b49-a49c4db48702
+    portName: Next
+    targetNodeGuid: 02bc3bb5-e552-4ae6-bb88-459f7f343660
+  - baseNodeGuid: 02bc3bb5-e552-4ae6-bb88-459f7f343660
+    portName: Next
+    targetNodeGuid: 23a56a9a-602c-4427-96db-a01160fc4422
+  - baseNodeGuid: 23a56a9a-602c-4427-96db-a01160fc4422
+    portName: Next
+    targetNodeGuid: 4cc6629a-748e-408d-abcd-c887cf4653bf
+  - baseNodeGuid: 3fa88499-3c72-4482-b005-e84a48939243
+    portName: Next
+    targetNodeGuid: 7c607ca0-a60d-4b1e-85ca-5ca8dc91b8fe
+  - baseNodeGuid: 7c607ca0-a60d-4b1e-85ca-5ca8dc91b8fe
+    portName: Next
+    targetNodeGuid: 02bc3bb5-e552-4ae6-bb88-459f7f343660
+  - baseNodeGuid: f5e1ae36-ca90-4e21-85e0-95c9117e9075
+    portName: ...you.
+    targetNodeGuid: 56b01e8f-1134-48d1-9c06-bf4c0f004d6f
+  - baseNodeGuid: f5e1ae36-ca90-4e21-85e0-95c9117e9075
+    portName: ...Lysander.
+    targetNodeGuid: 225ebc08-8ef4-438b-8712-cc78253cd45f
   dialogNodeData:
   - Guid: 9556fb16-6a62-40e7-bb8a-138a836c037b
     DialogTitle: NpcNode
@@ -1381,22 +1441,6 @@ MonoBehaviour:
     audioAsset: {fileID: 0}
     emotion: 12
     editTyp: 0
-  - Guid: 59bf8b86-470d-43ad-a780-0434356224c7
-    DialogTitle: ChoiceNode
-    Position: {x: 10156, y: 342.40002}
-    Type: 0
-    DialogText: hello world
-    Image: {fileID: 0}
-    customRespondTime: 0
-    GameEvent: {fileID: 0}
-    BlackBoardProperty:
-      name: 
-      guid: 
-      comparisonTyp: 0
-      iVal: 0
-    audioAsset: {fileID: 0}
-    emotion: 12
-    editTyp: 0
   - Guid: 56b01e8f-1134-48d1-9c06-bf4c0f004d6f
     DialogTitle: Love+1
     Position: {x: 9614.4, y: -273.6}
@@ -1669,9 +1713,249 @@ MonoBehaviour:
     audioAsset: {fileID: 0}
     emotion: 12
     editTyp: 0
+  - Guid: 59bf8b86-470d-43ad-a780-0434356224c7
+    DialogTitle: ChoiceNode
+    Position: {x: 10156, y: 342.40002}
+    Type: 0
+    DialogText: hello world
+    Image: {fileID: 0}
+    customRespondTime: 0
+    GameEvent: {fileID: 0}
+    BlackBoardProperty:
+      name: 
+      guid: 
+      comparisonTyp: 0
+      iVal: 0
+    audioAsset: {fileID: 0}
+    emotion: 12
+    editTyp: 0
+  - Guid: d4013411-5473-44e3-a236-c3751a72e218
+    DialogTitle: NpcNode
+    Position: {x: 10513.6, y: 432.80002}
+    Type: 1
+    DialogText: Really?
+    Image: {fileID: 0}
+    customRespondTime: 0
+    GameEvent: {fileID: 0}
+    BlackBoardProperty:
+      name: 
+      guid: 
+      comparisonTyp: 0
+      iVal: 0
+    audioAsset: {fileID: 0}
+    emotion: 12
+    editTyp: 0
+  - Guid: 83d53bb3-fff2-44ad-a25e-3ef7a47cb01d
+    DialogTitle: ChoiceNode
+    Position: {x: 10784, y: 474.40002}
+    Type: 0
+    DialogText: hello world
+    Image: {fileID: 0}
+    customRespondTime: 0
+    GameEvent: {fileID: 0}
+    BlackBoardProperty:
+      name: 
+      guid: 
+      comparisonTyp: 0
+      iVal: 0
+    audioAsset: {fileID: 0}
+    emotion: 12
+    editTyp: 0
+  - Guid: d0f62e89-d4b4-4054-82c2-d0e6cd2b5eb2
+    DialogTitle: NpcNode
+    Position: {x: 10612, y: 291.2}
+    Type: 1
+    DialogText: Sorry, sorry :<
+    Image: {fileID: 0}
+    customRespondTime: 0
+    GameEvent: {fileID: 0}
+    BlackBoardProperty:
+      name: 
+      guid: 
+      comparisonTyp: 0
+      iVal: 0
+    audioAsset: {fileID: 0}
+    emotion: 12
+    editTyp: 0
   - Guid: a33116da-f638-4026-aa15-51b3c74198fc
     DialogTitle: ChoiceNode
-    Position: {x: 10592, y: 186.4}
+    Position: {x: 10598.4, y: 98.399994}
+    Type: 0
+    DialogText: hello world
+    Image: {fileID: 0}
+    customRespondTime: 0
+    GameEvent: {fileID: 0}
+    BlackBoardProperty:
+      name: 
+      guid: 
+      comparisonTyp: 0
+      iVal: 0
+    audioAsset: {fileID: 0}
+    emotion: 12
+    editTyp: 0
+  - Guid: a2c96e3e-a73e-4d8d-aaa1-cd2cbbb44a13
+    DialogTitle: NpcNode
+    Position: {x: 11003.2, y: 28}
+    Type: 1
+    DialogText: Oh
+    Image: {fileID: 0}
+    customRespondTime: 0
+    GameEvent: {fileID: 0}
+    BlackBoardProperty:
+      name: 
+      guid: 
+      comparisonTyp: 0
+      iVal: 0
+    audioAsset: {fileID: 0}
+    emotion: 12
+    editTyp: 0
+  - Guid: c8ec585b-a2a0-4a8f-a75e-9b9890627e73
+    DialogTitle: NpcNode
+    Position: {x: 11249.6, y: 28}
+    Type: 1
+    DialogText: My
+    Image: {fileID: 0}
+    customRespondTime: 0
+    GameEvent: {fileID: 0}
+    BlackBoardProperty:
+      name: 
+      guid: 
+      comparisonTyp: 0
+      iVal: 0
+    audioAsset: {fileID: 0}
+    emotion: 12
+    editTyp: 0
+  - Guid: 7466d33a-ae9e-40a3-aaac-80b7da0d7454
+    DialogTitle: NpcNode
+    Position: {x: 11493.6, y: 28}
+    Type: 1
+    DialogText: God.
+    Image: {fileID: 0}
+    customRespondTime: 0
+    GameEvent: {fileID: 0}
+    BlackBoardProperty:
+      name: 
+      guid: 
+      comparisonTyp: 0
+      iVal: 0
+    audioAsset: {fileID: 0}
+    emotion: 12
+    editTyp: 0
+  - Guid: 89b595ac-35fe-4339-865e-863bdff3e63d
+    DialogTitle: NpcNode
+    Position: {x: 11732.8, y: 30.400002}
+    Type: 1
+    DialogText: I thought you meant that strange guy we met one time
+    Image: {fileID: 0}
+    customRespondTime: 0
+    GameEvent: {fileID: 0}
+    BlackBoardProperty:
+      name: 
+      guid: 
+      comparisonTyp: 0
+      iVal: 0
+    audioAsset: {fileID: 0}
+    emotion: 12
+    editTyp: 0
+  - Guid: f00b48ef-8f57-4c09-9761-71d84ab158c7
+    DialogTitle: NpcNode
+    Position: {x: 11003.2, y: 186.4}
+    Type: 1
+    DialogText: Ohhh you mean the little blue guy
+    Image: {fileID: 0}
+    customRespondTime: 0
+    GameEvent: {fileID: 0}
+    BlackBoardProperty:
+      name: 
+      guid: 
+      comparisonTyp: 0
+      iVal: 0
+    audioAsset: {fileID: 0}
+    emotion: 12
+    editTyp: 0
+  - Guid: 907ab6a2-cfe5-4f61-9b49-a49c4db48702
+    DialogTitle: NpcNode
+    Position: {x: 11250.4, y: 188}
+    Type: 1
+    DialogText: Good one :D
+    Image: {fileID: 0}
+    customRespondTime: 0
+    GameEvent: {fileID: 0}
+    BlackBoardProperty:
+      name: 
+      guid: 
+      comparisonTyp: 0
+      iVal: 0
+    audioAsset: {fileID: 0}
+    emotion: 12
+    editTyp: 0
+  - Guid: 02bc3bb5-e552-4ae6-bb88-459f7f343660
+    DialogTitle: NpcNode
+    Position: {x: 12133.6, y: 196.8}
+    Type: 1
+    DialogText: 'Oh and one thing:'
+    Image: {fileID: 0}
+    customRespondTime: 0
+    GameEvent: {fileID: 0}
+    BlackBoardProperty:
+      name: 
+      guid: 
+      comparisonTyp: 0
+      iVal: 0
+    audioAsset: {fileID: 0}
+    emotion: 12
+    editTyp: 0
+  - Guid: 23a56a9a-602c-4427-96db-a01160fc4422
+    DialogTitle: NpcNode
+    Position: {x: 12404, y: 188}
+    Type: 1
+    DialogText: Don't worry about Demetrius
+    Image: {fileID: 0}
+    customRespondTime: 0
+    GameEvent: {fileID: 0}
+    BlackBoardProperty:
+      name: 
+      guid: 
+      comparisonTyp: 0
+      iVal: 0
+    audioAsset: {fileID: 0}
+    emotion: 12
+    editTyp: 0
+  - Guid: 3fa88499-3c72-4482-b005-e84a48939243
+    DialogTitle: NpcNode
+    Position: {x: 11186.4, y: 332.80002}
+    Type: 1
+    DialogText: Okay fine!!!
+    Image: {fileID: 0}
+    customRespondTime: 0
+    GameEvent: {fileID: 0}
+    BlackBoardProperty:
+      name: 
+      guid: 
+      comparisonTyp: 0
+      iVal: 0
+    audioAsset: {fileID: 0}
+    emotion: 12
+    editTyp: 0
+  - Guid: 7c607ca0-a60d-4b1e-85ca-5ca8dc91b8fe
+    DialogTitle: NpcNode
+    Position: {x: 11492.8, y: 329.6}
+    Type: 1
+    DialogText: But you WILL tell me sooner or later ;)
+    Image: {fileID: 0}
+    customRespondTime: 0
+    GameEvent: {fileID: 0}
+    BlackBoardProperty:
+      name: 
+      guid: 
+      comparisonTyp: 0
+      iVal: 0
+    audioAsset: {fileID: 0}
+    emotion: 12
+    editTyp: 0
+  - Guid: f5e1ae36-ca90-4e21-85e0-95c9117e9075
+    DialogTitle: ChoiceNode
+    Position: {x: 11186.4, y: 508.8}
     Type: 0
     DialogText: hello world
     Image: {fileID: 0}

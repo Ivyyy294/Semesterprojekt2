@@ -12,7 +12,80 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d170aec7dfcb81f46b534b51e20e8ab1, type: 3}
   m_Name: Chat4
   m_EditorClassIdentifier: 
-  nodeLinks: []
-  dialogNodeData: []
+  nodeLinks:
+  - baseNodeGuid: dd62aaad-7f9e-4c29-a93b-947c89756209
+    portName: Next
+    targetNodeGuid: 207c0129-72b9-4024-ad67-9c5373edc90a
+  - baseNodeGuid: 207c0129-72b9-4024-ad67-9c5373edc90a
+    portName: Next
+    targetNodeGuid: 8f32e836-d46e-4bbe-8855-81a8cb6b49d6
+  - baseNodeGuid: 8f32e836-d46e-4bbe-8855-81a8cb6b49d6
+    portName: Next
+    targetNodeGuid: f4a90ced-9a69-4f79-a180-08b4e3fa1278
+  dialogNodeData:
+  - Guid: dd62aaad-7f9e-4c29-a93b-947c89756209
+    DialogTitle: START
+    Position: {x: 100, y: 200}
+    Type: 7
+    DialogText: ENTRYPOINT
+    Image: {fileID: 0}
+    customRespondTime: 0
+    GameEvent: {fileID: 0}
+    BlackBoardProperty:
+      name: 
+      guid: 
+      comparisonTyp: 0
+      iVal: 0
+    audioAsset: {fileID: 0}
+    emotion: 12
+    editTyp: 0
+  - Guid: 207c0129-72b9-4024-ad67-9c5373edc90a
+    DialogTitle: WaitNode
+    Position: {x: 256, y: 171.2}
+    Type: 5
+    DialogText: 
+    Image: {fileID: 0}
+    customRespondTime: 0
+    GameEvent: {fileID: 0}
+    BlackBoardProperty:
+      name: ProgressDay2
+      guid: 20c3be41-b2a7-4954-841a-d5d011a21c09
+      comparisonTyp: 0
+      iVal: 3
+    audioAsset: {fileID: 0}
+    emotion: 12
+    editTyp: 0
+  - Guid: 8f32e836-d46e-4bbe-8855-81a8cb6b49d6
+    DialogTitle: RaiseEventNode
+    Position: {x: 576, y: 182.4}
+    Type: 2
+    DialogText: 
+    Image: {fileID: 0}
+    customRespondTime: 0
+    GameEvent: {fileID: 11400000, guid: 0b80ddc51b8a1c34c8cd80164e3e0b69, type: 2}
+    BlackBoardProperty:
+      name: 
+      guid: 
+      comparisonTyp: 0
+      iVal: 0
+    audioAsset: {fileID: 0}
+    emotion: 12
+    editTyp: 0
+  - Guid: f4a90ced-9a69-4f79-a180-08b4e3fa1278
+    DialogTitle: WaitNode
+    Position: {x: 978.4, y: 171.2}
+    Type: 5
+    DialogText: 
+    Image: {fileID: 0}
+    customRespondTime: 0
+    GameEvent: {fileID: 0}
+    BlackBoardProperty:
+      name: DayCounter
+      guid: f54546e2-7b9a-43bb-842f-b2f9c6896ebe
+      comparisonTyp: 0
+      iVal: 1
+    audioAsset: {fileID: 0}
+    emotion: 12
+    editTyp: 0
   dialogGroupData: []
   blackBoardList: {fileID: 11400000, guid: c289dd2bc5fda5942acc2419a6f68abb, type: 2}
