@@ -328,6 +328,37 @@ MonoBehaviour:
   m_ShadowLayerMask: 1
   m_LightCookieSize: {x: 1, y: 1}
   m_LightCookieOffset: {x: 0, y: 0}
+--- !u!1 &2643519961126580600
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5881414976705995490}
+  m_Layer: 0
+  m_Name: Bed
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5881414976705995490
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2643519961126580600}
+  m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
+  m_LocalPosition: {x: -0.83966404, y: 1.1567944, z: -13.680662}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 91847313961490258}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
 --- !u!1 &3072822991441521607
 GameObject:
   m_ObjectHideFlags: 0
@@ -834,7 +865,7 @@ Transform:
   - {fileID: 1850057105585457733}
   - {fileID: 8680491078805434948}
   m_Father: {fileID: 7053959207452852874}
-  m_RootOrder: 18
+  m_RootOrder: 17
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &5592197603480357656
 GameObject:
@@ -846,7 +877,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5523221964214666887}
   m_Layer: 0
-  m_Name: PlayerSpawn
+  m_Name: Cryo
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -859,13 +890,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5592197603480357656}
-  m_LocalRotation: {x: 0, y: -0.7071068, z: 0, w: 0.7071068}
+  m_LocalRotation: {x: -0, y: -0.7071068, z: -0, w: 0.7071068}
   m_LocalPosition: {x: 16.27615, y: 2.6269064, z: -13.856088}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 1
   m_Children: []
-  m_Father: {fileID: 7053959207452852874}
-  m_RootOrder: 17
+  m_Father: {fileID: 91847313961490258}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: -90, z: 0}
 --- !u!1 &5656006380527005637
 GameObject:
@@ -1864,10 +1895,10 @@ Transform:
   - {fileID: 2143632795593072503}
   - {fileID: 4828017596950160886}
   - {fileID: 4233683020594215914}
-  - {fileID: 5523221964214666887}
   - {fileID: 5382060655138142036}
   - {fileID: 9206365474326712519}
   - {fileID: 3486659991965698835}
+  - {fileID: 91847313961490258}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1914,12 +1945,15 @@ MonoBehaviour:
     image: {fileID: 8887352609928016420}
   wakeUpCryo:
     PlayerSpawnPos: {fileID: 5523221964214666887}
-    lightController: {fileID: 1835700772797283506}
+  wakeUpBed:
+    PlayerSpawnPos: {fileID: 5881414976705995490}
   day1State:
+    lightController: {fileID: 1835700772797283506}
     nightEvent: {fileID: 11400000, guid: 0b80ddc51b8a1c34c8cd80164e3e0b69, type: 2}
   day2State:
     nightEvent: {fileID: 11400000, guid: 0b80ddc51b8a1c34c8cd80164e3e0b69, type: 2}
   day3State:
+    lightController: {fileID: 1835700772797283506}
     nightEvent: {fileID: 11400000, guid: 0b80ddc51b8a1c34c8cd80164e3e0b69, type: 2}
   nightState:
     exitEvent: {fileID: 11400000, guid: a82f1a9cb6231dc478acb6231e11328a, type: 2}
@@ -2096,6 +2130,39 @@ MonoBehaviour:
   m_ShadowLayerMask: 1
   m_LightCookieSize: {x: 1, y: 1}
   m_LightCookieOffset: {x: 0, y: 0}
+--- !u!1 &8967536182596850214
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 91847313961490258}
+  m_Layer: 0
+  m_Name: SpawnPos
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &91847313961490258
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8967536182596850214}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 5523221964214666887}
+  - {fileID: 5881414976705995490}
+  m_Father: {fileID: 7053959207452852874}
+  m_RootOrder: 20
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &282781072979572445
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2871,7 +2938,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 6482737711045702098, guid: 1b775ce5e67464845aaee44578d81d7e, type: 3}
       propertyPath: m_RootOrder
-      value: 19
+      value: 18
       objectReference: {fileID: 0}
     - target: {fileID: 6482737711045702098, guid: 1b775ce5e67464845aaee44578d81d7e, type: 3}
       propertyPath: m_LocalPosition.x
@@ -4833,7 +4900,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8696362639142911325, guid: 6ce666dc1c6ec104eb5ce6d3ded5a1e7, type: 3}
       propertyPath: m_RootOrder
-      value: 20
+      value: 19
       objectReference: {fileID: 0}
     - target: {fileID: 8696362639142911325, guid: 6ce666dc1c6ec104eb5ce6d3ded5a1e7, type: 3}
       propertyPath: m_LocalPosition.x

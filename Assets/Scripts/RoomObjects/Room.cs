@@ -64,7 +64,6 @@ public class Room : MonoBehaviour
 	public class WakeUpCryo : BaseState
 	{
 		[SerializeField] Transform PlayerSpawnPos;
-		[SerializeField] LightController lightController;
 
 		public override void Enter(GameObject obj)
 		{
@@ -72,9 +71,33 @@ public class Room : MonoBehaviour
 			Player.Me().Lock();
 			Player.Me().transform.position = PlayerSpawnPos.position;
 			Player.Me().transform.forward = PlayerSpawnPos.forward;
-			lightController.EnterNormalState();
 			room.PushState (room.fadeInState);
 			room.cryoDoor.SetOpen (true);
+		}
+
+		public override void Update(GameObject obj)
+		{
+			room.PopState();
+		}
+
+		public override void Exit(GameObject obj)
+		{
+			Player.Me().Unlock();
+		}
+	}
+
+	[System.Serializable]
+	public class WakeUpBed : BaseState
+	{
+		[SerializeField] Transform PlayerSpawnPos;
+
+		public override void Enter(GameObject obj)
+		{
+			base.Enter(obj);
+			Player.Me().Lock();
+			Player.Me().transform.position = PlayerSpawnPos.position;
+			Player.Me().transform.forward = PlayerSpawnPos.forward;
+			room.PushState (room.fadeInState);
 		}
 
 		public override void Update(GameObject obj)
@@ -99,37 +122,6 @@ public class Room : MonoBehaviour
 				room.PushState (room.day2State);
 			else
 				room.PushState (room.day3State);
-		}
-	}
-
-	[System.Serializable]
-	public class Day1State : BaseState , IGameEventListener
-	{
-		[SerializeField] GameEvent nightEvent;
-		bool done;
-
-		public override void Enter(GameObject obj)
-		{
-			base.Enter(obj);
-			done = false;
-			nightEvent?.RegisterListener(this);
-			room.PushState (room.wakeUpCryo);
-		}
-
-		public override void Update(GameObject obj)
-		{
-			if (done)
-				room.SwapState (room.nightState);
-		}
-
-		public override void Exit(GameObject obj)
-		{
-			nightEvent?.UnregisterListener (this);
-		}
-
-		public void OnEventRaised()
-		{
-			done = true;
 		}
 	}
 
@@ -224,6 +216,70 @@ public class Room : MonoBehaviour
 			txt.SetActive (false);
 		}
 	}
+	
+	[System.Serializable]
+	public class Day1State : BaseState , IGameEventListener
+	{
+		[SerializeField] LightController lightController;
+		[SerializeField] GameEvent nightEvent;
+		bool done;
+
+		public override void Enter(GameObject obj)
+		{
+			base.Enter(obj);
+			done = false;
+			nightEvent?.RegisterListener(this);
+			lightController.EnterNormalState();
+			room.PushState (room.wakeUpCryo);
+		}
+
+		public override void Update(GameObject obj)
+		{
+			if (done)
+				room.SwapState (room.nightState);
+		}
+
+		public override void Exit(GameObject obj)
+		{
+			nightEvent?.UnregisterListener (this);
+		}
+
+		public void OnEventRaised()
+		{
+			done = true;
+		}
+	}
+
+	[System.Serializable]
+	public class Day2State : BaseState , IGameEventListener
+	{
+		[SerializeField] GameEvent nightEvent;
+		bool done;
+
+		public override void Enter(GameObject obj)
+		{
+			base.Enter(obj);
+			done = false;
+			nightEvent?.RegisterListener(this);
+			room.PushState (room.wakeUpBed);
+		}
+
+		public override void Update(GameObject obj)
+		{
+			if (done)
+				room.SwapState (room.nightState);
+		}
+
+		public override void Exit(GameObject obj)
+		{
+			nightEvent?.UnregisterListener (this);
+		}
+
+		public void OnEventRaised()
+		{
+			done = true;
+		}
+	}
 
 	public enum CurrentDay
 	{
@@ -242,8 +298,9 @@ public class Room : MonoBehaviour
 	public ChoseDayState choseDayState = new ChoseDayState();
 	public FadeInState fadeInState = new FadeInState();
 	public WakeUpCryo wakeUpCryo = new WakeUpCryo();
+	public WakeUpBed wakeUpBed = new WakeUpBed();
 	public Day1State day1State = new Day1State();
-	public Day1State day2State = new Day1State();
+	public Day2State day2State = new Day2State();
 	public Day1State day3State = new Day1State();
 	public NightState nightState = new NightState();
 	public TransitionState transitionState = new TransitionState();
