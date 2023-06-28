@@ -253,6 +253,7 @@ public class Room : MonoBehaviour
 	[System.Serializable]
 	public class Day2State : BaseState , IGameEventListener
 	{
+		[SerializeField] LightController lightController;
 		[SerializeField] GameEvent nightEvent;
 		bool done;
 
@@ -261,6 +262,7 @@ public class Room : MonoBehaviour
 			base.Enter(obj);
 			done = false;
 			nightEvent?.RegisterListener(this);
+			lightController.EnterNormalState();
 			room.PushState (room.wakeUpBed);
 		}
 
@@ -278,6 +280,21 @@ public class Room : MonoBehaviour
 		public void OnEventRaised()
 		{
 			done = true;
+		}
+	}
+
+	[System.Serializable]
+	public class Day3State : BaseState
+	{
+		[SerializeField] LightController lightController;
+		bool done;
+
+		public override void Enter(GameObject obj)
+		{
+			base.Enter(obj);
+			done = false;
+			lightController.EnterNormalState();
+			room.PushState (room.wakeUpBed);
 		}
 	}
 
@@ -301,7 +318,7 @@ public class Room : MonoBehaviour
 	public WakeUpBed wakeUpBed = new WakeUpBed();
 	public Day1State day1State = new Day1State();
 	public Day2State day2State = new Day2State();
-	public Day1State day3State = new Day1State();
+	public Day3State day3State = new Day3State();
 	public NightState nightState = new NightState();
 	public TransitionState transitionState = new TransitionState();
 

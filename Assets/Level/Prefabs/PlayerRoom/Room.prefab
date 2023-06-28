@@ -1951,10 +1951,10 @@ MonoBehaviour:
     lightController: {fileID: 1835700772797283506}
     nightEvent: {fileID: 11400000, guid: 0b80ddc51b8a1c34c8cd80164e3e0b69, type: 2}
   day2State:
+    lightController: {fileID: 1835700772797283506}
     nightEvent: {fileID: 11400000, guid: 0b80ddc51b8a1c34c8cd80164e3e0b69, type: 2}
   day3State:
     lightController: {fileID: 1835700772797283506}
-    nightEvent: {fileID: 11400000, guid: 0b80ddc51b8a1c34c8cd80164e3e0b69, type: 2}
   nightState:
     exitEvent: {fileID: 11400000, guid: a82f1a9cb6231dc478acb6231e11328a, type: 2}
     nextDayTrigger: {fileID: 2990337048767106947}
