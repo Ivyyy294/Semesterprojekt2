@@ -7,7 +7,7 @@ using Ivyyy.GameEvent;
 using UnityEngine.UI;
 using Ivyyy.SaveGameSystem;
 
-public class Room : FiniteStateMachine
+public class Room : MonoBehaviour
 {
 	public class BaseState : IState
 	{
@@ -27,7 +27,41 @@ public class Room : FiniteStateMachine
 	}
 
 	[System.Serializable]
-	public class InitValuesState : BaseState
+	public class FadeInState : BaseState
+	{
+		[SerializeField] AnimationCurve animationCurve;
+		[SerializeField] Image image;
+		float timer;
+
+		public override void Enter(GameObject obj)
+		{
+			base.Enter(obj);
+			timer = 0f;
+			image.gameObject.SetActive(true);
+		}
+
+		public override void Update(GameObject obj)
+		{
+			if (timer < animationCurve.keys[animationCurve.length - 1].time)
+			{
+				Color color = image.color;
+				color.a = animationCurve.Evaluate(timer);
+				image.color = color;
+
+				timer += Time.deltaTime;
+			}
+			else
+				room.PopState();
+		}
+
+		public override void Exit(GameObject obj)
+		{
+			image.gameObject.SetActive(false);
+		}
+	}
+
+	[System.Serializable]
+	public class WakeUpCryo : BaseState
 	{
 		[SerializeField] Transform PlayerSpawnPos;
 		[SerializeField] LightController lightController;
@@ -35,87 +69,62 @@ public class Room : FiniteStateMachine
 		public override void Enter(GameObject obj)
 		{
 			base.Enter(obj);
-
 			Player.Me().Lock();
 			Player.Me().transform.position = PlayerSpawnPos.position;
 			Player.Me().transform.forward = PlayerSpawnPos.forward;
 			lightController.EnterNormalState();
+			room.PushState (room.fadeInState);
+			room.cryoDoor.SetOpen (true);
 		}
 
 		public override void Update(GameObject obj)
 		{
-			room.cryoDoor.SetOpen (true);
-			room.EnterState (room.choseDayState);
+			room.PopState();
+		}
+
+		public override void Exit(GameObject obj)
+		{
+			Player.Me().Unlock();
 		}
 	}
 
 	[System.Serializable]
 	public class ChoseDayState : BaseState
 	{
-		[SerializeField] GameObject personalObjects;
-		[SerializeField] AnimationCurve animationCurve;
-		[SerializeField] Image image;
-		float timer;
-
-		public override void Enter (GameObject obj)
-		{
-			base.Enter (obj);
-			timer = 0f;
-			image.gameObject.SetActive (true);
-
-			personalObjects.SetActive (room.currentDay == CurrentDay.DAY2);
-		}
-
 		public override void Update (GameObject obj)
 		{
-			if (timer < animationCurve.keys[animationCurve.length -1].time)
-			{
-				Color color = image.color;
-				color.a = animationCurve.Evaluate (timer);
-				image.color = color;
-
-				timer += Time.deltaTime;
-			}
+			if (room.currentDay == CurrentDay.DAY1)
+				room.PushState (room.day1State);
+			else if (room.currentDay == CurrentDay.DAY2)
+				room.PushState (room.day2State);
 			else
-			{
-				if (room.currentDay == CurrentDay.DAY1)
-					room.EnterState(room.day1State);
-				else if (room.currentDay == CurrentDay.DAY2)
-					room.EnterState(room.day2State);
-				else
-					room.EnterState(room.day3State);
-			}
-		}
-
-		public override void Exit(GameObject obj)
-		{
-			Player.Me().Unlock();
-			image.gameObject.SetActive (false);
+				room.PushState (room.day3State);
 		}
 	}
 
 	[System.Serializable]
-	public class DayState : BaseState , IGameEventListener
+	public class Day1State : BaseState , IGameEventListener
 	{
-		[SerializeField] GameEvent exitEvent;
+		[SerializeField] GameEvent nightEvent;
 		bool done;
 
 		public override void Enter(GameObject obj)
 		{
 			base.Enter(obj);
-			exitEvent?.RegisterListener(this);
 			done = false;
+			nightEvent?.RegisterListener(this);
+			room.PushState (room.wakeUpCryo);
 		}
 
 		public override void Update(GameObject obj)
 		{
 			if (done)
-				room.EnterState (room.nightState);
+				room.SwapState (room.nightState);
 		}
 
 		public override void Exit(GameObject obj)
 		{
-			exitEvent?.UnregisterListener (this);
+			nightEvent?.UnregisterListener (this);
 		}
 
 		public void OnEventRaised()
@@ -147,7 +156,7 @@ public class Room : FiniteStateMachine
 		public override void Update(GameObject obj)
 		{
 			if (done)
-				room.EnterState (room.transitionState);
+				room.SwapState (room.transitionState);
 		}
 
 		public override void Exit(GameObject obj)
@@ -205,7 +214,7 @@ public class Room : FiniteStateMachine
 				else if (room.currentDay == CurrentDay.DAY2)
 					room.currentDay = CurrentDay.DAY3;
 
-				room.EnterState (room.initValuesState);
+				room.PopState();
 			}
 		}
 
@@ -224,33 +233,51 @@ public class Room : FiniteStateMachine
 	}
 
 	public CurrentDay currentDay = CurrentDay.DAY1;
+	public bool night;
 
 	[Header ("Room Objects")]
 	public CryoDoor cryoDoor;
 	
 	[Header ("Room States")]
 	public ChoseDayState choseDayState = new ChoseDayState();
+	public FadeInState fadeInState = new FadeInState();
+	public WakeUpCryo wakeUpCryo = new WakeUpCryo();
+	public Day1State day1State = new Day1State();
+	public Day1State day2State = new Day1State();
+	public Day1State day3State = new Day1State();
 	public NightState nightState = new NightState();
-	public DayState day1State = new DayState();
-	public DayState day2State = new DayState();
-	public DayState day3State = new DayState();
 	public TransitionState transitionState = new TransitionState();
-	public InitValuesState initValuesState = new InitValuesState();
+
+	private Stack <IState> states = new Stack<IState>();
+
+	public void SwapState (IState newState)
+	{
+		PopState();
+		PushState (newState);
+	}
+
+	public void PushState (IState newState)
+	{
+		states.Push (newState);
+		states.Peek().Enter(gameObject);
+	}
+
+	public void PopState()
+	{
+		states.Pop().Exit(gameObject);
+	}
 
 	//public Player player;
-	protected override void Update()
+	protected void Update()
 	{
-		if (currentState == null)
+		if (states.Count == 0)
 		{
 			if (SaveGameManager.Me().LoadGameScheduled)
-			{
 				SaveGameManager.Me().LoadGameState();
-				EnterState (choseDayState);
-			}
-			else
-				EnterState (initValuesState);
+			
+			PushState (choseDayState);
 		}
 		else
-			base.Update();
+			states.Peek().Update(gameObject);
 	}
 }

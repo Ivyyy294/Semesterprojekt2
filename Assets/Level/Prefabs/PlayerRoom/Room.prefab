@@ -1884,9 +1884,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentDay: 0
+  night: 0
   cryoDoor: {fileID: 6334317424693014758}
-  choseDayState:
-    personalObjects: {fileID: 646120433506240146}
+  fadeInState:
     animationCurve:
       serializedVersion: 2
       m_Curve:
@@ -1912,17 +1912,20 @@ MonoBehaviour:
       m_PostInfinity: 2
       m_RotationOrder: 4
     image: {fileID: 8887352609928016420}
+  wakeUpCryo:
+    PlayerSpawnPos: {fileID: 5523221964214666887}
+    lightController: {fileID: 1835700772797283506}
+  day1State:
+    nightEvent: {fileID: 11400000, guid: 0b80ddc51b8a1c34c8cd80164e3e0b69, type: 2}
+  day2State:
+    nightEvent: {fileID: 11400000, guid: 0b80ddc51b8a1c34c8cd80164e3e0b69, type: 2}
+  day3State:
+    nightEvent: {fileID: 11400000, guid: 0b80ddc51b8a1c34c8cd80164e3e0b69, type: 2}
   nightState:
     exitEvent: {fileID: 11400000, guid: a82f1a9cb6231dc478acb6231e11328a, type: 2}
     nextDayTrigger: {fileID: 2990337048767106947}
     audioAsset: {fileID: 11400000, guid: 4c9245077c3986f44b34c86a7debac58, type: 2}
     lightController: {fileID: 1835700772797283506}
-  day1State:
-    exitEvent: {fileID: 11400000, guid: 0b80ddc51b8a1c34c8cd80164e3e0b69, type: 2}
-  day2State:
-    exitEvent: {fileID: 11400000, guid: 0b80ddc51b8a1c34c8cd80164e3e0b69, type: 2}
-  day3State:
-    exitEvent: {fileID: 11400000, guid: 0b80ddc51b8a1c34c8cd80164e3e0b69, type: 2}
   transitionState:
     image: {fileID: 8887352609928016420}
     txt: {fileID: 6011457623869581403}
@@ -1952,9 +1955,6 @@ MonoBehaviour:
       m_RotationOrder: 4
     nextDayTrigger: {fileID: 2990337048767106947}
     txtTime: 0
-  initValuesState:
-    PlayerSpawnPos: {fileID: 5523221964214666887}
-    lightController: {fileID: 1835700772797283506}
 --- !u!114 &5392927515475894218
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4889,11 +4889,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6ce666dc1c6ec104eb5ce6d3ded5a1e7, type: 3}
---- !u!1 &646120433506240146 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 4628519992168231132, guid: 6ce666dc1c6ec104eb5ce6d3ded5a1e7, type: 3}
-  m_PrefabInstance: {fileID: 5245767178379720270}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &3486659991965698835 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8696362639142911325, guid: 6ce666dc1c6ec104eb5ce6d3ded5a1e7, type: 3}
