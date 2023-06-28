@@ -24,7 +24,7 @@ public class Door : PushdownAutomata, InteractableObject
 			if (door != null)
 			{
 				if (door.glitch)
-					door.EnterState (door.glitchState);
+					door.PushState (door.glitchState);
 				else if (!door.open)
 					door?.PopState();
 			}
@@ -48,9 +48,9 @@ public class Door : PushdownAutomata, InteractableObject
 			if (door != null)
 			{
 				if (door.glitch)
-					door.EnterState (door.glitchState);
+					door.PushState (door.glitchState);
 				else if (door.open)
-					door.EnterState (door.openState);
+					door.PushState (door.openState);
 			}
 		}
 
@@ -93,7 +93,7 @@ public class Door : PushdownAutomata, InteractableObject
 
 	private void Start()
 	{
-		EnterState (closedState);
+		PushState (closedState);
 	}
 
 	public void Interact()

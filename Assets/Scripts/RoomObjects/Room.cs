@@ -7,7 +7,7 @@ using Ivyyy.GameEvent;
 using UnityEngine.UI;
 using Ivyyy.SaveGameSystem;
 
-public class Room : MonoBehaviour
+public class Room : PushdownAutomata
 {
 	public class BaseState : IState
 	{
@@ -329,36 +329,17 @@ public class Room : MonoBehaviour
 	public NightState nightState = new NightState();
 	public TransitionState transitionState = new TransitionState();
 
-	private Stack <IState> states = new Stack<IState>();
-
-	public void SwapState (IState newState)
-	{
-		PopState();
-		PushState (newState);
-	}
-
-	public void PushState (IState newState)
-	{
-		states.Push (newState);
-		states.Peek().Enter(gameObject);
-	}
-
-	public void PopState()
-	{
-		states.Pop().Exit(gameObject);
-	}
-
 	private void Start()
 	{
 		PushState (choseDayState);
 	}
 
 	//public Player player;
-	protected void Update()
+	protected override void Update()
 	{
 		if (SaveGameManager.Me().LoadGameScheduled)
 			SaveGameManager.Me().LoadGameState();
 			
-		states.Peek().Update(gameObject);
+		base.Update();
 	}
 }
