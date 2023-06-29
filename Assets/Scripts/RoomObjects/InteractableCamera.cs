@@ -63,6 +63,10 @@ public class InteractableCamera : FiniteStateMachine, InteractableObject
 	public class ActiveState : BaseState
 	{
 		[SerializeField] MouseLook mouseLook;
+		bool locked = false;
+
+		public void SetLocked (bool val) {locked = val;}
+
 		public override void Enter (GameObject obj)
 		{
 			base.Enter(obj);
@@ -76,7 +80,7 @@ public class InteractableCamera : FiniteStateMachine, InteractableObject
 
 		public override void Update (GameObject obj)
 		{
-			if (Input.GetKeyDown(KeyCode.F))
+			if (!locked && Input.GetKeyDown(KeyCode.F))
 			{
 				mouseLook.enabled = false;
 				interactableCamera.EnterState (interactableCamera.easeOutState);
@@ -129,6 +133,8 @@ public class InteractableCamera : FiniteStateMachine, InteractableObject
 	public EaseOutState easeOutState = new EaseOutState();
 	public GameObject cameraContainer;
 	public Quaternion defaultRotation;
+
+	public bool IsActive () {return currentState == activeState;}
 
 	public void Interact()
 	{

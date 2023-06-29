@@ -6,6 +6,7 @@ using Ivyyy.Interfaces;
 using Ivyyy.GameEvent;
 using UnityEngine.UI;
 using Ivyyy.SaveGameSystem;
+using Cinemachine;
 
 public class Room : PushdownAutomata
 {
@@ -90,11 +91,12 @@ public class Room : PushdownAutomata
 	public class WakeUpBed : BaseState
 	{
 		[SerializeField] Transform PlayerSpawnPos;
+		[SerializeField] InteractableCamera bed;
 
 		public override void Enter(GameObject obj)
 		{
 			base.Enter(obj);
-			Player.Me().Lock();
+			//Player.Me().Lock();
 			Player.Me().transform.position = PlayerSpawnPos.position;
 			Player.Me().transform.forward = PlayerSpawnPos.forward;
 			room.PushState (room.fadeInState);
@@ -107,7 +109,7 @@ public class Room : PushdownAutomata
 
 		public override void Exit(GameObject obj)
 		{
-			Player.Me().Unlock();
+			bed.activeState.SetLocked (false);
 		}
 	}
 
@@ -121,6 +123,8 @@ public class Room : PushdownAutomata
 
 		public override void Update (GameObject obj)
 		{
+			Player.Me().cinemachineBrain.m_DefaultBlend.m_Style = CinemachineBlendDefinition.Style.EaseInOut;
+
 			if (room.currentDay == CurrentDay.DAY1)
 				room.PushState (room.day1State);
 			else if (room.currentDay == CurrentDay.DAY2)
@@ -131,40 +135,30 @@ public class Room : PushdownAutomata
 	}
 
 	[System.Serializable]
-	public class NightState : BaseState, IGameEventListener
+	public class NightState : BaseState
 	{
-		[SerializeField] GameEvent exitEvent;
-		[SerializeField] GameObject nextDayTrigger;
+		[SerializeField] InteractableCamera bed;
 		[SerializeField] AudioAsset audioAsset;
 		[SerializeField] LightController lightController;
-		bool done = false;
 
 		public override void Enter (GameObject obj)
 		{
 			base.Enter (obj);
-			done = false;
-			exitEvent?.RegisterListener (this);
-			nextDayTrigger.SetActive (true);
 			Player.Me().BlockInteractions (true);
 			lightController.EnterNightState();
 			audioAsset?.Play();
+			bed.activeState.SetLocked (true);
 		}
 
 		public override void Update(GameObject obj)
 		{
-			if (done)
+			if (bed != null && bed.IsActive())
 				room.SwapState (room.transitionState);
 		}
 
 		public override void Exit(GameObject obj)
 		{
-			exitEvent.UnregisterListener (this);
 			Player.Me().BlockInteractions (false);
-		}
-
-		public void OnEventRaised()
-		{
-			done = true;
 		}
 	}
 
@@ -174,7 +168,6 @@ public class Room : PushdownAutomata
 		[SerializeField] Image image;
 		[SerializeField] GameObject txt;
 		[SerializeField] AnimationCurve animationCurve;
-		[SerializeField] GameObject nextDayTrigger;
 		[SerializeField] float txtTime;
 		float timer;
 		float timerTxt;
@@ -219,7 +212,6 @@ public class Room : PushdownAutomata
 
 		public override void Exit(GameObject obj)
 		{
-			nextDayTrigger.SetActive (false);
 			txt.SetActive (false);
 		}
 	}

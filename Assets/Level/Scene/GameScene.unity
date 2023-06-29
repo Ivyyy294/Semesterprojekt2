@@ -128,6 +128,17 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 3250876305702942767, guid: cbc17c2b942c75242850f0bbb7667649, type: 3}
   m_PrefabInstance: {fileID: 1186137876}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &245597534 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2167519450038192635, guid: cbc17c2b942c75242850f0bbb7667649, type: 3}
+  m_PrefabInstance: {fileID: 1186137876}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 245597532}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 18a433e8b7c194346becdb15a5f3dc0c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &269124818 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3588658646520420108, guid: cbc17c2b942c75242850f0bbb7667649, type: 3}
@@ -371,6 +382,10 @@ PrefabInstance:
       propertyPath: releasePlayer
       value: 
       objectReference: {fileID: 11400000, guid: 2db1e2cec386b954ba5ea4c67080e35a, type: 2}
+    - target: {fileID: 2565798720408585157, guid: cbc17c2b942c75242850f0bbb7667649, type: 3}
+      propertyPath: nightState.bed
+      value: 
+      objectReference: {fileID: 245597534}
     - target: {fileID: 2565798720408585157, guid: cbc17c2b942c75242850f0bbb7667649, type: 3}
       propertyPath: lightController
       value: 
