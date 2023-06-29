@@ -355,9 +355,14 @@ public class Room : PushdownAutomata
 		{
 			if (cryo.IsActive())
 			{
-				//room.SwapState (room.endingCryoGood);
+				room.SwapState (room.endingCryoGood);
 				//room.SwapState (room.endingCryoBad);
 			}
+		}
+
+		public override void Exit(GameObject obj)
+		{
+			cryoDoorTrigger.SetActive (true);
 		}
 	}
 
@@ -368,6 +373,7 @@ public class Room : PushdownAutomata
 		[SerializeField] string tag;
 		bool audioPlayed = false;
 		bool done = false;
+		bool doorSoundPlayed = false;
 
 		[SerializeField] AudioAsset audioAssetArrived;
 		[SerializeField] AudioAsset audioAssetDoor;
@@ -376,6 +382,7 @@ public class Room : PushdownAutomata
 			base.Enter(obj);
 			audioPlayed = false;
 			done = false;
+			doorSoundPlayed = false;
 			Player.Me().Lock();
 			Player.Me().BlockInteractions (true, tag);
 			doorTerminal.locked = false;
@@ -396,6 +403,10 @@ public class Room : PushdownAutomata
 			{
 				room.PushState (room.fadeOutState);
 				done = true;
+			}
+			else if (done && !doorSoundPlayed)
+			{
+				doorSoundPlayed = true;
 				audioAssetDoor?.Play();
 			}
 		}
