@@ -373,6 +373,27 @@ public class Chat : FiniteStateMachine
 		EnterState (defaultState);
     }
 
+	public bool NpcMessageAvailable()
+	{
+		if (dialogTree.dialogContainer == null)
+		{
+			dialogTree.dialogContainer = dialogContainer;
+			dialogTree.Next();
+		}
+
+		DialogTree.Node data = dialogTree.CurrentNode();
+
+		if (data.data != null && !IsLastNode())
+		{
+			if (data.data.Type == DialogNodeData.NodeType.START)
+				dialogTree.Next();
+			else
+				return data.data.Type == DialogNodeData.NodeType.NPC;
+		}
+
+		return false;
+	}
+
 	void OnEnable()
 	{
 		if (buttonList.Count == 0)
@@ -382,6 +403,12 @@ public class Chat : FiniteStateMachine
 
 		if (currentState == choiceNodeState)
 			choiceNodeState.InitButtons();
+	}
+
+	private bool IsLastNode()
+	{
+		DialogTree.Node nextNode = dialogTree.Peek();
+		return nextNode.data == null;
 	}
 
 	private void Init()

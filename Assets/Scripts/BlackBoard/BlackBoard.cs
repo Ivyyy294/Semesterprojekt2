@@ -21,7 +21,10 @@ public class BlackBoard
 		{
 			//Create a working copy of the BlackBoardProperty
 			foreach (var i in list.data)
-				properties.Add (i.guid, new BlackBoardProperty{name = i.name, guid = i.guid});
+			{
+				if (!properties.ContainsKey (i.guid))
+					properties.Add (i.guid, new BlackBoardProperty{name = i.name, guid = i.guid});
+			}
 		}
 	}
 

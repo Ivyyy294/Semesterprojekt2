@@ -93,7 +93,23 @@ public class PuckTerminal : MonoBehaviour
 	{
 		//Updating button visiblity
 		for (int i = 0; i < dialogList.Length; ++i)
-			buttonObjList[i].interactable = dialogList[i].available;
+		{
+			Button button = buttonObjList[i];
+			button.interactable = dialogList[i].available;
+
+			if (button.interactable)
+			{
+				Image image = button.GetComponentInChildren<Image>();
+
+				if (image != null)
+				{
+					if (chatObjList[i].NpcMessageAvailable() && i != currentIndex)
+						image.color = Color.green;
+					else
+						image.color = Color.white;
+				}
+			}
+		}
 	}
 
 	private void InitObjLists ()
