@@ -126,6 +126,7 @@ public class Room : PushdownAutomata
 			if(!cryoCam.IsActive())
 				cryoCam.EnterState (cryoCam.spawnState);
 
+			Player.Me().Lock();
 			Player.Me().transform.position = PlayerSpawnPos.position;
 			Player.Me().transform.forward = PlayerSpawnPos.forward;
 			room.PushState (room.fadeInState);
@@ -153,6 +154,7 @@ public class Room : PushdownAutomata
 			if(!bed.IsActive())
 				bed.EnterState (bed.spawnState);
 
+			Player.Me().Lock();
 			Player.Me().transform.position = PlayerSpawnPos.position;
 			Player.Me().transform.forward = PlayerSpawnPos.forward;
 			room.PushState (room.fadeInState);
