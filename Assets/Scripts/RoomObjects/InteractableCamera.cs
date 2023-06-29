@@ -70,7 +70,7 @@ public class InteractableCamera : FiniteStateMachine, InteractableObject
 		public override void Enter (GameObject obj)
 		{
 			base.Enter(obj);
-
+			Player.Me().interactTextOverlay.Show (true);
 			if (mouseLook)
 			{
 				mouseLook.ResetRotation();
@@ -85,6 +85,11 @@ public class InteractableCamera : FiniteStateMachine, InteractableObject
 				mouseLook.enabled = false;
 				interactableCamera.EnterState (interactableCamera.easeOutState);
 			}
+		}
+
+		public override void Exit(GameObject obj)
+		{
+			Player.Me().interactTextOverlay.Show (false);
 		}
 	}
 

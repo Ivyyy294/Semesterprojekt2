@@ -6,13 +6,17 @@ using Ivyyy.Core;
 
 public class Player : MonoBehaviour
 {
+	//Public values
+	[HideInInspector] public MouseLook mouseLook;
+	[HideInInspector] public Cinemachine.CinemachineBrain cinemachineBrain;
+	public InteractTextOverlay interactTextOverlay;
+	
+	//Private values	
 	private static Player me;
 
 	private PlayerMovement3D playerMovement3D;
 	private CharacterController characterController;
-	public MouseLook mouseLook;
 	private PlayerInteraction playerInteraction;
-	public Cinemachine.CinemachineBrain cinemachineBrain;
 	bool locked = false;
 
 	public static Player Me()
