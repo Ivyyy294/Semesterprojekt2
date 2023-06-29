@@ -321,7 +321,10 @@ public class Room : PushdownAutomata
 		public override void Update(GameObject obj)
 		{
 			if (cryo.IsActive())
-				room.SwapState (room.endingCryoGood);
+			{
+				//room.SwapState (room.endingCryoGood);
+				//room.SwapState (room.endingCryoBad);
+			}
 		}
 	}
 
@@ -365,6 +368,33 @@ public class Room : PushdownAutomata
 		}
 	}
 
+	[System.Serializable]
+	public class EndingCryoBad : BaseState
+	{
+		bool audioPlayed = false;
+
+		[SerializeField] AudioAsset audioDying;
+
+		public override void Enter(GameObject obj)
+		{
+			base.Enter(obj);
+			audioPlayed = false;
+			Player.Me().Lock();
+			room.fadeOutState.SetText ("");
+			//Queue Fade In and Out effect
+			room.PushState (room.fadeOutState);
+		}
+
+		public override void Update(GameObject obj)
+		{
+			if (!audioPlayed)
+			{
+				audioDying?.Play();
+				audioPlayed = true;
+			}
+		}
+	}
+
 	public enum CurrentDay
 	{
 		DAY1,
@@ -395,6 +425,7 @@ public class Room : PushdownAutomata
 
 	//Endings
 	public EndingCryoGood endingCryoGood = new EndingCryoGood();
+	public EndingCryoBad endingCryoBad = new EndingCryoBad();
 
 	private void Start()
 	{
