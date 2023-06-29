@@ -204,7 +204,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2565798720408585157, guid: cbc17c2b942c75242850f0bbb7667649, type: 3}
       propertyPath: currentDay
-      value: 2
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2565798720408585157, guid: cbc17c2b942c75242850f0bbb7667649, type: 3}
       propertyPath: lockPlayer
@@ -458,6 +458,22 @@ PrefabInstance:
       propertyPath: m_LocalPosition.x
       value: 7.47475
       objectReference: {fileID: 0}
+    - target: {fileID: 8129480523428790044, guid: cbc17c2b942c75242850f0bbb7667649, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -1.548
+      objectReference: {fileID: 0}
+    - target: {fileID: 8129480523428790044, guid: cbc17c2b942c75242850f0bbb7667649, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.696
+      objectReference: {fileID: 0}
+    - target: {fileID: 8129480523428790044, guid: cbc17c2b942c75242850f0bbb7667649, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -1.56
+      objectReference: {fileID: 0}
+    - target: {fileID: 8129480523428790047, guid: cbc17c2b942c75242850f0bbb7667649, type: 3}
+      propertyPath: img
+      value: 
+      objectReference: {fileID: 1186137879}
     - target: {fileID: 8754969039875609493, guid: cbc17c2b942c75242850f0bbb7667649, type: 3}
       propertyPath: nextDayEvent.m_PersistentCalls.m_Calls.Array.size
       value: 1
@@ -506,6 +522,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6941c40ea77dd904e9859ad3483c39d0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1186137879 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8887352609928016420, guid: cbc17c2b942c75242850f0bbb7667649, type: 3}
+  m_PrefabInstance: {fileID: 1186137876}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &1208991815 stripped
