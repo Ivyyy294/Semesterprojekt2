@@ -1982,6 +1982,7 @@ MonoBehaviour:
     txtTime: 2
   wakeUpCryo:
     PlayerSpawnPos: {fileID: 5523221964214666887}
+    cryoCam: {fileID: 8987730952681145877}
   wakeUpBed:
     PlayerSpawnPos: {fileID: 5881414976705995490}
     bed: {fileID: 2167519450038192635}
@@ -1995,6 +1996,8 @@ MonoBehaviour:
     tag: CryoEnding
     audioAssetArrived: {fileID: 0}
     audioAssetDoor: {fileID: 0}
+  endingCryoBad:
+    audioDying: {fileID: 0}
 --- !u!114 &5392927515475894218
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5741,6 +5744,10 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 9d31bce4c7c9c4040b17c8556949376c, type: 2}
+    - target: {fileID: 6377985137285116880, guid: 0c30e22ba89055b41aa46975bf4e9286, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.072
+      objectReference: {fileID: 0}
     - target: {fileID: 6440840097477770730, guid: 0c30e22ba89055b41aa46975bf4e9286, type: 3}
       propertyPath: m_Name
       value: CryoStation

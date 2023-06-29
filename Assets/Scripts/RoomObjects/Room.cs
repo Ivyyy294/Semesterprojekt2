@@ -116,11 +116,16 @@ public class Room : PushdownAutomata
 	public class WakeUpCryo : BaseState
 	{
 		[SerializeField] Transform PlayerSpawnPos;
+		[SerializeField] InteractableCamera cryoCam;
 
 		public override void Enter(GameObject obj)
 		{
 			base.Enter(obj);
-			Player.Me().Lock();
+			
+			//Spawn player sitting on cryo chair
+			if(!cryoCam.IsActive())
+				cryoCam.EnterState (cryoCam.spawnState);
+
 			Player.Me().transform.position = PlayerSpawnPos.position;
 			Player.Me().transform.forward = PlayerSpawnPos.forward;
 			room.PushState (room.fadeInState);
@@ -130,11 +135,6 @@ public class Room : PushdownAutomata
 		public override void Update(GameObject obj)
 		{
 			room.PopState();
-		}
-
-		public override void Exit(GameObject obj)
-		{
-			Player.Me().Unlock();
 		}
 	}
 
@@ -148,7 +148,11 @@ public class Room : PushdownAutomata
 		public override void Enter(GameObject obj)
 		{
 			base.Enter(obj);
-			//Player.Me().Lock();
+
+			//Spawn player laying on bed
+			if(!bed.IsActive())
+				bed.EnterState (bed.spawnState);
+
 			Player.Me().transform.position = PlayerSpawnPos.position;
 			Player.Me().transform.forward = PlayerSpawnPos.forward;
 			room.PushState (room.fadeInState);

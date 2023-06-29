@@ -126,11 +126,35 @@ public class InteractableCamera : FiniteStateMachine, InteractableObject
 		}
 	}
 
+	public class SpawnState : BaseState
+	{
+		CinemachineBrain cinemachineBrain;
+		CinemachineBlendDefinition.Style defaultBlendStyle;
+
+		public override void Enter(GameObject obj)
+		{
+			base.Enter(obj);
+			cinemachineBrain = Player.Me().cinemachineBrain;
+			defaultBlendStyle = cinemachineBrain.m_DefaultBlend.m_Style;
+			cinemachineBrain.m_DefaultBlend.m_Style = CinemachineBlendDefinition.Style.Cut;
+
+			Player.Me().Lock();
+			interactableCamera?.cameraContainer.SetActive(true);
+		}
+
+		public override void Update (GameObject obj)
+		{
+			cinemachineBrain.m_DefaultBlend.m_Style = defaultBlendStyle;
+			interactableCamera.EnterState (interactableCamera.activeState);
+		}
+	}
+
 	[Header ("Lara Values")]
 	public InactiveState inactiveState = new InactiveState();
 	public EaseInState easeInState = new EaseInState();
 	public ActiveState activeState = new ActiveState();
 	public EaseOutState easeOutState = new EaseOutState();
+	public SpawnState spawnState = new SpawnState();
 	public GameObject cameraContainer;
 	public Quaternion defaultRotation;
 
