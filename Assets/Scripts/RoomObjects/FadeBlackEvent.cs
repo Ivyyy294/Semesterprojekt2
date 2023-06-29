@@ -52,6 +52,8 @@ public class FadeBlackEvent : MonoBehaviour, InteractableObject
 			} 
 			else if (!audioPlayer.IsPlaying())
 			{
+				Player.Me().Unlock();
+				
 				if (timer <= fadeOutCurve.keys[fadeOutCurve.keys.Length -1].time)
 				{
 					ChangeAlpha (timer, fadeOutCurve);
@@ -60,7 +62,6 @@ public class FadeBlackEvent : MonoBehaviour, InteractableObject
 				else
 				{
 					active = false;
-					Player.Me().Unlock();
 					img?.gameObject.SetActive(false);
 				}
 			}
