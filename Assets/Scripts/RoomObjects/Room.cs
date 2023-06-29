@@ -245,6 +245,27 @@ public class Room : PushdownAutomata
 	}
 	
 	[System.Serializable]
+	public class CryoEventState : BaseState
+	{
+		//public override void Enter(GameObject obj)
+		//{
+		//	base.Enter(obj);
+		//}
+
+		//public override void Update(GameObject obj)
+		//{
+		//	if (room.currentDay == CurrentDay.DAY1)
+		//		room.currentDay = CurrentDay.DAY2;
+		//	else if (room.currentDay == CurrentDay.DAY2)
+		//		room.currentDay = CurrentDay.DAY3;
+
+		//	SaveGameManager.Me().SaveGameState();
+
+		//	room.PopState();
+		//}
+	}
+
+	[System.Serializable]
 	public class Day1State : BaseState , IGameEventListener
 	{
 		[SerializeField] LightController lightController;
@@ -315,11 +336,17 @@ public class Room : PushdownAutomata
 	{
 		[SerializeField] LightController lightController;
 		[SerializeField] InteractableCamera cryo;
+		[SerializeField] GameObject cryoDoorTrigger;
+		[SerializeField] GameObject personalItems;
+		[SerializeField] GameObject cryoEvent;
 
 		public override void Enter(GameObject obj)
 		{
 			base.Enter(obj);
 			room.cryoDoor.SetOpen (true);
+			personalItems.SetActive (false);
+			cryoDoorTrigger.SetActive (false);
+			cryoEvent.SetActive (true);
 			lightController.EnterNormalState();
 			room.PushState (room.wakeUpBed);
 		}
