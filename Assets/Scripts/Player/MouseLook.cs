@@ -1,13 +1,16 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using System.IO;
+using Cinemachine;
 
 public class MouseLook : MonoBehaviour
 {
 	float verticalRotation;
+	float defaultPov;
 	[SerializeField] Transform cameraTrans;
 	[SerializeField] float maxVerticalAngle = 80f;
+	[SerializeField] float zoomPov;
+	[SerializeField] float zoomSpeed;
 
 	[Range (0.1f, 2f)]
 	[SerializeField] float mouseSensitivity = 1f;
@@ -25,6 +28,7 @@ public class MouseLook : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+		defaultPov = Camera.main.fieldOfView;
 		Cursor.lockState = CursorLockMode.Locked;
 		//cameraTrans = Camera.main.transform;
     }
@@ -36,6 +40,14 @@ public class MouseLook : MonoBehaviour
 		{
 			MoveHorizontal();
 			MoveVertical();
+
+			CinemachineVirtualCamera vCam = (CinemachineVirtualCamera) Player.Me().cinemachineBrain.ActiveVirtualCamera;
+			float dist = defaultPov - zoomPov;
+
+			if (Input.GetKey (KeyCode.Mouse1))
+				vCam.m_Lens.FieldOfView = Mathf.MoveTowards (vCam.m_Lens.FieldOfView, zoomPov, dist * Time.deltaTime * zoomSpeed);
+			else
+				vCam.m_Lens.FieldOfView = Mathf.MoveTowards (vCam.m_Lens.FieldOfView, defaultPov, dist * Time.deltaTime * zoomSpeed);
 		}
     }
 

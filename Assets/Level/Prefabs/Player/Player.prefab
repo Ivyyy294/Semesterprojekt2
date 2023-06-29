@@ -310,6 +310,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cameraTrans: {fileID: 5386439339678460319}
   maxVerticalAngle: 80
+  zoomPov: 20
+  zoomSpeed: 1.5
   mouseSensitivity: 1
 --- !u!114 &1551877892312807625
 MonoBehaviour:
