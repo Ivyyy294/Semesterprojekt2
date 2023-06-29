@@ -314,6 +314,7 @@ public class Chat : FiniteStateMachine
 
 	private List <GameObject> buttonList = new List<GameObject>();
 	public List <GameObject> ButtonList => buttonList;
+	bool initDone = false;
 
 	//Public Functions
 	public Payload GetPayload (string nodeName)
@@ -365,7 +366,8 @@ public class Chat : FiniteStateMachine
 	//Private Functions
 	void Start()
     {
-		Init();
+		if (!initDone)
+			Init();
 
 		if (dialogTree.nodesVisited.Count == 0)
 			dialogTree.Next();
@@ -373,20 +375,43 @@ public class Chat : FiniteStateMachine
 		EnterState (defaultState);
     }
 
+	public int AnzNewMessagesAvailable()
+	{
+		int anz = 0;
+
+		if (!initDone)
+			Init();
+
+		DialogTree tmpTree = new DialogTree();
+		tmpTree.dialogContainer = dialogContainer;
+
+		tmpTree.Next (dialogTree.CurrentNode().data.Guid);
+
+		if (tmpTree.CurrentNode().data != null && tmpTree.CurrentNode().data.Type == DialogNodeData.NodeType.START)
+			tmpTree.Next();
+
+		while (IsAvailableNewMessage (tmpTree.CurrentNode()))
+		{
+			tmpTree.Next();
+			++anz;
+		}
+
+		return anz;
+	}
+
 	public bool NpcMessageAvailable()
 	{
 		if (dialogTree.nodesVisited.Count == 0)
 			dialogTree.Next();
 
-		DialogTree.Node data = dialogTree.CurrentNode();
+		return IsAvailableNewMessage (dialogTree.CurrentNode());
+	}
 
-		if (data.data != null && !IsLastNode())
-		{
-			if (data.data.Type == DialogNodeData.NodeType.START)
-				dialogTree.Next();
-			else
-				return data.data.Type == DialogNodeData.NodeType.NPC;
-		}
+	//Private Functions
+	private bool IsAvailableNewMessage (DialogTree.Node node)
+	{
+		if (node.data != null && !IsLastNode())
+			return node.data.Type == DialogNodeData.NodeType.NPC;
 
 		return false;
 	}
@@ -413,7 +438,12 @@ public class Chat : FiniteStateMachine
 		InitButtonList();
 
         if (dialogContainer != null)
+		{
 			dialogTree.dialogContainer = dialogContainer;
+			dialogTree.Next();
+		}
+
+		initDone = true;
 	}
 
 	void InitButtonList()

@@ -14,9 +14,10 @@ public class ChatButton : MonoBehaviour
 
 	public Chat GetChat() { return chat;}
 
-	public void ShowNotification (bool val)
+	public void ShowNotification (int anz)
 	{
-		notificationIcon.SetActive (val);
+		notificationIcon.SetActive (anz > 0);
+		notificationText.text = anz.ToString();
 	}
 
 	public void ShowChat (bool val)
@@ -28,7 +29,7 @@ public class ChatButton : MonoBehaviour
     {
         button = GetComponent <Button>();
 
-		ShowNotification (false);
+		ShowNotification (0);
     }
 
     // Update is called once per frame
@@ -37,7 +38,9 @@ public class ChatButton : MonoBehaviour
 		if (button.interactable != available)
 			button.interactable = available;
 
-		if (available)
-			ShowNotification (chat.NpcMessageAvailable() && !chat.gameObject.activeInHierarchy);
+		if (available && !chat.gameObject.activeInHierarchy)
+			ShowNotification (chat.AnzNewMessagesAvailable());
+		else
+			ShowNotification (0);
     }
 }
