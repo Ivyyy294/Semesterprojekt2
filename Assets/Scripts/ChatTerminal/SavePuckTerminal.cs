@@ -23,15 +23,16 @@ public class SavePuckTerminal : SaveableObject
 
 	void SaveChats(Payload payload)
 	{
-		for (int i = 0; i < puckTerminal.dialogList.Length; ++i)
+		for (int i = 0; i < 4; ++i)
 		{
-			Chat chat = puckTerminal.GetChatObj (i);
+			ChatButton chatButton = puckTerminal.GetChatButtonObj (i);
+			Chat chat = chatButton.GetChat();
 			string nodeName = "Node" + i.ToString();
 
 			if (chat != null)
 			{
 				Payload chatPayload = chat.GetPayload (nodeName);
-				chatPayload.Add ("Available", puckTerminal.dialogList[i].available);				
+				chatPayload.Add ("Available", chatButton.available);				
 				payload.Add (nodeName, chatPayload.GetSerializedData());
 			}
 
@@ -40,15 +41,16 @@ public class SavePuckTerminal : SaveableObject
 
 	void LoadChats (Payload val)
 	{
-		for (int i = 0; i < puckTerminal.dialogList.Length; ++i)
+		for (int i = 0; i < 4; ++i)
 		{
-			Chat chat = puckTerminal.GetChatObj(i);
+			ChatButton chatButton = puckTerminal.GetChatButtonObj (i);
+			Chat chat = chatButton.GetChat();
 			string nodeName = "Node" + i.ToString();
 
 			string data = val.data[nodeName];
 			Payload chatPayload = Payload.GetData(data);
 			chat.LoadObject (chatPayload);
-			puckTerminal.dialogList[i].available = bool.Parse (chatPayload.data["Available"]);
+			chatButton.available = bool.Parse (chatPayload.data["Available"]);
 		}
 	}
 }

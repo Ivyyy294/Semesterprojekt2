@@ -714,6 +714,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 285946689340183382, guid: ae46210e68ea0974fb795edade1a5d7a, type: 3}
+      propertyPath: dialogContainer
+      value: 
+      objectReference: {fileID: 11400000, guid: 21e654bf03a1a12439849ba9fe40099e, type: 2}
     - target: {fileID: 315655826384098705, guid: ae46210e68ea0974fb795edade1a5d7a, type: 3}
       propertyPath: m_Spacing
       value: 40
@@ -742,6 +746,10 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: -0.000061035156
       objectReference: {fileID: 0}
+    - target: {fileID: 1638667864356707144, guid: ae46210e68ea0974fb795edade1a5d7a, type: 3}
+      propertyPath: dialogContainer
+      value: 
+      objectReference: {fileID: 11400000, guid: d83b06bf2deaead47aab7dc1a2721435, type: 2}
     - target: {fileID: 1689729475850910880, guid: ae46210e68ea0974fb795edade1a5d7a, type: 3}
       propertyPath: m_Name
       value: BlackFade_UI
@@ -902,6 +910,10 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4243822542435514447, guid: ae46210e68ea0974fb795edade1a5d7a, type: 3}
+      propertyPath: dialogContainer
+      value: 
+      objectReference: {fileID: 11400000, guid: d20359569e4b7e647a0f9878cfe3dd0f, type: 2}
     - target: {fileID: 4463532136896343335, guid: ae46210e68ea0974fb795edade1a5d7a, type: 3}
       propertyPath: m_AnchorMax.x
       value: 0
@@ -934,6 +946,10 @@ PrefabInstance:
       propertyPath: dialogList.Array.data[3].available
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6445702003497047898, guid: ae46210e68ea0974fb795edade1a5d7a, type: 3}
+      propertyPath: dialogContainer
+      value: 
+      objectReference: {fileID: 11400000, guid: 1a14329931a410248958381af5f5cf16, type: 2}
     - target: {fileID: 6894783283480289769, guid: ae46210e68ea0974fb795edade1a5d7a, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -1152,15 +1168,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2822974353734741424, guid: bcecf68e23d4cfb43bdb02c73daaa06f, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.07501889
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2822974353734741424, guid: bcecf68e23d4cfb43bdb02c73daaa06f, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.0361199
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2822974353734741424, guid: bcecf68e23d4cfb43bdb02c73daaa06f, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -11.239001
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2822974353734741424, guid: bcecf68e23d4cfb43bdb02c73daaa06f, type: 3}
       propertyPath: m_LocalRotation.w

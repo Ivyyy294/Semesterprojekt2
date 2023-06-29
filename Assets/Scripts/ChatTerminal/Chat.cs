@@ -375,11 +375,8 @@ public class Chat : FiniteStateMachine
 
 	public bool NpcMessageAvailable()
 	{
-		if (dialogTree.dialogContainer == null)
-		{
-			dialogTree.dialogContainer = dialogContainer;
+		if (dialogTree.nodesVisited.Count == 0)
 			dialogTree.Next();
-		}
 
 		DialogTree.Node data = dialogTree.CurrentNode();
 
