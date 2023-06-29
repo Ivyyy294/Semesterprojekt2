@@ -225,14 +225,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 18a433e8b7c194346becdb15a5f3dc0c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  easeInState:
-    lockPlayer: {fileID: 11400000, guid: 6ab399d4eb44e2a40aaed541e95ebc57, type: 2}
   activeState:
     mouseLook: {fileID: 5139005295392545604}
   easeOutState:
-    releasePlayer: {fileID: 11400000, guid: 2db1e2cec386b954ba5ea4c67080e35a, type: 2}
+    applyForwardToPlayer: 1
   cameraContainer: {fileID: 9184307370959676922}
-  active: 0
   defaultRotation: {x: 0, y: 0, z: 0, w: 0}
 --- !u!1 &9184307370959676922
 GameObject:
@@ -258,7 +255,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 9184307370959676922}
-  m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -266,7 +263,7 @@ Transform:
   - {fileID: 4872695401133004923}
   m_Father: {fileID: 4284212907846620175}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &5139005295392545604
 MonoBehaviour:
   m_ObjectHideFlags: 0

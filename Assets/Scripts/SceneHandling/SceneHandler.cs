@@ -11,9 +11,15 @@ public class SceneHandler : MonoBehaviour
 	[SerializeField] int indexMenuScene = 2;
 	[SerializeField] int indexGameScene = 3;
 	[SerializeField] int indexTutorialScene = 4;
+	[SerializeField] int indexCreditScene = 5;
 	public bool loadGame = false;
 
 	int currentSceneIndex = -1;
+
+	public void LoadCredits()
+	{
+		SwitchScene (indexCreditScene);
+	}
 
 	public void LoadTutorial()
 	{

@@ -6,6 +6,8 @@ using Ivyyy.Interfaces;
 using Ivyyy.GameEvent;
 using UnityEngine.UI;
 using Ivyyy.SaveGameSystem;
+using Cinemachine;
+using TMPro;
 
 public class Room : PushdownAutomata
 {
@@ -61,129 +63,24 @@ public class Room : PushdownAutomata
 	}
 
 	[System.Serializable]
-	public class WakeUpCryo : BaseState
-	{
-		[SerializeField] Transform PlayerSpawnPos;
-
-		public override void Enter(GameObject obj)
-		{
-			base.Enter(obj);
-			Player.Me().Lock();
-			Player.Me().transform.position = PlayerSpawnPos.position;
-			Player.Me().transform.forward = PlayerSpawnPos.forward;
-			room.PushState (room.fadeInState);
-			room.cryoDoor.SetOpen (true);
-		}
-
-		public override void Update(GameObject obj)
-		{
-			room.PopState();
-		}
-
-		public override void Exit(GameObject obj)
-		{
-			Player.Me().Unlock();
-		}
-	}
-
-	[System.Serializable]
-	public class WakeUpBed : BaseState
-	{
-		[SerializeField] Transform PlayerSpawnPos;
-
-		public override void Enter(GameObject obj)
-		{
-			base.Enter(obj);
-			Player.Me().Lock();
-			Player.Me().transform.position = PlayerSpawnPos.position;
-			Player.Me().transform.forward = PlayerSpawnPos.forward;
-			room.PushState (room.fadeInState);
-		}
-
-		public override void Update(GameObject obj)
-		{
-			room.PopState();
-		}
-
-		public override void Exit(GameObject obj)
-		{
-			Player.Me().Unlock();
-		}
-	}
-
-	[System.Serializable]
-	public class ChoseDayState : BaseState
-	{
-		public override void Enter(GameObject obj)
-		{
-			base.Enter(obj);
-		}
-
-		public override void Update (GameObject obj)
-		{
-			if (room.currentDay == CurrentDay.DAY1)
-				room.PushState (room.day1State);
-			else if (room.currentDay == CurrentDay.DAY2)
-				room.PushState (room.day2State);
-			else
-				room.PushState (room.day3State);
-		}
-	}
-
-	[System.Serializable]
-	public class NightState : BaseState, IGameEventListener
-	{
-		[SerializeField] GameEvent exitEvent;
-		[SerializeField] GameObject nextDayTrigger;
-		[SerializeField] AudioAsset audioAsset;
-		[SerializeField] LightController lightController;
-		bool done = false;
-
-		public override void Enter (GameObject obj)
-		{
-			base.Enter (obj);
-			done = false;
-			exitEvent?.RegisterListener (this);
-			nextDayTrigger.SetActive (true);
-			Player.Me().BlockInteractions (true);
-			lightController.EnterNightState();
-			audioAsset?.Play();
-		}
-
-		public override void Update(GameObject obj)
-		{
-			if (done)
-				room.SwapState (room.transitionState);
-		}
-
-		public override void Exit(GameObject obj)
-		{
-			exitEvent.UnregisterListener (this);
-			Player.Me().BlockInteractions (false);
-		}
-
-		public void OnEventRaised()
-		{
-			done = true;
-		}
-	}
-
-	[System.Serializable]
-	public class TransitionState : BaseState
+	public class FadeOutState : BaseState
 	{
 		[SerializeField] Image image;
 		[SerializeField] GameObject txt;
 		[SerializeField] AnimationCurve animationCurve;
-		[SerializeField] GameObject nextDayTrigger;
 		[SerializeField] float txtTime;
 		float timer;
 		float timerTxt;
 
+		public void SetText (string text)
+		{
+			TextMeshProUGUI tmp = txt.GetComponent <TextMeshProUGUI>();
+			tmp.text = text;
+		}
+
 		public override void Enter(GameObject obj)
 		{
 			base.Enter(obj);
-			room.cryoDoor.SetOpen (false);
-			Player.Me().Lock();
 			timer = 0f;
 			timerTxt = 0f;
 			image.gameObject.SetActive (true);
@@ -205,22 +102,145 @@ public class Room : PushdownAutomata
 				timerTxt += Time.deltaTime;
 			}
 			else
-			{
-				if (room.currentDay == CurrentDay.DAY1)
-					room.currentDay = CurrentDay.DAY2;
-				else if (room.currentDay == CurrentDay.DAY2)
-					room.currentDay = CurrentDay.DAY3;
-
-				SaveGameManager.Me().SaveGameState();
-
 				room.PopState();
-			}
 		}
 
 		public override void Exit(GameObject obj)
 		{
-			nextDayTrigger.SetActive (false);
 			txt.SetActive (false);
+		}
+	}
+
+	//ToDo: Let player spawn sitting on chair
+	[System.Serializable]
+	public class WakeUpCryo : BaseState
+	{
+		[SerializeField] Transform PlayerSpawnPos;
+		[SerializeField] InteractableCamera cryoCam;
+
+		public override void Enter(GameObject obj)
+		{
+			base.Enter(obj);
+			
+			//Spawn player sitting on cryo chair
+			if(!cryoCam.IsActive())
+				cryoCam.EnterState (cryoCam.spawnState);
+
+			Player.Me().Lock();
+			Player.Me().transform.position = PlayerSpawnPos.position;
+			Player.Me().transform.forward = PlayerSpawnPos.forward;
+			room.PushState (room.fadeInState);
+			room.cryoDoor.SetOpen (true);
+		}
+
+		public override void Update(GameObject obj)
+		{
+			room.PopState();
+		}
+	}
+
+	[System.Serializable]
+	//ToDo: Let player spawn laying on bed, even when loading game
+	public class WakeUpBed : BaseState
+	{
+		[SerializeField] Transform PlayerSpawnPos;
+		[SerializeField] InteractableCamera bed;
+
+		public override void Enter(GameObject obj)
+		{
+			base.Enter(obj);
+
+			//Spawn player laying on bed
+			if(!bed.IsActive())
+				bed.EnterState (bed.spawnState);
+
+			Player.Me().Lock();
+			Player.Me().transform.position = PlayerSpawnPos.position;
+			Player.Me().transform.forward = PlayerSpawnPos.forward;
+			room.PushState (room.fadeInState);
+		}
+
+		public override void Update(GameObject obj)
+		{
+			room.PopState();
+		}
+
+		public override void Exit(GameObject obj)
+		{
+			bed.activeState.SetLocked (false);
+		}
+	}
+
+	[System.Serializable]
+	public class ChoseDayState : BaseState
+	{
+		public override void Enter(GameObject obj)
+		{
+			base.Enter(obj);
+		}
+
+		public override void Update (GameObject obj)
+		{
+			Player.Me().cinemachineBrain.m_DefaultBlend.m_Style = CinemachineBlendDefinition.Style.EaseInOut;
+
+			if (room.currentDay == CurrentDay.DAY1)
+				room.PushState (room.day1State);
+			else if (room.currentDay == CurrentDay.DAY2)
+				room.PushState (room.day2State);
+			else
+				room.PushState (room.day3State);
+		}
+	}
+
+	[System.Serializable]
+	public class NightState : BaseState
+	{
+		[SerializeField] InteractableCamera bed;
+		[SerializeField] AudioAsset audioAsset;
+		[SerializeField] LightController lightController;
+		[SerializeField] string tag;
+
+		public override void Enter (GameObject obj)
+		{
+			base.Enter (obj);
+			Player.Me().BlockInteractions (true, tag);
+			lightController.EnterNightState();
+			audioAsset?.Play();
+			bed.activeState.SetLocked (true);
+		}
+
+		public override void Update(GameObject obj)
+		{
+			if (bed != null && bed.IsActive())
+				room.SwapState (room.transitionState);
+		}
+
+		public override void Exit(GameObject obj)
+		{
+			Player.Me().BlockInteractions (false, "");
+		}
+	}
+
+	[System.Serializable]
+	public class TransitionState : BaseState
+	{
+		public override void Enter(GameObject obj)
+		{
+			base.Enter(obj);
+			Player.Me().Lock();
+			room.PushState(room.fadeOutState);
+		}
+
+		public override void Update(GameObject obj)
+		{
+			if (room.currentDay == CurrentDay.DAY1)
+				room.currentDay = CurrentDay.DAY2;
+			else if (room.currentDay == CurrentDay.DAY2)
+				room.currentDay = CurrentDay.DAY3;
+
+			SaveGameManager.Me().SaveGameState();
+
+			room.PopState();
 		}
 	}
 	
@@ -294,14 +314,90 @@ public class Room : PushdownAutomata
 	public class Day3State : BaseState
 	{
 		[SerializeField] LightController lightController;
-		bool done;
+		[SerializeField] InteractableCamera cryo;
 
 		public override void Enter(GameObject obj)
 		{
 			base.Enter(obj);
-			done = false;
+			room.cryoDoor.SetOpen (true);
 			lightController.EnterNormalState();
 			room.PushState (room.wakeUpBed);
+		}
+
+		public override void Update(GameObject obj)
+		{
+			if (cryo.IsActive())
+			{
+				//room.SwapState (room.endingCryoGood);
+				//room.SwapState (room.endingCryoBad);
+			}
+		}
+	}
+
+	[System.Serializable]
+	public class EndingCryoGood : BaseState
+	{
+		[SerializeField] DoorTerminal doorTerminal;
+		[SerializeField] string tag;
+		bool audioPlayed = false;
+		bool done = false;
+
+		[SerializeField] AudioAsset audioAssetArrived;
+		[SerializeField] AudioAsset audioAssetDoor;
+		public override void Enter(GameObject obj)
+		{
+			base.Enter(obj);
+			audioPlayed = false;
+			done = false;
+			Player.Me().Lock();
+			Player.Me().BlockInteractions (true, tag);
+			doorTerminal.locked = false;
+			room.fadeOutState.SetText ("");
+			//Queue Fade In and Out effect
+			room.PushState (room.wakeUpCryo);
+			room.PushState (room.fadeOutState);
+		}
+
+		public override void Update(GameObject obj)
+		{
+			if (!audioPlayed)
+			{
+				audioAssetArrived?.Play();
+				audioPlayed = true;
+			}
+			else if (!done && doorTerminal.active)
+			{
+				room.PushState (room.fadeOutState);
+				done = true;
+				audioAssetDoor?.Play();
+			}
+		}
+	}
+
+	[System.Serializable]
+	public class EndingCryoBad : BaseState
+	{
+		bool audioPlayed = false;
+
+		[SerializeField] AudioAsset audioDying;
+
+		public override void Enter(GameObject obj)
+		{
+			base.Enter(obj);
+			audioPlayed = false;
+			Player.Me().Lock();
+			room.fadeOutState.SetText ("");
+			//Queue Fade In and Out effect
+			room.PushState (room.fadeOutState);
+		}
+
+		public override void Update(GameObject obj)
+		{
+			if (!audioPlayed)
+			{
+				audioDying?.Play();
+				audioPlayed = true;
+			}
 		}
 	}
 
@@ -309,7 +405,7 @@ public class Room : PushdownAutomata
 	{
 		DAY1,
 		DAY2,
-		DAY3,
+		DAY3
 	}
 
 	public CurrentDay currentDay = CurrentDay.DAY1;
@@ -319,15 +415,23 @@ public class Room : PushdownAutomata
 	public CryoDoor cryoDoor;
 	
 	[Header ("Room States")]
-	public ChoseDayState choseDayState = new ChoseDayState();
-	public FadeInState fadeInState = new FadeInState();
-	public WakeUpCryo wakeUpCryo = new WakeUpCryo();
-	public WakeUpBed wakeUpBed = new WakeUpBed();
+	//DayStates
 	public Day1State day1State = new Day1State();
 	public Day2State day2State = new Day2State();
 	public Day3State day3State = new Day3State();
+
+	//SubStates
+	public ChoseDayState choseDayState = new ChoseDayState();
+	public FadeInState fadeInState = new FadeInState();
+	public FadeOutState fadeOutState = new FadeOutState();
+	public WakeUpCryo wakeUpCryo = new WakeUpCryo();
+	public WakeUpBed wakeUpBed = new WakeUpBed();
 	public NightState nightState = new NightState();
 	public TransitionState transitionState = new TransitionState();
+
+	//Endings
+	public EndingCryoGood endingCryoGood = new EndingCryoGood();
+	public EndingCryoBad endingCryoBad = new EndingCryoBad();
 
 	private void Start()
 	{

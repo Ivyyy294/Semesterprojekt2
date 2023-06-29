@@ -70,8 +70,9 @@ public class InteractTextOverlay : FiniteStateMachine
 	public HideState hideState = new HideState();
 
 	//Public Functions
-	public void Show(bool val)
+	public void Show(bool val, string text = "[F]")
 	{
+		txtInteract.text = text;
 		show = val;
 	}
 	

@@ -135,6 +135,8 @@ public class AudioAsset : ScriptableObject
 			return GameSettings.Me().audioSettings.musicVolume;
 		else if (audioTyp == AudioAsset.AudioTyp.AMBIENT)
 			return GameSettings.Me().audioSettings.ambientVolume;
+		else if (audioTyp == AudioTyp.VOICE_LINE)
+			return GameSettings.Me().audioSettings.voiceLine;
 		else
 			return GameSettings.Me().audioSettings.uiVolume;
 	}

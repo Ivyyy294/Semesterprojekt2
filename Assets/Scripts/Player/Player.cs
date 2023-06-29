@@ -6,12 +6,18 @@ using Ivyyy.Core;
 
 public class Player : MonoBehaviour
 {
+	//Public values
+	[HideInInspector] public MouseLook mouseLook;
+	[HideInInspector] public Cinemachine.CinemachineBrain cinemachineBrain;
+	public InteractTextOverlay interactTextOverlay;
+	
+	//Private values	
 	private static Player me;
 
 	private PlayerMovement3D playerMovement3D;
 	private CharacterController characterController;
-	public MouseLook mouseLook;
 	private PlayerInteraction playerInteraction;
+	bool locked = false;
 
 	public static Player Me()
 	{
@@ -21,11 +27,14 @@ public class Player : MonoBehaviour
 		return me;
 	}
 
+	public bool IsLocked() { return locked;}
+
 	public void Lock ()
 	{
 		playerMovement3D.enabled = false;
 		mouseLook.enabled = false;
 		playerInteraction.enabled = false;
+		locked = true;
 	}
 
 	public void Unlock ()
@@ -33,12 +42,13 @@ public class Player : MonoBehaviour
 		playerMovement3D.enabled = true;
 		mouseLook.enabled = true;
 		playerInteraction.enabled = true;
+		locked = false;
 	}
 
-	public void BlockInteractions (bool val)
+	public void BlockInteractions (bool val, string filter)
 	{
 		if (val)
-			playerInteraction.tagFilter = "AllwaysInteractable";
+			playerInteraction.tagFilter = filter;
 		else
 			playerInteraction.tagFilter = null;
 	}
@@ -54,6 +64,7 @@ public class Player : MonoBehaviour
 			mouseLook = GetComponent <MouseLook>();
 			playerInteraction = GetComponent <PlayerInteraction>();
 			playerMovement3D = GetComponent <PlayerMovement3D>();
+			cinemachineBrain = Camera.main.GetComponent <Cinemachine.CinemachineBrain>();
 		}
 		else
 			Destroy(this);
