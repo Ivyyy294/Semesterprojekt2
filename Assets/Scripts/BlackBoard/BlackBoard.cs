@@ -17,21 +17,15 @@ public class BlackBoard
 
 	private BlackBoard()
 	{
-		foreach (BlackBoardList list in BlackBoardList.instances)
-		{
-			//Create a working copy of the BlackBoardProperty
-			foreach (var i in list.data)
-			{
-				if (!properties.ContainsKey (i.guid))
-					properties.Add (i.guid, new BlackBoardProperty{name = i.name, guid = i.guid});
-			}
-		}
+		UpdatePropertyList();
 	}
 
 	public static BlackBoard Me ()
 	{
 		if (me == null)
 			me = new BlackBoard();
+		else
+			me.UpdatePropertyList();
 
 		return me;
 	}
@@ -81,5 +75,18 @@ public class BlackBoard
 	public  Dictionary <string, BlackBoardProperty> GetProperties()
 	{
 		return properties;
+	}
+
+	private void UpdatePropertyList()
+	{
+		foreach (BlackBoardList list in BlackBoardList.instances)
+		{
+			//Create a working copy of the BlackBoardProperty
+			foreach (var i in list.data)
+			{
+				if (!properties.ContainsKey (i.guid))
+					properties.Add (i.guid, new BlackBoardProperty{name = i.name, guid = i.guid});
+			}
+		}
 	}
 }
