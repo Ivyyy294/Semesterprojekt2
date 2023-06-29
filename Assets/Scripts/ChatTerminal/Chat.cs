@@ -392,8 +392,10 @@ public class Chat : FiniteStateMachine
 
 		while (IsAvailableNewMessage (tmpTree.CurrentNode()))
 		{
+			if (tmpTree.CurrentNode().data.Type == DialogNodeData.NodeType.NPC)
+				++anz;
+
 			tmpTree.Next();
-			++anz;
 		}
 
 		return anz;
@@ -411,7 +413,18 @@ public class Chat : FiniteStateMachine
 	private bool IsAvailableNewMessage (DialogTree.Node node)
 	{
 		if (node.data != null && !IsLastNode())
-			return node.data.Type == DialogNodeData.NodeType.NPC;
+		{
+			if (node.data.Type == DialogNodeData.NodeType.START)
+				return true;
+			if (node.data.Type == DialogNodeData.NodeType.NPC)
+				return true;
+			else if (node.data.Type == DialogNodeData.NodeType.WAIT)
+			{
+				BlackBoardProperty condition = node.data.BlackBoardProperty;
+				BlackBoardProperty checkValue = BlackBoard.Me().GetProperty (node.data.BlackBoardProperty.guid);
+				return checkValue.Compare (condition);
+			}
+		}
 
 		return false;
 	}
