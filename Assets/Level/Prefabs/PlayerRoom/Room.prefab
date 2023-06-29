@@ -1917,6 +1917,15 @@ MonoBehaviour:
   currentDay: 0
   night: 0
   cryoDoor: {fileID: 6334317424693014758}
+  day1State:
+    lightController: {fileID: 1835700772797283506}
+    nightEvent: {fileID: 11400000, guid: 0b80ddc51b8a1c34c8cd80164e3e0b69, type: 2}
+  day2State:
+    lightController: {fileID: 1835700772797283506}
+    nightEvent: {fileID: 11400000, guid: 0b80ddc51b8a1c34c8cd80164e3e0b69, type: 2}
+  day3State:
+    lightController: {fileID: 1835700772797283506}
+    cryo: {fileID: 8987730952681145877}
   fadeInState:
     animationCurve:
       serializedVersion: 2
@@ -1943,24 +1952,7 @@ MonoBehaviour:
       m_PostInfinity: 2
       m_RotationOrder: 4
     image: {fileID: 8887352609928016420}
-  wakeUpCryo:
-    PlayerSpawnPos: {fileID: 5523221964214666887}
-  wakeUpBed:
-    PlayerSpawnPos: {fileID: 5881414976705995490}
-    bed: {fileID: 2167519450038192635}
-  day1State:
-    lightController: {fileID: 1835700772797283506}
-    nightEvent: {fileID: 11400000, guid: 0b80ddc51b8a1c34c8cd80164e3e0b69, type: 2}
-  day2State:
-    lightController: {fileID: 1835700772797283506}
-    nightEvent: {fileID: 11400000, guid: 0b80ddc51b8a1c34c8cd80164e3e0b69, type: 2}
-  day3State:
-    lightController: {fileID: 1835700772797283506}
-  nightState:
-    bed: {fileID: 0}
-    audioAsset: {fileID: 11400000, guid: 4c9245077c3986f44b34c86a7debac58, type: 2}
-    lightController: {fileID: 1835700772797283506}
-  transitionState:
+  fadeOutState:
     image: {fileID: 8887352609928016420}
     txt: {fileID: 6011457623869581403}
     animationCurve:
@@ -1969,14 +1961,14 @@ MonoBehaviour:
       - serializedVersion: 3
         time: 0
         value: 0
-        inSlope: 0.5
-        outSlope: 0.5
+        inSlope: 1
+        outSlope: 1
         tangentMode: 34
         weightedMode: 0
         inWeight: 0
         outWeight: 0.33333334
       - serializedVersion: 3
-        time: 2
+        time: 1
         value: 1
         inSlope: 0
         outSlope: 0
@@ -1987,7 +1979,22 @@ MonoBehaviour:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-    txtTime: 0
+    txtTime: 2
+  wakeUpCryo:
+    PlayerSpawnPos: {fileID: 5523221964214666887}
+  wakeUpBed:
+    PlayerSpawnPos: {fileID: 5881414976705995490}
+    bed: {fileID: 2167519450038192635}
+  nightState:
+    bed: {fileID: 2167519450038192635}
+    audioAsset: {fileID: 11400000, guid: 4c9245077c3986f44b34c86a7debac58, type: 2}
+    lightController: {fileID: 1835700772797283506}
+    tag: Night
+  endingCryoGood:
+    doorTerminal: {fileID: 7481346877475911261}
+    tag: CryoEnding
+    audioAssetArrived: {fileID: 0}
+    audioAssetDoor: {fileID: 0}
 --- !u!114 &5392927515475894218
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4066,6 +4073,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Display (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 1180351908582364618, guid: 1845ae128d06a764897a8c5c0b1bf043, type: 3}
+      propertyPath: m_TagString
+      value: CryoEnding
+      objectReference: {fileID: 0}
     - target: {fileID: 3954035865871166992, guid: 1845ae128d06a764897a8c5c0b1bf043, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
@@ -4121,6 +4132,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 8623198112624618033, guid: 1845ae128d06a764897a8c5c0b1bf043, type: 3}
   m_PrefabInstance: {fileID: 2851917033669400250}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &7481346877475911261 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4631703961092350183, guid: 1845ae128d06a764897a8c5c0b1bf043, type: 3}
+  m_PrefabInstance: {fileID: 2851917033669400250}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b7f88fb389efa594fb523af7b66d4717, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &2925313452064320187
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5815,6 +5837,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b55d8934f2be1ed42ab9231472045dcd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &8987730952681145877 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 967901018584097257, guid: 0c30e22ba89055b41aa46975bf4e9286, type: 3}
+  m_PrefabInstance: {fileID: 8202314375858907132}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 18a433e8b7c194346becdb15a5f3dc0c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1001 &8486295921838687978

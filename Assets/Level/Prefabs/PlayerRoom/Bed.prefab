@@ -176,7 +176,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6742137318159808482, guid: acade24dc8256f949b1c2870d87d5727, type: 3}
       propertyPath: m_TagString
-      value: AllwaysInteractable
+      value: Night
       objectReference: {fileID: 0}
     - target: {fileID: 7969435759725725238, guid: acade24dc8256f949b1c2870d87d5727, type: 3}
       propertyPath: easeOutState.applyForwardToPlayer

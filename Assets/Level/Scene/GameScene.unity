@@ -375,6 +375,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 0}
     - target: {fileID: 2565798720408585157, guid: cbc17c2b942c75242850f0bbb7667649, type: 3}
+      propertyPath: currentDay
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2565798720408585157, guid: cbc17c2b942c75242850f0bbb7667649, type: 3}
       propertyPath: lockPlayer
       value: 
       objectReference: {fileID: 11400000, guid: 6ab399d4eb44e2a40aaed541e95ebc57, type: 2}

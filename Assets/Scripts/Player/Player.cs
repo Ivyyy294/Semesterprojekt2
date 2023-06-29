@@ -41,10 +41,10 @@ public class Player : MonoBehaviour
 		locked = false;
 	}
 
-	public void BlockInteractions (bool val)
+	public void BlockInteractions (bool val, string filter)
 	{
 		if (val)
-			playerInteraction.tagFilter = "AllwaysInteractable";
+			playerInteraction.tagFilter = filter;
 		else
 			playerInteraction.tagFilter = null;
 	}

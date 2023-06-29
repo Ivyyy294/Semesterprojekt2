@@ -4,8 +4,8 @@
 TagManager:
   serializedVersion: 2
   tags:
-  - "\t\t\tmanager.ButtonList[i].GetComponentInChildren<TextMeshProUGUI>().SetLayoutDirty();\r\n"
-  - AllwaysInteractable
+  - Night
+  - CryoEnding
   layers:
   - Default
   - TransparentFX
