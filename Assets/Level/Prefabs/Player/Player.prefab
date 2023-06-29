@@ -290,7 +290,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 24e0f4347726f22448cc9aa836fb2ebf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  baseSpeed: 5
+  baseSpeed: 4
   sprintSpeed: -1
   gravity: 9.81
   jumpHeight: 1
@@ -342,6 +342,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   mouseLook: {fileID: 0}
+  cinemachineBrain: {fileID: 0}
+  interactTextOverlay: {fileID: 0}
 --- !u!1 &2822974353734741427
 GameObject:
   m_ObjectHideFlags: 0
