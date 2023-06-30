@@ -137,9 +137,6 @@ MonoBehaviour:
   - baseNodeGuid: 5453fabe-f66d-4d2f-8426-30138e0b6a64
     portName: Can't wait
     targetNodeGuid: d28edd8e-a673-417f-9260-1e8858b7fdb3
-  - baseNodeGuid: 1b118c26-4d54-47f4-b5a7-7708976e19c6
-    portName: Next
-    targetNodeGuid: 94da53d9-03e2-41e3-a28e-1ce954ed3530
   - baseNodeGuid: d28edd8e-a673-417f-9260-1e8858b7fdb3
     portName: Next
     targetNodeGuid: 1b118c26-4d54-47f4-b5a7-7708976e19c6
@@ -148,7 +145,7 @@ MonoBehaviour:
     targetNodeGuid: 5ce4be09-d3df-4831-ab9d-b4389773dab2
   - baseNodeGuid: 0df5c60d-1189-456d-bbfe-4ab164e3f801
     portName: Next
-    targetNodeGuid: bbdc8868-2671-4462-9bc2-d9b1e24f2b90
+    targetNodeGuid: 94da53d9-03e2-41e3-a28e-1ce954ed3530
   - baseNodeGuid: 20ff768d-0629-4c10-aafc-9ae8476edb77
     portName: Hey Demetrius.
     targetNodeGuid: 4bfba334-e23a-405d-a1e8-b7678606b4d4
@@ -206,12 +203,12 @@ MonoBehaviour:
   - baseNodeGuid: ea90e205-fbfa-4eec-8640-f2a347b5fd85
     portName: You should not have come with us.
     targetNodeGuid: 62a33561-770a-4666-bdfd-04538d08f7e1
+  - baseNodeGuid: ea90e205-fbfa-4eec-8640-f2a347b5fd85
+    portName: I do not love you anymore.
+    targetNodeGuid: eb489853-66db-4270-9200-3014df1f6166
   - baseNodeGuid: 8eab4bd9-ccd7-447e-bc2d-fc6c7b3fe0fa
     portName: Next
     targetNodeGuid: 5e15f5e5-8e64-4759-a26d-8fd1ec763463
-  - baseNodeGuid: 62a33561-770a-4666-bdfd-04538d08f7e1
-    portName: Next
-    targetNodeGuid: eb489853-66db-4270-9200-3014df1f6166
   - baseNodeGuid: 5e15f5e5-8e64-4759-a26d-8fd1ec763463
     portName: Next
     targetNodeGuid: 34b26422-af3e-4a3f-aed2-e0cccce81489
@@ -248,29 +245,17 @@ MonoBehaviour:
   - baseNodeGuid: cae9d6c3-6775-462d-8f85-af3d0b9f8bec
     portName: Next
     targetNodeGuid: 5c793be5-da60-4be1-9550-517442bc9886
+  - baseNodeGuid: 5c793be5-da60-4be1-9550-517442bc9886
+    portName: Next
+    targetNodeGuid: 3e6db2f9-82b8-4285-bef1-26635d295d92
   - baseNodeGuid: b4c6e565-d236-412b-b93c-0f68104f064c
     portName: Next
     targetNodeGuid: 5c793be5-da60-4be1-9550-517442bc9886
-  - baseNodeGuid: bd7a1182-0427-4e88-9fdb-563c1d170aef
-    portName: I needed help.
-    targetNodeGuid: cb85b609-2bd8-4c8a-b773-712d1ec31192
-  - baseNodeGuid: bd7a1182-0427-4e88-9fdb-563c1d170aef
-    portName: STOP
-    targetNodeGuid: cb85b609-2bd8-4c8a-b773-712d1ec31192
   - baseNodeGuid: 0557843f-ca11-49ca-bb74-8e28bd0efe6f
     portName: Next
     targetNodeGuid: 4cdd0bfc-8c35-4764-9c17-eda165f4aeed
   - baseNodeGuid: 14fc796b-2f6d-4b54-9f54-a52b04990839
     portName: Next
-    targetNodeGuid: 4cdd0bfc-8c35-4764-9c17-eda165f4aeed
-  - baseNodeGuid: cb85b609-2bd8-4c8a-b773-712d1ec31192
-    portName: Please don't write me again
-    targetNodeGuid: 0557843f-ca11-49ca-bb74-8e28bd0efe6f
-  - baseNodeGuid: cb85b609-2bd8-4c8a-b773-712d1ec31192
-    portName: We will talk later.
-    targetNodeGuid: 14fc796b-2f6d-4b54-9f54-a52b04990839
-  - baseNodeGuid: cb85b609-2bd8-4c8a-b773-712d1ec31192
-    portName: I need to think.
     targetNodeGuid: 4cdd0bfc-8c35-4764-9c17-eda165f4aeed
   - baseNodeGuid: 4cdd0bfc-8c35-4764-9c17-eda165f4aeed
     portName: Next
@@ -287,15 +272,30 @@ MonoBehaviour:
   - baseNodeGuid: 87eb9754-1af5-41ba-b0c4-bbacda8e9df8
     portName: Next
     targetNodeGuid: ea90e205-fbfa-4eec-8640-f2a347b5fd85
-  - baseNodeGuid: ea90e205-fbfa-4eec-8640-f2a347b5fd85
-    portName: I do not love you anymore.
-    targetNodeGuid: eb489853-66db-4270-9200-3014df1f6166
-  - baseNodeGuid: 5c793be5-da60-4be1-9550-517442bc9886
+  - baseNodeGuid: 62a33561-770a-4666-bdfd-04538d08f7e1
     portName: Next
-    targetNodeGuid: 3e6db2f9-82b8-4285-bef1-26635d295d92
+    targetNodeGuid: eb489853-66db-4270-9200-3014df1f6166
   - baseNodeGuid: 3e6db2f9-82b8-4285-bef1-26635d295d92
     portName: Next
     targetNodeGuid: bd7a1182-0427-4e88-9fdb-563c1d170aef
+  - baseNodeGuid: bd7a1182-0427-4e88-9fdb-563c1d170aef
+    portName: I needed help.
+    targetNodeGuid: cb85b609-2bd8-4c8a-b773-712d1ec31192
+  - baseNodeGuid: bd7a1182-0427-4e88-9fdb-563c1d170aef
+    portName: STOP
+    targetNodeGuid: cb85b609-2bd8-4c8a-b773-712d1ec31192
+  - baseNodeGuid: cb85b609-2bd8-4c8a-b773-712d1ec31192
+    portName: Please don't write me again
+    targetNodeGuid: 0557843f-ca11-49ca-bb74-8e28bd0efe6f
+  - baseNodeGuid: cb85b609-2bd8-4c8a-b773-712d1ec31192
+    portName: We will talk later.
+    targetNodeGuid: 14fc796b-2f6d-4b54-9f54-a52b04990839
+  - baseNodeGuid: cb85b609-2bd8-4c8a-b773-712d1ec31192
+    portName: I need to think.
+    targetNodeGuid: 4cdd0bfc-8c35-4764-9c17-eda165f4aeed
+  - baseNodeGuid: 94da53d9-03e2-41e3-a28e-1ce954ed3530
+    portName: Trigger Night
+    targetNodeGuid: 347edd76-7fbf-47b2-ad63-de507b98cd94
   dialogNodeData:
   - Guid: 4bfba334-e23a-405d-a1e8-b7678606b4d4
     DialogTitle: NpcNode
@@ -796,22 +796,6 @@ MonoBehaviour:
       guid: 
       comparisonTyp: 0
       iVal: 2
-    audioAsset: {fileID: 0}
-    emotion: 0
-    editTyp: 0
-  - Guid: 94da53d9-03e2-41e3-a28e-1ce954ed3530
-    DialogTitle: ChoiceNode
-    Position: {x: 7086.4, y: -8.799999}
-    Type: 0
-    DialogText: hello world
-    Image: {fileID: 0}
-    customRespondTime: 0
-    GameEvent: {fileID: 0}
-    BlackBoardProperty:
-      name: 
-      guid: 
-      comparisonTyp: 0
-      iVal: 0
     audioAsset: {fileID: 0}
     emotion: 0
     editTyp: 0
@@ -1393,6 +1377,38 @@ MonoBehaviour:
       iVal: 0
     audioAsset: {fileID: 0}
     emotion: 12
+    editTyp: 0
+  - Guid: 347edd76-7fbf-47b2-ad63-de507b98cd94
+    DialogTitle: Trigger Night 1
+    Position: {x: 8031.2, y: 4.800001}
+    Type: 2
+    DialogText: 
+    Image: {fileID: 0}
+    customRespondTime: 0
+    GameEvent: {fileID: 11400000, guid: 0b80ddc51b8a1c34c8cd80164e3e0b69, type: 2}
+    BlackBoardProperty:
+      name: 
+      guid: 
+      comparisonTyp: 0
+      iVal: 0
+    audioAsset: {fileID: 0}
+    emotion: 12
+    editTyp: 0
+  - Guid: 94da53d9-03e2-41e3-a28e-1ce954ed3530
+    DialogTitle: ChoiceNode
+    Position: {x: 7236, y: 4.800001}
+    Type: 0
+    DialogText: hello world
+    Image: {fileID: 0}
+    customRespondTime: 0
+    GameEvent: {fileID: 0}
+    BlackBoardProperty:
+      name: 
+      guid: 
+      comparisonTyp: 0
+      iVal: 0
+    audioAsset: {fileID: 0}
+    emotion: 0
     editTyp: 0
   dialogGroupData: []
   blackBoardList: {fileID: 11400000, guid: c289dd2bc5fda5942acc2419a6f68abb, type: 2}

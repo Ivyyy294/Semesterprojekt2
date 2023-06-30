@@ -45,3 +45,7 @@ MonoBehaviour:
     guid: f54546e2-7b9a-43bb-842f-b2f9c6896ebe
     comparisonTyp: 0
     iVal: 0
+  - name: PuckFriendship
+    guid: 2b958ad0-a132-4ff6-bc3e-df90bd970454
+    comparisonTyp: 0
+    iVal: 0
