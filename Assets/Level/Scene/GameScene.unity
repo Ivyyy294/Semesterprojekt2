@@ -606,6 +606,14 @@ PrefabInstance:
       propertyPath: m_LocalPosition.z
       value: -0.08525
       objectReference: {fileID: 0}
+    - target: {fileID: 8987730952681145877, guid: cbc17c2b942c75242850f0bbb7667649, type: 3}
+      propertyPath: spawnState.playerSpawnRotationX
+      value: -20
+      objectReference: {fileID: 0}
+    - target: {fileID: 8987730952681145877, guid: cbc17c2b942c75242850f0bbb7667649, type: 3}
+      propertyPath: easeOutState.playerExitRotationX
+      value: 20
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 954419710588401870, guid: cbc17c2b942c75242850f0bbb7667649, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: cbc17c2b942c75242850f0bbb7667649, type: 3}

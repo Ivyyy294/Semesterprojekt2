@@ -100,14 +100,11 @@ public class InteractableCamera : FiniteStateMachine, InteractableObject
 		{
 			base.Enter(obj);
 			
-			if (applyForwardToPlayer)
-			{
-				Player.Me().mouseLook.SetRotationX (0);
-				Player.Me().transform.forward = interactableCamera.cameraContainer.transform.forward;
-			}
-
 			interactableCamera?.cameraContainer.gameObject.SetActive(false);
 			cinemachineBrain = Camera.main.GetComponent<CinemachineBrain>();
+
+			if (applyForwardToPlayer)
+				Player.Me().transform.forward = interactableCamera.cameraContainer.transform.forward;
 		}
 
 		public override void Update (GameObject obj)
@@ -120,8 +117,10 @@ public class InteractableCamera : FiniteStateMachine, InteractableObject
 		}
 	}
 
+	[System.Serializable]
 	public class SpawnState : BaseState
 	{
+		public float playerSpawnRotationX = 0f;
 		CinemachineBrain cinemachineBrain;
 		CinemachineBlendDefinition.Style defaultBlendStyle;
 
@@ -133,6 +132,8 @@ public class InteractableCamera : FiniteStateMachine, InteractableObject
 			cinemachineBrain.m_DefaultBlend.m_Style = CinemachineBlendDefinition.Style.Cut;
 
 			Player.Me().Lock();
+			Player.Me().mouseLook.SetRotationX (playerSpawnRotationX);
+
 			interactableCamera?.cameraContainer.gameObject.SetActive(true);
 		}
 

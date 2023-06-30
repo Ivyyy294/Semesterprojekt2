@@ -58,7 +58,7 @@ public class MouseLook : MonoBehaviour
 		cameraTrans.localRotation = Quaternion.Euler (new Vector3 (-val, 0f, 0f));
 	}
 
-	public void SetRotationY (float val)
+	void SetRotationY (float val)
 	{
 		transform.rotation = Quaternion.Euler (0f, val, 0f);
 	}
