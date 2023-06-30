@@ -2363,7 +2363,6 @@ MonoBehaviour:
     nightEvent: {fileID: 11400000, guid: 0b80ddc51b8a1c34c8cd80164e3e0b69, type: 2}
   day3State:
     lightController: {fileID: 1835700772797283506}
-    cryo: {fileID: 8987730952681145877}
     cryoDoorTrigger: {fileID: 6827852919969844202}
     personalItems: {fileID: 646120433506240146}
     cryoEvent: {fileID: 299487615200041615}
@@ -2433,12 +2432,14 @@ MonoBehaviour:
     lightController: {fileID: 1835700772797283506}
     tag: Night
   endingCryoGood:
+    creditsEvent: {fileID: 11400000, guid: adc27c0f6f18f3a4eb6aeb8a6b82e111, type: 2}
     doorTerminal: {fileID: 7481346877475911261}
     tag: CryoEnding
     audioAssetArrived: {fileID: 11400000, guid: 8520d7d2311fb4e44a768b74c616cb46, type: 2}
     audioAssetDoor: {fileID: 11400000, guid: 168a7024ab849cb40b0e3cd0454b4d8f, type: 2}
   endingCryoBad:
-    audioDying: {fileID: 0}
+    creditsEvent: {fileID: 11400000, guid: adc27c0f6f18f3a4eb6aeb8a6b82e111, type: 2}
+    audioDying: {fileID: 11400000, guid: 8520d7d2311fb4e44a768b74c616cb46, type: 2}
 --- !u!114 &5392927515475894218
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5126,13 +5127,85 @@ PrefabInstance:
     m_TransformParent: {fileID: 5382060655138142036}
     m_Modifications:
     - target: {fileID: 160401723716179195, guid: c3f5d8cea79e88d4e9311ee32800fb22, type: 3}
+      propertyPath: room
+      value: 
+      objectReference: {fileID: 2565798720408585157}
+    - target: {fileID: 160401723716179195, guid: c3f5d8cea79e88d4e9311ee32800fb22, type: 3}
       propertyPath: cryoDoor
       value: 
       objectReference: {fileID: 1664681744319641297}
     - target: {fileID: 160401723716179195, guid: c3f5d8cea79e88d4e9311ee32800fb22, type: 3}
+      propertyPath: cryoChair
+      value: 
+      objectReference: {fileID: 8987730952681145877}
+    - target: {fileID: 160401723716179195, guid: c3f5d8cea79e88d4e9311ee32800fb22, type: 3}
       propertyPath: voiceLines.Array.size
-      value: 1
+      value: 19
       objectReference: {fileID: 0}
+    - target: {fileID: 160401723716179195, guid: c3f5d8cea79e88d4e9311ee32800fb22, type: 3}
+      propertyPath: voiceLines.Array.data[3]
+      value: 
+      objectReference: {fileID: 11400000, guid: 8520d7d2311fb4e44a768b74c616cb46, type: 2}
+    - target: {fileID: 160401723716179195, guid: c3f5d8cea79e88d4e9311ee32800fb22, type: 3}
+      propertyPath: voiceLines.Array.data[4]
+      value: 
+      objectReference: {fileID: 11400000, guid: 8520d7d2311fb4e44a768b74c616cb46, type: 2}
+    - target: {fileID: 160401723716179195, guid: c3f5d8cea79e88d4e9311ee32800fb22, type: 3}
+      propertyPath: voiceLines.Array.data[5]
+      value: 
+      objectReference: {fileID: 11400000, guid: 8520d7d2311fb4e44a768b74c616cb46, type: 2}
+    - target: {fileID: 160401723716179195, guid: c3f5d8cea79e88d4e9311ee32800fb22, type: 3}
+      propertyPath: voiceLines.Array.data[6]
+      value: 
+      objectReference: {fileID: 11400000, guid: 8520d7d2311fb4e44a768b74c616cb46, type: 2}
+    - target: {fileID: 160401723716179195, guid: c3f5d8cea79e88d4e9311ee32800fb22, type: 3}
+      propertyPath: voiceLines.Array.data[7]
+      value: 
+      objectReference: {fileID: 11400000, guid: 8520d7d2311fb4e44a768b74c616cb46, type: 2}
+    - target: {fileID: 160401723716179195, guid: c3f5d8cea79e88d4e9311ee32800fb22, type: 3}
+      propertyPath: voiceLines.Array.data[8]
+      value: 
+      objectReference: {fileID: 11400000, guid: 8520d7d2311fb4e44a768b74c616cb46, type: 2}
+    - target: {fileID: 160401723716179195, guid: c3f5d8cea79e88d4e9311ee32800fb22, type: 3}
+      propertyPath: voiceLines.Array.data[9]
+      value: 
+      objectReference: {fileID: 11400000, guid: 8520d7d2311fb4e44a768b74c616cb46, type: 2}
+    - target: {fileID: 160401723716179195, guid: c3f5d8cea79e88d4e9311ee32800fb22, type: 3}
+      propertyPath: voiceLines.Array.data[10]
+      value: 
+      objectReference: {fileID: 11400000, guid: 8520d7d2311fb4e44a768b74c616cb46, type: 2}
+    - target: {fileID: 160401723716179195, guid: c3f5d8cea79e88d4e9311ee32800fb22, type: 3}
+      propertyPath: voiceLines.Array.data[11]
+      value: 
+      objectReference: {fileID: 11400000, guid: 8520d7d2311fb4e44a768b74c616cb46, type: 2}
+    - target: {fileID: 160401723716179195, guid: c3f5d8cea79e88d4e9311ee32800fb22, type: 3}
+      propertyPath: voiceLines.Array.data[12]
+      value: 
+      objectReference: {fileID: 11400000, guid: 8520d7d2311fb4e44a768b74c616cb46, type: 2}
+    - target: {fileID: 160401723716179195, guid: c3f5d8cea79e88d4e9311ee32800fb22, type: 3}
+      propertyPath: voiceLines.Array.data[13]
+      value: 
+      objectReference: {fileID: 11400000, guid: 8520d7d2311fb4e44a768b74c616cb46, type: 2}
+    - target: {fileID: 160401723716179195, guid: c3f5d8cea79e88d4e9311ee32800fb22, type: 3}
+      propertyPath: voiceLines.Array.data[14]
+      value: 
+      objectReference: {fileID: 11400000, guid: 8520d7d2311fb4e44a768b74c616cb46, type: 2}
+    - target: {fileID: 160401723716179195, guid: c3f5d8cea79e88d4e9311ee32800fb22, type: 3}
+      propertyPath: voiceLines.Array.data[15]
+      value: 
+      objectReference: {fileID: 11400000, guid: 8520d7d2311fb4e44a768b74c616cb46, type: 2}
+    - target: {fileID: 160401723716179195, guid: c3f5d8cea79e88d4e9311ee32800fb22, type: 3}
+      propertyPath: voiceLines.Array.data[16]
+      value: 
+      objectReference: {fileID: 11400000, guid: 8520d7d2311fb4e44a768b74c616cb46, type: 2}
+    - target: {fileID: 160401723716179195, guid: c3f5d8cea79e88d4e9311ee32800fb22, type: 3}
+      propertyPath: voiceLines.Array.data[17]
+      value: 
+      objectReference: {fileID: 11400000, guid: 8520d7d2311fb4e44a768b74c616cb46, type: 2}
+    - target: {fileID: 160401723716179195, guid: c3f5d8cea79e88d4e9311ee32800fb22, type: 3}
+      propertyPath: voiceLines.Array.data[18]
+      value: 
+      objectReference: {fileID: 11400000, guid: 8520d7d2311fb4e44a768b74c616cb46, type: 2}
     - target: {fileID: 3869866523974514887, guid: c3f5d8cea79e88d4e9311ee32800fb22, type: 3}
       propertyPath: m_Name
       value: CryoDay3

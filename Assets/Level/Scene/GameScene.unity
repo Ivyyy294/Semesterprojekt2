@@ -204,7 +204,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2565798720408585157, guid: cbc17c2b942c75242850f0bbb7667649, type: 3}
       propertyPath: currentDay
-      value: 0
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 2565798720408585157, guid: cbc17c2b942c75242850f0bbb7667649, type: 3}
       propertyPath: lockPlayer
@@ -285,6 +285,10 @@ PrefabInstance:
     - target: {fileID: 3629102663084056609, guid: cbc17c2b942c75242850f0bbb7667649, type: 3}
       propertyPath: uniqueId
       value: 1cffc9fd-387b-4bea-a3e5-c9fe9db5c13e
+      objectReference: {fileID: 0}
+    - target: {fileID: 3722970539505694387, guid: cbc17c2b942c75242850f0bbb7667649, type: 3}
+      propertyPath: test
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3934365786011713983, guid: cbc17c2b942c75242850f0bbb7667649, type: 3}
       propertyPath: m_LocalPosition.x

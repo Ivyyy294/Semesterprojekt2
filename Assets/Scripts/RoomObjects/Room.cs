@@ -335,7 +335,6 @@ public class Room : PushdownAutomata
 	public class Day3State : BaseState
 	{
 		[SerializeField] LightController lightController;
-		[SerializeField] InteractableCamera cryo;
 		[SerializeField] GameObject cryoDoorTrigger;
 		[SerializeField] GameObject personalItems;
 		[SerializeField] GameObject cryoEvent;
@@ -353,11 +352,6 @@ public class Room : PushdownAutomata
 
 		public override void Update(GameObject obj)
 		{
-			if (cryo.IsActive())
-			{
-				room.SwapState (room.endingCryoGood);
-				//room.SwapState (room.endingCryoBad);
-			}
 		}
 
 		public override void Exit(GameObject obj)
@@ -369,6 +363,7 @@ public class Room : PushdownAutomata
 	[System.Serializable]
 	public class EndingCryoGood : BaseState
 	{
+		[SerializeField] GameEvent creditsEvent;
 		[SerializeField] DoorTerminal doorTerminal;
 		[SerializeField] string tag;
 		bool audioPlayed = false;
@@ -409,12 +404,15 @@ public class Room : PushdownAutomata
 				doorSoundPlayed = true;
 				audioAssetDoor?.Play();
 			}
+			else if (done)
+				creditsEvent?.Raise();
 		}
 	}
 
 	[System.Serializable]
 	public class EndingCryoBad : BaseState
 	{
+		[SerializeField] GameEvent creditsEvent;
 		bool audioPlayed = false;
 
 		[SerializeField] AudioAsset audioDying;
@@ -436,6 +434,8 @@ public class Room : PushdownAutomata
 				audioDying?.Play();
 				audioPlayed = true;
 			}
+			else
+				creditsEvent?.Raise();
 		}
 	}
 
@@ -471,6 +471,19 @@ public class Room : PushdownAutomata
 	public EndingCryoGood endingCryoGood = new EndingCryoGood();
 	public EndingCryoBad endingCryoBad = new EndingCryoBad();
 
+	//Public Functions
+	public void EnterEndingCryoGood()
+	{
+		if (CurrentState() == day3State)
+			SwapState (endingCryoGood);
+	}
+	public void EnterEndingCryoBad()
+	{
+		if (CurrentState() == day3State)
+			SwapState (endingCryoBad);
+	}
+
+	//Private Functions
 	private void Start()
 	{
 		PushState (choseDayState);

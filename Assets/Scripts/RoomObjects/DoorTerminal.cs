@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using Ivyyy.Interfaces;
 using Ivyyy.StateMachine;
+using Ivyyy.GameEvent;
 
 [RequireComponent (typeof (AudioPlayer))]
 public class DoorTerminal : PushdownAutomata, InteractableObject
