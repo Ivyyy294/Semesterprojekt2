@@ -3643,6 +3643,83 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 7447840538420643953, guid: fc337c2827969954aa15418c7361dbe1, type: 3}
   m_PrefabInstance: {fileID: 678451047032115938}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &718896115738908426
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 525800755628546474}
+    m_Modifications:
+    - target: {fileID: -8679921383154817045, guid: f1088c75414dc454f97858647535f2ca, type: 3}
+      propertyPath: m_RootOrder
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: f1088c75414dc454f97858647535f2ca, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 6.05
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: f1088c75414dc454f97858647535f2ca, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1.157
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: f1088c75414dc454f97858647535f2ca, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 43.119
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: f1088c75414dc454f97858647535f2ca, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: f1088c75414dc454f97858647535f2ca, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: f1088c75414dc454f97858647535f2ca, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: f1088c75414dc454f97858647535f2ca, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: f1088c75414dc454f97858647535f2ca, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: f1088c75414dc454f97858647535f2ca, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: f1088c75414dc454f97858647535f2ca, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -7926704776060701092, guid: f1088c75414dc454f97858647535f2ca, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -1461304994638716399, guid: f1088c75414dc454f97858647535f2ca, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 82a1a3aa194fc9942a8f14548672c4ae, type: 2}
+    - target: {fileID: 919132149155446097, guid: f1088c75414dc454f97858647535f2ca, type: 3}
+      propertyPath: m_Name
+      value: chatterminalbuttons
+      objectReference: {fileID: 0}
+    - target: {fileID: 1061828306914329639, guid: f1088c75414dc454f97858647535f2ca, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 4b77841c8e06c7e4296a5498b12b09a9, type: 2}
+    - target: {fileID: 3927597761665831208, guid: f1088c75414dc454f97858647535f2ca, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 4b77841c8e06c7e4296a5498b12b09a9, type: 2}
+    - target: {fileID: 7160024507426785956, guid: f1088c75414dc454f97858647535f2ca, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 82a1a3aa194fc9942a8f14548672c4ae, type: 2}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: f1088c75414dc454f97858647535f2ca, type: 3}
 --- !u!1001 &954832422340451848
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6834,6 +6911,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: ChatTerminal
       objectReference: {fileID: 0}
+    - target: {fileID: 1651857349442445936, guid: 1d348f68e0ab10947896335babf33b43, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2579927060906749939, guid: 1d348f68e0ab10947896335babf33b43, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3993085215141981687, guid: 1d348f68e0ab10947896335babf33b43, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
@@ -6841,11 +6926,11 @@ PrefabInstance:
     - target: {fileID: 4363797578099498376, guid: 1d348f68e0ab10947896335babf33b43, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 67acd62d7a6910044bf5e78ac25179d7, type: 2}
+      objectReference: {fileID: 2100000, guid: 4b77841c8e06c7e4296a5498b12b09a9, type: 2}
     - target: {fileID: 5867778703588725515, guid: 1d348f68e0ab10947896335babf33b43, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 4b77841c8e06c7e4296a5498b12b09a9, type: 2}
+      objectReference: {fileID: 2100000, guid: 82a1a3aa194fc9942a8f14548672c4ae, type: 2}
     - target: {fileID: 7874346427099478651, guid: 1d348f68e0ab10947896335babf33b43, type: 3}
       propertyPath: m_RootOrder
       value: 4
@@ -6893,9 +6978,14 @@ PrefabInstance:
     - target: {fileID: 8627617136220194647, guid: 1d348f68e0ab10947896335babf33b43, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 4b29da373fd479a4b9e1d0f2befd5648, type: 2}
+      objectReference: {fileID: 2100000, guid: 13420a79db18cb94bb7f8a8b7fc1c7de, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1d348f68e0ab10947896335babf33b43, type: 3}
+--- !u!4 &525800755628546474 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 3871323832572493380, guid: 1d348f68e0ab10947896335babf33b43, type: 3}
+  m_PrefabInstance: {fileID: 3672036251267213294}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &6895853088419274133 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7874346427099478651, guid: 1d348f68e0ab10947896335babf33b43, type: 3}
