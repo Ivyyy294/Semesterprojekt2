@@ -228,9 +228,12 @@ MonoBehaviour:
   activeState:
     mouseLook: {fileID: 5139005295392545604}
   easeOutState:
+    mouseLook: {fileID: 5139005295392545604}
     applyForwardToPlayer: 1
-  cameraContainer: {fileID: 9184307370959676922}
-  defaultRotation: {x: 0, y: 0, z: 0, w: 0}
+  cameraContainer: {fileID: 5139005295392545604}
+  vCam: {fileID: 2248964186750743978}
+  defaultRotationContainer: {x: 0, y: 0, z: 0, w: 0}
+  defaultRotationCam: {x: 0, y: 0, z: 0, w: 0}
 --- !u!1 &9184307370959676922
 GameObject:
   m_ObjectHideFlags: 0

@@ -44,11 +44,12 @@ public class InteractableCamera : FiniteStateMachine, InteractableObject
 	public class EaseInState : BaseState
 	{
 		CinemachineBrain cinemachineBrain;
+
 		public override void Enter (GameObject obj)
 		{
 			base.Enter(obj);
 			Player.Me().Lock();
-			interactableCamera?.cameraContainer.SetActive(true);
+			interactableCamera?.cameraContainer.gameObject.SetActive(true);
 			cinemachineBrain = Camera.main.GetComponent<CinemachineBrain>();
 		}
 
@@ -62,7 +63,6 @@ public class InteractableCamera : FiniteStateMachine, InteractableObject
 	[System.Serializable]
 	public class ActiveState : BaseState
 	{
-		[SerializeField] MouseLook mouseLook;
 		bool locked = false;
 
 		public void SetLocked (bool val) {locked = val;}
@@ -71,18 +71,16 @@ public class InteractableCamera : FiniteStateMachine, InteractableObject
 		{
 			base.Enter(obj);
 			Player.Me().interactTextOverlay.Show (true);
-			if (mouseLook)
-			{
-				mouseLook.ResetRotation();
-				mouseLook.enabled = true;
-			}
+
+			if (interactableCamera.cameraContainer != null)
+				interactableCamera.cameraContainer.enabled = true;
 		}
 
 		public override void Update (GameObject obj)
 		{
 			if (!locked && Input.GetKeyDown(KeyCode.F))
 			{
-				mouseLook.enabled = false;
+				interactableCamera.cameraContainer.enabled = false;
 				interactableCamera.EnterState (interactableCamera.easeOutState);
 			}
 		}
@@ -104,11 +102,11 @@ public class InteractableCamera : FiniteStateMachine, InteractableObject
 			
 			if (applyForwardToPlayer)
 			{
-				Player.Me().mouseLook.ResetRotation();
+				Player.Me().mouseLook.SetRotationX (0);
 				Player.Me().transform.forward = interactableCamera.cameraContainer.transform.forward;
 			}
 
-			interactableCamera?.cameraContainer.SetActive(false);
+			interactableCamera?.cameraContainer.gameObject.SetActive(false);
 			cinemachineBrain = Camera.main.GetComponent<CinemachineBrain>();
 		}
 
@@ -118,15 +116,6 @@ public class InteractableCamera : FiniteStateMachine, InteractableObject
 			{
 				Player.Me().Unlock();
 				interactableCamera.EnterState (interactableCamera.inactiveState);
-			}
-		}
-
-		public override void Exit(GameObject obj)
-		{
-			if (interactableCamera != null && interactableCamera.cameraContainer != null)
-			{
-				interactableCamera.cameraContainer.transform.rotation = interactableCamera.defaultRotation;
-				interactableCamera.cameraContainer.GetComponentInChildren <CinemachineVirtualCamera>().transform.localRotation = Quaternion.identity;
 			}
 		}
 	}
@@ -144,7 +133,7 @@ public class InteractableCamera : FiniteStateMachine, InteractableObject
 			cinemachineBrain.m_DefaultBlend.m_Style = CinemachineBlendDefinition.Style.Cut;
 
 			Player.Me().Lock();
-			interactableCamera?.cameraContainer.SetActive(true);
+			interactableCamera?.cameraContainer.gameObject.SetActive(true);
 		}
 
 		public override void Update (GameObject obj)
@@ -160,22 +149,25 @@ public class InteractableCamera : FiniteStateMachine, InteractableObject
 	public ActiveState activeState = new ActiveState();
 	public EaseOutState easeOutState = new EaseOutState();
 	public SpawnState spawnState = new SpawnState();
-	public GameObject cameraContainer;
-	public Quaternion defaultRotation;
+	public MouseLook cameraContainer;
+	public GameObject vCam;
+	public Quaternion defaultRotationContainer;
+	public Quaternion defaultRotationCam;
 
 	public bool IsActive () {return currentState == activeState;}
 
 	public void Interact()
 	{
+		cameraContainer.transform.rotation = defaultRotationContainer;
+		vCam.transform.localRotation = defaultRotationCam;
 		inactiveState.activate = true;
-		
-		if (cameraContainer!= null)
-			defaultRotation = cameraContainer.transform.rotation;
 	}
 
 	//Private
 	private void Start()
 	{
+		defaultRotationContainer = cameraContainer.transform.rotation;
+		defaultRotationCam = vCam.transform.localRotation;
 		EnterState (inactiveState);
 	}
 }

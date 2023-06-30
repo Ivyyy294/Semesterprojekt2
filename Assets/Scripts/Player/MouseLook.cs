@@ -6,7 +6,7 @@ using Cinemachine;
 public class MouseLook : MonoBehaviour
 {
 	float verticalRotation;
-	[SerializeField] Transform cameraTrans;
+	public Transform cameraTrans;
 	[SerializeField] float maxVerticalAngle = 80f;
 
 	[Range (0.1f, 2f)]
@@ -15,21 +15,19 @@ public class MouseLook : MonoBehaviour
 	public float GetRotationX() { return verticalRotation;}
 	public float GetRotationY() { return transform.rotation.eulerAngles.y;}
 
-	public void ResetRotation()
-	{
-		verticalRotation = 0f;
-		SetRotationX (0f);
-		SetRotationX (0f);
-	}
-
-    // Start is called before the first frame update
-    void Start()
+	// Start is called before the first frame update
+	void Start()
     {
 		Cursor.lockState = CursorLockMode.Locked;
     }
 
-    // Update is called once per frame
-    void Update()
+	private void OnEnable()
+	{
+		verticalRotation = -cameraTrans.localEulerAngles.x;
+	}
+
+	// Update is called once per frame
+	void Update()
     {
 		if (Time.timeScale > 0f)
 		{
@@ -54,6 +52,9 @@ public class MouseLook : MonoBehaviour
 
 	public void SetRotationX (float val)
 	{
+		if (val != verticalRotation)
+			verticalRotation = val;
+
 		cameraTrans.localRotation = Quaternion.Euler (new Vector3 (-val, 0f, 0f));
 	}
 
