@@ -590,7 +590,7 @@ MonoBehaviour:
   indexMenuScene: 2
   indexGameScene: 3
   indexTutorialScene: 4
-  CreditScene: 4
+  indexCreditScene: 5
   loadGame: 0
 --- !u!1 &1824786475
 GameObject:
@@ -753,7 +753,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1821036913293310617, guid: 87f710628024cf3469ecdb92f986346b, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 0
+      value: 129.92
       objectReference: {fileID: 0}
     - target: {fileID: 1821036913293310617, guid: 87f710628024cf3469ecdb92f986346b, type: 3}
       propertyPath: m_SizeDelta.y
@@ -761,7 +761,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1821036913293310617, guid: 87f710628024cf3469ecdb92f986346b, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 0
+      value: 500
       objectReference: {fileID: 0}
     - target: {fileID: 1821036913293310617, guid: 87f710628024cf3469ecdb92f986346b, type: 3}
       propertyPath: m_AnchoredPosition.y
@@ -785,7 +785,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5382915274498119843, guid: 87f710628024cf3469ecdb92f986346b, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 0
+      value: 65.92
       objectReference: {fileID: 0}
     - target: {fileID: 5382915274498119843, guid: 87f710628024cf3469ecdb92f986346b, type: 3}
       propertyPath: m_SizeDelta.y
@@ -793,7 +793,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5382915274498119843, guid: 87f710628024cf3469ecdb92f986346b, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 0
+      value: 64.96
       objectReference: {fileID: 0}
     - target: {fileID: 5382915274498119843, guid: 87f710628024cf3469ecdb92f986346b, type: 3}
       propertyPath: m_AnchoredPosition.y

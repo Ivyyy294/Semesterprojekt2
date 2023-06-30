@@ -5,20 +5,29 @@ using UnityEngine;
 [RequireComponent (typeof (AudioPlayer))]
 class CryoDay3Event : MonoBehaviour
 {
-	public bool test;
-	//[SerializeField] BlackBoardProperty testProperty;
-	[SerializeField] Room room;
-	[SerializeField] InteractableCamera cryoChair;
 	[SerializeField] Door cryoDoor;
+	[SerializeField] InteractableCamera cryoChair;
+	[SerializeField] Room room;
 	[SerializeField] List <AudioAsset> voiceLines;
+	[SerializeField] AudioAsset voiceLinesTrapped;
+	[SerializeField] BlackBoardProperty testProperty;
+
 	AudioPlayer audioPlayer;
 	int currentIndex;
 	bool active = false;
+	bool playerInCryoRoom = false;
 
 	public void Activate()
 	{
 		active = true;
+		playerInCryoRoom = false;
 		currentIndex = 0;
+		cryoDoor.open = true;
+	}
+
+	public void SetPlayerInCryoRoom()
+	{
+		playerInCryoRoom = true;
 	}
 
 	private void Start()
@@ -32,24 +41,22 @@ class CryoDay3Event : MonoBehaviour
 	{
 		if (active)
 		{
-			cryoDoor.open = true;
-
-			if (cryoChair.IsActive())
+			if (playerInCryoRoom && cryoDoor.open)
 			{
-				audioPlayer.FadeOut (0.5f);
+				Debug.Log("close door");
+				audioPlayer.Play (voiceLinesTrapped);
+				cryoDoor.open = false;
+			}
+			else if (playerInCryoRoom && cryoChair.IsActive())
+			{
 				active = false;
 
-				//BlackBoardProperty checkValue = BlackBoard.Me().GetPropertyByName (testProperty.name);
+				BlackBoardProperty checkValue = BlackBoard.Me().GetPropertyByName (testProperty.name);
 
-				if (test/*checkValue.Compare (testProperty)*/)
+				if (checkValue.Compare (testProperty))
 					room.EnterEndingCryoGood();
 				else
 					room.EnterEndingCryoBad();
-			}
-			else if (currentIndex >= voiceLines.Count && !audioPlayer.IsPlaying())
-			{
-				active = false;
-				cryoDoor.open = false;
 			}
 			else if (!audioPlayer.IsPlaying())
 				audioPlayer.Play(voiceLines[currentIndex++]);

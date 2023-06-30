@@ -6542,6 +6542,14 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 8987730952681145877}
     - target: {fileID: 160401723716179195, guid: c3f5d8cea79e88d4e9311ee32800fb22, type: 3}
+      propertyPath: testProperty.name
+      value: PuckFriendship
+      objectReference: {fileID: 0}
+    - target: {fileID: 160401723716179195, guid: c3f5d8cea79e88d4e9311ee32800fb22, type: 3}
+      propertyPath: voiceLinesTrapped
+      value: 
+      objectReference: {fileID: 11400000, guid: 5871766b2ff354a499ea8295e77fb514, type: 2}
+    - target: {fileID: 160401723716179195, guid: c3f5d8cea79e88d4e9311ee32800fb22, type: 3}
       propertyPath: voiceLines.Array.size
       value: 19
       objectReference: {fileID: 0}
@@ -6609,25 +6617,41 @@ PrefabInstance:
       propertyPath: voiceLines.Array.data[18]
       value: 
       objectReference: {fileID: 11400000, guid: 8520d7d2311fb4e44a768b74c616cb46, type: 2}
+    - target: {fileID: 160401723716179195, guid: c3f5d8cea79e88d4e9311ee32800fb22, type: 3}
+      propertyPath: testProperty.comparisonTyp
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3869866523974514887, guid: c3f5d8cea79e88d4e9311ee32800fb22, type: 3}
       propertyPath: m_Name
       value: CryoDay3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3869866523974514887, guid: c3f5d8cea79e88d4e9311ee32800fb22, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6763705538492180827, guid: c3f5d8cea79e88d4e9311ee32800fb22, type: 3}
       propertyPath: m_RootOrder
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6763705538492180827, guid: c3f5d8cea79e88d4e9311ee32800fb22, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 5.7756
+      objectReference: {fileID: 0}
+    - target: {fileID: 6763705538492180827, guid: c3f5d8cea79e88d4e9311ee32800fb22, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 3.4324
+      objectReference: {fileID: 0}
+    - target: {fileID: 6763705538492180827, guid: c3f5d8cea79e88d4e9311ee32800fb22, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: 12.83
       objectReference: {fileID: 0}
     - target: {fileID: 6763705538492180827, guid: c3f5d8cea79e88d4e9311ee32800fb22, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: 2.29
       objectReference: {fileID: 0}
     - target: {fileID: 6763705538492180827, guid: c3f5d8cea79e88d4e9311ee32800fb22, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: -13.89
       objectReference: {fileID: 0}
     - target: {fileID: 6763705538492180827, guid: c3f5d8cea79e88d4e9311ee32800fb22, type: 3}
       propertyPath: m_LocalRotation.w
