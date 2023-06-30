@@ -338,6 +338,7 @@ public class Room : PushdownAutomata
 		[SerializeField] GameObject cryoDoorTrigger;
 		[SerializeField] GameObject personalItems;
 		[SerializeField] GameObject cryoEvent;
+		[SerializeField] LightBulbEvent lightBulbEvent;
 
 		public override void Enter(GameObject obj)
 		{
@@ -346,6 +347,7 @@ public class Room : PushdownAutomata
 			personalItems.SetActive (false);
 			cryoDoorTrigger.SetActive (false);
 			cryoEvent.SetActive (true);
+			lightBulbEvent.DisableLight (true);
 			lightController.EnterDay3State();
 			room.PushState (room.wakeUpBed);
 		}
