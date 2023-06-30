@@ -88,6 +88,7 @@ GameObject:
   - component: {fileID: 2822974353037048382}
   - component: {fileID: 1551877892312807625}
   - component: {fileID: 7528221354851280470}
+  - component: {fileID: 1281408642154636885}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -310,8 +311,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cameraTrans: {fileID: 5386439339678460319}
   maxVerticalAngle: 80
-  zoomPov: 30
-  zoomSpeed: 3.5
   mouseSensitivity: 1
 --- !u!114 &1551877892312807625
 MonoBehaviour:
@@ -346,6 +345,21 @@ MonoBehaviour:
   mouseLook: {fileID: 0}
   cinemachineBrain: {fileID: 0}
   interactTextOverlay: {fileID: 0}
+--- !u!114 &1281408642154636885
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2822974353037048372}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7cffbb3204909e0428fbfeb6f372bfbc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  zoomPov: 30
+  zoomSpeed: 3.5
+  vCam: {fileID: 8835971716828205016}
 --- !u!1 &2822974353734741427
 GameObject:
   m_ObjectHideFlags: 0
@@ -374,7 +388,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2822974353734741427}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.9999999, z: 0}
+  m_LocalPosition: {x: 0, y: 1, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
