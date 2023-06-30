@@ -145,7 +145,7 @@ MonoBehaviour:
     targetNodeGuid: 5ce4be09-d3df-4831-ab9d-b4389773dab2
   - baseNodeGuid: 0df5c60d-1189-456d-bbfe-4ab164e3f801
     portName: Next
-    targetNodeGuid: 94da53d9-03e2-41e3-a28e-1ce954ed3530
+    targetNodeGuid: bbdc8868-2671-4462-9bc2-d9b1e24f2b90
   - baseNodeGuid: 20ff768d-0629-4c10-aafc-9ae8476edb77
     portName: Hey Demetrius.
     targetNodeGuid: 4bfba334-e23a-405d-a1e8-b7678606b4d4
@@ -257,9 +257,6 @@ MonoBehaviour:
   - baseNodeGuid: 14fc796b-2f6d-4b54-9f54-a52b04990839
     portName: Next
     targetNodeGuid: 4cdd0bfc-8c35-4764-9c17-eda165f4aeed
-  - baseNodeGuid: 4cdd0bfc-8c35-4764-9c17-eda165f4aeed
-    portName: Next
-    targetNodeGuid: a3498200-efdc-4990-8040-6356512bdff7
   - baseNodeGuid: 645c509f-218d-44e4-a575-b34f16b6d8b1
     portName: It's okay...
     targetNodeGuid: f216088f-e81a-4ce3-af7a-75462924e3f4
@@ -296,6 +293,12 @@ MonoBehaviour:
   - baseNodeGuid: 94da53d9-03e2-41e3-a28e-1ce954ed3530
     portName: Trigger Night
     targetNodeGuid: 347edd76-7fbf-47b2-ad63-de507b98cd94
+  - baseNodeGuid: 4cdd0bfc-8c35-4764-9c17-eda165f4aeed
+    portName: Next
+    targetNodeGuid: 01701380-f2e9-47ef-832d-2c46b1406b45
+  - baseNodeGuid: 01701380-f2e9-47ef-832d-2c46b1406b45
+    portName: Next
+    targetNodeGuid: a3498200-efdc-4990-8040-6356512bdff7
   dialogNodeData:
   - Guid: 4bfba334-e23a-405d-a1e8-b7678606b4d4
     DialogTitle: NpcNode
@@ -1266,22 +1269,6 @@ MonoBehaviour:
     audioAsset: {fileID: 0}
     emotion: 12
     editTyp: 0
-  - Guid: a3498200-efdc-4990-8040-6356512bdff7
-    DialogTitle: Wait for Hermia letter
-    Position: {x: 7997.6, y: 844.8}
-    Type: 5
-    DialogText: 
-    Image: {fileID: 0}
-    customRespondTime: 0
-    GameEvent: {fileID: 0}
-    BlackBoardProperty:
-      name: 
-      guid: 
-      comparisonTyp: 0
-      iVal: 0
-    audioAsset: {fileID: 0}
-    emotion: 12
-    editTyp: 0
   - Guid: 645c509f-218d-44e4-a575-b34f16b6d8b1
     DialogTitle: ChoiceNode
     Position: {x: 1219.2, y: 1261.6}
@@ -1409,6 +1396,38 @@ MonoBehaviour:
       iVal: 0
     audioAsset: {fileID: 0}
     emotion: 0
+    editTyp: 0
+  - Guid: 01701380-f2e9-47ef-832d-2c46b1406b45
+    DialogTitle: EditValueNode
+    Position: {x: 8016, y: 844.8}
+    Type: 8
+    DialogText: 
+    Image: {fileID: 0}
+    customRespondTime: 0
+    GameEvent: {fileID: 0}
+    BlackBoardProperty:
+      name: HermiaVentCheck
+      guid: 67859645-0ebf-4b10-b1c9-f3cc5978b53f
+      comparisonTyp: 0
+      iVal: 1
+    audioAsset: {fileID: 0}
+    emotion: 12
+    editTyp: 1
+  - Guid: a3498200-efdc-4990-8040-6356512bdff7
+    DialogTitle: Wait for Hermia letter
+    Position: {x: 8348, y: 844.8}
+    Type: 5
+    DialogText: 
+    Image: {fileID: 0}
+    customRespondTime: 0
+    GameEvent: {fileID: 0}
+    BlackBoardProperty:
+      name: 
+      guid: 
+      comparisonTyp: 0
+      iVal: 0
+    audioAsset: {fileID: 0}
+    emotion: 12
     editTyp: 0
   dialogGroupData: []
   blackBoardList: {fileID: 11400000, guid: c289dd2bc5fda5942acc2419a6f68abb, type: 2}

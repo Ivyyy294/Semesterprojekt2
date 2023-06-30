@@ -13,18 +13,9 @@ MonoBehaviour:
   m_Name: Chat2_Hermia
   m_EditorClassIdentifier: 
   nodeLinks:
-  - baseNodeGuid: 9556fb16-6a62-40e7-bb8a-138a836c037b
-    portName: Next
-    targetNodeGuid: a7cbe6a6-7a1d-4e41-b5c9-14c79e5f19d4
-  - baseNodeGuid: a7cbe6a6-7a1d-4e41-b5c9-14c79e5f19d4
-    portName: Next
-    targetNodeGuid: 794c454e-5d6b-41f5-8deb-0de92f060c70
   - baseNodeGuid: 30f60bfd-356c-4186-b199-f29e35efb023
     portName: Next
     targetNodeGuid: cd21dfec-0dba-4d77-8d67-e620b90f51fa
-  - baseNodeGuid: 9850f2b4-69e8-4e54-a02e-2ec15e9867f1
-    portName: May thy illustrious grace feel greeted, Madam Hermia
-    targetNodeGuid: 9556fb16-6a62-40e7-bb8a-138a836c037b
   - baseNodeGuid: 8fabd7c6-23ba-4545-924d-c66dad7c2e62
     portName: Next
     targetNodeGuid: adb75e13-b4e2-4eb2-9eee-3e5eb8a2bef2
@@ -120,13 +111,13 @@ MonoBehaviour:
     targetNodeGuid: b9a4cbef-c4c6-4e53-a9c1-2506e59c3d3e
   - baseNodeGuid: b9a4cbef-c4c6-4e53-a9c1-2506e59c3d3e
     portName: It's all just a bit much
-    targetNodeGuid: e8bb3e00-44d5-4455-b9f5-08372f755f90
+    targetNodeGuid: 83d7c019-2ef1-418f-b787-f1008c2849a8
   - baseNodeGuid: b9a4cbef-c4c6-4e53-a9c1-2506e59c3d3e
     portName: Relationship stuff.
-    targetNodeGuid: 23fc4d97-674d-4376-bff1-26b794c024fa
+    targetNodeGuid: e0b96449-6774-4e7a-a21e-f869594941aa
   - baseNodeGuid: b9a4cbef-c4c6-4e53-a9c1-2506e59c3d3e
     portName: Demetrius is acting strange...
-    targetNodeGuid: 9ddbd0d2-5160-40e2-8323-f8d066eeaa02
+    targetNodeGuid: 1fc68172-9220-47a4-9cdc-297376255a82
   - baseNodeGuid: e8bb3e00-44d5-4455-b9f5-08372f755f90
     portName: Next
     targetNodeGuid: 70c2ac8c-dbcd-4c66-88b2-d4d6ec6b5f2d
@@ -397,77 +388,30 @@ MonoBehaviour:
   - baseNodeGuid: f5e1ae36-ca90-4e21-85e0-95c9117e9075
     portName: ...Lysander.
     targetNodeGuid: 225ebc08-8ef4-438b-8712-cc78253cd45f
+  - baseNodeGuid: 9556fb16-6a62-40e7-bb8a-138a836c037b
+    portName: Next
+    targetNodeGuid: a7cbe6a6-7a1d-4e41-b5c9-14c79e5f19d4
+  - baseNodeGuid: a7cbe6a6-7a1d-4e41-b5c9-14c79e5f19d4
+    portName: Next
+    targetNodeGuid: 794c454e-5d6b-41f5-8deb-0de92f060c70
+  - baseNodeGuid: 9850f2b4-69e8-4e54-a02e-2ec15e9867f1
+    portName: May thy illustrious grace feel greeted, Madam Hermia
+    targetNodeGuid: 9556fb16-6a62-40e7-bb8a-138a836c037b
+  - baseNodeGuid: 83d7c019-2ef1-418f-b787-f1008c2849a8
+    portName: Next
+    targetNodeGuid: e8bb3e00-44d5-4455-b9f5-08372f755f90
+  - baseNodeGuid: e0b96449-6774-4e7a-a21e-f869594941aa
+    portName: Next
+    targetNodeGuid: 23fc4d97-674d-4376-bff1-26b794c024fa
+  - baseNodeGuid: 1fc68172-9220-47a4-9cdc-297376255a82
+    portName: Next
+    targetNodeGuid: 9ddbd0d2-5160-40e2-8323-f8d066eeaa02
   dialogNodeData:
-  - Guid: 9556fb16-6a62-40e7-bb8a-138a836c037b
-    DialogTitle: NpcNode
-    Position: {x: 1195.2, y: -117.600006}
-    Type: 1
-    DialogText: Splendid! Thy body hath finally been freed from the bitter cold grasp
-      of ice!
-    Image: {fileID: 0}
-    customRespondTime: 0
-    GameEvent: {fileID: 0}
-    BlackBoardProperty:
-      name: 
-      guid: 
-      comparisonTyp: 0
-      iVal: 0
-    audioAsset: {fileID: 0}
-    emotion: 0
-    editTyp: 0
-  - Guid: a7cbe6a6-7a1d-4e41-b5c9-14c79e5f19d4
-    DialogTitle: NpcNode
-    Position: {x: 1679.2, y: -117.600006}
-    Type: 1
-    DialogText: How art thee? Any ailments thou wisheth to address?
-    Image: {fileID: 0}
-    customRespondTime: 0
-    GameEvent: {fileID: 0}
-    BlackBoardProperty:
-      name: 
-      guid: 
-      comparisonTyp: 0
-      iVal: 0
-    audioAsset: {fileID: 0}
-    emotion: 0
-    editTyp: 0
-  - Guid: 794c454e-5d6b-41f5-8deb-0de92f060c70
-    DialogTitle: ChoiceNode
-    Position: {x: 2079.2, y: -245.6}
-    Type: 0
-    DialogText: hello world
-    Image: {fileID: 0}
-    customRespondTime: 0
-    GameEvent: {fileID: 0}
-    BlackBoardProperty:
-      name: 
-      guid: 
-      comparisonTyp: 0
-      iVal: 0
-    audioAsset: {fileID: 0}
-    emotion: 0
-    editTyp: 0
   - Guid: 30f60bfd-356c-4186-b199-f29e35efb023
     DialogTitle: START
     Position: {x: 110.4, y: 205.59999}
     Type: 7
     DialogText: ENTRYPOINT
-    Image: {fileID: 0}
-    customRespondTime: 0
-    GameEvent: {fileID: 0}
-    BlackBoardProperty:
-      name: 
-      guid: 
-      comparisonTyp: 0
-      iVal: 0
-    audioAsset: {fileID: 0}
-    emotion: 0
-    editTyp: 0
-  - Guid: 9850f2b4-69e8-4e54-a02e-2ec15e9867f1
-    DialogTitle: ChoiceNode
-    Position: {x: 612, y: -80}
-    Type: 0
-    DialogText: hello world
     Image: {fileID: 0}
     customRespondTime: 0
     GameEvent: {fileID: 0}
@@ -1030,22 +974,6 @@ MonoBehaviour:
     Position: {x: 6752, y: 624}
     Type: 0
     DialogText: hello world
-    Image: {fileID: 0}
-    customRespondTime: 0
-    GameEvent: {fileID: 0}
-    BlackBoardProperty:
-      name: 
-      guid: 
-      comparisonTyp: 0
-      iVal: 0
-    audioAsset: {fileID: 0}
-    emotion: 12
-    editTyp: 0
-  - Guid: 54b2c7b9-4752-424c-849e-a48a775c0fe6
-    DialogTitle: PlayerAutoNode
-    Position: {x: 7284, y: 481.6}
-    Type: 9
-    DialogText: He was never like this, even when we were together
     Image: {fileID: 0}
     customRespondTime: 0
     GameEvent: {fileID: 0}
@@ -1658,10 +1586,10 @@ MonoBehaviour:
     customRespondTime: 0
     GameEvent: {fileID: 0}
     BlackBoardProperty:
-      name: 
-      guid: 
+      name: HermiaVentCheck
+      guid: 67859645-0ebf-4b10-b1c9-f3cc5978b53f
       comparisonTyp: 0
-      iVal: 0
+      iVal: 2
     audioAsset: {fileID: 0}
     emotion: 12
     editTyp: 0
@@ -1966,6 +1894,135 @@ MonoBehaviour:
       guid: 
       comparisonTyp: 0
       iVal: 0
+    audioAsset: {fileID: 0}
+    emotion: 12
+    editTyp: 0
+  - Guid: 9556fb16-6a62-40e7-bb8a-138a836c037b
+    DialogTitle: NpcNode
+    Position: {x: 869.6, y: -479.19998}
+    Type: 1
+    DialogText: Splendid! Thy body hath finally been freed from the bitter cold grasp
+      of ice!
+    Image: {fileID: 0}
+    customRespondTime: 0
+    GameEvent: {fileID: 0}
+    BlackBoardProperty:
+      name: 
+      guid: 
+      comparisonTyp: 0
+      iVal: 0
+    audioAsset: {fileID: 0}
+    emotion: 0
+    editTyp: 0
+  - Guid: a7cbe6a6-7a1d-4e41-b5c9-14c79e5f19d4
+    DialogTitle: NpcNode
+    Position: {x: 1353.6, y: -479.19998}
+    Type: 1
+    DialogText: How art thee? Any ailments thou wisheth to address?
+    Image: {fileID: 0}
+    customRespondTime: 0
+    GameEvent: {fileID: 0}
+    BlackBoardProperty:
+      name: 
+      guid: 
+      comparisonTyp: 0
+      iVal: 0
+    audioAsset: {fileID: 0}
+    emotion: 0
+    editTyp: 0
+  - Guid: 794c454e-5d6b-41f5-8deb-0de92f060c70
+    DialogTitle: ChoiceNode
+    Position: {x: 1753.6, y: -607.2}
+    Type: 0
+    DialogText: hello world
+    Image: {fileID: 0}
+    customRespondTime: 0
+    GameEvent: {fileID: 0}
+    BlackBoardProperty:
+      name: 
+      guid: 
+      comparisonTyp: 0
+      iVal: 0
+    audioAsset: {fileID: 0}
+    emotion: 0
+    editTyp: 0
+  - Guid: 9850f2b4-69e8-4e54-a02e-2ec15e9867f1
+    DialogTitle: ChoiceNode
+    Position: {x: 286.4, y: -441.59998}
+    Type: 0
+    DialogText: hello world
+    Image: {fileID: 0}
+    customRespondTime: 0
+    GameEvent: {fileID: 0}
+    BlackBoardProperty:
+      name: 
+      guid: 
+      comparisonTyp: 0
+      iVal: 0
+    audioAsset: {fileID: 0}
+    emotion: 0
+    editTyp: 0
+  - Guid: 54b2c7b9-4752-424c-849e-a48a775c0fe6
+    DialogTitle: PlayerAutoNode
+    Position: {x: 7292.8, y: 385.6}
+    Type: 9
+    DialogText: He was never like this, even when we were together
+    Image: {fileID: 0}
+    customRespondTime: 0
+    GameEvent: {fileID: 0}
+    BlackBoardProperty:
+      name: 
+      guid: 
+      comparisonTyp: 0
+      iVal: 0
+    audioAsset: {fileID: 0}
+    emotion: 12
+    editTyp: 0
+  - Guid: 83d7c019-2ef1-418f-b787-f1008c2849a8
+    DialogTitle: EditValueNode
+    Position: {x: 6099.2, y: 1019.2}
+    Type: 8
+    DialogText: 
+    Image: {fileID: 0}
+    customRespondTime: 0
+    GameEvent: {fileID: 0}
+    BlackBoardProperty:
+      name: LysanderDay2Trigger
+      guid: b96a791d-942b-48c4-9779-68a31ce8f962
+      comparisonTyp: 0
+      iVal: 1
+    audioAsset: {fileID: 0}
+    emotion: 12
+    editTyp: 0
+  - Guid: e0b96449-6774-4e7a-a21e-f869594941aa
+    DialogTitle: EditValueNode
+    Position: {x: 6070.4, y: 352}
+    Type: 8
+    DialogText: 
+    Image: {fileID: 0}
+    customRespondTime: 0
+    GameEvent: {fileID: 0}
+    BlackBoardProperty:
+      name: LysanderDay2Trigger
+      guid: b96a791d-942b-48c4-9779-68a31ce8f962
+      comparisonTyp: 0
+      iVal: 1
+    audioAsset: {fileID: 0}
+    emotion: 12
+    editTyp: 0
+  - Guid: 1fc68172-9220-47a4-9cdc-297376255a82
+    DialogTitle: EditValueNode
+    Position: {x: 6100, y: 1225.6}
+    Type: 8
+    DialogText: 
+    Image: {fileID: 0}
+    customRespondTime: 0
+    GameEvent: {fileID: 0}
+    BlackBoardProperty:
+      name: LysanderDay2Trigger
+      guid: b96a791d-942b-48c4-9779-68a31ce8f962
+      comparisonTyp: 0
+      iVal: 1
     audioAsset: {fileID: 0}
     emotion: 12
     editTyp: 0
