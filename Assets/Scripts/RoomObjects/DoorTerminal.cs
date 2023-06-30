@@ -85,9 +85,12 @@ public class DoorTerminal : PushdownAutomata, InteractableObject
 	{
 		if (locked)
 		{
-			active = false;
-			PushState (puckState);
-			PushState (accessDenied);
+			if (CurrentState() == baseState)
+			{
+				active = false;
+				PushState (puckState);
+				PushState (accessDenied);
+			}
 		}
 		else
 			active = true;

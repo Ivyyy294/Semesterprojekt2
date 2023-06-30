@@ -28,6 +28,11 @@ public class LightController : MonoBehaviour
 		animator.SetTrigger ("Night");
 	}
 
+	public void EnterDay3State()
+	{
+		animator.SetTrigger ("Day3");
+	}
+
 	//Private Functions
     // Start is called before the first frame update
     void Start()

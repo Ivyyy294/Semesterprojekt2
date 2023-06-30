@@ -347,7 +347,7 @@ public class Room : PushdownAutomata
 			personalItems.SetActive (false);
 			cryoDoorTrigger.SetActive (false);
 			cryoEvent.SetActive (true);
-			lightController.EnterNormalState();
+			lightController.EnterDay3State();
 			room.PushState (room.wakeUpBed);
 		}
 

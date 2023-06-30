@@ -330,6 +330,18 @@ PrefabInstance:
       propertyPath: cinemachineBrain
       value: 
       objectReference: {fileID: 1515561019}
+    - target: {fileID: 4549167198485911839, guid: cbc17c2b942c75242850f0bbb7667649, type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4549167198485911839, guid: cbc17c2b942c75242850f0bbb7667649, type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4549167198485911839, guid: cbc17c2b942c75242850f0bbb7667649, type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4887676111759180139, guid: cbc17c2b942c75242850f0bbb7667649, type: 3}
       propertyPath: m_UseGravity
       value: 0
