@@ -3503,6 +3503,10 @@ PrefabInstance:
       value: Stairs
       objectReference: {fileID: 0}
     - target: {fileID: 3451118302482216456, guid: c94d181d7e997d54d9beeb2f8c743aa3, type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: -5495902117074765545, guid: 0ef3af42b3c06124d8473d3572fd8119, type: 3}
+    - target: {fileID: 3451118302482216456, guid: c94d181d7e997d54d9beeb2f8c743aa3, type: 3}
       propertyPath: m_Convex
       value: 0
       objectReference: {fileID: 0}
@@ -3639,6 +3643,71 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 7447840538420643953, guid: fc337c2827969954aa15418c7361dbe1, type: 3}
   m_PrefabInstance: {fileID: 678451047032115938}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &954832422340451848
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 2354290235778674804}
+    m_Modifications:
+    - target: {fileID: -8679921383154817045, guid: 0ef3af42b3c06124d8473d3572fd8119, type: 3}
+      propertyPath: m_RootOrder
+      value: 187
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 0ef3af42b3c06124d8473d3572fd8119, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 3.15
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 0ef3af42b3c06124d8473d3572fd8119, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.047
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 0ef3af42b3c06124d8473d3572fd8119, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -16.49
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 0ef3af42b3c06124d8473d3572fd8119, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071067
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 0ef3af42b3c06124d8473d3572fd8119, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 0ef3af42b3c06124d8473d3572fd8119, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 0ef3af42b3c06124d8473d3572fd8119, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 0ef3af42b3c06124d8473d3572fd8119, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 0ef3af42b3c06124d8473d3572fd8119, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 0ef3af42b3c06124d8473d3572fd8119, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 0ef3af42b3c06124d8473d3572fd8119, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 0ef3af42b3c06124d8473d3572fd8119, type: 3}
+      propertyPath: m_Name
+      value: stairsCollider
+      objectReference: {fileID: 0}
+    - target: {fileID: 3451118302482216456, guid: 0ef3af42b3c06124d8473d3572fd8119, type: 3}
+      propertyPath: m_Convex
+      value: 1
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 0ef3af42b3c06124d8473d3572fd8119, type: 3}
 --- !u!1001 &1134434220182569690
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4394,6 +4463,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6288585838147061849, guid: c5c13dec66008bb428826608ea54e1ee, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 2845b7965ba1c6849b4fbd967d80bb07, type: 2}
     - target: {fileID: 8493677151923273968, guid: c5c13dec66008bb428826608ea54e1ee, type: 3}
       propertyPath: img
       value: 

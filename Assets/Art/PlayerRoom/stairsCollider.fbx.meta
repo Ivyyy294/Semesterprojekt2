@@ -1,19 +1,9 @@
 fileFormatVersion: 2
-guid: c94d181d7e997d54d9beeb2f8c743aa3
+guid: 0ef3af42b3c06124d8473d3572fd8119
 ModelImporter:
   serializedVersion: 21300
   internalIDToNameTable: []
-  externalObjects:
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: Grey
-    second: {fileID: 2100000, guid: 4b77841c8e06c7e4296a5498b12b09a9, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: stairs
-    second: {fileID: 2100000, guid: bf87de8168a2eb641a90d45e16db8e64, type: 2}
+  externalObjects: {}
   materials:
     materialImportMode: 2
     materialName: 0
@@ -47,7 +37,7 @@ ModelImporter:
     lODScreenPercentages: []
     globalScale: 1
     meshCompression: 0
-    addColliders: 0
+    addColliders: 1
     useSRGBMaterialColor: 1
     sortHierarchyByName: 1
     importVisibility: 1
