@@ -53,12 +53,13 @@ public class PlayerInteraction : MonoBehaviour
 	bool InteractableObjectInSight (out InteractableObject interactableObject)
 	{
 		Ray ray = new Ray (cameraTrans.position, cameraTrans.forward);
-
+		//Ignore Player layer
+		int layerMask = 1 << 0;
 		RaycastHit hit;
 
 		bool inRange = false;
 
-		if (Physics.Raycast(ray, out hit, range))
+		if (Physics.Raycast (ray, out hit, range, layerMask))
 		{
 			interactableObject = hit.transform.gameObject.GetComponent<InteractableObject>();
 			MonoBehaviour behaviour = (MonoBehaviour)interactableObject;
