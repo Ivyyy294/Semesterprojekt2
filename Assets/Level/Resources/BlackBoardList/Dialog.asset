@@ -61,3 +61,19 @@ MonoBehaviour:
     guid: 67859645-0ebf-4b10-b1c9-f3cc5978b53f
     comparisonTyp: 0
     iVal: 0
+  - name: TimeAfterVent1
+    guid: 5e611ef1-6150-4427-ac09-7e04dd3d5b9e
+    comparisonTyp: 0
+    iVal: 0
+  - name: LysanderUnlockDay3
+    guid: 8ff176ca-d64b-4c2f-a2f9-7140f206bfa3
+    comparisonTyp: 0
+    iVal: 0
+  - name: HermiaVentEvent2Done
+    guid: 489da1fa-47b9-442b-9cb6-3e891f2689d1
+    comparisonTyp: 0
+    iVal: 0
+  - name: VoiceLineBarrageDone
+    guid: 6e08cf86-6806-4f0e-9bb7-40de6667b0ba
+    comparisonTyp: 0
+    iVal: 0
