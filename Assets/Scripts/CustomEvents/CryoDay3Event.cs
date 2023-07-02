@@ -11,6 +11,7 @@ class CryoDay3Event : MonoBehaviour
 	[SerializeField] List <AudioAsset> voiceLines;
 	[SerializeField] AudioAsset voiceLinesTrapped;
 	[SerializeField] BlackBoardProperty testProperty;
+	[SerializeField] ChatTerminalObj chatTerminal;
 
 	AudioPlayer audioPlayer;
 	int currentIndex;
@@ -23,6 +24,7 @@ class CryoDay3Event : MonoBehaviour
 		playerInCryoRoom = false;
 		currentIndex = 0;
 		cryoDoor.open = true;
+		chatTerminal.SetLocked(true);
 	}
 
 	public void SetPlayerInCryoRoom()
@@ -46,10 +48,12 @@ class CryoDay3Event : MonoBehaviour
 				Debug.Log("close door");
 				audioPlayer.Play (voiceLinesTrapped);
 				cryoDoor.open = false;
+				chatTerminal.SetLocked(false);
 			}
 			else if (playerInCryoRoom && cryoChair.IsActive())
 			{
 				active = false;
+				chatTerminal.SetLocked(false);
 
 				BlackBoardProperty checkValue = BlackBoard.Me().GetPropertyByName (testProperty.name);
 
