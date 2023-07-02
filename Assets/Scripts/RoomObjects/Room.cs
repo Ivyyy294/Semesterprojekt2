@@ -236,7 +236,7 @@ public class Room : PushdownAutomata
 		{
 			if (!string.IsNullOrEmpty(propertyName))
 			{
-				string guid = BlackBoard.Me().GetPropertyByName (propertyName).guid;
+				string guid = BlackBoard.Me().GetGuidByName (propertyName);
 				BlackBoard.Me().EditValue (guid, BlackBoard.EditTyp.INCREASE, 1);
 
 				Debug.Log ("DayCounter: " + BlackBoard.Me().GetProperty(guid).iVal.ToString());

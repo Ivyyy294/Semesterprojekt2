@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 public class BlackBoard
@@ -69,6 +70,17 @@ public class BlackBoard
 		if (properties.ContainsKey (guid))
 			return properties[guid];
 
+		return null;
+	}
+
+	public string GetGuidByName (string name)
+	{
+		foreach (var i in properties)
+		{
+			if (i.Value.name == name)
+				return i.Key;
+		}
+		
 		return null;
 	}
 

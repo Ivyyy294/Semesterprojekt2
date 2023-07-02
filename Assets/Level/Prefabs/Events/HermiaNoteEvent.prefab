@@ -48,6 +48,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dabbb1916c7f1d74c92209208a89995c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  propertyName: HermiaLetter
   audioPlayer: {fileID: 6458415392143288979}
   animator: {fileID: 363339628260227048}
 --- !u!95 &363339628260227048
