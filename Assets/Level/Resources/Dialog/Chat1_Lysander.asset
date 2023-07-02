@@ -155,6 +155,9 @@ MonoBehaviour:
   - baseNodeGuid: 68f675f1-f7cc-4d0e-82c0-3888a040aee7
     portName: Next
     targetNodeGuid: 846bdb2b-0367-4010-a800-17baec48f3c3
+  - baseNodeGuid: 01f137fe-53d0-4651-90a6-01768da51246
+    portName: Next
+    targetNodeGuid: 267e925c-625c-45fe-990e-b8096c108ecd
   - baseNodeGuid: 271c000a-6a1e-4152-9f76-ad53d4e21452
     portName: Next
     targetNodeGuid: 66ba4f2b-cb02-4c3b-b640-6a29c19d4c64
@@ -377,6 +380,9 @@ MonoBehaviour:
   - baseNodeGuid: a9034362-0485-428c-bb50-d1fa6cbf4d81
     portName: Next
     targetNodeGuid: 6c1fb586-56b6-45ff-9402-215a31b0f407
+  - baseNodeGuid: 6c1fb586-56b6-45ff-9402-215a31b0f407
+    portName: Next
+    targetNodeGuid: a9274b33-efc0-4bb8-add7-314c40085fa0
   - baseNodeGuid: 8ea5951a-e092-4750-8de6-f47baa811c0b
     portName: Only a few more days
     targetNodeGuid: d1607480-10d1-48e0-950f-19ef5b247961
@@ -419,24 +425,24 @@ MonoBehaviour:
   - baseNodeGuid: 8ad82d6c-ce3c-42a0-8b02-0965d166a38c
     portName: Saame
     targetNodeGuid: 9684d83b-557b-4bd2-aa71-28f69e5314e2
-  - baseNodeGuid: 01f137fe-53d0-4651-90a6-01768da51246
-    portName: Next
-    targetNodeGuid: 267e925c-625c-45fe-990e-b8096c108ecd
   - baseNodeGuid: 267e925c-625c-45fe-990e-b8096c108ecd
     portName: Next
     targetNodeGuid: 271c000a-6a1e-4152-9f76-ad53d4e21452
-  - baseNodeGuid: 6c1fb586-56b6-45ff-9402-215a31b0f407
-    portName: Next
-    targetNodeGuid: a9274b33-efc0-4bb8-add7-314c40085fa0
-  - baseNodeGuid: a9274b33-efc0-4bb8-add7-314c40085fa0
-    portName: Next
-    targetNodeGuid: 3b1d5054-d4f0-44fd-8b9d-08fcf5bb4a4a
   - baseNodeGuid: 3b1d5054-d4f0-44fd-8b9d-08fcf5bb4a4a
     portName: Next
     targetNodeGuid: b5ac51ee-e5ef-410e-995a-aeb8e44f3878
+  - baseNodeGuid: a9274b33-efc0-4bb8-add7-314c40085fa0
+    portName: Next
+    targetNodeGuid: 3b1d5054-d4f0-44fd-8b9d-08fcf5bb4a4a
   - baseNodeGuid: b5ac51ee-e5ef-410e-995a-aeb8e44f3878
     portName: Placeholder, telling Lysander about PUCK
     targetNodeGuid: 96ab8770-2fe7-4203-a8a5-2f8004166fec
+  - baseNodeGuid: 846bdb2b-0367-4010-a800-17baec48f3c3
+    portName: Next
+    targetNodeGuid: f761d927-1a30-4d94-8b96-2c1c6db76462
+  - baseNodeGuid: f761d927-1a30-4d94-8b96-2c1c6db76462
+    portName: Next
+    targetNodeGuid: 0acdfed0-8fc6-4c97-a667-bdb24ef4f8db
   dialogNodeData:
   - Guid: ac7acd63-894e-4a46-be96-2c9c8b18f76e
     DialogTitle: Npc Node
@@ -2199,10 +2205,42 @@ MonoBehaviour:
     audioAsset: {fileID: 0}
     emotion: 12
     editTyp: 1
+  - Guid: f761d927-1a30-4d94-8b96-2c1c6db76462
+    DialogTitle: Wait for Hermia and Demtrius
+    Position: {x: 9778.4, y: -29.599998}
+    Type: 5
+    DialogText: 
+    Image: {fileID: 0}
+    customRespondTime: 0
+    GameEvent: {fileID: 0}
+    BlackBoardProperty:
+      name: 
+      guid: 
+      comparisonTyp: 0
+      iVal: 0
+    audioAsset: {fileID: 0}
+    emotion: 12
+    editTyp: 0
+  - Guid: 0acdfed0-8fc6-4c97-a667-bdb24ef4f8db
+    DialogTitle: ChoiceNode
+    Position: {x: 10255.2, y: -29.599998}
+    Type: 0
+    DialogText: hello world
+    Image: {fileID: 0}
+    customRespondTime: 0
+    GameEvent: {fileID: 0}
+    BlackBoardProperty:
+      name: 
+      guid: 
+      comparisonTyp: 0
+      iVal: 0
+    audioAsset: {fileID: 0}
+    emotion: 12
+    editTyp: 0
   dialogGroupData:
   - Guid: 
     name: Day 1.1
-    Position: {x: 295.19998, y: -372}
+    Position: {x: 295.19922, y: -372.00003}
     childNodeGuid:
     - ac7acd63-894e-4a46-be96-2c9c8b18f76e
     - d5d203e8-8790-41e5-a40d-f79e7c2518f7
@@ -2240,4 +2278,5 @@ MonoBehaviour:
     - 8a57a009-6769-48f4-968f-9c09c33f1508
     - 68f675f1-f7cc-4d0e-82c0-3888a040aee7
     - 846bdb2b-0367-4010-a800-17baec48f3c3
+    - f761d927-1a30-4d94-8b96-2c1c6db76462
   blackBoardList: {fileID: 11400000, guid: c289dd2bc5fda5942acc2419a6f68abb, type: 2}
