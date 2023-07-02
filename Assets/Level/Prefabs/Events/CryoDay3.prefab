@@ -156,21 +156,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a141ec208fdd2ae42893e4b3eb6b07b3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cryoDoor: {fileID: 0}
-  cryoChair: {fileID: 0}
-  room: {fileID: 0}
-  voiceLines:
-  - {fileID: 11400000, guid: 8520d7d2311fb4e44a768b74c616cb46, type: 2}
-  - {fileID: 11400000, guid: 8520d7d2311fb4e44a768b74c616cb46, type: 2}
-  - {fileID: 11400000, guid: 8520d7d2311fb4e44a768b74c616cb46, type: 2}
-  voiceLinesTrapped: {fileID: 11400000, guid: 5871766b2ff354a499ea8295e77fb514, type: 2}
-  testProperty:
-    name: PuckFriendship
-    guid: 
-    comparisonTyp: 1
-    iVal: 0
-  chatTerminal: {fileID: 0}
-  closeTerminal: {fileID: 11400000, guid: 7829666ef44af2a4588008d9cc30d898, type: 2}
+  stage1:
+    cryoDoor: {fileID: 0}
+    voiceLines:
+    - {fileID: 11400000, guid: 8520d7d2311fb4e44a768b74c616cb46, type: 2}
+    - {fileID: 11400000, guid: 8520d7d2311fb4e44a768b74c616cb46, type: 2}
+    - {fileID: 11400000, guid: 8520d7d2311fb4e44a768b74c616cb46, type: 2}
+    chatTerminal: {fileID: 0}
+    closeTerminal: {fileID: 11400000, guid: 7829666ef44af2a4588008d9cc30d898, type: 2}
+  stage2:
+    cryoDoor: {fileID: 0}
+    cryoChair: {fileID: 0}
+    room: {fileID: 0}
+    voiceLinesTrapped: {fileID: 11400000, guid: 5871766b2ff354a499ea8295e77fb514, type: 2}
+    testProperty:
+      name: PuckFriendship
+      guid: 
+      comparisonTyp: 1
+      iVal: 0
 --- !u!114 &8358711886467113382
 MonoBehaviour:
   m_ObjectHideFlags: 0

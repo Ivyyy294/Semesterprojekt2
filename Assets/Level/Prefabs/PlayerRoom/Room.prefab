@@ -7473,9 +7473,25 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 8987730952681145877}
     - target: {fileID: 160401723716179195, guid: c3f5d8cea79e88d4e9311ee32800fb22, type: 3}
+      propertyPath: stage2.room
+      value: 
+      objectReference: {fileID: 2565798720408585157}
+    - target: {fileID: 160401723716179195, guid: c3f5d8cea79e88d4e9311ee32800fb22, type: 3}
       propertyPath: chatTerminal
       value: 
       objectReference: {fileID: 4289919757083979123}
+    - target: {fileID: 160401723716179195, guid: c3f5d8cea79e88d4e9311ee32800fb22, type: 3}
+      propertyPath: stage1.cryoDoor
+      value: 
+      objectReference: {fileID: 1664681744319641297}
+    - target: {fileID: 160401723716179195, guid: c3f5d8cea79e88d4e9311ee32800fb22, type: 3}
+      propertyPath: stage2.cryoDoor
+      value: 
+      objectReference: {fileID: 1664681744319641297}
+    - target: {fileID: 160401723716179195, guid: c3f5d8cea79e88d4e9311ee32800fb22, type: 3}
+      propertyPath: stage2.cryoChair
+      value: 
+      objectReference: {fileID: 8987730952681145877}
     - target: {fileID: 160401723716179195, guid: c3f5d8cea79e88d4e9311ee32800fb22, type: 3}
       propertyPath: testProperty.name
       value: PuckFriendship
@@ -7484,6 +7500,10 @@ PrefabInstance:
       propertyPath: voiceLinesTrapped
       value: 
       objectReference: {fileID: 11400000, guid: 5871766b2ff354a499ea8295e77fb514, type: 2}
+    - target: {fileID: 160401723716179195, guid: c3f5d8cea79e88d4e9311ee32800fb22, type: 3}
+      propertyPath: stage1.chatTerminal
+      value: 
+      objectReference: {fileID: 4289919757083979123}
     - target: {fileID: 160401723716179195, guid: c3f5d8cea79e88d4e9311ee32800fb22, type: 3}
       propertyPath: voiceLines.Array.size
       value: 19
