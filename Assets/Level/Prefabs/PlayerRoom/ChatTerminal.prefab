@@ -196,6 +196,10 @@ PrefabInstance:
       propertyPath: m_LocalPosition.z
       value: 0.18
       objectReference: {fileID: 0}
+    - target: {fileID: 4217868698843415311, guid: d4965de03b23b1c4e94bcd90bbcf970e, type: 3}
+      propertyPath: lockedState.audioLocked
+      value: 
+      objectReference: {fileID: 11400000, guid: 16702b76c9350dd4cb779c24448b0a69, type: 2}
     - target: {fileID: 5227129012761437091, guid: d4965de03b23b1c4e94bcd90bbcf970e, type: 3}
       propertyPath: m_RootOrder
       value: 4

@@ -5,92 +5,132 @@ using Ivyyy.GameEvent;
 using Cinemachine;
 using Ivyyy.StateMachine;
 
-public class OfflineState : IState
+public abstract class BaseState : IState
 {
-	ChatTerminalObj terminalObj;
+	protected ChatTerminalObj terminalObj;
 
-	public void Enter (GameObject obj)
+	public virtual void Enter (GameObject obj)
 	{
 		terminalObj = obj.GetComponent<ChatTerminalObj>();
-		terminalObj.terminalCamera.Priority = 0;
-		Player.Me().Unlock();
 	}
 
-	public void Update (GameObject obj)
-	{
-		if (terminalObj.active)
-			terminalObj.SetState (ChatTerminalObj.powerUpState);
-	}
+	public abstract void Update (GameObject obj);
 
-	public void Exit(GameObject obj){}
+	public virtual void Exit(GameObject obj){}
 }
 
-public class PowerUpState : IState
+public class OfflineState : BaseState
 {
-	ChatTerminalObj terminalObj;
+	public override void Enter (GameObject obj)
+	{
+		base.Enter (obj);
+		terminalObj.terminalCamera.Priority = 0;
+	}
+
+	public override void Update (GameObject obj)
+	{
+		if (terminalObj.locked)
+			terminalObj.EnterState (terminalObj.lockedState);
+		else if (terminalObj.active)
+			terminalObj.EnterState (ChatTerminalObj.powerUpState);
+	}
+}
+
+public class PowerUpState : BaseState
+{
 	float timer = 0f;
 
-	public void Enter (GameObject obj)
+	public override void Enter (GameObject obj)
 	{
-		terminalObj = obj.GetComponent<ChatTerminalObj>();
+		base.Enter (obj);
 		Player.Me().Lock();
 		terminalObj.terminalCamera.Priority = 2;
 		timer = 0f;
 	}
 
-	public void Update (GameObject obj)
+	public override void Update (GameObject obj)
 	{
 		if (timer >= terminalObj.minTransitionTime && !terminalObj.cinemachineBrain.IsBlending)
-			terminalObj.SetState (ChatTerminalObj.onlineState);
+			terminalObj.EnterState (ChatTerminalObj.onlineState);
 		else
 			timer += Time.deltaTime;
 	}
-	public void Exit(GameObject obj){}
 }
 
-public class PowerDownState : IState
+public class PowerDownState : BaseState
 {
-	ChatTerminalObj terminalObj;
 	float timer = 0f;
 
-	public void Enter (GameObject obj)
+	public override void Enter (GameObject obj)
 	{
-		terminalObj = obj.GetComponent<ChatTerminalObj>();
+		base.Enter(obj);
+		Player.Me().mouseLook.SetRotationX (0f);
 		terminalObj.terminalCamera.Priority = 0;
 		timer = 0f;
 	}
 
-	public void Update (GameObject obj)
+	public override void Update (GameObject obj)
 	{
 		if (timer >= terminalObj.minTransitionTime && !terminalObj.cinemachineBrain.IsBlending)
-			terminalObj.SetState (ChatTerminalObj.offlineState);
+			terminalObj.EnterState (ChatTerminalObj.offlineState);
 		else
 			timer += Time.deltaTime;
 	}
 
-	public void Exit(GameObject obj){}
+	public override void Exit(GameObject obj)
+	{
+		Player.Me().Unlock();
+	}
 }
 
-public class OnlineState : IState
+public class OnlineState : BaseState
 {
-	ChatTerminalObj terminalObj;
-
-	public void Enter (GameObject obj)
+	public override void Enter (GameObject obj)
 	{
-		terminalObj = obj.GetComponent<ChatTerminalObj>();
+		base.Enter(obj);
 		terminalObj.terminalUiShow?.Raise();
 	}
 
-	public void Update (GameObject obj)
+	public override void Update (GameObject obj)
 	{
 		if (!terminalObj.active)
-			terminalObj.SetState (ChatTerminalObj.powerDownState);
+			terminalObj.EnterState (ChatTerminalObj.powerDownState);
 	}
-
-	public void Exit(GameObject obj){}
 }
 
-public class ChatTerminalObj : MonoBehaviour, Ivyyy.Interfaces.InteractableObject
+[System.Serializable]
+public class LockedState : BaseState
+{
+	[SerializeField] AudioAsset audioLocked;
+	[SerializeField] float audioCoolDown = 0.5f;
+	float timer;
+
+	public override void Enter(GameObject obj)
+	{
+		timer = 0f;
+		base.Enter(obj);
+	}
+
+	public override void Update(GameObject obj)
+	{
+		timer += Time.deltaTime;
+
+		if (terminalObj.active)
+		{
+			if (timer >= audioCoolDown)
+			{
+				audioLocked.PlayAtPos (terminalObj.transform.position);
+				timer = 0f;
+			}
+			
+			terminalObj.active = false;
+		}
+		else if (!terminalObj.locked)
+			terminalObj.EnterState (ChatTerminalObj.offlineState);
+	}
+}
+
+public class ChatTerminalObj : FiniteStateMachine, Ivyyy.Interfaces.InteractableObject
 {
 	[Header ("Lara Values")]
 	public GameEvent terminalUiShow;
@@ -100,35 +140,30 @@ public class ChatTerminalObj : MonoBehaviour, Ivyyy.Interfaces.InteractableObjec
 	public CinemachineBrain cinemachineBrain;
 
 	public bool active;
+	public bool locked;
+	public LockedState lockedState = new LockedState();
 	public static OfflineState offlineState = new OfflineState();
 	public static PowerUpState powerUpState = new PowerUpState();
 	public static OnlineState onlineState = new OnlineState();
 	public static PowerDownState powerDownState = new PowerDownState();
 
-	private IState currentState;
 
 	private void Start()
 	{
-		SetState (new OfflineState());
+		EnterState (offlineState);
 
 		if (cinemachineBrain == null)
 			cinemachineBrain = Camera.main.GetComponent<CinemachineBrain>();
 	}
 
-	public void Update()
-	{
-		currentState?.Update (gameObject);
-	}
-
-	public void SetState (IState newState)
-	{
-		currentState = newState;
-		currentState.Enter(gameObject);
-	}
-
 	public void ShutDown()
 	{
 		active = false;
+	}
+
+	public void SetLocked (bool val)
+	{
+		locked = val;
 	}
 
 	public void Interact()
