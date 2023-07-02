@@ -10,18 +10,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d170aec7dfcb81f46b534b51e20e8ab1, type: 3}
-  m_Name: Chat4
+  m_Name: Chat4_Puck
   m_EditorClassIdentifier: 
   nodeLinks:
+  - baseNodeGuid: dd62aaad-7f9e-4c29-a93b-947c89756209
+    portName: Next
+    targetNodeGuid: a7d6843a-297c-47b7-8073-baec816c9db9
   - baseNodeGuid: 207c0129-72b9-4024-ad67-9c5373edc90a
     portName: Next
     targetNodeGuid: 8f32e836-d46e-4bbe-8855-81a8cb6b49d6
   - baseNodeGuid: 8f32e836-d46e-4bbe-8855-81a8cb6b49d6
     portName: Next
     targetNodeGuid: f4a90ced-9a69-4f79-a180-08b4e3fa1278
-  - baseNodeGuid: dd62aaad-7f9e-4c29-a93b-947c89756209
-    portName: Next
-    targetNodeGuid: a7d6843a-297c-47b7-8073-baec816c9db9
   - baseNodeGuid: a7d6843a-297c-47b7-8073-baec816c9db9
     portName: Next
     targetNodeGuid: 67fa2bea-ddda-48ea-b69e-8f6404a7cc30
@@ -37,6 +37,12 @@ MonoBehaviour:
   - baseNodeGuid: 04cb1c0d-a519-4922-ad18-965612008ab9
     portName: Placeholder, Puck is not convinced
     targetNodeGuid: 2462d295-9b0c-4da8-b738-1079c948e359
+  - baseNodeGuid: e0a00121-174f-420a-b981-5ab27f03f0ea
+    portName: Next
+    targetNodeGuid: bb3b468b-f2eb-42e4-af3f-e56035834296
+  - baseNodeGuid: 2462d295-9b0c-4da8-b738-1079c948e359
+    portName: Next
+    targetNodeGuid: bc5f3141-c7da-421d-b138-22f53f2527e3
   dialogNodeData:
   - Guid: dd62aaad-7f9e-4c29-a93b-947c89756209
     DialogTitle: START
@@ -136,12 +142,12 @@ MonoBehaviour:
     editTyp: 0
   - Guid: c45450a5-4240-494c-90c1-44ef54bbbd36
     DialogTitle: VoiceLineBarrage
-    Position: {x: 1146, y: 385}
+    Position: {x: 1122, y: 385}
     Type: 2
     DialogText: 
     Image: {fileID: 0}
     customRespondTime: 0
-    GameEvent: {fileID: 0}
+    GameEvent: {fileID: 11400000, guid: 83dc778c15d6cdf409cfb9cda2b892de, type: 2}
     BlackBoardProperty:
       name: 
       guid: 
@@ -152,7 +158,7 @@ MonoBehaviour:
     editTyp: 0
   - Guid: 04cb1c0d-a519-4922-ad18-965612008ab9
     DialogTitle: ChoiceNode
-    Position: {x: 1523, y: 385}
+    Position: {x: 1887, y: 385}
     Type: 0
     DialogText: hello world
     Image: {fileID: 0}
@@ -168,7 +174,7 @@ MonoBehaviour:
     editTyp: 0
   - Guid: e0a00121-174f-420a-b981-5ab27f03f0ea
     DialogTitle: EditValueNode
-    Position: {x: 1993, y: 252}
+    Position: {x: 2357, y: 252}
     Type: 8
     DialogText: 
     Image: {fileID: 0}
@@ -184,12 +190,44 @@ MonoBehaviour:
     editTyp: 0
   - Guid: 2462d295-9b0c-4da8-b738-1079c948e359
     DialogTitle: NpcNode
-    Position: {x: 2002, y: 502}
+    Position: {x: 2366, y: 502}
     Type: 1
     DialogText: DISCONNECTED (Bad Ending)
     Image: {fileID: 0}
     customRespondTime: 0
     GameEvent: {fileID: 0}
+    BlackBoardProperty:
+      name: 
+      guid: 
+      comparisonTyp: 0
+      iVal: 0
+    audioAsset: {fileID: 0}
+    emotion: 12
+    editTyp: 0
+  - Guid: bb3b468b-f2eb-42e4-af3f-e56035834296
+    DialogTitle: UnlockLysanderChat
+    Position: {x: 2691, y: 252}
+    Type: 2
+    DialogText: 
+    Image: {fileID: 0}
+    customRespondTime: 0
+    GameEvent: {fileID: 11400000, guid: 48456f8bb4cab56438913df9d17b2612, type: 2}
+    BlackBoardProperty:
+      name: 
+      guid: 
+      comparisonTyp: 0
+      iVal: 0
+    audioAsset: {fileID: 0}
+    emotion: 12
+    editTyp: 0
+  - Guid: bc5f3141-c7da-421d-b138-22f53f2527e3
+    DialogTitle: RaiseEventNode
+    Position: {x: 2624, y: 502}
+    Type: 2
+    DialogText: 
+    Image: {fileID: 0}
+    customRespondTime: 0
+    GameEvent: {fileID: 11400000, guid: 59412aa63595daf44bf7341c15c4a783, type: 2}
     BlackBoardProperty:
       name: 
       guid: 

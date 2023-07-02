@@ -421,12 +421,12 @@ MonoBehaviour:
   - baseNodeGuid: fce12329-ec1d-4d4d-a713-4690c8845612
     portName: Next
     targetNodeGuid: c7c28a2d-6baf-4444-a179-b48e0ad5fa01
-  - baseNodeGuid: c7c28a2d-6baf-4444-a179-b48e0ad5fa01
-    portName: Next
-    targetNodeGuid: bbb546fb-b976-429b-a91c-0607152cd822
   - baseNodeGuid: bbb546fb-b976-429b-a91c-0607152cd822
     portName: Placeholder, trying to reach hermia
     targetNodeGuid: 550a1fd4-10fb-4394-ae14-2475e39214dc
+  - baseNodeGuid: c7c28a2d-6baf-4444-a179-b48e0ad5fa01
+    portName: Next
+    targetNodeGuid: bbb546fb-b976-429b-a91c-0607152cd822
   dialogNodeData:
   - Guid: 30f60bfd-356c-4186-b199-f29e35efb023
     DialogTitle: START
@@ -2104,26 +2104,10 @@ MonoBehaviour:
     customRespondTime: 0
     GameEvent: {fileID: 0}
     BlackBoardProperty:
-      name: 
-      guid: 
+      name: DayCounter
+      guid: f54546e2-7b9a-43bb-842f-b2f9c6896ebe
       comparisonTyp: 0
-      iVal: 0
-    audioAsset: {fileID: 0}
-    emotion: 12
-    editTyp: 0
-  - Guid: c7c28a2d-6baf-4444-a179-b48e0ad5fa01
-    DialogTitle: Hermia Vent #2
-    Position: {x: 826, y: 1776}
-    Type: 2
-    DialogText: 
-    Image: {fileID: 0}
-    customRespondTime: 0
-    GameEvent: {fileID: 0}
-    BlackBoardProperty:
-      name: 
-      guid: 
-      comparisonTyp: 0
-      iVal: 0
+      iVal: 2
     audioAsset: {fileID: 0}
     emotion: 12
     editTyp: 0
@@ -2151,6 +2135,22 @@ MonoBehaviour:
     Image: {fileID: 0}
     customRespondTime: 0
     GameEvent: {fileID: 0}
+    BlackBoardProperty:
+      name: 
+      guid: 
+      comparisonTyp: 0
+      iVal: 0
+    audioAsset: {fileID: 0}
+    emotion: 12
+    editTyp: 0
+  - Guid: c7c28a2d-6baf-4444-a179-b48e0ad5fa01
+    DialogTitle: Hermia Vent #2
+    Position: {x: 826, y: 1776}
+    Type: 2
+    DialogText: 
+    Image: {fileID: 0}
+    customRespondTime: 0
+    GameEvent: {fileID: 11400000, guid: 148b2e645e6dda14f8e6c0f947e685d4, type: 2}
     BlackBoardProperty:
       name: 
       guid: 
