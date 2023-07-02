@@ -308,35 +308,26 @@ public class Room : PushdownAutomata
 	}
 
 	[System.Serializable]
-	public class Day2State : BaseState , IGameEventListener
+	public class Day2State : BaseState
 	{
 		[SerializeField] LightController lightController;
-		[SerializeField] GameEvent nightEvent;
-		bool done;
+		[SerializeField] string nameProgressProperty;
+		[SerializeField] int checkValue;
+		//[SerializeField] PuckTerminal terminal;
+		BlackBoardProperty property;
 
 		public override void Enter(GameObject obj)
 		{
 			base.Enter(obj);
-			done = false;
-			nightEvent?.RegisterListener(this);
 			lightController.EnterNormalState();
 			room.PushState (room.wakeUpBed);
+			property = BlackBoard.Me().GetPropertyByName (nameProgressProperty);
 		}
 
 		public override void Update(GameObject obj)
 		{
-			if (done)
+			if (property.Compare (new BlackBoardProperty {comparisonTyp = BlackBoardProperty.ComparisonTyp.EQUAL, iVal = checkValue}))
 				room.SwapState (room.nightState);
-		}
-
-		public override void Exit(GameObject obj)
-		{
-			nightEvent?.UnregisterListener (this);
-		}
-
-		public void OnEventRaised()
-		{
-			done = true;
 		}
 	}
 

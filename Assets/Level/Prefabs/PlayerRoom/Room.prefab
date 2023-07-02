@@ -3622,7 +3622,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2324029556a63a74f90834e0f34aedb8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  currentDay: 0
+  currentDay: 1
   night: 0
   cryoDoor: {fileID: 6334317424693014758}
   day1State:
@@ -3630,7 +3630,8 @@ MonoBehaviour:
     nightEvent: {fileID: 11400000, guid: 0b80ddc51b8a1c34c8cd80164e3e0b69, type: 2}
   day2State:
     lightController: {fileID: 1835700772797283506}
-    nightEvent: {fileID: 11400000, guid: 0b80ddc51b8a1c34c8cd80164e3e0b69, type: 2}
+    nameProgressProperty: ProgressDay2
+    checkValue: 3
   day3State:
     lightController: {fileID: 1835700772797283506}
     cryoDoorTrigger: {fileID: 6827852919969844202}
