@@ -7,6 +7,7 @@ TagManager:
   - Night
   - CryoEnding
   - "\t\t\tmanager.ButtonList[i].GetComponentInChildren<TextMeshProUGUI>().SetLayoutDirty();\r\n"
+  - Disconnected
   layers:
   - Default
   - TransparentFX
