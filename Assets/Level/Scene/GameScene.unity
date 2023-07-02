@@ -144,11 +144,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 3588658646520420108, guid: cbc17c2b942c75242850f0bbb7667649, type: 3}
   m_PrefabInstance: {fileID: 1186137876}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &278121955 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 9108984850957563699, guid: cbc17c2b942c75242850f0bbb7667649, type: 3}
-  m_PrefabInstance: {fileID: 1186137876}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &319786731 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7544994624393978420, guid: cbc17c2b942c75242850f0bbb7667649, type: 3}
@@ -202,7 +197,7 @@ PrefabInstance:
     - target: {fileID: 1885173774736053589, guid: cbc17c2b942c75242850f0bbb7667649, type: 3}
       propertyPath: letter
       value: 
-      objectReference: {fileID: 278121955}
+      objectReference: {fileID: 0}
     - target: {fileID: 1885173774736053589, guid: cbc17c2b942c75242850f0bbb7667649, type: 3}
       propertyPath: imgFadeBlack
       value: 
@@ -642,7 +637,7 @@ PrefabInstance:
     - target: {fileID: 8034031482252708542, guid: cbc17c2b942c75242850f0bbb7667649, type: 3}
       propertyPath: letter
       value: 
-      objectReference: {fileID: 278121955}
+      objectReference: {fileID: 0}
     - target: {fileID: 8034031482252708542, guid: cbc17c2b942c75242850f0bbb7667649, type: 3}
       propertyPath: imgFadeBlack
       value: 
@@ -841,6 +836,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 954419710588401870, guid: cbc17c2b942c75242850f0bbb7667649, type: 3}
+    - {fileID: 4698763224818508332, guid: cbc17c2b942c75242850f0bbb7667649, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: cbc17c2b942c75242850f0bbb7667649, type: 3}
 --- !u!114 &1186137878 stripped
 MonoBehaviour:

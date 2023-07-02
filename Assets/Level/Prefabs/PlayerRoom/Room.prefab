@@ -3702,6 +3702,8 @@ MonoBehaviour:
     audioAsset: {fileID: 11400000, guid: 4c9245077c3986f44b34c86a7debac58, type: 2}
     lightController: {fileID: 1835700772797283506}
     tag: Night
+  transitionState:
+    propertyName: DayCounter
   endingCryoGood:
     creditsEvent: {fileID: 11400000, guid: adc27c0f6f18f3a4eb6aeb8a6b82e111, type: 2}
     doorTerminal: {fileID: 7481346877475911261}

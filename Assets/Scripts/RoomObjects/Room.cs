@@ -224,6 +224,7 @@ public class Room : PushdownAutomata
 	[System.Serializable]
 	public class TransitionState : BaseState
 	{
+		[SerializeField] string propertyName;
 		public override void Enter(GameObject obj)
 		{
 			base.Enter(obj);
@@ -233,6 +234,14 @@ public class Room : PushdownAutomata
 
 		public override void Update(GameObject obj)
 		{
+			if (!string.IsNullOrEmpty(propertyName))
+			{
+				string guid = BlackBoard.Me().GetPropertyByName (propertyName).guid;
+				BlackBoard.Me().EditValue (guid, BlackBoard.EditTyp.INCREASE, 1);
+
+				Debug.Log ("DayCounter: " + BlackBoard.Me().GetProperty(guid).iVal.ToString());
+			}
+
 			if (room.currentDay == CurrentDay.DAY1)
 				room.currentDay = CurrentDay.DAY2;
 			else if (room.currentDay == CurrentDay.DAY2)
