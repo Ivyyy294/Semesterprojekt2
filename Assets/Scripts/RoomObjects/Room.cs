@@ -345,6 +345,7 @@ public class Room : PushdownAutomata
 		[SerializeField] GameObject cryoEvent;
 		[SerializeField] LightBulbEvent lightBulbEvent;
 		[SerializeField] PuckTerminal terminal;
+		[SerializeField] HermiaVoiceLine hermiaVoiceEvent;
 
 		public override void Enter(GameObject obj)
 		{
@@ -366,6 +367,8 @@ public class Room : PushdownAutomata
 
 		public override void Update(GameObject obj)
 		{
+			if (!hermiaVoiceEvent.IsActive())
+				hermiaVoiceEvent.Activate();
 		}
 
 		public override void Exit(GameObject obj)

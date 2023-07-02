@@ -1812,6 +1812,7 @@ Transform:
   - {fileID: 7281563227132989716}
   - {fileID: 7257604940793802956}
   - {fileID: 2852249025286145965}
+  - {fileID: 6840704593828054401}
   m_Father: {fileID: 7053959207452852874}
   m_RootOrder: 17
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -2973,6 +2974,66 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!1 &7241059746099371014
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6840704593828054401}
+  - component: {fileID: 4314350870883637112}
+  - component: {fileID: 5931198013818141964}
+  m_Layer: 0
+  m_Name: HermiaVoiceLine
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6840704593828054401
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7241059746099371014}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 5382060655138142036}
+  m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &4314350870883637112
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7241059746099371014}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbe633b95d6b99e4c8bf9a64a5064903, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  propertyName: HermiaVentEvent2Done
+--- !u!114 &5931198013818141964
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7241059746099371014}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b0668c38364f0e04f921b60b31452cd7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  audioAsset: {fileID: 11400000, guid: 8520d7d2311fb4e44a768b74c616cb46, type: 2}
+  playOnAwake: 0
 --- !u!1 &7346002360025772355
 GameObject:
   m_ObjectHideFlags: 0
@@ -3632,12 +3693,15 @@ MonoBehaviour:
     lightController: {fileID: 1835700772797283506}
     nameProgressProperty: ProgressDay2
     checkValue: 3
+    terminal: {fileID: 0}
   day3State:
     lightController: {fileID: 1835700772797283506}
     cryoDoorTrigger: {fileID: 6827852919969844202}
     personalItems: {fileID: 646120433506240146}
     cryoEvent: {fileID: 299487615200041615}
     lightBulbEvent: {fileID: 7487554781158790498}
+    terminal: {fileID: 0}
+    hermiaVoiceEvent: {fileID: 0}
   fadeInState:
     animationCurve:
       serializedVersion: 2
@@ -7409,6 +7473,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 8987730952681145877}
     - target: {fileID: 160401723716179195, guid: c3f5d8cea79e88d4e9311ee32800fb22, type: 3}
+      propertyPath: chatTerminal
+      value: 
+      objectReference: {fileID: 4289919757083979123}
+    - target: {fileID: 160401723716179195, guid: c3f5d8cea79e88d4e9311ee32800fb22, type: 3}
       propertyPath: testProperty.name
       value: PuckFriendship
       objectReference: {fileID: 0}
@@ -7703,6 +7771,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 3871323832572493380, guid: 1d348f68e0ab10947896335babf33b43, type: 3}
   m_PrefabInstance: {fileID: 3672036251267213294}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &4289919757083979123 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 683820132715727517, guid: 1d348f68e0ab10947896335babf33b43, type: 3}
+  m_PrefabInstance: {fileID: 3672036251267213294}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2e1b764578c756343b845e188ad0fab4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &6895853088419274133 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7874346427099478651, guid: 1d348f68e0ab10947896335babf33b43, type: 3}

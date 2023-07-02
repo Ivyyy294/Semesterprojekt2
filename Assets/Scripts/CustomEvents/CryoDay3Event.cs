@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using UnityEngine;
+using Ivyyy.GameEvent;
 
 [RequireComponent (typeof (AudioPlayer))]
 class CryoDay3Event : MonoBehaviour
@@ -12,6 +13,7 @@ class CryoDay3Event : MonoBehaviour
 	[SerializeField] AudioAsset voiceLinesTrapped;
 	[SerializeField] BlackBoardProperty testProperty;
 	[SerializeField] ChatTerminalObj chatTerminal;
+	[SerializeField] GameEvent closeTerminal;
 
 	AudioPlayer audioPlayer;
 	int currentIndex;
@@ -25,6 +27,7 @@ class CryoDay3Event : MonoBehaviour
 		currentIndex = 0;
 		cryoDoor.open = true;
 		chatTerminal.SetLocked(true);
+		closeTerminal.Raise();
 	}
 
 	public void SetPlayerInCryoRoom()
@@ -62,7 +65,7 @@ class CryoDay3Event : MonoBehaviour
 				else
 					room.EnterEndingCryoBad();
 			}
-			else if (!audioPlayer.IsPlaying())
+			else if (!playerInCryoRoom && !audioPlayer.IsPlaying())
 				audioPlayer.Play(voiceLines[currentIndex++]);
 		}
 	}

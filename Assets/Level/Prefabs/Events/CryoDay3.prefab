@@ -169,6 +169,8 @@ MonoBehaviour:
     guid: 
     comparisonTyp: 1
     iVal: 0
+  chatTerminal: {fileID: 0}
+  closeTerminal: {fileID: 11400000, guid: 7829666ef44af2a4588008d9cc30d898, type: 2}
 --- !u!114 &8358711886467113382
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -320,7 +320,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2565798720408585157, guid: cbc17c2b942c75242850f0bbb7667649, type: 3}
       propertyPath: currentDay
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 2565798720408585157, guid: cbc17c2b942c75242850f0bbb7667649, type: 3}
       propertyPath: lockPlayer
@@ -350,6 +350,10 @@ PrefabInstance:
       propertyPath: transitionState.txtTime
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 2565798720408585157, guid: cbc17c2b942c75242850f0bbb7667649, type: 3}
+      propertyPath: day3State.hermiaVoiceEvent
+      value: 
+      objectReference: {fileID: 1186137877}
     - target: {fileID: 2565798720408585157, guid: cbc17c2b942c75242850f0bbb7667649, type: 3}
       propertyPath: transitionState.lockPlayer
       value: 
@@ -549,6 +553,18 @@ PrefabInstance:
     - target: {fileID: 6512769468064736234, guid: cbc17c2b942c75242850f0bbb7667649, type: 3}
       propertyPath: uniqueId
       value: deb0cfde-68d3-4ec1-8c5e-f25954dc37d3
+      objectReference: {fileID: 0}
+    - target: {fileID: 6840704593828054401, guid: cbc17c2b942c75242850f0bbb7667649, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 1.06
+      objectReference: {fileID: 0}
+    - target: {fileID: 6840704593828054401, guid: cbc17c2b942c75242850f0bbb7667649, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 7.55
+      objectReference: {fileID: 0}
+    - target: {fileID: 6840704593828054401, guid: cbc17c2b942c75242850f0bbb7667649, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -16.03
       objectReference: {fileID: 0}
     - target: {fileID: 6959460997285432683, guid: cbc17c2b942c75242850f0bbb7667649, type: 3}
       propertyPath: m_LocalRotation.w
@@ -846,6 +862,17 @@ PrefabInstance:
     - {fileID: 954419710588401870, guid: cbc17c2b942c75242850f0bbb7667649, type: 3}
     - {fileID: 4698763224818508332, guid: cbc17c2b942c75242850f0bbb7667649, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: cbc17c2b942c75242850f0bbb7667649, type: 3}
+--- !u!114 &1186137877 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4314350870883637112, guid: cbc17c2b942c75242850f0bbb7667649, type: 3}
+  m_PrefabInstance: {fileID: 1186137876}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbe633b95d6b99e4c8bf9a64a5064903, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &1186137878 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 1835700772797283506, guid: cbc17c2b942c75242850f0bbb7667649, type: 3}
