@@ -313,7 +313,7 @@ public class Room : PushdownAutomata
 		[SerializeField] LightController lightController;
 		[SerializeField] string nameProgressProperty;
 		[SerializeField] int checkValue;
-		//[SerializeField] PuckTerminal terminal;
+		[SerializeField] PuckTerminal terminal;
 		BlackBoardProperty property;
 
 		public override void Enter(GameObject obj)
@@ -321,6 +321,11 @@ public class Room : PushdownAutomata
 			base.Enter(obj);
 			lightController.EnterNormalState();
 			room.PushState (room.wakeUpBed);
+			terminal.SetChatVisible (3, false);
+			terminal.SetChatAvailable (0, true);
+			terminal.SetChatAvailable (1, true);
+			terminal.SetChatAvailable (2, true);
+			terminal.SetActiveChat (0);
 			property = BlackBoard.Me().GetPropertyByName (nameProgressProperty);
 		}
 
@@ -339,6 +344,7 @@ public class Room : PushdownAutomata
 		[SerializeField] GameObject personalItems;
 		[SerializeField] GameObject cryoEvent;
 		[SerializeField] LightBulbEvent lightBulbEvent;
+		[SerializeField] PuckTerminal terminal;
 
 		public override void Enter(GameObject obj)
 		{
@@ -349,6 +355,12 @@ public class Room : PushdownAutomata
 			cryoEvent.SetActive (true);
 			lightBulbEvent.DisableLight (true);
 			lightController.EnterDay3State();
+			terminal.SetChatVisible (3, true);
+			terminal.SetChatAvailable (0, false);
+			terminal.SetChatAvailable (1, false);
+			terminal.SetChatAvailable (2, false);
+			terminal.SetChatAvailable (3, true);
+			terminal.SetActiveChat (3);
 			room.PushState (room.wakeUpBed);
 		}
 

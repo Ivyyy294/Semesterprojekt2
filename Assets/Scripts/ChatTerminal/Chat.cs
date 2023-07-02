@@ -111,11 +111,14 @@ public class Chat : FiniteStateMachine
 		ChatMessage chatMessage;
 		int portSelected;
 		float timer = 0f;
+		bool done;
+
+		public bool IsDone() {return done;}
 
 		public override void Enter (GameObject obj)
 		{
 			base.Enter (obj);
-
+			done = false;
 			timer = 0f;
 			chatMessage = null;
 			portSelected = -1;
@@ -127,6 +130,9 @@ public class Chat : FiniteStateMachine
 		{
 			if (portSelected != -1 && chatMessage != null && chatMessage.Done)
 			{
+				if (done && timer == 0f)
+					manager.DisableButtons();
+
 				if (timer <= manager.delayPlayerMessage)
 					timer += Time.deltaTime;
 				else
@@ -151,7 +157,7 @@ public class Chat : FiniteStateMachine
 
 		private void ButtonCallBack (int port)
 		{
-			manager.DisableButtons();
+			done = true;
 			portSelected = port;
 			chatMessage = Object.Instantiate (msgPrefab, manager.messageContainer.transform).GetComponentInChildren<ChatMessage>();
 			chatMessage.SetContent (node.ports[port].portName);
@@ -414,16 +420,18 @@ public class Chat : FiniteStateMachine
 	{
 		if (node.data != null && !IsLastNode())
 		{
-			if (node.data.Type == DialogNodeData.NodeType.START)
-				return true;
-			if (node.data.Type == DialogNodeData.NodeType.NPC)
-				return true;
-			else if (node.data.Type == DialogNodeData.NodeType.WAIT)
+			if (node.data.Type == DialogNodeData.NodeType.WAIT)
 			{
 				BlackBoardProperty condition = node.data.BlackBoardProperty;
 				BlackBoardProperty checkValue = BlackBoard.Me().GetProperty (node.data.BlackBoardProperty.guid);
 				return checkValue.Compare (condition);
 			}
+			if (node.data.Type == DialogNodeData.NodeType.CHOICE
+				|| node.data.Type == DialogNodeData.NodeType.PLAYER_AUTO
+				|| node.data.Type == DialogNodeData.NodeType.LOGIC)
+				return false;
+			else
+				return true;
 		}
 
 		return false;
@@ -436,7 +444,7 @@ public class Chat : FiniteStateMachine
 		//Reinitilize keys
 		DisableButtons();
 
-		if (currentState == choiceNodeState)
+		if (currentState == choiceNodeState && !choiceNodeState.IsDone())
 			choiceNodeState.InitButtons();
 	}
 
