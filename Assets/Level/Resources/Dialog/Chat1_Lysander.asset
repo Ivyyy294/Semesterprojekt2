@@ -149,9 +149,6 @@ MonoBehaviour:
   - baseNodeGuid: 05a6ef28-7044-4d40-b03c-2b4a80112f3a
     portName: Do you know if any others are awake yet?
     targetNodeGuid: 7fb2d1da-4140-4989-bf7e-28c722a4c90a
-  - baseNodeGuid: 8a57a009-6769-48f4-968f-9c09c33f1508
-    portName: Next
-    targetNodeGuid: cd2505b0-822b-4de7-aa6a-5127f579c0ca
   - baseNodeGuid: 68f675f1-f7cc-4d0e-82c0-3888a040aee7
     portName: Next
     targetNodeGuid: 846bdb2b-0367-4010-a800-17baec48f3c3
@@ -440,9 +437,6 @@ MonoBehaviour:
   - baseNodeGuid: b5ac51ee-e5ef-410e-995a-aeb8e44f3878
     portName: Placeholder, telling Lysander about PUCK
     targetNodeGuid: 96ab8770-2fe7-4203-a8a5-2f8004166fec
-  - baseNodeGuid: 96ab8770-2fe7-4203-a8a5-2f8004166fec
-    portName: Next
-    targetNodeGuid: cf225182-6de9-4940-9fc8-9f26b676fe6d
   - baseNodeGuid: f761d927-1a30-4d94-8b96-2c1c6db76462
     portName: Next
     targetNodeGuid: 0acdfed0-8fc6-4c97-a667-bdb24ef4f8db
@@ -456,11 +450,26 @@ MonoBehaviour:
     portName: Placeholder, failed to convince Lysander
     targetNodeGuid: a99a763e-8c4b-412d-b11d-87f7dbcc7f10
   - baseNodeGuid: 94b2b520-a52c-41d7-92da-1b0b6cd8fae2
-    portName: Turn off Puck
-    targetNodeGuid: 5d406f89-f78c-4714-a2af-451801377979
-  - baseNodeGuid: 94b2b520-a52c-41d7-92da-1b0b6cd8fae2
     portName: Let them live
     targetNodeGuid: 3e23a525-b706-48c5-a48e-2077e39ea0ed
+  - baseNodeGuid: 94b2b520-a52c-41d7-92da-1b0b6cd8fae2
+    portName: Turn off Puck
+    targetNodeGuid: 5d406f89-f78c-4714-a2af-451801377979
+  - baseNodeGuid: 3e23a525-b706-48c5-a48e-2077e39ea0ed
+    portName: Next
+    targetNodeGuid: dbb1fd51-f4d8-4420-bc3a-83b5ddf89fc0
+  - baseNodeGuid: 8a57a009-6769-48f4-968f-9c09c33f1508
+    portName: Next
+    targetNodeGuid: cd2505b0-822b-4de7-aa6a-5127f579c0ca
+  - baseNodeGuid: 96ab8770-2fe7-4203-a8a5-2f8004166fec
+    portName: Next
+    targetNodeGuid: cf225182-6de9-4940-9fc8-9f26b676fe6d
+  - baseNodeGuid: 5d406f89-f78c-4714-a2af-451801377979
+    portName: Next
+    targetNodeGuid: 15e07895-1fd2-48cf-aa94-b17463c67351
+  - baseNodeGuid: a99a763e-8c4b-412d-b11d-87f7dbcc7f10
+    portName: Next
+    targetNodeGuid: ba741c1d-a3ff-40b7-b775-843bc6441fec
   dialogNodeData:
   - Guid: ac7acd63-894e-4a46-be96-2c9c8b18f76e
     DialogTitle: Npc Node
@@ -2191,22 +2200,6 @@ MonoBehaviour:
     audioAsset: {fileID: 0}
     emotion: 12
     editTyp: 0
-  - Guid: 96ab8770-2fe7-4203-a8a5-2f8004166fec
-    DialogTitle: Day 2 Lysander Done
-    Position: {x: 8829, y: 1209}
-    Type: 8
-    DialogText: 
-    Image: {fileID: 0}
-    customRespondTime: 0
-    GameEvent: {fileID: 0}
-    BlackBoardProperty:
-      name: ProgressDay2
-      guid: 20c3be41-b2a7-4954-841a-d5d011a21c09
-      comparisonTyp: 0
-      iVal: 1
-    audioAsset: {fileID: 0}
-    emotion: 12
-    editTyp: 1
   - Guid: f761d927-1a30-4d94-8b96-2c1c6db76462
     DialogTitle: Wait for Hermia and Demtrius
     Position: {x: 9778, y: -30}
@@ -2287,22 +2280,6 @@ MonoBehaviour:
     audioAsset: {fileID: 0}
     emotion: 12
     editTyp: 0
-  - Guid: 5d406f89-f78c-4714-a2af-451801377979
-    DialogTitle: NpcNode
-    Position: {x: 1304, y: 4309}
-    Type: 1
-    DialogText: Plug Ending
-    Image: {fileID: 0}
-    customRespondTime: 0
-    GameEvent: {fileID: 0}
-    BlackBoardProperty:
-      name: 
-      guid: 
-      comparisonTyp: 0
-      iVal: 0
-    audioAsset: {fileID: 0}
-    emotion: 12
-    editTyp: 0
   - Guid: 3e23a525-b706-48c5-a48e-2077e39ea0ed
     DialogTitle: NpcNode
     Position: {x: 1304, y: 4484}
@@ -2351,10 +2328,90 @@ MonoBehaviour:
     audioAsset: {fileID: 0}
     emotion: 0
     editTyp: 0
+  - Guid: 96ab8770-2fe7-4203-a8a5-2f8004166fec
+    DialogTitle: Day 2 Lysander Done
+    Position: {x: 8837, y: 1209}
+    Type: 8
+    DialogText: 
+    Image: {fileID: 0}
+    customRespondTime: 0
+    GameEvent: {fileID: 0}
+    BlackBoardProperty:
+      name: ProgressDay2
+      guid: 20c3be41-b2a7-4954-841a-d5d011a21c09
+      comparisonTyp: 0
+      iVal: 1
+    audioAsset: {fileID: 0}
+    emotion: 12
+    editTyp: 1
+  - Guid: 5d406f89-f78c-4714-a2af-451801377979
+    DialogTitle: NpcNode
+    Position: {x: 1370, y: 4309}
+    Type: 1
+    DialogText: Plug Ending
+    Image: {fileID: 0}
+    customRespondTime: 0
+    GameEvent: {fileID: 0}
+    BlackBoardProperty:
+      name: 
+      guid: 
+      comparisonTyp: 0
+      iVal: 0
+    audioAsset: {fileID: 0}
+    emotion: 12
+    editTyp: 0
+  - Guid: 15e07895-1fd2-48cf-aa94-b17463c67351
+    DialogTitle: RaiseEventNode
+    Position: {x: 1656, y: 4309}
+    Type: 2
+    DialogText: 
+    Image: {fileID: 0}
+    customRespondTime: 0
+    GameEvent: {fileID: 11400000, guid: 324824ee86a2b914c9cacd2edc9fb264, type: 2}
+    BlackBoardProperty:
+      name: 
+      guid: 
+      comparisonTyp: 0
+      iVal: 0
+    audioAsset: {fileID: 0}
+    emotion: 12
+    editTyp: 0
+  - Guid: dbb1fd51-f4d8-4420-bc3a-83b5ddf89fc0
+    DialogTitle: RaiseEventNode
+    Position: {x: 1656, y: 4484}
+    Type: 2
+    DialogText: 
+    Image: {fileID: 0}
+    customRespondTime: 0
+    GameEvent: {fileID: 11400000, guid: 7e494b8b416bd5642b2e40ffcd33bc1c, type: 2}
+    BlackBoardProperty:
+      name: 
+      guid: 
+      comparisonTyp: 0
+      iVal: 0
+    audioAsset: {fileID: 0}
+    emotion: 12
+    editTyp: 0
+  - Guid: ba741c1d-a3ff-40b7-b775-843bc6441fec
+    DialogTitle: RaiseEventNode
+    Position: {x: 1201, y: 4692}
+    Type: 2
+    DialogText: 
+    Image: {fileID: 0}
+    customRespondTime: 0
+    GameEvent: {fileID: 11400000, guid: 59412aa63595daf44bf7341c15c4a783, type: 2}
+    BlackBoardProperty:
+      name: 
+      guid: 
+      comparisonTyp: 0
+      iVal: 0
+    audioAsset: {fileID: 0}
+    emotion: 12
+    editTyp: 0
   dialogGroupData:
   - Guid: 
     name: Day 1.1
-    Position: {x: 295.99994, y: -354}
+    Position: {x: 296, y: -354}
     childNodeGuid:
     - ac7acd63-894e-4a46-be96-2c9c8b18f76e
     - d5d203e8-8790-41e5-a40d-f79e7c2518f7
@@ -2389,8 +2446,8 @@ MonoBehaviour:
     - 14a9c182-1a59-4add-b121-31609dec5c19
     - 7c9ef1bc-153e-43dd-b1ed-d27e176ce886
     - 05a6ef28-7044-4d40-b03c-2b4a80112f3a
-    - 8a57a009-6769-48f4-968f-9c09c33f1508
     - 68f675f1-f7cc-4d0e-82c0-3888a040aee7
     - 846bdb2b-0367-4010-a800-17baec48f3c3
     - f761d927-1a30-4d94-8b96-2c1c6db76462
+    - 8a57a009-6769-48f4-968f-9c09c33f1508
   blackBoardList: {fileID: 11400000, guid: c289dd2bc5fda5942acc2419a6f68abb, type: 2}

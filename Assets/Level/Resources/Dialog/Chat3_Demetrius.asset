@@ -145,7 +145,7 @@ MonoBehaviour:
     targetNodeGuid: 5ce4be09-d3df-4831-ab9d-b4389773dab2
   - baseNodeGuid: 0df5c60d-1189-456d-bbfe-4ab164e3f801
     portName: Next
-    targetNodeGuid: bbdc8868-2671-4462-9bc2-d9b1e24f2b90
+    targetNodeGuid: 8c95348e-0513-4d00-9a60-bf70f59953e0
   - baseNodeGuid: 20ff768d-0629-4c10-aafc-9ae8476edb77
     portName: Hey Demetrius.
     targetNodeGuid: 4bfba334-e23a-405d-a1e8-b7678606b4d4
@@ -299,6 +299,18 @@ MonoBehaviour:
   - baseNodeGuid: 01701380-f2e9-47ef-832d-2c46b1406b45
     portName: Next
     targetNodeGuid: a3498200-efdc-4990-8040-6356512bdff7
+  - baseNodeGuid: a3498200-efdc-4990-8040-6356512bdff7
+    portName: Next
+    targetNodeGuid: 1ddd8172-5828-470c-9dde-41476d66a76b
+  - baseNodeGuid: 8c95348e-0513-4d00-9a60-bf70f59953e0
+    portName: Next
+    targetNodeGuid: bbdc8868-2671-4462-9bc2-d9b1e24f2b90
+  - baseNodeGuid: 1ddd8172-5828-470c-9dde-41476d66a76b
+    portName: Placeholder, playing along?
+    targetNodeGuid: 203d0688-6c3e-4415-a2fa-99a2813c3c10
+  - baseNodeGuid: 203d0688-6c3e-4415-a2fa-99a2813c3c10
+    portName: Next
+    targetNodeGuid: f8a29e6a-a775-44a0-b5df-e88cdf759057
   dialogNodeData:
   - Guid: 4bfba334-e23a-405d-a1e8-b7678606b4d4
     DialogTitle: NpcNode
@@ -1426,6 +1438,70 @@ MonoBehaviour:
       guid: 31e39ee5-ace1-46d6-9810-ed1906b521c1
       comparisonTyp: 0
       iVal: 1
+    audioAsset: {fileID: 0}
+    emotion: 12
+    editTyp: 0
+  - Guid: 8c95348e-0513-4d00-9a60-bf70f59953e0
+    DialogTitle: EditValueNode
+    Position: {x: 126, y: 1246}
+    Type: 8
+    DialogText: 
+    Image: {fileID: 0}
+    customRespondTime: 0
+    GameEvent: {fileID: 0}
+    BlackBoardProperty:
+      name: DayCounter
+      guid: f54546e2-7b9a-43bb-842f-b2f9c6896ebe
+      comparisonTyp: 0
+      iVal: 1
+    audioAsset: {fileID: 0}
+    emotion: 12
+    editTyp: 1
+  - Guid: 1ddd8172-5828-470c-9dde-41476d66a76b
+    DialogTitle: ChoiceNode
+    Position: {x: 8755, y: 859}
+    Type: 0
+    DialogText: hello world
+    Image: {fileID: 0}
+    customRespondTime: 0
+    GameEvent: {fileID: 0}
+    BlackBoardProperty:
+      name: 
+      guid: 
+      comparisonTyp: 0
+      iVal: 0
+    audioAsset: {fileID: 0}
+    emotion: 12
+    editTyp: 0
+  - Guid: 203d0688-6c3e-4415-a2fa-99a2813c3c10
+    DialogTitle: EditValueNode
+    Position: {x: 9174, y: 859}
+    Type: 8
+    DialogText: 
+    Image: {fileID: 0}
+    customRespondTime: 0
+    GameEvent: {fileID: 0}
+    BlackBoardProperty:
+      name: ProgressDay2
+      guid: 20c3be41-b2a7-4954-841a-d5d011a21c09
+      comparisonTyp: 0
+      iVal: 1
+    audioAsset: {fileID: 0}
+    emotion: 12
+    editTyp: 1
+  - Guid: f8a29e6a-a775-44a0-b5df-e88cdf759057
+    DialogTitle: WaitNode
+    Position: {x: 126, y: 2374}
+    Type: 5
+    DialogText: 
+    Image: {fileID: 0}
+    customRespondTime: 0
+    GameEvent: {fileID: 0}
+    BlackBoardProperty:
+      name: DayCounter
+      guid: f54546e2-7b9a-43bb-842f-b2f9c6896ebe
+      comparisonTyp: 0
+      iVal: 2
     audioAsset: {fileID: 0}
     emotion: 12
     editTyp: 0
