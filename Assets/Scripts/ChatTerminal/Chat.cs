@@ -391,17 +391,20 @@ public class Chat : FiniteStateMachine
 		DialogTree tmpTree = new DialogTree();
 		tmpTree.dialogContainer = dialogContainer;
 
-		tmpTree.Next (dialogTree.CurrentNode().data.Guid);
-
-		if (tmpTree.CurrentNode().data != null && tmpTree.CurrentNode().data.Type == DialogNodeData.NodeType.START)
-			tmpTree.Next();
-
-		while (IsAvailableNewMessage (tmpTree.CurrentNode()))
+		if (dialogTree.CurrentNode().data != null)
 		{
-			if (tmpTree.CurrentNode().data.Type == DialogNodeData.NodeType.NPC)
-				++anz;
+			tmpTree.Next (dialogTree.CurrentNode().data.Guid);
 
-			tmpTree.Next();
+			if (tmpTree.CurrentNode().data != null && tmpTree.CurrentNode().data.Type == DialogNodeData.NodeType.START)
+				tmpTree.Next();
+
+			while (IsAvailableNewMessage (tmpTree.CurrentNode()))
+			{
+				if (tmpTree.CurrentNode().data.Type == DialogNodeData.NodeType.NPC)
+					++anz;
+
+				tmpTree.Next();
+			}
 		}
 
 		return anz;
