@@ -912,6 +912,18 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: -0.000061035156
       objectReference: {fileID: 0}
+    - target: {fileID: 1455152013867092520, guid: ae46210e68ea0974fb795edade1a5d7a, type: 3}
+      propertyPath: gameEvent
+      value: 
+      objectReference: {fileID: 11400000, guid: 48456f8bb4cab56438913df9d17b2612, type: 2}
+    - target: {fileID: 1455152013867092520, guid: ae46210e68ea0974fb795edade1a5d7a, type: 3}
+      propertyPath: response.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1455152013867092520, guid: ae46210e68ea0974fb795edade1a5d7a, type: 3}
+      propertyPath: response.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_IntArgument
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1638667864356707144, guid: ae46210e68ea0974fb795edade1a5d7a, type: 3}
       propertyPath: dialogContainer
       value: 
