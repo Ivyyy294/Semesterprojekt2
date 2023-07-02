@@ -133,9 +133,6 @@ MonoBehaviour:
   - baseNodeGuid: cd21dfec-0dba-4d77-8d67-e620b90f51fa
     portName: Next
     targetNodeGuid: 8fabd7c6-23ba-4545-924d-c66dad7c2e62
-  - baseNodeGuid: 9ddbd0d2-5160-40e2-8323-f8d066eeaa02
-    portName: Next
-    targetNodeGuid: a024440e-c96a-4e6d-91da-953421f6e657
   - baseNodeGuid: 10e3f0ca-b030-4490-a04b-c8ceab06ce8f
     portName: What, what?
     targetNodeGuid: b395698f-f24b-4e42-89ed-3d186da973bf
@@ -427,6 +424,15 @@ MonoBehaviour:
   - baseNodeGuid: c7c28a2d-6baf-4444-a179-b48e0ad5fa01
     portName: Next
     targetNodeGuid: bbb546fb-b976-429b-a91c-0607152cd822
+  - baseNodeGuid: 9ddbd0d2-5160-40e2-8323-f8d066eeaa02
+    portName: Next
+    targetNodeGuid: c7a5ef4a-859a-4347-87fc-44d4918022af
+  - baseNodeGuid: 54b2c7b9-4752-424c-849e-a48a775c0fe6
+    portName: Next
+    targetNodeGuid: 0f60734c-05d3-444a-96fb-3ecc01361d42
+  - baseNodeGuid: 0f60734c-05d3-444a-96fb-3ecc01361d42
+    portName: Placeholder
+    targetNodeGuid: 4cc6629a-748e-408d-abcd-c887cf4653bf
   dialogNodeData:
   - Guid: 30f60bfd-356c-4186-b199-f29e35efb023
     DialogTitle: START
@@ -830,22 +836,6 @@ MonoBehaviour:
     audioAsset: {fileID: 0}
     emotion: 12
     editTyp: 0
-  - Guid: b9a4cbef-c4c6-4e53-a9c1-2506e59c3d3e
-    DialogTitle: Choice Node
-    Position: {x: 6053, y: 654}
-    Type: 0
-    DialogText: hello world
-    Image: {fileID: 0}
-    customRespondTime: 0
-    GameEvent: {fileID: 0}
-    BlackBoardProperty:
-      name: 
-      guid: 
-      comparisonTyp: 0
-      iVal: 0
-    audioAsset: {fileID: 0}
-    emotion: 12
-    editTyp: 0
   - Guid: e8bb3e00-44d5-4455-b9f5-08372f755f90
     DialogTitle: NpcNode
     Position: {x: 6464, y: 948}
@@ -963,22 +953,6 @@ MonoBehaviour:
     Position: {x: 6464, y: 684}
     Type: 1
     DialogText: Talk to me
-    Image: {fileID: 0}
-    customRespondTime: 0
-    GameEvent: {fileID: 0}
-    BlackBoardProperty:
-      name: 
-      guid: 
-      comparisonTyp: 0
-      iVal: 0
-    audioAsset: {fileID: 0}
-    emotion: 12
-    editTyp: 0
-  - Guid: a024440e-c96a-4e6d-91da-953421f6e657
-    DialogTitle: ChoiceNode
-    Position: {x: 6734, y: 352}
-    Type: 0
-    DialogText: hello world
     Image: {fileID: 0}
     customRespondTime: 0
     GameEvent: {fileID: 0}
@@ -2151,6 +2125,38 @@ MonoBehaviour:
     Image: {fileID: 0}
     customRespondTime: 0
     GameEvent: {fileID: 11400000, guid: 148b2e645e6dda14f8e6c0f947e685d4, type: 2}
+    BlackBoardProperty:
+      name: 
+      guid: 
+      comparisonTyp: 0
+      iVal: 0
+    audioAsset: {fileID: 0}
+    emotion: 12
+    editTyp: 0
+  - Guid: b9a4cbef-c4c6-4e53-a9c1-2506e59c3d3e
+    DialogTitle: Choice Node
+    Position: {x: 5906, y: 684}
+    Type: 0
+    DialogText: hello world
+    Image: {fileID: 0}
+    customRespondTime: 0
+    GameEvent: {fileID: 0}
+    BlackBoardProperty:
+      name: 
+      guid: 
+      comparisonTyp: 0
+      iVal: 0
+    audioAsset: {fileID: 0}
+    emotion: 12
+    editTyp: 0
+  - Guid: 0f60734c-05d3-444a-96fb-3ecc01361d42
+    DialogTitle: ChoiceNode
+    Position: {x: 7619, y: 103}
+    Type: 0
+    DialogText: hello world
+    Image: {fileID: 0}
+    customRespondTime: 0
+    GameEvent: {fileID: 0}
     BlackBoardProperty:
       name: 
       guid: 
