@@ -299,15 +299,12 @@ MonoBehaviour:
   - baseNodeGuid: 01701380-f2e9-47ef-832d-2c46b1406b45
     portName: Next
     targetNodeGuid: a3498200-efdc-4990-8040-6356512bdff7
-  - baseNodeGuid: 8c95348e-0513-4d00-9a60-bf70f59953e0
-    portName: Next
-    targetNodeGuid: bbdc8868-2671-4462-9bc2-d9b1e24f2b90
-  - baseNodeGuid: 203d0688-6c3e-4415-a2fa-99a2813c3c10
-    portName: Next
-    targetNodeGuid: f8a29e6a-a775-44a0-b5df-e88cdf759057
   - baseNodeGuid: a3498200-efdc-4990-8040-6356512bdff7
     portName: Next
     targetNodeGuid: d0d6281a-bfb6-4ca6-8471-87d903381d2e
+  - baseNodeGuid: 8c95348e-0513-4d00-9a60-bf70f59953e0
+    portName: Next
+    targetNodeGuid: bbdc8868-2671-4462-9bc2-d9b1e24f2b90
   - baseNodeGuid: d0d6281a-bfb6-4ca6-8471-87d903381d2e
     portName: Next
     targetNodeGuid: 26a129bd-3e6a-4192-b0e9-2b22bd28d744
@@ -317,24 +314,24 @@ MonoBehaviour:
   - baseNodeGuid: 7799c32a-2dec-47fc-b2a0-21226a1196ec
     portName: Nothing.
     targetNodeGuid: e47bfd47-188b-4c38-9b81-6e1cff8b0359
-  - baseNodeGuid: e47bfd47-188b-4c38-9b81-6e1cff8b0359
-    portName: Next
-    targetNodeGuid: e002733d-9719-4904-a740-1162bb0d849a
-  - baseNodeGuid: e002733d-9719-4904-a740-1162bb0d849a
-    portName: Why would you ask that?
-    targetNodeGuid: 2046f7ee-b079-4d6d-bde7-b54e20646f38
-  - baseNodeGuid: 2046f7ee-b079-4d6d-bde7-b54e20646f38
-    portName: Next
-    targetNodeGuid: 92a5b38c-7341-47b8-aff3-0312c9460132
-  - baseNodeGuid: e002733d-9719-4904-a740-1162bb0d849a
-    portName: No.
-    targetNodeGuid: 2046f7ee-b079-4d6d-bde7-b54e20646f38
   - baseNodeGuid: 7799c32a-2dec-47fc-b2a0-21226a1196ec
     portName: Didn't I tell you to leave me alone?
     targetNodeGuid: 808718d4-c6ef-46a5-9377-bcc59829dc4a
   - baseNodeGuid: 7799c32a-2dec-47fc-b2a0-21226a1196ec
     portName: Demetrius...
     targetNodeGuid: 0ae0e18b-8cc9-4225-a714-0abd1fc23c28
+  - baseNodeGuid: e47bfd47-188b-4c38-9b81-6e1cff8b0359
+    portName: Next
+    targetNodeGuid: e002733d-9719-4904-a740-1162bb0d849a
+  - baseNodeGuid: e002733d-9719-4904-a740-1162bb0d849a
+    portName: Why would you ask that?
+    targetNodeGuid: 2046f7ee-b079-4d6d-bde7-b54e20646f38
+  - baseNodeGuid: e002733d-9719-4904-a740-1162bb0d849a
+    portName: No.
+    targetNodeGuid: 2046f7ee-b079-4d6d-bde7-b54e20646f38
+  - baseNodeGuid: 2046f7ee-b079-4d6d-bde7-b54e20646f38
+    portName: Next
+    targetNodeGuid: 92a5b38c-7341-47b8-aff3-0312c9460132
   - baseNodeGuid: 92a5b38c-7341-47b8-aff3-0312c9460132
     portName: Next
     targetNodeGuid: 2aa2b9a9-04be-422e-8163-7d854b0e3db9
@@ -347,6 +344,12 @@ MonoBehaviour:
   - baseNodeGuid: 79608053-2662-46a4-949e-26e006fb8a51
     portName: About what?
     targetNodeGuid: d6234a32-76e9-4680-930f-b77ed890fe21
+  - baseNodeGuid: 79608053-2662-46a4-949e-26e006fb8a51
+    portName: I did.
+    targetNodeGuid: df94aa01-84dd-45ba-9827-e668f54cbb46
+  - baseNodeGuid: 79608053-2662-46a4-949e-26e006fb8a51
+    portName: I didn't.
+    targetNodeGuid: a4fab036-effa-4be0-9e4b-733d23933093
   - baseNodeGuid: d6234a32-76e9-4680-930f-b77ed890fe21
     portName: Next
     targetNodeGuid: 612bb978-3851-4da9-acef-6278f65c0a44
@@ -356,6 +359,9 @@ MonoBehaviour:
   - baseNodeGuid: 34241e83-2047-4224-846a-a0b7c4f294ae
     portName: I hate you.
     targetNodeGuid: f4be88e8-5a60-4dbd-9d0f-39005097e3d2
+  - baseNodeGuid: 34241e83-2047-4224-846a-a0b7c4f294ae
+    portName: I would never.
+    targetNodeGuid: 0ed07c33-c3c2-4c57-b041-dd2c60f0cc60
   - baseNodeGuid: f4be88e8-5a60-4dbd-9d0f-39005097e3d2
     portName: Next
     targetNodeGuid: 6c739c8a-98a9-499c-92be-76cddfd3ef64
@@ -368,12 +374,12 @@ MonoBehaviour:
   - baseNodeGuid: 052aa0bd-e40b-4bd5-b5e6-2d33875cc854
     portName: Next
     targetNodeGuid: e1435ded-8fcc-41fc-8366-f201dd3df4b8
-  - baseNodeGuid: 34241e83-2047-4224-846a-a0b7c4f294ae
-    portName: I would never.
-    targetNodeGuid: 0ed07c33-c3c2-4c57-b041-dd2c60f0cc60
-  - baseNodeGuid: 79608053-2662-46a4-949e-26e006fb8a51
-    portName: I did.
-    targetNodeGuid: df94aa01-84dd-45ba-9827-e668f54cbb46
+  - baseNodeGuid: e1435ded-8fcc-41fc-8366-f201dd3df4b8
+    portName: Next
+    targetNodeGuid: 7c19e1a6-dcb5-4e4a-94d8-bf66ec749cd4
+  - baseNodeGuid: 0ed07c33-c3c2-4c57-b041-dd2c60f0cc60
+    portName: Next
+    targetNodeGuid: 7c19e1a6-dcb5-4e4a-94d8-bf66ec749cd4
   - baseNodeGuid: df94aa01-84dd-45ba-9827-e668f54cbb46
     portName: Next
     targetNodeGuid: d2ca99a9-0ebd-4c6e-a222-59a4015e3f7a
@@ -389,21 +395,27 @@ MonoBehaviour:
   - baseNodeGuid: d2ca99a9-0ebd-4c6e-a222-59a4015e3f7a
     portName: I am not gonna tell you.
     targetNodeGuid: a4fab036-effa-4be0-9e4b-733d23933093
-  - baseNodeGuid: 79608053-2662-46a4-949e-26e006fb8a51
-    portName: I didn't.
-    targetNodeGuid: a4fab036-effa-4be0-9e4b-733d23933093
-  - baseNodeGuid: e1435ded-8fcc-41fc-8366-f201dd3df4b8
-    portName: Next
-    targetNodeGuid: 7c19e1a6-dcb5-4e4a-94d8-bf66ec749cd4
-  - baseNodeGuid: 0ed07c33-c3c2-4c57-b041-dd2c60f0cc60
-    portName: Next
-    targetNodeGuid: 7c19e1a6-dcb5-4e4a-94d8-bf66ec749cd4
   - baseNodeGuid: a4fab036-effa-4be0-9e4b-733d23933093
     portName: Next
     targetNodeGuid: 7c19e1a6-dcb5-4e4a-94d8-bf66ec749cd4
   - baseNodeGuid: 7c19e1a6-dcb5-4e4a-94d8-bf66ec749cd4
     portName: Next
     targetNodeGuid: 3a1bbb5d-8ab7-433f-9d84-ca649e93eac3
+  - baseNodeGuid: 3a1bbb5d-8ab7-433f-9d84-ca649e93eac3
+    portName: I hate it.
+    targetNodeGuid: 0f32947e-9b41-4b71-9622-2eeed5cc96bd
+  - baseNodeGuid: 3a1bbb5d-8ab7-433f-9d84-ca649e93eac3
+    portName: It is comfortable.
+    targetNodeGuid: 3d3038fb-f888-4258-a9f7-3b27ec5c73bd
+  - baseNodeGuid: 3a1bbb5d-8ab7-433f-9d84-ca649e93eac3
+    portName: I cannot wait to reach Titania.
+    targetNodeGuid: 8f91d8eb-673a-4338-a1f7-520d7fe70392
+  - baseNodeGuid: 3d3038fb-f888-4258-a9f7-3b27ec5c73bd
+    portName: Next
+    targetNodeGuid: 3f9a2259-15d3-45d6-ab51-035b7c487b43
+  - baseNodeGuid: 3f9a2259-15d3-45d6-ab51-035b7c487b43
+    portName: Next
+    targetNodeGuid: 13195953-4ee4-4304-822f-2f54230804b3
   - baseNodeGuid: ce3313b1-fef4-4d6e-bcc8-815e5391c88e
     portName: Next
     targetNodeGuid: a8328ec8-3fdb-4cb1-9d86-5d7ded0a2861
@@ -413,24 +425,15 @@ MonoBehaviour:
   - baseNodeGuid: 4c8803c6-c8f0-40d0-a114-c061862887d8
     portName: Next
     targetNodeGuid: 863ff8be-7732-42de-a9c1-bfd8c4d42c23
-  - baseNodeGuid: 863ff8be-7732-42de-a9c1-bfd8c4d42c23
-    portName: Next
-    targetNodeGuid: 751c93ef-209c-4a63-ba7a-70496ae709d3
-  - baseNodeGuid: 3a1bbb5d-8ab7-433f-9d84-ca649e93eac3
-    portName: I hate it.
-    targetNodeGuid: 0f32947e-9b41-4b71-9622-2eeed5cc96bd
   - baseNodeGuid: 0f32947e-9b41-4b71-9622-2eeed5cc96bd
     portName: Next
     targetNodeGuid: ce3313b1-fef4-4d6e-bcc8-815e5391c88e
-  - baseNodeGuid: 3a1bbb5d-8ab7-433f-9d84-ca649e93eac3
-    portName: It is comfortable.
-    targetNodeGuid: 3d3038fb-f888-4258-a9f7-3b27ec5c73bd
-  - baseNodeGuid: 3d3038fb-f888-4258-a9f7-3b27ec5c73bd
+  - baseNodeGuid: 863ff8be-7732-42de-a9c1-bfd8c4d42c23
     portName: Next
-    targetNodeGuid: 3f9a2259-15d3-45d6-ab51-035b7c487b43
-  - baseNodeGuid: 3a1bbb5d-8ab7-433f-9d84-ca649e93eac3
-    portName: I cannot wait to reach Titania.
-    targetNodeGuid: 8f91d8eb-673a-4338-a1f7-520d7fe70392
+    targetNodeGuid: 751c93ef-209c-4a63-ba7a-70496ae709d3
+  - baseNodeGuid: 8f91d8eb-673a-4338-a1f7-520d7fe70392
+    portName: Next
+    targetNodeGuid: 13195953-4ee4-4304-822f-2f54230804b3
   - baseNodeGuid: 751c93ef-209c-4a63-ba7a-70496ae709d3
     portName: Yes. They are too intrusive.
     targetNodeGuid: f6448bf8-7d9d-468a-a412-06a4c49ce64b
@@ -441,12 +444,6 @@ MonoBehaviour:
     portName: Next
     targetNodeGuid: 13195953-4ee4-4304-822f-2f54230804b3
   - baseNodeGuid: a4591c5f-0d28-4b9e-9ccd-5a3783286135
-    portName: Next
-    targetNodeGuid: 13195953-4ee4-4304-822f-2f54230804b3
-  - baseNodeGuid: 3f9a2259-15d3-45d6-ab51-035b7c487b43
-    portName: Next
-    targetNodeGuid: 13195953-4ee4-4304-822f-2f54230804b3
-  - baseNodeGuid: 8f91d8eb-673a-4338-a1f7-520d7fe70392
     portName: Next
     targetNodeGuid: 13195953-4ee4-4304-822f-2f54230804b3
   - baseNodeGuid: 13195953-4ee4-4304-822f-2f54230804b3
@@ -461,6 +458,9 @@ MonoBehaviour:
   - baseNodeGuid: 69cda921-b57f-4d3e-8837-ae2a29e3db2d
     portName: Next
     targetNodeGuid: 203d0688-6c3e-4415-a2fa-99a2813c3c10
+  - baseNodeGuid: 203d0688-6c3e-4415-a2fa-99a2813c3c10
+    portName: Next
+    targetNodeGuid: f8a29e6a-a775-44a0-b5df-e88cdf759057
   - baseNodeGuid: 2aa2b9a9-04be-422e-8163-7d854b0e3db9
     portName: Next
     targetNodeGuid: 27938509-7d2e-4ee1-b8b9-69fd8602d2d9
@@ -1038,7 +1038,7 @@ MonoBehaviour:
     DialogTitle: NpcNode
     Position: {x: 660.8, y: 1266.3999}
     Type: 1
-    DialogText: I am sorry about last time.
+    DialogText: I am sorry about yesterday.
     Image: {fileID: 0}
     customRespondTime: 0
     GameEvent: {fileID: 0}
