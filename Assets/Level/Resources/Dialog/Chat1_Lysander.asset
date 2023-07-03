@@ -31,15 +31,6 @@ MonoBehaviour:
   - baseNodeGuid: faff51f4-377e-4692-ab7c-c7f30acf902b
     portName: Next
     targetNodeGuid: 7560b853-2f0b-4e85-bbd8-9ac281ba7e5c
-  - baseNodeGuid: 0be1f806-562b-4adb-99fa-e11163b589a0
-    portName: Tough it out big guy :P
-    targetNodeGuid: 3a024425-ee36-47bc-a6ab-9bf7030eb99c
-  - baseNodeGuid: 0be1f806-562b-4adb-99fa-e11163b589a0
-    portName: Ah that must be weird. I'm sure it'll be better soon.
-    targetNodeGuid: 22a3b96a-3d7b-4516-a300-0ca1955bb750
-  - baseNodeGuid: 0be1f806-562b-4adb-99fa-e11163b589a0
-    portName: Try moving around a bit, maybe it'll help.
-    targetNodeGuid: bef6feb3-4b36-498d-ab8b-46c75822408f
   - baseNodeGuid: 3a024425-ee36-47bc-a6ab-9bf7030eb99c
     portName: Next
     targetNodeGuid: 061a2291-a641-4e37-accb-662b9433452e
@@ -164,12 +155,6 @@ MonoBehaviour:
   - baseNodeGuid: 66ba4f2b-cb02-4c3b-b640-6a29c19d4c64
     portName: Next
     targetNodeGuid: 905c4bbb-9b3e-4754-b0a2-621742dbd448
-  - baseNodeGuid: f36bf331-b5d5-4c96-aad3-92c737e6cfd1
-    portName: I am too
-    targetNodeGuid: d597437d-b76d-401b-85ef-c02767ddcd10
-  - baseNodeGuid: f36bf331-b5d5-4c96-aad3-92c737e6cfd1
-    portName: Ran out of things to do?
-    targetNodeGuid: a6aad89a-fa01-48d0-b9a9-7a364a2073eb
   - baseNodeGuid: d597437d-b76d-401b-85ef-c02767ddcd10
     portName: Next
     targetNodeGuid: e411e7ee-b004-453f-8149-dcab5ff44810
@@ -200,9 +185,6 @@ MonoBehaviour:
   - baseNodeGuid: 42e04607-dc7a-49bd-a7d2-1b5cc532f942
     portName: Next
     targetNodeGuid: c5b46813-168b-4261-837b-1fa7a0582e0a
-  - baseNodeGuid: 6c56a508-574e-4e5a-b8ea-b457ba76b0e7
-    portName: Next
-    targetNodeGuid: c5b46813-168b-4261-837b-1fa7a0582e0a
   - baseNodeGuid: c5b46813-168b-4261-837b-1fa7a0582e0a
     portName: Next
     targetNodeGuid: 0bf0ae34-65ca-4b0e-9f63-459bc40cf4f9
@@ -212,15 +194,6 @@ MonoBehaviour:
   - baseNodeGuid: 452bc244-d147-4d3e-a2f9-2cc3f1a0c342
     portName: Next
     targetNodeGuid: 0bf0ae34-65ca-4b0e-9f63-459bc40cf4f9
-  - baseNodeGuid: f437e3e8-499c-4e7f-bf3b-ad61f94601d7
-    portName: By PUCK?
-    targetNodeGuid: 0d5ae83e-4507-4fc5-8b8c-f54374fc940a
-  - baseNodeGuid: f437e3e8-499c-4e7f-bf3b-ad61f94601d7
-    portName: I wish we could dance together
-    targetNodeGuid: 85570b2f-7d86-4905-997c-6cfb953ce6a2
-  - baseNodeGuid: f437e3e8-499c-4e7f-bf3b-ad61f94601d7
-    portName: Makes sense.
-    targetNodeGuid: f4e4a8c9-a5cc-4680-91b7-3e48781080aa
   - baseNodeGuid: ee6e14f3-da33-40df-9e71-ef2da081d71f
     portName: Except for, you know..
     targetNodeGuid: 5b22c63e-f808-4106-880b-54f8869871d1
@@ -233,9 +206,6 @@ MonoBehaviour:
   - baseNodeGuid: 908c522d-9008-4597-a2e8-dec2572e4083
     portName: Next
     targetNodeGuid: 0e8e0bed-58b0-4636-801d-a6a5a01bed8d
-  - baseNodeGuid: 0e8e0bed-58b0-4636-801d-a6a5a01bed8d
-    portName: Next
-    targetNodeGuid: b5a4ac14-1b84-46e4-a629-aaf8a347b25a
   - baseNodeGuid: 905c4bbb-9b3e-4754-b0a2-621742dbd448
     portName: I am too
     targetNodeGuid: d597437d-b76d-401b-85ef-c02767ddcd10
@@ -287,9 +257,6 @@ MonoBehaviour:
   - baseNodeGuid: f4e4a8c9-a5cc-4680-91b7-3e48781080aa
     portName: Next
     targetNodeGuid: fbd00a04-9727-4c17-9b28-d6970397c82b
-  - baseNodeGuid: a009ed75-00d4-4ba7-b351-f11493aa4cab
-    portName: Next
-    targetNodeGuid: 5020b08c-5ecf-45d3-b21a-88482c73d5fc
   - baseNodeGuid: 5020b08c-5ecf-45d3-b21a-88482c73d5fc
     portName: Next
     targetNodeGuid: b5a4ac14-1b84-46e4-a629-aaf8a347b25a
@@ -320,9 +287,6 @@ MonoBehaviour:
   - baseNodeGuid: b9720445-f3c9-4499-b041-941aa047170d
     portName: Next
     targetNodeGuid: d597437d-b76d-401b-85ef-c02767ddcd10
-  - baseNodeGuid: 2c4d63e8-5aa0-4ae6-8d67-516de55bcc74
-    portName: Next
-    targetNodeGuid: cae4a569-0397-4a04-ab80-c8ca7a59d6f0
   - baseNodeGuid: 73d22413-5100-4a00-bb99-e2ff8d3dc86a
     portName: Next
     targetNodeGuid: 694323c9-fc00-420a-bac1-1365f56bee74
@@ -377,18 +341,9 @@ MonoBehaviour:
   - baseNodeGuid: d1e3a8da-f28a-4f8e-a080-16fb0be96de2
     portName: Next
     targetNodeGuid: 8ea5951a-e092-4750-8de6-f47baa811c0b
-  - baseNodeGuid: a9034362-0485-428c-bb50-d1fa6cbf4d81
-    portName: Next
-    targetNodeGuid: 6c1fb586-56b6-45ff-9402-215a31b0f407
   - baseNodeGuid: 6c1fb586-56b6-45ff-9402-215a31b0f407
     portName: Next
     targetNodeGuid: a9274b33-efc0-4bb8-add7-314c40085fa0
-  - baseNodeGuid: 8ea5951a-e092-4750-8de6-f47baa811c0b
-    portName: Only a few more days
-    targetNodeGuid: d1607480-10d1-48e0-950f-19ef5b247961
-  - baseNodeGuid: 8ea5951a-e092-4750-8de6-f47baa811c0b
-    portName: Why did you never ask me out?
-    targetNodeGuid: e8a2fb8f-4aa7-44d5-af0a-c5faf841802c
   - baseNodeGuid: d1607480-10d1-48e0-950f-19ef5b247961
     portName: Next
     targetNodeGuid: a9034362-0485-428c-bb50-d1fa6cbf4d81
@@ -401,9 +356,6 @@ MonoBehaviour:
   - baseNodeGuid: d72ea1fb-42ae-4708-93b0-58bf7a57bb63
     portName: Next
     targetNodeGuid: c3e786ea-c341-4b8c-82d6-869feed3fd7c
-  - baseNodeGuid: c3e786ea-c341-4b8c-82d6-869feed3fd7c
-    portName: Next
-    targetNodeGuid: 3da3fadd-fac6-4108-b701-d0e861f8be45
   - baseNodeGuid: bf16003e-732b-4ae5-acbc-8d54f9f43cf1
     portName: I do.
     targetNodeGuid: 2d820a34-e953-4d26-b474-5d6fc57b077f
@@ -422,21 +374,12 @@ MonoBehaviour:
   - baseNodeGuid: e8a2fb8f-4aa7-44d5-af0a-c5faf841802c
     portName: Next
     targetNodeGuid: 8ea5951a-e092-4750-8de6-f47baa811c0b
-  - baseNodeGuid: 8ad82d6c-ce3c-42a0-8b02-0965d166a38c
-    portName: Saame
-    targetNodeGuid: 9684d83b-557b-4bd2-aa71-28f69e5314e2
   - baseNodeGuid: 267e925c-625c-45fe-990e-b8096c108ecd
     portName: Next
     targetNodeGuid: 271c000a-6a1e-4152-9f76-ad53d4e21452
-  - baseNodeGuid: 3b1d5054-d4f0-44fd-8b9d-08fcf5bb4a4a
-    portName: Next
-    targetNodeGuid: b5ac51ee-e5ef-410e-995a-aeb8e44f3878
   - baseNodeGuid: a9274b33-efc0-4bb8-add7-314c40085fa0
     portName: Next
     targetNodeGuid: 3b1d5054-d4f0-44fd-8b9d-08fcf5bb4a4a
-  - baseNodeGuid: b5ac51ee-e5ef-410e-995a-aeb8e44f3878
-    portName: Placeholder, telling Lysander about PUCK
-    targetNodeGuid: 5e4365b5-4aef-4da7-bb2d-d95a8c54c9c2
   - baseNodeGuid: f761d927-1a30-4d94-8b96-2c1c6db76462
     portName: Next
     targetNodeGuid: 0acdfed0-8fc6-4c97-a667-bdb24ef4f8db
@@ -467,27 +410,60 @@ MonoBehaviour:
   - baseNodeGuid: 5d406f89-f78c-4714-a2af-451801377979
     portName: Next
     targetNodeGuid: 15e07895-1fd2-48cf-aa94-b17463c67351
-  - baseNodeGuid: 5e4365b5-4aef-4da7-bb2d-d95a8c54c9c2
+  - baseNodeGuid: 0be1f806-562b-4adb-99fa-e11163b589a0
+    portName: Tough it out big guy :P
+    targetNodeGuid: 3a024425-ee36-47bc-a6ab-9bf7030eb99c
+  - baseNodeGuid: 0be1f806-562b-4adb-99fa-e11163b589a0
+    portName: Ah that must be weird. I'm sure it'll be better soon.
+    targetNodeGuid: 22a3b96a-3d7b-4516-a300-0ca1955bb750
+  - baseNodeGuid: 0be1f806-562b-4adb-99fa-e11163b589a0
+    portName: Try moving around a bit, maybe it'll help.
+    targetNodeGuid: bef6feb3-4b36-498d-ab8b-46c75822408f
+  - baseNodeGuid: 6c56a508-574e-4e5a-b8ea-b457ba76b0e7
     portName: Next
-    targetNodeGuid: d0e21301-1b8a-4602-b711-9a77334904e3
-  - baseNodeGuid: 96ab8770-2fe7-4203-a8a5-2f8004166fec
+    targetNodeGuid: c5b46813-168b-4261-837b-1fa7a0582e0a
+  - baseNodeGuid: a009ed75-00d4-4ba7-b351-f11493aa4cab
     portName: Next
-    targetNodeGuid: cf225182-6de9-4940-9fc8-9f26b676fe6d
-  - baseNodeGuid: d0e21301-1b8a-4602-b711-9a77334904e3
-    portName: Placeholder, Additional Dialogue
-    targetNodeGuid: 96ab8770-2fe7-4203-a8a5-2f8004166fec
-  - baseNodeGuid: 8ad82d6c-ce3c-42a0-8b02-0965d166a38c
-    portName: And the drinks
-    targetNodeGuid: e9c5871c-5d32-4489-b01d-fd3f2898fffb
+    targetNodeGuid: 5020b08c-5ecf-45d3-b21a-88482c73d5fc
+  - baseNodeGuid: a9034362-0485-428c-bb50-d1fa6cbf4d81
+    portName: Next
+    targetNodeGuid: 6c1fb586-56b6-45ff-9402-215a31b0f407
+  - baseNodeGuid: 8ea5951a-e092-4750-8de6-f47baa811c0b
+    portName: Only a few more days
+    targetNodeGuid: d1607480-10d1-48e0-950f-19ef5b247961
+  - baseNodeGuid: 8ea5951a-e092-4750-8de6-f47baa811c0b
+    portName: Why did you never ask me out?
+    targetNodeGuid: e8a2fb8f-4aa7-44d5-af0a-c5faf841802c
+  - baseNodeGuid: 0e8e0bed-58b0-4636-801d-a6a5a01bed8d
+    portName: Next
+    targetNodeGuid: b5a4ac14-1b84-46e4-a629-aaf8a347b25a
+  - baseNodeGuid: 2c4d63e8-5aa0-4ae6-8d67-516de55bcc74
+    portName: Next
+    targetNodeGuid: cae4a569-0397-4a04-ab80-c8ca7a59d6f0
   - baseNodeGuid: e9c5871c-5d32-4489-b01d-fd3f2898fffb
     portName: Next
     targetNodeGuid: 9684d83b-557b-4bd2-aa71-28f69e5314e2
-  - baseNodeGuid: 9684d83b-557b-4bd2-aa71-28f69e5314e2
-    portName: Next
-    targetNodeGuid: 12201ac2-da1d-4790-bb5b-31598316cf76
   - baseNodeGuid: 12201ac2-da1d-4790-bb5b-31598316cf76
     portName: Next
     targetNodeGuid: 968f4383-467e-442e-ba0b-ba9eb8e2e2e7
+  - baseNodeGuid: f437e3e8-499c-4e7f-bf3b-ad61f94601d7
+    portName: By PUCK?
+    targetNodeGuid: 0d5ae83e-4507-4fc5-8b8c-f54374fc940a
+  - baseNodeGuid: f437e3e8-499c-4e7f-bf3b-ad61f94601d7
+    portName: I wish we could dance together
+    targetNodeGuid: 85570b2f-7d86-4905-997c-6cfb953ce6a2
+  - baseNodeGuid: f437e3e8-499c-4e7f-bf3b-ad61f94601d7
+    portName: Makes sense.
+    targetNodeGuid: f4e4a8c9-a5cc-4680-91b7-3e48781080aa
+  - baseNodeGuid: 8ad82d6c-ce3c-42a0-8b02-0965d166a38c
+    portName: Saame
+    targetNodeGuid: 9684d83b-557b-4bd2-aa71-28f69e5314e2
+  - baseNodeGuid: 8ad82d6c-ce3c-42a0-8b02-0965d166a38c
+    portName: And the drinks
+    targetNodeGuid: e9c5871c-5d32-4489-b01d-fd3f2898fffb
+  - baseNodeGuid: 9684d83b-557b-4bd2-aa71-28f69e5314e2
+    portName: Next
+    targetNodeGuid: 12201ac2-da1d-4790-bb5b-31598316cf76
   - baseNodeGuid: 968f4383-467e-442e-ba0b-ba9eb8e2e2e7
     portName: Next
     targetNodeGuid: 41303abe-e6d7-4221-8244-c431c84e87d4
@@ -506,24 +482,252 @@ MonoBehaviour:
   - baseNodeGuid: ae49054a-bf5e-4f46-b03b-a916b37e6ad7
     portName: And you?
     targetNodeGuid: 4dd0dd21-b5fc-427c-afce-732d77e6d015
+  - baseNodeGuid: c3e786ea-c341-4b8c-82d6-869feed3fd7c
+    portName: Next
+    targetNodeGuid: 3da3fadd-fac6-4108-b701-d0e861f8be45
   - baseNodeGuid: 4dd0dd21-b5fc-427c-afce-732d77e6d015
     portName: Next
     targetNodeGuid: c10e760f-f211-4ccc-a628-3fae33a0571f
+  - baseNodeGuid: f36bf331-b5d5-4c96-aad3-92c737e6cfd1
+    portName: I am too
+    targetNodeGuid: d597437d-b76d-401b-85ef-c02767ddcd10
+  - baseNodeGuid: f36bf331-b5d5-4c96-aad3-92c737e6cfd1
+    portName: Ran out of things to do?
+    targetNodeGuid: a6aad89a-fa01-48d0-b9a9-7a364a2073eb
   - baseNodeGuid: c10e760f-f211-4ccc-a628-3fae33a0571f
     portName: Still feeling bored?
     targetNodeGuid: 9ced94af-c92e-42f7-8b0f-e61c4cc0f5d8
   - baseNodeGuid: c10e760f-f211-4ccc-a628-3fae33a0571f
     portName: Good
     targetNodeGuid: 814892a7-ae00-445f-bddd-fd6238d957b8
-  - baseNodeGuid: 814892a7-ae00-445f-bddd-fd6238d957b8
-    portName: Next
-    targetNodeGuid: a9034362-0485-428c-bb50-d1fa6cbf4d81
   - baseNodeGuid: 9ced94af-c92e-42f7-8b0f-e61c4cc0f5d8
     portName: Next
     targetNodeGuid: 772ef62d-a38b-4cfc-999b-37743d8158db
+  - baseNodeGuid: 814892a7-ae00-445f-bddd-fd6238d957b8
+    portName: Next
+    targetNodeGuid: a9034362-0485-428c-bb50-d1fa6cbf4d81
   - baseNodeGuid: 772ef62d-a38b-4cfc-999b-37743d8158db
     portName: Next
     targetNodeGuid: a9034362-0485-428c-bb50-d1fa6cbf4d81
+  - baseNodeGuid: 96ab8770-2fe7-4203-a8a5-2f8004166fec
+    portName: Next
+    targetNodeGuid: cf225182-6de9-4940-9fc8-9f26b676fe6d
+  - baseNodeGuid: 3b1d5054-d4f0-44fd-8b9d-08fcf5bb4a4a
+    portName: Next
+    targetNodeGuid: a60c5e69-7685-46d0-8bc3-674c409b80c0
+  - baseNodeGuid: a60c5e69-7685-46d0-8bc3-674c409b80c0
+    portName: Hey Lysander, are you there?
+    targetNodeGuid: c6e2e43a-41c9-4b95-be1c-1f36a70ef7fe
+  - baseNodeGuid: a60c5e69-7685-46d0-8bc3-674c409b80c0
+    portName: Are you back yet?
+    targetNodeGuid: c6e2e43a-41c9-4b95-be1c-1f36a70ef7fe
+  - baseNodeGuid: 9dda578e-040e-4617-877e-788e6b756072
+    portName: Next
+    targetNodeGuid: 5a7c9bb2-4d93-4e44-a32f-f3407821064f
+  - baseNodeGuid: 5a7c9bb2-4d93-4e44-a32f-f3407821064f
+    portName: What did you do just now?
+    targetNodeGuid: 8b8b5ccd-87ee-4909-9538-a3a6e18b618d
+  - baseNodeGuid: 8b8b5ccd-87ee-4909-9538-a3a6e18b618d
+    portName: Next
+    targetNodeGuid: a585bbdf-36de-48c1-ae06-8c400ae95023
+  - baseNodeGuid: a585bbdf-36de-48c1-ae06-8c400ae95023
+    portName: Next
+    targetNodeGuid: 2155e6c0-63e1-463f-89a7-b607ccea5767
+  - baseNodeGuid: 2155e6c0-63e1-463f-89a7-b607ccea5767
+    portName: Then what was it?
+    targetNodeGuid: 480a9a73-2560-4cc7-9335-eae7d7dda47d
+  - baseNodeGuid: 480a9a73-2560-4cc7-9335-eae7d7dda47d
+    portName: Next
+    targetNodeGuid: 55d48f3c-a6e4-40e9-83d4-e479f82d523b
+  - baseNodeGuid: 55d48f3c-a6e4-40e9-83d4-e479f82d523b
+    portName: What did you fix?
+    targetNodeGuid: 9453fc3e-6b0c-47c0-8f04-39e2f8fab2ec
+  - baseNodeGuid: 9453fc3e-6b0c-47c0-8f04-39e2f8fab2ec
+    portName: Next
+    targetNodeGuid: bf57802e-d527-4ad6-9d2f-203afddfe763
+  - baseNodeGuid: bf57802e-d527-4ad6-9d2f-203afddfe763
+    portName: Without any tools?
+    targetNodeGuid: 486f5a99-0d85-437d-b254-4f0c0ef48897
+  - baseNodeGuid: d2c8a3f2-d348-4750-a466-398ba9c392dd
+    portName: Strange, mine does not have any.
+    targetNodeGuid: c33438fe-1fb9-4e60-ab44-1e2d6c2363f6
+  - baseNodeGuid: d2c83f83-48aa-44aa-880b-6187102a9028
+    portName: Next
+    targetNodeGuid: a954205a-498b-438c-82df-4d0ba5dac3af
+  - baseNodeGuid: a954205a-498b-438c-82df-4d0ba5dac3af
+    portName: Next
+    targetNodeGuid: 89d89a53-7c51-4591-91c2-2248c64fb223
+  - baseNodeGuid: 89d89a53-7c51-4591-91c2-2248c64fb223
+    portName: Kinda hart to explain
+    targetNodeGuid: aad52c51-ac84-4907-a60d-46bcabf10a5a
+  - baseNodeGuid: aad52c51-ac84-4907-a60d-46bcabf10a5a
+    portName: Next
+    targetNodeGuid: 829d29ac-7a24-4e0b-b988-86ecc203567b
+  - baseNodeGuid: 829d29ac-7a24-4e0b-b988-86ecc203567b
+    portName: Are you not gonna ask?
+    targetNodeGuid: af4408d1-3968-468b-bdfc-84c7156c6a6a
+  - baseNodeGuid: af4408d1-3968-468b-bdfc-84c7156c6a6a
+    portName: Next
+    targetNodeGuid: b398a33c-40d7-42b2-965d-d85beeb32652
+  - baseNodeGuid: b398a33c-40d7-42b2-965d-d85beeb32652
+    portName: Next
+    targetNodeGuid: 4f83bf3c-8571-4591-babc-c1806802036a
+  - baseNodeGuid: 4f83bf3c-8571-4591-babc-c1806802036a
+    portName: Next
+    targetNodeGuid: 93151917-2036-4703-a191-eeec9735edfc
+  - baseNodeGuid: 93151917-2036-4703-a191-eeec9735edfc
+    portName: Next
+    targetNodeGuid: aae7eb14-20dd-4003-85b4-5cbe83650130
+  - baseNodeGuid: aae7eb14-20dd-4003-85b4-5cbe83650130
+    portName: Next
+    targetNodeGuid: 906e9966-4837-41eb-8dc9-2e6d7804b7b8
+  - baseNodeGuid: 906e9966-4837-41eb-8dc9-2e6d7804b7b8
+    portName: I'm sorry.
+    targetNodeGuid: c8953073-1292-48c1-a52d-1b74b698c901
+  - baseNodeGuid: 906e9966-4837-41eb-8dc9-2e6d7804b7b8
+    portName: You didn't need to come if you did not want to.
+    targetNodeGuid: c8953073-1292-48c1-a52d-1b74b698c901
+  - baseNodeGuid: c8953073-1292-48c1-a52d-1b74b698c901
+    portName: Next
+    targetNodeGuid: 602e8b41-6332-4a03-aaf1-2365f7b2edda
+  - baseNodeGuid: 602e8b41-6332-4a03-aaf1-2365f7b2edda
+    portName: Okay.
+    targetNodeGuid: a4b2aefd-9963-4139-9a4c-939cb3db359a
+  - baseNodeGuid: 602e8b41-6332-4a03-aaf1-2365f7b2edda
+    portName: It will feel better when we finally arrive.
+    targetNodeGuid: 55abd991-c33c-45ae-adce-6ebe201863d6
+  - baseNodeGuid: 89d89a53-7c51-4591-91c2-2248c64fb223
+    portName: Not really.
+    targetNodeGuid: dfcc3c77-04e3-419e-91ee-8c9224f36630
+  - baseNodeGuid: dfcc3c77-04e3-419e-91ee-8c9224f36630
+    portName: Next
+    targetNodeGuid: a3fe1e2a-18c8-488f-a30b-bce939979d60
+  - baseNodeGuid: a3fe1e2a-18c8-488f-a30b-bce939979d60
+    portName: I am feeling bad about Demetrius
+    targetNodeGuid: 18b4bbaf-89e5-4ff2-a025-60b64c260137
+  - baseNodeGuid: a3fe1e2a-18c8-488f-a30b-bce939979d60
+    portName: This isolation is getting to me
+    targetNodeGuid: 18b4bbaf-89e5-4ff2-a025-60b64c260137
+  - baseNodeGuid: 18b4bbaf-89e5-4ff2-a025-60b64c260137
+    portName: Next
+    targetNodeGuid: 775c68da-1743-42c6-9a68-e5ab4bbf1c87
+  - baseNodeGuid: 775c68da-1743-42c6-9a68-e5ab4bbf1c87
+    portName: Next
+    targetNodeGuid: fbe6e321-b0b6-4574-85a0-6d2925b0181b
+  - baseNodeGuid: fbe6e321-b0b6-4574-85a0-6d2925b0181b
+    portName: Next
+    targetNodeGuid: afdb9c60-2f13-4717-b2e2-6a7d6d7260b5
+  - baseNodeGuid: afdb9c60-2f13-4717-b2e2-6a7d6d7260b5
+    portName: Why are you so rude?
+    targetNodeGuid: 906e9966-4837-41eb-8dc9-2e6d7804b7b8
+  - baseNodeGuid: afdb9c60-2f13-4717-b2e2-6a7d6d7260b5
+    portName: I'm sorry.
+    targetNodeGuid: c8953073-1292-48c1-a52d-1b74b698c901
+  - baseNodeGuid: afdb9c60-2f13-4717-b2e2-6a7d6d7260b5
+    portName: You didn't need to come if you did not want to.
+    targetNodeGuid: c8953073-1292-48c1-a52d-1b74b698c901
+  - baseNodeGuid: 2283471d-37fb-4f05-975c-e5f9d48e9b5f
+    portName: What came up?
+    targetNodeGuid: 0f326455-a4f6-4005-a2ae-bd3e1de916c3
+  - baseNodeGuid: 0f326455-a4f6-4005-a2ae-bd3e1de916c3
+    portName: Next
+    targetNodeGuid: 9dda578e-040e-4617-877e-788e6b756072
+  - baseNodeGuid: 8bbeeaf8-d9be-4ad6-bb11-999fcf7a5cc8
+    portName: Take care Lysander.
+    targetNodeGuid: 0d7ea721-7d36-4df1-8309-423c38c768b2
+  - baseNodeGuid: 55d48f3c-a6e4-40e9-83d4-e479f82d523b
+    portName: Mhh, alright...
+    targetNodeGuid: 9e0f3542-406a-4b06-9907-e32415aef0ad
+  - baseNodeGuid: 9e0f3542-406a-4b06-9907-e32415aef0ad
+    portName: False
+    targetNodeGuid: e95baebb-0778-48ea-a01e-dd78494bcace
+  - baseNodeGuid: bf57802e-d527-4ad6-9d2f-203afddfe763
+    portName: Good then
+    targetNodeGuid: 9e0f3542-406a-4b06-9907-e32415aef0ad
+  - baseNodeGuid: 40e86422-4763-4306-b8fa-6a63e9da89d9
+    portName: False
+    targetNodeGuid: d2c8a3f2-d348-4750-a466-398ba9c392dd
+  - baseNodeGuid: 486f5a99-0d85-437d-b254-4f0c0ef48897
+    portName: Next
+    targetNodeGuid: 40e86422-4763-4306-b8fa-6a63e9da89d9
+  - baseNodeGuid: 5e941955-41ea-4e0e-bed6-63f7c3010339
+    portName: Strange, mine does not have any.
+    targetNodeGuid: c33438fe-1fb9-4e60-ab44-1e2d6c2363f6
+  - baseNodeGuid: 40e86422-4763-4306-b8fa-6a63e9da89d9
+    portName: True
+    targetNodeGuid: 5e941955-41ea-4e0e-bed6-63f7c3010339
+  - baseNodeGuid: 5e941955-41ea-4e0e-bed6-63f7c3010339
+    portName: Okay.
+    targetNodeGuid: 8bbeeaf8-d9be-4ad6-bb11-999fcf7a5cc8
+  - baseNodeGuid: c66f3994-ea96-4cb0-aeae-689fcf99063a
+    portName: False
+    targetNodeGuid: 1bf9e9c5-1f83-4f4c-ab31-7d4535ea9705
+  - baseNodeGuid: c33438fe-1fb9-4e60-ab44-1e2d6c2363f6
+    portName: Next
+    targetNodeGuid: c66f3994-ea96-4cb0-aeae-689fcf99063a
+  - baseNodeGuid: c66f3994-ea96-4cb0-aeae-689fcf99063a
+    portName: True
+    targetNodeGuid: 8bbeeaf8-d9be-4ad6-bb11-999fcf7a5cc8
+  - baseNodeGuid: e95baebb-0778-48ea-a01e-dd78494bcace
+    portName: Is everything okay?
+    targetNodeGuid: 55a8e01b-38d4-436c-8c35-5c8b9392a845
+  - baseNodeGuid: 2283471d-37fb-4f05-975c-e5f9d48e9b5f
+    portName: Is everything okay?
+    targetNodeGuid: 55a8e01b-38d4-436c-8c35-5c8b9392a845
+  - baseNodeGuid: 55a8e01b-38d4-436c-8c35-5c8b9392a845
+    portName: Next
+    targetNodeGuid: d2c83f83-48aa-44aa-880b-6187102a9028
+  - baseNodeGuid: d2c8a3f2-d348-4750-a466-398ba9c392dd
+    portName: Is everything okay?
+    targetNodeGuid: 55a8e01b-38d4-436c-8c35-5c8b9392a845
+  - baseNodeGuid: 1bf9e9c5-1f83-4f4c-ab31-7d4535ea9705
+    portName: Is everything okay?
+    targetNodeGuid: 55a8e01b-38d4-436c-8c35-5c8b9392a845
+  - baseNodeGuid: 1bf9e9c5-1f83-4f4c-ab31-7d4535ea9705
+    portName: Is everything okay?
+    targetNodeGuid: 55a8e01b-38d4-436c-8c35-5c8b9392a845
+  - baseNodeGuid: 2aa7aadf-5e87-4875-b8b8-ed5d3eeb749b
+    portName: True
+    targetNodeGuid: 8bbeeaf8-d9be-4ad6-bb11-999fcf7a5cc8
+  - baseNodeGuid: a4b2aefd-9963-4139-9a4c-939cb3db359a
+    portName: Me neither.
+    targetNodeGuid: 2aa7aadf-5e87-4875-b8b8-ed5d3eeb749b
+  - baseNodeGuid: 55abd991-c33c-45ae-adce-6ebe201863d6
+    portName: Next
+    targetNodeGuid: 2aa7aadf-5e87-4875-b8b8-ed5d3eeb749b
+  - baseNodeGuid: a4b2aefd-9963-4139-9a4c-939cb3db359a
+    portName: Let me know when you want to.
+    targetNodeGuid: 2aa7aadf-5e87-4875-b8b8-ed5d3eeb749b
+  - baseNodeGuid: 2aa7aadf-5e87-4875-b8b8-ed5d3eeb749b
+    portName: False
+    targetNodeGuid: de40f734-e12c-41c5-a991-929a547617bd
+  - baseNodeGuid: de40f734-e12c-41c5-a991-929a547617bd
+    portName: Next
+    targetNodeGuid: d1cdd548-b7df-4153-a834-e997ca3b67cd
+  - baseNodeGuid: 5a7c9bb2-4d93-4e44-a32f-f3407821064f
+    portName: Why did you have to leave for a bit?
+    targetNodeGuid: 78502078-aa53-44a4-9a6a-685ba888c543
+  - baseNodeGuid: dd0a6dd8-ab0a-4551-82c0-aacb73127aa0
+    portName: Next
+    targetNodeGuid: 2155e6c0-63e1-463f-89a7-b607ccea5767
+  - baseNodeGuid: 78502078-aa53-44a4-9a6a-685ba888c543
+    portName: Next
+    targetNodeGuid: dd0a6dd8-ab0a-4551-82c0-aacb73127aa0
+  - baseNodeGuid: d1cdd548-b7df-4153-a834-e997ca3b67cd
+    portName: Why did you have to leave for a bit?
+    targetNodeGuid: 78502078-aa53-44a4-9a6a-685ba888c543
+  - baseNodeGuid: c6e2e43a-41c9-4b95-be1c-1f36a70ef7fe
+    portName: Next
+    targetNodeGuid: 41ecee35-b3ec-4c75-aace-92a5538248b3
+  - baseNodeGuid: 41ecee35-b3ec-4c75-aace-92a5538248b3
+    portName: Next
+    targetNodeGuid: 2283471d-37fb-4f05-975c-e5f9d48e9b5f
+  - baseNodeGuid: 0d7ea721-7d36-4df1-8309-423c38c768b2
+    portName: Next
+    targetNodeGuid: 96ab8770-2fe7-4203-a8a5-2f8004166fec
+  - baseNodeGuid: 8bbeeaf8-d9be-4ad6-bb11-999fcf7a5cc8
+    portName: P.U.C.K is impersonating Demetrius.
+    targetNodeGuid: 96ab8770-2fe7-4203-a8a5-2f8004166fec
   dialogNodeData:
   - Guid: ac7acd63-894e-4a46-be96-2c9c8b18f76e
     DialogTitle: Npc Node
@@ -2606,41 +2810,9 @@ MonoBehaviour:
     audioAsset: {fileID: 0}
     emotion: 12
     editTyp: 0
-  - Guid: 5e4365b5-4aef-4da7-bb2d-d95a8c54c9c2
-    DialogTitle: EditValueNode
-    Position: {x: 9718.4, y: 1210.3999}
-    Type: 8
-    DialogText: 
-    Image: {fileID: 0}
-    customRespondTime: 0
-    GameEvent: {fileID: 0}
-    BlackBoardProperty:
-      name: TimeAfterVent1
-      guid: 5e611ef1-6150-4427-ac09-7e04dd3d5b9e
-      comparisonTyp: 0
-      iVal: 1
-    audioAsset: {fileID: 0}
-    emotion: 12
-    editTyp: 1
-  - Guid: 96ab8770-2fe7-4203-a8a5-2f8004166fec
-    DialogTitle: Day 2 Lysander Done
-    Position: {x: 10442.4, y: 1210.3999}
-    Type: 8
-    DialogText: 
-    Image: {fileID: 0}
-    customRespondTime: 0
-    GameEvent: {fileID: 0}
-    BlackBoardProperty:
-      name: ProgressDay2
-      guid: 20c3be41-b2a7-4954-841a-d5d011a21c09
-      comparisonTyp: 0
-      iVal: 1
-    audioAsset: {fileID: 0}
-    emotion: 12
-    editTyp: 1
-  - Guid: d0e21301-1b8a-4602-b711-9a77334904e3
+  - Guid: a60c5e69-7685-46d0-8bc3-674c409b80c0
     DialogTitle: ChoiceNode
-    Position: {x: 10006.4, y: 1210.3999}
+    Position: {x: 8700.8, y: 1518.3999}
     Type: 0
     DialogText: hello world
     Image: {fileID: 0}
@@ -2654,11 +2826,829 @@ MonoBehaviour:
     audioAsset: {fileID: 0}
     emotion: 12
     editTyp: 0
-  - Guid: b5ac51ee-e5ef-410e-995a-aeb8e44f3878
+  - Guid: 8b8b5ccd-87ee-4909-9538-a3a6e18b618d
+    DialogTitle: NpcNode
+    Position: {x: 10490.4, y: 1387.2}
+    Type: 1
+    DialogText: oh that
+    Image: {fileID: 0}
+    customRespondTime: 0
+    GameEvent: {fileID: 0}
+    BlackBoardProperty:
+      name: 
+      guid: 
+      comparisonTyp: 0
+      iVal: 0
+    audioAsset: {fileID: 0}
+    emotion: 12
+    editTyp: 0
+  - Guid: a585bbdf-36de-48c1-ae06-8c400ae95023
+    DialogTitle: NpcNode
+    Position: {x: 10753.6, y: 1387.2}
+    Type: 1
+    DialogText: not much really
+    Image: {fileID: 0}
+    customRespondTime: 0
+    GameEvent: {fileID: 0}
+    BlackBoardProperty:
+      name: 
+      guid: 
+      comparisonTyp: 0
+      iVal: 0
+    audioAsset: {fileID: 0}
+    emotion: 12
+    editTyp: 0
+  - Guid: 2155e6c0-63e1-463f-89a7-b607ccea5767
     DialogTitle: ChoiceNode
-    Position: {x: 9270.4, y: 1210.3999}
+    Position: {x: 11023.2, y: 1387.2}
     Type: 0
     DialogText: hello world
+    Image: {fileID: 0}
+    customRespondTime: 0
+    GameEvent: {fileID: 0}
+    BlackBoardProperty:
+      name: 
+      guid: 
+      comparisonTyp: 0
+      iVal: 0
+    audioAsset: {fileID: 0}
+    emotion: 12
+    editTyp: 0
+  - Guid: 480a9a73-2560-4cc7-9335-eae7d7dda47d
+    DialogTitle: NpcNode
+    Position: {x: 11380.8, y: 1387.2}
+    Type: 1
+    DialogText: Something broke, I had to fix it.
+    Image: {fileID: 0}
+    customRespondTime: 0
+    GameEvent: {fileID: 0}
+    BlackBoardProperty:
+      name: 
+      guid: 
+      comparisonTyp: 0
+      iVal: 0
+    audioAsset: {fileID: 0}
+    emotion: 12
+    editTyp: 0
+  - Guid: 55d48f3c-a6e4-40e9-83d4-e479f82d523b
+    DialogTitle: ChoiceNode
+    Position: {x: 11652.8, y: 1387.2}
+    Type: 0
+    DialogText: hello world
+    Image: {fileID: 0}
+    customRespondTime: 0
+    GameEvent: {fileID: 0}
+    BlackBoardProperty:
+      name: 
+      guid: 
+      comparisonTyp: 0
+      iVal: 0
+    audioAsset: {fileID: 0}
+    emotion: 12
+    editTyp: 0
+  - Guid: 9453fc3e-6b0c-47c0-8f04-39e2f8fab2ec
+    DialogTitle: NpcNode
+    Position: {x: 12006.4, y: 1420}
+    Type: 1
+    DialogText: Something came loose, I just had to screw it tighter a little bit.
+      Nothing important though.
+    Image: {fileID: 0}
+    customRespondTime: 0
+    GameEvent: {fileID: 0}
+    BlackBoardProperty:
+      name: 
+      guid: 
+      comparisonTyp: 0
+      iVal: 0
+    audioAsset: {fileID: 0}
+    emotion: 12
+    editTyp: 0
+  - Guid: bf57802e-d527-4ad6-9d2f-203afddfe763
+    DialogTitle: ChoiceNode
+    Position: {x: 12327.2, y: 1420}
+    Type: 0
+    DialogText: hello world
+    Image: {fileID: 0}
+    customRespondTime: 0
+    GameEvent: {fileID: 0}
+    BlackBoardProperty:
+      name: 
+      guid: 
+      comparisonTyp: 0
+      iVal: 0
+    audioAsset: {fileID: 0}
+    emotion: 12
+    editTyp: 0
+  - Guid: 486f5a99-0d85-437d-b254-4f0c0ef48897
+    DialogTitle: NpcNode
+    Position: {x: 12661.6, y: 1420}
+    Type: 1
+    DialogText: There were some in my room.
+    Image: {fileID: 0}
+    customRespondTime: 0
+    GameEvent: {fileID: 0}
+    BlackBoardProperty:
+      name: 
+      guid: 
+      comparisonTyp: 0
+      iVal: 0
+    audioAsset: {fileID: 0}
+    emotion: 12
+    editTyp: 0
+  - Guid: d2c83f83-48aa-44aa-880b-6187102a9028
+    DialogTitle: NpcNode
+    Position: {x: 9744.8, y: 1785.6}
+    Type: 1
+    DialogText: are you?
+    Image: {fileID: 0}
+    customRespondTime: 0
+    GameEvent: {fileID: 0}
+    BlackBoardProperty:
+      name: 
+      guid: 
+      comparisonTyp: 0
+      iVal: 0
+    audioAsset: {fileID: 0}
+    emotion: 12
+    editTyp: 0
+  - Guid: aad52c51-ac84-4907-a60d-46bcabf10a5a
+    DialogTitle: NpcNode
+    Position: {x: 10589.6, y: 1785.6}
+    Type: 1
+    DialogText: okay
+    Image: {fileID: 0}
+    customRespondTime: 0
+    GameEvent: {fileID: 0}
+    BlackBoardProperty:
+      name: 
+      guid: 
+      comparisonTyp: 0
+      iVal: 0
+    audioAsset: {fileID: 0}
+    emotion: 12
+    editTyp: 0
+  - Guid: 829d29ac-7a24-4e0b-b988-86ecc203567b
+    DialogTitle: ChoiceNode
+    Position: {x: 10837.6, y: 1785.6}
+    Type: 0
+    DialogText: hello world
+    Image: {fileID: 0}
+    customRespondTime: 0
+    GameEvent: {fileID: 0}
+    BlackBoardProperty:
+      name: 
+      guid: 
+      comparisonTyp: 0
+      iVal: 0
+    audioAsset: {fileID: 0}
+    emotion: 12
+    editTyp: 0
+  - Guid: af4408d1-3968-468b-bdfc-84c7156c6a6a
+    DialogTitle: NpcNode
+    Position: {x: 11176, y: 1785.6}
+    Type: 1
+    DialogText: if you would want to explain it then you would
+    Image: {fileID: 0}
+    customRespondTime: 0
+    GameEvent: {fileID: 0}
+    BlackBoardProperty:
+      name: 
+      guid: 
+      comparisonTyp: 0
+      iVal: 0
+    audioAsset: {fileID: 0}
+    emotion: 12
+    editTyp: 0
+  - Guid: b398a33c-40d7-42b2-965d-d85beeb32652
+    DialogTitle: NpcNode
+    Position: {x: 11469.6, y: 1785.6}
+    Type: 1
+    DialogText: no?
+    Image: {fileID: 0}
+    customRespondTime: 0
+    GameEvent: {fileID: 0}
+    BlackBoardProperty:
+      name: 
+      guid: 
+      comparisonTyp: 0
+      iVal: 0
+    audioAsset: {fileID: 0}
+    emotion: 12
+    editTyp: 0
+  - Guid: 4f83bf3c-8571-4591-babc-c1806802036a
+    DialogTitle: NpcNode
+    Position: {x: 11716.8, y: 1785.6}
+    Type: 1
+    DialogText: i dont wanna be nosey
+    Image: {fileID: 0}
+    customRespondTime: 0
+    GameEvent: {fileID: 0}
+    BlackBoardProperty:
+      name: 
+      guid: 
+      comparisonTyp: 0
+      iVal: 0
+    audioAsset: {fileID: 0}
+    emotion: 12
+    editTyp: 0
+  - Guid: 93151917-2036-4703-a191-eeec9735edfc
+    DialogTitle: NpcNode
+    Position: {x: 11962.4, y: 1785.6}
+    Type: 1
+    DialogText: Sometimes I feel like you make things difficult for no reason.
+    Image: {fileID: 0}
+    customRespondTime: 0
+    GameEvent: {fileID: 0}
+    BlackBoardProperty:
+      name: 
+      guid: 
+      comparisonTyp: 0
+      iVal: 0
+    audioAsset: {fileID: 0}
+    emotion: 12
+    editTyp: 0
+  - Guid: aae7eb14-20dd-4003-85b4-5cbe83650130
+    DialogTitle: NpcNode
+    Position: {x: 12251.2, y: 1785.6}
+    Type: 1
+    DialogText: i have doubts about coming here
+    Image: {fileID: 0}
+    customRespondTime: 0
+    GameEvent: {fileID: 0}
+    BlackBoardProperty:
+      name: 
+      guid: 
+      comparisonTyp: 0
+      iVal: 0
+    audioAsset: {fileID: 0}
+    emotion: 12
+    editTyp: 0
+  - Guid: 906e9966-4837-41eb-8dc9-2e6d7804b7b8
+    DialogTitle: ChoiceNode
+    Position: {x: 12514.4, y: 1785.6}
+    Type: 0
+    DialogText: hello world
+    Image: {fileID: 0}
+    customRespondTime: 0
+    GameEvent: {fileID: 0}
+    BlackBoardProperty:
+      name: 
+      guid: 
+      comparisonTyp: 0
+      iVal: 0
+    audioAsset: {fileID: 0}
+    emotion: 12
+    editTyp: 0
+  - Guid: c8953073-1292-48c1-a52d-1b74b698c901
+    DialogTitle: NpcNode
+    Position: {x: 13012.8, y: 1763.2}
+    Type: 1
+    DialogText: i dont want to talk about it right now
+    Image: {fileID: 0}
+    customRespondTime: 0
+    GameEvent: {fileID: 0}
+    BlackBoardProperty:
+      name: 
+      guid: 
+      comparisonTyp: 0
+      iVal: 0
+    audioAsset: {fileID: 0}
+    emotion: 12
+    editTyp: 0
+  - Guid: 602e8b41-6332-4a03-aaf1-2365f7b2edda
+    DialogTitle: ChoiceNode
+    Position: {x: 13261.6, y: 1763.2}
+    Type: 0
+    DialogText: hello world
+    Image: {fileID: 0}
+    customRespondTime: 0
+    GameEvent: {fileID: 0}
+    BlackBoardProperty:
+      name: 
+      guid: 
+      comparisonTyp: 0
+      iVal: 0
+    audioAsset: {fileID: 0}
+    emotion: 12
+    editTyp: 0
+  - Guid: a4b2aefd-9963-4139-9a4c-939cb3db359a
+    DialogTitle: ChoiceNode
+    Position: {x: 13687.2, y: 1704}
+    Type: 0
+    DialogText: hello world
+    Image: {fileID: 0}
+    customRespondTime: 0
+    GameEvent: {fileID: 0}
+    BlackBoardProperty:
+      name: 
+      guid: 
+      comparisonTyp: 0
+      iVal: 0
+    audioAsset: {fileID: 0}
+    emotion: 12
+    editTyp: 0
+  - Guid: 55abd991-c33c-45ae-adce-6ebe201863d6
+    DialogTitle: NpcNode
+    Position: {x: 13687.2, y: 1864.7999}
+    Type: 1
+    DialogText: The spaceship is not the problem.
+    Image: {fileID: 0}
+    customRespondTime: 0
+    GameEvent: {fileID: 0}
+    BlackBoardProperty:
+      name: 
+      guid: 
+      comparisonTyp: 0
+      iVal: 0
+    audioAsset: {fileID: 0}
+    emotion: 12
+    editTyp: 0
+  - Guid: 89d89a53-7c51-4591-91c2-2248c64fb223
+    DialogTitle: ChoiceNode
+    Position: {x: 10268.8, y: 1785.6}
+    Type: 0
+    DialogText: hello world
+    Image: {fileID: 0}
+    customRespondTime: 0
+    GameEvent: {fileID: 0}
+    BlackBoardProperty:
+      name: 
+      guid: 
+      comparisonTyp: 0
+      iVal: 0
+    audioAsset: {fileID: 0}
+    emotion: 12
+    editTyp: 0
+  - Guid: dfcc3c77-04e3-419e-91ee-8c9224f36630
+    DialogTitle: NpcNode
+    Position: {x: 10589.6, y: 2105.5999}
+    Type: 1
+    DialogText: what is up
+    Image: {fileID: 0}
+    customRespondTime: 0
+    GameEvent: {fileID: 0}
+    BlackBoardProperty:
+      name: 
+      guid: 
+      comparisonTyp: 0
+      iVal: 0
+    audioAsset: {fileID: 0}
+    emotion: 12
+    editTyp: 0
+  - Guid: a3fe1e2a-18c8-488f-a30b-bce939979d60
+    DialogTitle: ChoiceNode
+    Position: {x: 10847.2, y: 2105.5999}
+    Type: 0
+    DialogText: hello world
+    Image: {fileID: 0}
+    customRespondTime: 0
+    GameEvent: {fileID: 0}
+    BlackBoardProperty:
+      name: 
+      guid: 
+      comparisonTyp: 0
+      iVal: 0
+    audioAsset: {fileID: 0}
+    emotion: 12
+    editTyp: 0
+  - Guid: 18b4bbaf-89e5-4ff2-a025-60b64c260137
+    DialogTitle: NpcNode
+    Position: {x: 11238.4, y: 2105.5999}
+    Type: 1
+    DialogText: You always have something wrong, do you not?
+    Image: {fileID: 0}
+    customRespondTime: 0
+    GameEvent: {fileID: 0}
+    BlackBoardProperty:
+      name: 
+      guid: 
+      comparisonTyp: 0
+      iVal: 0
+    audioAsset: {fileID: 0}
+    emotion: 12
+    editTyp: 0
+  - Guid: 775c68da-1743-42c6-9a68-e5ab4bbf1c87
+    DialogTitle: NpcNode
+    Position: {x: 11536.8, y: 2105.5999}
+    Type: 1
+    DialogText: I have my own troubles.
+    Image: {fileID: 0}
+    customRespondTime: 0
+    GameEvent: {fileID: 0}
+    BlackBoardProperty:
+      name: 
+      guid: 
+      comparisonTyp: 0
+      iVal: 0
+    audioAsset: {fileID: 0}
+    emotion: 12
+    editTyp: 0
+  - Guid: fbe6e321-b0b6-4574-85a0-6d2925b0181b
+    DialogTitle: NpcNode
+    Position: {x: 11792, y: 2105.5999}
+    Type: 1
+    DialogText: i think i regret coming here
+    Image: {fileID: 0}
+    customRespondTime: 0
+    GameEvent: {fileID: 0}
+    BlackBoardProperty:
+      name: 
+      guid: 
+      comparisonTyp: 0
+      iVal: 0
+    audioAsset: {fileID: 0}
+    emotion: 12
+    editTyp: 0
+  - Guid: afdb9c60-2f13-4717-b2e2-6a7d6d7260b5
+    DialogTitle: ChoiceNode
+    Position: {x: 12065.6, y: 2105.5999}
+    Type: 0
+    DialogText: hello world
+    Image: {fileID: 0}
+    customRespondTime: 0
+    GameEvent: {fileID: 0}
+    BlackBoardProperty:
+      name: 
+      guid: 
+      comparisonTyp: 0
+      iVal: 0
+    audioAsset: {fileID: 0}
+    emotion: 12
+    editTyp: 0
+  - Guid: 9dda578e-040e-4617-877e-788e6b756072
+    DialogTitle: NpcNode
+    Position: {x: 9860.8, y: 1418.3999}
+    Type: 1
+    DialogText: what do you mean?
+    Image: {fileID: 0}
+    customRespondTime: 0
+    GameEvent: {fileID: 0}
+    BlackBoardProperty:
+      name: 
+      guid: 
+      comparisonTyp: 0
+      iVal: 0
+    audioAsset: {fileID: 0}
+    emotion: 12
+    editTyp: 0
+  - Guid: 5a7c9bb2-4d93-4e44-a32f-f3407821064f
+    DialogTitle: ChoiceNode
+    Position: {x: 10081.6, y: 1314.3999}
+    Type: 0
+    DialogText: hello world
+    Image: {fileID: 0}
+    customRespondTime: 0
+    GameEvent: {fileID: 0}
+    BlackBoardProperty:
+      name: 
+      guid: 
+      comparisonTyp: 0
+      iVal: 0
+    audioAsset: {fileID: 0}
+    emotion: 12
+    editTyp: 0
+  - Guid: 0f326455-a4f6-4005-a2ae-bd3e1de916c3
+    DialogTitle: EditValueNode
+    Position: {x: 9486.4, y: 1318.3999}
+    Type: 8
+    DialogText: 
+    Image: {fileID: 0}
+    customRespondTime: 0
+    GameEvent: {fileID: 0}
+    BlackBoardProperty:
+      name: LysanderWhatCameUp
+      guid: 89b231de-1acd-483b-9677-654659bdca67
+      comparisonTyp: 0
+      iVal: 1
+    audioAsset: {fileID: 0}
+    emotion: 12
+    editTyp: 0
+  - Guid: 2283471d-37fb-4f05-975c-e5f9d48e9b5f
+    DialogTitle: ChoiceNode
+    Position: {x: 9384, y: 1541.6}
+    Type: 0
+    DialogText: hello world
+    Image: {fileID: 0}
+    customRespondTime: 0
+    GameEvent: {fileID: 0}
+    BlackBoardProperty:
+      name: 
+      guid: 
+      comparisonTyp: 0
+      iVal: 0
+    audioAsset: {fileID: 0}
+    emotion: 12
+    editTyp: 0
+  - Guid: 9e0f3542-406a-4b06-9907-e32415aef0ad
+    DialogTitle: LogicNode
+    Position: {x: 12276.8, y: 1000.8}
+    Type: 4
+    DialogText: 
+    Image: {fileID: 0}
+    customRespondTime: 0
+    GameEvent: {fileID: 0}
+    BlackBoardProperty:
+      name: LysanderEverythingOK
+      guid: 51cf7f94-7050-4837-8fcf-b770c15ff3ba
+      comparisonTyp: 0
+      iVal: 1
+    audioAsset: {fileID: 0}
+    emotion: 12
+    editTyp: 0
+  - Guid: 40e86422-4763-4306-b8fa-6a63e9da89d9
+    DialogTitle: LogicNode
+    Position: {x: 12759.2, y: 988.8}
+    Type: 4
+    DialogText: 
+    Image: {fileID: 0}
+    customRespondTime: 0
+    GameEvent: {fileID: 0}
+    BlackBoardProperty:
+      name: LysanderEverythingOK
+      guid: 51cf7f94-7050-4837-8fcf-b770c15ff3ba
+      comparisonTyp: 0
+      iVal: 1
+    audioAsset: {fileID: 0}
+    emotion: 12
+    editTyp: 0
+  - Guid: d2c8a3f2-d348-4750-a466-398ba9c392dd
+    DialogTitle: ChoiceNode
+    Position: {x: 13179.2, y: 1019.2}
+    Type: 0
+    DialogText: hello world
+    Image: {fileID: 0}
+    customRespondTime: 0
+    GameEvent: {fileID: 0}
+    BlackBoardProperty:
+      name: 
+      guid: 
+      comparisonTyp: 0
+      iVal: 0
+    audioAsset: {fileID: 0}
+    emotion: 12
+    editTyp: 0
+  - Guid: 5e941955-41ea-4e0e-bed6-63f7c3010339
+    DialogTitle: ChoiceNode
+    Position: {x: 13179.2, y: 876.8}
+    Type: 0
+    DialogText: hello world
+    Image: {fileID: 0}
+    customRespondTime: 0
+    GameEvent: {fileID: 0}
+    BlackBoardProperty:
+      name: 
+      guid: 
+      comparisonTyp: 0
+      iVal: 0
+    audioAsset: {fileID: 0}
+    emotion: 12
+    editTyp: 0
+  - Guid: c66f3994-ea96-4cb0-aeae-689fcf99063a
+    DialogTitle: LogicNode
+    Position: {x: 13594.4, y: 1163.2}
+    Type: 4
+    DialogText: 
+    Image: {fileID: 0}
+    customRespondTime: 0
+    GameEvent: {fileID: 0}
+    BlackBoardProperty:
+      name: LysanderEverythingOK
+      guid: 51cf7f94-7050-4837-8fcf-b770c15ff3ba
+      comparisonTyp: 0
+      iVal: 1
+    audioAsset: {fileID: 0}
+    emotion: 12
+    editTyp: 0
+  - Guid: c33438fe-1fb9-4e60-ab44-1e2d6c2363f6
+    DialogTitle: NpcNode
+    Position: {x: 13294.4, y: 1351.2}
+    Type: 1
+    DialogText: Yes. Since I was the one to rent the spaceship, my room differs from
+      yours.
+    Image: {fileID: 0}
+    customRespondTime: 0
+    GameEvent: {fileID: 0}
+    BlackBoardProperty:
+      name: 
+      guid: 
+      comparisonTyp: 0
+      iVal: 0
+    audioAsset: {fileID: 0}
+    emotion: 12
+    editTyp: 0
+  - Guid: 55a8e01b-38d4-436c-8c35-5c8b9392a845
+    DialogTitle: EditValueNode
+    Position: {x: 9466.4, y: 1954.3999}
+    Type: 8
+    DialogText: 
+    Image: {fileID: 0}
+    customRespondTime: 0
+    GameEvent: {fileID: 0}
+    BlackBoardProperty:
+      name: LysanderEverythingOK
+      guid: 51cf7f94-7050-4837-8fcf-b770c15ff3ba
+      comparisonTyp: 0
+      iVal: 1
+    audioAsset: {fileID: 0}
+    emotion: 12
+    editTyp: 0
+  - Guid: e95baebb-0778-48ea-a01e-dd78494bcace
+    DialogTitle: ChoiceNode
+    Position: {x: 9368, y: 1733.6}
+    Type: 0
+    DialogText: hello world
+    Image: {fileID: 0}
+    customRespondTime: 0
+    GameEvent: {fileID: 0}
+    BlackBoardProperty:
+      name: 
+      guid: 
+      comparisonTyp: 0
+      iVal: 0
+    audioAsset: {fileID: 0}
+    emotion: 12
+    editTyp: 0
+  - Guid: 1bf9e9c5-1f83-4f4c-ab31-7d4535ea9705
+    DialogTitle: ChoiceNode
+    Position: {x: 13900.8, y: 1420}
+    Type: 0
+    DialogText: hello world
+    Image: {fileID: 0}
+    customRespondTime: 0
+    GameEvent: {fileID: 0}
+    BlackBoardProperty:
+      name: 
+      guid: 
+      comparisonTyp: 0
+      iVal: 0
+    audioAsset: {fileID: 0}
+    emotion: 12
+    editTyp: 0
+  - Guid: 2aa7aadf-5e87-4875-b8b8-ed5d3eeb749b
+    DialogTitle: LogicNode
+    Position: {x: 14196, y: 1704}
+    Type: 4
+    DialogText: 
+    Image: {fileID: 0}
+    customRespondTime: 0
+    GameEvent: {fileID: 0}
+    BlackBoardProperty:
+      name: LysanderWhatCameUp
+      guid: 89b231de-1acd-483b-9677-654659bdca67
+      comparisonTyp: 0
+      iVal: 1
+    audioAsset: {fileID: 0}
+    emotion: 12
+    editTyp: 0
+  - Guid: 78502078-aa53-44a4-9a6a-685ba888c543
+    DialogTitle: NpcNode
+    Position: {x: 10564, y: 1204}
+    Type: 1
+    DialogText: oh that
+    Image: {fileID: 0}
+    customRespondTime: 0
+    GameEvent: {fileID: 0}
+    BlackBoardProperty:
+      name: 
+      guid: 
+      comparisonTyp: 0
+      iVal: 0
+    audioAsset: {fileID: 0}
+    emotion: 12
+    editTyp: 0
+  - Guid: dd0a6dd8-ab0a-4551-82c0-aacb73127aa0
+    DialogTitle: NpcNode
+    Position: {x: 10820.8, y: 1204}
+    Type: 1
+    DialogText: not worth mentioning
+    Image: {fileID: 0}
+    customRespondTime: 0
+    GameEvent: {fileID: 0}
+    BlackBoardProperty:
+      name: 
+      guid: 
+      comparisonTyp: 0
+      iVal: 0
+    audioAsset: {fileID: 0}
+    emotion: 12
+    editTyp: 0
+  - Guid: a954205a-498b-438c-82df-4d0ba5dac3af
+    DialogTitle: NpcNode
+    Position: {x: 9989.6, y: 1776}
+    Type: 1
+    DialogText: you seem tense
+    Image: {fileID: 0}
+    customRespondTime: 0
+    GameEvent: {fileID: 0}
+    BlackBoardProperty:
+      name: 
+      guid: 
+      comparisonTyp: 0
+      iVal: 0
+    audioAsset: {fileID: 0}
+    emotion: 12
+    editTyp: 0
+  - Guid: de40f734-e12c-41c5-a991-929a547617bd
+    DialogTitle: EditValueNode
+    Position: {x: 14557.6, y: 1836}
+    Type: 8
+    DialogText: 
+    Image: {fileID: 0}
+    customRespondTime: 0
+    GameEvent: {fileID: 0}
+    BlackBoardProperty:
+      name: LysanderWhatCameUp
+      guid: 89b231de-1acd-483b-9677-654659bdca67
+      comparisonTyp: 0
+      iVal: 1
+    audioAsset: {fileID: 0}
+    emotion: 12
+    editTyp: 0
+  - Guid: d1cdd548-b7df-4153-a834-e997ca3b67cd
+    DialogTitle: ChoiceNode
+    Position: {x: 14959.2, y: 1836}
+    Type: 0
+    DialogText: hello world
+    Image: {fileID: 0}
+    customRespondTime: 0
+    GameEvent: {fileID: 0}
+    BlackBoardProperty:
+      name: 
+      guid: 
+      comparisonTyp: 0
+      iVal: 0
+    audioAsset: {fileID: 0}
+    emotion: 12
+    editTyp: 0
+  - Guid: c6e2e43a-41c9-4b95-be1c-1f36a70ef7fe
+    DialogTitle: NpcNode
+    Position: {x: 9068.8, y: 1518.3999}
+    Type: 1
+    DialogText: yea whats up
+    Image: {fileID: 0}
+    customRespondTime: 0
+    GameEvent: {fileID: 0}
+    BlackBoardProperty:
+      name: 
+      guid: 
+      comparisonTyp: 0
+      iVal: 0
+    audioAsset: {fileID: 0}
+    emotion: 12
+    editTyp: 0
+  - Guid: 41ecee35-b3ec-4c75-aace-92a5538248b3
+    DialogTitle: EditValueNode
+    Position: {x: 9068.8, y: 1700.7999}
+    Type: 8
+    DialogText: 
+    Image: {fileID: 0}
+    customRespondTime: 0
+    GameEvent: {fileID: 0}
+    BlackBoardProperty:
+      name: TimeAfterVent1
+      guid: 5e611ef1-6150-4427-ac09-7e04dd3d5b9e
+      comparisonTyp: 0
+      iVal: 1
+    audioAsset: {fileID: 0}
+    emotion: 12
+    editTyp: 1
+  - Guid: 8bbeeaf8-d9be-4ad6-bb11-999fcf7a5cc8
+    DialogTitle: ChoiceNode
+    Position: {x: 14772, y: 1285.6}
+    Type: 0
+    DialogText: hello world
+    Image: {fileID: 0}
+    customRespondTime: 0
+    GameEvent: {fileID: 0}
+    BlackBoardProperty:
+      name: 
+      guid: 
+      comparisonTyp: 0
+      iVal: 0
+    audioAsset: {fileID: 0}
+    emotion: 12
+    editTyp: 0
+  - Guid: 96ab8770-2fe7-4203-a8a5-2f8004166fec
+    DialogTitle: Day 2 Lysander Done
+    Position: {x: 15641.6, y: 1285.6}
+    Type: 8
+    DialogText: 
+    Image: {fileID: 0}
+    customRespondTime: 0
+    GameEvent: {fileID: 0}
+    BlackBoardProperty:
+      name: ProgressDay2
+      guid: 20c3be41-b2a7-4954-841a-d5d011a21c09
+      comparisonTyp: 0
+      iVal: 1
+    audioAsset: {fileID: 0}
+    emotion: 12
+    editTyp: 1
+  - Guid: 0d7ea721-7d36-4df1-8309-423c38c768b2
+    DialogTitle: NpcNode
+    Position: {x: 15266.4, y: 1529.6}
+    Type: 1
+    DialogText: You too.
     Image: {fileID: 0}
     customRespondTime: 0
     GameEvent: {fileID: 0}
@@ -2679,7 +3669,6 @@ MonoBehaviour:
     - d5d203e8-8790-41e5-a40d-f79e7c2518f7
     - 4e92bff7-1fbe-4e4b-a64e-414216bd2c1e
     - faff51f4-377e-4692-ab7c-c7f30acf902b
-    - 0be1f806-562b-4adb-99fa-e11163b589a0
     - 3a024425-ee36-47bc-a6ab-9bf7030eb99c
     - bef6feb3-4b36-498d-ab8b-46c75822408f
     - 22a3b96a-3d7b-4516-a300-0ca1955bb750
@@ -2712,4 +3701,5 @@ MonoBehaviour:
     - 846bdb2b-0367-4010-a800-17baec48f3c3
     - f761d927-1a30-4d94-8b96-2c1c6db76462
     - 8a57a009-6769-48f4-968f-9c09c33f1508
+    - 0be1f806-562b-4adb-99fa-e11163b589a0
   blackBoardList: {fileID: 11400000, guid: c289dd2bc5fda5942acc2419a6f68abb, type: 2}

@@ -77,3 +77,11 @@ MonoBehaviour:
     guid: 6e08cf86-6806-4f0e-9bb7-40de6667b0ba
     comparisonTyp: 0
     iVal: 0
+  - name: LysanderEverythingOK
+    guid: 51cf7f94-7050-4837-8fcf-b770c15ff3ba
+    comparisonTyp: 0
+    iVal: 0
+  - name: LysanderWhatCameUp
+    guid: 89b231de-1acd-483b-9677-654659bdca67
+    comparisonTyp: 0
+    iVal: 0
