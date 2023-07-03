@@ -71,7 +71,7 @@ public class GraphicsSettingsUi : MonoBehaviour
 	public void Save()
 	{
 		graphicSettings.fullscreen = fullscreen.active;
-		graphicSettings.resolution = resolutions[currentIndex];
+		graphicSettings.resolution = Screen.currentResolution;
 		graphicSettings.SaveSettings();
 	}
 }
