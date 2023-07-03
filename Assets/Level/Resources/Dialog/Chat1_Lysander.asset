@@ -221,6 +221,9 @@ MonoBehaviour:
   - baseNodeGuid: 74b55e1f-cb77-413d-9316-229435caf46f
     portName: Next
     targetNodeGuid: 547c4217-9e74-4a12-9692-7a8da0f88aef
+  - baseNodeGuid: 547c4217-9e74-4a12-9692-7a8da0f88aef
+    portName: Next
+    targetNodeGuid: 9de1a19a-c1e2-4cb4-a2ca-08a349702447
   - baseNodeGuid: 694323c9-fc00-420a-bac1-1365f56bee74
     portName: Next
     targetNodeGuid: 886366e8-2453-494e-8744-dac7c6ede314
@@ -245,21 +248,12 @@ MonoBehaviour:
   - baseNodeGuid: 6b928924-ddd8-4adc-86eb-5c67d67d98a3
     portName: Just with less annoying people
     targetNodeGuid: ee6e14f3-da33-40df-9e71-ef2da081d71f
-  - baseNodeGuid: ef211fda-eb82-4820-b2aa-408f0f89cd82
-    portName: Puck is annoying.
-    targetNodeGuid: a009ed75-00d4-4ba7-b351-f11493aa4cab
   - baseNodeGuid: 85570b2f-7d86-4905-997c-6cfb953ce6a2
     portName: Next
     targetNodeGuid: d1e3a8da-f28a-4f8e-a080-16fb0be96de2
   - baseNodeGuid: f4e4a8c9-a5cc-4680-91b7-3e48781080aa
     portName: Next
     targetNodeGuid: fbd00a04-9727-4c17-9b28-d6970397c82b
-  - baseNodeGuid: 5020b08c-5ecf-45d3-b21a-88482c73d5fc
-    portName: Next
-    targetNodeGuid: b5a4ac14-1b84-46e4-a629-aaf8a347b25a
-  - baseNodeGuid: b5a4ac14-1b84-46e4-a629-aaf8a347b25a
-    portName: Next
-    targetNodeGuid: a9034362-0485-428c-bb50-d1fa6cbf4d81
   - baseNodeGuid: 34b1b2f5-9b0a-4e0e-8b8f-290a7c4068fc
     portName: Next
     targetNodeGuid: 998400fe-e726-4f22-83bb-62020e7b9c5c
@@ -422,9 +416,6 @@ MonoBehaviour:
   - baseNodeGuid: 6c56a508-574e-4e5a-b8ea-b457ba76b0e7
     portName: Next
     targetNodeGuid: c5b46813-168b-4261-837b-1fa7a0582e0a
-  - baseNodeGuid: a009ed75-00d4-4ba7-b351-f11493aa4cab
-    portName: Next
-    targetNodeGuid: 5020b08c-5ecf-45d3-b21a-88482c73d5fc
   - baseNodeGuid: a9034362-0485-428c-bb50-d1fa6cbf4d81
     portName: Next
     targetNodeGuid: 6c1fb586-56b6-45ff-9402-215a31b0f407
@@ -725,23 +716,32 @@ MonoBehaviour:
   - baseNodeGuid: 0d7ea721-7d36-4df1-8309-423c38c768b2
     portName: Next
     targetNodeGuid: 96ab8770-2fe7-4203-a8a5-2f8004166fec
-  - baseNodeGuid: 547c4217-9e74-4a12-9692-7a8da0f88aef
+  - baseNodeGuid: 5020b08c-5ecf-45d3-b21a-88482c73d5fc
     portName: Next
-    targetNodeGuid: 9de1a19a-c1e2-4cb4-a2ca-08a349702447
+    targetNodeGuid: b5a4ac14-1b84-46e4-a629-aaf8a347b25a
+  - baseNodeGuid: b5a4ac14-1b84-46e4-a629-aaf8a347b25a
+    portName: Next
+    targetNodeGuid: a9034362-0485-428c-bb50-d1fa6cbf4d81
+  - baseNodeGuid: a009ed75-00d4-4ba7-b351-f11493aa4cab
+    portName: Next
+    targetNodeGuid: 5020b08c-5ecf-45d3-b21a-88482c73d5fc
   - baseNodeGuid: 9de1a19a-c1e2-4cb4-a2ca-08a349702447
     portName: Next
     targetNodeGuid: ef211fda-eb82-4820-b2aa-408f0f89cd82
   - baseNodeGuid: ef211fda-eb82-4820-b2aa-408f0f89cd82
+    portName: Puck is annoying.
+    targetNodeGuid: a009ed75-00d4-4ba7-b351-f11493aa4cab
+  - baseNodeGuid: ef211fda-eb82-4820-b2aa-408f0f89cd82
     portName: Cute and useful
     targetNodeGuid: 4438018f-0a37-4f24-bf72-ab92abf8512d
+  - baseNodeGuid: ef211fda-eb82-4820-b2aa-408f0f89cd82
+    portName: They are fine.
+    targetNodeGuid: b5a4ac14-1b84-46e4-a629-aaf8a347b25a
   - baseNodeGuid: 4438018f-0a37-4f24-bf72-ab92abf8512d
     portName: Next
     targetNodeGuid: 938dc2a0-3b16-402d-9b13-0e0805b4b7ec
   - baseNodeGuid: 938dc2a0-3b16-402d-9b13-0e0805b4b7ec
     portName: Next
-    targetNodeGuid: b5a4ac14-1b84-46e4-a629-aaf8a347b25a
-  - baseNodeGuid: ef211fda-eb82-4820-b2aa-408f0f89cd82
-    portName: They are fine.
     targetNodeGuid: b5a4ac14-1b84-46e4-a629-aaf8a347b25a
   dialogNodeData:
   - Guid: ac7acd63-894e-4a46-be96-2c9c8b18f76e
