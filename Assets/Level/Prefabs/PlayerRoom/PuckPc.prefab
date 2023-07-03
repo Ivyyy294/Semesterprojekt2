@@ -142,8 +142,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1.36, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 0.25, y: 1.33, z: 1}
+  m_Center: {x: -0.39, y: 0, z: 0}
 --- !u!114 &4217868698843415311
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -156,13 +156,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2e1b764578c756343b845e188ad0fab4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  eventLockPlayer: {fileID: 11400000, guid: 6ab399d4eb44e2a40aaed541e95ebc57, type: 2}
-  eventReleasePlayer: {fileID: 11400000, guid: 2db1e2cec386b954ba5ea4c67080e35a, type: 2}
   terminalUiShow: {fileID: 11400000, guid: bc239c76383030740b26ee57d16a31e6, type: 2}
   minTransitionTime: 1
   terminalCamera: {fileID: 1267142904322201351}
   cinemachineBrain: {fileID: 0}
   active: 0
+  locked: 0
+  lockedState:
+    audioLocked: {fileID: 0}
+    audioCoolDown: 0.5
 --- !u!1 &7875814753660941414
 GameObject:
   m_ObjectHideFlags: 0
