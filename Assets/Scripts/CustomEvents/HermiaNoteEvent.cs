@@ -7,11 +7,17 @@ public class HermiaNoteEvent : MonoBehaviour
 {
 	[SerializeField] string propertyName;
 	[SerializeField] AudioPlayer audioPlayer;
+	[SerializeField] AudioPlayer audioPlayerLetter;
 	[SerializeField] Animator animator;
 
 	public void PlayAudio()
 	{
 		audioPlayer.Play();
+	}
+
+	public void PlayAudioLetter()
+	{
+		audioPlayerLetter.Play();
 	}
 
 	public void AnimationDone()
