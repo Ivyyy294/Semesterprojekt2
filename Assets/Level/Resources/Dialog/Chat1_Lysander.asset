@@ -425,9 +425,6 @@ MonoBehaviour:
   - baseNodeGuid: 8ad82d6c-ce3c-42a0-8b02-0965d166a38c
     portName: Saame
     targetNodeGuid: 9684d83b-557b-4bd2-aa71-28f69e5314e2
-  - baseNodeGuid: 9684d83b-557b-4bd2-aa71-28f69e5314e2
-    portName: Next
-    targetNodeGuid: a9034362-0485-428c-bb50-d1fa6cbf4d81
   - baseNodeGuid: 267e925c-625c-45fe-990e-b8096c108ecd
     portName: Next
     targetNodeGuid: 271c000a-6a1e-4152-9f76-ad53d4e21452
@@ -437,6 +434,9 @@ MonoBehaviour:
   - baseNodeGuid: a9274b33-efc0-4bb8-add7-314c40085fa0
     portName: Next
     targetNodeGuid: 3b1d5054-d4f0-44fd-8b9d-08fcf5bb4a4a
+  - baseNodeGuid: b5ac51ee-e5ef-410e-995a-aeb8e44f3878
+    portName: Placeholder, telling Lysander about PUCK
+    targetNodeGuid: 5e4365b5-4aef-4da7-bb2d-d95a8c54c9c2
   - baseNodeGuid: f761d927-1a30-4d94-8b96-2c1c6db76462
     portName: Next
     targetNodeGuid: 0acdfed0-8fc6-4c97-a667-bdb24ef4f8db
@@ -464,25 +464,70 @@ MonoBehaviour:
   - baseNodeGuid: 8a57a009-6769-48f4-968f-9c09c33f1508
     portName: Next
     targetNodeGuid: cd2505b0-822b-4de7-aa6a-5127f579c0ca
-  - baseNodeGuid: 96ab8770-2fe7-4203-a8a5-2f8004166fec
-    portName: Next
-    targetNodeGuid: cf225182-6de9-4940-9fc8-9f26b676fe6d
   - baseNodeGuid: 5d406f89-f78c-4714-a2af-451801377979
     portName: Next
     targetNodeGuid: 15e07895-1fd2-48cf-aa94-b17463c67351
-  - baseNodeGuid: b5ac51ee-e5ef-410e-995a-aeb8e44f3878
-    portName: Placeholder, telling Lysander about PUCK
-    targetNodeGuid: 5e4365b5-4aef-4da7-bb2d-d95a8c54c9c2
   - baseNodeGuid: 5e4365b5-4aef-4da7-bb2d-d95a8c54c9c2
     portName: Next
     targetNodeGuid: d0e21301-1b8a-4602-b711-9a77334904e3
+  - baseNodeGuid: 96ab8770-2fe7-4203-a8a5-2f8004166fec
+    portName: Next
+    targetNodeGuid: cf225182-6de9-4940-9fc8-9f26b676fe6d
   - baseNodeGuid: d0e21301-1b8a-4602-b711-9a77334904e3
     portName: Placeholder, Additional Dialogue
     targetNodeGuid: 96ab8770-2fe7-4203-a8a5-2f8004166fec
+  - baseNodeGuid: 8ad82d6c-ce3c-42a0-8b02-0965d166a38c
+    portName: And the drinks
+    targetNodeGuid: e9c5871c-5d32-4489-b01d-fd3f2898fffb
+  - baseNodeGuid: e9c5871c-5d32-4489-b01d-fd3f2898fffb
+    portName: Next
+    targetNodeGuid: 9684d83b-557b-4bd2-aa71-28f69e5314e2
+  - baseNodeGuid: 9684d83b-557b-4bd2-aa71-28f69e5314e2
+    portName: Next
+    targetNodeGuid: 12201ac2-da1d-4790-bb5b-31598316cf76
+  - baseNodeGuid: 12201ac2-da1d-4790-bb5b-31598316cf76
+    portName: Next
+    targetNodeGuid: 968f4383-467e-442e-ba0b-ba9eb8e2e2e7
+  - baseNodeGuid: 968f4383-467e-442e-ba0b-ba9eb8e2e2e7
+    portName: Next
+    targetNodeGuid: 41303abe-e6d7-4221-8244-c431c84e87d4
+  - baseNodeGuid: 41303abe-e6d7-4221-8244-c431c84e87d4
+    portName: There is something that is bothering me
+    targetNodeGuid: 5b22c63e-f808-4106-880b-54f8869871d1
+  - baseNodeGuid: 41303abe-e6d7-4221-8244-c431c84e87d4
+    portName: I am good
+    targetNodeGuid: b0d8f0b5-1b8d-48d6-8543-246fc90b514f
+  - baseNodeGuid: b0d8f0b5-1b8d-48d6-8543-246fc90b514f
+    portName: Next
+    targetNodeGuid: ae49054a-bf5e-4f46-b03b-a916b37e6ad7
+  - baseNodeGuid: ae49054a-bf5e-4f46-b03b-a916b37e6ad7
+    portName: Yeah.
+    targetNodeGuid: a9034362-0485-428c-bb50-d1fa6cbf4d81
+  - baseNodeGuid: ae49054a-bf5e-4f46-b03b-a916b37e6ad7
+    portName: And you?
+    targetNodeGuid: 4dd0dd21-b5fc-427c-afce-732d77e6d015
+  - baseNodeGuid: 4dd0dd21-b5fc-427c-afce-732d77e6d015
+    portName: Next
+    targetNodeGuid: c10e760f-f211-4ccc-a628-3fae33a0571f
+  - baseNodeGuid: c10e760f-f211-4ccc-a628-3fae33a0571f
+    portName: Still feeling bored?
+    targetNodeGuid: 9ced94af-c92e-42f7-8b0f-e61c4cc0f5d8
+  - baseNodeGuid: c10e760f-f211-4ccc-a628-3fae33a0571f
+    portName: Good
+    targetNodeGuid: 814892a7-ae00-445f-bddd-fd6238d957b8
+  - baseNodeGuid: 814892a7-ae00-445f-bddd-fd6238d957b8
+    portName: Next
+    targetNodeGuid: a9034362-0485-428c-bb50-d1fa6cbf4d81
+  - baseNodeGuid: 9ced94af-c92e-42f7-8b0f-e61c4cc0f5d8
+    portName: Next
+    targetNodeGuid: 772ef62d-a38b-4cfc-999b-37743d8158db
+  - baseNodeGuid: 772ef62d-a38b-4cfc-999b-37743d8158db
+    portName: Next
+    targetNodeGuid: a9034362-0485-428c-bb50-d1fa6cbf4d81
   dialogNodeData:
   - Guid: ac7acd63-894e-4a46-be96-2c9c8b18f76e
     DialogTitle: Npc Node
-    Position: {x: 321, y: -202}
+    Position: {x: 320.8, y: -201.6}
     Type: 1
     DialogText: hello
     Image: {fileID: 0}
@@ -498,7 +543,7 @@ MonoBehaviour:
     editTyp: 0
   - Guid: d5d203e8-8790-41e5-a40d-f79e7c2518f7
     DialogTitle: ChoiceNode
-    Position: {x: 587, y: -202}
+    Position: {x: 587.2, y: -201.6}
     Type: 0
     DialogText: hello world
     Image: {fileID: 0}
@@ -514,7 +559,7 @@ MonoBehaviour:
     editTyp: 0
   - Guid: 4e92bff7-1fbe-4e4b-a64e-414216bd2c1e
     DialogTitle: NpcNode
-    Position: {x: 914, y: -178}
+    Position: {x: 914.4, y: -177.6}
     Type: 1
     DialogText: "man what a whacky start, right\r"
     Image: {fileID: 0}
@@ -530,7 +575,7 @@ MonoBehaviour:
     editTyp: 0
   - Guid: faff51f4-377e-4692-ab7c-c7f30acf902b
     DialogTitle: NpcNode
-    Position: {x: 1206, y: -178}
+    Position: {x: 1206.4, y: -177.6}
     Type: 1
     DialogText: this cryer sleep thing really messed with my head
     Image: {fileID: 0}
@@ -544,25 +589,9 @@ MonoBehaviour:
     audioAsset: {fileID: 0}
     emotion: 0
     editTyp: 0
-  - Guid: 0be1f806-562b-4adb-99fa-e11163b589a0
-    DialogTitle: ChoiceNode
-    Position: {x: 2975, y: -157}
-    Type: 0
-    DialogText: hello world
-    Image: {fileID: 0}
-    customRespondTime: 0
-    GameEvent: {fileID: 0}
-    BlackBoardProperty:
-      name: 
-      guid: 
-      comparisonTyp: 0
-      iVal: 0
-    audioAsset: {fileID: 0}
-    emotion: 0
-    editTyp: 0
   - Guid: 3a024425-ee36-47bc-a6ab-9bf7030eb99c
     DialogTitle: NpcNode
-    Position: {x: 3490, y: -290}
+    Position: {x: 3490.4, y: -289.59998}
     Type: 1
     DialogText: '>:)'
     Image: {fileID: 0}
@@ -578,7 +607,7 @@ MonoBehaviour:
     editTyp: 0
   - Guid: bef6feb3-4b36-498d-ab8b-46c75822408f
     DialogTitle: NpcNode
-    Position: {x: 3490, y: 19}
+    Position: {x: 3490.4, y: 19.2}
     Type: 1
     DialogText: oh good idea, brb
     Image: {fileID: 0}
@@ -594,7 +623,7 @@ MonoBehaviour:
     editTyp: 0
   - Guid: 22a3b96a-3d7b-4516-a300-0ca1955bb750
     DialogTitle: NpcNode
-    Position: {x: 3490, y: -134}
+    Position: {x: 3490.4, y: -133.6}
     Type: 1
     DialogText: thanks
     Image: {fileID: 0}
@@ -610,7 +639,7 @@ MonoBehaviour:
     editTyp: 0
   - Guid: 7560b853-2f0b-4e85-bbd8-9ac281ba7e5c
     DialogTitle: ChoiceNode
-    Position: {x: 1582, y: -178}
+    Position: {x: 1582.4, y: -177.6}
     Type: 0
     DialogText: hello world
     Image: {fileID: 0}
@@ -626,7 +655,7 @@ MonoBehaviour:
     editTyp: 0
   - Guid: cd2505b0-822b-4de7-aa6a-5127f579c0ca
     DialogTitle: NpcNode
-    Position: {x: 2617, y: -157}
+    Position: {x: 2616.8, y: -156.8}
     Type: 1
     DialogText: my arms still dont feel right, like theyre not really mine
     Image: {fileID: 0}
@@ -642,7 +671,7 @@ MonoBehaviour:
     editTyp: 0
   - Guid: de9e6395-f6fb-4143-8212-2a7da659f83d
     DialogTitle: NpcNode
-    Position: {x: 2314, y: 18}
+    Position: {x: 2314.4, y: 18.400002}
     Type: 1
     DialogText: really? its cryo?? huh
     Image: {fileID: 0}
@@ -658,7 +687,7 @@ MonoBehaviour:
     editTyp: 0
   - Guid: 061a2291-a641-4e37-accb-662b9433452e
     DialogTitle: NpcNode
-    Position: {x: 3855, y: -114}
+    Position: {x: 3855.2, y: -113.600006}
     Type: 1
     DialogText: soo, do you know what you wanna do when we arrive?
     Image: {fileID: 0}
@@ -674,7 +703,7 @@ MonoBehaviour:
     editTyp: 0
   - Guid: 9e24f68f-ea78-4fa5-8021-45be89240717
     DialogTitle: NpcNode
-    Position: {x: 4797, y: -262}
+    Position: {x: 4796.8, y: -261.6}
     Type: 1
     DialogText: i think that was a month ago by now
     Image: {fileID: 0}
@@ -690,7 +719,7 @@ MonoBehaviour:
     editTyp: 0
   - Guid: bad7ce58-f832-4fd7-9f27-87d6fa539765
     DialogTitle: ChoiceNode
-    Position: {x: 4223, y: -114}
+    Position: {x: 4223.2, y: -113.600006}
     Type: 0
     DialogText: hello world
     Image: {fileID: 0}
@@ -706,7 +735,7 @@ MonoBehaviour:
     editTyp: 0
   - Guid: 3028db5b-2384-4ff9-90fb-0e83f8d00978
     DialogTitle: NpcNode
-    Position: {x: 4799, y: -114}
+    Position: {x: 4799.2, y: -113.600006}
     Type: 1
     DialogText: understandable
     Image: {fileID: 0}
@@ -722,7 +751,7 @@ MonoBehaviour:
     editTyp: 0
   - Guid: cacfd785-a9d5-4962-8066-3c8231ab5a53
     DialogTitle: NpcNode
-    Position: {x: 4799, y: 186}
+    Position: {x: 4799.2, y: 186.4}
     Type: 1
     DialogText: a farm?
     Image: {fileID: 0}
@@ -738,7 +767,7 @@ MonoBehaviour:
     editTyp: 0
   - Guid: 347c0fef-15d3-400b-b7d9-130941ad84b2
     DialogTitle: NpcNode
-    Position: {x: 5306, y: -262}
+    Position: {x: 5306.4, y: -261.6}
     Type: 1
     DialogText: but yeah
     Image: {fileID: 0}
@@ -754,7 +783,7 @@ MonoBehaviour:
     editTyp: 0
   - Guid: 00b43f08-45f3-4110-a475-6d4b1728887e
     DialogTitle: NpcNode
-    Position: {x: 5558, y: -262}
+    Position: {x: 5558.4, y: -261.6}
     Type: 1
     DialogText: a lot of crap happened recently
     Image: {fileID: 0}
@@ -770,7 +799,7 @@ MonoBehaviour:
     editTyp: 0
   - Guid: 3dd114a8-52bc-4dac-837a-a806e4b19635
     DialogTitle: NpcNode
-    Position: {x: 5812, y: -262}
+    Position: {x: 5812, y: -261.6}
     Type: 1
     DialogText: sorry
     Image: {fileID: 0}
@@ -786,7 +815,7 @@ MonoBehaviour:
     editTyp: 0
   - Guid: 622c0791-806a-4645-8810-de462e21dfc8
     DialogTitle: NpcNode
-    Position: {x: 5058, y: -262}
+    Position: {x: 5058.4, y: -261.6}
     Type: 1
     DialogText: we were frozen for a while
     Image: {fileID: 0}
@@ -802,7 +831,7 @@ MonoBehaviour:
     editTyp: 0
   - Guid: cb041205-5f86-439e-8b7d-5618c14defb3
     DialogTitle: NpcNode
-    Position: {x: 5078, y: 186}
+    Position: {x: 5078.4, y: 186.4}
     Type: 1
     DialogText: on the moon?
     Image: {fileID: 0}
@@ -818,7 +847,7 @@ MonoBehaviour:
     editTyp: 0
   - Guid: 4e8bd191-8389-462e-9b80-c652c2e54f1b
     DialogTitle: NpcNode
-    Position: {x: 5330, y: 186}
+    Position: {x: 5330.4, y: 186.4}
     Type: 1
     DialogText: like with animals?
     Image: {fileID: 0}
@@ -834,7 +863,7 @@ MonoBehaviour:
     editTyp: 0
   - Guid: efdbb914-838a-4bbb-a08b-45d1512c1dc7
     DialogTitle: NpcNode
-    Position: {x: 6146, y: 70}
+    Position: {x: 6146.4, y: 70.399994}
     Type: 1
     DialogText: okay cool
     Image: {fileID: 0}
@@ -850,7 +879,7 @@ MonoBehaviour:
     editTyp: 0
   - Guid: 95ad6848-9cca-45a9-ad85-341be47a1da0
     DialogTitle: ChoiceNode
-    Position: {x: 5591, y: 186}
+    Position: {x: 5591.2, y: 186.4}
     Type: 0
     DialogText: hello world
     Image: {fileID: 0}
@@ -866,7 +895,7 @@ MonoBehaviour:
     editTyp: 0
   - Guid: 3026e406-283e-4421-a936-6d0c32471931
     DialogTitle: NpcNode
-    Position: {x: 6145, y: 274}
+    Position: {x: 6144.8, y: 274.40002}
     Type: 1
     DialogText: i dont know
     Image: {fileID: 0}
@@ -882,7 +911,7 @@ MonoBehaviour:
     editTyp: 0
   - Guid: 72d5b5de-ad48-4080-a25d-ecd0b8cb0723
     DialogTitle: NpcNode
-    Position: {x: 6428, y: 274}
+    Position: {x: 6428, y: 274.40002}
     Type: 1
     DialogText: could be fun
     Image: {fileID: 0}
@@ -898,7 +927,7 @@ MonoBehaviour:
     editTyp: 0
   - Guid: 73141b21-3c40-45e1-a189-694098701142
     DialogTitle: ChoiceNode
-    Position: {x: 6683, y: -30}
+    Position: {x: 6683.2, y: -29.599998}
     Type: 0
     DialogText: hello world
     Image: {fileID: 0}
@@ -914,7 +943,7 @@ MonoBehaviour:
     editTyp: 0
   - Guid: 7fb2d1da-4140-4989-bf7e-28c722a4c90a
     DialogTitle: NpcNode
-    Position: {x: 7194, y: -30}
+    Position: {x: 7194.4, y: -29.599998}
     Type: 1
     DialogText: i heard some rumbling from the other room
     Image: {fileID: 0}
@@ -930,7 +959,7 @@ MonoBehaviour:
     editTyp: 0
   - Guid: fadc497b-5572-4c73-8ff7-30f7036c872c
     DialogTitle: NpcNode
-    Position: {x: 7494, y: -30}
+    Position: {x: 7494.4, y: -29.599998}
     Type: 1
     DialogText: so hermia should be awake xD
     Image: {fileID: 0}
@@ -946,7 +975,7 @@ MonoBehaviour:
     editTyp: 0
   - Guid: 23537181-20f4-464e-8559-5a99235b2bef
     DialogTitle: NpcNode
-    Position: {x: 7758, y: -30}
+    Position: {x: 7758.4, y: -29.599998}
     Type: 1
     DialogText: demetrius is probably looking for a way to lift this isolation thingy
     Image: {fileID: 0}
@@ -962,7 +991,7 @@ MonoBehaviour:
     editTyp: 0
   - Guid: 14a9c182-1a59-4add-b121-31609dec5c19
     DialogTitle: NpcNode
-    Position: {x: 8170, y: -30}
+    Position: {x: 8170.4, y: -29.599998}
     Type: 1
     DialogText: ' you know how he is :D'
     Image: {fileID: 0}
@@ -978,7 +1007,7 @@ MonoBehaviour:
     editTyp: 0
   - Guid: 7c9ef1bc-153e-43dd-b1ed-d27e176ce886
     DialogTitle: ChoiceNode
-    Position: {x: 8419, y: -30}
+    Position: {x: 8419.2, y: -29.599998}
     Type: 0
     DialogText: hello world
     Image: {fileID: 0}
@@ -994,7 +1023,7 @@ MonoBehaviour:
     editTyp: 0
   - Guid: 05a6ef28-7044-4d40-b03c-2b4a80112f3a
     DialogTitle: ChoiceNode
-    Position: {x: 6683, y: -212}
+    Position: {x: 6683.2, y: -212}
     Type: 0
     DialogText: hello world
     Image: {fileID: 0}
@@ -1010,7 +1039,7 @@ MonoBehaviour:
     editTyp: 0
   - Guid: 68f675f1-f7cc-4d0e-82c0-3888a040aee7
     DialogTitle: Unlock other chats
-    Position: {x: 8932, y: -30}
+    Position: {x: 8932, y: -29.599998}
     Type: 2
     DialogText: 
     Image: {fileID: 0}
@@ -1026,7 +1055,7 @@ MonoBehaviour:
     editTyp: 0
   - Guid: 846bdb2b-0367-4010-a800-17baec48f3c3
     DialogTitle: NpcNode
-    Position: {x: 9440, y: -2}
+    Position: {x: 9440, y: -1.5999985}
     Type: 1
     DialogText: knock yourself out
     Image: {fileID: 0}
@@ -1058,7 +1087,7 @@ MonoBehaviour:
     editTyp: 0
   - Guid: 271c000a-6a1e-4152-9f76-ad53d4e21452
     DialogTitle: NpcNode
-    Position: {x: 400, y: 2238}
+    Position: {x: 400, y: 2238.4}
     Type: 1
     DialogText: hellooo
     Image: {fileID: 0}
@@ -1074,7 +1103,7 @@ MonoBehaviour:
     editTyp: 0
   - Guid: 66ba4f2b-cb02-4c3b-b640-6a29c19d4c64
     DialogTitle: NpcNode
-    Position: {x: 668, y: 2238}
+    Position: {x: 668, y: 2238.4}
     Type: 1
     DialogText: im bored
     Image: {fileID: 0}
@@ -1088,25 +1117,9 @@ MonoBehaviour:
     audioAsset: {fileID: 0}
     emotion: 12
     editTyp: 0
-  - Guid: f36bf331-b5d5-4c96-aad3-92c737e6cfd1
-    DialogTitle: ChoiceNode
-    Position: {x: 1338, y: 2238}
-    Type: 0
-    DialogText: hello world
-    Image: {fileID: 0}
-    customRespondTime: 0
-    GameEvent: {fileID: 0}
-    BlackBoardProperty:
-      name: 
-      guid: 
-      comparisonTyp: 0
-      iVal: 0
-    audioAsset: {fileID: 0}
-    emotion: 12
-    editTyp: 0
   - Guid: d597437d-b76d-401b-85ef-c02767ddcd10
     DialogTitle: NpcNode
-    Position: {x: 1676, y: 1914}
+    Position: {x: 1676, y: 1914.3999}
     Type: 1
     DialogText: being here reminds me of all the boring business gatherings we had
       to go to
@@ -1123,7 +1136,7 @@ MonoBehaviour:
     editTyp: 0
   - Guid: e411e7ee-b004-453f-8149-dcab5ff44810
     DialogTitle: ChoiceNode
-    Position: {x: 2022, y: 1733}
+    Position: {x: 2022.4, y: 1733.6}
     Type: 0
     DialogText: hello world
     Image: {fileID: 0}
@@ -1139,7 +1152,7 @@ MonoBehaviour:
     editTyp: 0
   - Guid: afca05f3-748d-487b-b1b9-684edc28538c
     DialogTitle: NpcNode
-    Position: {x: 2987, y: 1591}
+    Position: {x: 2987.2, y: 1591.2}
     Type: 1
     DialogText: not true
     Image: {fileID: 0}
@@ -1155,7 +1168,7 @@ MonoBehaviour:
     editTyp: 0
   - Guid: f37373ea-90fe-4070-bc0a-8a5272f1be7b
     DialogTitle: NpcNode
-    Position: {x: 3248, y: 1591}
+    Position: {x: 3248, y: 1591.2}
     Type: 1
     DialogText: i already danced
     Image: {fileID: 0}
@@ -1171,7 +1184,7 @@ MonoBehaviour:
     editTyp: 0
   - Guid: 76f2b072-27e0-4819-b329-530ee0b48a8a
     DialogTitle: ChoiceNode
-    Position: {x: 3522, y: 1492}
+    Position: {x: 3522.4, y: 1492}
     Type: 0
     DialogText: hello world
     Image: {fileID: 0}
@@ -1187,7 +1200,7 @@ MonoBehaviour:
     editTyp: 0
   - Guid: 42e04607-dc7a-49bd-a7d2-1b5cc532f942
     DialogTitle: NpcNode
-    Position: {x: 3882, y: 1684}
+    Position: {x: 3882.4, y: 1684}
     Type: 1
     DialogText: nono i brought some with me
     Image: {fileID: 0}
@@ -1201,25 +1214,9 @@ MonoBehaviour:
     audioAsset: {fileID: 0}
     emotion: 12
     editTyp: 0
-  - Guid: 6c56a508-574e-4e5a-b8ea-b457ba76b0e7
-    DialogTitle: NpcNode
-    Position: {x: 3882, y: 1374}
-    Type: 1
-    DialogText: yes
-    Image: {fileID: 0}
-    customRespondTime: 0
-    GameEvent: {fileID: 0}
-    BlackBoardProperty:
-      name: 
-      guid: 
-      comparisonTyp: 0
-      iVal: 0
-    audioAsset: {fileID: 0}
-    emotion: 12
-    editTyp: 0
   - Guid: c5b46813-168b-4261-837b-1fa7a0582e0a
     DialogTitle: NpcNode
-    Position: {x: 4142, y: 1374}
+    Position: {x: 4142.4, y: 1374.3999}
     Type: 1
     DialogText: but i stopped pretty quickly
     Image: {fileID: 0}
@@ -1235,7 +1232,7 @@ MonoBehaviour:
     editTyp: 0
   - Guid: 0bf0ae34-65ca-4b0e-9f63-459bc40cf4f9
     DialogTitle: NpcNode
-    Position: {x: 4410, y: 1374}
+    Position: {x: 4410.4, y: 1374.3999}
     Type: 1
     DialogText: i dont like being watched
     Image: {fileID: 0}
@@ -1251,7 +1248,7 @@ MonoBehaviour:
     editTyp: 0
   - Guid: 452bc244-d147-4d3e-a2f9-2cc3f1a0c342
     DialogTitle: NpcNode
-    Position: {x: 4142, y: 1534}
+    Position: {x: 4142.4, y: 1534.3999}
     Type: 1
     DialogText: i stopped pretty quickly
     Image: {fileID: 0}
@@ -1265,25 +1262,9 @@ MonoBehaviour:
     audioAsset: {fileID: 0}
     emotion: 12
     editTyp: 0
-  - Guid: f437e3e8-499c-4e7f-bf3b-ad61f94601d7
-    DialogTitle: ChoiceNode
-    Position: {x: 4696, y: 1374}
-    Type: 0
-    DialogText: hello world
-    Image: {fileID: 0}
-    customRespondTime: 0
-    GameEvent: {fileID: 0}
-    BlackBoardProperty:
-      name: 
-      guid: 
-      comparisonTyp: 0
-      iVal: 0
-    audioAsset: {fileID: 0}
-    emotion: 12
-    editTyp: 0
   - Guid: ee6e14f3-da33-40df-9e71-ef2da081d71f
     DialogTitle: ChoiceNode
-    Position: {x: 2987, y: 1893}
+    Position: {x: 2987.2, y: 1893.6}
     Type: 0
     DialogText: hello world
     Image: {fileID: 0}
@@ -1299,7 +1280,7 @@ MonoBehaviour:
     editTyp: 0
   - Guid: 5b22c63e-f808-4106-880b-54f8869871d1
     DialogTitle: ChoiceNode
-    Position: {x: 3479, y: 1893}
+    Position: {x: 3479.2, y: 1893.6}
     Type: 0
     DialogText: hello world
     Image: {fileID: 0}
@@ -1315,7 +1296,7 @@ MonoBehaviour:
     editTyp: 0
   - Guid: 908c522d-9008-4597-a2e8-dec2572e4083
     DialogTitle: Puck Friendship down
-    Position: {x: 3882, y: 1854}
+    Position: {x: 3882.4, y: 1854.3999}
     Type: 8
     DialogText: 
     Image: {fileID: 0}
@@ -1329,25 +1310,9 @@ MonoBehaviour:
     audioAsset: {fileID: 0}
     emotion: 12
     editTyp: 2
-  - Guid: 0e8e0bed-58b0-4636-801d-a6a5a01bed8d
-    DialogTitle: NpcNode
-    Position: {x: 4256, y: 1813}
-    Type: 1
-    DialogText: hm they have been pretty nice to me
-    Image: {fileID: 0}
-    customRespondTime: 0
-    GameEvent: {fileID: 0}
-    BlackBoardProperty:
-      name: 
-      guid: 
-      comparisonTyp: 0
-      iVal: 0
-    audioAsset: {fileID: 0}
-    emotion: 12
-    editTyp: 0
   - Guid: 905c4bbb-9b3e-4754-b0a2-621742dbd448
     DialogTitle: ChoiceNode
-    Position: {x: 936, y: 2238}
+    Position: {x: 936, y: 2238.4}
     Type: 0
     DialogText: hello world
     Image: {fileID: 0}
@@ -1363,7 +1328,7 @@ MonoBehaviour:
     editTyp: 0
   - Guid: 0d5ae83e-4507-4fc5-8b8c-f54374fc940a
     DialogTitle: NpcNode
-    Position: {x: 5095, y: 1106}
+    Position: {x: 5095.2, y: 1106.3999}
     Type: 1
     DialogText: yeah
     Image: {fileID: 0}
@@ -1379,7 +1344,7 @@ MonoBehaviour:
     editTyp: 0
   - Guid: 74b55e1f-cb77-413d-9316-229435caf46f
     DialogTitle: NpcNode
-    Position: {x: 5355, y: 1106}
+    Position: {x: 5355.2, y: 1106.3999}
     Type: 1
     DialogText: i mean puck is fine
     Image: {fileID: 0}
@@ -1395,7 +1360,7 @@ MonoBehaviour:
     editTyp: 0
   - Guid: 547c4217-9e74-4a12-9692-7a8da0f88aef
     DialogTitle: NpcNode
-    Position: {x: 5627, y: 1106}
+    Position: {x: 5627.2, y: 1106.3999}
     Type: 1
     DialogText: its just a little awkward with them watching
     Image: {fileID: 0}
@@ -1411,7 +1376,7 @@ MonoBehaviour:
     editTyp: 0
   - Guid: 694323c9-fc00-420a-bac1-1365f56bee74
     DialogTitle: NpcNode
-    Position: {x: 4154, y: 2051}
+    Position: {x: 4154.4, y: 2051.2}
     Type: 1
     DialogText: did something happen?
     Image: {fileID: 0}
@@ -1427,7 +1392,7 @@ MonoBehaviour:
     editTyp: 0
   - Guid: 886366e8-2453-494e-8744-dac7c6ede314
     DialogTitle: ChoiceNode
-    Position: {x: 4410, y: 2051}
+    Position: {x: 4410.4, y: 2051.2}
     Type: 0
     DialogText: hello world
     Image: {fileID: 0}
@@ -1443,7 +1408,7 @@ MonoBehaviour:
     editTyp: 0
   - Guid: 4b01ecd1-d5d3-4e43-b7ab-406342bf5e23
     DialogTitle: NpcNode
-    Position: {x: 2250, y: 1366}
+    Position: {x: 2250.4, y: 1366.3999}
     Type: 1
     DialogText: mhhh cant really describe it
     Image: {fileID: 0}
@@ -1459,7 +1424,7 @@ MonoBehaviour:
     editTyp: 0
   - Guid: cfdec7d5-1e33-46fa-b265-4a39a8944c7e
     DialogTitle: NpcNode
-    Position: {x: 2514, y: 1366}
+    Position: {x: 2514.4, y: 1366.3999}
     Type: 1
     DialogText: the same feeling
     Image: {fileID: 0}
@@ -1475,7 +1440,7 @@ MonoBehaviour:
     editTyp: 0
   - Guid: 2c55a073-6ff7-4ef7-89b7-7450df6240dc
     DialogTitle: NpcNode
-    Position: {x: 2774, y: 1366}
+    Position: {x: 2774.4, y: 1366.3999}
     Type: 1
     DialogText: it feels very... official
     Image: {fileID: 0}
@@ -1491,7 +1456,7 @@ MonoBehaviour:
     editTyp: 0
   - Guid: 6b928924-ddd8-4adc-86eb-5c67d67d98a3
     DialogTitle: ChoiceNode
-    Position: {x: 2480, y: 1733}
+    Position: {x: 2480, y: 1733.6}
     Type: 0
     DialogText: hello world
     Image: {fileID: 0}
@@ -1507,7 +1472,7 @@ MonoBehaviour:
     editTyp: 0
   - Guid: ef211fda-eb82-4820-b2aa-408f0f89cd82
     DialogTitle: ChoiceNode
-    Position: {x: 5955, y: 1052}
+    Position: {x: 5955.2, y: 1052}
     Type: 0
     DialogText: hello world
     Image: {fileID: 0}
@@ -1523,7 +1488,7 @@ MonoBehaviour:
     editTyp: 0
   - Guid: 85570b2f-7d86-4905-997c-6cfb953ce6a2
     DialogTitle: NpcNode
-    Position: {x: 5182, y: 1407}
+    Position: {x: 5182.4, y: 1407.2}
     Type: 1
     DialogText: me too
     Image: {fileID: 0}
@@ -1539,7 +1504,7 @@ MonoBehaviour:
     editTyp: 0
   - Guid: f4e4a8c9-a5cc-4680-91b7-3e48781080aa
     DialogTitle: NpcNode
-    Position: {x: 5182, y: 1605}
+    Position: {x: 5182.4, y: 1605.6}
     Type: 1
     DialogText: yep
     Image: {fileID: 0}
@@ -1553,25 +1518,9 @@ MonoBehaviour:
     audioAsset: {fileID: 0}
     emotion: 12
     editTyp: 0
-  - Guid: a009ed75-00d4-4ba7-b351-f11493aa4cab
-    DialogTitle: EditValueNode
-    Position: {x: 6319, y: 949}
-    Type: 8
-    DialogText: 
-    Image: {fileID: 0}
-    customRespondTime: 0
-    GameEvent: {fileID: 0}
-    BlackBoardProperty:
-      name: PuckFriendship
-      guid: 2b958ad0-a132-4ff6-bc3e-df90bd970454
-      comparisonTyp: 0
-      iVal: 1
-    audioAsset: {fileID: 0}
-    emotion: 12
-    editTyp: 2
   - Guid: 5020b08c-5ecf-45d3-b21a-88482c73d5fc
     DialogTitle: NpcNode
-    Position: {x: 6630, y: 878}
+    Position: {x: 6630.4, y: 878.4}
     Type: 1
     DialogText: thats fair
     Image: {fileID: 0}
@@ -1587,7 +1536,7 @@ MonoBehaviour:
     editTyp: 0
   - Guid: b5a4ac14-1b84-46e4-a629-aaf8a347b25a
     DialogTitle: NpcNode
-    Position: {x: 6887, y: 878}
+    Position: {x: 6887.2, y: 878.4}
     Type: 1
     DialogText: i kinda wish i had one at home haha
     Image: {fileID: 0}
@@ -1603,7 +1552,7 @@ MonoBehaviour:
     editTyp: 0
   - Guid: 34b1b2f5-9b0a-4e0e-8b8f-290a7c4068fc
     DialogTitle: NpcNode
-    Position: {x: 2365, y: 2874}
+    Position: {x: 2364.8, y: 2874.4}
     Type: 1
     DialogText: thats what i was gonna say!
     Image: {fileID: 0}
@@ -1619,7 +1568,7 @@ MonoBehaviour:
     editTyp: 0
   - Guid: 998400fe-e726-4f22-83bb-62020e7b9c5c
     DialogTitle: NpcNode
-    Position: {x: 2628, y: 2874}
+    Position: {x: 2628, y: 2874.4}
     Type: 1
     DialogText: :)
     Image: {fileID: 0}
@@ -1635,7 +1584,7 @@ MonoBehaviour:
     editTyp: 0
   - Guid: 0f1e28d7-cb18-44c5-81a6-eada5b524ace
     DialogTitle: ChoiceNode
-    Position: {x: 2899, y: 2874}
+    Position: {x: 2899.2, y: 2874.4}
     Type: 0
     DialogText: hello world
     Image: {fileID: 0}
@@ -1651,7 +1600,7 @@ MonoBehaviour:
     editTyp: 0
   - Guid: a6aad89a-fa01-48d0-b9a9-7a364a2073eb
     DialogTitle: NpcNode
-    Position: {x: 1676, y: 2869}
+    Position: {x: 1676, y: 2869.5999}
     Type: 1
     DialogText: i didnt bring anything fun
     Image: {fileID: 0}
@@ -1667,7 +1616,7 @@ MonoBehaviour:
     editTyp: 0
   - Guid: 15220c3c-4614-4945-93ec-7621abe93855
     DialogTitle: ChoiceNode
-    Position: {x: 1926, y: 2662}
+    Position: {x: 1926.4, y: 2662.4}
     Type: 0
     DialogText: hello world
     Image: {fileID: 0}
@@ -1683,7 +1632,7 @@ MonoBehaviour:
     editTyp: 0
   - Guid: b9720445-f3c9-4499-b041-941aa047170d
     DialogTitle: NpcNode
-    Position: {x: 2426, y: 2574}
+    Position: {x: 2426.4, y: 2574.4}
     Type: 1
     DialogText: more than enough
     Image: {fileID: 0}
@@ -1697,25 +1646,9 @@ MonoBehaviour:
     audioAsset: {fileID: 0}
     emotion: 12
     editTyp: 0
-  - Guid: 2c4d63e8-5aa0-4ae6-8d67-516de55bcc74
-    DialogTitle: NpcNode
-    Position: {x: 3389, y: 3006}
-    Type: 1
-    DialogText: i have had enough of millionaires
-    Image: {fileID: 0}
-    customRespondTime: 0
-    GameEvent: {fileID: 0}
-    BlackBoardProperty:
-      name: 
-      guid: 
-      comparisonTyp: 0
-      iVal: 0
-    audioAsset: {fileID: 0}
-    emotion: 12
-    editTyp: 0
   - Guid: 73d22413-5100-4a00-bb99-e2ff8d3dc86a
     DialogTitle: NpcNode
-    Position: {x: 3882, y: 2051}
+    Position: {x: 3882.4, y: 2051.2}
     Type: 1
     DialogText: what?
     Image: {fileID: 0}
@@ -1731,7 +1664,7 @@ MonoBehaviour:
     editTyp: 0
   - Guid: 444b61b6-758c-4308-908c-a2a221804753
     DialogTitle: NpcNode
-    Position: {x: 4835, y: 1932}
+    Position: {x: 4835.2, y: 1932}
     Type: 1
     DialogText: ok
     Image: {fileID: 0}
@@ -1795,7 +1728,7 @@ MonoBehaviour:
     editTyp: 0
   - Guid: 03d8a159-a0a6-4387-bf61-b73ee5489cfd
     DialogTitle: NpcNode
-    Position: {x: 4834, y: 2122}
+    Position: {x: 4834.4, y: 2122.4}
     Type: 1
     DialogText: uh oh
     Image: {fileID: 0}
@@ -1811,7 +1744,7 @@ MonoBehaviour:
     editTyp: 0
   - Guid: 643f15a1-8710-4f5d-a13b-bd33e2d006be
     DialogTitle: ChoiceNode
-    Position: {x: 5094, y: 2122}
+    Position: {x: 5094.4, y: 2122.4}
     Type: 0
     DialogText: hello world
     Image: {fileID: 0}
@@ -1827,7 +1760,7 @@ MonoBehaviour:
     editTyp: 0
   - Guid: 43efac54-ce5b-4ca4-89ee-98e229487506
     DialogTitle: NpcNode
-    Position: {x: 5459, y: 2367}
+    Position: {x: 5459.2, y: 2367.2}
     Type: 1
     DialogText: fine by me
     Image: {fileID: 0}
@@ -1843,7 +1776,7 @@ MonoBehaviour:
     editTyp: 0
   - Guid: 7ba4941a-7b14-46d6-bfa1-89ffa85c228d
     DialogTitle: NpcNode
-    Position: {x: 5473, y: 2122}
+    Position: {x: 5472.8, y: 2122.4}
     Type: 1
     DialogText: and... do you?
     Image: {fileID: 0}
@@ -1859,7 +1792,7 @@ MonoBehaviour:
     editTyp: 0
   - Guid: 2078c59d-ed1a-403d-a0ff-1cda41db617f
     DialogTitle: ChoiceNode
-    Position: {x: 5970, y: 1932}
+    Position: {x: 5970.4, y: 1932}
     Type: 0
     DialogText: hello world
     Image: {fileID: 0}
@@ -1875,7 +1808,7 @@ MonoBehaviour:
     editTyp: 0
   - Guid: fbd00a04-9727-4c17-9b28-d6970397c82b
     DialogTitle: ChoiceNode
-    Position: {x: 5439, y: 1605}
+    Position: {x: 5439.2, y: 1605.6}
     Type: 0
     DialogText: hello world
     Image: {fileID: 0}
@@ -1891,7 +1824,7 @@ MonoBehaviour:
     editTyp: 0
   - Guid: cae4a569-0397-4a04-ab80-c8ca7a59d6f0
     DialogTitle: NpcNode
-    Position: {x: 3646, y: 3006}
+    Position: {x: 3646.4, y: 3006.4}
     Type: 1
     DialogText: will miss the food though...
     Image: {fileID: 0}
@@ -1907,7 +1840,7 @@ MonoBehaviour:
     editTyp: 0
   - Guid: d1e3a8da-f28a-4f8e-a080-16fb0be96de2
     DialogTitle: NpcNode
-    Position: {x: 5439, y: 1407}
+    Position: {x: 5439.2, y: 1407.2}
     Type: 1
     DialogText: i had so much fun
     Image: {fileID: 0}
@@ -1921,25 +1854,9 @@ MonoBehaviour:
     audioAsset: {fileID: 0}
     emotion: 12
     editTyp: 0
-  - Guid: a9034362-0485-428c-bb50-d1fa6cbf4d81
-    DialogTitle: NpcNode
-    Position: {x: 7118, y: 1238}
-    Type: 1
-    DialogText: oh something came up
-    Image: {fileID: 0}
-    customRespondTime: 2
-    GameEvent: {fileID: 0}
-    BlackBoardProperty:
-      name: 
-      guid: 
-      comparisonTyp: 0
-      iVal: 0
-    audioAsset: {fileID: 0}
-    emotion: 12
-    editTyp: 0
   - Guid: 6c1fb586-56b6-45ff-9402-215a31b0f407
     DialogTitle: NpcNode
-    Position: {x: 7366, y: 1238}
+    Position: {x: 7366.4, y: 1238.3999}
     Type: 1
     DialogText: lets talk later
     Image: {fileID: 0}
@@ -1953,25 +1870,9 @@ MonoBehaviour:
     audioAsset: {fileID: 0}
     emotion: 12
     editTyp: 0
-  - Guid: 8ea5951a-e092-4750-8de6-f47baa811c0b
-    DialogTitle: ChoiceNode
-    Position: {x: 5768, y: 1407}
-    Type: 0
-    DialogText: hello world
-    Image: {fileID: 0}
-    customRespondTime: 0
-    GameEvent: {fileID: 0}
-    BlackBoardProperty:
-      name: 
-      guid: 
-      comparisonTyp: 0
-      iVal: 0
-    audioAsset: {fileID: 0}
-    emotion: 12
-    editTyp: 0
   - Guid: d1607480-10d1-48e0-950f-19ef5b247961
     DialogTitle: NpcNode
-    Position: {x: 6233, y: 1262}
+    Position: {x: 6232.8, y: 1262.3999}
     Type: 1
     DialogText: cant wait to be out of here
     Image: {fileID: 0}
@@ -1987,7 +1888,7 @@ MonoBehaviour:
     editTyp: 0
   - Guid: 33caf84f-049f-44ce-ae5c-d4b593a60bb2
     DialogTitle: NpcNode
-    Position: {x: 6389, y: 1723}
+    Position: {x: 6388.8, y: 1723.2}
     Type: 1
     DialogText: sure
     Image: {fileID: 0}
@@ -2003,7 +1904,7 @@ MonoBehaviour:
     editTyp: 0
   - Guid: 48c1c80b-eb72-4336-9b73-b426f1b2c103
     DialogTitle: NpcNode
-    Position: {x: 6389, y: 1905}
+    Position: {x: 6388.8, y: 1905.6}
     Type: 1
     DialogText: alright :)
     Image: {fileID: 0}
@@ -2033,25 +1934,9 @@ MonoBehaviour:
     audioAsset: {fileID: 0}
     emotion: 12
     editTyp: 0
-  - Guid: c3e786ea-c341-4b8c-82d6-869feed3fd7c
-    DialogTitle: NpcNode
-    Position: {x: 6801, y: 2092}
-    Type: 1
-    DialogText: sorry, didnt mean to pry
-    Image: {fileID: 0}
-    customRespondTime: 0
-    GameEvent: {fileID: 0}
-    BlackBoardProperty:
-      name: 
-      guid: 
-      comparisonTyp: 0
-      iVal: 0
-    audioAsset: {fileID: 0}
-    emotion: 12
-    editTyp: 0
   - Guid: bf16003e-732b-4ae5-acbc-8d54f9f43cf1
     DialogTitle: ChoiceNode
-    Position: {x: 5750, y: 2104}
+    Position: {x: 5750.4, y: 2104}
     Type: 0
     DialogText: hello world
     Image: {fileID: 0}
@@ -2067,7 +1952,7 @@ MonoBehaviour:
     editTyp: 0
   - Guid: 2d820a34-e953-4d26-b474-5d6fc57b077f
     DialogTitle: Lysander Love decrease
-    Position: {x: 6178, y: 2354}
+    Position: {x: 6178.4, y: 2354.4}
     Type: 8
     DialogText: 
     Image: {fileID: 0}
@@ -2083,7 +1968,7 @@ MonoBehaviour:
     editTyp: 2
   - Guid: 3da3fadd-fac6-4108-b701-d0e861f8be45
     DialogTitle: NpcNode
-    Position: {x: 7098, y: 2058}
+    Position: {x: 7098.4, y: 2058.4}
     Type: 1
     DialogText: actually something came up
     Image: {fileID: 0}
@@ -2099,41 +1984,9 @@ MonoBehaviour:
     editTyp: 0
   - Guid: e8a2fb8f-4aa7-44d5-af0a-c5faf841802c
     DialogTitle: NpcNode
-    Position: {x: 5827, y: 1709}
+    Position: {x: 5827.2, y: 1709.6}
     Type: 1
     DialogText: -MESSAGE COULD NOT BE DELIVERED-
-    Image: {fileID: 0}
-    customRespondTime: 0
-    GameEvent: {fileID: 0}
-    BlackBoardProperty:
-      name: 
-      guid: 
-      comparisonTyp: 0
-      iVal: 0
-    audioAsset: {fileID: 0}
-    emotion: 12
-    editTyp: 0
-  - Guid: 8ad82d6c-ce3c-42a0-8b02-0965d166a38c
-    DialogTitle: ChoiceNode
-    Position: {x: 3970, y: 3006}
-    Type: 0
-    DialogText: hello world
-    Image: {fileID: 0}
-    customRespondTime: 0
-    GameEvent: {fileID: 0}
-    BlackBoardProperty:
-      name: 
-      guid: 
-      comparisonTyp: 0
-      iVal: 0
-    audioAsset: {fileID: 0}
-    emotion: 12
-    editTyp: 0
-  - Guid: 9684d83b-557b-4bd2-aa71-28f69e5314e2
-    DialogTitle: PLACEHOLDER
-    Position: {x: 4343, y: 2935}
-    Type: 1
-    DialogText: PLACEHOLDER
     Image: {fileID: 0}
     customRespondTime: 0
     GameEvent: {fileID: 0}
@@ -2163,7 +2016,7 @@ MonoBehaviour:
     editTyp: 0
   - Guid: 3b1d5054-d4f0-44fd-8b9d-08fcf5bb4a4a
     DialogTitle: Wait for Hermia Letter
-    Position: {x: 8058, y: 1209}
+    Position: {x: 8058.4, y: 1209.6}
     Type: 5
     DialogText: 
     Image: {fileID: 0}
@@ -2179,7 +2032,7 @@ MonoBehaviour:
     editTyp: 0
   - Guid: a9274b33-efc0-4bb8-add7-314c40085fa0
     DialogTitle: EditValueNode
-    Position: {x: 7686, y: 1227}
+    Position: {x: 7686.4, y: 1227.2}
     Type: 8
     DialogText: 
     Image: {fileID: 0}
@@ -2193,25 +2046,9 @@ MonoBehaviour:
     audioAsset: {fileID: 0}
     emotion: 12
     editTyp: 1
-  - Guid: b5ac51ee-e5ef-410e-995a-aeb8e44f3878
-    DialogTitle: ChoiceNode
-    Position: {x: 8390, y: 1209}
-    Type: 0
-    DialogText: hello world
-    Image: {fileID: 0}
-    customRespondTime: 0
-    GameEvent: {fileID: 0}
-    BlackBoardProperty:
-      name: 
-      guid: 
-      comparisonTyp: 0
-      iVal: 0
-    audioAsset: {fileID: 0}
-    emotion: 12
-    editTyp: 0
   - Guid: f761d927-1a30-4d94-8b96-2c1c6db76462
     DialogTitle: Wait for Hermia and Demtrius
-    Position: {x: 9778, y: -30}
+    Position: {x: 9778.4, y: -29.599998}
     Type: 5
     DialogText: 
     Image: {fileID: 0}
@@ -2227,7 +2064,7 @@ MonoBehaviour:
     editTyp: 0
   - Guid: 0acdfed0-8fc6-4c97-a667-bdb24ef4f8db
     DialogTitle: ChoiceNode
-    Position: {x: 10255, y: -30}
+    Position: {x: 10255.2, y: -29.599998}
     Type: 0
     DialogText: hello world
     Image: {fileID: 0}
@@ -2243,7 +2080,7 @@ MonoBehaviour:
     editTyp: 0
   - Guid: cf225182-6de9-4940-9fc8-9f26b676fe6d
     DialogTitle: Wait until Puck Unlock
-    Position: {x: -28, y: 4425}
+    Position: {x: -28, y: 4425.6}
     Type: 5
     DialogText: 
     Image: {fileID: 0}
@@ -2259,7 +2096,7 @@ MonoBehaviour:
     editTyp: 0
   - Guid: 7f095b2c-7f8f-440c-ba6c-ae16adb1da8f
     DialogTitle: ChoiceNode
-    Position: {x: 358, y: 4451}
+    Position: {x: 358.4, y: 4451.2}
     Type: 0
     DialogText: hello world
     Image: {fileID: 0}
@@ -2275,7 +2112,7 @@ MonoBehaviour:
     editTyp: 0
   - Guid: 94b2b520-a52c-41d7-92da-1b0b6cd8fae2
     DialogTitle: ChoiceNode
-    Position: {x: 917, y: 4390}
+    Position: {x: 916.8, y: 4390.4004}
     Type: 0
     DialogText: hello world
     Image: {fileID: 0}
@@ -2307,7 +2144,7 @@ MonoBehaviour:
     editTyp: 0
   - Guid: a99a763e-8c4b-412d-b11d-87f7dbcc7f10
     DialogTitle: NpcNode
-    Position: {x: 917, y: 4692}
+    Position: {x: 916.8, y: 4692}
     Type: 1
     DialogText: DISCONNECTED (Bad Ending)
     Image: {fileID: 0}
@@ -2323,7 +2160,7 @@ MonoBehaviour:
     editTyp: 0
   - Guid: 8a57a009-6769-48f4-968f-9c09c33f1508
     DialogTitle: RaiseEventNode
-    Position: {x: 2207, y: -295}
+    Position: {x: 2207.2, y: -294.4}
     Type: 2
     DialogText: 
     Image: {fileID: 0}
@@ -2339,7 +2176,7 @@ MonoBehaviour:
     editTyp: 0
   - Guid: 5d406f89-f78c-4714-a2af-451801377979
     DialogTitle: NpcNode
-    Position: {x: 1370, y: 4309}
+    Position: {x: 1370.4, y: 4309.6}
     Type: 1
     DialogText: Plug Ending
     Image: {fileID: 0}
@@ -2355,7 +2192,7 @@ MonoBehaviour:
     editTyp: 0
   - Guid: 15e07895-1fd2-48cf-aa94-b17463c67351
     DialogTitle: RaiseEventNode
-    Position: {x: 1656, y: 4309}
+    Position: {x: 1656, y: 4309.6}
     Type: 2
     DialogText: 
     Image: {fileID: 0}
@@ -2387,7 +2224,7 @@ MonoBehaviour:
     editTyp: 0
   - Guid: ba741c1d-a3ff-40b7-b775-843bc6441fec
     DialogTitle: RaiseEventNode
-    Position: {x: 1201, y: 4692}
+    Position: {x: 1200.8, y: 4692}
     Type: 2
     DialogText: 
     Image: {fileID: 0}
@@ -2401,9 +2238,377 @@ MonoBehaviour:
     audioAsset: {fileID: 0}
     emotion: 12
     editTyp: 0
+  - Guid: 0be1f806-562b-4adb-99fa-e11163b589a0
+    DialogTitle: ChoiceNode
+    Position: {x: 2975.2, y: -156.8}
+    Type: 0
+    DialogText: hello world
+    Image: {fileID: 0}
+    customRespondTime: 0
+    GameEvent: {fileID: 0}
+    BlackBoardProperty:
+      name: 
+      guid: 
+      comparisonTyp: 0
+      iVal: 0
+    audioAsset: {fileID: 0}
+    emotion: 0
+    editTyp: 0
+  - Guid: 6c56a508-574e-4e5a-b8ea-b457ba76b0e7
+    DialogTitle: NpcNode
+    Position: {x: 3882.4, y: 1374.3999}
+    Type: 1
+    DialogText: yes
+    Image: {fileID: 0}
+    customRespondTime: 0
+    GameEvent: {fileID: 0}
+    BlackBoardProperty:
+      name: 
+      guid: 
+      comparisonTyp: 0
+      iVal: 0
+    audioAsset: {fileID: 0}
+    emotion: 12
+    editTyp: 0
+  - Guid: a009ed75-00d4-4ba7-b351-f11493aa4cab
+    DialogTitle: EditValueNode
+    Position: {x: 6319.2, y: 949.60004}
+    Type: 8
+    DialogText: 
+    Image: {fileID: 0}
+    customRespondTime: 0
+    GameEvent: {fileID: 0}
+    BlackBoardProperty:
+      name: PuckFriendship
+      guid: 2b958ad0-a132-4ff6-bc3e-df90bd970454
+      comparisonTyp: 0
+      iVal: 1
+    audioAsset: {fileID: 0}
+    emotion: 12
+    editTyp: 2
+  - Guid: a9034362-0485-428c-bb50-d1fa6cbf4d81
+    DialogTitle: NpcNode
+    Position: {x: 7118.4, y: 1238.3999}
+    Type: 1
+    DialogText: oh something came up
+    Image: {fileID: 0}
+    customRespondTime: 2
+    GameEvent: {fileID: 0}
+    BlackBoardProperty:
+      name: 
+      guid: 
+      comparisonTyp: 0
+      iVal: 0
+    audioAsset: {fileID: 0}
+    emotion: 12
+    editTyp: 0
+  - Guid: 8ea5951a-e092-4750-8de6-f47baa811c0b
+    DialogTitle: ChoiceNode
+    Position: {x: 5768, y: 1407.2}
+    Type: 0
+    DialogText: hello world
+    Image: {fileID: 0}
+    customRespondTime: 0
+    GameEvent: {fileID: 0}
+    BlackBoardProperty:
+      name: 
+      guid: 
+      comparisonTyp: 0
+      iVal: 0
+    audioAsset: {fileID: 0}
+    emotion: 12
+    editTyp: 0
+  - Guid: 0e8e0bed-58b0-4636-801d-a6a5a01bed8d
+    DialogTitle: NpcNode
+    Position: {x: 4256, y: 1813.6}
+    Type: 1
+    DialogText: hm they have been pretty nice to me
+    Image: {fileID: 0}
+    customRespondTime: 0
+    GameEvent: {fileID: 0}
+    BlackBoardProperty:
+      name: 
+      guid: 
+      comparisonTyp: 0
+      iVal: 0
+    audioAsset: {fileID: 0}
+    emotion: 12
+    editTyp: 0
+  - Guid: 2c4d63e8-5aa0-4ae6-8d67-516de55bcc74
+    DialogTitle: NpcNode
+    Position: {x: 3388.8, y: 3006.4}
+    Type: 1
+    DialogText: i have had enough of millionaires
+    Image: {fileID: 0}
+    customRespondTime: 0
+    GameEvent: {fileID: 0}
+    BlackBoardProperty:
+      name: 
+      guid: 
+      comparisonTyp: 0
+      iVal: 0
+    audioAsset: {fileID: 0}
+    emotion: 12
+    editTyp: 0
+  - Guid: e9c5871c-5d32-4489-b01d-fd3f2898fffb
+    DialogTitle: NpcNode
+    Position: {x: 4354.4, y: 3068.8}
+    Type: 1
+    DialogText: oh yeah
+    Image: {fileID: 0}
+    customRespondTime: 0
+    GameEvent: {fileID: 0}
+    BlackBoardProperty:
+      name: 
+      guid: 
+      comparisonTyp: 0
+      iVal: 0
+    audioAsset: {fileID: 0}
+    emotion: 12
+    editTyp: 0
+  - Guid: 12201ac2-da1d-4790-bb5b-31598316cf76
+    DialogTitle: NpcNode
+    Position: {x: 4712, y: 2587.2}
+    Type: 1
+    DialogText: how are you doing helena?
+    Image: {fileID: 0}
+    customRespondTime: 0
+    GameEvent: {fileID: 0}
+    BlackBoardProperty:
+      name: 
+      guid: 
+      comparisonTyp: 0
+      iVal: 0
+    audioAsset: {fileID: 0}
+    emotion: 12
+    editTyp: 0
+  - Guid: f437e3e8-499c-4e7f-bf3b-ad61f94601d7
+    DialogTitle: ChoiceNode
+    Position: {x: 4696, y: 1374.3999}
+    Type: 0
+    DialogText: hello world
+    Image: {fileID: 0}
+    customRespondTime: 0
+    GameEvent: {fileID: 0}
+    BlackBoardProperty:
+      name: 
+      guid: 
+      comparisonTyp: 0
+      iVal: 0
+    audioAsset: {fileID: 0}
+    emotion: 12
+    editTyp: 0
+  - Guid: 8ad82d6c-ce3c-42a0-8b02-0965d166a38c
+    DialogTitle: ChoiceNode
+    Position: {x: 3968, y: 2954.4}
+    Type: 0
+    DialogText: hello world
+    Image: {fileID: 0}
+    customRespondTime: 0
+    GameEvent: {fileID: 0}
+    BlackBoardProperty:
+      name: 
+      guid: 
+      comparisonTyp: 0
+      iVal: 0
+    audioAsset: {fileID: 0}
+    emotion: 12
+    editTyp: 0
+  - Guid: 9684d83b-557b-4bd2-aa71-28f69e5314e2
+    DialogTitle: PLACEHOLDER
+    Position: {x: 4366.4, y: 2698.4}
+    Type: 1
+    DialogText: but lets not think too much about the past
+    Image: {fileID: 0}
+    customRespondTime: 0
+    GameEvent: {fileID: 0}
+    BlackBoardProperty:
+      name: 
+      guid: 
+      comparisonTyp: 0
+      iVal: 0
+    audioAsset: {fileID: 0}
+    emotion: 12
+    editTyp: 0
+  - Guid: 968f4383-467e-442e-ba0b-ba9eb8e2e2e7
+    DialogTitle: NpcNode
+    Position: {x: 4986.4, y: 2587.2}
+    Type: 1
+    DialogText: i mean after all this mess
+    Image: {fileID: 0}
+    customRespondTime: 0
+    GameEvent: {fileID: 0}
+    BlackBoardProperty:
+      name: 
+      guid: 
+      comparisonTyp: 0
+      iVal: 0
+    audioAsset: {fileID: 0}
+    emotion: 12
+    editTyp: 0
+  - Guid: 41303abe-e6d7-4221-8244-c431c84e87d4
+    DialogTitle: ChoiceNode
+    Position: {x: 5241.6, y: 2566.4}
+    Type: 0
+    DialogText: hello world
+    Image: {fileID: 0}
+    customRespondTime: 0
+    GameEvent: {fileID: 0}
+    BlackBoardProperty:
+      name: 
+      guid: 
+      comparisonTyp: 0
+      iVal: 0
+    audioAsset: {fileID: 0}
+    emotion: 12
+    editTyp: 0
+  - Guid: b0d8f0b5-1b8d-48d6-8543-246fc90b514f
+    DialogTitle: NpcNode
+    Position: {x: 5760, y: 2556.8}
+    Type: 1
+    DialogText: i am glad
+    Image: {fileID: 0}
+    customRespondTime: 0
+    GameEvent: {fileID: 0}
+    BlackBoardProperty:
+      name: 
+      guid: 
+      comparisonTyp: 0
+      iVal: 0
+    audioAsset: {fileID: 0}
+    emotion: 12
+    editTyp: 0
+  - Guid: ae49054a-bf5e-4f46-b03b-a916b37e6ad7
+    DialogTitle: ChoiceNode
+    Position: {x: 6019.2, y: 2556.8}
+    Type: 0
+    DialogText: hello world
+    Image: {fileID: 0}
+    customRespondTime: 0
+    GameEvent: {fileID: 0}
+    BlackBoardProperty:
+      name: 
+      guid: 
+      comparisonTyp: 0
+      iVal: 0
+    audioAsset: {fileID: 0}
+    emotion: 12
+    editTyp: 0
+  - Guid: c3e786ea-c341-4b8c-82d6-869feed3fd7c
+    DialogTitle: NpcNode
+    Position: {x: 6800.8, y: 2092}
+    Type: 1
+    DialogText: sorry, didnt mean to pry
+    Image: {fileID: 0}
+    customRespondTime: 0
+    GameEvent: {fileID: 0}
+    BlackBoardProperty:
+      name: 
+      guid: 
+      comparisonTyp: 0
+      iVal: 0
+    audioAsset: {fileID: 0}
+    emotion: 12
+    editTyp: 0
+  - Guid: 4dd0dd21-b5fc-427c-afce-732d77e6d015
+    DialogTitle: NpcNode
+    Position: {x: 6424.8, y: 2556.8}
+    Type: 1
+    DialogText: Also good
+    Image: {fileID: 0}
+    customRespondTime: 0
+    GameEvent: {fileID: 0}
+    BlackBoardProperty:
+      name: 
+      guid: 
+      comparisonTyp: 0
+      iVal: 0
+    audioAsset: {fileID: 0}
+    emotion: 12
+    editTyp: 0
+  - Guid: f36bf331-b5d5-4c96-aad3-92c737e6cfd1
+    DialogTitle: ChoiceNode
+    Position: {x: 1338.4, y: 2238.4}
+    Type: 0
+    DialogText: hello world
+    Image: {fileID: 0}
+    customRespondTime: 0
+    GameEvent: {fileID: 0}
+    BlackBoardProperty:
+      name: 
+      guid: 
+      comparisonTyp: 0
+      iVal: 0
+    audioAsset: {fileID: 0}
+    emotion: 12
+    editTyp: 0
+  - Guid: c10e760f-f211-4ccc-a628-3fae33a0571f
+    DialogTitle: ChoiceNode
+    Position: {x: 6724, y: 2556.8}
+    Type: 0
+    DialogText: hello world
+    Image: {fileID: 0}
+    customRespondTime: 0
+    GameEvent: {fileID: 0}
+    BlackBoardProperty:
+      name: 
+      guid: 
+      comparisonTyp: 0
+      iVal: 0
+    audioAsset: {fileID: 0}
+    emotion: 12
+    editTyp: 0
+  - Guid: 9ced94af-c92e-42f7-8b0f-e61c4cc0f5d8
+    DialogTitle: NpcNode
+    Position: {x: 7104, y: 2602.4}
+    Type: 1
+    DialogText: a little less
+    Image: {fileID: 0}
+    customRespondTime: 0
+    GameEvent: {fileID: 0}
+    BlackBoardProperty:
+      name: 
+      guid: 
+      comparisonTyp: 0
+      iVal: 0
+    audioAsset: {fileID: 0}
+    emotion: 12
+    editTyp: 0
+  - Guid: 814892a7-ae00-445f-bddd-fd6238d957b8
+    DialogTitle: NpcNode
+    Position: {x: 7103.2, y: 2433.5999}
+    Type: 1
+    DialogText: yep
+    Image: {fileID: 0}
+    customRespondTime: 0
+    GameEvent: {fileID: 0}
+    BlackBoardProperty:
+      name: 
+      guid: 
+      comparisonTyp: 0
+      iVal: 0
+    audioAsset: {fileID: 0}
+    emotion: 12
+    editTyp: 0
+  - Guid: 772ef62d-a38b-4cfc-999b-37743d8158db
+    DialogTitle: NpcNode
+    Position: {x: 7360.8, y: 2602.4}
+    Type: 1
+    DialogText: thanks
+    Image: {fileID: 0}
+    customRespondTime: 0
+    GameEvent: {fileID: 0}
+    BlackBoardProperty:
+      name: 
+      guid: 
+      comparisonTyp: 0
+      iVal: 0
+    audioAsset: {fileID: 0}
+    emotion: 12
+    editTyp: 0
   - Guid: 5e4365b5-4aef-4da7-bb2d-d95a8c54c9c2
     DialogTitle: EditValueNode
-    Position: {x: 8838, y: 1209}
+    Position: {x: 9718.4, y: 1210.3999}
     Type: 8
     DialogText: 
     Image: {fileID: 0}
@@ -2419,7 +2624,7 @@ MonoBehaviour:
     editTyp: 1
   - Guid: 96ab8770-2fe7-4203-a8a5-2f8004166fec
     DialogTitle: Day 2 Lysander Done
-    Position: {x: 9562, y: 1209}
+    Position: {x: 10442.4, y: 1210.3999}
     Type: 8
     DialogText: 
     Image: {fileID: 0}
@@ -2435,7 +2640,23 @@ MonoBehaviour:
     editTyp: 1
   - Guid: d0e21301-1b8a-4602-b711-9a77334904e3
     DialogTitle: ChoiceNode
-    Position: {x: 9126, y: 1209}
+    Position: {x: 10006.4, y: 1210.3999}
+    Type: 0
+    DialogText: hello world
+    Image: {fileID: 0}
+    customRespondTime: 0
+    GameEvent: {fileID: 0}
+    BlackBoardProperty:
+      name: 
+      guid: 
+      comparisonTyp: 0
+      iVal: 0
+    audioAsset: {fileID: 0}
+    emotion: 12
+    editTyp: 0
+  - Guid: b5ac51ee-e5ef-410e-995a-aeb8e44f3878
+    DialogTitle: ChoiceNode
+    Position: {x: 9270.4, y: 1210.3999}
     Type: 0
     DialogText: hello world
     Image: {fileID: 0}
@@ -2452,7 +2673,7 @@ MonoBehaviour:
   dialogGroupData:
   - Guid: 
     name: Day 1.1
-    Position: {x: 296, y: -354}
+    Position: {x: 295.19998, y: -354.4}
     childNodeGuid:
     - ac7acd63-894e-4a46-be96-2c9c8b18f76e
     - d5d203e8-8790-41e5-a40d-f79e7c2518f7
