@@ -3773,6 +3773,7 @@ MonoBehaviour:
     nameProgressProperty: ProgressDay2
     checkValue: 3
     terminal: {fileID: 0}
+    cryoDoor: {fileID: 0}
   day3State:
     lightController: {fileID: 1835700772797283506}
     cryoDoorTrigger: {fileID: 6827852919969844202}
@@ -3781,6 +3782,7 @@ MonoBehaviour:
     lightBulbEvent: {fileID: 7487554781158790498}
     terminal: {fileID: 0}
     hermiaVoiceEvent: {fileID: 0}
+    cryoDoor: {fileID: 0}
   fadeInState:
     animationCurve:
       serializedVersion: 2
@@ -9667,7 +9669,7 @@ PrefabInstance:
     - target: {fileID: 1880244023364664111, guid: 0c30e22ba89055b41aa46975bf4e9286, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 2f2bf8b308aaa114986f1f57797be749, type: 2}
+      objectReference: {fileID: 2100000, guid: 4b77841c8e06c7e4296a5498b12b09a9, type: 2}
     - target: {fileID: 2968179331964613222, guid: 0c30e22ba89055b41aa46975bf4e9286, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
@@ -9800,6 +9802,10 @@ PrefabInstance:
       propertyPath: m_LocalPosition.z
       value: 0.057
       objectReference: {fileID: 0}
+    - target: {fileID: 5620456232640317348, guid: 0c30e22ba89055b41aa46975bf4e9286, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 489abc371e37d834696caba8008ec2bc, type: 2}
     - target: {fileID: 5730941202551186078, guid: 0c30e22ba89055b41aa46975bf4e9286, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
@@ -9812,6 +9818,10 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 9d31bce4c7c9c4040b17c8556949376c, type: 2}
+    - target: {fileID: 6314931627366081326, guid: 0c30e22ba89055b41aa46975bf4e9286, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 489abc371e37d834696caba8008ec2bc, type: 2}
     - target: {fileID: 6377985137285116880, guid: 0c30e22ba89055b41aa46975bf4e9286, type: 3}
       propertyPath: m_LocalPosition.z
       value: -0.072
@@ -9876,6 +9886,10 @@ PrefabInstance:
       propertyPath: m_LocalPosition.z
       value: 0.056999207
       objectReference: {fileID: 0}
+    - target: {fileID: 8608244687207356910, guid: 0c30e22ba89055b41aa46975bf4e9286, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 489abc371e37d834696caba8008ec2bc, type: 2}
     - target: {fileID: 8914558534449882178, guid: 0c30e22ba89055b41aa46975bf4e9286, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
