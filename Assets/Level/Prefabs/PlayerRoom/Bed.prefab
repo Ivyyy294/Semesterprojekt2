@@ -170,6 +170,14 @@ PrefabInstance:
       propertyPath: m_LocalPosition.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5139005295392545604, guid: acade24dc8256f949b1c2870d87d5727, type: 3}
+      propertyPath: maxHorizontalAngle
+      value: 70
+      objectReference: {fileID: 0}
+    - target: {fileID: 5139005295392545604, guid: acade24dc8256f949b1c2870d87d5727, type: 3}
+      propertyPath: limitHorizontalAngle
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6742137318159808482, guid: acade24dc8256f949b1c2870d87d5727, type: 3}
       propertyPath: m_Name
       value: InteractableCamera

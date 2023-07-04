@@ -505,6 +505,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4025346134741406857, guid: cbc17c2b942c75242850f0bbb7667649, type: 3}
+      propertyPath: maxHorizontalAngle
+      value: 65
+      objectReference: {fileID: 0}
+    - target: {fileID: 4025346134741406857, guid: cbc17c2b942c75242850f0bbb7667649, type: 3}
+      propertyPath: limitHorizontalAngle
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4065663284481072044, guid: cbc17c2b942c75242850f0bbb7667649, type: 3}
       propertyPath: speed
       value: 1

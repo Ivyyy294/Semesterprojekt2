@@ -225,11 +225,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 18a433e8b7c194346becdb15a5f3dc0c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  activeState:
-    mouseLook: {fileID: 5139005295392545604}
   easeOutState:
-    mouseLook: {fileID: 5139005295392545604}
     applyForwardToPlayer: 1
+  spawnState:
+    playerSpawnRotationX: 0
   cameraContainer: {fileID: 5139005295392545604}
   vCam: {fileID: 2248964186750743978}
   defaultRotationContainer: {x: 0, y: 0, z: 0, w: 0}
@@ -281,4 +280,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cameraTrans: {fileID: 4872695401133004923}
   maxVerticalAngle: 80
+  limitHorizontalAngle: 1
+  maxHorizontalAngle: 80
   mouseSensitivity: 1
