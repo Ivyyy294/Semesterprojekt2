@@ -1,0 +1,72 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6f7490679cbb0ec49b5d45a66e74b10e, type: 3}
+  m_Name: VL_ChainOfVoice
+  m_EditorClassIdentifier: 
+  audioClips:
+  - {fileID: 8300000, guid: 291b3e54f0138c6468c2b5e68f337d63, type: 3}
+  clipData:
+  - clip: {fileID: 8300000, guid: 291b3e54f0138c6468c2b5e68f337d63, type: 3}
+    subtitle: 'P.U.C.K: "Please enter the cryo chamber Helena"'
+  - clip: {fileID: 8300000, guid: 8c46990ef77d6034a824e2e1ccbd3f33, type: 3}
+    subtitle: 'P.U.C.K: "Just go in. Don''t make this harder than it has to be"'
+  - clip: {fileID: 8300000, guid: 455598519261592489b557824b1b824d, type: 3}
+    subtitle: 'P.U.C.K: "The door is right there!"'
+  - clip: {fileID: 8300000, guid: 69d55b48141a6a6439f140aeb6542a87, type: 3}
+    subtitle: 'P.U.C.K: "Do it for me? I watched over you for so long, trust me one
+      more time."'
+  - clip: {fileID: 8300000, guid: 9f9ca32b53a22a6469a9701a8e7cfbc0, type: 3}
+    subtitle: 'P.U.C.K: "Do it for your friends? Yourself? All of humanity!"'
+  - clip: {fileID: 8300000, guid: 6c31a3a3828d8f243b9f28871839bcce, type: 3}
+    subtitle: 'P.U.C.K: "You will wake up as if nothing happened"'
+  - clip: {fileID: 8300000, guid: 85fa7db7ff0550f4bbe9de0c4625968c, type: 3}
+    subtitle: 'P.U.C.K: "Helenaaaaaaa"'
+  - clip: {fileID: 8300000, guid: 88a835947debc16428535db9ed53de96, type: 3}
+    subtitle: 'P.U.C.K: "Think of it like a reverse sauna, it will calm you down"'
+  - clip: {fileID: 8300000, guid: f4c52171c9579b8419000f63f51270a0, type: 3}
+    subtitle: 'P.U.C.K: "You will not feel a thing...... I am sorry. That sounded
+      ominous. What I meant is... Nevermind. Please just go in?"'
+  - clip: {fileID: 8300000, guid: e55961f8329f1fd4bb42898e3bc69154, type: 3}
+    subtitle: 'P.U.C.K: "Last chaaance"'
+  - clip: {fileID: 8300000, guid: a7366e2665a32f549b151df785806d4f, type: 3}
+    subtitle: 'P.U.C.K: "Last last chaaance Helena"'
+  - clip: {fileID: 8300000, guid: 7a36b1ecdd093e24e871a90d217234f5, type: 3}
+    subtitle: 'P.U.C.K: "Don''t make me count down"'
+  - clip: {fileID: 8300000, guid: afd0e4778f978544c88737445502adca, type: 3}
+    subtitle: 'P.U.C.K: "5... 4... 3... 2... 1... 1/2, 1/3, 1/4, 1/5"'
+  - clip: {fileID: 8300000, guid: 8a326fd8c5593f8488517a54092f1d75, type: 3}
+    subtitle: 'P.U.C.K: "I will not turn off this music until you go in:" *plays
+      annoying music track* *after 5 seconds*  "okay this song is really bad" *after
+      5 more seconds* "okay I''m turning it off"'
+  - clip: {fileID: 8300000, guid: 13fb8004af4b4864d9d3ecbbaaa73496, type: 3}
+    subtitle: 'P.U.C.K: "You''re a stubborn one aren''t you? Then you leave me no
+      other choice: I will have to use my special words.... Pleeeaase oh my god please
+      please please whyyyyy"'
+  - clip: {fileID: 8300000, guid: 023b68bc10ef0e9448261c263e17a496, type: 3}
+    subtitle: 'P.U.C.K: "Come ooon"'
+  - clip: {fileID: 8300000, guid: 05b206c6fe010f34487ae9e6f8effbe4, type: 3}
+    subtitle: 'P.U.C.K: "It is your primary directive to enter the cryo chamber"'
+  - clip: {fileID: 8300000, guid: 9d47f62615f930043b94e22d00403480, type: 3}
+    subtitle: 'P.U.C.K: "Don''t make me play the song again"'
+  - clip: {fileID: 8300000, guid: 622d55b7f4a8b05468c96f21248f6229, type: 3}
+    subtitle: 'P.U.C.K: "Okay, let''s go back to talking on the chat terminal, there
+      is actually no microphone here, so I have no idea if you said anything this
+      whole time."'
+  subtitle: 'P.U.C.K: "Please enter the cryo chamber Helena"'
+  playStyle: 1
+  audioTyp: 4
+  loop: 0
+  volume: {x: 1, y: 1}
+  pitch: {x: 1, y: 1}
+  spatial: 0
+  minDistance: 0.5
+  maxDistance: 500

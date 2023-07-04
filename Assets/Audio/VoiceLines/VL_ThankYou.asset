@@ -14,6 +14,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   audioClips:
   - {fileID: 8300000, guid: dbef93e634b20be4c82c92543306df87, type: 3}
+  clipData:
+  - clip: {fileID: 8300000, guid: dbef93e634b20be4c82c92543306df87, type: 3}
+    subtitle: 'P.U.C.K: "Thank you"'
   subtitle: 'P.U.C.K: "Thank you"'
   playStyle: 0
   audioTyp: 4

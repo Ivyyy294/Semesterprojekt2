@@ -14,6 +14,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   audioClips:
   - {fileID: 8300000, guid: 1cc02f3a4f542174cb1ca334c8e5a395, type: 3}
+  clipData:
+  - clip: {fileID: 8300000, guid: 1cc02f3a4f542174cb1ca334c8e5a395, type: 3}
+    subtitle: Rumbling in the ventilation shaft
   subtitle: Rumbling in the ventilation shaft
   playStyle: 0
   audioTyp: 0

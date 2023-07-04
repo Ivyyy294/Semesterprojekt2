@@ -14,6 +14,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   audioClips:
   - {fileID: 8300000, guid: 20032e5858808a646ba5cd3718f31931, type: 3}
+  clipData:
+  - clip: {fileID: 8300000, guid: 20032e5858808a646ba5cd3718f31931, type: 3}
+    subtitle: Coffee machine
   subtitle: Coffee machine
   playStyle: 0
   audioTyp: 0

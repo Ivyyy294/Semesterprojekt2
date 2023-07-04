@@ -14,6 +14,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   audioClips:
   - {fileID: 8300000, guid: aad2d8ac2139c2a48b8e0b2fb81bdfac, type: 3}
+  clipData:
+  - clip: {fileID: 8300000, guid: aad2d8ac2139c2a48b8e0b2fb81bdfac, type: 3}
+    subtitle: 'P.U.C.K: "You don''t need to be here right now"'
   subtitle: 'P.U.C.K: "You don''t need to be here right now"'
   playStyle: 0
   audioTyp: 4

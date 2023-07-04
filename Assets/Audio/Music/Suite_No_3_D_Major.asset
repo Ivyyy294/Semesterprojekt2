@@ -12,8 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6f7490679cbb0ec49b5d45a66e74b10e, type: 3}
   m_Name: Suite_No_3_D_Major
   m_EditorClassIdentifier: 
-  audioClips:
-  - {fileID: 8300000, guid: 7a97ba70cf1947748accc4fe25fe55f1, type: 3}
+  clipData:
+  - clip: {fileID: 8300000, guid: 7a97ba70cf1947748accc4fe25fe55f1, type: 3}
+    subtitle: Suite No. 3 in D Major
   subtitle: Suite No. 3 in D Major
   playStyle: 0
   audioTyp: 1

@@ -6,6 +6,13 @@ using UnityEngine;
 [CreateAssetMenu (fileName = "NewAudioAsset", menuName = "AudioAsset")]
 public class AudioAsset : ScriptableObject
 {
+	[System.Serializable]
+	public struct ClipData
+	{
+		public AudioClip clip;
+		public string subtitle;
+	}
+
 	public enum AudioTyp
 	{
 		SFX,
@@ -19,11 +26,10 @@ public class AudioAsset : ScriptableObject
 	{
 		RANDOM,
 		IN_ORDER,
-		REVERSE
+		REVERSE,
 	}
 
-    public AudioClip[] audioClips;
-	public string subtitle;
+	public ClipData[] clipData;
 	[Space]
 	[SerializeField] PlayStyle playStyle = PlayStyle.RANDOM;
 	[Space]
@@ -35,7 +41,7 @@ public class AudioAsset : ScriptableObject
 	[HideInInspector] public float minDistance = 0.5f;
 	[HideInInspector] public float maxDistance = 500f;
 
-	private Stack <AudioClip> clipBuffer = new Stack <AudioClip>();
+	private Stack <ClipData> clipBuffer = new Stack <ClipData>();
 	private PlayStyle oldPlayStyle;
 
 #if UNITY_EDITOR
@@ -71,21 +77,20 @@ public class AudioAsset : ScriptableObject
 	public AudioSource Play (AudioSource audioSource = null)
 	{
 		AudioSource source = audioSource;
-
 	
-		if (audioClips.Length > 0)
+		if (clipData.Length > 0)
 		{
 			if (clipBuffer.Count == 0 || oldPlayStyle != playStyle)
 				ShuffleAudioClips();
 
-			AudioClip clip = clipBuffer.Pop();
+			ClipData clip = clipBuffer.Pop();
 
-			if (clip != null)
+			if (clip.clip != null)
 			{
 				if (source == null)
 					source = CreateAudioSource();
 
-				source.clip = clip;
+				source.clip = clip.clip;
 				//Only Allow loop with externen AudioSource
 				source.loop = audioSource != null && loop;
 				source.volume = Random.Range (volume.x, volume.y) * GetVolumeFactor();
@@ -107,13 +112,14 @@ public class AudioAsset : ScriptableObject
 			}
 			else
 				Debug.LogError("Invalid CLip!");
+
+			if (audioTyp != AudioTyp.MUSIC && audioTyp != AudioTyp.AMBIENT && source != null && source.clip != null)
+				ShowSubtitle (clip.subtitle, source.clip.length / source.pitch);
+			else 
+				ShowSubtitle (clip.subtitle);
 		}
 		//Shows the Subtitle even when clip is null as a placeholder
 
-		if (audioTyp != AudioTyp.MUSIC && audioTyp != AudioTyp.AMBIENT && source != null && source.clip != null)
-			ShowSubtitle (source.clip.length / source.pitch);
-		else 
-			ShowSubtitle ();
 
 
 		return source;
@@ -141,6 +147,8 @@ public class AudioAsset : ScriptableObject
 			return GameSettings.Me().audioSettings.uiVolume;
 	}
 
+	public int ClipCount () {return clipData.Length;}
+
 	//Private FUnctions
 	private void ShuffleAudioClips()
 	{
@@ -148,23 +156,23 @@ public class AudioAsset : ScriptableObject
 
 		if (playStyle == PlayStyle.RANDOM)
 		{
-			while (clipBuffer.Count < audioClips.Length)
+			while (clipBuffer.Count < clipData.Length)
 			{
-				int index = Random.Range (0, audioClips.Length);
+				int index = Random.Range (0, clipData.Length);
 
-				if (!clipBuffer.Contains (audioClips[index]))
-					clipBuffer.Push (audioClips[index]);
+				if (!clipBuffer.Contains (clipData[index]))
+					clipBuffer.Push (clipData[index]);
 			}
 		}
 		else if (playStyle == PlayStyle.REVERSE)
 		{
-			foreach (AudioClip i in audioClips)
+			foreach (ClipData i in clipData)
 				clipBuffer.Push (i);
 		}
 		else
 		{
-			for (int i = audioClips.Length - 1; i >= 0; --i)
-				clipBuffer.Push (audioClips[i]);
+			for (int i = clipData.Length - 1; i >= 0; --i)
+				clipBuffer.Push (clipData[i]);
 		}
 
 		oldPlayStyle = playStyle;
@@ -177,7 +185,7 @@ public class AudioAsset : ScriptableObject
 		return obj.GetComponent <AudioSource>();
 	}
 
-	void ShowSubtitle (float playTime = 0f)
+	void ShowSubtitle (string txt, float playTime = 0f)
 	{
 		float minTime = 0.75f;
 		//Making sure the subtile is readable for at lest 1 second
@@ -190,6 +198,6 @@ public class AudioAsset : ScriptableObject
 		if (audioTyp != AudioTyp.AMBIENT)
 			priority = 1;
 
-		Subtitle.Add (subtitle, playTime, priority);
+		Subtitle.Add (txt, playTime, priority);
 	}
 }

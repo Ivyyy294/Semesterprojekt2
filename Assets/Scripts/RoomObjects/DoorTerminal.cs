@@ -48,7 +48,8 @@ public class DoorTerminal : PushdownAutomata, InteractableObject
 	public class PuckState : BaseState
 	{
 		[SerializeField] AudioPlayer audioPlayer;
-		[SerializeField] List <AudioAsset> audioAssets;
+		[SerializeField] AudioAsset audioAssets;
+		[SerializeField] AudioAsset lastAudioAsset;
 		int counter;
 		bool audioPlayed;
 
@@ -60,18 +61,23 @@ public class DoorTerminal : PushdownAutomata, InteractableObject
 
 		public override void Update (GameObject obj)
 		{
-			if (audioAssets.Count > 0 && ! audioPlayed)
+			if (counter < audioAssets.ClipCount() && ! audioPlayed)
 			{
-				audioPlayer?.Play (audioAssets[counter]);
+				audioPlayer?.Play (audioAssets);
 				audioPlayed = true;
-			} else if (!audioPlayer.IsPlaying())
+			}
+			else if (!audioPlayed)
+			{
+				audioPlayer?.Play (lastAudioAsset);
+				audioPlayed = true;
+			}
+			else if (!audioPlayer.IsPlaying())
 				doorTerminal.PopState();
 		}
 
 		public override void Exit(GameObject obj)
 		{
 			counter++;
-			counter = Mathf.Clamp (counter, 0, audioAssets.Count - 1);
 		}
 	}
 

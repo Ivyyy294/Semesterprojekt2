@@ -14,6 +14,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   audioClips:
   - {fileID: 8300000, guid: 3b0a2ced4a343cb4b93c6723c16dc033, type: 3}
+  clipData:
+  - clip: {fileID: 8300000, guid: 3b0a2ced4a343cb4b93c6723c16dc033, type: 3}
+    subtitle: Cryo door opens
   subtitle: Cryo door opens
   playStyle: 0
   audioTyp: 0

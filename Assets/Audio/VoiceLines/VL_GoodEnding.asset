@@ -14,6 +14,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   audioClips:
   - {fileID: 8300000, guid: 3a94a4b299b710540b396918181e06c8, type: 3}
+  clipData:
+  - clip: {fileID: 8300000, guid: 3a94a4b299b710540b396918181e06c8, type: 3}
+    subtitle: "P.U.C.K: \u201CYou have reached your Destination: Titania. Thank you
+      for putting your trust in me. It has been a pleasure!\""
   subtitle: "P.U.C.K: \u201CYou have reached your Destination: Titania. Thank you
     for putting your trust in me. It has been a pleasure!\""
   playStyle: 0

@@ -14,6 +14,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   audioClips:
   - {fileID: 8300000, guid: 0d3ddfbb095566f4dbedfc0524b2b525, type: 3}
+  clipData:
+  - clip: {fileID: 8300000, guid: 0d3ddfbb095566f4dbedfc0524b2b525, type: 3}
+    subtitle: 'P.U.C.K: "One bean-infused jumpstart, coming right up!"'
   subtitle: 'P.U.C.K: "One bean-infused jumpstart, coming right up!"'
   playStyle: 0
   audioTyp: 4

@@ -14,6 +14,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   audioClips:
   - {fileID: 8300000, guid: 5530199212c0f5044ba2ff416dd5a45c, type: 3}
+  clipData:
+  - clip: {fileID: 8300000, guid: 5530199212c0f5044ba2ff416dd5a45c, type: 3}
+    subtitle: 'P.U.C.K: "There are currently no bedbugs located in your bed! Have
+      a good rest"'
   subtitle: 'P.U.C.K: "There are currently no bedbugs located in your bed! Have a
     good rest"'
   playStyle: 0

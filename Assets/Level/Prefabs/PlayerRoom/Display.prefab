@@ -65,8 +65,8 @@ MonoBehaviour:
     audioAsset: {fileID: 11400000, guid: 16702b76c9350dd4cb779c24448b0a69, type: 2}
   puckState:
     audioPlayer: {fileID: 5412883685212038988}
-    audioAssets:
-    - {fileID: 11400000, guid: 8520d7d2311fb4e44a768b74c616cb46, type: 2}
+    audioAssets: {fileID: 11400000, guid: d7d21488ea95a6a4f8071a1311f022af, type: 2}
+    lastAudioAsset: {fileID: 11400000, guid: 2c4ebf5b76d10de498d911759f3898d2, type: 2}
   active: 0
   locked: 1
 --- !u!114 &5412883685212038988

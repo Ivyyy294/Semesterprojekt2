@@ -158,10 +158,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stage1:
     cryoDoor: {fileID: 0}
-    voiceLines:
-    - {fileID: 11400000, guid: 8520d7d2311fb4e44a768b74c616cb46, type: 2}
-    - {fileID: 11400000, guid: 8520d7d2311fb4e44a768b74c616cb46, type: 2}
-    - {fileID: 11400000, guid: 8520d7d2311fb4e44a768b74c616cb46, type: 2}
+    voiceLines: {fileID: 11400000, guid: cac281ff6b1395e4eab089cf6cf32a29, type: 2}
     chatTerminal: {fileID: 0}
     closeTerminal: {fileID: 11400000, guid: 7829666ef44af2a4588008d9cc30d898, type: 2}
   stage2:

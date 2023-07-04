@@ -22,7 +22,7 @@ class CryoDay3Event : FiniteStateMachine
 	public class Stage1 : BaseState
 	{
 		[SerializeField] Door cryoDoor;
-		[SerializeField] List <AudioAsset> voiceLines;
+		[SerializeField] AudioAsset voiceLines;
 		[SerializeField] ChatTerminalObj chatTerminal;
 		[SerializeField] GameEvent closeTerminal;
 		int currentIndex;
@@ -40,10 +40,13 @@ class CryoDay3Event : FiniteStateMachine
 		{
 			if (!cryoEvent.playerInCryoRoom)
 			{
-				if (currentIndex >= voiceLines.Count && !cryoEvent.audioPlayer.IsPlaying())
+				if (currentIndex >= voiceLines.ClipCount() && !cryoEvent.audioPlayer.IsPlaying())
 					cryoEvent.EnterState (cryoEvent.idleState);
 				else if (!cryoEvent.audioPlayer.IsPlaying())
-					cryoEvent.audioPlayer.Play(voiceLines[currentIndex++]);
+				{
+					cryoEvent.audioPlayer.Play(voiceLines);
+					currentIndex++;
+				}
 			}
 			else
 				cryoEvent.EnterState (cryoEvent.stage2);

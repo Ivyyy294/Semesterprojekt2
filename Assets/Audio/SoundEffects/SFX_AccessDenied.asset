@@ -12,8 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6f7490679cbb0ec49b5d45a66e74b10e, type: 3}
   m_Name: SFX_AccessDenied
   m_EditorClassIdentifier: 
-  audioClips:
-  - {fileID: 8300000, guid: 79c6e10702e67df419d9f7b3f41f2412, type: 3}
+  clipData:
+  - clip: {fileID: 8300000, guid: 79c6e10702e67df419d9f7b3f41f2412, type: 3}
+    subtitle: Access Denied
   subtitle: Access Denied
   playStyle: 0
   audioTyp: 0
