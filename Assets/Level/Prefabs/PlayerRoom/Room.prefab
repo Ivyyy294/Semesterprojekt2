@@ -7922,6 +7922,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 6aeb7c4d1155fa642bfb040e68a9c741, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: bb5dedf602ba3bf42a7391322ba6d8f2, type: 2}
     - target: {fileID: 919132149155446097, guid: 6aeb7c4d1155fa642bfb040e68a9c741, type: 3}
       propertyPath: m_Name
       value: Magazine2
@@ -14089,6 +14093,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 87a4e95854ce3cc46b07d07a8554728f, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 1e6a3933273445c47ab2ad4888e993d5, type: 2}
     - target: {fileID: 919132149155446097, guid: 87a4e95854ce3cc46b07d07a8554728f, type: 3}
       propertyPath: m_Name
       value: Magazine1
