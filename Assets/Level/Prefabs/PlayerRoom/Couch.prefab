@@ -129,6 +129,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: DeskCamera
       objectReference: {fileID: 0}
+    - target: {fileID: 7969435759725725238, guid: acade24dc8256f949b1c2870d87d5727, type: 3}
+      propertyPath: activeState.allowInteractions
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: acade24dc8256f949b1c2870d87d5727, type: 3}
 --- !u!4 &4590622601000472402 stripped

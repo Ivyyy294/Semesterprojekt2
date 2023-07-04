@@ -15,6 +15,8 @@ public class PlayerInteraction : MonoBehaviour
 	[SerializeField] GameEvent showPauseMenu;
 	[SerializeField] InteractTextOverlay interactTextOverlay;
 
+	public float GetRange () { return range;}
+
 	private Transform cameraTrans;
 
 	//Private
