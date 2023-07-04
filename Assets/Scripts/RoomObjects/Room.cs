@@ -145,7 +145,6 @@ public class Room : PushdownAutomata
 	{
 		[SerializeField] Transform PlayerSpawnPos;
 		[SerializeField] InteractableCamera bed;
-		[SerializeField] AudioAsset audioAsset;
 
 		public override void Enter(GameObject obj)
 		{
@@ -164,7 +163,6 @@ public class Room : PushdownAutomata
 
 		public override void Update(GameObject obj)
 		{
-			audioAsset?.PlayAtPos(bed.transform.position);
 			room.PopState();
 		}
 
@@ -278,35 +276,43 @@ public class Room : PushdownAutomata
 	}
 
 	[System.Serializable]
-	public class Day1State : BaseState , IGameEventListener
+	public class Day1State : BaseState
 	{
-		[SerializeField] LightController lightController;
-		[SerializeField] GameEvent nightEvent;
-		bool done;
+		[SerializeField] GameObject img;
+		[SerializeField] AudioAsset audioAsset;
+		[SerializeField] float delay;
+		float timer;
+		//[SerializeField] LightController lightController;
+		//[SerializeField] GameEvent nightEvent;
+		//bool done;
 
 		public override void Enter(GameObject obj)
 		{
+			Player.Me().Lock();
 			base.Enter(obj);
-			done = false;
-			nightEvent?.RegisterListener(this);
-			lightController.EnterNormalState();
-			room.PushState (room.wakeUpCryo);
+			timer = 0f;
+			img.gameObject.SetActive(true);
+			audioAsset?.Play();
+			//done = false;
+			//nightEvent?.RegisterListener(this);
+			//lightController.EnterNormalState();
+			//room.PushState (room.wakeUpCryo);
 		}
 
 		public override void Update(GameObject obj)
 		{
-			if (done)
-				room.SwapState (room.nightState);
+			if (timer < delay)
+				timer += Time.deltaTime;
+			else
+			{
+				room.currentDay = CurrentDay.DAY2;
+				room.PopState();
+			}
 		}
 
 		public override void Exit(GameObject obj)
 		{
-			nightEvent?.UnregisterListener (this);
-		}
-
-		public void OnEventRaised()
-		{
-			done = true;
+			img.gameObject.SetActive (false);
 		}
 	}
 
@@ -319,6 +325,8 @@ public class Room : PushdownAutomata
 		[SerializeField] PuckTerminal terminal;
 		[SerializeField] CryoDoor cryoDoor;
 		[SerializeField] GameObject areaEvent;
+		[SerializeField] AudioAsset audioAsset;
+		bool audioPlayed = false;
 		BlackBoardProperty property;
 
 		public override void Enter(GameObject obj)
@@ -333,11 +341,17 @@ public class Room : PushdownAutomata
 			terminal.SetActiveChat (0);
 			cryoDoor.SpawnOpen();
 			areaEvent.SetActive(true);
+			audioPlayed = false;
 			property = BlackBoard.Me().GetPropertyByName (nameProgressProperty);
 		}
 
 		public override void Update(GameObject obj)
 		{
+			if (!audioPlayed)
+			{
+				audioAsset?.Play();
+				audioPlayed = true;
+			}
 			if (property.Compare (new BlackBoardProperty {comparisonTyp = BlackBoardProperty.ComparisonTyp.EQUAL, iVal = checkValue}))
 				room.SwapState (room.nightState);
 		}
