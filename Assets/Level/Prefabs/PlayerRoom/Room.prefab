@@ -11217,6 +11217,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: Barrikaden
       objectReference: {fileID: 0}
+    - target: {fileID: 2079526854301348103, guid: 5879994bc331ac2469b9fb42d91ffa42, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5389735204654437863, guid: 5879994bc331ac2469b9fb42d91ffa42, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.21
+      objectReference: {fileID: 0}
+    - target: {fileID: 5587832026188464145, guid: 5879994bc331ac2469b9fb42d91ffa42, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.030000001
+      objectReference: {fileID: 0}
     - target: {fileID: 6157071546342140969, guid: 5879994bc331ac2469b9fb42d91ffa42, type: 3}
       propertyPath: m_RootOrder
       value: 23
