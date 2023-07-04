@@ -25,6 +25,8 @@ class CryoDay3Event : FiniteStateMachine
 		[SerializeField] AudioAsset voiceLines;
 		[SerializeField] ChatTerminalObj chatTerminal;
 		[SerializeField] GameEvent closeTerminal;
+		[SerializeField] float voiceLineDelay = 1f;
+		float timer = 0f;
 		int currentIndex;
 		
 		public override void Enter(GameObject obj)
@@ -32,6 +34,7 @@ class CryoDay3Event : FiniteStateMachine
 			base.Enter(obj);
 			currentIndex = 0;
 			cryoDoor.open = true;
+			timer = 0f;
 			chatTerminal.SetLocked(true);
 			closeTerminal.Raise();
 		}
@@ -44,8 +47,14 @@ class CryoDay3Event : FiniteStateMachine
 					cryoEvent.EnterState (cryoEvent.idleState);
 				else if (!cryoEvent.audioPlayer.IsPlaying())
 				{
-					cryoEvent.audioPlayer.Play(voiceLines);
-					currentIndex++;
+					if (timer < voiceLineDelay)
+						timer += Time.deltaTime;
+					else
+					{
+						cryoEvent.audioPlayer.Play(voiceLines);
+						currentIndex++;
+						timer = 0f;
+					}
 				}
 			}
 			else
