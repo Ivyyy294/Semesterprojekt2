@@ -10,68 +10,45 @@ public class GraphicsSettingsUi : MonoBehaviour
 	[SerializeField] SwitchToggle fullscreen;
 	[SerializeField] TMP_Dropdown resolutionDropDown;
 
-	Resolution[] resolutions;
 	GraphicSettings graphicSettings;
 	int currentIndex;
 
 	private void OnEnable()
 	{
 		currentIndex = -1;
-
-		resolutions = Screen.resolutions;
 		graphicSettings = GameSettings.Me().graphicSettings;
+
 		fullscreen.active = graphicSettings.fullscreen;
 
 		resolutionDropDown.options.Clear();
 
-		for (int i = 0; i < resolutions.Length; ++i)
+		for (int i = 0; i < graphicSettings.availableSettings.Count; ++i)
 		{
-			Resolution tmp = resolutions[i];
-			resolutionDropDown.options.Add(new TMP_Dropdown.OptionData(tmp.ToString()));
-		}
+			GraphicSettings.Setting tmp = graphicSettings.availableSettings[i];
+			resolutionDropDown.options.Add(new TMP_Dropdown.OptionData(tmp.GetDisplayName()));
 
-		int index = Array.IndexOf (resolutions, graphicSettings.resolution);
+			if (tmp.Compare (graphicSettings.currentSetting))
+				currentIndex = i;
+		}
 		
-		if (index != -1)
-		{
-			Debug.Log ("Saved res");
-			resolutionDropDown.value = index;
-			currentIndex = index;
-		}
-		else
-		{
-			Debug.Log ("Default res");
-			resolutionDropDown.value = resolutions.Length -1;
-		}
+		resolutionDropDown.value = currentIndex;
 	}
 
 	private void Update()
 	{
-		if (fullscreen.active != graphicSettings.fullscreen)
-			graphicSettings.fullscreen = fullscreen.active;
-
 		if (resolutionDropDown.value != currentIndex)
 		{
 			currentIndex = resolutionDropDown.value;
-			Resolution tmp = resolutions[currentIndex];
-			Screen.SetResolution (tmp.width, tmp.height, graphicSettings.fullscreen, tmp.refreshRate);
+			graphicSettings.currentSetting = graphicSettings.availableSettings[currentIndex];
+			graphicSettings.SaveSettings();
+			Screen.SetResolution (graphicSettings.currentSetting.width, graphicSettings.currentSetting.height, fullscreen.active);
 		}
-	}
-
-	private void OnDisable()
-	{
-		Save();
 	}
 
 	public void OnFullscreenToggle()
 	{
-		Screen.fullScreen = fullscreen.active;
-	}
-
-	public void Save()
-	{
 		graphicSettings.fullscreen = fullscreen.active;
-		graphicSettings.resolution = Screen.currentResolution;
 		graphicSettings.SaveSettings();
+		Screen.fullScreen = graphicSettings.fullscreen;
 	}
 }
