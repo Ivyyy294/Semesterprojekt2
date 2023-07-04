@@ -433,6 +433,18 @@ PrefabInstance:
       propertyPath: nightState.interactableObjects.Array.data[8]
       value: 
       objectReference: {fileID: 844270280}
+    - target: {fileID: 2565798720408585157, guid: cbc17c2b942c75242850f0bbb7667649, type: 3}
+      propertyPath: fadeInState.animationCurve.m_Curve.Array.data[1].time
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2565798720408585157, guid: cbc17c2b942c75242850f0bbb7667649, type: 3}
+      propertyPath: fadeInState.animationCurve.m_Curve.Array.data[1].inSlope
+      value: -0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2565798720408585157, guid: cbc17c2b942c75242850f0bbb7667649, type: 3}
+      propertyPath: fadeInState.animationCurve.m_Curve.Array.data[1].outSlope
+      value: -0.5
+      objectReference: {fileID: 0}
     - target: {fileID: 2894718716835555158, guid: cbc17c2b942c75242850f0bbb7667649, type: 3}
       propertyPath: uniqueId
       value: 6a774414-ef92-4b4d-8fc8-132493533a3c
