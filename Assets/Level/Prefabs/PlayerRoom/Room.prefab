@@ -10575,6 +10575,10 @@ PrefabInstance:
       propertyPath: m_LocalPosition.z
       value: 12.924
       objectReference: {fileID: 0}
+    - target: {fileID: 4868624331207163929, guid: 88e1f54f8a96267458cde85286ead49d, type: 3}
+      propertyPath: maxHorizontalAngle
+      value: 40
+      objectReference: {fileID: 0}
     - target: {fileID: 5051760149335490467, guid: 88e1f54f8a96267458cde85286ead49d, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 2147483647

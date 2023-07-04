@@ -6,8 +6,11 @@ using Cinemachine;
 public class MouseLook : MonoBehaviour
 {
 	float verticalRotation;
+	float horizontalRotation;
 	public Transform cameraTrans;
 	[SerializeField] float maxVerticalAngle = 80f;
+	[SerializeField] bool limitHorizontalAngle = false;
+	[SerializeField] float maxHorizontalAngle = 0f;
 
 	[Range (0.1f, 2f)]
 	[SerializeField] float mouseSensitivity = 1f;
@@ -24,6 +27,7 @@ public class MouseLook : MonoBehaviour
 	private void OnEnable()
 	{
 		verticalRotation = -cameraTrans.localEulerAngles.x;
+		horizontalRotation = 0f;
 	}
 
 	// Update is called once per frame
@@ -39,6 +43,26 @@ public class MouseLook : MonoBehaviour
 	void MoveHorizontal() 
 	{
 		float mouseX = Input.GetAxis ("Mouse X") * mouseSensitivity;
+		horizontalRotation += mouseX;
+
+		if (limitHorizontalAngle)
+		{
+			Debug.Log (horizontalRotation);
+			float offset = 0f;
+			if(horizontalRotation > maxHorizontalAngle)
+				offset = maxHorizontalAngle - horizontalRotation;
+			else if (horizontalRotation < -maxHorizontalAngle)
+				offset = -maxHorizontalAngle - horizontalRotation; 
+
+			Debug.Log (offset);
+
+			if (offset != 0f)
+			{
+				mouseX += offset;
+				horizontalRotation += offset;
+			}
+		}
+
 		transform.Rotate (Vector3.up, mouseX);
 	}
 
