@@ -242,6 +242,9 @@ MonoBehaviour:
   - baseNodeGuid: 24bd3858-fd3d-480e-9aa0-1a13bf56ef0f
     portName: Next
     targetNodeGuid: 5c793be5-da60-4be1-9550-517442bc9886
+  - baseNodeGuid: 9047f723-b4c0-4593-9bb8-4be0b97b8c9d
+    portName: Next
+    targetNodeGuid: 5c793be5-da60-4be1-9550-517442bc9886
   - baseNodeGuid: cae9d6c3-6775-462d-8f85-af3d0b9f8bec
     portName: Next
     targetNodeGuid: 5c793be5-da60-4be1-9550-517442bc9886
@@ -437,13 +440,7 @@ MonoBehaviour:
   - baseNodeGuid: 751c93ef-209c-4a63-ba7a-70496ae709d3
     portName: Yes. They are too intrusive.
     targetNodeGuid: f6448bf8-7d9d-468a-a412-06a4c49ce64b
-  - baseNodeGuid: 751c93ef-209c-4a63-ba7a-70496ae709d3
-    portName: No.
-    targetNodeGuid: a4591c5f-0d28-4b9e-9ccd-5a3783286135
   - baseNodeGuid: f6448bf8-7d9d-468a-a412-06a4c49ce64b
-    portName: Next
-    targetNodeGuid: 13195953-4ee4-4304-822f-2f54230804b3
-  - baseNodeGuid: a4591c5f-0d28-4b9e-9ccd-5a3783286135
     portName: Next
     targetNodeGuid: 13195953-4ee4-4304-822f-2f54230804b3
   - baseNodeGuid: 13195953-4ee4-4304-822f-2f54230804b3
@@ -457,16 +454,31 @@ MonoBehaviour:
     targetNodeGuid: 69cda921-b57f-4d3e-8837-ae2a29e3db2d
   - baseNodeGuid: 69cda921-b57f-4d3e-8837-ae2a29e3db2d
     portName: Next
-    targetNodeGuid: 203d0688-6c3e-4415-a2fa-99a2813c3c10
-  - baseNodeGuid: 203d0688-6c3e-4415-a2fa-99a2813c3c10
-    portName: Next
-    targetNodeGuid: f8a29e6a-a775-44a0-b5df-e88cdf759057
+    targetNodeGuid: 1704e85c-3115-4adc-beae-03baf3e2e56a
   - baseNodeGuid: 2aa2b9a9-04be-422e-8163-7d854b0e3db9
     portName: Next
     targetNodeGuid: 27938509-7d2e-4ee1-b8b9-69fd8602d2d9
   - baseNodeGuid: 27938509-7d2e-4ee1-b8b9-69fd8602d2d9
     portName: Next
     targetNodeGuid: 79608053-2662-46a4-949e-26e006fb8a51
+  - baseNodeGuid: 203d0688-6c3e-4415-a2fa-99a2813c3c10
+    portName: Next
+    targetNodeGuid: f8a29e6a-a775-44a0-b5df-e88cdf759057
+  - baseNodeGuid: 1704e85c-3115-4adc-beae-03baf3e2e56a
+    portName: Next
+    targetNodeGuid: 203d0688-6c3e-4415-a2fa-99a2813c3c10
+  - baseNodeGuid: 751c93ef-209c-4a63-ba7a-70496ae709d3
+    portName: No.
+    targetNodeGuid: 61768b33-71b8-45c6-8048-e37700765d12
+  - baseNodeGuid: 61768b33-71b8-45c6-8048-e37700765d12
+    portName: Next
+    targetNodeGuid: a4591c5f-0d28-4b9e-9ccd-5a3783286135
+  - baseNodeGuid: a4591c5f-0d28-4b9e-9ccd-5a3783286135
+    portName: Next
+    targetNodeGuid: 9f13a1fe-01ef-4bca-bb04-6e35e57ebd6a
+  - baseNodeGuid: 9f13a1fe-01ef-4bca-bb04-6e35e57ebd6a
+    portName: Next
+    targetNodeGuid: 13195953-4ee4-4304-822f-2f54230804b3
   dialogNodeData:
   - Guid: 4bfba334-e23a-405d-a1e8-b7678606b4d4
     DialogTitle: NpcNode
@@ -2173,22 +2185,6 @@ MonoBehaviour:
     audioAsset: {fileID: 0}
     emotion: 12
     editTyp: 0
-  - Guid: a4591c5f-0d28-4b9e-9ccd-5a3783286135
-    DialogTitle: NpcNode
-    Position: {x: 16372, y: 366.40002}
-    Type: 1
-    DialogText: Then it will not get better.
-    Image: {fileID: 0}
-    customRespondTime: 0
-    GameEvent: {fileID: 0}
-    BlackBoardProperty:
-      name: 
-      guid: 
-      comparisonTyp: 0
-      iVal: 0
-    audioAsset: {fileID: 0}
-    emotion: 12
-    editTyp: 0
   - Guid: 13195953-4ee4-4304-822f-2f54230804b3
     DialogTitle: ChoiceNode
     Position: {x: 16722.4, y: 700}
@@ -2253,22 +2249,6 @@ MonoBehaviour:
     audioAsset: {fileID: 0}
     emotion: 12
     editTyp: 0
-  - Guid: 203d0688-6c3e-4415-a2fa-99a2813c3c10
-    DialogTitle: EditValueNode
-    Position: {x: 18038.4, y: 704}
-    Type: 8
-    DialogText: 
-    Image: {fileID: 0}
-    customRespondTime: 0
-    GameEvent: {fileID: 0}
-    BlackBoardProperty:
-      name: ProgressDay2
-      guid: 20c3be41-b2a7-4954-841a-d5d011a21c09
-      comparisonTyp: 0
-      iVal: 1
-    audioAsset: {fileID: 0}
-    emotion: 12
-    editTyp: 1
   - Guid: 2aa2b9a9-04be-422e-8163-7d854b0e3db9
     DialogTitle: NpcNode
     Position: {x: 10752, y: 840.8}
@@ -2301,5 +2281,85 @@ MonoBehaviour:
     audioAsset: {fileID: 0}
     emotion: 12
     editTyp: 1
+  - Guid: 203d0688-6c3e-4415-a2fa-99a2813c3c10
+    DialogTitle: EditValueNode
+    Position: {x: 18385.6, y: 700}
+    Type: 8
+    DialogText: 
+    Image: {fileID: 0}
+    customRespondTime: 0
+    GameEvent: {fileID: 0}
+    BlackBoardProperty:
+      name: ProgressDay2
+      guid: 20c3be41-b2a7-4954-841a-d5d011a21c09
+      comparisonTyp: 0
+      iVal: 1
+    audioAsset: {fileID: 0}
+    emotion: 12
+    editTyp: 1
+  - Guid: 1704e85c-3115-4adc-beae-03baf3e2e56a
+    DialogTitle: NpcNode
+    Position: {x: 18044.8, y: 704}
+    Type: 1
+    DialogText: I enjoy it very much.
+    Image: {fileID: 0}
+    customRespondTime: 0
+    GameEvent: {fileID: 0}
+    BlackBoardProperty:
+      name: 
+      guid: 
+      comparisonTyp: 0
+      iVal: 0
+    audioAsset: {fileID: 0}
+    emotion: 12
+    editTyp: 0
+  - Guid: a4591c5f-0d28-4b9e-9ccd-5a3783286135
+    DialogTitle: NpcNode
+    Position: {x: 16455.2, y: 366.40002}
+    Type: 1
+    DialogText: Then it will not get better.
+    Image: {fileID: 0}
+    customRespondTime: 0
+    GameEvent: {fileID: 0}
+    BlackBoardProperty:
+      name: 
+      guid: 
+      comparisonTyp: 0
+      iVal: 0
+    audioAsset: {fileID: 0}
+    emotion: 12
+    editTyp: 0
+  - Guid: 61768b33-71b8-45c6-8048-e37700765d12
+    DialogTitle: PuckNode
+    Position: {x: 16164, y: 229.59999}
+    Type: 6
+    DialogText: 
+    Image: {fileID: 0}
+    customRespondTime: 0
+    GameEvent: {fileID: 0}
+    BlackBoardProperty:
+      name: 
+      guid: 
+      comparisonTyp: 0
+      iVal: 0
+    audioAsset: {fileID: 0}
+    emotion: 1
+    editTyp: 0
+  - Guid: 9f13a1fe-01ef-4bca-bb04-6e35e57ebd6a
+    DialogTitle: PuckNode
+    Position: {x: 16772.8, y: 325.6}
+    Type: 6
+    DialogText: 
+    Image: {fileID: 0}
+    customRespondTime: 0
+    GameEvent: {fileID: 0}
+    BlackBoardProperty:
+      name: 
+      guid: 
+      comparisonTyp: 0
+      iVal: 0
+    audioAsset: {fileID: 0}
+    emotion: 12
+    editTyp: 0
   dialogGroupData: []
   blackBoardList: {fileID: 11400000, guid: c289dd2bc5fda5942acc2419a6f68abb, type: 2}

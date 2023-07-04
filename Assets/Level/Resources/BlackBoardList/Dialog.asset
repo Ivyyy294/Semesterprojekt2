@@ -85,3 +85,7 @@ MonoBehaviour:
     guid: 89b231de-1acd-483b-9677-654659bdca67
     comparisonTyp: 0
     iVal: 0
+  - name: PuckConvinced
+    guid: 3007d01f-262f-4912-ac3f-ad9101368664
+    comparisonTyp: 0
+    iVal: 0
