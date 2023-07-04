@@ -6044,6 +6044,7 @@ MonoBehaviour:
   wakeUpBed:
     PlayerSpawnPos: {fileID: 5881414976705995490}
     bed: {fileID: 2167519450038192635}
+    audioAsset: {fileID: 11400000, guid: 46c548cf89e401b42905c77a3b6b2f56, type: 2}
   nightState:
     bed: {fileID: 2167519450038192635}
     audioAsset: {fileID: 11400000, guid: 4c9245077c3986f44b34c86a7debac58, type: 2}

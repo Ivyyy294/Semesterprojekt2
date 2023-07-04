@@ -145,6 +145,7 @@ public class Room : PushdownAutomata
 	{
 		[SerializeField] Transform PlayerSpawnPos;
 		[SerializeField] InteractableCamera bed;
+		[SerializeField] AudioAsset audioAsset;
 
 		public override void Enter(GameObject obj)
 		{
@@ -162,6 +163,7 @@ public class Room : PushdownAutomata
 
 		public override void Update(GameObject obj)
 		{
+			audioAsset?.PlayAtPos(bed.transform.position);
 			room.PopState();
 		}
 
