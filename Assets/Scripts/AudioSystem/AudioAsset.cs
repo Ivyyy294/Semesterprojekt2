@@ -187,17 +187,20 @@ public class AudioAsset : ScriptableObject
 
 	void ShowSubtitle (string txt, float playTime = 0f)
 	{
-		float minTime = 0.75f;
-		//Making sure the subtile is readable for at lest 1 second
-		playTime = Mathf.Max (minTime, playTime);
+		if (!string.IsNullOrEmpty(txt))
+		{
+			float minTime = 0.75f;
+			//Making sure the subtile is readable for at lest 1 second
+			playTime = Mathf.Max (minTime, playTime);
 
-		int priority = 0;
+			int priority = 0;
 
-		if (audioTyp == AudioTyp.VOICE_LINE)
-			priority = 2;
-		if (audioTyp != AudioTyp.AMBIENT)
-			priority = 1;
+			if (audioTyp == AudioTyp.VOICE_LINE)
+				priority = 2;
+			if (audioTyp != AudioTyp.AMBIENT)
+				priority = 1;
 
-		Subtitle.Add (txt, playTime, priority);
+			Subtitle.Add (txt, playTime, priority);
+		}
 	}
 }
