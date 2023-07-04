@@ -693,6 +693,26 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 7481346877475911261, guid: cbc17c2b942c75242850f0bbb7667649, type: 3}
+      propertyPath: puckState.audioAssets.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 7481346877475911261, guid: cbc17c2b942c75242850f0bbb7667649, type: 3}
+      propertyPath: puckState.audioAssets.Array.data[0]
+      value: 
+      objectReference: {fileID: 11400000, guid: d7d21488ea95a6a4f8071a1311f022af, type: 2}
+    - target: {fileID: 7481346877475911261, guid: cbc17c2b942c75242850f0bbb7667649, type: 3}
+      propertyPath: puckState.audioAssets.Array.data[1]
+      value: 
+      objectReference: {fileID: 11400000, guid: ff33f8b9d59b797419c6535612334ab4, type: 2}
+    - target: {fileID: 7481346877475911261, guid: cbc17c2b942c75242850f0bbb7667649, type: 3}
+      propertyPath: puckState.audioAssets.Array.data[2]
+      value: 
+      objectReference: {fileID: 11400000, guid: deb1ea4f273a1774ca9d4a79b56ad86f, type: 2}
+    - target: {fileID: 7481346877475911261, guid: cbc17c2b942c75242850f0bbb7667649, type: 3}
+      propertyPath: puckState.audioAssets.Array.data[3]
+      value: 
+      objectReference: {fileID: 11400000, guid: b2ea9da9c4d863c4497d5cbea8cf0e3f, type: 2}
     - target: {fileID: 7746420725820511147, guid: cbc17c2b942c75242850f0bbb7667649, type: 3}
       propertyPath: m_LocalPosition.x
       value: 3.612
