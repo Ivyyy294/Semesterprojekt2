@@ -5963,7 +5963,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2324029556a63a74f90834e0f34aedb8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  currentDay: 1
+  currentDay: 2
   night: 0
   cryoDoor: {fileID: 6334317424693014758}
   day1State:
@@ -9925,6 +9925,86 @@ PrefabInstance:
       propertyPath: testProperty.comparisonTyp
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 160401723716179195, guid: c3f5d8cea79e88d4e9311ee32800fb22, type: 3}
+      propertyPath: stage1.voiceLines.Array.size
+      value: 19
+      objectReference: {fileID: 0}
+    - target: {fileID: 160401723716179195, guid: c3f5d8cea79e88d4e9311ee32800fb22, type: 3}
+      propertyPath: stage1.voiceLines.Array.data[0]
+      value: 
+      objectReference: {fileID: 11400000, guid: cac281ff6b1395e4eab089cf6cf32a29, type: 2}
+    - target: {fileID: 160401723716179195, guid: c3f5d8cea79e88d4e9311ee32800fb22, type: 3}
+      propertyPath: stage1.voiceLines.Array.data[1]
+      value: 
+      objectReference: {fileID: 11400000, guid: 414e276cec01ca54c977288e21fe14b9, type: 2}
+    - target: {fileID: 160401723716179195, guid: c3f5d8cea79e88d4e9311ee32800fb22, type: 3}
+      propertyPath: stage1.voiceLines.Array.data[2]
+      value: 
+      objectReference: {fileID: 11400000, guid: d462b6d261dad3242ad6ed85572ef2fe, type: 2}
+    - target: {fileID: 160401723716179195, guid: c3f5d8cea79e88d4e9311ee32800fb22, type: 3}
+      propertyPath: stage1.voiceLines.Array.data[3]
+      value: 
+      objectReference: {fileID: 11400000, guid: 20d83377a19a97949a0fdb76ea7b9524, type: 2}
+    - target: {fileID: 160401723716179195, guid: c3f5d8cea79e88d4e9311ee32800fb22, type: 3}
+      propertyPath: stage1.voiceLines.Array.data[4]
+      value: 
+      objectReference: {fileID: 11400000, guid: e49503e2e05afdb478e0beb3e1e24522, type: 2}
+    - target: {fileID: 160401723716179195, guid: c3f5d8cea79e88d4e9311ee32800fb22, type: 3}
+      propertyPath: stage1.voiceLines.Array.data[5]
+      value: 
+      objectReference: {fileID: 11400000, guid: 9a9cc93d9d1f41f458ab7fd4e4ed1f3d, type: 2}
+    - target: {fileID: 160401723716179195, guid: c3f5d8cea79e88d4e9311ee32800fb22, type: 3}
+      propertyPath: stage1.voiceLines.Array.data[6]
+      value: 
+      objectReference: {fileID: 11400000, guid: c5eb53251acd13e4d879590429e31b5d, type: 2}
+    - target: {fileID: 160401723716179195, guid: c3f5d8cea79e88d4e9311ee32800fb22, type: 3}
+      propertyPath: stage1.voiceLines.Array.data[7]
+      value: 
+      objectReference: {fileID: 11400000, guid: 48d73a0e24e827c4a953be353447edba, type: 2}
+    - target: {fileID: 160401723716179195, guid: c3f5d8cea79e88d4e9311ee32800fb22, type: 3}
+      propertyPath: stage1.voiceLines.Array.data[8]
+      value: 
+      objectReference: {fileID: 11400000, guid: 454a295b463430d448166043e67b33b0, type: 2}
+    - target: {fileID: 160401723716179195, guid: c3f5d8cea79e88d4e9311ee32800fb22, type: 3}
+      propertyPath: stage1.voiceLines.Array.data[9]
+      value: 
+      objectReference: {fileID: 11400000, guid: 4b2d5a3272fa85a4e90c6e6cb4d56c86, type: 2}
+    - target: {fileID: 160401723716179195, guid: c3f5d8cea79e88d4e9311ee32800fb22, type: 3}
+      propertyPath: stage1.voiceLines.Array.data[10]
+      value: 
+      objectReference: {fileID: 11400000, guid: 1de3cf96267d39547800cf8054df1d19, type: 2}
+    - target: {fileID: 160401723716179195, guid: c3f5d8cea79e88d4e9311ee32800fb22, type: 3}
+      propertyPath: stage1.voiceLines.Array.data[11]
+      value: 
+      objectReference: {fileID: 11400000, guid: 2c6d85d12d9be3d489ad4a319867a648, type: 2}
+    - target: {fileID: 160401723716179195, guid: c3f5d8cea79e88d4e9311ee32800fb22, type: 3}
+      propertyPath: stage1.voiceLines.Array.data[12]
+      value: 
+      objectReference: {fileID: 11400000, guid: 631db91294342474b91bcadc40e97989, type: 2}
+    - target: {fileID: 160401723716179195, guid: c3f5d8cea79e88d4e9311ee32800fb22, type: 3}
+      propertyPath: stage1.voiceLines.Array.data[13]
+      value: 
+      objectReference: {fileID: 11400000, guid: c4fdc0d4eb5082642a9e86545ba20b5a, type: 2}
+    - target: {fileID: 160401723716179195, guid: c3f5d8cea79e88d4e9311ee32800fb22, type: 3}
+      propertyPath: stage1.voiceLines.Array.data[14]
+      value: 
+      objectReference: {fileID: 11400000, guid: 6df27beef53541a4d9f93955c1e453d3, type: 2}
+    - target: {fileID: 160401723716179195, guid: c3f5d8cea79e88d4e9311ee32800fb22, type: 3}
+      propertyPath: stage1.voiceLines.Array.data[15]
+      value: 
+      objectReference: {fileID: 11400000, guid: 6686b26d34ca6e143a53b5a46872584f, type: 2}
+    - target: {fileID: 160401723716179195, guid: c3f5d8cea79e88d4e9311ee32800fb22, type: 3}
+      propertyPath: stage1.voiceLines.Array.data[16]
+      value: 
+      objectReference: {fileID: 11400000, guid: 3cd7ad734a58bc046aa0dc4c10156d52, type: 2}
+    - target: {fileID: 160401723716179195, guid: c3f5d8cea79e88d4e9311ee32800fb22, type: 3}
+      propertyPath: stage1.voiceLines.Array.data[17]
+      value: 
+      objectReference: {fileID: 11400000, guid: 9b79c7ceb6efd304784344d020e967c8, type: 2}
+    - target: {fileID: 160401723716179195, guid: c3f5d8cea79e88d4e9311ee32800fb22, type: 3}
+      propertyPath: stage1.voiceLines.Array.data[18]
+      value: 
+      objectReference: {fileID: 11400000, guid: b3c8f58c6d5d494458722fd3dc6d35bf, type: 2}
     - target: {fileID: 3869866523974514887, guid: c3f5d8cea79e88d4e9311ee32800fb22, type: 3}
       propertyPath: m_Name
       value: CryoDay3
