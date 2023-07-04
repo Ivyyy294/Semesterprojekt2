@@ -6168,7 +6168,8 @@ MonoBehaviour:
     terminal: {fileID: 0}
     hermiaVoiceEvent: {fileID: 0}
     hermiaEventDelay: 6
-    cryoDoor: {fileID: 0}
+    cryoDoor: {fileID: 6334317424693014758}
+    barikaden: {fileID: 6231751320679480825}
   fadeInState:
     animationCurve:
       serializedVersion: 2
@@ -12204,7 +12205,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2079526854301348103, guid: 5879994bc331ac2469b9fb42d91ffa42, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5389735204654437863, guid: 5879994bc331ac2469b9fb42d91ffa42, type: 3}
       propertyPath: m_LocalPosition.y
@@ -12276,6 +12277,11 @@ Transform:
 --- !u!4 &5807177046150013707 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1889095845366558709, guid: 5879994bc331ac2469b9fb42d91ffa42, type: 3}
+  m_PrefabInstance: {fileID: 5377392963753053438}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &6231751320679480825 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2079526854301348103, guid: 5879994bc331ac2469b9fb42d91ffa42, type: 3}
   m_PrefabInstance: {fileID: 5377392963753053438}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &5529169821753608620
