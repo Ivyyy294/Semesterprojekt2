@@ -317,6 +317,7 @@ public class Room : PushdownAutomata
 		[SerializeField] int checkValue;
 		[SerializeField] PuckTerminal terminal;
 		[SerializeField] CryoDoor cryoDoor;
+		[SerializeField] GameObject areaEvent;
 		BlackBoardProperty property;
 
 		public override void Enter(GameObject obj)
@@ -330,6 +331,7 @@ public class Room : PushdownAutomata
 			terminal.SetChatAvailable (2, true);
 			terminal.SetActiveChat (0);
 			cryoDoor.SpawnOpen();
+			areaEvent.SetActive(true);
 			property = BlackBoard.Me().GetPropertyByName (nameProgressProperty);
 		}
 
@@ -337,6 +339,11 @@ public class Room : PushdownAutomata
 		{
 			if (property.Compare (new BlackBoardProperty {comparisonTyp = BlackBoardProperty.ComparisonTyp.EQUAL, iVal = checkValue}))
 				room.SwapState (room.nightState);
+		}
+
+		public override void Exit(GameObject obj)
+		{
+			areaEvent.SetActive(false);
 		}
 	}
 

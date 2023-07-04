@@ -185,6 +185,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 299778668372385849, guid: cbc17c2b942c75242850f0bbb7667649, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 4.02
+      objectReference: {fileID: 0}
     - target: {fileID: 469722319890521089, guid: cbc17c2b942c75242850f0bbb7667649, type: 3}
       propertyPath: audioAsset
       value: 
@@ -357,10 +361,6 @@ PrefabInstance:
       propertyPath: lightController
       value: 
       objectReference: {fileID: 1186137878}
-    - target: {fileID: 2565798720408585157, guid: cbc17c2b942c75242850f0bbb7667649, type: 3}
-      propertyPath: day2State.cryoDoor
-      value: 
-      objectReference: {fileID: 1186137880}
     - target: {fileID: 2565798720408585157, guid: cbc17c2b942c75242850f0bbb7667649, type: 3}
       propertyPath: day2State.terminal
       value: 
