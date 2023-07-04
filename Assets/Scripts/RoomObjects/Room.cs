@@ -158,6 +158,7 @@ public class Room : PushdownAutomata
 			Player.Me().Lock();
 			Player.Me().transform.position = PlayerSpawnPos.position;
 			Player.Me().transform.forward = PlayerSpawnPos.forward;
+
 			room.PushState (room.fadeInState);
 		}
 
@@ -357,7 +358,9 @@ public class Room : PushdownAutomata
 		[SerializeField] LightBulbEvent lightBulbEvent;
 		[SerializeField] PuckTerminal terminal;
 		[SerializeField] HermiaVoiceLine hermiaVoiceEvent;
+		[SerializeField] float hermiaEventDelay = 4f;
 		[SerializeField] CryoDoor cryoDoor;
+		float timer = 0f;
 
 		public override void Enter(GameObject obj)
 		{
@@ -375,12 +378,15 @@ public class Room : PushdownAutomata
 			terminal.SetChatAvailable (3, true);
 			terminal.SetActiveChat (3);
 			cryoDoor.SpawnOpen();
+			timer = 0f;
 			room.PushState (room.wakeUpBed);
 		}
 
 		public override void Update(GameObject obj)
 		{
-			if (!hermiaVoiceEvent.IsActive())
+			if (timer < hermiaEventDelay)
+				timer += Time.deltaTime;
+			else if (!hermiaVoiceEvent.IsActive())
 				hermiaVoiceEvent.Activate();
 		}
 

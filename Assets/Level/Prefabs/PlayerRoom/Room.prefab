@@ -5985,6 +5985,7 @@ MonoBehaviour:
     lightBulbEvent: {fileID: 7487554781158790498}
     terminal: {fileID: 0}
     hermiaVoiceEvent: {fileID: 0}
+    hermiaEventDelay: 6
     cryoDoor: {fileID: 0}
   fadeInState:
     animationCurve:
