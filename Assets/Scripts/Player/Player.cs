@@ -27,6 +27,8 @@ public class Player : MonoBehaviour
 		return me;
 	}
 
+	public float GetRange() {return playerInteraction.GetRange();}
+
 	public bool IsLocked() { return locked;}
 
 	public void Lock ()

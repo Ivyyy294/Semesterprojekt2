@@ -12005,6 +12005,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Couch
       objectReference: {fileID: 0}
+    - target: {fileID: 7663052368948977003, guid: 88e1f54f8a96267458cde85286ead49d, type: 3}
+      propertyPath: easeOutState.applyForwardToPlayer
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8473333308453441372, guid: 88e1f54f8a96267458cde85286ead49d, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 2147483647

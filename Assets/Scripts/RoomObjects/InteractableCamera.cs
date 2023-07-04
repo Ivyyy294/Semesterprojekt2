@@ -63,6 +63,8 @@ public class InteractableCamera : FiniteStateMachine, InteractableObject
 	[System.Serializable]
 	public class ActiveState : BaseState
 	{
+		[SerializeField] bool allowInteractions;
+		bool interactionActive;
 		bool locked = false;
 
 		public void SetLocked (bool val) {locked = val;}
@@ -70,16 +72,33 @@ public class InteractableCamera : FiniteStateMachine, InteractableObject
 		public override void Enter (GameObject obj)
 		{
 			base.Enter(obj);
-			Player.Me().interactTextOverlay.Show (true);
 
 			if (interactableCamera.cameraContainer != null)
 				interactableCamera.cameraContainer.enabled = true;
+
+			interactionActive = false;
 		}
 
 		public override void Update (GameObject obj)
 		{
+			Player.Me().interactTextOverlay.Show (true);
+
 			if (!locked && Input.GetKeyDown(KeyCode.F))
 			{
+				if (allowInteractions)
+				{
+					if (interactionActive)
+					{
+						interactionActive = false;
+						return;
+					}
+					else if (InteractableObjectInSight())
+					{
+						interactionActive = true;
+						return;
+					}
+				}
+
 				interactableCamera.cameraContainer.enabled = false;
 				interactableCamera.EnterState (interactableCamera.easeOutState);
 			}
@@ -88,6 +107,34 @@ public class InteractableCamera : FiniteStateMachine, InteractableObject
 		public override void Exit(GameObject obj)
 		{
 			Player.Me().interactTextOverlay.Show (false);
+		}
+
+		bool InteractableObjectInSight ()
+		{
+			InteractableObject interactableObject;
+			Ray ray = new Ray (interactableCamera.cameraContainer.cameraTrans.transform.position, interactableCamera.cameraContainer.cameraTrans.transform.forward);
+			//Ignore Player layer
+			int layerMask = 1 << 0;
+			RaycastHit hit;
+
+			bool inRange = false;
+			float range = Player.Me().GetRange();
+
+			if (Physics.Raycast (ray, out hit, range, layerMask))
+			{
+				interactableObject = hit.transform.gameObject.GetComponent<InteractableObject>();
+				MonoBehaviour behaviour = (MonoBehaviour)interactableObject;
+
+				if (interactableObject != null && behaviour.enabled)
+				{
+					inRange = true;
+					interactableObject.Interact();
+				}
+			}
+
+			Debug.DrawRay (ray.origin, ray.direction * range, inRange ? Color.green : Color.red);
+
+			return inRange;
 		}
 	}
 
