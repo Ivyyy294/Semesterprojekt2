@@ -13,7 +13,7 @@ public class GraphicsSettingsUi : MonoBehaviour
 	GraphicSettings graphicSettings;
 	int currentIndex;
 
-	private void OnEnable()
+	private void Awake()
 	{
 		currentIndex = -1;
 		graphicSettings = GameSettings.Me().graphicSettings;
@@ -31,7 +31,11 @@ public class GraphicsSettingsUi : MonoBehaviour
 				currentIndex = i;
 		}
 		
-		resolutionDropDown.value = currentIndex;
+		resolutionDropDown.value = currentIndex;		
+	}
+
+	private void OnEnable()
+	{
 	}
 
 	private void Update()
