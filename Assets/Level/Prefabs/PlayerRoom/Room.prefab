@@ -9854,6 +9854,10 @@ PrefabInstance:
       value: 19
       objectReference: {fileID: 0}
     - target: {fileID: 160401723716179195, guid: c3f5d8cea79e88d4e9311ee32800fb22, type: 3}
+      propertyPath: stage2.voiceLinesTrapped
+      value: 
+      objectReference: {fileID: 11400000, guid: a47d582a73683fe42942de6e555839b8, type: 2}
+    - target: {fileID: 160401723716179195, guid: c3f5d8cea79e88d4e9311ee32800fb22, type: 3}
       propertyPath: voiceLines.Array.data[3]
       value: 
       objectReference: {fileID: 11400000, guid: 8520d7d2311fb4e44a768b74c616cb46, type: 2}
