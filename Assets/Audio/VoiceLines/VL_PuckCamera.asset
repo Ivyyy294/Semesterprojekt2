@@ -12,12 +12,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6f7490679cbb0ec49b5d45a66e74b10e, type: 3}
   m_Name: VL_PuckCamera
   m_EditorClassIdentifier: 
-  audioClips: []
-  subtitle: 'P.U.C.K: "There you are!"'
+  audioClips:
+  - {fileID: 8300000, guid: e5bec730c5e4a0f4e89eaea7117a5910, type: 3}
+  subtitle: 'P.U.C.K: "There you are! I was worried something happened to you while
+    I could not see you."'
   playStyle: 0
   audioTyp: 4
   loop: 0
-  volume: {x: 0.5, y: 0.5}
+  volume: {x: 1, y: 1}
   pitch: {x: 1, y: 1}
   spatial: 0
   minDistance: 0.5
