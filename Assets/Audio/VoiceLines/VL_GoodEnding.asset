@@ -10,11 +10,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6f7490679cbb0ec49b5d45a66e74b10e, type: 3}
-  m_Name: VL_PlaceHolder
+  m_Name: VL_GoodEnding
   m_EditorClassIdentifier: 
   audioClips:
-  - {fileID: 8300000, guid: 46d0fc2321d2f7c4e9fe1bcefa509bd0, type: 3}
-  subtitle: Placeholder
+  - {fileID: 8300000, guid: 3a94a4b299b710540b396918181e06c8, type: 3}
+  subtitle: "P.U.C.K: \u201CYou have reached your Destination: Titania. Thank you
+    for putting your trust in me. It has been a pleasure!\""
   playStyle: 0
   audioTyp: 4
   loop: 0

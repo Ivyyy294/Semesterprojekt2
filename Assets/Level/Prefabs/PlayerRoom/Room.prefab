@@ -6055,7 +6055,7 @@ MonoBehaviour:
     creditsEvent: {fileID: 11400000, guid: adc27c0f6f18f3a4eb6aeb8a6b82e111, type: 2}
     doorTerminal: {fileID: 7481346877475911261}
     tag: CryoEnding
-    audioAssetArrived: {fileID: 11400000, guid: 8520d7d2311fb4e44a768b74c616cb46, type: 2}
+    audioAssetArrived: {fileID: 11400000, guid: 49202c3947192414fb8b77e208f8519e, type: 2}
     audioAssetDoor: {fileID: 11400000, guid: 168a7024ab849cb40b0e3cd0454b4d8f, type: 2}
   endingCryoBad:
     creditsEvent: {fileID: 11400000, guid: adc27c0f6f18f3a4eb6aeb8a6b82e111, type: 2}
