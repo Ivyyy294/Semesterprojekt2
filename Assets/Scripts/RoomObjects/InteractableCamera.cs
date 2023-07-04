@@ -23,8 +23,10 @@ public class InteractableCamera : FiniteStateMachine, InteractableObject
 		public virtual void Exit(GameObject obj) {}
 	}
 
+	[System.Serializable]
 	public class InactiveState : BaseState
 	{
+		[SerializeField] AudioAsset audioAsset;
 		public bool activate;
 
 		public override void Enter (GameObject obj)
@@ -36,7 +38,10 @@ public class InteractableCamera : FiniteStateMachine, InteractableObject
 		public override void Update (GameObject obj)
 		{
 			if (activate)
+			{
+				audioAsset?.PlayAtPos(interactableCamera.transform.position);
 				interactableCamera.EnterState (interactableCamera.easeInState);
+			}
 		}
 	}
 

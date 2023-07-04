@@ -11411,6 +11411,10 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 67acd62d7a6910044bf5e78ac25179d7, type: 2}
+    - target: {fileID: 5766947355621308758, guid: b682a561b7a1b264fb54ac1dff7d90bf, type: 3}
+      propertyPath: activeState.audioAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: 187f94cacfcb1a049838cc1487c5acd9, type: 2}
     - target: {fileID: 6531922360782294534, guid: b682a561b7a1b264fb54ac1dff7d90bf, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 

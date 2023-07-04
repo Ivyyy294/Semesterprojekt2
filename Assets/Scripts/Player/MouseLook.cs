@@ -47,14 +47,11 @@ public class MouseLook : MonoBehaviour
 
 		if (limitHorizontalAngle)
 		{
-			Debug.Log (horizontalRotation);
 			float offset = 0f;
 			if(horizontalRotation > maxHorizontalAngle)
 				offset = maxHorizontalAngle - horizontalRotation;
 			else if (horizontalRotation < -maxHorizontalAngle)
 				offset = -maxHorizontalAngle - horizontalRotation; 
-
-			Debug.Log (offset);
 
 			if (offset != 0f)
 			{
