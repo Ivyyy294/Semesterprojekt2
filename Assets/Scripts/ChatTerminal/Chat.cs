@@ -128,6 +128,20 @@ public class Chat : FiniteStateMachine
 
 		public override void Update (GameObject obj)
 		{
+			if (portSelected == -1)
+			{
+				int portsCount = node.ports.Count;
+
+				if (portsCount > 0 && Input.GetKeyDown(KeyCode.Alpha1))
+					ButtonCallBack (0);
+				else if (portsCount > 1 && Input.GetKeyDown(KeyCode.Alpha2))
+					ButtonCallBack (1);
+				else if (portsCount > 2 && Input.GetKeyDown(KeyCode.Alpha3))
+					ButtonCallBack (2);
+				else if (portsCount > 3 && Input.GetKeyDown(KeyCode.Alpha4))
+					ButtonCallBack (3);
+			}
+
 			if (portSelected != -1 && chatMessage != null && chatMessage.Done)
 			{
 				if (done && timer == 0f)
