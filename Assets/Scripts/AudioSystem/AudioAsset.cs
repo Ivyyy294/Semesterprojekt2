@@ -196,8 +196,10 @@ public class AudioAsset : ScriptableObject
 			int priority = 0;
 
 			if (audioTyp == AudioTyp.VOICE_LINE)
+				priority = 3;
+			else if (audioTyp == AudioTyp.SFX)
 				priority = 2;
-			if (audioTyp != AudioTyp.AMBIENT)
+			else if (audioTyp == AudioTyp.UI)
 				priority = 1;
 
 			Subtitle.Add (txt, playTime, priority);
