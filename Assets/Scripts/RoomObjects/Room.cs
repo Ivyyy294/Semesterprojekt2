@@ -11,6 +11,8 @@ using TMPro;
 
 public class Room : PushdownAutomata
 {
+	//####Common States####
+	#region CommonStates
 	public class BaseState : IState
 	{
 		protected Room room;
@@ -254,28 +256,11 @@ public class Room : PushdownAutomata
 			room.PopState();
 		}
 	}
-	
-	[System.Serializable]
-	public class CryoEventState : BaseState
-	{
-		//public override void Enter(GameObject obj)
-		//{
-		//	base.Enter(obj);
-		//}
 
-		//public override void Update(GameObject obj)
-		//{
-		//	if (room.currentDay == CurrentDay.DAY1)
-		//		room.currentDay = CurrentDay.DAY2;
-		//	else if (room.currentDay == CurrentDay.DAY2)
-		//		room.currentDay = CurrentDay.DAY3;
+	#endregion
 
-		//	SaveGameManager.Me().SaveGameState();
-
-		//	room.PopState();
-		//}
-	}
-
+	//####Day1 States####
+	#region Day1 States
 	[System.Serializable]
 	public class Day1State : BaseState
 	{
@@ -318,7 +303,10 @@ public class Room : PushdownAutomata
 			img.gameObject.SetActive (false);
 		}
 	}
+	#endregion
 
+	//####Day2 States####
+	#region Day2 States
 	[System.Serializable]
 	public class Day2State : BaseState
 	{
@@ -367,7 +355,10 @@ public class Room : PushdownAutomata
 			HermiaLetterEvent.SetActive (false);
 		}
 	}
+	#endregion
 
+	//####Day3 States####
+	#region Day3 States
 	[System.Serializable]
 	public class Day3State : BaseState
 	{
@@ -418,7 +409,10 @@ public class Room : PushdownAutomata
 			barikaden.SetActive(false);
 		}
 	}
+	#endregion
 
+	//####EndingStates####
+	#region Ending States
 	[System.Serializable]
 	public class EndingCryoGood : BaseState
 	{
@@ -497,6 +491,7 @@ public class Room : PushdownAutomata
 				creditsEvent?.Raise();
 		}
 	}
+	#endregion
 
 	public enum CurrentDay
 	{
