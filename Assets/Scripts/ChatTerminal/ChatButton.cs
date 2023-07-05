@@ -10,6 +10,8 @@ public class ChatButton : MonoBehaviour
 	[SerializeField] GameObject notificationIcon;
 	[SerializeField] TextMeshProUGUI notificationText;
 	[SerializeField] Chat chat;
+	[SerializeField] TextMeshProUGUI ChatNameObj;
+	[SerializeField] string chatName;
 	[HideInInspector] public Button button;
 
 	public Chat GetChat() { return chat;}
@@ -22,6 +24,9 @@ public class ChatButton : MonoBehaviour
 
 	public void ShowChat (bool val)
 	{
+		if (val)
+			ChatNameObj.text = chatName;
+
 		chat.gameObject.SetActive(val);
 	}
     // Start is called before the first frame update

@@ -158,8 +158,8 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 496551549683419563}
   m_HandleRect: {fileID: 5585670239321610016}
   m_Direction: 3
-  m_Value: 0
-  m_Size: 1
+  m_Value: 0.5
+  m_Size: 0.6686995
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -1242,7 +1242,7 @@ MonoBehaviour:
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 1
-  m_HorizontalAlignment: 1
+  m_HorizontalAlignment: 2
   m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: -27.9
@@ -2299,6 +2299,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: Chat_Button3
       objectReference: {fileID: 0}
+    - target: {fileID: 9131991483213516637, guid: 70375655aeca7dc44a1eba79320978f0, type: 3}
+      propertyPath: ChatName
+      value: 
+      objectReference: {fileID: 6085631416626395985}
+    - target: {fileID: 9131991483213516637, guid: 70375655aeca7dc44a1eba79320978f0, type: 3}
+      propertyPath: chatName
+      value: Demetrius
+      objectReference: {fileID: 0}
+    - target: {fileID: 9131991483213516637, guid: 70375655aeca7dc44a1eba79320978f0, type: 3}
+      propertyPath: ChatNameObj
+      value: 
+      objectReference: {fileID: 6085631416626395985}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 70375655aeca7dc44a1eba79320978f0, type: 3}
 --- !u!224 &7883117280781213489 stripped
@@ -2609,6 +2621,18 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 9131991483213516637, guid: 70375655aeca7dc44a1eba79320978f0, type: 3}
+      propertyPath: ChatName
+      value: 
+      objectReference: {fileID: 6085631416626395985}
+    - target: {fileID: 9131991483213516637, guid: 70375655aeca7dc44a1eba79320978f0, type: 3}
+      propertyPath: chatName
+      value: P.U.C.K
+      objectReference: {fileID: 0}
+    - target: {fileID: 9131991483213516637, guid: 70375655aeca7dc44a1eba79320978f0, type: 3}
+      propertyPath: ChatNameObj
+      value: 
+      objectReference: {fileID: 6085631416626395985}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 70375655aeca7dc44a1eba79320978f0, type: 3}
 --- !u!224 &8659331523972126511 stripped
@@ -2977,6 +3001,18 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 6
       objectReference: {fileID: 0}
+    - target: {fileID: 9131991483213516637, guid: 70375655aeca7dc44a1eba79320978f0, type: 3}
+      propertyPath: ChatName
+      value: 
+      objectReference: {fileID: 6085631416626395985}
+    - target: {fileID: 9131991483213516637, guid: 70375655aeca7dc44a1eba79320978f0, type: 3}
+      propertyPath: chatName
+      value: Lysander
+      objectReference: {fileID: 0}
+    - target: {fileID: 9131991483213516637, guid: 70375655aeca7dc44a1eba79320978f0, type: 3}
+      propertyPath: ChatNameObj
+      value: 
+      objectReference: {fileID: 6085631416626395985}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 70375655aeca7dc44a1eba79320978f0, type: 3}
 --- !u!224 &6085631416975946792 stripped
@@ -3482,6 +3518,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: Chat_Button2
       objectReference: {fileID: 0}
+    - target: {fileID: 9131991483213516637, guid: 70375655aeca7dc44a1eba79320978f0, type: 3}
+      propertyPath: ChatName
+      value: 
+      objectReference: {fileID: 6085631416626395985}
+    - target: {fileID: 9131991483213516637, guid: 70375655aeca7dc44a1eba79320978f0, type: 3}
+      propertyPath: chatName
+      value: Hermia
+      objectReference: {fileID: 0}
+    - target: {fileID: 9131991483213516637, guid: 70375655aeca7dc44a1eba79320978f0, type: 3}
+      propertyPath: ChatNameObj
+      value: 
+      objectReference: {fileID: 6085631416626395985}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 70375655aeca7dc44a1eba79320978f0, type: 3}
 --- !u!224 &4026829719722793789 stripped
