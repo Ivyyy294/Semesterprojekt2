@@ -226,6 +226,7 @@ public class Room : PushdownAutomata
 	public class TransitionState : BaseState
 	{
 		[SerializeField] string propertyName;
+		[SerializeField] Image img;
 		public override void Enter(GameObject obj)
 		{
 			base.Enter(obj);
@@ -279,6 +280,7 @@ public class Room : PushdownAutomata
 	public class Day1State : BaseState
 	{
 		[SerializeField] GameObject img;
+		[SerializeField] GameObject imgBlackScreen;
 		[SerializeField] AudioAsset audioAsset;
 		[SerializeField] float delay;
 		float timer;
@@ -292,6 +294,7 @@ public class Room : PushdownAutomata
 			base.Enter(obj);
 			timer = 0f;
 			img.gameObject.SetActive(true);
+			imgBlackScreen.SetActive (true);
 			audioAsset?.Play();
 			//done = false;
 			//nightEvent?.RegisterListener(this);
