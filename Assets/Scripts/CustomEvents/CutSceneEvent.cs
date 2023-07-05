@@ -8,19 +8,24 @@ public class CutSceneEvent : MonoBehaviour
 {
 	[SerializeField] VideoPlayer videoPlayer;
 	[SerializeField] GameEvent creditEvent;
+	float timer;
 
 	private void OnEnable()
 	{
+		timer = 0f;
 		videoPlayer.Play();
 	}
 
 	// Update is called once per frame
 	void Update()
     {
-        if (!videoPlayer.isPlaying)
+		if (timer < videoPlayer.length)
+			timer += Time.deltaTime;
+		else if (!videoPlayer.isPlaying)
 		{
 			creditEvent.Raise();
-			gameObject.SetActive (false);
+			videoPlayer.Stop();
+			//gameObject.SetActive (false);
 		}
     }
 }
