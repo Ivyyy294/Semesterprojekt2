@@ -420,7 +420,7 @@ PrefabInstance:
     - target: {fileID: 2565798720408585157, guid: cbc17c2b942c75242850f0bbb7667649, type: 3}
       propertyPath: nightState.interactableObjects.Array.data[5]
       value: 
-      objectReference: {fileID: 1689156695}
+      objectReference: {fileID: 0}
     - target: {fileID: 2565798720408585157, guid: cbc17c2b942c75242850f0bbb7667649, type: 3}
       propertyPath: nightState.interactableObjects.Array.data[6]
       value: 
@@ -1680,11 +1680,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 00b3cce10fb5d434ebc2973785e8be3f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!1 &1689156695 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 6790307156292971248, guid: cbc17c2b942c75242850f0bbb7667649, type: 3}
-  m_PrefabInstance: {fileID: 1186137876}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1857585426
 GameObject:
   m_ObjectHideFlags: 0
