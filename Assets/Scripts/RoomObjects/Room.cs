@@ -327,8 +327,9 @@ public class Room : PushdownAutomata
 		[SerializeField] int checkValue;
 		[SerializeField] PuckTerminal terminal;
 		[SerializeField] CryoDoor cryoDoor;
-		[SerializeField] GameObject areaEvent;
 		[SerializeField] AudioAsset audioAsset;
+		[SerializeField] GameObject areaEvent;
+		[SerializeField] GameObject HermiaLetterEvent;
 		bool audioPlayed = false;
 		BlackBoardProperty property;
 
@@ -344,6 +345,7 @@ public class Room : PushdownAutomata
 			terminal.SetActiveChat (0);
 			cryoDoor.SpawnOpen();
 			areaEvent.SetActive(true);
+			HermiaLetterEvent.SetActive (true);
 			audioPlayed = false;
 			property = BlackBoard.Me().GetPropertyByName (nameProgressProperty);
 		}
@@ -362,6 +364,7 @@ public class Room : PushdownAutomata
 		public override void Exit(GameObject obj)
 		{
 			areaEvent.SetActive(false);
+			HermiaLetterEvent.SetActive (false);
 		}
 	}
 

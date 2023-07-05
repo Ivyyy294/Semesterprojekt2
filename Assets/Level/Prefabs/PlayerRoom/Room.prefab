@@ -1883,7 +1883,7 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2970984565255138874}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -6953,6 +6953,7 @@ MonoBehaviour:
     cryoDoor: {fileID: 6334317424693014758}
     areaEvent: {fileID: 7391030597412054424}
     audioAsset: {fileID: 11400000, guid: 46c548cf89e401b42905c77a3b6b2f56, type: 2}
+    HermiaLetterEvent: {fileID: 8583013394871448323}
   day3State:
     lightController: {fileID: 1835700772797283506}
     cryoDoorTrigger: {fileID: 6827852919969844202}
@@ -13962,6 +13963,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: HermiaNote
       objectReference: {fileID: 0}
+    - target: {fileID: 1676935055689050936, guid: 81d7d13e038faac4fb3f084f282d8800, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1742358814644021887, guid: 81d7d13e038faac4fb3f084f282d8800, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -14008,6 +14013,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 81d7d13e038faac4fb3f084f282d8800, type: 3}
+--- !u!1 &8583013394871448323 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1676935055689050936, guid: 81d7d13e038faac4fb3f084f282d8800, type: 3}
+  m_PrefabInstance: {fileID: 6942675654580475963}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &8680491078805434948 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1742358814644021887, guid: 81d7d13e038faac4fb3f084f282d8800, type: 3}
