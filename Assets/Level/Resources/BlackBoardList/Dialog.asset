@@ -89,3 +89,7 @@ MonoBehaviour:
     guid: 3007d01f-262f-4912-ac3f-ad9101368664
     comparisonTyp: 0
     iVal: 0
+  - name: ProgressDay1
+    guid: 77c49219-38f3-41d5-a1ba-1801da9c510d
+    comparisonTyp: 0
+    iVal: 0
