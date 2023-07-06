@@ -6526,6 +6526,7 @@ MonoBehaviour:
   night: 0
   cryoDoor: {fileID: 6334317424693014758}
   day1State:
+    keyEvent: {fileID: 6771013941604031823}
     terminalObj: {fileID: 4289919757083979123}
     nameProgressProperty: ProgressDay1
     checkValue: 1
@@ -13797,11 +13798,20 @@ PrefabInstance:
       propertyPath: m_Name
       value: ChatTerminalKey
       objectReference: {fileID: 0}
+    - target: {fileID: 4356013980718461709, guid: 8821beaf1e0959646a64ee051a242b73, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8821beaf1e0959646a64ee051a242b73, type: 3}
 --- !u!4 &6218619945220467810 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4019509983738266144, guid: 8821beaf1e0959646a64ee051a242b73, type: 3}
+  m_PrefabInstance: {fileID: 7026973233213435458}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &6771013941604031823 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4356013980718461709, guid: 8821beaf1e0959646a64ee051a242b73, type: 3}
   m_PrefabInstance: {fileID: 7026973233213435458}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &7133118620138454362

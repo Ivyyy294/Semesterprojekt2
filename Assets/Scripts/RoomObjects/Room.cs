@@ -264,6 +264,7 @@ public class Room : PushdownAutomata
 	[System.Serializable]
 	public class Day1State : BaseState
 	{
+		[SerializeField] GameObject keyEvent;
 		[SerializeField] ChatTerminalObj terminalObj;
 		[SerializeField] string nameProgressProperty;
 		[SerializeField] int checkValue;
@@ -274,11 +275,8 @@ public class Room : PushdownAutomata
 			base.Enter(obj);
 			property = BlackBoard.Me().GetPropertyByName (nameProgressProperty);
 			terminalObj.SetLocked(true);
+			keyEvent.SetActive(true);
 			room.PushState(room.puckIntroState);
-			//done = false;
-			//nightEvent?.RegisterListener(this);
-			//lightController.EnterNormalState();
-			//room.PushState (room.wakeUpCryo);
 		}
 
 		public override void Update(GameObject obj)
@@ -289,6 +287,7 @@ public class Room : PushdownAutomata
 
 		public override void Exit(GameObject obj)
 		{
+			keyEvent.SetActive(false);
 			terminalObj.SetLocked(false);
 		}
 	}
