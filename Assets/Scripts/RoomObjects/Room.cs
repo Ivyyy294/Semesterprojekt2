@@ -264,23 +264,15 @@ public class Room : PushdownAutomata
 	[System.Serializable]
 	public class Day1State : BaseState
 	{
-		[SerializeField] GameObject img;
-		[SerializeField] GameObject imgBlackScreen;
-		[SerializeField] AudioAsset audioAsset;
-		[SerializeField] float delay;
-		float timer;
-		//[SerializeField] LightController lightController;
-		//[SerializeField] GameEvent nightEvent;
-		//bool done;
+		[SerializeField] string nameProgressProperty;
+		[SerializeField] int checkValue;
+		BlackBoardProperty property;
 
 		public override void Enter(GameObject obj)
 		{
-			Player.Me().Lock();
 			base.Enter(obj);
-			timer = 0f;
-			img.gameObject.SetActive(true);
-			imgBlackScreen.SetActive (true);
-			audioAsset?.Play();
+			property = BlackBoard.Me().GetPropertyByName (nameProgressProperty);
+			room.PushState(room.puckIntroState);
 			//done = false;
 			//nightEvent?.RegisterListener(this);
 			//lightController.EnterNormalState();
@@ -289,20 +281,63 @@ public class Room : PushdownAutomata
 
 		public override void Update(GameObject obj)
 		{
-			if (timer < delay)
-				timer += Time.deltaTime;
-			else
+			if (property.Compare (new BlackBoardProperty {comparisonTyp = BlackBoardProperty.ComparisonTyp.EQUAL, iVal = checkValue}))
+				room.SwapState (room.nightState);
+		}
+	}
+
+	[System.Serializable]
+	public class PuckIntroState : BaseState
+	{
+		[SerializeField] GameObject blackScreen;
+		[SerializeField] GameObject IntroObj;
+		[SerializeField] GameObject txt1;
+		[SerializeField] GameObject txt2;
+		[SerializeField] float delayTxt2;
+		[SerializeField] GameObject txt3;
+		[SerializeField] float delayTxt3;
+		[SerializeField] AudioAsset audioAsset;
+		[SerializeField] float delayTotal;
+		float timer;
+
+		public override void Enter(GameObject obj)
+		{
+			Player.Me().Lock();
+			base.Enter(obj);
+			timer = 0f;
+			IntroObj.SetActive(true);
+			blackScreen.SetActive(true);
+			txt1.SetActive (true);
+			audioAsset?.Play();
+		}
+
+		public override void Update(GameObject obj)
+		{
+			if (timer > delayTxt2)
 			{
-				room.currentDay = CurrentDay.DAY2;
-				room.PopState();
+				txt1.SetActive(false);
+				txt2.SetActive (true);
 			}
+
+			if (timer > delayTxt3)
+			{
+				txt2.SetActive (false);
+				txt3.SetActive(true);
+			}
+
+			if (timer >= delayTotal)
+				room.SwapState(room.wakeUpCryo);
+			
+			timer += Time.deltaTime;
 		}
 
 		public override void Exit(GameObject obj)
 		{
-			img.gameObject.SetActive (false);
+			IntroObj.gameObject.SetActive (false);
+			blackScreen.SetActive(false);
 		}
 	}
+
 	#endregion
 
 	//####Day2 States####
@@ -520,6 +555,7 @@ public class Room : PushdownAutomata
 	public WakeUpBed wakeUpBed = new WakeUpBed();
 	public NightState nightState = new NightState();
 	public TransitionState transitionState = new TransitionState();
+	public PuckIntroState puckIntroState = new PuckIntroState();
 
 	//Endings
 	public EndingCryoGood endingCryoGood = new EndingCryoGood();
