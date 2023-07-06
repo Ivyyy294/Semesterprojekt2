@@ -264,6 +264,7 @@ public class Room : PushdownAutomata
 	[System.Serializable]
 	public class Day1State : BaseState
 	{
+		[SerializeField] ChatTerminalObj terminalObj;
 		[SerializeField] string nameProgressProperty;
 		[SerializeField] int checkValue;
 		BlackBoardProperty property;
@@ -272,6 +273,7 @@ public class Room : PushdownAutomata
 		{
 			base.Enter(obj);
 			property = BlackBoard.Me().GetPropertyByName (nameProgressProperty);
+			terminalObj.SetLocked(true);
 			room.PushState(room.puckIntroState);
 			//done = false;
 			//nightEvent?.RegisterListener(this);
@@ -283,6 +285,11 @@ public class Room : PushdownAutomata
 		{
 			if (property.Compare (new BlackBoardProperty {comparisonTyp = BlackBoardProperty.ComparisonTyp.EQUAL, iVal = checkValue}))
 				room.SwapState (room.nightState);
+		}
+
+		public override void Exit(GameObject obj)
+		{
+			terminalObj.SetLocked(false);
 		}
 	}
 

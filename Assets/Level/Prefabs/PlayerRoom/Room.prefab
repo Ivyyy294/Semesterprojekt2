@@ -3647,6 +3647,7 @@ Transform:
   - {fileID: 5726250046054459284}
   - {fileID: 6863821300320942868}
   - {fileID: 91847313961490258}
+  - {fileID: 6218619945220467810}
   m_Father: {fileID: 7053959207452852874}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -3854,7 +3855,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5592197603480357656}
   m_LocalRotation: {x: -0, y: -0.7071068, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: 16.27615, y: 2.6269064, z: -13.856088}
+  m_LocalPosition: {x: 16.271667, y: 2.553967, z: -13.9}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 1
   m_Children: []
@@ -6525,6 +6526,7 @@ MonoBehaviour:
   night: 0
   cryoDoor: {fileID: 6334317424693014758}
   day1State:
+    terminalObj: {fileID: 4289919757083979123}
     nameProgressProperty: ProgressDay1
     checkValue: 1
   day2State:
@@ -13723,6 +13725,84 @@ GameObject:
 Transform:
   m_CorrespondingSourceObject: {fileID: 1742358814644021887, guid: 81d7d13e038faac4fb3f084f282d8800, type: 3}
   m_PrefabInstance: {fileID: 6942675654580475963}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &7026973233213435458
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 5382060655138142036}
+    m_Modifications:
+    - target: {fileID: 6832238479427980, guid: 8821beaf1e0959646a64ee051a242b73, type: 3}
+      propertyPath: chatTerminalObj
+      value: 
+      objectReference: {fileID: 4289919757083979123}
+    - target: {fileID: 4019509983738266144, guid: 8821beaf1e0959646a64ee051a242b73, type: 3}
+      propertyPath: m_RootOrder
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 4019509983738266144, guid: 8821beaf1e0959646a64ee051a242b73, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4019509983738266144, guid: 8821beaf1e0959646a64ee051a242b73, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4019509983738266144, guid: 8821beaf1e0959646a64ee051a242b73, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4019509983738266144, guid: 8821beaf1e0959646a64ee051a242b73, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -6.502
+      objectReference: {fileID: 0}
+    - target: {fileID: 4019509983738266144, guid: 8821beaf1e0959646a64ee051a242b73, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 5.855
+      objectReference: {fileID: 0}
+    - target: {fileID: 4019509983738266144, guid: 8821beaf1e0959646a64ee051a242b73, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -14.387
+      objectReference: {fileID: 0}
+    - target: {fileID: 4019509983738266144, guid: 8821beaf1e0959646a64ee051a242b73, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7971786
+      objectReference: {fileID: 0}
+    - target: {fileID: 4019509983738266144, guid: 8821beaf1e0959646a64ee051a242b73, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4019509983738266144, guid: 8821beaf1e0959646a64ee051a242b73, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4019509983738266144, guid: 8821beaf1e0959646a64ee051a242b73, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0.60374355
+      objectReference: {fileID: 0}
+    - target: {fileID: 4019509983738266144, guid: 8821beaf1e0959646a64ee051a242b73, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4019509983738266144, guid: 8821beaf1e0959646a64ee051a242b73, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4019509983738266144, guid: 8821beaf1e0959646a64ee051a242b73, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: -74.277
+      objectReference: {fileID: 0}
+    - target: {fileID: 4356013980718461709, guid: 8821beaf1e0959646a64ee051a242b73, type: 3}
+      propertyPath: m_Name
+      value: ChatTerminalKey
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 8821beaf1e0959646a64ee051a242b73, type: 3}
+--- !u!4 &6218619945220467810 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4019509983738266144, guid: 8821beaf1e0959646a64ee051a242b73, type: 3}
+  m_PrefabInstance: {fileID: 7026973233213435458}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &7133118620138454362
 PrefabInstance:
