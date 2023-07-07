@@ -14502,6 +14502,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 7461205231630049001}
     m_Modifications:
+    - target: {fileID: 56225496351127951, guid: 0c30e22ba89055b41aa46975bf4e9286, type: 3}
+      propertyPath: m_Convex
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 56225496351127951, guid: 0c30e22ba89055b41aa46975bf4e9286, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 185815839041811025, guid: 0c30e22ba89055b41aa46975bf4e9286, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 2147483647
