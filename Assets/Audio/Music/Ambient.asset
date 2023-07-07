@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Ambient
   m_EditorClassIdentifier: 
   clipData:
-  - clip: {fileID: 8300000, guid: ea6bf6ebd82cf514e970ca8f7a9b3eb2, type: 3}
+  - clip: {fileID: 8300000, guid: a792dc3640846ea4eaca6a10470bfd0e, type: 3}
     subtitle: Scifi Ambient
   playStyle: 0
   audioTyp: 2
