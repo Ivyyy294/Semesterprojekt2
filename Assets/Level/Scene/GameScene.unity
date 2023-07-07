@@ -427,12 +427,24 @@ PrefabInstance:
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 2565798720408585157, guid: cbc17c2b942c75242850f0bbb7667649, type: 3}
+      propertyPath: fadeOutState.animationCurve.m_Curve.Array.data[1].time
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2565798720408585157, guid: cbc17c2b942c75242850f0bbb7667649, type: 3}
       propertyPath: fadeInState.animationCurve.m_Curve.Array.data[1].inSlope
       value: -0.5
       objectReference: {fileID: 0}
     - target: {fileID: 2565798720408585157, guid: cbc17c2b942c75242850f0bbb7667649, type: 3}
       propertyPath: fadeInState.animationCurve.m_Curve.Array.data[1].outSlope
       value: -0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2565798720408585157, guid: cbc17c2b942c75242850f0bbb7667649, type: 3}
+      propertyPath: fadeOutState.animationCurve.m_Curve.Array.data[0].inSlope
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2565798720408585157, guid: cbc17c2b942c75242850f0bbb7667649, type: 3}
+      propertyPath: fadeOutState.animationCurve.m_Curve.Array.data[0].outSlope
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 2894718716835555158, guid: cbc17c2b942c75242850f0bbb7667649, type: 3}
       propertyPath: uniqueId
