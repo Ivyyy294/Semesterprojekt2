@@ -18,7 +18,7 @@ MonoBehaviour:
   playStyle: 0
   audioTyp: 2
   loop: 1
-  volume: {x: 1, y: 1}
+  volume: {x: 0.1, y: 0.1}
   pitch: {x: 0.7, y: 0.7}
   spatial: 0
   minDistance: 0.5

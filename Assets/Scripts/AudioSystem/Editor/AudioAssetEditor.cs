@@ -6,6 +6,11 @@ using UnityEngine;
 [CustomEditor(typeof(AudioAsset))]
 public class AudioAssetEditor : Editor
 {
+	private void OnValidate()
+	{
+		EditorUtility.SetDirty(target);
+	}
+
 	public override void OnInspectorGUI()
 	{
 		base.OnInspectorGUI();
@@ -22,6 +27,7 @@ public class AudioAssetEditor : Editor
 
 		SpatialEditor(audioAsset);
 
+		serializedObject.Update();
 		serializedObject.ApplyModifiedProperties();
 
 		if (GUILayout.Button("Play Preview"))
