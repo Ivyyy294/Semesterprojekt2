@@ -12,11 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6f7490679cbb0ec49b5d45a66e74b10e, type: 3}
   m_Name: VL_Announcement
   m_EditorClassIdentifier: 
-  audioClips: []
   clipData:
   - clip: {fileID: 8300000, guid: c574c0063bd60244d952fa78743fc8e6, type: 3}
     subtitle: 'P.U.C.K: "The Goodfellow wishes this good fellow a good morning!"'
-  subtitle: 'P.U.C.K: "The Goodfellow wishes this good fellow a good morning!"'
   playStyle: 0
   audioTyp: 4
   loop: 0

@@ -357,36 +357,30 @@ public class Room : PushdownAutomata
 		[SerializeField] int checkValue;
 		[SerializeField] PuckTerminal terminal;
 		[SerializeField] CryoDoor cryoDoor;
-		[SerializeField] AudioAsset audioAsset;
 		[SerializeField] GameObject areaEvent;
 		[SerializeField] GameObject HermiaLetterEvent;
-		bool audioPlayed = false;
 		BlackBoardProperty property;
 
 		public override void Enter(GameObject obj)
 		{
 			base.Enter(obj);
 			lightController.EnterNormalState();
-			room.PushState (room.wakeUpBed);
+			room.PushState(room.puckIntroState);
 			terminal.SetChatVisible (3, false);
 			terminal.SetChatAvailable (0, true);
 			terminal.SetChatAvailable (1, true);
 			terminal.SetChatAvailable (2, true);
 			terminal.SetActiveChat (0);
-			cryoDoor.SpawnOpen();
+			
+			//cryoDoor.SpawnOpen();
+
 			areaEvent.SetActive(true);
 			HermiaLetterEvent.SetActive (true);
-			audioPlayed = false;
 			property = BlackBoard.Me().GetPropertyByName (nameProgressProperty);
 		}
 
 		public override void Update(GameObject obj)
 		{
-			if (!audioPlayed)
-			{
-				audioAsset?.Play();
-				audioPlayed = true;
-			}
 			if (property.Compare (new BlackBoardProperty {comparisonTyp = BlackBoardProperty.ComparisonTyp.EQUAL, iVal = checkValue}))
 				room.SwapState (room.nightState);
 		}
