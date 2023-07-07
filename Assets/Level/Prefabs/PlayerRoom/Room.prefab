@@ -5327,7 +5327,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b0668c38364f0e04f921b60b31452cd7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  audioAsset: {fileID: 11400000, guid: 8520d7d2311fb4e44a768b74c616cb46, type: 2}
+  audioAsset: {fileID: 11400000, guid: 0191eb1a0dc2b5b49a5f42f16abc8956, type: 2}
   playOnAwake: 0
 --- !u!1 &7270670774265597832
 GameObject:
@@ -6537,7 +6537,8 @@ MonoBehaviour:
     checkValue: 3
     terminal: {fileID: 0}
     cryoDoor: {fileID: 6334317424693014758}
-    areaEvent: {fileID: 5315236914859162486}
+    areaEvent: {fileID: 7391030597412054424}
+    GoodMorningEvent: {fileID: 5315236914859162486}
     HermiaLetterEvent: {fileID: 8583013394871448323}
   day3State:
     lightController: {fileID: 1835700772797283506}

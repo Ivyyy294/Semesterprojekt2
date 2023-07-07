@@ -10,16 +10,19 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6f7490679cbb0ec49b5d45a66e74b10e, type: 3}
-  m_Name: SFX_Letter
+  m_Name: VL_HermiaWarning
   m_EditorClassIdentifier: 
   clipData:
-  - clip: {fileID: 8300000, guid: 6c97d409412ad5e46acd960c303023f7, type: 3}
-    subtitle: Rustling paper in  the ventilation shaft
-  playStyle: 0
-  audioTyp: 0
+  - clip: {fileID: 8300000, guid: e5d03db7f532ccb41b91bdbf01e535fb, type: 3}
+    subtitle: Helena, are you awake? The key is Lysander! He can control PUCK! You
+      need to convince him to turn them off!
+  - clip: {fileID: 8300000, guid: 7c29ddff300401c4b967c4a49ac045cd, type: 3}
+    subtitle: Hermia screams muffled
+  playStyle: 1
+  audioTyp: 4
   loop: 0
-  volume: {x: 0.5008389, y: 0.5008389}
+  volume: {x: 0.25, y: 0.25}
   pitch: {x: 1, y: 1}
-  spatial: 1
+  spatial: 0
   minDistance: 0.5
   maxDistance: 500
