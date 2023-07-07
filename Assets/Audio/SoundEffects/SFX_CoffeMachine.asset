@@ -12,16 +12,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6f7490679cbb0ec49b5d45a66e74b10e, type: 3}
   m_Name: SFX_CoffeMachine
   m_EditorClassIdentifier: 
-  audioClips:
-  - {fileID: 8300000, guid: 20032e5858808a646ba5cd3718f31931, type: 3}
   clipData:
   - clip: {fileID: 8300000, guid: 20032e5858808a646ba5cd3718f31931, type: 3}
     subtitle: Coffee machine
-  subtitle: Coffee machine
   playStyle: 0
   audioTyp: 0
   loop: 0
-  volume: {x: 0.5, y: 0.5}
+  volume: {x: 1, y: 1}
   pitch: {x: 1, y: 1}
   spatial: 1
   minDistance: 0.5

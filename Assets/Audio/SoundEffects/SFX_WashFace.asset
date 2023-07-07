@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: SFX_WashFace
   m_EditorClassIdentifier: 
   clipData:
-  - clip: {fileID: 8300000, guid: 1359a12c127fffc4b8b7db5ff2642f4e, type: 3}
+  - clip: {fileID: 8300000, guid: 3eaec48681eee2348be314b1b58f15ee, type: 3}
     subtitle: Washing Face
   playStyle: 0
   audioTyp: 0

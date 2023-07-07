@@ -15,11 +15,10 @@ MonoBehaviour:
   clipData:
   - clip: {fileID: 8300000, guid: 79c6e10702e67df419d9f7b3f41f2412, type: 3}
     subtitle: Access Denied
-  subtitle: Access Denied
   playStyle: 0
   audioTyp: 0
   loop: 0
-  volume: {x: 0.49991488, y: 0.49991488}
+  volume: {x: 0.99999994, y: 0.99999994}
   pitch: {x: 1, y: 1}
   spatial: 1
   minDistance: 0.77

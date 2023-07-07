@@ -13,12 +13,12 @@ MonoBehaviour:
   m_Name: SFX_BrushTeeth
   m_EditorClassIdentifier: 
   clipData:
-  - clip: {fileID: 8300000, guid: 33e1cb981ed8bfa4ea2cd2799cf4fe3f, type: 3}
+  - clip: {fileID: 8300000, guid: 100ffe267f59873498bd302342d4aba7, type: 3}
     subtitle: Brushing Teeth
   playStyle: 0
   audioTyp: 0
   loop: 0
-  volume: {x: 0.5, y: 0.5}
+  volume: {x: 0.99999994, y: 0.99999994}
   pitch: {x: 1, y: 1}
   spatial: 0
   minDistance: 0.5

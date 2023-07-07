@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: SFX_CryoDoor
   m_EditorClassIdentifier: 
   clipData:
-  - clip: {fileID: 8300000, guid: b0d4e54438188e74d997be0cabcb46d7, type: 3}
+  - clip: {fileID: 8300000, guid: 3b0a2ced4a343cb4b93c6723c16dc033, type: 3}
     subtitle: Cryo door opens
   playStyle: 0
   audioTyp: 0

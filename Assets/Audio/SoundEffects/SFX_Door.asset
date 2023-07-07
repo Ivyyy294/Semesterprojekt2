@@ -13,12 +13,12 @@ MonoBehaviour:
   m_Name: SFX_Door
   m_EditorClassIdentifier: 
   clipData:
-  - clip: {fileID: 8300000, guid: c3f446da636a8554cbea127e24379d01, type: 3}
+  - clip: {fileID: 8300000, guid: 184077d80722948449cca4ed63f20206, type: 3}
     subtitle: Door
   playStyle: 0
   audioTyp: 0
   loop: 0
-  volume: {x: 0.49892348, y: 0.49892348}
+  volume: {x: 0.99999994, y: 0.99999994}
   pitch: {x: 0.9999999, y: 0.9999999}
   spatial: 1
   minDistance: 0.5
