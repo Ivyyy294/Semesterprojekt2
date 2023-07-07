@@ -6,9 +6,10 @@ using UnityEngine;
 [CustomEditor(typeof(AudioAsset))]
 public class AudioAssetEditor : Editor
 {
-	private void OnValidate()
+	private void OnDisable()
 	{
-		EditorUtility.SetDirty(target);
+		AssetDatabase.SaveAssets();
+		AssetDatabase.Refresh();
 	}
 
 	public override void OnInspectorGUI()
@@ -38,7 +39,7 @@ public class AudioAssetEditor : Editor
 		if (GUILayout.Button("Stop Preview"))
 			audioAsset.StopPreview();
 
-
+		EditorUtility.SetDirty(target);
 	}
 
 	void SFXEditor (AudioAsset audioAsset)
