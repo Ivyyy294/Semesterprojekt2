@@ -418,7 +418,7 @@ public class Room : PushdownAutomata
 		public override void Enter(GameObject obj)
 		{
 			base.Enter(obj);
-			room.cryoDoor.SetOpen (true);
+			cryoDoor.SpawnOpen();
 			personalItems.SetActive (false);
 			cryoDoorTrigger.SetActive (false);
 			cryoEvent.SetActive (true);
@@ -431,7 +431,6 @@ public class Room : PushdownAutomata
 			terminal.SetChatAvailable (3, true);
 			terminal.SetActiveChat (3);
 			barikaden.SetActive(true);
-			cryoDoor.SpawnOpen();
 			timer = 0f;
 			room.PushState (room.wakeUpBed);
 		}
@@ -479,6 +478,7 @@ public class Room : PushdownAutomata
 			//Queue Fade In and Out effect
 			room.PushState (room.wakeUpCryo);
 			room.PushState (room.fadeOutState);
+			room.PushState (room.closeCryoDoor);
 		}
 
 		public override void Update(GameObject obj)
@@ -519,6 +519,7 @@ public class Room : PushdownAutomata
 			room.fadeOutState.SetText ("");
 			//Queue Fade In and Out effect
 			room.PushState (room.fadeOutState);
+			room.PushState (room.closeCryoDoor);
 		}
 
 		public override void Update(GameObject obj)
@@ -532,6 +533,30 @@ public class Room : PushdownAutomata
 				creditsEvent?.Raise();
 		}
 	}
+
+	[System.Serializable]
+	public class CloseCryoDoorState : BaseState
+	{
+		[SerializeField] CryoDoor cryoDoor;
+		[SerializeField] float delay;
+		float timer;
+
+		public override void Enter(GameObject obj)
+		{
+			base.Enter(obj);
+			timer = 0f;
+			cryoDoor.SetOpen (false);
+		}
+
+		public override void Update(GameObject obj)
+		{
+			if (timer < delay)
+				timer += Time.deltaTime;
+			else
+				room.PopState();
+		}
+	}
+
 	#endregion
 
 	public enum CurrentDay
@@ -554,6 +579,7 @@ public class Room : PushdownAutomata
 	public Day3State day3State = new Day3State();
 
 	//SubStates
+	[Header ("Sub States")]
 	public ChoseDayState choseDayState = new ChoseDayState();
 	public FadeInState fadeInState = new FadeInState();
 	public FadeOutState fadeOutState = new FadeOutState();
@@ -564,6 +590,8 @@ public class Room : PushdownAutomata
 	public PuckIntroState puckIntroState = new PuckIntroState();
 
 	//Endings
+	[Header ("Ending States")]
+	public CloseCryoDoorState closeCryoDoor = new CloseCryoDoorState();
 	public EndingCryoGood endingCryoGood = new EndingCryoGood();
 	public EndingCryoBad endingCryoBad = new EndingCryoBad();
 
