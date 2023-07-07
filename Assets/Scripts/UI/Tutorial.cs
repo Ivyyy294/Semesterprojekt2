@@ -10,6 +10,7 @@ public class Tutorial : MonoBehaviour
 
     public void OnSkip()
 	{
+		Cursor.lockState = CursorLockMode.Locked;
 		skipEvent?.Raise();
 	}
 

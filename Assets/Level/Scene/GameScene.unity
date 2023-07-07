@@ -128,11 +128,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 7391030597412054424, guid: cbc17c2b942c75242850f0bbb7667649, type: 3}
   m_PrefabInstance: {fileID: 1186137876}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &161011954 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 5315236914859162486, guid: cbc17c2b942c75242850f0bbb7667649, type: 3}
-  m_PrefabInstance: {fileID: 1186137876}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &245597532 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3250876305702942767, guid: cbc17c2b942c75242850f0bbb7667649, type: 3}
@@ -207,7 +202,7 @@ PrefabInstance:
     - target: {fileID: 1145050168618120106, guid: cbc17c2b942c75242850f0bbb7667649, type: 3}
       propertyPath: onTriggerExit.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
-      objectReference: {fileID: 161011954}
+      objectReference: {fileID: 2017196663}
     - target: {fileID: 1145050168618120106, guid: cbc17c2b942c75242850f0bbb7667649, type: 3}
       propertyPath: onTriggerExit.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
       value: 2
