@@ -8,6 +8,7 @@ using UnityEngine.UI;
 using Ivyyy.SaveGameSystem;
 using Cinemachine;
 using TMPro;
+using UnityEngine.Rendering;
 
 public class Room : PushdownAutomata
 {
@@ -413,6 +414,7 @@ public class Room : PushdownAutomata
 		[SerializeField] float hermiaEventDelay = 4f;
 		[SerializeField] CryoDoor cryoDoor;
 		[SerializeField] GameObject barikaden;
+		[SerializeField] Volume volume;
 		float timer = 0f;
 
 		public override void Enter(GameObject obj)
@@ -431,6 +433,7 @@ public class Room : PushdownAutomata
 			terminal.SetChatAvailable (3, true);
 			terminal.SetActiveChat (3);
 			barikaden.SetActive(true);
+			volume.enabled = false;
 			timer = 0f;
 			room.PushState (room.wakeUpBed);
 		}
@@ -447,6 +450,7 @@ public class Room : PushdownAutomata
 		{
 			cryoDoorTrigger.SetActive (true);
 			barikaden.SetActive(false);
+			volume.enabled = true;
 		}
 	}
 	#endregion

@@ -76,6 +76,7 @@ class CryoDay3Event : FiniteStateMachine
 		[SerializeField] Room room;
 		[SerializeField] AudioAsset voiceLinesTrapped;
 		[SerializeField] BlackBoardProperty testProperty;
+		[SerializeField] bool forceGoodEnding = false;
 
 		public override void Enter(GameObject obj)
 		{
@@ -90,7 +91,7 @@ class CryoDay3Event : FiniteStateMachine
 			{
 				BlackBoardProperty checkValue = BlackBoard.Me().GetPropertyByName (testProperty.name);
 
-				if (checkValue.Compare (testProperty))
+				if (checkValue.Compare (testProperty) || forceGoodEnding)
 					room.EnterEndingCryoGood();
 				else
 					room.EnterEndingCryoBad();

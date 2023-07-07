@@ -6550,6 +6550,7 @@ MonoBehaviour:
     hermiaEventDelay: 6
     cryoDoor: {fileID: 6334317424693014758}
     barikaden: {fileID: 6231751320679480825}
+    volume: {fileID: 114843502898718462}
   fadeInState:
     animationCurve:
       serializedVersion: 2
