@@ -358,6 +358,8 @@ public class Room : PushdownAutomata
 		[SerializeField] PuckTerminal terminal;
 		[SerializeField] CryoDoor cryoDoor;
 		[SerializeField] GameObject areaEvent;
+		[SerializeField] GameObject GoodMorningEvent;
+
 		[SerializeField] GameObject HermiaLetterEvent;
 		BlackBoardProperty property;
 
@@ -374,8 +376,7 @@ public class Room : PushdownAutomata
 			terminal.SetActiveChat (0);
 			
 			//cryoDoor.SpawnOpen();
-
-			areaEvent.SetActive(true);
+			GoodMorningEvent.SetActive(true);
 			HermiaLetterEvent.SetActive (true);
 			property = BlackBoard.Me().GetPropertyByName (nameProgressProperty);
 		}
@@ -389,6 +390,7 @@ public class Room : PushdownAutomata
 		public override void Exit(GameObject obj)
 		{
 			areaEvent.SetActive(false);
+			GoodMorningEvent.SetActive(false);
 			HermiaLetterEvent.SetActive (false);
 		}
 	}
@@ -445,7 +447,8 @@ public class Room : PushdownAutomata
 		{
 			cryoDoorTrigger.SetActive (true);
 			barikaden.SetActive(false);
-			volume.enabled = true;
+			
+			//Don't enable volume again.
 		}
 	}
 	#endregion

@@ -9,9 +9,11 @@ public class HermiaVoiceLine : MonoBehaviour
 	[SerializeField] string propertyName;
 	AudioPlayer audioPlayer;
 	bool active;
+	int count = 0;
     // Start is called before the first frame update
     void Start()
     {
+		count = 0;
 		audioPlayer = GetComponent<AudioPlayer>();
         active = false;
     }
@@ -19,10 +21,18 @@ public class HermiaVoiceLine : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (active && !audioPlayer.IsPlaying())
+		if (active && !audioPlayer.IsPlaying())
 		{
-			BlackBoard.Me().EditValue (BlackBoard.Me().GetGuidByName(propertyName), BlackBoard.EditTyp.SET, 1);
-			gameObject.SetActive(false);
+			if (count < audioPlayer.AudioAsset().ClipCount())
+			{
+				audioPlayer.Play();
+				count++;
+			}
+			else
+			{
+				BlackBoard.Me().EditValue (BlackBoard.Me().GetGuidByName(propertyName), BlackBoard.EditTyp.SET, 1);
+				gameObject.SetActive(false);
+			}
 		}
     }
 
@@ -31,7 +41,6 @@ public class HermiaVoiceLine : MonoBehaviour
 	public void Activate()
 	{
 		active = true;
-		audioPlayer.Play();
 	}
 
 }

@@ -44,6 +44,8 @@ public class AudioPlayer : MonoBehaviour
 	
 	public bool IsPlaying () {return audioSource.isPlaying;}
 
+	public AudioAsset AudioAsset() { return audioAsset;}
+
 	//Private Functions
 	private void Start()
 	{
