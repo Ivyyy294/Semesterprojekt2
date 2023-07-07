@@ -364,6 +364,7 @@ public class Room : PushdownAutomata
 		public override void Enter(GameObject obj)
 		{
 			base.Enter(obj);
+			Player.Me().Lock();
 			lightController.EnterNormalState();
 			room.PushState(room.puckIntroState);
 			terminal.SetChatVisible (3, false);

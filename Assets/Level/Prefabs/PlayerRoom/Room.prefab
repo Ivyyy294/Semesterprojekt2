@@ -162,7 +162,7 @@ Light:
   m_Cookie: {fileID: 0}
   m_DrawHalo: 0
   m_Flare: {fileID: 0}
-  m_RenderMode: 0
+  m_RenderMode: 1
   m_CullingMask:
     serializedVersion: 2
     m_Bits: 4294967295
@@ -8428,6 +8428,12 @@ PrefabInstance:
     - target: {fileID: 6482737711045702098, guid: 1b775ce5e67464845aaee44578d81d7e, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6747961747386588140, guid: 1b775ce5e67464845aaee44578d81d7e, type: 3}
+      propertyPath: m_text
+      value: '"It is my absolute pleasure to welcome you on board of the ''Goodfellow''!
+        I am your "Pathfinding Unit and Communication Kernel", but you can call me
+        PUCK for short! I will be your assistant and contact for all your troubles!"'
       objectReference: {fileID: 0}
     - target: {fileID: 8215992294353812624, guid: 1b775ce5e67464845aaee44578d81d7e, type: 3}
       propertyPath: m_Name

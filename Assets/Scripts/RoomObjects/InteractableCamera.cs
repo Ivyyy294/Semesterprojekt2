@@ -175,6 +175,7 @@ public class InteractableCamera : FiniteStateMachine, InteractableObject
 		public float playerSpawnRotationX = 0f;
 		CinemachineBrain cinemachineBrain;
 		CinemachineBlendDefinition.Style defaultBlendStyle;
+		float timer;
 
 		public override void Enter(GameObject obj)
 		{
@@ -191,8 +192,13 @@ public class InteractableCamera : FiniteStateMachine, InteractableObject
 
 		public override void Update (GameObject obj)
 		{
-			cinemachineBrain.m_DefaultBlend.m_Style = defaultBlendStyle;
-			interactableCamera.EnterState (interactableCamera.activeState);
+			if (timer < 0.5f)
+				timer += Time.deltaTime;
+			else if (!cinemachineBrain.IsBlending)
+			{
+				cinemachineBrain.m_DefaultBlend.m_Style = defaultBlendStyle;
+				interactableCamera.EnterState (interactableCamera.activeState);
+			}
 		}
 	}
 
