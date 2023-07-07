@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 public class GraphicSettings : ISettingContainer
@@ -33,7 +34,12 @@ public class GraphicSettings : ISettingContainer
 	public GraphicSettings()
 	{
 		for (int i = Screen.resolutions.Length -1; i > 0; --i)
-			availableSettings.Add (new Setting (Screen.resolutions[i]));
+		{
+			Setting tmp = new Setting (Screen.resolutions[i]);
+			
+			if (!availableSettings.Any(x=>x.Compare(tmp)))
+				availableSettings.Add (tmp);
+		}
 
 		LoadSettings();
 	}
