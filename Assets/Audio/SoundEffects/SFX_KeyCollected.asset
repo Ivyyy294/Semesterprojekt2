@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: SFX_KeyCollected
   m_EditorClassIdentifier: 
   clipData:
-  - clip: {fileID: 8300000, guid: ed443e3a78fbcc5439d2009f23462b40, type: 3}
+  - clip: {fileID: 8300000, guid: 24b24e7dd2d5ab04288c60c3f28224ac, type: 3}
     subtitle: Passwort collected
   playStyle: 0
   audioTyp: 0

@@ -12,16 +12,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6f7490679cbb0ec49b5d45a66e74b10e, type: 3}
   m_Name: SFX_CryoDoor
   m_EditorClassIdentifier: 
-  audioClips:
-  - {fileID: 8300000, guid: 3b0a2ced4a343cb4b93c6723c16dc033, type: 3}
   clipData:
-  - clip: {fileID: 8300000, guid: 3b0a2ced4a343cb4b93c6723c16dc033, type: 3}
+  - clip: {fileID: 8300000, guid: b0d4e54438188e74d997be0cabcb46d7, type: 3}
     subtitle: Cryo door opens
-  subtitle: Cryo door opens
   playStyle: 0
   audioTyp: 0
   loop: 0
-  volume: {x: 0.85638297, y: 1}
+  volume: {x: 0.99999994, y: 0.99999994}
   pitch: {x: 1, y: 1}
   spatial: 1
   minDistance: 0.5

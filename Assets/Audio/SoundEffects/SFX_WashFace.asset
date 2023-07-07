@@ -12,16 +12,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6f7490679cbb0ec49b5d45a66e74b10e, type: 3}
   m_Name: SFX_WashFace
   m_EditorClassIdentifier: 
-  audioClips:
-  - {fileID: 8300000, guid: 3eaec48681eee2348be314b1b58f15ee, type: 3}
   clipData:
-  - clip: {fileID: 8300000, guid: 3eaec48681eee2348be314b1b58f15ee, type: 3}
+  - clip: {fileID: 8300000, guid: 1359a12c127fffc4b8b7db5ff2642f4e, type: 3}
     subtitle: Washing Face
-  subtitle: Washing Face
   playStyle: 0
   audioTyp: 0
   loop: 0
-  volume: {x: 0.5, y: 0.5}
+  volume: {x: 1, y: 1}
   pitch: {x: 1, y: 1}
   spatial: 0
   minDistance: 0.5
