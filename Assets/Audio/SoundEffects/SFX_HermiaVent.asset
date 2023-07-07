@@ -12,16 +12,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6f7490679cbb0ec49b5d45a66e74b10e, type: 3}
   m_Name: SFX_HermiaVent
   m_EditorClassIdentifier: 
-  audioClips:
-  - {fileID: 8300000, guid: 1cc02f3a4f542174cb1ca334c8e5a395, type: 3}
   clipData:
-  - clip: {fileID: 8300000, guid: 1cc02f3a4f542174cb1ca334c8e5a395, type: 3}
+  - clip: {fileID: 8300000, guid: 28f609a0994a73f40a48755727a3fb15, type: 3}
     subtitle: Rumbling in the ventilation shaft
-  subtitle: Rumbling in the ventilation shaft
   playStyle: 0
   audioTyp: 0
   loop: 0
-  volume: {x: 1, y: 1}
+  volume: {x: 0.49911088, y: 0.49911088}
   pitch: {x: 1, y: 1}
   spatial: 1
   minDistance: 0.5
