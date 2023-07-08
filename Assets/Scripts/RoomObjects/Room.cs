@@ -424,8 +424,8 @@ public class Room : PushdownAutomata
 		{
 			base.Enter(obj);
 			Player.Me().Lock();
-			lightController.EnterNormalState();
-			//room.PushState(room.puckIntroState);
+			//lightController.EnterNormalState();
+			room.PushState(room.puckIntroState);
 			room.PushState (room.wakeUpCryo);
 			terminal.SetChatVisible (3, false);
 			terminal.SetChatAvailable (0, true);
