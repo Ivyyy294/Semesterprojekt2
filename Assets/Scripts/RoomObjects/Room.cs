@@ -417,7 +417,6 @@ public class Room : PushdownAutomata
 		[SerializeField] string nameProgressProperty;
 		[SerializeField] int checkValue;
 		[SerializeField] PuckTerminal terminalUI;
-		[SerializeField] ChatTerminalObj terminalObj;
 		[SerializeField] CryoDoor cryoDoor;
 		[SerializeField] GameObject areaEvent;
 		[SerializeField] GameObject GoodMorningEvent;
@@ -437,7 +436,7 @@ public class Room : PushdownAutomata
 				room.PushState(room.puckIntroState);
 			#endif
 
-			terminalObj.SetLocked (true);
+			terminalUI.SetPasswordAvailable (false);
 			terminalUI.SetChatVisible (3, false);
 			terminalUI.SetChatAvailable (0, true);
 			terminalUI.SetChatAvailable (1, true);
