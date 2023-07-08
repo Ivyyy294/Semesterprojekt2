@@ -9,6 +9,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2453916989840002669}
+  - component: {fileID: 2005311081734037575}
+  - component: {fileID: 5472244276857427370}
   m_Layer: 0
   m_Name: Keycard
   m_TagString: Untagged
@@ -32,6 +34,33 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 156.751, z: 0}
+--- !u!114 &2005311081734037575
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1150976042005191258}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b750bdc448ba58e47808b926ec88f8d2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  chatTerminalObj: {fileID: 0}
+  audioAsset: {fileID: 11400000, guid: 55a919190c663254eb11209804bb1aa1, type: 2}
+--- !u!65 &5472244276857427370
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1150976042005191258}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.3, y: 0.1, z: 0.2}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1001 &5355849962247088429
 PrefabInstance:
   m_ObjectHideFlags: 0

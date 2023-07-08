@@ -183,7 +183,10 @@ public class Room : PushdownAutomata
 			
 			//Spawn player sitting on cryo chair
 			if(!cryoCam.IsActive())
+			{
 				cryoCam.EnterState (cryoCam.spawnState);
+				cryoCam.activeState.SetLocked (true);
+			}
 
 			Player.Me().Lock();
 			Player.Me().transform.position = PlayerSpawnPos.position;
@@ -195,6 +198,7 @@ public class Room : PushdownAutomata
 		public override void Update(GameObject obj)
 		{
 			room.cryoDoor.SetOpen (true);
+			cryoCam.activeState.SetLocked (false);
 			room.PopState();
 		}
 	}
@@ -322,7 +326,6 @@ public class Room : PushdownAutomata
 	[System.Serializable]
 	public class Day1State : BaseState
 	{
-		[SerializeField] GameObject keyEvent;
 		[SerializeField] ChatTerminalObj terminalObj;
 		[SerializeField] string nameProgressProperty;
 		[SerializeField] int checkValue;
@@ -333,7 +336,6 @@ public class Room : PushdownAutomata
 			base.Enter(obj);
 			property = BlackBoard.Me().GetPropertyByName (nameProgressProperty);
 			terminalObj.SetLocked(true);
-			keyEvent.SetActive(true);
 			room.PushState(room.puckIntroState);
 		}
 
@@ -345,7 +347,6 @@ public class Room : PushdownAutomata
 
 		public override void Exit(GameObject obj)
 		{
-			keyEvent.SetActive(false);
 			terminalObj.SetLocked(false);
 		}
 	}
@@ -415,7 +416,8 @@ public class Room : PushdownAutomata
 		[SerializeField] LightController lightController;
 		[SerializeField] string nameProgressProperty;
 		[SerializeField] int checkValue;
-		[SerializeField] PuckTerminal terminal;
+		[SerializeField] PuckTerminal terminalUI;
+		[SerializeField] ChatTerminalObj terminalObj;
 		[SerializeField] CryoDoor cryoDoor;
 		[SerializeField] GameObject areaEvent;
 		[SerializeField] GameObject GoodMorningEvent;
@@ -435,11 +437,12 @@ public class Room : PushdownAutomata
 				room.PushState(room.puckIntroState);
 			#endif
 
-			terminal.SetChatVisible (3, false);
-			terminal.SetChatAvailable (0, true);
-			terminal.SetChatAvailable (1, true);
-			terminal.SetChatAvailable (2, true);
-			terminal.SetActiveChat (0);
+			terminalObj.SetLocked (true);
+			terminalUI.SetChatVisible (3, false);
+			terminalUI.SetChatAvailable (0, true);
+			terminalUI.SetChatAvailable (1, true);
+			terminalUI.SetChatAvailable (2, true);
+			terminalUI.SetActiveChat (0);
 			
 			//cryoDoor.SpawnOpen();
 			GoodMorningEvent.SetActive(true);
