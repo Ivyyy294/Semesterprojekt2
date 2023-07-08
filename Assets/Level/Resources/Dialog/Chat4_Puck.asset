@@ -487,12 +487,6 @@ MonoBehaviour:
   - baseNodeGuid: 740dcdd0-db58-4edd-9e96-12ec7568a6ff
     portName: Just do it.
     targetNodeGuid: 563f3686-3de0-4afa-b6ec-472cf7aa4c9d
-  - baseNodeGuid: 8c346297-c7e8-477e-92d6-9a8c8b2e4316
-    portName: True
-    targetNodeGuid: e4cedf02-cfd7-40c1-b30d-f4b0b68e3ed1
-  - baseNodeGuid: 8c346297-c7e8-477e-92d6-9a8c8b2e4316
-    portName: False
-    targetNodeGuid: ba012d95-4cba-4c3e-9258-a4e4c5de0e68
   - baseNodeGuid: 146e56c6-9dfa-491b-b6cf-817f2a51d9a7
     portName: Next
     targetNodeGuid: 8c346297-c7e8-477e-92d6-9a8c8b2e4316
@@ -535,6 +529,12 @@ MonoBehaviour:
   - baseNodeGuid: 8be8d95a-d04a-451c-b9cf-ee20864d5f5e
     portName: Next
     targetNodeGuid: e0a00121-174f-420a-b981-5ab27f03f0ea
+  - baseNodeGuid: 8c346297-c7e8-477e-92d6-9a8c8b2e4316
+    portName: True
+    targetNodeGuid: ba012d95-4cba-4c3e-9258-a4e4c5de0e68
+  - baseNodeGuid: 8c346297-c7e8-477e-92d6-9a8c8b2e4316
+    portName: False
+    targetNodeGuid: e4cedf02-cfd7-40c1-b30d-f4b0b68e3ed1
   dialogNodeData:
   - Guid: dd62aaad-7f9e-4c29-a93b-947c89756209
     DialogTitle: START
