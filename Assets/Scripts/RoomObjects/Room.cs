@@ -419,14 +419,20 @@ public class Room : PushdownAutomata
 
 		[SerializeField] GameObject HermiaLetterEvent;
 		BlackBoardProperty property;
+		bool wakeUpDone;
 
 		public override void Enter(GameObject obj)
 		{
 			base.Enter(obj);
 			Player.Me().Lock();
-			//lightController.EnterNormalState();
-			room.PushState(room.puckIntroState);
-			room.PushState (room.wakeUpCryo);
+			
+			//Disables Intro for Testing
+			#if UNITY_EDITOR
+				room.PushState (room.wakeUpCryo);
+			#else
+				room.PushState(room.puckIntroState);
+			#endif
+
 			terminal.SetChatVisible (3, false);
 			terminal.SetChatAvailable (0, true);
 			terminal.SetChatAvailable (1, true);
@@ -437,6 +443,8 @@ public class Room : PushdownAutomata
 			GoodMorningEvent.SetActive(true);
 			HermiaLetterEvent.SetActive (true);
 			property = BlackBoard.Me().GetPropertyByName (nameProgressProperty);
+
+			wakeUpDone = false;
 		}
 
 		public override void Update(GameObject obj)
