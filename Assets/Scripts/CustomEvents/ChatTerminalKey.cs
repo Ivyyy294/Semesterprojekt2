@@ -12,6 +12,6 @@ public class ChatTerminalKey : MonoBehaviour, InteractableObject
 	{
 		chatTerminalObj.SetLocked(false);
 		audioAsset?.PlayAtPos(transform.position);
-		gameObject.SetActive(false);
+		enabled = false;
 	}
 }

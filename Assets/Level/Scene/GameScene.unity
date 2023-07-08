@@ -432,6 +432,10 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2565798720408585157, guid: cbc17c2b942c75242850f0bbb7667649, type: 3}
+      propertyPath: day2State.terminalUI
+      value: 
+      objectReference: {fileID: 1574083206}
+    - target: {fileID: 2565798720408585157, guid: cbc17c2b942c75242850f0bbb7667649, type: 3}
       propertyPath: transitionState.txtTime
       value: 2
       objectReference: {fileID: 0}
@@ -447,10 +451,6 @@ PrefabInstance:
       propertyPath: transitionState.releasePlayer
       value: 
       objectReference: {fileID: 11400000, guid: 2db1e2cec386b954ba5ea4c67080e35a, type: 2}
-    - target: {fileID: 2565798720408585157, guid: cbc17c2b942c75242850f0bbb7667649, type: 3}
-      propertyPath: day1State.nameProgressProperty
-      value: ProgressDay2
-      objectReference: {fileID: 0}
     - target: {fileID: 2565798720408585157, guid: cbc17c2b942c75242850f0bbb7667649, type: 3}
       propertyPath: nightState.interactableObjects.Array.size
       value: 9

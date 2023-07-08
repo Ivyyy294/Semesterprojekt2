@@ -86,7 +86,7 @@ public class InteractableCamera : FiniteStateMachine, InteractableObject
 
 		public override void Update (GameObject obj)
 		{
-			Player.Me().interactTextOverlay.Show (true);
+			Player.Me().interactTextOverlay.Show (!locked);
 
 			if (!locked && Input.GetKeyDown(KeyCode.F))
 			{
