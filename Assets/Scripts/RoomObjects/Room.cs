@@ -32,10 +32,22 @@ public class Room : PushdownAutomata
 	}
 
 	[System.Serializable]
-	public class FadeInState : BaseState
+	public abstract class BaseFadeState : BaseState
 	{
-		[SerializeField] AnimationCurve animationCurve;
-		[SerializeField] Image image;
+		[SerializeField] protected AnimationCurve animationCurve;
+
+		protected void ChangeImgAlpha (Image img, float alpha)
+		{
+			Color color = img.color;
+			color.a = alpha;
+			img.color = color;
+		}
+	}
+
+	[System.Serializable]
+	public class FadeInState : BaseFadeState
+	{
+		[SerializeField] protected Image image;
 		float timer;
 
 		public override void Enter(GameObject obj)
@@ -49,10 +61,7 @@ public class Room : PushdownAutomata
 		{
 			if (timer < animationCurve.keys[animationCurve.length - 1].time)
 			{
-				Color color = image.color;
-				color.a = animationCurve.Evaluate(timer);
-				image.color = color;
-
+				ChangeImgAlpha (image, animationCurve.Evaluate(timer));
 				timer += Time.deltaTime;
 			}
 			else
@@ -66,11 +75,10 @@ public class Room : PushdownAutomata
 	}
 
 	[System.Serializable]
-	public class FadeOutState : BaseState
+	public class FadeOutState : BaseFadeState
 	{
 		[SerializeField] Image image;
 		[SerializeField] GameObject txt;
-		[SerializeField] AnimationCurve animationCurve;
 		[SerializeField] float txtTime;
 		float timer;
 		float timerTxt;
@@ -93,10 +101,7 @@ public class Room : PushdownAutomata
 		{
 			if (timer <= animationCurve.keys[animationCurve.length -1].time)
 			{
-				Color color = image.color;
-				color.a = animationCurve.Evaluate (timer);
-				image.color = color;
-
+				ChangeImgAlpha (image, animationCurve.Evaluate (timer));
 				timer += Time.deltaTime;
 			}
 			else if (timerTxt <= txtTime)
@@ -111,6 +116,57 @@ public class Room : PushdownAutomata
 		public override void Exit(GameObject obj)
 		{
 			txt.SetActive (false);
+		}
+	}
+
+	[System.Serializable]
+	public class FadeIceState : BaseFadeState
+	{
+		[SerializeField] protected Image image;
+		float timer;
+
+		public override void Enter(GameObject obj)
+		{
+			base.Enter(obj);
+			timer = 0f;
+			image.gameObject.SetActive(true);
+			ChangeImgAlpha (image, animationCurve.Evaluate(timer));
+		}
+
+		public override void Update(GameObject obj)
+		{
+			if (timer < animationCurve.keys[animationCurve.length - 1].time)
+			{
+				ChangeImgAlpha (image, animationCurve.Evaluate(timer));
+				timer += Time.deltaTime;
+			}
+			else
+				room.PopState();
+		}
+
+		public override void Exit(GameObject obj)
+		{
+			image.gameObject.SetActive(false);
+		}
+	}
+
+	[System.Serializable]
+	public class EnterCryoSleep : BaseState
+	{
+		public override void Enter(GameObject obj)
+		{
+			base.Enter(obj);
+			Player.Me().Lock();
+			room.fadeOutState.SetText ("");
+			//Queue Fade In and Out effect
+			room.PushState (room.fadeInIceState);
+			room.PushState (room.fadeOutState);
+			room.PushState (room.closeCryoDoor);
+		}
+
+		public override void Update(GameObject obj)
+		{
+			room.PopState();
 		}
 	}
 
@@ -133,11 +189,12 @@ public class Room : PushdownAutomata
 			Player.Me().transform.position = PlayerSpawnPos.position;
 			Player.Me().transform.forward = PlayerSpawnPos.forward;
 			room.PushState (room.fadeInState);
-			room.cryoDoor.SetOpen (true);
+			room.PushState (room.fadeOutIceState);
 		}
 
 		public override void Update(GameObject obj)
 		{
+			room.cryoDoor.SetOpen (true);
 			room.PopState();
 		}
 	}
@@ -296,6 +353,7 @@ public class Room : PushdownAutomata
 	[System.Serializable]
 	public class PuckIntroState : BaseState
 	{
+		[SerializeField] GameObject ice;
 		[SerializeField] GameObject blackScreen;
 		[SerializeField] GameObject IntroObj;
 		[SerializeField] GameObject txt1;
@@ -314,6 +372,7 @@ public class Room : PushdownAutomata
 			timer = 0f;
 			IntroObj.SetActive(true);
 			blackScreen.SetActive(true);
+			ice.SetActive (true);
 			txt1.SetActive (true);
 			audioAsset?.Play();
 		}
@@ -342,6 +401,7 @@ public class Room : PushdownAutomata
 		{
 			IntroObj.gameObject.SetActive (false);
 			blackScreen.SetActive(false);
+			ice.SetActive (false);
 		}
 	}
 
@@ -367,8 +427,14 @@ public class Room : PushdownAutomata
 		{
 			base.Enter(obj);
 			Player.Me().Lock();
-			lightController.EnterNormalState();
-			room.PushState(room.puckIntroState);
+			
+			//Disables Intro for Testing
+			#if UNITY_EDITOR
+				room.PushState (room.wakeUpCryo);
+			#else
+				room.PushState(room.puckIntroState);
+			#endif
+
 			terminal.SetChatVisible (3, false);
 			terminal.SetChatAvailable (0, true);
 			terminal.SetChatAvailable (1, true);
@@ -478,9 +544,7 @@ public class Room : PushdownAutomata
 			doorTerminal.locked = false;
 			room.fadeOutState.SetText ("");
 			//Queue Fade In and Out effect
-			room.PushState (room.wakeUpCryo);
-			room.PushState (room.fadeOutState);
-			room.PushState (room.closeCryoDoor);
+			room.PushState (room.enterCryo);
 		}
 
 		public override void Update(GameObject obj)
@@ -489,6 +553,7 @@ public class Room : PushdownAutomata
 			{
 				audioAssetArrived?.Play();
 				audioPlayed = true;
+				room.PushState (room.wakeUpCryo);
 			}
 			else if (!done && doorTerminal.active)
 			{
@@ -510,28 +575,25 @@ public class Room : PushdownAutomata
 	{
 		[SerializeField] GameEvent creditsEvent;
 		bool audioPlayed = false;
-
+		AudioSource audioSource;
 		[SerializeField] AudioAsset audioDying;
 
 		public override void Enter(GameObject obj)
 		{
 			base.Enter(obj);
 			audioPlayed = false;
-			Player.Me().Lock();
-			room.fadeOutState.SetText ("");
 			//Queue Fade In and Out effect
-			room.PushState (room.fadeOutState);
-			room.PushState (room.closeCryoDoor);
+			room.PushState (room.enterCryo);
 		}
 
 		public override void Update(GameObject obj)
 		{
 			if (!audioPlayed)
 			{
-				audioDying?.Play();
+				audioSource = audioDying?.Play();
 				audioPlayed = true;
 			}
-			else
+			else if (audioSource == null)
 				creditsEvent?.Raise();
 		}
 	}
@@ -585,6 +647,9 @@ public class Room : PushdownAutomata
 	public ChoseDayState choseDayState = new ChoseDayState();
 	public FadeInState fadeInState = new FadeInState();
 	public FadeOutState fadeOutState = new FadeOutState();
+	public FadeIceState fadeInIceState = new FadeIceState();
+	public FadeIceState fadeOutIceState = new FadeIceState();
+	public EnterCryoSleep enterCryo = new EnterCryoSleep();
 	public WakeUpCryo wakeUpCryo = new WakeUpCryo();
 	public WakeUpBed wakeUpBed = new WakeUpBed();
 	public NightState nightState = new NightState();

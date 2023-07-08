@@ -393,7 +393,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2565798720408585157, guid: cbc17c2b942c75242850f0bbb7667649, type: 3}
       propertyPath: currentDay
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2565798720408585157, guid: cbc17c2b942c75242850f0bbb7667649, type: 3}
       propertyPath: lockPlayer
@@ -504,6 +504,10 @@ PrefabInstance:
       value: -0.5
       objectReference: {fileID: 0}
     - target: {fileID: 2565798720408585157, guid: cbc17c2b942c75242850f0bbb7667649, type: 3}
+      propertyPath: fadeInCryoState.animationCurve.m_Curve.Array.data[1].time
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 2565798720408585157, guid: cbc17c2b942c75242850f0bbb7667649, type: 3}
       propertyPath: fadeInState.animationCurve.m_Curve.Array.data[1].outSlope
       value: -0.5
       objectReference: {fileID: 0}
@@ -512,8 +516,40 @@ PrefabInstance:
       value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 2565798720408585157, guid: cbc17c2b942c75242850f0bbb7667649, type: 3}
+      propertyPath: fadeInCryoState.animationCurve.m_Curve.Array.data[0].value
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2565798720408585157, guid: cbc17c2b942c75242850f0bbb7667649, type: 3}
+      propertyPath: fadeInCryoState.animationCurve.m_Curve.Array.data[1].value
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2565798720408585157, guid: cbc17c2b942c75242850f0bbb7667649, type: 3}
       propertyPath: fadeOutState.animationCurve.m_Curve.Array.data[0].outSlope
       value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2565798720408585157, guid: cbc17c2b942c75242850f0bbb7667649, type: 3}
+      propertyPath: fadeInCryoState.animationCurve.m_Curve.Array.data[0].inSlope
+      value: -0.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 2565798720408585157, guid: cbc17c2b942c75242850f0bbb7667649, type: 3}
+      propertyPath: fadeInCryoState.animationCurve.m_Curve.Array.data[1].inSlope
+      value: -0.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 2565798720408585157, guid: cbc17c2b942c75242850f0bbb7667649, type: 3}
+      propertyPath: fadeInCryoState.animationCurve.m_Curve.Array.data[0].outSlope
+      value: -0.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 2565798720408585157, guid: cbc17c2b942c75242850f0bbb7667649, type: 3}
+      propertyPath: fadeInCryoState.animationCurve.m_Curve.Array.data[1].inWeight
+      value: 0.33333334
+      objectReference: {fileID: 0}
+    - target: {fileID: 2565798720408585157, guid: cbc17c2b942c75242850f0bbb7667649, type: 3}
+      propertyPath: fadeInCryoState.animationCurve.m_Curve.Array.data[1].outSlope
+      value: -0.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 2565798720408585157, guid: cbc17c2b942c75242850f0bbb7667649, type: 3}
+      propertyPath: fadeInCryoState.animationCurve.m_Curve.Array.data[0].outWeight
+      value: 0.33333334
       objectReference: {fileID: 0}
     - target: {fileID: 2894718716835555158, guid: cbc17c2b942c75242850f0bbb7667649, type: 3}
       propertyPath: uniqueId
@@ -562,6 +598,10 @@ PrefabInstance:
     - target: {fileID: 3722970539505694387, guid: cbc17c2b942c75242850f0bbb7667649, type: 3}
       propertyPath: stage1.voiceLineDelay
       value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3722970539505694387, guid: cbc17c2b942c75242850f0bbb7667649, type: 3}
+      propertyPath: stage2.forceGoodEnding
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3842818914751115492, guid: cbc17c2b942c75242850f0bbb7667649, type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -631,6 +671,10 @@ PrefabInstance:
       propertyPath: m_Color.r
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 4549167198485911839, guid: cbc17c2b942c75242850f0bbb7667649, type: 3}
+      propertyPath: m_Shadows.m_Type
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 4887676111759180139, guid: cbc17c2b942c75242850f0bbb7667649, type: 3}
       propertyPath: m_UseGravity
       value: 0
@@ -657,7 +701,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5315236914859162486, guid: cbc17c2b942c75242850f0bbb7667649, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5392927515475894218, guid: cbc17c2b942c75242850f0bbb7667649, type: 3}
       propertyPath: uniqueId
@@ -750,6 +794,10 @@ PrefabInstance:
     - target: {fileID: 6771013941604031823, guid: cbc17c2b942c75242850f0bbb7667649, type: 3}
       propertyPath: m_IsActive
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6792845159130846081, guid: cbc17c2b942c75242850f0bbb7667649, type: 3}
+      propertyPath: m_Shadows.m_Type
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 6840704593828054401, guid: cbc17c2b942c75242850f0bbb7667649, type: 3}
       propertyPath: m_LocalPosition.x
