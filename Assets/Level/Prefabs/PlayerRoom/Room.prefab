@@ -6606,7 +6606,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2324029556a63a74f90834e0f34aedb8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  currentDay: 1
+  currentDay: 2
   night: 0
   cryoDoor: {fileID: 6334317424693014758}
   day1State:
