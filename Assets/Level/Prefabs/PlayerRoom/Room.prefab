@@ -6523,7 +6523,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2324029556a63a74f90834e0f34aedb8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  currentDay: 0
+  currentDay: 1
   night: 0
   cryoDoor: {fileID: 6334317424693014758}
   day1State:
@@ -13753,7 +13753,7 @@ PrefabInstance:
     - target: {fileID: 1442450553484104045, guid: e953a49b3d9e2c547baf95b32a55ecf1, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 0e4b5e1320ec6bc4b96d86d655c08f8b, type: 2}
+      objectReference: {fileID: 2100000, guid: 8a464b2f7339ad24e83be4243865a970, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e953a49b3d9e2c547baf95b32a55ecf1, type: 3}
 --- !u!1001 &6633795864821339315
