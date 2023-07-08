@@ -353,6 +353,7 @@ public class Room : PushdownAutomata
 	[System.Serializable]
 	public class PuckIntroState : BaseState
 	{
+		[SerializeField] GameObject ice;
 		[SerializeField] GameObject blackScreen;
 		[SerializeField] GameObject IntroObj;
 		[SerializeField] GameObject txt1;
@@ -371,6 +372,7 @@ public class Room : PushdownAutomata
 			timer = 0f;
 			IntroObj.SetActive(true);
 			blackScreen.SetActive(true);
+			ice.SetActive (true);
 			txt1.SetActive (true);
 			audioAsset?.Play();
 		}
@@ -399,6 +401,7 @@ public class Room : PushdownAutomata
 		{
 			IntroObj.gameObject.SetActive (false);
 			blackScreen.SetActive(false);
+			ice.SetActive (false);
 		}
 	}
 
