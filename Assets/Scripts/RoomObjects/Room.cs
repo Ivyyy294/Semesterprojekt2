@@ -419,7 +419,6 @@ public class Room : PushdownAutomata
 
 		[SerializeField] GameObject HermiaLetterEvent;
 		BlackBoardProperty property;
-		bool wakeUpDone;
 
 		public override void Enter(GameObject obj)
 		{
@@ -443,8 +442,6 @@ public class Room : PushdownAutomata
 			GoodMorningEvent.SetActive(true);
 			HermiaLetterEvent.SetActive (true);
 			property = BlackBoard.Me().GetPropertyByName (nameProgressProperty);
-
-			wakeUpDone = false;
 		}
 
 		public override void Update(GameObject obj)
