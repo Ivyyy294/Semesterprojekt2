@@ -43,6 +43,9 @@ public class ChatButton : MonoBehaviour
 		if (button.interactable != available)
 			button.interactable = available;
 
+		if (chat.gameObject.activeInHierarchy)
+			button.Select();
+
 		if (available && !chat.gameObject.activeInHierarchy)
 			ShowNotification (chat.AnzNewMessagesAvailable());
 		else

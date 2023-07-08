@@ -2406,6 +2406,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 21300000, guid: 4e528bb29abe3e043b60c3af0ffb8fb3, type: 3}
     - target: {fileID: 7173554934744272397, guid: 70375655aeca7dc44a1eba79320978f0, type: 3}
+      propertyPath: m_SpriteState.m_SelectedSprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 4e528bb29abe3e043b60c3af0ffb8fb3, type: 3}
+    - target: {fileID: 7173554934744272397, guid: 70375655aeca7dc44a1eba79320978f0, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
       value: 2
       objectReference: {fileID: 0}
@@ -2757,6 +2761,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7173554934744272397, guid: 70375655aeca7dc44a1eba79320978f0, type: 3}
       propertyPath: m_SpriteState.m_PressedSprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 8d55892ab3f45404d8b86ecd9f2e2dbd, type: 3}
+    - target: {fileID: 7173554934744272397, guid: 70375655aeca7dc44a1eba79320978f0, type: 3}
+      propertyPath: m_SpriteState.m_SelectedSprite
       value: 
       objectReference: {fileID: 21300000, guid: 8d55892ab3f45404d8b86ecd9f2e2dbd, type: 3}
     - target: {fileID: 7173554934744272397, guid: 70375655aeca7dc44a1eba79320978f0, type: 3}
@@ -3126,7 +3134,7 @@ PrefabInstance:
     - target: {fileID: 7173554934744272397, guid: 70375655aeca7dc44a1eba79320978f0, type: 3}
       propertyPath: m_SpriteState.m_SelectedSprite
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 21300000, guid: 023739e5a804a7e4ab4ff5027bc7218f, type: 3}
     - target: {fileID: 7173554934744272397, guid: 70375655aeca7dc44a1eba79320978f0, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
       value: 2
@@ -3646,6 +3654,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7173554934744272397, guid: 70375655aeca7dc44a1eba79320978f0, type: 3}
       propertyPath: m_SpriteState.m_PressedSprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 1569d0bbf1b4c4d4d822dbd9b8e5cb23, type: 3}
+    - target: {fileID: 7173554934744272397, guid: 70375655aeca7dc44a1eba79320978f0, type: 3}
+      propertyPath: m_SpriteState.m_SelectedSprite
       value: 
       objectReference: {fileID: 21300000, guid: 1569d0bbf1b4c4d4d822dbd9b8e5cb23, type: 3}
     - target: {fileID: 7173554934744272397, guid: 70375655aeca7dc44a1eba79320978f0, type: 3}
