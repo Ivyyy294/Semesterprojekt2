@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using Ivyyy.StateMachine;
 
 [System.Serializable]
 public class PuckTerminal : MonoBehaviour
@@ -10,16 +11,22 @@ public class PuckTerminal : MonoBehaviour
 	[SerializeField] Ivyyy.GameEvent.GameEvent closeEvent;
 	[SerializeField] Ivyyy.GameEvent.GameEvent settingsEvent;
 	
+	[SerializeField] GameObject loginScreen;
+	[SerializeField] GameObject chatScreen;
+
 	[SerializeField] GameObject buttonContainer;
 	[SerializeField] GameObject chatContainer;
 	[SerializeField] List <ChatButton> buttonObjList;
 	[SerializeField] List <GameObject> aboutObjList;
 
 	int currentIndex = -1;
+	bool passwordAvailable = true;
 
 	//private List <Chat> chatObjList = new List<Chat>();
 
 	//Public Values
+	public void SetPasswordAvailable(bool val) { passwordAvailable = val;}
+
 	public void ShowAboutPage()
 	{
 		if (currentIndex != -1)
@@ -100,6 +107,10 @@ public class PuckTerminal : MonoBehaviour
 	private void OnEnable()
 	{
 		Cursor.lockState = CursorLockMode.Confined;
+
+		loginScreen.SetActive (!passwordAvailable);
+		chatScreen.SetActive (passwordAvailable);
+
 		SetActiveChat (currentIndex);
 	}
 

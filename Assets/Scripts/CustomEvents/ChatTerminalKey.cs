@@ -5,12 +5,12 @@ using Ivyyy.Interfaces;
 
 public class ChatTerminalKey : MonoBehaviour, InteractableObject
 {
-	[SerializeField] ChatTerminalObj chatTerminalObj;
+	[SerializeField] PuckTerminal chatTerminal;
 	[SerializeField] AudioAsset audioAsset;
 
 	public void Interact()
 	{
-		chatTerminalObj.SetLocked(false);
+		chatTerminal.SetPasswordAvailable (true);
 		audioAsset?.PlayAtPos(transform.position);
 		enabled = false;
 	}
