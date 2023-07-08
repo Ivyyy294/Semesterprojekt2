@@ -13,12 +13,33 @@ public class PuckTerminal : MonoBehaviour
 	[SerializeField] GameObject buttonContainer;
 	[SerializeField] GameObject chatContainer;
 	[SerializeField] List <ChatButton> buttonObjList;
+	[SerializeField] List <GameObject> aboutObjList;
 
 	int currentIndex = -1;
 
 	//private List <Chat> chatObjList = new List<Chat>();
 
 	//Public Values
+	public void ShowAboutPage()
+	{
+		if (currentIndex != -1)
+		{
+			aboutObjList[currentIndex].SetActive(true);
+			buttonObjList[currentIndex].ShowChat (false);
+		}
+	}
+
+	public void ShowAboutPageHelena()
+	{
+		if (aboutObjList.Count > 0)
+		{
+			aboutObjList[aboutObjList.Count -1].SetActive(true);
+
+			if (currentIndex != -1)
+				buttonObjList[currentIndex].ShowChat (false);
+		}
+	}
+
 	public void OnSettings()
 	{
 		settingsEvent?.Raise();
@@ -33,7 +54,7 @@ public class PuckTerminal : MonoBehaviour
 	{
 		if (index >= 0 && index < buttonObjList.Count)
 		{
-			if (currentIndex != index && buttonObjList[index].available)
+			if (buttonObjList[index].available)
 			{
 				if (currentIndex != -1)
 					buttonObjList[currentIndex].ShowChat (false);
@@ -44,6 +65,8 @@ public class PuckTerminal : MonoBehaviour
 		}
 		else
 			Debug.LogError ("Invalid Error!");
+
+		HideAboutPages();
 	}
 
 	public void SetChatVisible (int index, bool val)
@@ -77,10 +100,20 @@ public class PuckTerminal : MonoBehaviour
 	private void OnEnable()
 	{
 		Cursor.lockState = CursorLockMode.Confined;
+		SetActiveChat (currentIndex);
 	}
 
 	private void OnDisable()
 	{
 		Cursor.lockState = CursorLockMode.Locked;
+	}
+
+	private void HideAboutPages()
+	{
+		foreach (GameObject i in aboutObjList)
+		{
+			if (i.activeInHierarchy)
+				i.SetActive (false);
+		}
 	}
 }
