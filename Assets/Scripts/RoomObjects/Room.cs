@@ -593,6 +593,7 @@ public class Room : PushdownAutomata
 			if (!audioPlayed)
 			{
 				audioSource = audioDying?.Play();
+				room.PushState (room.fadeOutIceState);
 				audioPlayed = true;
 			}
 			else if (audioSource == null)

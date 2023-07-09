@@ -12,9 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6f7490679cbb0ec49b5d45a66e74b10e, type: 3}
   m_Name: VL_PuckPlayerTrapped
   m_EditorClassIdentifier: 
-  audioClips:
-  - {fileID: 8300000, guid: 56341df397293984d9f053fb3f122e40, type: 3}
-  subtitle: 'P.U.C.K: "Gotcha"'
+  clipData: []
   playStyle: 0
   audioTyp: 4
   loop: 0
