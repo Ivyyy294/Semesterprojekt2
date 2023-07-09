@@ -11,6 +11,7 @@ public class DateTimeUi : MonoBehaviour
 	[SerializeField] TextMeshProUGUI timeTxt;
 
 	public static void SetDate(string val) { date = val;}
+	public static void SetTime (string val) {time = val;}
 
     // Start is called before the first frame update
     void Start()

@@ -429,7 +429,8 @@ public class Room : PushdownAutomata
 			base.Enter(obj);
 			Player.Me().Lock();
 
-			DateTimeUi.SetDate ("2605.01.01");
+			DateTimeUi.SetDate ("2605.02.01");
+			DateTimeUi.SetTime ("6:47PM");
 			Puck.SetEmotion(Puck.Emotion.HAPPY);
 			
 			//Disables Intro for Testing
@@ -503,7 +504,8 @@ public class Room : PushdownAutomata
 			barikaden.SetActive(true);
 			volume.enabled = false;
 			timer = 0f;
-			DateTimeUi.SetDate ("2605.02.01");
+			DateTimeUi.SetDate ("2605.03.01");
+			DateTimeUi.SetTime ("10:31PM");
 			room.PushState (room.wakeUpBed);
 		}
 
