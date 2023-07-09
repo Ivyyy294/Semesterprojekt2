@@ -8524,6 +8524,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: ImageIceEffect
       objectReference: {fileID: 0}
+    - target: {fileID: 2133166798189986279, guid: 9af4ae5ec8d373047809bf6e727e4809, type: 3}
+      propertyPath: creditEvent
+      value: 
+      objectReference: {fileID: 11400000, guid: adc27c0f6f18f3a4eb6aeb8a6b82e111, type: 2}
     - target: {fileID: 6711429182734714325, guid: 9af4ae5ec8d373047809bf6e727e4809, type: 3}
       propertyPath: m_RootOrder
       value: 3
@@ -8568,6 +8572,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6949384592199667041, guid: 9af4ae5ec8d373047809bf6e727e4809, type: 3}
+      propertyPath: creditEvent
+      value: 
+      objectReference: {fileID: 11400000, guid: adc27c0f6f18f3a4eb6aeb8a6b82e111, type: 2}
     - target: {fileID: 8561791113154889879, guid: 9af4ae5ec8d373047809bf6e727e4809, type: 3}
       propertyPath: m_Name
       value: ----------------UI----------------
