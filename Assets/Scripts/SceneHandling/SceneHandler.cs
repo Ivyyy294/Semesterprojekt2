@@ -33,6 +33,7 @@ public class SceneHandler : MonoBehaviour
 
 	public void NewGame ()
 	{
+		SaveGameManager.Me().DeleteSaveGame();
 		SwitchScene (indexGameScene);
 	}
 
