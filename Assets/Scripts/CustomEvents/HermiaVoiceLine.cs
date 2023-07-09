@@ -7,8 +7,10 @@ using Ivyyy.GameEvent;
 public class HermiaVoiceLine : MonoBehaviour
 {
 	[SerializeField] string propertyName;
+	[SerializeField] float screamDelay;
 	AudioPlayer audioPlayer;
 	bool active;
+	float timer;
 	int count = 0;
     // Start is called before the first frame update
     void Start()
@@ -16,6 +18,7 @@ public class HermiaVoiceLine : MonoBehaviour
 		count = 0;
 		audioPlayer = GetComponent<AudioPlayer>();
         active = false;
+		timer = 0f;
     }
 
     // Update is called once per frame
@@ -25,6 +28,15 @@ public class HermiaVoiceLine : MonoBehaviour
 		{
 			if (count < audioPlayer.AudioAsset().ClipCount())
 			{
+				if (count > 0)
+				{
+					if (timer < screamDelay)
+					{
+						timer += Time.deltaTime;
+						return;
+					}
+				}
+
 				audioPlayer.Play();
 				count++;
 			}

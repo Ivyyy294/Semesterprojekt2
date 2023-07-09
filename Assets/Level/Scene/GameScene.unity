@@ -393,7 +393,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2565798720408585157, guid: cbc17c2b942c75242850f0bbb7667649, type: 3}
       propertyPath: currentDay
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 2565798720408585157, guid: cbc17c2b942c75242850f0bbb7667649, type: 3}
       propertyPath: lockPlayer
@@ -666,6 +666,10 @@ PrefabInstance:
     - target: {fileID: 4289919757083979123, guid: cbc17c2b942c75242850f0bbb7667649, type: 3}
       propertyPath: loginState.loginUiObj
       value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4314350870883637112, guid: cbc17c2b942c75242850f0bbb7667649, type: 3}
+      propertyPath: screamDelay
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 4549167198485911839, guid: cbc17c2b942c75242850f0bbb7667649, type: 3}
       propertyPath: m_Color.b
