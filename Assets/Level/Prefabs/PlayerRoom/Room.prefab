@@ -5422,7 +5422,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7346002360025772355}
   m_LocalRotation: {x: 0.217389, y: -0.6666355, z: -0.6900331, w: 0.17942579}
-  m_LocalPosition: {x: 0.10817, y: -0.01605, z: -0.04343}
+  m_LocalPosition: {x: 0.10817, y: -0.01605, z: -0.04197}
   m_LocalScale: {x: 1.2121, y: 1.2121, z: 1.6666375}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -6504,7 +6504,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8776527588226143685}
   m_LocalRotation: {x: 0.34857693, y: -0.60451, z: -0.6454745, w: 0.31052288}
-  m_LocalPosition: {x: 0.1078, y: -0.01625, z: -0.04455}
+  m_LocalPosition: {x: 0.1078, y: -0.01625, z: -0.04309}
   m_LocalScale: {x: 1.2121, y: 1.2121, z: 1.580942}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -6624,7 +6624,6 @@ MonoBehaviour:
     nameProgressProperty: ProgressDay2
     checkValue: 3
     terminalUI: {fileID: 0}
-    terminalObj: {fileID: 4289919757083979123}
     cryoDoor: {fileID: 6334317424693014758}
     areaEvent: {fileID: 7391030597412054424}
     GoodMorningEvent: {fileID: 5315236914859162486}
