@@ -907,6 +907,10 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: OnClose
       objectReference: {fileID: 0}
+    - target: {fileID: 3724443684762107483, guid: d88555def720e4c4e94da3f020e93b93, type: 3}
+      propertyPath: chatScreen
+      value: 
+      objectReference: {fileID: 6764531142681712382}
     - target: {fileID: 4727209155806869273, guid: d88555def720e4c4e94da3f020e93b93, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -1175,6 +1179,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 00b3cce10fb5d434ebc2973785e8be3f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &6764531142681712382 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3334679440050363336, guid: d88555def720e4c4e94da3f020e93b93, type: 3}
+  m_PrefabInstance: {fileID: 8333726889094696246}
+  m_PrefabAsset: {fileID: 0}
 --- !u!114 &7705092116219187621 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 1822449350462413971, guid: d88555def720e4c4e94da3f020e93b93, type: 3}

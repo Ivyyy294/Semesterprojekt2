@@ -12,7 +12,6 @@ public class PuckTerminal : MonoBehaviour
 	[SerializeField] Ivyyy.GameEvent.GameEvent settingsEvent;
 	
 	[SerializeField] GameObject loginScreen;
-	[SerializeField] GameObject chatScreen;
 
 	[SerializeField] GameObject buttonContainer;
 	[SerializeField] GameObject chatContainer;
@@ -20,12 +19,17 @@ public class PuckTerminal : MonoBehaviour
 	[SerializeField] List <GameObject> aboutObjList;
 
 	int currentIndex = -1;
-	bool passwordAvailable = true;
 
 	//private List <Chat> chatObjList = new List<Chat>();
 
 	//Public Values
-	public void SetPasswordAvailable(bool val) { passwordAvailable = val;}
+	public void SetPasswordAvailable(bool val)
+	{
+		PasswordScreen passwordScreen = loginScreen.GetComponentInChildren<PasswordScreen>();
+
+		if (passwordScreen != null)
+			passwordScreen.SetPasswordAvailable (val);
+	}
 
 	public void ShowAboutPage()
 	{
@@ -108,8 +112,7 @@ public class PuckTerminal : MonoBehaviour
 	{
 		Cursor.lockState = CursorLockMode.Confined;
 
-		loginScreen.SetActive (!passwordAvailable);
-		chatScreen.SetActive (passwordAvailable);
+		loginScreen.SetActive (true);
 
 		SetActiveChat (currentIndex);
 	}
