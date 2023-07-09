@@ -1560,10 +1560,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 34531bd092c9d0d44b6f77671f63e9aa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fadeTime: 5
+  fadeTime: 60
   eventCredits: {fileID: 11400000, guid: adc27c0f6f18f3a4eb6aeb8a6b82e111, type: 2}
   img: {fileID: 8887352609928016420}
-  audioAsset: {fileID: 11400000, guid: 8520d7d2311fb4e44a768b74c616cb46, type: 2}
+  audioAsset: {fileID: 11400000, guid: be9fa2857386865419a9e8af0d6a0b48, type: 2}
 --- !u!1 &2588207167525225096
 GameObject:
   m_ObjectHideFlags: 0
