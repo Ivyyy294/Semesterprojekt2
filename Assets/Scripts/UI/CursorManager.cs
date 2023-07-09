@@ -17,15 +17,22 @@ public class CursorManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        Cursor.SetCursor (normal.texture, normal.hotspot, CursorMode.Auto);
+        Cursor.SetCursor (normal.texture, normal.hotspot, CursorMode.ForceSoftware);
     }
 
     // Update is called once per frame
     void Update()
     {
-		if (CursorHoverHandler.IsHovering)
-			Cursor.SetCursor (hover.texture, hover.hotspot, CursorMode.Auto);
-		else	
-			Cursor.SetCursor (normal.texture, normal.hotspot, CursorMode.Auto);
+		if (Cursor.lockState == CursorLockMode.Locked)
+			Cursor.visible = false;
+		else
+		{
+			Cursor.visible = true;
+
+			if (CursorHoverHandler.IsHovering)
+				Cursor.SetCursor (hover.texture, hover.hotspot, CursorMode.ForceSoftware);
+			else	
+				Cursor.SetCursor (normal.texture, normal.hotspot, CursorMode.ForceSoftware);
+		}
 }
 }

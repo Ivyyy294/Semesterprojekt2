@@ -14,6 +14,7 @@ public class CutSceneEvent : MonoBehaviour
 	{
 		timer = 0f;
 		videoPlayer.Play();
+		Cursor.lockState = CursorLockMode.Locked;
 	}
 
 	// Update is called once per frame

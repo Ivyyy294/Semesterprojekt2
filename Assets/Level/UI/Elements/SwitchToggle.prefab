@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 4944137410060214685}
   - component: {fileID: 4944137410060214682}
   - component: {fileID: 4944137410060214681}
+  - component: {fileID: 601812841858882952}
   m_Layer: 5
   m_Name: SwitchToggle
   m_TagString: Untagged
@@ -123,3 +124,15 @@ MonoBehaviour:
   offSprite: {fileID: 21300000, guid: 9ae2ca6793ddfc14aba68a8db845f621, type: 3}
   onSprite: {fileID: 21300000, guid: fedabca430974e1489cf5d96669524b5, type: 3}
   active: 0
+--- !u!114 &601812841858882952
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4944137410060214687}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b8de194883e4b024c892b28f3ced8888, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
