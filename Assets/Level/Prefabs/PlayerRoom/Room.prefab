@@ -6768,7 +6768,7 @@ MonoBehaviour:
     txt2: {fileID: 9130863036426076336}
     delayTxt2: 14
     txt3: {fileID: 8979990500042967346}
-    delayTxt3: 35
+    delayTxt3: 36
     audioAsset: {fileID: 11400000, guid: d08606137a8f84f4c8eae318e4df215b, type: 2}
     delayTotal: 54
   closeCryoDoor:
