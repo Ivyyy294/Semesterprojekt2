@@ -6,12 +6,22 @@ using UnityEngine.Video;
 
 public class CutSceneEvent : MonoBehaviour
 {
+	[System.Serializable]
+	struct SubtitleData
+	{
+		public string text;
+		public float timeStamp;
+	}
+
 	[SerializeField] VideoPlayer videoPlayer;
 	[SerializeField] GameEvent creditEvent;
+	[SerializeField] SubtitleData[] subtitles;
+	int currentIndex;
 	float timer;
 
 	private void OnEnable()
 	{
+		currentIndex = 0;
 		timer = 0f;
 		videoPlayer.Play();
 		Cursor.lockState = CursorLockMode.Locked;
@@ -21,7 +31,15 @@ public class CutSceneEvent : MonoBehaviour
 	void Update()
     {
 		if (timer < videoPlayer.length)
+		{
+			if (currentIndex < subtitles.Length)
+			{
+				if (timer >= subtitles[currentIndex].timeStamp)
+					Subtitle.Add (subtitles[currentIndex++].text, (float)videoPlayer.length - timer, 3);
+			}
+
 			timer += Time.deltaTime;
+		}
 		else if (!videoPlayer.isPlaying)
 		{
 			creditEvent.Raise();

@@ -66,7 +66,11 @@ public class Subtitle : MonoBehaviour
 			{
 				if (current.timer == 0f)
 				{
-					textObj.SetText ("[" + current.text + "]");
+					if (string.IsNullOrEmpty(current.text))
+						textObj.SetText ("");
+					else
+						textObj.SetText ("[" + current.text + "]");
+
 					Canvas.ForceUpdateCanvases();
 				}
 				
