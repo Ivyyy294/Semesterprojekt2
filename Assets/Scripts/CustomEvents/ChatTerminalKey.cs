@@ -12,6 +12,6 @@ public class ChatTerminalKey : MonoBehaviour, InteractableObject
 	{
 		chatTerminal.SetPasswordAvailable (true);
 		audioAsset?.PlayAtPos(transform.position);
-		enabled = false;
+		gameObject.SetActive(false);
 	}
 }
