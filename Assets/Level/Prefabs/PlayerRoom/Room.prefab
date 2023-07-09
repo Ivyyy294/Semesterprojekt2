@@ -5284,6 +5284,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   propertyName: HermiaVentEvent2Done
+  screamDelay: 0
 --- !u!114 &5931198013818141964
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10241,6 +10242,10 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 9d31bce4c7c9c4040b17c8556949376c, type: 2}
+    - target: {fileID: 5150695675720433687, guid: 1845ae128d06a764897a8c5c0b1bf043, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: c9fe7b3f39da5c14e8d4a37d908a6b58, type: 2}
     - target: {fileID: 8623198112624618033, guid: 1845ae128d06a764897a8c5c0b1bf043, type: 3}
       propertyPath: m_RootOrder
       value: 8
