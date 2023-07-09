@@ -225,6 +225,7 @@ GameObject:
   - component: {fileID: 7173554934744272386}
   - component: {fileID: 7173554934744272397}
   - component: {fileID: 9131991483213516637}
+  - component: {fileID: 8732778134257111488}
   m_Layer: 5
   m_Name: Chat_Button
   m_TagString: Untagged
@@ -361,11 +362,24 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   available: 1
-  dialogContainer: {fileID: 0}
   notificationIcon: {fileID: 5336641413158940894}
   notificationText: {fileID: 7452938309906247140}
   chat: {fileID: 0}
+  ChatNameObj: {fileID: 0}
+  chatName: 
   button: {fileID: 0}
+--- !u!114 &8732778134257111488
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7173554934744272399}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b8de194883e4b024c892b28f3ced8888, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &7557341466592015104
 GameObject:
   m_ObjectHideFlags: 0

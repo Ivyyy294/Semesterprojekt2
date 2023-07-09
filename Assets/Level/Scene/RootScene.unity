@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.011169667, g: 0.009825831, b: 0.004062463, a: 1}
+  m_IndirectSpecularColor: {r: 0.001057132, g: 0.0005999049, b: 0.0029255406, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -554,6 +554,7 @@ GameObject:
   - component: {fileID: 1816072818}
   - component: {fileID: 1816072820}
   - component: {fileID: 1816072819}
+  - component: {fileID: 1816072821}
   m_Layer: 0
   m_Name: SceneHandler
   m_TagString: Untagged
@@ -619,6 +620,24 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   uniqueId: ddb58425-f92a-4469-949e-d9319628bc8b
+--- !u!114 &1816072821
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1816072816}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e669b63adbf19df4993fa9a1ecd0c11c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  normal:
+    texture: {fileID: 2800000, guid: c0085d3b913f8e6489c4a0ce6715e5ac, type: 3}
+    hotspot: {x: 0, y: 0}
+  hover:
+    texture: {fileID: 2800000, guid: 9b8a3b0d13a32104b85e977c0b67bad2, type: 3}
+    hotspot: {x: 16, y: 0}
 --- !u!1 &1824786475
 GameObject:
   m_ObjectHideFlags: 0
