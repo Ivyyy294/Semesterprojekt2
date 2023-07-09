@@ -283,15 +283,6 @@ MonoBehaviour:
   - baseNodeGuid: 93a45000-3637-4788-b4ae-4c99541353f4
     portName: Next
     targetNodeGuid: c3f91666-760e-4852-80c3-a907cb01ea1b
-  - baseNodeGuid: c3f91666-760e-4852-80c3-a907cb01ea1b
-    portName: Thank you, really.
-    targetNodeGuid: 07712749-a6da-4b6b-8c95-e06635aafee4
-  - baseNodeGuid: c3f91666-760e-4852-80c3-a907cb01ea1b
-    portName: What are you planning?
-    targetNodeGuid: 07712749-a6da-4b6b-8c95-e06635aafee4
-  - baseNodeGuid: c3f91666-760e-4852-80c3-a907cb01ea1b
-    portName: Please don't do anything stupid
-    targetNodeGuid: 07712749-a6da-4b6b-8c95-e06635aafee4
   - baseNodeGuid: 07712749-a6da-4b6b-8c95-e06635aafee4
     portName: Next
     targetNodeGuid: 1ac903dd-7b2c-4528-b6db-37ba5e339569
@@ -379,9 +370,6 @@ MonoBehaviour:
   - baseNodeGuid: 4f1cf42e-dc58-4e83-8a64-28e3768cbfa7
     portName: Are you there?
     targetNodeGuid: 6172c060-f358-4d7b-a0b9-60615ea0baf1
-  - baseNodeGuid: 6172c060-f358-4d7b-a0b9-60615ea0baf1
-    portName: Next
-    targetNodeGuid: 07bf4c2b-116b-48fc-94c8-066846989644
   - baseNodeGuid: 07bf4c2b-116b-48fc-94c8-066846989644
     portName: Next
     targetNodeGuid: ce1fa696-0429-42f7-bbfe-a5d2ee317e35
@@ -394,12 +382,6 @@ MonoBehaviour:
   - baseNodeGuid: b8fc0dca-bf7d-4657-af4a-cdefc01868c8
     portName: Maybe we should
     targetNodeGuid: 723c208d-3d15-4b6e-b8a6-5652f68948b9
-  - baseNodeGuid: a228d515-5d83-4133-92c4-132023b257d2
-    portName: Next
-    targetNodeGuid: b9828287-aef2-4963-8487-0971728747db
-  - baseNodeGuid: b9828287-aef2-4963-8487-0971728747db
-    portName: Next
-    targetNodeGuid: b57d1d65-c313-4dd2-958b-71384b1a5748
   - baseNodeGuid: b57d1d65-c313-4dd2-958b-71384b1a5748
     portName: Next
     targetNodeGuid: 132836de-77e8-4035-8201-66322430d24b
@@ -509,7 +491,7 @@ MonoBehaviour:
     portName: Take care Hermia
     targetNodeGuid: ba4782a1-25fb-404a-be27-262cdd5a82b5
   - baseNodeGuid: a5f6f2f2-6d57-48ae-976e-e48eb9f7635e
-    portName: PLACEHOLDER
+    portName: Sweet dreams mia<3
     targetNodeGuid: 97f05b06-b900-4ed0-9790-82705a056e5c
   - baseNodeGuid: 56b01e8f-1134-48d1-9c06-bf4c0f004d6f
     portName: Next
@@ -524,7 +506,7 @@ MonoBehaviour:
     portName: Next
     targetNodeGuid: b621a5a6-e5ae-4980-9c6b-92928de43212
   - baseNodeGuid: b621a5a6-e5ae-4980-9c6b-92928de43212
-    portName: You're sweet.
+    portName: Hermia look..
     targetNodeGuid: 17a8a397-0f52-4c63-899f-dea031f731ed
   - baseNodeGuid: 17a8a397-0f52-4c63-899f-dea031f731ed
     portName: Next
@@ -556,20 +538,14 @@ MonoBehaviour:
   - baseNodeGuid: bd803b9e-fa21-473e-881c-ee87bd0fc75f
     portName: Next
     targetNodeGuid: 9cf60630-c092-49a1-bd72-f93e2f819731
-  - baseNodeGuid: 9cf60630-c092-49a1-bd72-f93e2f819731
-    portName: Next
-    targetNodeGuid: 8e9db9c8-af01-418a-88cc-d0e8a79a1803
   - baseNodeGuid: 8e9db9c8-af01-418a-88cc-d0e8a79a1803
     portName: Next
     targetNodeGuid: c647b1d0-b8c6-4d8a-aa4c-3a4a2bdc5189
   - baseNodeGuid: c647b1d0-b8c6-4d8a-aa4c-3a4a2bdc5189
-    portName: But...
+    portName: But
     targetNodeGuid: 15df4ffb-3545-4f44-a20d-43d2cb3351a5
   - baseNodeGuid: c647b1d0-b8c6-4d8a-aa4c-3a4a2bdc5189
     portName: Just the two of us?
-    targetNodeGuid: 9f0f5ad1-dfad-4010-a740-98915f527aed
-  - baseNodeGuid: 15df4ffb-3545-4f44-a20d-43d2cb3351a5
-    portName: Next
     targetNodeGuid: 9f0f5ad1-dfad-4010-a740-98915f527aed
   - baseNodeGuid: 9f0f5ad1-dfad-4010-a740-98915f527aed
     portName: Next
@@ -580,9 +556,6 @@ MonoBehaviour:
   - baseNodeGuid: e22f3bb0-528c-4060-bfe2-9c2e593252a7
     portName: Next
     targetNodeGuid: 40deac86-0316-474f-bf26-3bb2b1710254
-  - baseNodeGuid: 40deac86-0316-474f-bf26-3bb2b1710254
-    portName: Next
-    targetNodeGuid: c9441406-1798-4fd2-b947-a509990b13bd
   - baseNodeGuid: c9441406-1798-4fd2-b947-a509990b13bd
     portName: Hermia I really mean it!
     targetNodeGuid: 02fe6ecb-fc0b-416a-901f-b914b50ae038
@@ -601,6 +574,66 @@ MonoBehaviour:
   - baseNodeGuid: 1b6d9196-6f83-4aa3-b0bf-254aa882d369
     portName: Next
     targetNodeGuid: 02bc3bb5-e552-4ae6-bb88-459f7f343660
+  - baseNodeGuid: b621a5a6-e5ae-4980-9c6b-92928de43212
+    portName: You're sweet :)
+    targetNodeGuid: 17a8a397-0f52-4c63-899f-dea031f731ed
+  - baseNodeGuid: 9cf60630-c092-49a1-bd72-f93e2f819731
+    portName: Next
+    targetNodeGuid: 27d1b4ad-30d7-47ca-9920-5498ece3932a
+  - baseNodeGuid: 27d1b4ad-30d7-47ca-9920-5498ece3932a
+    portName: Next
+    targetNodeGuid: 8e9db9c8-af01-418a-88cc-d0e8a79a1803
+  - baseNodeGuid: 15df4ffb-3545-4f44-a20d-43d2cb3351a5
+    portName: Next
+    targetNodeGuid: f17302cc-d571-44a3-ae1e-2b6ef7188ea4
+  - baseNodeGuid: f17302cc-d571-44a3-ae1e-2b6ef7188ea4
+    portName: Next
+    targetNodeGuid: 6bf33f23-a85a-45e2-ada8-8155f4d0beb4
+  - baseNodeGuid: 6bf33f23-a85a-45e2-ada8-8155f4d0beb4
+    portName: Next
+    targetNodeGuid: 9f0f5ad1-dfad-4010-a740-98915f527aed
+  - baseNodeGuid: 40deac86-0316-474f-bf26-3bb2b1710254
+    portName: Next
+    targetNodeGuid: 090e4362-57bf-40bd-b5b0-db1b6b2e6fbb
+  - baseNodeGuid: 090e4362-57bf-40bd-b5b0-db1b6b2e6fbb
+    portName: Next
+    targetNodeGuid: c9441406-1798-4fd2-b947-a509990b13bd
+  - baseNodeGuid: c3f91666-760e-4852-80c3-a907cb01ea1b
+    portName: Thank you, really.
+    targetNodeGuid: 4f63dc52-9ccf-49b4-9585-6670dcba1298
+  - baseNodeGuid: c3f91666-760e-4852-80c3-a907cb01ea1b
+    portName: What are you planning?
+    targetNodeGuid: 4f63dc52-9ccf-49b4-9585-6670dcba1298
+  - baseNodeGuid: c3f91666-760e-4852-80c3-a907cb01ea1b
+    portName: Please don't do anything stupid
+    targetNodeGuid: 4f63dc52-9ccf-49b4-9585-6670dcba1298
+  - baseNodeGuid: 4f63dc52-9ccf-49b4-9585-6670dcba1298
+    portName: False
+    targetNodeGuid: 07712749-a6da-4b6b-8c95-e06635aafee4
+  - baseNodeGuid: 4f63dc52-9ccf-49b4-9585-6670dcba1298
+    portName: True
+    targetNodeGuid: 6ce38a55-577b-404c-a809-f83393d4e5ca
+  - baseNodeGuid: 6ce38a55-577b-404c-a809-f83393d4e5ca
+    portName: Next
+    targetNodeGuid: 07712749-a6da-4b6b-8c95-e06635aafee4
+  - baseNodeGuid: 6172c060-f358-4d7b-a0b9-60615ea0baf1
+    portName: Next
+    targetNodeGuid: d90c6d61-6e90-4f67-9586-31a80e6fcca7
+  - baseNodeGuid: d90c6d61-6e90-4f67-9586-31a80e6fcca7
+    portName: False
+    targetNodeGuid: 07bf4c2b-116b-48fc-94c8-066846989644
+  - baseNodeGuid: d90c6d61-6e90-4f67-9586-31a80e6fcca7
+    portName: True
+    targetNodeGuid: 64a49a8b-3d9e-4407-8ea3-a548a6ae7213
+  - baseNodeGuid: 64a49a8b-3d9e-4407-8ea3-a548a6ae7213
+    portName: Next
+    targetNodeGuid: 41edb955-9b98-40fc-8a59-7bd077348159
+  - baseNodeGuid: 41edb955-9b98-40fc-8a59-7bd077348159
+    portName: Next
+    targetNodeGuid: b8fc0dca-bf7d-4657-af4a-cdefc01868c8
+  - baseNodeGuid: a228d515-5d83-4133-92c4-132023b257d2
+    portName: Next
+    targetNodeGuid: b57d1d65-c313-4dd2-958b-71384b1a5748
   dialogNodeData:
   - Guid: 30f60bfd-356c-4186-b199-f29e35efb023
     DialogTitle: START
@@ -1644,54 +1677,6 @@ MonoBehaviour:
     audioAsset: {fileID: 0}
     emotion: 12
     editTyp: 0
-  - Guid: c3f91666-760e-4852-80c3-a907cb01ea1b
-    DialogTitle: ChoiceNode
-    Position: {x: 13157, y: 826}
-    Type: 0
-    DialogText: hello world
-    Image: {fileID: 0}
-    customRespondTime: 0
-    GameEvent: {fileID: 0}
-    BlackBoardProperty:
-      name: 
-      guid: 
-      comparisonTyp: 0
-      iVal: 0
-    audioAsset: {fileID: 0}
-    emotion: 12
-    editTyp: 0
-  - Guid: 07712749-a6da-4b6b-8c95-e06635aafee4
-    DialogTitle: Wait for other Dialogs to finish
-    Position: {x: 13580, y: 836}
-    Type: 5
-    DialogText: 
-    Image: {fileID: 0}
-    customRespondTime: 0
-    GameEvent: {fileID: 0}
-    BlackBoardProperty:
-      name: HermiaVentCheck
-      guid: 67859645-0ebf-4b10-b1c9-f3cc5978b53f
-      comparisonTyp: 0
-      iVal: 2
-    audioAsset: {fileID: 0}
-    emotion: 12
-    editTyp: 0
-  - Guid: 1ac903dd-7b2c-4528-b6db-37ba5e339569
-    DialogTitle: Hermia E-Vent
-    Position: {x: 13989, y: 836}
-    Type: 2
-    DialogText: 
-    Image: {fileID: 0}
-    customRespondTime: 0
-    GameEvent: {fileID: 11400000, guid: 351995de68ecef44e912202873a86e20, type: 2}
-    BlackBoardProperty:
-      name: 
-      guid: 
-      comparisonTyp: 0
-      iVal: 0
-    audioAsset: {fileID: 0}
-    emotion: 12
-    editTyp: 0
   - Guid: 59bf8b86-470d-43ad-a780-0434356224c7
     DialogTitle: ChoiceNode
     Position: {x: 10156, y: 342}
@@ -1965,22 +1950,6 @@ MonoBehaviour:
     audioAsset: {fileID: 0}
     emotion: 12
     editTyp: 0
-  - Guid: 335ea569-dc57-4f6d-a17d-f5a82d5a3760
-    DialogTitle: Wait for Demetrius or Hermia
-    Position: {x: 14393, y: 836}
-    Type: 5
-    DialogText: 
-    Image: {fileID: 0}
-    customRespondTime: 0
-    GameEvent: {fileID: 0}
-    BlackBoardProperty:
-      name: TimeAfterVent1
-      guid: 5e611ef1-6150-4427-ac09-7e04dd3d5b9e
-      comparisonTyp: 1
-      iVal: 0
-    audioAsset: {fileID: 0}
-    emotion: 12
-    editTyp: 0
   - Guid: fce12329-ec1d-4d4d-a713-4690c8845612
     DialogTitle: Wait for day 3 to begin
     Position: {x: 402, y: 1748}
@@ -2034,246 +2003,6 @@ MonoBehaviour:
     Position: {x: 10240, y: -26}
     Type: 0
     DialogText: hello world
-    Image: {fileID: 0}
-    customRespondTime: 0
-    GameEvent: {fileID: 0}
-    BlackBoardProperty:
-      name: 
-      guid: 
-      comparisonTyp: 0
-      iVal: 0
-    audioAsset: {fileID: 0}
-    emotion: 12
-    editTyp: 0
-  - Guid: 4f1cf42e-dc58-4e83-8a64-28e3768cbfa7
-    DialogTitle: ChoiceNode
-    Position: {x: 14774, y: 836}
-    Type: 0
-    DialogText: hello world
-    Image: {fileID: 0}
-    customRespondTime: 0
-    GameEvent: {fileID: 0}
-    BlackBoardProperty:
-      name: 
-      guid: 
-      comparisonTyp: 0
-      iVal: 0
-    audioAsset: {fileID: 0}
-    emotion: 12
-    editTyp: 0
-  - Guid: 6172c060-f358-4d7b-a0b9-60615ea0baf1
-    DialogTitle: NpcNode
-    Position: {x: 15091, y: 836}
-    Type: 1
-    DialogText: Yep!
-    Image: {fileID: 0}
-    customRespondTime: 0
-    GameEvent: {fileID: 0}
-    BlackBoardProperty:
-      name: 
-      guid: 
-      comparisonTyp: 0
-      iVal: 0
-    audioAsset: {fileID: 0}
-    emotion: 12
-    editTyp: 0
-  - Guid: 07bf4c2b-116b-48fc-94c8-066846989644
-    DialogTitle: NpcNode
-    Position: {x: 15348, y: 836}
-    Type: 1
-    DialogText: We should definitely keep quiet about your love problem with Demetrius
-    Image: {fileID: 0}
-    customRespondTime: 0
-    GameEvent: {fileID: 0}
-    BlackBoardProperty:
-      name: 
-      guid: 
-      comparisonTyp: 0
-      iVal: 0
-    audioAsset: {fileID: 0}
-    emotion: 12
-    editTyp: 0
-  - Guid: ce1fa696-0429-42f7-bbfe-a5d2ee317e35
-    DialogTitle: NpcNode
-    Position: {x: 15634, y: 836}
-    Type: 1
-    DialogText: We don't want anyone to find out, no?
-    Image: {fileID: 0}
-    customRespondTime: 0
-    GameEvent: {fileID: 0}
-    BlackBoardProperty:
-      name: 
-      guid: 
-      comparisonTyp: 0
-      iVal: 0
-    audioAsset: {fileID: 0}
-    emotion: 12
-    editTyp: 0
-  - Guid: b8fc0dca-bf7d-4657-af4a-cdefc01868c8
-    DialogTitle: ChoiceNode
-    Position: {x: 15891, y: 836}
-    Type: 0
-    DialogText: hello world
-    Image: {fileID: 0}
-    customRespondTime: 0
-    GameEvent: {fileID: 0}
-    BlackBoardProperty:
-      name: 
-      guid: 
-      comparisonTyp: 0
-      iVal: 0
-    audioAsset: {fileID: 0}
-    emotion: 12
-    editTyp: 0
-  - Guid: a228d515-5d83-4133-92c4-132023b257d2
-    DialogTitle: NpcNode
-    Position: {x: 16228, y: 694}
-    Type: 1
-    DialogText: Good
-    Image: {fileID: 0}
-    customRespondTime: 0
-    GameEvent: {fileID: 0}
-    BlackBoardProperty:
-      name: 
-      guid: 
-      comparisonTyp: 0
-      iVal: 0
-    audioAsset: {fileID: 0}
-    emotion: 12
-    editTyp: 0
-  - Guid: b9828287-aef2-4963-8487-0971728747db
-    DialogTitle: NpcNode
-    Position: {x: 16480, y: 694}
-    Type: 1
-    DialogText: And besides, we have other ways of dealing with it
-    Image: {fileID: 0}
-    customRespondTime: 0
-    GameEvent: {fileID: 0}
-    BlackBoardProperty:
-      name: 
-      guid: 
-      comparisonTyp: 0
-      iVal: 0
-    audioAsset: {fileID: 0}
-    emotion: 12
-    editTyp: 0
-  - Guid: b57d1d65-c313-4dd2-958b-71384b1a5748
-    DialogTitle: NpcNode
-    Position: {x: 16766, y: 694}
-    Type: 1
-    DialogText: I will do some research
-    Image: {fileID: 0}
-    customRespondTime: 0
-    GameEvent: {fileID: 0}
-    BlackBoardProperty:
-      name: 
-      guid: 
-      comparisonTyp: 0
-      iVal: 0
-    audioAsset: {fileID: 0}
-    emotion: 12
-    editTyp: 0
-  - Guid: 132836de-77e8-4035-8201-66322430d24b
-    DialogTitle: NpcNode
-    Position: {x: 17020, y: 694}
-    Type: 1
-    DialogText: You try not to get into trouble ;)
-    Image: {fileID: 0}
-    customRespondTime: 0
-    GameEvent: {fileID: 0}
-    BlackBoardProperty:
-      name: 
-      guid: 
-      comparisonTyp: 0
-      iVal: 0
-    audioAsset: {fileID: 0}
-    emotion: 12
-    editTyp: 0
-  - Guid: 723c208d-3d15-4b6e-b8a6-5652f68948b9
-    DialogTitle: NpcNode
-    Position: {x: 16228, y: 937}
-    Type: 1
-    DialogText: I think we should wait after we arrived on Titania
-    Image: {fileID: 0}
-    customRespondTime: 0
-    GameEvent: {fileID: 0}
-    BlackBoardProperty:
-      name: 
-      guid: 
-      comparisonTyp: 0
-      iVal: 0
-    audioAsset: {fileID: 0}
-    emotion: 12
-    editTyp: 0
-  - Guid: 25eb7940-4458-45c9-8dc7-a4d6da87083c
-    DialogTitle: ChoiceNode
-    Position: {x: 16534, y: 937}
-    Type: 0
-    DialogText: hello world
-    Image: {fileID: 0}
-    customRespondTime: 0
-    GameEvent: {fileID: 0}
-    BlackBoardProperty:
-      name: 
-      guid: 
-      comparisonTyp: 0
-      iVal: 0
-    audioAsset: {fileID: 0}
-    emotion: 12
-    editTyp: 0
-  - Guid: c237ecfc-c546-42b9-b8da-a3565334842f
-    DialogTitle: NpcNode
-    Position: {x: 16882, y: 1069}
-    Type: 1
-    DialogText: I feel like we could make him angry
-    Image: {fileID: 0}
-    customRespondTime: 0
-    GameEvent: {fileID: 0}
-    BlackBoardProperty:
-      name: 
-      guid: 
-      comparisonTyp: 0
-      iVal: 0
-    audioAsset: {fileID: 0}
-    emotion: 12
-    editTyp: 0
-  - Guid: 67d600e2-ad3a-4f3d-866c-e228ac0d1c9b
-    DialogTitle: ChoiceNode
-    Position: {x: 17133, y: 1069}
-    Type: 0
-    DialogText: hello world
-    Image: {fileID: 0}
-    customRespondTime: 0
-    GameEvent: {fileID: 0}
-    BlackBoardProperty:
-      name: 
-      guid: 
-      comparisonTyp: 0
-      iVal: 0
-    audioAsset: {fileID: 0}
-    emotion: 12
-    editTyp: 0
-  - Guid: 8a3751f8-8965-45e7-a23e-26fbf5f72a07
-    DialogTitle: NpcNode
-    Position: {x: 17474, y: 1201}
-    Type: 1
-    DialogText: We have other ways of dealing with it
-    Image: {fileID: 0}
-    customRespondTime: 0
-    GameEvent: {fileID: 0}
-    BlackBoardProperty:
-      name: 
-      guid: 
-      comparisonTyp: 0
-      iVal: 0
-    audioAsset: {fileID: 0}
-    emotion: 12
-    editTyp: 0
-  - Guid: 4d1181e0-2917-49c0-9d50-97a54aa4ec6b
-    DialogTitle: NpcNode
-    Position: {x: 17474, y: 1017}
-    Type: 1
-    DialogText: Please.
     Image: {fileID: 0}
     customRespondTime: 0
     GameEvent: {fileID: 0}
@@ -2509,118 +2238,6 @@ MonoBehaviour:
     audioAsset: {fileID: 0}
     emotion: 12
     editTyp: 0
-  - Guid: b6105834-50d4-4cc7-abcb-446073b3f210
-    DialogTitle: EditValueNode
-    Position: {x: 18777, y: 699}
-    Type: 8
-    DialogText: 
-    Image: {fileID: 0}
-    customRespondTime: 0
-    GameEvent: {fileID: 0}
-    BlackBoardProperty:
-      name: ProgressDay2
-      guid: 20c3be41-b2a7-4954-841a-d5d011a21c09
-      comparisonTyp: 0
-      iVal: 1
-    audioAsset: {fileID: 0}
-    emotion: 12
-    editTyp: 1
-  - Guid: ba4782a1-25fb-404a-be27-262cdd5a82b5
-    DialogTitle: NpcNode
-    Position: {x: 18263, y: 570}
-    Type: 1
-    DialogText: See you on the other side
-    Image: {fileID: 0}
-    customRespondTime: 0
-    GameEvent: {fileID: 0}
-    BlackBoardProperty:
-      name: 
-      guid: 
-      comparisonTyp: 0
-      iVal: 0
-    audioAsset: {fileID: 0}
-    emotion: 12
-    editTyp: 0
-  - Guid: 97f05b06-b900-4ed0-9790-82705a056e5c
-    DialogTitle: NpcNode
-    Position: {x: 18277, y: 354}
-    Type: 1
-    DialogText: PLACEHOLDER
-    Image: {fileID: 0}
-    customRespondTime: 0
-    GameEvent: {fileID: 0}
-    BlackBoardProperty:
-      name: 
-      guid: 
-      comparisonTyp: 0
-      iVal: 0
-    audioAsset: {fileID: 0}
-    emotion: 12
-    editTyp: 0
-  - Guid: 33266793-d996-4f59-a7c6-a0d8103c30c6
-    DialogTitle: ChoiceNode
-    Position: {x: 17270, y: 694}
-    Type: 0
-    DialogText: hello world
-    Image: {fileID: 0}
-    customRespondTime: 0
-    GameEvent: {fileID: 0}
-    BlackBoardProperty:
-      name: 
-      guid: 
-      comparisonTyp: 0
-      iVal: 0
-    audioAsset: {fileID: 0}
-    emotion: 12
-    editTyp: 0
-  - Guid: 16295f8d-8db1-4eaf-822f-50a29106e4b6
-    DialogTitle: ChoiceNode
-    Position: {x: 17856, y: 642}
-    Type: 0
-    DialogText: hello world
-    Image: {fileID: 0}
-    customRespondTime: 0
-    GameEvent: {fileID: 0}
-    BlackBoardProperty:
-      name: 
-      guid: 
-      comparisonTyp: 0
-      iVal: 0
-    audioAsset: {fileID: 0}
-    emotion: 12
-    editTyp: 0
-  - Guid: 5cbd6834-44c0-42b6-8b87-4f80b756591a
-    DialogTitle: LogicNode
-    Position: {x: 17550, y: 477}
-    Type: 4
-    DialogText: 
-    Image: {fileID: 0}
-    customRespondTime: 0
-    GameEvent: {fileID: 0}
-    BlackBoardProperty:
-      name: HermiaLOVE
-      guid: 0353c128-c99b-4828-967c-baad81410aff
-      comparisonTyp: 0
-      iVal: 1
-    audioAsset: {fileID: 0}
-    emotion: 12
-    editTyp: 0
-  - Guid: a5f6f2f2-6d57-48ae-976e-e48eb9f7635e
-    DialogTitle: ChoiceNode
-    Position: {x: 17843, y: 302}
-    Type: 0
-    DialogText: hello world
-    Image: {fileID: 0}
-    customRespondTime: 0
-    GameEvent: {fileID: 0}
-    BlackBoardProperty:
-      name: 
-      guid: 
-      comparisonTyp: 0
-      iVal: 0
-    audioAsset: {fileID: 0}
-    emotion: 12
-    editTyp: 0
   - Guid: 56b01e8f-1134-48d1-9c06-bf4c0f004d6f
     DialogTitle: Love+1
     Position: {x: 6498, y: -1482}
@@ -2643,7 +2260,7 @@ MonoBehaviour:
     Type: 1
     DialogText: wait
     Image: {fileID: 0}
-    customRespondTime: 3
+    customRespondTime: 5
     GameEvent: {fileID: 0}
     BlackBoardProperty:
       name: 
@@ -2685,27 +2302,11 @@ MonoBehaviour:
     audioAsset: {fileID: 0}
     emotion: 12
     editTyp: 0
-  - Guid: b621a5a6-e5ae-4980-9c6b-92928de43212
-    DialogTitle: ChoiceNode
-    Position: {x: 7859, y: -1528}
-    Type: 0
-    DialogText: hello world
-    Image: {fileID: 0}
-    customRespondTime: 0
-    GameEvent: {fileID: 0}
-    BlackBoardProperty:
-      name: 
-      guid: 
-      comparisonTyp: 0
-      iVal: 0
-    audioAsset: {fileID: 0}
-    emotion: 12
-    editTyp: 0
   - Guid: 17a8a397-0f52-4c63-899f-dea031f731ed
     DialogTitle: PlayerAutoNode
     Position: {x: 8173, y: -1528}
     Type: 9
-    DialogText: Look... I really appreciate what you did for me!
+    DialogText: I really appreciate what you did for me!
     Image: {fileID: 0}
     customRespondTime: 0
     GameEvent: {fileID: 0}
@@ -2723,23 +2324,7 @@ MonoBehaviour:
     Type: 1
     DialogText: Awwww! I love you too girl :P
     Image: {fileID: 0}
-    customRespondTime: 0
-    GameEvent: {fileID: 0}
-    BlackBoardProperty:
-      name: 
-      guid: 
-      comparisonTyp: 0
-      iVal: 0
-    audioAsset: {fileID: 0}
-    emotion: 12
-    editTyp: 0
-  - Guid: 74552fb6-2b3b-41bc-a2bc-c71d7dfae3a6
-    DialogTitle: ChoiceNode
-    Position: {x: 8493, y: -1528}
-    Type: 0
-    DialogText: hello world
-    Image: {fileID: 0}
-    customRespondTime: 0
+    customRespondTime: 3
     GameEvent: {fileID: 0}
     BlackBoardProperty:
       name: 
@@ -2753,23 +2338,7 @@ MonoBehaviour:
     DialogTitle: NpcNode
     Position: {x: 8972, y: -1470}
     Type: 1
-    DialogText: I... would be crushed seeing you married with some random guy
-    Image: {fileID: 0}
-    customRespondTime: 0
-    GameEvent: {fileID: 0}
-    BlackBoardProperty:
-      name: 
-      guid: 
-      comparisonTyp: 0
-      iVal: 0
-    audioAsset: {fileID: 0}
-    emotion: 12
-    editTyp: 0
-  - Guid: 914f94b2-e289-4db2-aca9-bade73482570
-    DialogTitle: NpcNode
-    Position: {x: 8987, y: -1281}
-    Type: 1
-    DialogText: Yes of course! Without question!
+    DialogText: I would be crushed seeing you married with some random guy
     Image: {fileID: 0}
     customRespondTime: 0
     GameEvent: {fileID: 0}
@@ -2801,8 +2370,8 @@ MonoBehaviour:
     DialogTitle: PlayerAutoNode
     Position: {x: 9797, y: -1442}
     Type: 9
-    DialogText: "Of all of us, you had the least reason to leave! You left your life
-      behind without hesitation and run away with me\u2026"
+    DialogText: Of all of us, you had the least reason to leave! You left your life
+      behind without hesitation and run away with me!
     Image: {fileID: 0}
     customRespondTime: 0
     GameEvent: {fileID: 0}
@@ -2834,8 +2403,7 @@ MonoBehaviour:
     DialogTitle: NpcNode
     Position: {x: 10815, y: -1448}
     Type: 1
-    DialogText: Now we can finally build our little farm together, like we always
-      dream of since we were kids!
+    DialogText: Now we can finally build our little farm together!
     Image: {fileID: 0}
     customRespondTime: 0
     GameEvent: {fileID: 0}
@@ -2847,25 +2415,9 @@ MonoBehaviour:
     audioAsset: {fileID: 0}
     emotion: 12
     editTyp: 0
-  - Guid: 8e9db9c8-af01-418a-88cc-d0e8a79a1803
-    DialogTitle: NpcNode
-    Position: {x: 11134, y: -1448}
-    Type: 1
-    DialogText: A farm on the moon Helenaaaaa!
-    Image: {fileID: 0}
-    customRespondTime: 0
-    GameEvent: {fileID: 0}
-    BlackBoardProperty:
-      name: 
-      guid: 
-      comparisonTyp: 0
-      iVal: 0
-    audioAsset: {fileID: 0}
-    emotion: 12
-    editTyp: 0
-  - Guid: c647b1d0-b8c6-4d8a-aa4c-3a4a2bdc5189
+  - Guid: b621a5a6-e5ae-4980-9c6b-92928de43212
     DialogTitle: ChoiceNode
-    Position: {x: 11416, y: -1442}
+    Position: {x: 7855, y: -1518}
     Type: 0
     DialogText: hello world
     Image: {fileID: 0}
@@ -2879,11 +2431,11 @@ MonoBehaviour:
     audioAsset: {fileID: 0}
     emotion: 12
     editTyp: 0
-  - Guid: 15df4ffb-3545-4f44-a20d-43d2cb3351a5
+  - Guid: 914f94b2-e289-4db2-aca9-bade73482570
     DialogTitle: NpcNode
-    Position: {x: 11749, y: -1197}
+    Position: {x: 8983, y: -1650}
     Type: 1
-    DialogText: A farm on the moooooooooon :P
+    DialogText: Yes of course! Without question!
     Image: {fileID: 0}
     customRespondTime: 0
     GameEvent: {fileID: 0}
@@ -2895,12 +2447,28 @@ MonoBehaviour:
     audioAsset: {fileID: 0}
     emotion: 12
     editTyp: 0
-  - Guid: 9f0f5ad1-dfad-4010-a740-98915f527aed
+  - Guid: 74552fb6-2b3b-41bc-a2bc-c71d7dfae3a6
+    DialogTitle: ChoiceNode
+    Position: {x: 8499, y: -1518}
+    Type: 0
+    DialogText: hello world
+    Image: {fileID: 0}
+    customRespondTime: 0
+    GameEvent: {fileID: 0}
+    BlackBoardProperty:
+      name: 
+      guid: 
+      comparisonTyp: 0
+      iVal: 0
+    audioAsset: {fileID: 0}
+    emotion: 12
+    editTyp: 0
+  - Guid: 4084cdbe-a73d-4cdd-9417-8896e7860d75
     DialogTitle: NpcNode
-    Position: {x: 11961, y: -1463}
+    Position: {x: 8983, y: -1275}
     Type: 1
-    DialogText: "Helena\u2026 you were the only reason why I was still on this planet
-      in the first place"
+    DialogText: "You are not a trophy! And it\u2019s not up to your father to decide
+      what you do with your life"
     Image: {fileID: 0}
     customRespondTime: 0
     GameEvent: {fileID: 0}
@@ -2914,7 +2482,7 @@ MonoBehaviour:
     editTyp: 0
   - Guid: 8d849044-2d72-4efc-a00d-9ea85fdfa843
     DialogTitle: NpcNode
-    Position: {x: 12276, y: -1463}
+    Position: {x: 13029, y: -1477}
     Type: 1
     DialogText: And there is no place I would call my home, if you are not a part
       of it!!
@@ -2931,7 +2499,7 @@ MonoBehaviour:
     editTyp: 0
   - Guid: e22f3bb0-528c-4060-bfe2-9c2e593252a7
     DialogTitle: NpcNode
-    Position: {x: 12593, y: -1463}
+    Position: {x: 13346, y: -1477}
     Type: 1
     DialogText: '*sigh* sorry. That was kinda sappy'
     Image: {fileID: 0}
@@ -2945,9 +2513,122 @@ MonoBehaviour:
     audioAsset: {fileID: 0}
     emotion: 12
     editTyp: 0
+  - Guid: 27d1b4ad-30d7-47ca-9920-5498ece3932a
+    DialogTitle: NpcNode
+    Position: {x: 11135, y: -1442}
+    Type: 1
+    DialogText: Like we always dream of since we were kids :D
+    Image: {fileID: 0}
+    customRespondTime: 0
+    GameEvent: {fileID: 0}
+    BlackBoardProperty:
+      name: 
+      guid: 
+      comparisonTyp: 0
+      iVal: 0
+    audioAsset: {fileID: 0}
+    emotion: 12
+    editTyp: 0
+  - Guid: 8e9db9c8-af01-418a-88cc-d0e8a79a1803
+    DialogTitle: NpcNode
+    Position: {x: 11456, y: -1442}
+    Type: 1
+    DialogText: A farm on the moon Helenaaaaa!
+    Image: {fileID: 0}
+    customRespondTime: 3
+    GameEvent: {fileID: 0}
+    BlackBoardProperty:
+      name: 
+      guid: 
+      comparisonTyp: 0
+      iVal: 0
+    audioAsset: {fileID: 0}
+    emotion: 12
+    editTyp: 0
+  - Guid: c647b1d0-b8c6-4d8a-aa4c-3a4a2bdc5189
+    DialogTitle: ChoiceNode
+    Position: {x: 11766, y: -1442}
+    Type: 0
+    DialogText: hello world
+    Image: {fileID: 0}
+    customRespondTime: 0
+    GameEvent: {fileID: 0}
+    BlackBoardProperty:
+      name: 
+      guid: 
+      comparisonTyp: 0
+      iVal: 0
+    audioAsset: {fileID: 0}
+    emotion: 12
+    editTyp: 0
+  - Guid: 9f0f5ad1-dfad-4010-a740-98915f527aed
+    DialogTitle: NpcNode
+    Position: {x: 12628, y: -1388}
+    Type: 1
+    DialogText: Helena, you were the only reason why I was still on this planet in
+      the first place
+    Image: {fileID: 0}
+    customRespondTime: 0
+    GameEvent: {fileID: 0}
+    BlackBoardProperty:
+      name: 
+      guid: 
+      comparisonTyp: 0
+      iVal: 0
+    audioAsset: {fileID: 0}
+    emotion: 12
+    editTyp: 0
+  - Guid: 6bf33f23-a85a-45e2-ada8-8155f4d0beb4
+    DialogTitle: NpcNode
+    Position: {x: 12539, y: -1658}
+    Type: 1
+    DialogText: The mooooooooon :P
+    Image: {fileID: 0}
+    customRespondTime: 0
+    GameEvent: {fileID: 0}
+    BlackBoardProperty:
+      name: 
+      guid: 
+      comparisonTyp: 0
+      iVal: 0
+    audioAsset: {fileID: 0}
+    emotion: 12
+    editTyp: 0
+  - Guid: f17302cc-d571-44a3-ae1e-2b6ef7188ea4
+    DialogTitle: NpcNode
+    Position: {x: 12279, y: -1658}
+    Type: 1
+    DialogText: On
+    Image: {fileID: 0}
+    customRespondTime: 0
+    GameEvent: {fileID: 0}
+    BlackBoardProperty:
+      name: 
+      guid: 
+      comparisonTyp: 0
+      iVal: 0
+    audioAsset: {fileID: 0}
+    emotion: 12
+    editTyp: 0
+  - Guid: 15df4ffb-3545-4f44-a20d-43d2cb3351a5
+    DialogTitle: NpcNode
+    Position: {x: 12011, y: -1658}
+    Type: 1
+    DialogText: A farm
+    Image: {fileID: 0}
+    customRespondTime: 0
+    GameEvent: {fileID: 0}
+    BlackBoardProperty:
+      name: 
+      guid: 
+      comparisonTyp: 0
+      iVal: 0
+    audioAsset: {fileID: 0}
+    emotion: 12
+    editTyp: 0
   - Guid: 40deac86-0316-474f-bf26-3bb2b1710254
     DialogTitle: NpcNode
-    Position: {x: 12893, y: -1463}
+    Position: {x: 13620, y: -1477}
     Type: 1
     DialogText: If you really meant what you said earlier. I want you to know that
       I also have feelings for you
@@ -2962,9 +2643,25 @@ MonoBehaviour:
     audioAsset: {fileID: 0}
     emotion: 12
     editTyp: 0
+  - Guid: 090e4362-57bf-40bd-b5b0-db1b6b2e6fbb
+    DialogTitle: NpcNode
+    Position: {x: 13934, y: -1454}
+    Type: 1
+    DialogText: have been for a long time :)
+    Image: {fileID: 0}
+    customRespondTime: 0
+    GameEvent: {fileID: 0}
+    BlackBoardProperty:
+      name: 
+      guid: 
+      comparisonTyp: 0
+      iVal: 0
+    audioAsset: {fileID: 0}
+    emotion: 12
+    editTyp: 0
   - Guid: c9441406-1798-4fd2-b947-a509990b13bd
     DialogTitle: Hermia I really mean it!
-    Position: {x: 13222, y: -1425}
+    Position: {x: 14262, y: -1439}
     Type: 0
     DialogText: hello world
     Image: {fileID: 0}
@@ -2980,7 +2677,7 @@ MonoBehaviour:
     editTyp: 0
   - Guid: 02fe6ecb-fc0b-416a-901f-b914b50ae038
     DialogTitle: PlayerAutoNode
-    Position: {x: 13562, y: -1427}
+    Position: {x: 14602, y: -1441}
     Type: 9
     DialogText: "I love you, this little farm on the moon was our dream and I can\u2019t
       imagine doing it with someone other than you"
@@ -2995,26 +2692,9 @@ MonoBehaviour:
     audioAsset: {fileID: 0}
     emotion: 12
     editTyp: 0
-  - Guid: 4084cdbe-a73d-4cdd-9417-8896e7860d75
-    DialogTitle: NpcNode
-    Position: {x: 8972, y: -1670}
-    Type: 1
-    DialogText: "You are not a trophy! And it\u2019s not up to your father to decide
-      what you do with your life"
-    Image: {fileID: 0}
-    customRespondTime: 0
-    GameEvent: {fileID: 0}
-    BlackBoardProperty:
-      name: 
-      guid: 
-      comparisonTyp: 0
-      iVal: 0
-    audioAsset: {fileID: 0}
-    emotion: 12
-    editTyp: 0
   - Guid: ebd71813-3919-4699-8484-545935c9c7e7
     DialogTitle: NpcNode
-    Position: {x: 14242, y: -1368}
+    Position: {x: 15282, y: -1382}
     Type: 1
     DialogText: Ahhhh wow this talk was really intense! *blush* Im so happy! I could
       jump up and down!
@@ -3031,7 +2711,7 @@ MonoBehaviour:
     editTyp: 0
   - Guid: 887b6455-4cad-4888-931d-90feb9730351
     DialogTitle: NpcNode
-    Position: {x: 14596, y: -1368}
+    Position: {x: 15636, y: -1382}
     Type: 1
     DialogText: brb!
     Image: {fileID: 0}
@@ -3047,7 +2727,7 @@ MonoBehaviour:
     editTyp: 0
   - Guid: 1b6d9196-6f83-4aa3-b0bf-254aa882d369
     DialogTitle: NpcNode
-    Position: {x: 14929, y: -1368}
+    Position: {x: 15969, y: -1382}
     Type: 1
     DialogText: "I can\u2019t wait for this carantine to be over!!! <3"
     Image: {fileID: 0}
@@ -3061,10 +2741,491 @@ MonoBehaviour:
     audioAsset: {fileID: 0}
     emotion: 12
     editTyp: 0
+  - Guid: 1ac903dd-7b2c-4528-b6db-37ba5e339569
+    DialogTitle: Hermia E-Vent
+    Position: {x: 14764, y: 836}
+    Type: 2
+    DialogText: 
+    Image: {fileID: 0}
+    customRespondTime: 0
+    GameEvent: {fileID: 11400000, guid: 351995de68ecef44e912202873a86e20, type: 2}
+    BlackBoardProperty:
+      name: 
+      guid: 
+      comparisonTyp: 0
+      iVal: 0
+    audioAsset: {fileID: 0}
+    emotion: 12
+    editTyp: 0
+  - Guid: 335ea569-dc57-4f6d-a17d-f5a82d5a3760
+    DialogTitle: Wait for Demetrius or Hermia
+    Position: {x: 15168, y: 836}
+    Type: 5
+    DialogText: 
+    Image: {fileID: 0}
+    customRespondTime: 0
+    GameEvent: {fileID: 0}
+    BlackBoardProperty:
+      name: TimeAfterVent1
+      guid: 5e611ef1-6150-4427-ac09-7e04dd3d5b9e
+      comparisonTyp: 1
+      iVal: 0
+    audioAsset: {fileID: 0}
+    emotion: 12
+    editTyp: 0
+  - Guid: 4f1cf42e-dc58-4e83-8a64-28e3768cbfa7
+    DialogTitle: ChoiceNode
+    Position: {x: 15549, y: 836}
+    Type: 0
+    DialogText: hello world
+    Image: {fileID: 0}
+    customRespondTime: 0
+    GameEvent: {fileID: 0}
+    BlackBoardProperty:
+      name: 
+      guid: 
+      comparisonTyp: 0
+      iVal: 0
+    audioAsset: {fileID: 0}
+    emotion: 12
+    editTyp: 0
+  - Guid: 07712749-a6da-4b6b-8c95-e06635aafee4
+    DialogTitle: Wait for other Dialogs to finish
+    Position: {x: 14396, y: 826}
+    Type: 5
+    DialogText: 
+    Image: {fileID: 0}
+    customRespondTime: 0
+    GameEvent: {fileID: 0}
+    BlackBoardProperty:
+      name: HermiaVentCheck
+      guid: 67859645-0ebf-4b10-b1c9-f3cc5978b53f
+      comparisonTyp: 0
+      iVal: 2
+    audioAsset: {fileID: 0}
+    emotion: 12
+    editTyp: 0
+  - Guid: c3f91666-760e-4852-80c3-a907cb01ea1b
+    DialogTitle: ChoiceNode
+    Position: {x: 13267, y: 826}
+    Type: 0
+    DialogText: hello world
+    Image: {fileID: 0}
+    customRespondTime: 0
+    GameEvent: {fileID: 0}
+    BlackBoardProperty:
+      name: 
+      guid: 
+      comparisonTyp: 0
+      iVal: 0
+    audioAsset: {fileID: 0}
+    emotion: 12
+    editTyp: 0
+  - Guid: 4f63dc52-9ccf-49b4-9585-6670dcba1298
+    DialogTitle: LogicNode
+    Position: {x: 13714, y: 794}
+    Type: 4
+    DialogText: 
+    Image: {fileID: 0}
+    customRespondTime: 0
+    GameEvent: {fileID: 0}
+    BlackBoardProperty:
+      name: HermiaLOVE
+      guid: 0353c128-c99b-4828-967c-baad81410aff
+      comparisonTyp: 1
+      iVal: 0
+    audioAsset: {fileID: 0}
+    emotion: 12
+    editTyp: 0
+  - Guid: 6ce38a55-577b-404c-a809-f83393d4e5ca
+    DialogTitle: NpcNode
+    Position: {x: 14074, y: 620}
+    Type: 1
+    DialogText: Don't worry! I will be careful <3
+    Image: {fileID: 0}
+    customRespondTime: 0
+    GameEvent: {fileID: 0}
+    BlackBoardProperty:
+      name: 
+      guid: 
+      comparisonTyp: 0
+      iVal: 0
+    audioAsset: {fileID: 0}
+    emotion: 12
+    editTyp: 0
+  - Guid: 07bf4c2b-116b-48fc-94c8-066846989644
+    DialogTitle: NpcNode
+    Position: {x: 16643, y: 836}
+    Type: 1
+    DialogText: We should definitely keep quiet about your love problem with Demetrius
+    Image: {fileID: 0}
+    customRespondTime: 0
+    GameEvent: {fileID: 0}
+    BlackBoardProperty:
+      name: 
+      guid: 
+      comparisonTyp: 0
+      iVal: 0
+    audioAsset: {fileID: 0}
+    emotion: 12
+    editTyp: 0
+  - Guid: ce1fa696-0429-42f7-bbfe-a5d2ee317e35
+    DialogTitle: NpcNode
+    Position: {x: 16929, y: 836}
+    Type: 1
+    DialogText: We don't want anyone to find out, no?
+    Image: {fileID: 0}
+    customRespondTime: 0
+    GameEvent: {fileID: 0}
+    BlackBoardProperty:
+      name: 
+      guid: 
+      comparisonTyp: 0
+      iVal: 0
+    audioAsset: {fileID: 0}
+    emotion: 12
+    editTyp: 0
+  - Guid: b8fc0dca-bf7d-4657-af4a-cdefc01868c8
+    DialogTitle: ChoiceNode
+    Position: {x: 17186, y: 836}
+    Type: 0
+    DialogText: hello world
+    Image: {fileID: 0}
+    customRespondTime: 0
+    GameEvent: {fileID: 0}
+    BlackBoardProperty:
+      name: 
+      guid: 
+      comparisonTyp: 0
+      iVal: 0
+    audioAsset: {fileID: 0}
+    emotion: 12
+    editTyp: 0
+  - Guid: 132836de-77e8-4035-8201-66322430d24b
+    DialogTitle: NpcNode
+    Position: {x: 18315, y: 694}
+    Type: 1
+    DialogText: You try not to get into trouble ;)
+    Image: {fileID: 0}
+    customRespondTime: 0
+    GameEvent: {fileID: 0}
+    BlackBoardProperty:
+      name: 
+      guid: 
+      comparisonTyp: 0
+      iVal: 0
+    audioAsset: {fileID: 0}
+    emotion: 12
+    editTyp: 0
+  - Guid: 723c208d-3d15-4b6e-b8a6-5652f68948b9
+    DialogTitle: NpcNode
+    Position: {x: 17523, y: 937}
+    Type: 1
+    DialogText: I think we should wait after we arrived on Titania
+    Image: {fileID: 0}
+    customRespondTime: 0
+    GameEvent: {fileID: 0}
+    BlackBoardProperty:
+      name: 
+      guid: 
+      comparisonTyp: 0
+      iVal: 0
+    audioAsset: {fileID: 0}
+    emotion: 12
+    editTyp: 0
+  - Guid: 25eb7940-4458-45c9-8dc7-a4d6da87083c
+    DialogTitle: ChoiceNode
+    Position: {x: 17829, y: 937}
+    Type: 0
+    DialogText: hello world
+    Image: {fileID: 0}
+    customRespondTime: 0
+    GameEvent: {fileID: 0}
+    BlackBoardProperty:
+      name: 
+      guid: 
+      comparisonTyp: 0
+      iVal: 0
+    audioAsset: {fileID: 0}
+    emotion: 12
+    editTyp: 0
+  - Guid: c237ecfc-c546-42b9-b8da-a3565334842f
+    DialogTitle: NpcNode
+    Position: {x: 18177, y: 1069}
+    Type: 1
+    DialogText: I feel like we could make him angry
+    Image: {fileID: 0}
+    customRespondTime: 0
+    GameEvent: {fileID: 0}
+    BlackBoardProperty:
+      name: 
+      guid: 
+      comparisonTyp: 0
+      iVal: 0
+    audioAsset: {fileID: 0}
+    emotion: 12
+    editTyp: 0
+  - Guid: 67d600e2-ad3a-4f3d-866c-e228ac0d1c9b
+    DialogTitle: ChoiceNode
+    Position: {x: 18428, y: 1069}
+    Type: 0
+    DialogText: hello world
+    Image: {fileID: 0}
+    customRespondTime: 0
+    GameEvent: {fileID: 0}
+    BlackBoardProperty:
+      name: 
+      guid: 
+      comparisonTyp: 0
+      iVal: 0
+    audioAsset: {fileID: 0}
+    emotion: 12
+    editTyp: 0
+  - Guid: 8a3751f8-8965-45e7-a23e-26fbf5f72a07
+    DialogTitle: NpcNode
+    Position: {x: 18769, y: 1201}
+    Type: 1
+    DialogText: We have other ways of dealing with it
+    Image: {fileID: 0}
+    customRespondTime: 0
+    GameEvent: {fileID: 0}
+    BlackBoardProperty:
+      name: 
+      guid: 
+      comparisonTyp: 0
+      iVal: 0
+    audioAsset: {fileID: 0}
+    emotion: 12
+    editTyp: 0
+  - Guid: 4d1181e0-2917-49c0-9d50-97a54aa4ec6b
+    DialogTitle: NpcNode
+    Position: {x: 18769, y: 1017}
+    Type: 1
+    DialogText: Please.
+    Image: {fileID: 0}
+    customRespondTime: 0
+    GameEvent: {fileID: 0}
+    BlackBoardProperty:
+      name: 
+      guid: 
+      comparisonTyp: 0
+      iVal: 0
+    audioAsset: {fileID: 0}
+    emotion: 12
+    editTyp: 0
+  - Guid: b6105834-50d4-4cc7-abcb-446073b3f210
+    DialogTitle: EditValueNode
+    Position: {x: 20072, y: 699}
+    Type: 8
+    DialogText: 
+    Image: {fileID: 0}
+    customRespondTime: 0
+    GameEvent: {fileID: 0}
+    BlackBoardProperty:
+      name: ProgressDay2
+      guid: 20c3be41-b2a7-4954-841a-d5d011a21c09
+      comparisonTyp: 0
+      iVal: 1
+    audioAsset: {fileID: 0}
+    emotion: 12
+    editTyp: 1
+  - Guid: ba4782a1-25fb-404a-be27-262cdd5a82b5
+    DialogTitle: NpcNode
+    Position: {x: 19558, y: 570}
+    Type: 1
+    DialogText: See you on the other side
+    Image: {fileID: 0}
+    customRespondTime: 0
+    GameEvent: {fileID: 0}
+    BlackBoardProperty:
+      name: 
+      guid: 
+      comparisonTyp: 0
+      iVal: 0
+    audioAsset: {fileID: 0}
+    emotion: 12
+    editTyp: 0
+  - Guid: 33266793-d996-4f59-a7c6-a0d8103c30c6
+    DialogTitle: ChoiceNode
+    Position: {x: 18565, y: 694}
+    Type: 0
+    DialogText: hello world
+    Image: {fileID: 0}
+    customRespondTime: 0
+    GameEvent: {fileID: 0}
+    BlackBoardProperty:
+      name: 
+      guid: 
+      comparisonTyp: 0
+      iVal: 0
+    audioAsset: {fileID: 0}
+    emotion: 12
+    editTyp: 0
+  - Guid: 16295f8d-8db1-4eaf-822f-50a29106e4b6
+    DialogTitle: ChoiceNode
+    Position: {x: 19151, y: 642}
+    Type: 0
+    DialogText: hello world
+    Image: {fileID: 0}
+    customRespondTime: 0
+    GameEvent: {fileID: 0}
+    BlackBoardProperty:
+      name: 
+      guid: 
+      comparisonTyp: 0
+      iVal: 0
+    audioAsset: {fileID: 0}
+    emotion: 12
+    editTyp: 0
+  - Guid: 5cbd6834-44c0-42b6-8b87-4f80b756591a
+    DialogTitle: LogicNode
+    Position: {x: 18845, y: 477}
+    Type: 4
+    DialogText: 
+    Image: {fileID: 0}
+    customRespondTime: 0
+    GameEvent: {fileID: 0}
+    BlackBoardProperty:
+      name: HermiaLOVE
+      guid: 0353c128-c99b-4828-967c-baad81410aff
+      comparisonTyp: 0
+      iVal: 1
+    audioAsset: {fileID: 0}
+    emotion: 12
+    editTyp: 0
+  - Guid: 6172c060-f358-4d7b-a0b9-60615ea0baf1
+    DialogTitle: NpcNode
+    Position: {x: 15896, y: 798}
+    Type: 1
+    DialogText: Yep!
+    Image: {fileID: 0}
+    customRespondTime: 0
+    GameEvent: {fileID: 0}
+    BlackBoardProperty:
+      name: 
+      guid: 
+      comparisonTyp: 0
+      iVal: 0
+    audioAsset: {fileID: 0}
+    emotion: 12
+    editTyp: 0
+  - Guid: d90c6d61-6e90-4f67-9586-31a80e6fcca7
+    DialogTitle: LogicNode
+    Position: {x: 16256, y: 720}
+    Type: 4
+    DialogText: 
+    Image: {fileID: 0}
+    customRespondTime: 0
+    GameEvent: {fileID: 0}
+    BlackBoardProperty:
+      name: HermiaLOVE
+      guid: 0353c128-c99b-4828-967c-baad81410aff
+      comparisonTyp: 1
+      iVal: 0
+    audioAsset: {fileID: 0}
+    emotion: 12
+    editTyp: 0
+  - Guid: 41edb955-9b98-40fc-8a59-7bd077348159
+    DialogTitle: NpcNode
+    Position: {x: 16876, y: 577}
+    Type: 1
+    DialogText: Unfortunately, we have to postpone our date until we safely arrive
+      on Titania
+    Image: {fileID: 0}
+    customRespondTime: 0
+    GameEvent: {fileID: 0}
+    BlackBoardProperty:
+      name: 
+      guid: 
+      comparisonTyp: 0
+      iVal: 0
+    audioAsset: {fileID: 0}
+    emotion: 12
+    editTyp: 0
+  - Guid: 64a49a8b-3d9e-4407-8ea3-a548a6ae7213
+    DialogTitle: NpcNode
+    Position: {x: 16610, y: 578}
+    Type: 1
+    DialogText: Did you get my love letter? ;)
+    Image: {fileID: 0}
+    customRespondTime: 0
+    GameEvent: {fileID: 0}
+    BlackBoardProperty:
+      name: 
+      guid: 
+      comparisonTyp: 0
+      iVal: 0
+    audioAsset: {fileID: 0}
+    emotion: 12
+    editTyp: 0
+  - Guid: a228d515-5d83-4133-92c4-132023b257d2
+    DialogTitle: NpcNode
+    Position: {x: 17641, y: 694}
+    Type: 1
+    DialogText: Good
+    Image: {fileID: 0}
+    customRespondTime: 0
+    GameEvent: {fileID: 0}
+    BlackBoardProperty:
+      name: 
+      guid: 
+      comparisonTyp: 0
+      iVal: 0
+    audioAsset: {fileID: 0}
+    emotion: 12
+    editTyp: 0
+  - Guid: b57d1d65-c313-4dd2-958b-71384b1a5748
+    DialogTitle: NpcNode
+    Position: {x: 17972, y: 694}
+    Type: 1
+    DialogText: I will look into our problem and do some research
+    Image: {fileID: 0}
+    customRespondTime: 0
+    GameEvent: {fileID: 0}
+    BlackBoardProperty:
+      name: 
+      guid: 
+      comparisonTyp: 0
+      iVal: 0
+    audioAsset: {fileID: 0}
+    emotion: 12
+    editTyp: 0
+  - Guid: a5f6f2f2-6d57-48ae-976e-e48eb9f7635e
+    DialogTitle: ChoiceNode
+    Position: {x: 19151, y: 250}
+    Type: 0
+    DialogText: hello world
+    Image: {fileID: 0}
+    customRespondTime: 0
+    GameEvent: {fileID: 0}
+    BlackBoardProperty:
+      name: 
+      guid: 
+      comparisonTyp: 0
+      iVal: 0
+    audioAsset: {fileID: 0}
+    emotion: 12
+    editTyp: 0
+  - Guid: 97f05b06-b900-4ed0-9790-82705a056e5c
+    DialogTitle: NpcNode
+    Position: {x: 19545, y: 266}
+    Type: 1
+    DialogText: See you soon<3
+    Image: {fileID: 0}
+    customRespondTime: 0
+    GameEvent: {fileID: 0}
+    BlackBoardProperty:
+      name: 
+      guid: 
+      comparisonTyp: 0
+      iVal: 0
+    audioAsset: {fileID: 0}
+    emotion: 12
+    editTyp: 0
   dialogGroupData:
   - Guid: 
     name: Hermia Love
-    Position: {x: 6473, y: -1729}
+    Position: {x: 6473, y: -1717}
     childNodeGuid:
     - 56b01e8f-1134-48d1-9c06-bf4c0f004d6f
     - a4bea3e3-c8c5-4d43-9737-e4de86ffce44
@@ -3093,4 +3254,8 @@ MonoBehaviour:
     - ebd71813-3919-4699-8484-545935c9c7e7
     - 887b6455-4cad-4888-931d-90feb9730351
     - 1b6d9196-6f83-4aa3-b0bf-254aa882d369
+    - 27d1b4ad-30d7-47ca-9920-5498ece3932a
+    - f17302cc-d571-44a3-ae1e-2b6ef7188ea4
+    - 6bf33f23-a85a-45e2-ada8-8155f4d0beb4
+    - 090e4362-57bf-40bd-b5b0-db1b6b2e6fbb
   blackBoardList: {fileID: 11400000, guid: c289dd2bc5fda5942acc2419a6f68abb, type: 2}
