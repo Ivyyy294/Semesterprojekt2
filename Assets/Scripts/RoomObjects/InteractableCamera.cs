@@ -162,10 +162,12 @@ public class InteractableCamera : FiniteStateMachine, InteractableObject
 		public override void Update (GameObject obj)
 		{
 			if (cinemachineBrain != null && !cinemachineBrain.IsBlending)
-			{
-				Player.Me().Unlock();
 				interactableCamera.EnterState (interactableCamera.inactiveState);
-			}
+		}
+
+		public override void Exit(GameObject obj)
+		{
+			Player.Me().Unlock();
 		}
 	}
 
