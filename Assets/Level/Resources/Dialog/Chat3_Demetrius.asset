@@ -440,6 +440,9 @@ MonoBehaviour:
   - baseNodeGuid: 751c93ef-209c-4a63-ba7a-70496ae709d3
     portName: Yes. They are too intrusive.
     targetNodeGuid: f6448bf8-7d9d-468a-a412-06a4c49ce64b
+  - baseNodeGuid: 751c93ef-209c-4a63-ba7a-70496ae709d3
+    portName: No.
+    targetNodeGuid: 61768b33-71b8-45c6-8048-e37700765d12
   - baseNodeGuid: f6448bf8-7d9d-468a-a412-06a4c49ce64b
     portName: Next
     targetNodeGuid: 13195953-4ee4-4304-822f-2f54230804b3
@@ -467,15 +470,12 @@ MonoBehaviour:
   - baseNodeGuid: 1704e85c-3115-4adc-beae-03baf3e2e56a
     portName: Next
     targetNodeGuid: 203d0688-6c3e-4415-a2fa-99a2813c3c10
-  - baseNodeGuid: 751c93ef-209c-4a63-ba7a-70496ae709d3
-    portName: No.
-    targetNodeGuid: 61768b33-71b8-45c6-8048-e37700765d12
-  - baseNodeGuid: 61768b33-71b8-45c6-8048-e37700765d12
-    portName: Next
-    targetNodeGuid: a4591c5f-0d28-4b9e-9ccd-5a3783286135
   - baseNodeGuid: a4591c5f-0d28-4b9e-9ccd-5a3783286135
     portName: Next
     targetNodeGuid: 9f13a1fe-01ef-4bca-bb04-6e35e57ebd6a
+  - baseNodeGuid: 61768b33-71b8-45c6-8048-e37700765d12
+    portName: Next
+    targetNodeGuid: a4591c5f-0d28-4b9e-9ccd-5a3783286135
   - baseNodeGuid: 9f13a1fe-01ef-4bca-bb04-6e35e57ebd6a
     portName: Next
     targetNodeGuid: 13195953-4ee4-4304-822f-2f54230804b3
@@ -1869,7 +1869,7 @@ MonoBehaviour:
     DialogTitle: NpcNode
     Position: {x: 12704.8, y: 595.2}
     Type: 1
-    DialogText: Even the closes lovers hate each other at times.
+    DialogText: Even the closest lovers hate each other at times.
     Image: {fileID: 0}
     customRespondTime: 0
     GameEvent: {fileID: 0}
@@ -2141,7 +2141,7 @@ MonoBehaviour:
     DialogTitle: NpcNode
     Position: {x: 14526.4, y: 868.8}
     Type: 1
-    DialogText: Only 22 more days.
+    DialogText: Only 12 more days.
     Image: {fileID: 0}
     customRespondTime: 0
     GameEvent: {fileID: 0}
