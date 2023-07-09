@@ -14,8 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   clipData:
   - clip: {fileID: 8300000, guid: 4187e42aa64044a498aefe4138dd9652, type: 3}
-    subtitle: Helena, are you awake? The key is Lysander! He can control PUCK! You
-      need to convince him to turn them off!
+    subtitle: 'Hermia: "Helena, are you awake? The key is Lysander! He can control
+      PUCK! You need to convince him to turn them off!"'
   - clip: {fileID: 8300000, guid: 1d75d059b8c96254dbcfe7ff52abe7d9, type: 3}
     subtitle: Hermia screams muffled
   playStyle: 1
