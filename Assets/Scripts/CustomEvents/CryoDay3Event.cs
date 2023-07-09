@@ -34,6 +34,8 @@ class CryoDay3Event : FiniteStateMachine
 		{
 			base.Enter(obj);
 			currentIndex = 0;
+			//Makes sure we start with first line again
+			voiceLines.ShuffleAudioClips();
 			cryoDoor.open = true;
 			timer = 0f;
 			Player.Me().BlockInteractions (true, tag);

@@ -428,6 +428,7 @@ public class Room : PushdownAutomata
 		{
 			base.Enter(obj);
 			Player.Me().Lock();
+			Puck.SetEmotion(Puck.Emotion.HAPPY);
 			
 			//Disables Intro for Testing
 			#if UNITY_EDITOR

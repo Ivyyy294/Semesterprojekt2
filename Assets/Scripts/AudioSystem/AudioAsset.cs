@@ -149,8 +149,7 @@ public class AudioAsset : ScriptableObject
 
 	public int ClipCount () {return clipData.Length;}
 
-	//Private FUnctions
-	private void ShuffleAudioClips()
+	public void ShuffleAudioClips()
 	{
 		clipBuffer.Clear();
 
@@ -177,6 +176,7 @@ public class AudioAsset : ScriptableObject
 
 		oldPlayStyle = playStyle;
 	}
+	//Private FUnctions
 
 	AudioSource CreateAudioSource()
 	{
