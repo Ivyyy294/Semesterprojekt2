@@ -26,6 +26,7 @@ class CryoDay3Event : FiniteStateMachine
 		[SerializeField] ChatTerminalObj chatTerminal;
 		[SerializeField] GameEvent closeTerminal;
 		[SerializeField] float voiceLineDelay = 1f;
+		[SerializeField] string tag;
 		float timer = 0f;
 		int currentIndex;
 		
@@ -35,6 +36,7 @@ class CryoDay3Event : FiniteStateMachine
 			currentIndex = 0;
 			cryoDoor.open = true;
 			timer = 0f;
+			Player.Me().BlockInteractions (true, tag);
 			chatTerminal.SetLocked(true);
 			closeTerminal.Raise();
 		}
@@ -65,6 +67,7 @@ class CryoDay3Event : FiniteStateMachine
 		{
 			cryoDoor.open = false;
 			chatTerminal.SetLocked(false);
+			Player.Me().BlockInteractions (false, "");
 		}
 	}
 
@@ -89,6 +92,7 @@ class CryoDay3Event : FiniteStateMachine
 		{
 			 if (cryoChair.IsActive())
 			{
+				cryoChair.activeState.SetLocked(true);
 				BlackBoardProperty checkValue = BlackBoard.Me().GetPropertyByName (testProperty.name);
 
 				if (checkValue.Compare (testProperty) || forceGoodEnding)

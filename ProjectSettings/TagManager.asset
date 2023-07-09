@@ -8,6 +8,7 @@ TagManager:
   - CryoEnding
   - "\t\t\tmanager.ButtonList[i].GetComponentInChildren<TextMeshProUGUI>().SetLayoutDirty();\r\n"
   - Disconnected
+  - EnterCryo
   layers:
   - Default
   - TransparentFX

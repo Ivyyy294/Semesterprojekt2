@@ -891,6 +891,10 @@ PrefabInstance:
       propertyPath: m_RootOrder
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 7392223977485948331, guid: cbc17c2b942c75242850f0bbb7667649, type: 3}
+      propertyPath: m_TagString
+      value: EnterCryo
+      objectReference: {fileID: 0}
     - target: {fileID: 7746420725820511147, guid: cbc17c2b942c75242850f0bbb7667649, type: 3}
       propertyPath: m_LocalPosition.x
       value: 3.612

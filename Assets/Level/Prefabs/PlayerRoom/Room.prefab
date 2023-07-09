@@ -11304,6 +11304,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 8987730952681145877}
     - target: {fileID: 160401723716179195, guid: c3f5d8cea79e88d4e9311ee32800fb22, type: 3}
+      propertyPath: stage1.tag
+      value: EnterCryo
+      objectReference: {fileID: 0}
+    - target: {fileID: 160401723716179195, guid: c3f5d8cea79e88d4e9311ee32800fb22, type: 3}
       propertyPath: stage2.room
       value: 
       objectReference: {fileID: 2565798720408585157}
@@ -11659,6 +11663,10 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 82a1a3aa194fc9942a8f14548672c4ae, type: 2}
+    - target: {fileID: 6080920565685645893, guid: 1d348f68e0ab10947896335babf33b43, type: 3}
+      propertyPath: m_TagString
+      value: EnterCryo
+      objectReference: {fileID: 0}
     - target: {fileID: 7874346427099478651, guid: 1d348f68e0ab10947896335babf33b43, type: 3}
       propertyPath: m_RootOrder
       value: 4
@@ -14780,6 +14788,10 @@ PrefabInstance:
     - target: {fileID: 4191648242426220883, guid: 0c30e22ba89055b41aa46975bf4e9286, type: 3}
       propertyPath: m_LocalPosition.z
       value: 0.056999207
+      objectReference: {fileID: 0}
+    - target: {fileID: 4496652273947971645, guid: 0c30e22ba89055b41aa46975bf4e9286, type: 3}
+      propertyPath: m_TagString
+      value: EnterCryo
       objectReference: {fileID: 0}
     - target: {fileID: 4515012080085503572, guid: 0c30e22ba89055b41aa46975bf4e9286, type: 3}
       propertyPath: m_StaticEditorFlags
