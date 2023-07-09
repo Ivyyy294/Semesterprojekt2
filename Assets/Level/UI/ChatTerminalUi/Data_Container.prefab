@@ -9,6 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5819707876826224354}
+  - component: {fileID: 6720064143879533940}
   m_Layer: 5
   m_Name: Data_Container
   m_TagString: Untagged
@@ -38,6 +39,20 @@ RectTransform:
   m_AnchoredPosition: {x: 641, y: 499}
   m_SizeDelta: {x: 545.35516, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &6720064143879533940
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3755246810010317496}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5840854ae6bd39f44a32baa7c3e20977, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dateTxt: {fileID: 8341445890589438264}
+  timeTxt: {fileID: 9071583735379323}
 --- !u!1 &4073434562131973722
 GameObject:
   m_ObjectHideFlags: 0
@@ -104,7 +119,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 3406.01.27
+  m_text: 2605.01.01
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 9fbb59e2067242a429e588557304ef33, type: 2}
   m_sharedMaterial: {fileID: 8583548167123439438, guid: 9fbb59e2067242a429e588557304ef33, type: 2}
