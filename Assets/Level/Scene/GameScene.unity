@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.0010754871, g: 0.00059688266, b: 0.0029301525, a: 1}
+  m_IndirectSpecularColor: {r: 0.001057132, g: 0.0005999049, b: 0.0029255406, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -393,7 +393,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2565798720408585157, guid: cbc17c2b942c75242850f0bbb7667649, type: 3}
       propertyPath: currentDay
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2565798720408585157, guid: cbc17c2b942c75242850f0bbb7667649, type: 3}
       propertyPath: lockPlayer
