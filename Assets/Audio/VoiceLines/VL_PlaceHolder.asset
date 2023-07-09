@@ -12,12 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6f7490679cbb0ec49b5d45a66e74b10e, type: 3}
   m_Name: VL_PlaceHolder
   m_EditorClassIdentifier: 
-  audioClips:
-  - {fileID: 8300000, guid: 46d0fc2321d2f7c4e9fe1bcefa509bd0, type: 3}
   clipData:
   - clip: {fileID: 8300000, guid: 46d0fc2321d2f7c4e9fe1bcefa509bd0, type: 3}
     subtitle: Placeholder
-  subtitle: Placeholder
   playStyle: 0
   audioTyp: 4
   loop: 0

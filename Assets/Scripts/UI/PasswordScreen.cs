@@ -14,7 +14,7 @@ public class PasswordScreen : MonoBehaviour
 	[SerializeField] GameObject parent;
 	[SerializeField] TextMeshProUGUI textObj;
 
-	float timer;
+	float timer = 0f;
 	bool passwordAvailable = true;
 	bool playAnimation = false;
 	bool firstTime = true;
@@ -27,6 +27,7 @@ public class PasswordScreen : MonoBehaviour
 	private void OnEnable()
 	{
 		timer = 0f;
+		chatScreen.SetActive (false);
 
 		if (passwordAvailable && !firstTime)
 			StartAnimation();

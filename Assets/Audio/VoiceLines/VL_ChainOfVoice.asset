@@ -12,8 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6f7490679cbb0ec49b5d45a66e74b10e, type: 3}
   m_Name: VL_ChainOfVoice
   m_EditorClassIdentifier: 
-  audioClips:
-  - {fileID: 8300000, guid: 291b3e54f0138c6468c2b5e68f337d63, type: 3}
   clipData:
   - clip: {fileID: 8300000, guid: 291b3e54f0138c6468c2b5e68f337d63, type: 3}
     subtitle: 'P.U.C.K: "Please enter the cryo chamber Helena"'
@@ -43,10 +41,9 @@ MonoBehaviour:
     subtitle: 'P.U.C.K: "Don''t make me count down"'
   - clip: {fileID: 8300000, guid: afd0e4778f978544c88737445502adca, type: 3}
     subtitle: 'P.U.C.K: "5... 4... 3... 2... 1... 1/2, 1/3, 1/4, 1/5"'
-  - clip: {fileID: 8300000, guid: 8a326fd8c5593f8488517a54092f1d75, type: 3}
-    subtitle: 'P.U.C.K: "I will not turn off this music until you go in:" *plays
-      annoying music track* *after 5 seconds*  "okay this song is really bad" *after
-      5 more seconds* "okay I''m turning it off"'
+  - clip: {fileID: 8300000, guid: 9ff9b0d4292565d43a9e602a8dc38889, type: 3}
+    subtitle: 'P.U.C.K: "I will not turn off this music until you go in! Okay this
+      song is really bad. Okay I''m turning it off"'
   - clip: {fileID: 8300000, guid: 13fb8004af4b4864d9d3ecbbaaa73496, type: 3}
     subtitle: 'P.U.C.K: "You''re a stubborn one aren''t you? Then you leave me no
       other choice: I will have to use my special words.... Pleeeaase oh my god please
@@ -61,7 +58,6 @@ MonoBehaviour:
     subtitle: 'P.U.C.K: "Okay, let''s go back to talking on the chat terminal, there
       is actually no microphone here, so I have no idea if you said anything this
       whole time."'
-  subtitle: 'P.U.C.K: "Please enter the cryo chamber Helena"'
   playStyle: 1
   audioTyp: 4
   loop: 0
