@@ -17,6 +17,7 @@ public class Player : MonoBehaviour
 	private PlayerMovement3D playerMovement3D;
 	private CharacterController characterController;
 	private PlayerInteraction playerInteraction;
+	private PlayerZoom playerZoom;
 	bool locked = false;
 
 	public static Player Me()
@@ -36,6 +37,7 @@ public class Player : MonoBehaviour
 		playerMovement3D.enabled = false;
 		mouseLook.enabled = false;
 		playerInteraction.enabled = false;
+		playerZoom.enabled = false;
 		locked = true;
 	}
 
@@ -44,6 +46,7 @@ public class Player : MonoBehaviour
 		playerMovement3D.enabled = true;
 		mouseLook.enabled = true;
 		playerInteraction.enabled = true;
+		playerZoom.enabled = true;
 		locked = false;
 	}
 
@@ -67,6 +70,7 @@ public class Player : MonoBehaviour
 			playerInteraction = GetComponent <PlayerInteraction>();
 			playerMovement3D = GetComponent <PlayerMovement3D>();
 			cinemachineBrain = Camera.main.GetComponent <Cinemachine.CinemachineBrain>();
+			playerZoom = GetComponent <PlayerZoom>();
 		}
 		else
 			Destroy(this);
