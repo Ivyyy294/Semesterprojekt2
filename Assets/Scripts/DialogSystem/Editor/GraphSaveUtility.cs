@@ -153,13 +153,44 @@ public class GraphSaveUtility
 			DialogNode tmpNode = Nodes[i];
 			var connections = containerCache.nodeLinks.Where(x=>x.baseNodeGuid == tmpNode.data.Guid).ToList();
 
+			
+
 			for (int j = 0; j < connections.Count; ++j)
 			{
 				var targetNodeGuid = connections[j].targetNodeGuid;
 				var targetNode = Nodes.First (x=>x.data.Guid == targetNodeGuid);
-				LinkNodes (tmpNode.outputContainer[j].Q<Port>(), (Port) targetNode.inputContainer[0]);
+
+				LinkNodes (GetOutputPort (tmpNode.outputContainer, j, connections[j].portName), (Port) targetNode.inputContainer[0]);
 			}
 		}
+	}
+
+	private Port GetOutputPort (VisualElement outputContainer, int connectionIndex, string portName)
+	{
+		if (connectionIndex < outputContainer.childCount)
+		{
+			Port tmp = (Port) outputContainer[connectionIndex];
+
+			//Try to find port by index
+			if (tmp.portName == portName)
+				return tmp;
+			//Find port by name
+			else
+			{
+				for (int i = 0; i < outputContainer.childCount; ++i)
+				{
+					if (outputContainer[i] is Port)
+					{
+						tmp = (Port) outputContainer[i];
+						
+						if (tmp.portName == portName)
+							return tmp;
+					}
+				}
+			}
+		}
+
+		return null;
 	}
 
 	private void LinkNodes(Port output, Port input)
