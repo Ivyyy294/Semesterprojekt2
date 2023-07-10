@@ -145,15 +145,6 @@ MonoBehaviour:
   - baseNodeGuid: 469e4cd8-3aaa-41ad-91a4-8c09fcb1dede
     portName: Next
     targetNodeGuid: 029812a5-abbc-45a0-b8a2-bf46c321bfed
-  - baseNodeGuid: a7d6843a-297c-47b7-8073-baec816c9db9
-    portName: Next
-    targetNodeGuid: 34474fc9-6ddb-4a50-ab88-2180379fc0ce
-  - baseNodeGuid: 13bc9707-c14d-42d6-8475-733026f9832f
-    portName: Next
-    targetNodeGuid: a7d6843a-297c-47b7-8073-baec816c9db9
-  - baseNodeGuid: 34474fc9-6ddb-4a50-ab88-2180379fc0ce
-    portName: Next
-    targetNodeGuid: e7cf2fd8-ad0f-4245-98d9-18d1b8da2e5c
   - baseNodeGuid: 47e4b602-9a48-450b-b51d-a89d77579169
     portName: Stop pretending to be one.
     targetNodeGuid: 2a1d487a-5365-4e15-aae9-915add032b81
@@ -193,33 +184,12 @@ MonoBehaviour:
   - baseNodeGuid: 2db28edd-02d0-40cc-b069-c66cd6e3743c
     portName: Try to imagine the situation we are in.
     targetNodeGuid: abef740d-6886-4db5-8e40-c2186cfbebeb
-  - baseNodeGuid: 2dccffbf-eaf3-4f4d-9da2-38625cb3af87
-    portName: Next
-    targetNodeGuid: a8b80d41-7d02-4e38-8a28-c70f8e74fb1f
-  - baseNodeGuid: 51729198-5bb5-43ad-b4b1-3d05ff040068
-    portName: Next
-    targetNodeGuid: b84df075-1843-4d5f-ba3e-fcb4f875b045
-  - baseNodeGuid: a8b80d41-7d02-4e38-8a28-c70f8e74fb1f
-    portName: Next
-    targetNodeGuid: 51729198-5bb5-43ad-b4b1-3d05ff040068
-  - baseNodeGuid: b84df075-1843-4d5f-ba3e-fcb4f875b045
-    portName: Next
-    targetNodeGuid: fb1a1feb-0570-4298-8f08-7105e75968f7
-  - baseNodeGuid: fb1a1feb-0570-4298-8f08-7105e75968f7
-    portName: Next
-    targetNodeGuid: 8fef3066-e337-4a3a-bad1-4ad192f9510a
-  - baseNodeGuid: 8fef3066-e337-4a3a-bad1-4ad192f9510a
-    portName: Next
-    targetNodeGuid: a432dbfc-edbe-448b-9e4e-91a7172c509f
-  - baseNodeGuid: c45450a5-4240-494c-90c1-44ef54bbbd36
-    portName: Next
-    targetNodeGuid: 8a95c20d-f30a-4e23-a429-a3544d5862b5
-  - baseNodeGuid: abef740d-6886-4db5-8e40-c2186cfbebeb
-    portName: Next
-    targetNodeGuid: 2dccffbf-eaf3-4f4d-9da2-38625cb3af87
   - baseNodeGuid: 52ab62a0-9ff6-47e2-923a-878a2906b5da
     portName: You have done many.
     targetNodeGuid: 2a1d487a-5365-4e15-aae9-915add032b81
+  - baseNodeGuid: 52ab62a0-9ff6-47e2-923a-878a2906b5da
+    portName: Everyone does.
+    targetNodeGuid: c5b6cb2a-b5bb-444f-883f-c3767716d0c7
   - baseNodeGuid: 7d3e0920-dba3-4c7c-b5a2-94ffadc27b84
     portName: Next
     targetNodeGuid: d1f21db1-6c21-47f5-aa53-e88f864cc846
@@ -232,105 +202,111 @@ MonoBehaviour:
   - baseNodeGuid: 5a8097ed-1c3f-41d4-8333-e31bf97a77ac
     portName: Next
     targetNodeGuid: cd32e155-8692-4a7d-be47-7866d4802807
-  - baseNodeGuid: cd32e155-8692-4a7d-be47-7866d4802807
-    portName: Next
-    targetNodeGuid: a432dbfc-edbe-448b-9e4e-91a7172c509f
   - baseNodeGuid: 6668d3dd-e7ed-456c-8379-71a26423a390
     portName: No.
     targetNodeGuid: 5a8097ed-1c3f-41d4-8333-e31bf97a77ac
   - baseNodeGuid: 6668d3dd-e7ed-456c-8379-71a26423a390
     portName: Listen to me first.
     targetNodeGuid: 2db28edd-02d0-40cc-b069-c66cd6e3743c
-  - baseNodeGuid: c0904506-a8d5-4104-bf07-90817853dcf7
-    portName: Next
-    targetNodeGuid: 695704d6-6234-4e83-a98a-b09ca173d1f2
   - baseNodeGuid: 777fc73b-5dd2-447f-93a7-0bd01f5ebc85
     portName: Next
     targetNodeGuid: f5acb542-c747-4ead-b2d4-4d8fb3adfdee
-  - baseNodeGuid: 695704d6-6234-4e83-a98a-b09ca173d1f2
+  - baseNodeGuid: a36bd6df-8669-4335-a05f-a4cb9ee0bacb
+    portName: What have you done to Hermia?
+    targetNodeGuid: 8f342315-9df5-4446-af88-e75c444a1397
+  - baseNodeGuid: 47d0ddce-0af3-4b73-a6a0-3b767e75530f
+    portName: Just like you kept Demetrius safe?
+    targetNodeGuid: 907601a4-29c4-4814-a437-099762b8efc8
+  - baseNodeGuid: 47d0ddce-0af3-4b73-a6a0-3b767e75530f
+    portName: Let her go.
+    targetNodeGuid: 51f87e59-00cb-484b-a0fc-dcc4e16ca88e
+  - baseNodeGuid: 88e05ece-37f5-42d0-8bf6-32a88383ac51
     portName: Next
-    targetNodeGuid: a1031412-c680-4d8a-b8f6-be9d2dceb6fc
-  - baseNodeGuid: 0485e08a-9333-4aaa-ba10-ac7e2f5f7b8a
+    targetNodeGuid: 47d0ddce-0af3-4b73-a6a0-3b767e75530f
+  - baseNodeGuid: b5487978-c77e-418f-8dc5-c0ce25d1bd8f
     portName: Next
-    targetNodeGuid: 5ba2c940-39d3-4f4f-ae54-976eb06d9235
-  - baseNodeGuid: 8a95c20d-f30a-4e23-a429-a3544d5862b5
+    targetNodeGuid: c23c2a43-774d-4a6b-81c2-438718c69fa1
+  - baseNodeGuid: 039e9a19-1dbf-4a55-af2c-7c3dcd16cf04
     portName: Next
-    targetNodeGuid: 0485e08a-9333-4aaa-ba10-ac7e2f5f7b8a
-  - baseNodeGuid: 5ba2c940-39d3-4f4f-ae54-976eb06d9235
+    targetNodeGuid: b5487978-c77e-418f-8dc5-c0ce25d1bd8f
+  - baseNodeGuid: c4af0993-3476-4902-a675-72996fd1d4b1
     portName: Next
-    targetNodeGuid: f6895bd4-83d5-4832-a6f9-8ab210bbd281
-  - baseNodeGuid: f6895bd4-83d5-4832-a6f9-8ab210bbd281
+    targetNodeGuid: c29e29be-8186-4c6a-90ad-6443601f1a34
+  - baseNodeGuid: c23c2a43-774d-4a6b-81c2-438718c69fa1
+    portName: I do not trust you
+    targetNodeGuid: c4af0993-3476-4902-a675-72996fd1d4b1
+  - baseNodeGuid: c23c2a43-774d-4a6b-81c2-438718c69fa1
+    portName: What have you done to her?
+    targetNodeGuid: 8f342315-9df5-4446-af88-e75c444a1397
+  - baseNodeGuid: 8f342315-9df5-4446-af88-e75c444a1397
     portName: Next
-    targetNodeGuid: a2388e15-50f8-4647-8bee-d4c74b997b18
-  - baseNodeGuid: a2388e15-50f8-4647-8bee-d4c74b997b18
-    portName: Me too.
-    targetNodeGuid: ee48b342-30bc-4494-b20d-33d441d5f5ae
-  - baseNodeGuid: a2388e15-50f8-4647-8bee-d4c74b997b18
-    portName: It never is easy.
-    targetNodeGuid: ee48b342-30bc-4494-b20d-33d441d5f5ae
-  - baseNodeGuid: ee48b342-30bc-4494-b20d-33d441d5f5ae
+    targetNodeGuid: 88e05ece-37f5-42d0-8bf6-32a88383ac51
+  - baseNodeGuid: 8c346297-c7e8-477e-92d6-9a8c8b2e4316
+    portName: True
+    targetNodeGuid: ba012d95-4cba-4c3e-9258-a4e4c5de0e68
+  - baseNodeGuid: 8c346297-c7e8-477e-92d6-9a8c8b2e4316
+    portName: False
+    targetNodeGuid: e4cedf02-cfd7-40c1-b30d-f4b0b68e3ed1
+  - baseNodeGuid: e4cedf02-cfd7-40c1-b30d-f4b0b68e3ed1
     portName: Next
-    targetNodeGuid: cca14bc3-92b2-4bef-810a-3cc79b5ccb6a
-  - baseNodeGuid: cca14bc3-92b2-4bef-810a-3cc79b5ccb6a
-    portName: Now you let us go.
-    targetNodeGuid: d12a4c45-894b-48ba-818f-d0939ffd9068
-  - baseNodeGuid: cca14bc3-92b2-4bef-810a-3cc79b5ccb6a
-    portName: Let me talk to Lysander.
-    targetNodeGuid: ba8d4967-1e71-418c-b3dc-7e56ed143be9
-  - baseNodeGuid: d12a4c45-894b-48ba-818f-d0939ffd9068
+    targetNodeGuid: d592f58b-f89d-4c44-ae92-29b733c06b62
+  - baseNodeGuid: d592f58b-f89d-4c44-ae92-29b733c06b62
     portName: Next
-    targetNodeGuid: c9fd84ab-6291-4761-a55e-1f1cba2ae578
-  - baseNodeGuid: c9fd84ab-6291-4761-a55e-1f1cba2ae578
+    targetNodeGuid: d48316bc-add0-43fd-bacc-d7e094660759
+  - baseNodeGuid: d48316bc-add0-43fd-bacc-d7e094660759
     portName: Next
-    targetNodeGuid: 717f0aea-e066-4bcf-b3c4-1dab12b39191
-  - baseNodeGuid: 717f0aea-e066-4bcf-b3c4-1dab12b39191
+    targetNodeGuid: bc5f3141-c7da-421d-b138-22f53f2527e3
+  - baseNodeGuid: ba012d95-4cba-4c3e-9258-a4e4c5de0e68
     portName: Next
-    targetNodeGuid: f1eab69a-5538-4a09-bdda-fa0a1c5d1acf
-  - baseNodeGuid: 22fde04f-8e42-44fd-b552-89e5feae5c95
+    targetNodeGuid: 1eeb1759-8cce-4272-bb55-5a44f5a4db00
+  - baseNodeGuid: e82a6e47-0161-48d2-b6cf-b19d28998847
     portName: Next
-    targetNodeGuid: 5f738b37-4764-40d1-b18b-978b6aa86eb0
-  - baseNodeGuid: 5f738b37-4764-40d1-b18b-978b6aa86eb0
-    portName: Let me talk to Lysander.
-    targetNodeGuid: ba8d4967-1e71-418c-b3dc-7e56ed143be9
-  - baseNodeGuid: f1eab69a-5538-4a09-bdda-fa0a1c5d1acf
+    targetNodeGuid: c4239827-d813-4bd7-a0c5-b729507b1e40
+  - baseNodeGuid: c4239827-d813-4bd7-a0c5-b729507b1e40
     portName: Next
-    targetNodeGuid: 22fde04f-8e42-44fd-b552-89e5feae5c95
-  - baseNodeGuid: ba8d4967-1e71-418c-b3dc-7e56ed143be9
+    targetNodeGuid: 879fd2a6-865c-4a72-8cc8-beb2f02ae52a
+  - baseNodeGuid: 1eeb1759-8cce-4272-bb55-5a44f5a4db00
     portName: Next
-    targetNodeGuid: 4b51128c-ae51-46ac-ae08-54f052a80955
-  - baseNodeGuid: 4b51128c-ae51-46ac-ae08-54f052a80955
+    targetNodeGuid: e82a6e47-0161-48d2-b6cf-b19d28998847
+  - baseNodeGuid: 7dfc08da-491b-4f95-9d7f-1dac5dedfc5a
     portName: Next
-    targetNodeGuid: c37e80a9-5548-4ffc-a079-69d288a3e52d
-  - baseNodeGuid: c37e80a9-5548-4ffc-a079-69d288a3e52d
-    portName: I was?
-    targetNodeGuid: 19f38601-f3ac-4cd2-abc0-88c4d68a486d
-  - baseNodeGuid: c37e80a9-5548-4ffc-a079-69d288a3e52d
-    portName: Excuse me?
-    targetNodeGuid: 19f38601-f3ac-4cd2-abc0-88c4d68a486d
-  - baseNodeGuid: 19f38601-f3ac-4cd2-abc0-88c4d68a486d
+    targetNodeGuid: 8be8d95a-d04a-451c-b9cf-ee20864d5f5e
+  - baseNodeGuid: 879fd2a6-865c-4a72-8cc8-beb2f02ae52a
     portName: Next
-    targetNodeGuid: 29387982-4481-4626-8b9e-9951676e3579
-  - baseNodeGuid: 29387982-4481-4626-8b9e-9951676e3579
+    targetNodeGuid: 7dfc08da-491b-4f95-9d7f-1dac5dedfc5a
+  - baseNodeGuid: e0a00121-174f-420a-b981-5ab27f03f0ea
     portName: Next
-    targetNodeGuid: 9d384173-4b93-454f-90f8-d305937d6d42
-  - baseNodeGuid: 9d384173-4b93-454f-90f8-d305937d6d42
+    targetNodeGuid: bb3b468b-f2eb-42e4-af3f-e56035834296
+  - baseNodeGuid: 8be8d95a-d04a-451c-b9cf-ee20864d5f5e
     portName: Next
-    targetNodeGuid: e4a62c47-1d6a-4b51-bd44-d1ce5194373c
-  - baseNodeGuid: e4a62c47-1d6a-4b51-bd44-d1ce5194373c
+    targetNodeGuid: e0a00121-174f-420a-b981-5ab27f03f0ea
+  - baseNodeGuid: 31a013e0-08be-411b-9fa0-439945b9c5a7
     portName: Next
-    targetNodeGuid: f9ca752e-abe7-4cf3-9afb-1100dfc44919
-  - baseNodeGuid: f9ca752e-abe7-4cf3-9afb-1100dfc44919
-    portName: He feels lonely right now.
-    targetNodeGuid: 85218988-b7f9-45dc-8e5e-59caf45e448a
-  - baseNodeGuid: f9ca752e-abe7-4cf3-9afb-1100dfc44919
-    portName: He is fine. It is just a stressful situation.
-    targetNodeGuid: a9f115f8-b13d-4cc5-b3d0-5c372b88d5ec
-  - baseNodeGuid: 85218988-b7f9-45dc-8e5e-59caf45e448a
+    targetNodeGuid: 2f0f7191-d15d-474d-ac9c-764478f0425c
+  - baseNodeGuid: 2f0f7191-d15d-474d-ac9c-764478f0425c
     portName: Next
-    targetNodeGuid: 6569d429-de14-4180-b4f4-bf0d609484eb
-  - baseNodeGuid: 6569d429-de14-4180-b4f4-bf0d609484eb
+    targetNodeGuid: 740dcdd0-db58-4edd-9e96-12ec7568a6ff
+  - baseNodeGuid: 740dcdd0-db58-4edd-9e96-12ec7568a6ff
+    portName: Trust him to do the right thing.
+    targetNodeGuid: 146e56c6-9dfa-491b-b6cf-817f2a51d9a7
+  - baseNodeGuid: 740dcdd0-db58-4edd-9e96-12ec7568a6ff
+    portName: What is the worst thing that could happen?
+    targetNodeGuid: 8c346297-c7e8-477e-92d6-9a8c8b2e4316
+  - baseNodeGuid: 740dcdd0-db58-4edd-9e96-12ec7568a6ff
+    portName: You told me that we need to trust each other.
+    targetNodeGuid: d83071ba-3f9f-4592-850e-8c99caf1eba8
+  - baseNodeGuid: 740dcdd0-db58-4edd-9e96-12ec7568a6ff
+    portName: Just do it.
+    targetNodeGuid: 563f3686-3de0-4afa-b6ec-472cf7aa4c9d
+  - baseNodeGuid: 146e56c6-9dfa-491b-b6cf-817f2a51d9a7
     portName: Next
-    targetNodeGuid: ec450ede-3d86-457e-ad74-2c2aed223b45
+    targetNodeGuid: 8c346297-c7e8-477e-92d6-9a8c8b2e4316
+  - baseNodeGuid: d83071ba-3f9f-4592-850e-8c99caf1eba8
+    portName: Next
+    targetNodeGuid: 146e56c6-9dfa-491b-b6cf-817f2a51d9a7
+  - baseNodeGuid: 563f3686-3de0-4afa-b6ec-472cf7aa4c9d
+    portName: Next
+    targetNodeGuid: 8c346297-c7e8-477e-92d6-9a8c8b2e4316
   - baseNodeGuid: ec450ede-3d86-457e-ad74-2c2aed223b45
     portName: Do you think he does not notice?
     targetNodeGuid: f3aff933-2e73-4eee-94b2-210a6f27be75
@@ -343,12 +319,6 @@ MonoBehaviour:
   - baseNodeGuid: f3aff933-2e73-4eee-94b2-210a6f27be75
     portName: Humans need real human connection.
     targetNodeGuid: 4c2a9092-363c-4e3d-91c0-9bd6b873d44c
-  - baseNodeGuid: a9f115f8-b13d-4cc5-b3d0-5c372b88d5ec
-    portName: Next
-    targetNodeGuid: 4f52cfed-4ea3-495c-8d70-8b2fafc48525
-  - baseNodeGuid: 4f52cfed-4ea3-495c-8d70-8b2fafc48525
-    portName: Next
-    targetNodeGuid: 6569d429-de14-4180-b4f4-bf0d609484eb
   - baseNodeGuid: 5fbdf9dd-1442-410b-8e1d-f33a5c43d7bc
     portName: You cannot fool him.
     targetNodeGuid: f2e19a2e-ff0d-4c66-9482-8662d54b2178
@@ -412,9 +382,6 @@ MonoBehaviour:
   - baseNodeGuid: 0be53ccf-bb73-4bcd-b293-6b90673e7b4b
     portName: Next
     targetNodeGuid: 31a013e0-08be-411b-9fa0-439945b9c5a7
-  - baseNodeGuid: 31a013e0-08be-411b-9fa0-439945b9c5a7
-    portName: Next
-    targetNodeGuid: 2f0f7191-d15d-474d-ac9c-764478f0425c
   - baseNodeGuid: 15b91081-1d61-460b-a68c-59f371cb09f7
     portName: Next
     targetNodeGuid: 31a013e0-08be-411b-9fa0-439945b9c5a7
@@ -436,99 +403,99 @@ MonoBehaviour:
   - baseNodeGuid: 06ae9a81-8a51-4c16-be86-0bfbba5f0f13
     portName: Don't make it worse.
     targetNodeGuid: 31a013e0-08be-411b-9fa0-439945b9c5a7
-  - baseNodeGuid: 2f0f7191-d15d-474d-ac9c-764478f0425c
+  - baseNodeGuid: f1eab69a-5538-4a09-bdda-fa0a1c5d1acf
     portName: Next
-    targetNodeGuid: 740dcdd0-db58-4edd-9e96-12ec7568a6ff
-  - baseNodeGuid: 740dcdd0-db58-4edd-9e96-12ec7568a6ff
-    portName: Trust him to do the right thing.
-    targetNodeGuid: 146e56c6-9dfa-491b-b6cf-817f2a51d9a7
-  - baseNodeGuid: 740dcdd0-db58-4edd-9e96-12ec7568a6ff
-    portName: What is the worst thing that could happen?
-    targetNodeGuid: 8c346297-c7e8-477e-92d6-9a8c8b2e4316
-  - baseNodeGuid: 740dcdd0-db58-4edd-9e96-12ec7568a6ff
-    portName: You told me that we need to trust each other.
-    targetNodeGuid: d83071ba-3f9f-4592-850e-8c99caf1eba8
-  - baseNodeGuid: 740dcdd0-db58-4edd-9e96-12ec7568a6ff
-    portName: Just do it.
-    targetNodeGuid: 563f3686-3de0-4afa-b6ec-472cf7aa4c9d
-  - baseNodeGuid: 8c346297-c7e8-477e-92d6-9a8c8b2e4316
-    portName: True
-    targetNodeGuid: ba012d95-4cba-4c3e-9258-a4e4c5de0e68
-  - baseNodeGuid: 8c346297-c7e8-477e-92d6-9a8c8b2e4316
-    portName: False
-    targetNodeGuid: e4cedf02-cfd7-40c1-b30d-f4b0b68e3ed1
-  - baseNodeGuid: 146e56c6-9dfa-491b-b6cf-817f2a51d9a7
+    targetNodeGuid: 22fde04f-8e42-44fd-b552-89e5feae5c95
+  - baseNodeGuid: 85218988-b7f9-45dc-8e5e-59caf45e448a
     portName: Next
-    targetNodeGuid: 8c346297-c7e8-477e-92d6-9a8c8b2e4316
-  - baseNodeGuid: d83071ba-3f9f-4592-850e-8c99caf1eba8
+    targetNodeGuid: 6569d429-de14-4180-b4f4-bf0d609484eb
+  - baseNodeGuid: 6569d429-de14-4180-b4f4-bf0d609484eb
     portName: Next
-    targetNodeGuid: 146e56c6-9dfa-491b-b6cf-817f2a51d9a7
-  - baseNodeGuid: 563f3686-3de0-4afa-b6ec-472cf7aa4c9d
+    targetNodeGuid: ec450ede-3d86-457e-ad74-2c2aed223b45
+  - baseNodeGuid: a9f115f8-b13d-4cc5-b3d0-5c372b88d5ec
     portName: Next
-    targetNodeGuid: 8c346297-c7e8-477e-92d6-9a8c8b2e4316
-  - baseNodeGuid: e4cedf02-cfd7-40c1-b30d-f4b0b68e3ed1
+    targetNodeGuid: 4f52cfed-4ea3-495c-8d70-8b2fafc48525
+  - baseNodeGuid: 4f52cfed-4ea3-495c-8d70-8b2fafc48525
     portName: Next
-    targetNodeGuid: d592f58b-f89d-4c44-ae92-29b733c06b62
-  - baseNodeGuid: d592f58b-f89d-4c44-ae92-29b733c06b62
+    targetNodeGuid: 6569d429-de14-4180-b4f4-bf0d609484eb
+  - baseNodeGuid: d12a4c45-894b-48ba-818f-d0939ffd9068
     portName: Next
-    targetNodeGuid: d48316bc-add0-43fd-bacc-d7e094660759
-  - baseNodeGuid: d48316bc-add0-43fd-bacc-d7e094660759
+    targetNodeGuid: c9fd84ab-6291-4761-a55e-1f1cba2ae578
+  - baseNodeGuid: c9fd84ab-6291-4761-a55e-1f1cba2ae578
     portName: Next
-    targetNodeGuid: bc5f3141-c7da-421d-b138-22f53f2527e3
-  - baseNodeGuid: ba012d95-4cba-4c3e-9258-a4e4c5de0e68
+    targetNodeGuid: 717f0aea-e066-4bcf-b3c4-1dab12b39191
+  - baseNodeGuid: 717f0aea-e066-4bcf-b3c4-1dab12b39191
     portName: Next
-    targetNodeGuid: 1eeb1759-8cce-4272-bb55-5a44f5a4db00
-  - baseNodeGuid: e82a6e47-0161-48d2-b6cf-b19d28998847
+    targetNodeGuid: f1eab69a-5538-4a09-bdda-fa0a1c5d1acf
+  - baseNodeGuid: 22fde04f-8e42-44fd-b552-89e5feae5c95
     portName: Next
-    targetNodeGuid: c4239827-d813-4bd7-a0c5-b729507b1e40
-  - baseNodeGuid: c4239827-d813-4bd7-a0c5-b729507b1e40
+    targetNodeGuid: 5f738b37-4764-40d1-b18b-978b6aa86eb0
+  - baseNodeGuid: 5f738b37-4764-40d1-b18b-978b6aa86eb0
+    portName: Let me talk to Lysander.
+    targetNodeGuid: ba8d4967-1e71-418c-b3dc-7e56ed143be9
+  - baseNodeGuid: ba8d4967-1e71-418c-b3dc-7e56ed143be9
     portName: Next
-    targetNodeGuid: 879fd2a6-865c-4a72-8cc8-beb2f02ae52a
-  - baseNodeGuid: 1eeb1759-8cce-4272-bb55-5a44f5a4db00
+    targetNodeGuid: 4b51128c-ae51-46ac-ae08-54f052a80955
+  - baseNodeGuid: 4b51128c-ae51-46ac-ae08-54f052a80955
     portName: Next
-    targetNodeGuid: e82a6e47-0161-48d2-b6cf-b19d28998847
-  - baseNodeGuid: 7dfc08da-491b-4f95-9d7f-1dac5dedfc5a
+    targetNodeGuid: c37e80a9-5548-4ffc-a079-69d288a3e52d
+  - baseNodeGuid: c37e80a9-5548-4ffc-a079-69d288a3e52d
+    portName: I was?
+    targetNodeGuid: 19f38601-f3ac-4cd2-abc0-88c4d68a486d
+  - baseNodeGuid: c37e80a9-5548-4ffc-a079-69d288a3e52d
+    portName: Excuse me?
+    targetNodeGuid: 19f38601-f3ac-4cd2-abc0-88c4d68a486d
+  - baseNodeGuid: 19f38601-f3ac-4cd2-abc0-88c4d68a486d
     portName: Next
-    targetNodeGuid: 8be8d95a-d04a-451c-b9cf-ee20864d5f5e
-  - baseNodeGuid: 879fd2a6-865c-4a72-8cc8-beb2f02ae52a
+    targetNodeGuid: 29387982-4481-4626-8b9e-9951676e3579
+  - baseNodeGuid: 29387982-4481-4626-8b9e-9951676e3579
     portName: Next
-    targetNodeGuid: 7dfc08da-491b-4f95-9d7f-1dac5dedfc5a
-  - baseNodeGuid: e0a00121-174f-420a-b981-5ab27f03f0ea
+    targetNodeGuid: 9d384173-4b93-454f-90f8-d305937d6d42
+  - baseNodeGuid: 9d384173-4b93-454f-90f8-d305937d6d42
     portName: Next
-    targetNodeGuid: bb3b468b-f2eb-42e4-af3f-e56035834296
-  - baseNodeGuid: 8be8d95a-d04a-451c-b9cf-ee20864d5f5e
+    targetNodeGuid: e4a62c47-1d6a-4b51-bd44-d1ce5194373c
+  - baseNodeGuid: e4a62c47-1d6a-4b51-bd44-d1ce5194373c
     portName: Next
-    targetNodeGuid: e0a00121-174f-420a-b981-5ab27f03f0ea
-  - baseNodeGuid: a36bd6df-8669-4335-a05f-a4cb9ee0bacb
-    portName: What have you done to Hermia?
-    targetNodeGuid: 8f342315-9df5-4446-af88-e75c444a1397
-  - baseNodeGuid: 47d0ddce-0af3-4b73-a6a0-3b767e75530f
-    portName: Just like you kept Demetrius safe?
-    targetNodeGuid: 907601a4-29c4-4814-a437-099762b8efc8
-  - baseNodeGuid: 47d0ddce-0af3-4b73-a6a0-3b767e75530f
-    portName: Let her go.
-    targetNodeGuid: 51f87e59-00cb-484b-a0fc-dcc4e16ca88e
-  - baseNodeGuid: 88e05ece-37f5-42d0-8bf6-32a88383ac51
+    targetNodeGuid: f9ca752e-abe7-4cf3-9afb-1100dfc44919
+  - baseNodeGuid: f9ca752e-abe7-4cf3-9afb-1100dfc44919
+    portName: He feels lonely right now.
+    targetNodeGuid: 85218988-b7f9-45dc-8e5e-59caf45e448a
+  - baseNodeGuid: f9ca752e-abe7-4cf3-9afb-1100dfc44919
+    portName: He is fine. It is just a stressful situation.
+    targetNodeGuid: a9f115f8-b13d-4cc5-b3d0-5c372b88d5ec
+  - baseNodeGuid: 0485e08a-9333-4aaa-ba10-ac7e2f5f7b8a
     portName: Next
-    targetNodeGuid: 47d0ddce-0af3-4b73-a6a0-3b767e75530f
-  - baseNodeGuid: b5487978-c77e-418f-8dc5-c0ce25d1bd8f
+    targetNodeGuid: 5ba2c940-39d3-4f4f-ae54-976eb06d9235
+  - baseNodeGuid: 8a95c20d-f30a-4e23-a429-a3544d5862b5
     portName: Next
-    targetNodeGuid: c23c2a43-774d-4a6b-81c2-438718c69fa1
-  - baseNodeGuid: 039e9a19-1dbf-4a55-af2c-7c3dcd16cf04
+    targetNodeGuid: 0485e08a-9333-4aaa-ba10-ac7e2f5f7b8a
+  - baseNodeGuid: 5ba2c940-39d3-4f4f-ae54-976eb06d9235
     portName: Next
-    targetNodeGuid: b5487978-c77e-418f-8dc5-c0ce25d1bd8f
-  - baseNodeGuid: c4af0993-3476-4902-a675-72996fd1d4b1
+    targetNodeGuid: f6895bd4-83d5-4832-a6f9-8ab210bbd281
+  - baseNodeGuid: f6895bd4-83d5-4832-a6f9-8ab210bbd281
     portName: Next
-    targetNodeGuid: c29e29be-8186-4c6a-90ad-6443601f1a34
-  - baseNodeGuid: c23c2a43-774d-4a6b-81c2-438718c69fa1
-    portName: I do not trust you
-    targetNodeGuid: c4af0993-3476-4902-a675-72996fd1d4b1
-  - baseNodeGuid: c23c2a43-774d-4a6b-81c2-438718c69fa1
-    portName: What have you done to her?
-    targetNodeGuid: 8f342315-9df5-4446-af88-e75c444a1397
-  - baseNodeGuid: 8f342315-9df5-4446-af88-e75c444a1397
+    targetNodeGuid: a2388e15-50f8-4647-8bee-d4c74b997b18
+  - baseNodeGuid: a2388e15-50f8-4647-8bee-d4c74b997b18
+    portName: Me too.
+    targetNodeGuid: ee48b342-30bc-4494-b20d-33d441d5f5ae
+  - baseNodeGuid: a2388e15-50f8-4647-8bee-d4c74b997b18
+    portName: It never is easy.
+    targetNodeGuid: ee48b342-30bc-4494-b20d-33d441d5f5ae
+  - baseNodeGuid: ee48b342-30bc-4494-b20d-33d441d5f5ae
     portName: Next
-    targetNodeGuid: 88e05ece-37f5-42d0-8bf6-32a88383ac51
+    targetNodeGuid: cca14bc3-92b2-4bef-810a-3cc79b5ccb6a
+  - baseNodeGuid: cca14bc3-92b2-4bef-810a-3cc79b5ccb6a
+    portName: Now you let us go.
+    targetNodeGuid: d12a4c45-894b-48ba-818f-d0939ffd9068
+  - baseNodeGuid: cca14bc3-92b2-4bef-810a-3cc79b5ccb6a
+    portName: Let me talk to Lysander.
+    targetNodeGuid: ba8d4967-1e71-418c-b3dc-7e56ed143be9
+  - baseNodeGuid: c45450a5-4240-494c-90c1-44ef54bbbd36
+    portName: Next
+    targetNodeGuid: 8a95c20d-f30a-4e23-a429-a3544d5862b5
+  - baseNodeGuid: abef740d-6886-4db5-8e40-c2186cfbebeb
+    portName: Next
+    targetNodeGuid: 2dccffbf-eaf3-4f4d-9da2-38625cb3af87
   - baseNodeGuid: a432dbfc-edbe-448b-9e4e-91a7172c509f
     portName: Next
     targetNodeGuid: eed2f506-49e4-43fa-b681-a5f51cf23aa4
@@ -538,9 +505,24 @@ MonoBehaviour:
   - baseNodeGuid: eed2f506-49e4-43fa-b681-a5f51cf23aa4
     portName: Never.
     targetNodeGuid: c45450a5-4240-494c-90c1-44ef54bbbd36
-  - baseNodeGuid: 52ab62a0-9ff6-47e2-923a-878a2906b5da
-    portName: Everyone does.
-    targetNodeGuid: c5b6cb2a-b5bb-444f-883f-c3767716d0c7
+  - baseNodeGuid: 2dccffbf-eaf3-4f4d-9da2-38625cb3af87
+    portName: Next
+    targetNodeGuid: a8b80d41-7d02-4e38-8a28-c70f8e74fb1f
+  - baseNodeGuid: a8b80d41-7d02-4e38-8a28-c70f8e74fb1f
+    portName: Next
+    targetNodeGuid: 51729198-5bb5-43ad-b4b1-3d05ff040068
+  - baseNodeGuid: 51729198-5bb5-43ad-b4b1-3d05ff040068
+    portName: Next
+    targetNodeGuid: b84df075-1843-4d5f-ba3e-fcb4f875b045
+  - baseNodeGuid: b84df075-1843-4d5f-ba3e-fcb4f875b045
+    portName: Next
+    targetNodeGuid: fb1a1feb-0570-4298-8f08-7105e75968f7
+  - baseNodeGuid: fb1a1feb-0570-4298-8f08-7105e75968f7
+    portName: Next
+    targetNodeGuid: 8fef3066-e337-4a3a-bad1-4ad192f9510a
+  - baseNodeGuid: 8fef3066-e337-4a3a-bad1-4ad192f9510a
+    portName: Next
+    targetNodeGuid: a432dbfc-edbe-448b-9e4e-91a7172c509f
   - baseNodeGuid: 3846a0d2-98fc-4d7e-9901-aeaf11fece5b
     portName: Next
     targetNodeGuid: 69037dfd-5d01-4410-8058-3dca21bedd8c
@@ -550,6 +532,24 @@ MonoBehaviour:
   - baseNodeGuid: 69037dfd-5d01-4410-8058-3dca21bedd8c
     portName: Next
     targetNodeGuid: 2db28edd-02d0-40cc-b069-c66cd6e3743c
+  - baseNodeGuid: cd32e155-8692-4a7d-be47-7866d4802807
+    portName: Next
+    targetNodeGuid: a432dbfc-edbe-448b-9e4e-91a7172c509f
+  - baseNodeGuid: c0904506-a8d5-4104-bf07-90817853dcf7
+    portName: Next
+    targetNodeGuid: 695704d6-6234-4e83-a98a-b09ca173d1f2
+  - baseNodeGuid: 695704d6-6234-4e83-a98a-b09ca173d1f2
+    portName: Next
+    targetNodeGuid: a1031412-c680-4d8a-b8f6-be9d2dceb6fc
+  - baseNodeGuid: 34474fc9-6ddb-4a50-ab88-2180379fc0ce
+    portName: Next
+    targetNodeGuid: e7cf2fd8-ad0f-4245-98d9-18d1b8da2e5c
+  - baseNodeGuid: a7d6843a-297c-47b7-8073-baec816c9db9
+    portName: Next
+    targetNodeGuid: 34474fc9-6ddb-4a50-ab88-2180379fc0ce
+  - baseNodeGuid: 13bc9707-c14d-42d6-8475-733026f9832f
+    portName: Next
+    targetNodeGuid: a7d6843a-297c-47b7-8073-baec816c9db9
   dialogNodeData:
   - Guid: dd62aaad-7f9e-4c29-a93b-947c89756209
     DialogTitle: START

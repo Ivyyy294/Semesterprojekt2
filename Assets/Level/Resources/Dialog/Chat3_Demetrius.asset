@@ -1050,7 +1050,7 @@ MonoBehaviour:
     DialogTitle: NpcNode
     Position: {x: 660.8, y: 1266.3999}
     Type: 1
-    DialogText: I am sorry about yesterday.
+    DialogText: I am sorry how it went yesterday.
     Image: {fileID: 0}
     customRespondTime: 0
     GameEvent: {fileID: 0}
@@ -1066,7 +1066,7 @@ MonoBehaviour:
     DialogTitle: NpcNode
     Position: {x: 916, y: 1266.3999}
     Type: 1
-    DialogText: I know I should have waited.
+    DialogText: But I had to tell you.
     Image: {fileID: 0}
     customRespondTime: 0
     GameEvent: {fileID: 0}
@@ -1438,22 +1438,6 @@ MonoBehaviour:
     Position: {x: 7680, y: 845.60004}
     Type: 1
     DialogText: Is it Lysander? Or Hermia? Are they the reason?
-    Image: {fileID: 0}
-    customRespondTime: 0
-    GameEvent: {fileID: 0}
-    BlackBoardProperty:
-      name: 
-      guid: 
-      comparisonTyp: 0
-      iVal: 0
-    audioAsset: {fileID: 0}
-    emotion: 12
-    editTyp: 0
-  - Guid: 645c509f-218d-44e4-a575-b34f16b6d8b1
-    DialogTitle: ChoiceNode
-    Position: {x: 1219.2, y: 1262.3999}
-    Type: 0
-    DialogText: hello world
     Image: {fileID: 0}
     customRespondTime: 0
     GameEvent: {fileID: 0}
@@ -2350,6 +2334,22 @@ MonoBehaviour:
     Position: {x: 16772.8, y: 325.6}
     Type: 6
     DialogText: 
+    Image: {fileID: 0}
+    customRespondTime: 0
+    GameEvent: {fileID: 0}
+    BlackBoardProperty:
+      name: 
+      guid: 
+      comparisonTyp: 0
+      iVal: 0
+    audioAsset: {fileID: 0}
+    emotion: 12
+    editTyp: 0
+  - Guid: 645c509f-218d-44e4-a575-b34f16b6d8b1
+    DialogTitle: ChoiceNode
+    Position: {x: 1214.4, y: 1266.3999}
+    Type: 0
+    DialogText: hello world
     Image: {fileID: 0}
     customRespondTime: 0
     GameEvent: {fileID: 0}

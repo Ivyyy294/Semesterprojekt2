@@ -146,9 +146,6 @@ MonoBehaviour:
   - baseNodeGuid: 846bdb2b-0367-4010-a800-17baec48f3c3
     portName: Next
     targetNodeGuid: f761d927-1a30-4d94-8b96-2c1c6db76462
-  - baseNodeGuid: 01f137fe-53d0-4651-90a6-01768da51246
-    portName: Next
-    targetNodeGuid: 267e925c-625c-45fe-990e-b8096c108ecd
   - baseNodeGuid: 66ba4f2b-cb02-4c3b-b640-6a29c19d4c64
     portName: Next
     targetNodeGuid: 905c4bbb-9b3e-4754-b0a2-621742dbd448
@@ -827,6 +824,9 @@ MonoBehaviour:
   - baseNodeGuid: 673c4c30-060f-4e6c-bbac-43ac84cd078c
     portName: Next
     targetNodeGuid: b5a4ac14-1b84-46e4-a629-aaf8a347b25a
+  - baseNodeGuid: 01f137fe-53d0-4651-90a6-01768da51246
+    portName: Next
+    targetNodeGuid: 267e925c-625c-45fe-990e-b8096c108ecd
   - baseNodeGuid: 267e925c-625c-45fe-990e-b8096c108ecd
     portName: Next
     targetNodeGuid: 271c000a-6a1e-4152-9f76-ad53d4e21452
@@ -854,30 +854,21 @@ MonoBehaviour:
   - baseNodeGuid: 77afa6ba-b276-4b55-855a-2f82aef1ad9a
     portName: Next
     targetNodeGuid: d9263b28-9efc-4879-b774-9557a99b9fd1
-  - baseNodeGuid: c4dfb633-268f-4751-99c6-d40c525f26c8
+  - baseNodeGuid: d9263b28-9efc-4879-b774-9557a99b9fd1
     portName: Next
-    targetNodeGuid: 5f474cb3-c088-4c4a-a4e1-efe26141192b
+    targetNodeGuid: 2f0bbafe-de15-4e0a-a290-15cb01f11936
   - baseNodeGuid: ffc03732-63ae-4f8b-8fb6-ab3429c99d98
     portName: Next
     targetNodeGuid: c4dfb633-268f-4751-99c6-d40c525f26c8
+  - baseNodeGuid: c4dfb633-268f-4751-99c6-d40c525f26c8
+    portName: Next
+    targetNodeGuid: 5f474cb3-c088-4c4a-a4e1-efe26141192b
   - baseNodeGuid: 5f474cb3-c088-4c4a-a4e1-efe26141192b
     portName: Next
     targetNodeGuid: 82c6c699-d400-4852-a065-6cdde62dde48
   - baseNodeGuid: 82c6c699-d400-4852-a065-6cdde62dde48
     portName: Next
     targetNodeGuid: 45d7bc0a-98c0-40fc-93fb-00550f843f40
-  - baseNodeGuid: 45d7bc0a-98c0-40fc-93fb-00550f843f40
-    portName: What are you up to?
-    targetNodeGuid: 66ba4f2b-cb02-4c3b-b640-6a29c19d4c64
-  - baseNodeGuid: 45d7bc0a-98c0-40fc-93fb-00550f843f40
-    portName: Thanks ;)
-    targetNodeGuid: 66ba4f2b-cb02-4c3b-b640-6a29c19d4c64
-  - baseNodeGuid: d9263b28-9efc-4879-b774-9557a99b9fd1
-    portName: Next
-    targetNodeGuid: 2f0bbafe-de15-4e0a-a290-15cb01f11936
-  - baseNodeGuid: 2f0bbafe-de15-4e0a-a290-15cb01f11936
-    portName: Yeah it's strange.
-    targetNodeGuid: 11d64fdb-7791-47e1-ba48-2902fb589984
   - baseNodeGuid: fba2aaf3-ce8a-41a0-b431-567abaf90f41
     portName: Next
     targetNodeGuid: 729fd3f1-9d54-4f26-96ba-5b828070a23f
@@ -896,11 +887,20 @@ MonoBehaviour:
   - baseNodeGuid: 011149b0-e6a5-4ed0-a130-6f81b2ca5ad6
     portName: Next
     targetNodeGuid: 66ba4f2b-cb02-4c3b-b640-6a29c19d4c64
+  - baseNodeGuid: 2f0bbafe-de15-4e0a-a290-15cb01f11936
+    portName: Yeah it's strange.
+    targetNodeGuid: 11d64fdb-7791-47e1-ba48-2902fb589984
   - baseNodeGuid: 11d64fdb-7791-47e1-ba48-2902fb589984
     portName: Next
     targetNodeGuid: b3d313e8-9731-4857-b559-660430a748bb
   - baseNodeGuid: b3d313e8-9731-4857-b559-660430a748bb
     portName: Next
+    targetNodeGuid: 66ba4f2b-cb02-4c3b-b640-6a29c19d4c64
+  - baseNodeGuid: 45d7bc0a-98c0-40fc-93fb-00550f843f40
+    portName: What are you up to?
+    targetNodeGuid: 66ba4f2b-cb02-4c3b-b640-6a29c19d4c64
+  - baseNodeGuid: 45d7bc0a-98c0-40fc-93fb-00550f843f40
+    portName: Thanks ;)
     targetNodeGuid: 66ba4f2b-cb02-4c3b-b640-6a29c19d4c64
   dialogNodeData:
   - Guid: ac7acd63-894e-4a46-be96-2c9c8b18f76e
@@ -3011,8 +3011,8 @@ MonoBehaviour:
     BlackBoardProperty:
       name: LysanderWhatCameUp
       guid: 89b231de-1acd-483b-9677-654659bdca67
-      comparisonTyp: 0
-      iVal: 1
+      comparisonTyp: 1
+      iVal: 0
     audioAsset: {fileID: 0}
     emotion: 12
     editTyp: 0
