@@ -429,30 +429,30 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8562819595004917974, guid: a67bfb28ca8b7e048a7e105a5dbc960c, type: 3}
       propertyPath: subtitles.Array.data[0].text
-      value: 'Helene: "Me and my friends were running. We took the first chance to
+      value: 'Helena: "Me and my friends were running. We took the first chance to
         get off of this godforsaken planet."'
       objectReference: {fileID: 0}
     - target: {fileID: 8562819595004917974, guid: a67bfb28ca8b7e048a7e105a5dbc960c, type: 3}
       propertyPath: subtitles.Array.data[1].text
-      value: 'Helene: "I didn''t even know where we were heading to and  honestly
+      value: 'Helena: "I didn''t even know where we were heading to and  honestly
         I also didn''t really care."'
       objectReference: {fileID: 0}
     - target: {fileID: 8562819595004917974, guid: a67bfb28ca8b7e048a7e105a5dbc960c, type: 3}
       propertyPath: subtitles.Array.data[2].text
-      value: 'Helene: "Everyone had their own reasons to leave. "'
+      value: 'Helena: "Everyone had their own reasons to leave. "'
       objectReference: {fileID: 0}
     - target: {fileID: 8562819595004917974, guid: a67bfb28ca8b7e048a7e105a5dbc960c, type: 3}
       propertyPath: subtitles.Array.data[3].text
-      value: 'Helene: "This was mine. My dad. Once I was the star of our family and
+      value: 'Helena: "This was mine. My dad. Once I was the star of our family and
         now just  everything he despised."'
       objectReference: {fileID: 0}
     - target: {fileID: 8562819595004917974, guid: a67bfb28ca8b7e048a7e105a5dbc960c, type: 3}
       propertyPath: subtitles.Array.data[4].text
-      value: "Helene: \"I\u2019ve had enough of being a pawn in his plans.\""
+      value: "Helena: \"I\u2019ve had enough of being a pawn in his plans.\""
       objectReference: {fileID: 0}
     - target: {fileID: 8562819595004917974, guid: a67bfb28ca8b7e048a7e105a5dbc960c, type: 3}
       propertyPath: subtitles.Array.data[5].text
-      value: "Helene: \"Was this the right thing to do? I don\u2019t know. Only time
+      value: "Helena: \"Was this the right thing to do? I don\u2019t know. Only time
         will tell.\""
       objectReference: {fileID: 0}
     - target: {fileID: 8562819595004917974, guid: a67bfb28ca8b7e048a7e105a5dbc960c, type: 3}
