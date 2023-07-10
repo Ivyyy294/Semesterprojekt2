@@ -13,6 +13,8 @@ MonoBehaviour:
   m_Name: VL_HermiaWarning
   m_EditorClassIdentifier: 
   clipData:
+  - clip: {fileID: 8300000, guid: d8791bbd0bd32a44281cf8c37f2bd8e8, type: 3}
+    subtitle: Hectic rumbling in the ventilation shaft
   - clip: {fileID: 8300000, guid: 4187e42aa64044a498aefe4138dd9652, type: 3}
     subtitle: 'Hermia: "Helena, are you awake? The key is Lysander! He can control
       PUCK! You need to convince him to turn them off!"'
@@ -23,6 +25,6 @@ MonoBehaviour:
   loop: 0
   volume: {x: 1, y: 1}
   pitch: {x: 1, y: 1}
-  spatial: 0
+  spatial: 1
   minDistance: 0.5
   maxDistance: 500
