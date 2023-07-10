@@ -263,15 +263,6 @@ MonoBehaviour:
   - baseNodeGuid: 4cdd0bfc-8c35-4764-9c17-eda165f4aeed
     portName: Next
     targetNodeGuid: 01701380-f2e9-47ef-832d-2c46b1406b45
-  - baseNodeGuid: 645c509f-218d-44e4-a575-b34f16b6d8b1
-    portName: It's okay...
-    targetNodeGuid: f216088f-e81a-4ce3-af7a-75462924e3f4
-  - baseNodeGuid: 645c509f-218d-44e4-a575-b34f16b6d8b1
-    portName: You freaked me out.
-    targetNodeGuid: f216088f-e81a-4ce3-af7a-75462924e3f4
-  - baseNodeGuid: 645c509f-218d-44e4-a575-b34f16b6d8b1
-    portName: I just didn't expect it.
-    targetNodeGuid: f216088f-e81a-4ce3-af7a-75462924e3f4
   - baseNodeGuid: 87eb9754-1af5-41ba-b0c4-bbacda8e9df8
     portName: Next
     targetNodeGuid: ea90e205-fbfa-4eec-8640-f2a347b5fd85
@@ -395,9 +386,6 @@ MonoBehaviour:
   - baseNodeGuid: d2ca99a9-0ebd-4c6e-a222-59a4015e3f7a
     portName: Both.
     targetNodeGuid: a4fab036-effa-4be0-9e4b-733d23933093
-  - baseNodeGuid: d2ca99a9-0ebd-4c6e-a222-59a4015e3f7a
-    portName: I am not gonna tell you.
-    targetNodeGuid: a4fab036-effa-4be0-9e4b-733d23933093
   - baseNodeGuid: a4fab036-effa-4be0-9e4b-733d23933093
     portName: Next
     targetNodeGuid: 7c19e1a6-dcb5-4e4a-94d8-bf66ec749cd4
@@ -479,6 +467,36 @@ MonoBehaviour:
   - baseNodeGuid: 9f13a1fe-01ef-4bca-bb04-6e35e57ebd6a
     portName: Next
     targetNodeGuid: 13195953-4ee4-4304-822f-2f54230804b3
+  - baseNodeGuid: 645c509f-218d-44e4-a575-b34f16b6d8b1
+    portName: It's okay...
+    targetNodeGuid: f216088f-e81a-4ce3-af7a-75462924e3f4
+  - baseNodeGuid: 645c509f-218d-44e4-a575-b34f16b6d8b1
+    portName: You freaked me out.
+    targetNodeGuid: f216088f-e81a-4ce3-af7a-75462924e3f4
+  - baseNodeGuid: 645c509f-218d-44e4-a575-b34f16b6d8b1
+    portName: I just didn't expect it.
+    targetNodeGuid: f216088f-e81a-4ce3-af7a-75462924e3f4
+  - baseNodeGuid: d2ca99a9-0ebd-4c6e-a222-59a4015e3f7a
+    portName: I am not gonna tell you.
+    targetNodeGuid: 5123de53-efff-4643-a833-4811887497db
+  - baseNodeGuid: 5123de53-efff-4643-a833-4811887497db
+    portName: Next
+    targetNodeGuid: fd7c2b54-465f-4c76-9e3b-601b14e8c073
+  - baseNodeGuid: fd7c2b54-465f-4c76-9e3b-601b14e8c073
+    portName: Next
+    targetNodeGuid: 20ea594b-279f-4826-addb-986fa4cc8b68
+  - baseNodeGuid: 20ea594b-279f-4826-addb-986fa4cc8b68
+    portName: Next
+    targetNodeGuid: 66c9a495-d61a-477d-b18c-1e88dd0a93e2
+  - baseNodeGuid: 66c9a495-d61a-477d-b18c-1e88dd0a93e2
+    portName: Next
+    targetNodeGuid: dc540677-645b-4cbe-92b2-0cb86b05d01a
+  - baseNodeGuid: dc540677-645b-4cbe-92b2-0cb86b05d01a
+    portName: Next
+    targetNodeGuid: 69ebfd4b-688d-44e6-a7ff-735ecb58ca51
+  - baseNodeGuid: 69ebfd4b-688d-44e6-a7ff-735ecb58ca51
+    portName: Next
+    targetNodeGuid: 3a1bbb5d-8ab7-433f-9d84-ca649e93eac3
   dialogNodeData:
   - Guid: 4bfba334-e23a-405d-a1e8-b7678606b4d4
     DialogTitle: NpcNode
@@ -1961,22 +1979,6 @@ MonoBehaviour:
     audioAsset: {fileID: 0}
     emotion: 12
     editTyp: 0
-  - Guid: a4fab036-effa-4be0-9e4b-733d23933093
-    DialogTitle: NpcNode
-    Position: {x: 12108, y: 1074.3999}
-    Type: 1
-    DialogText: I am glad we can still trust each other.
-    Image: {fileID: 0}
-    customRespondTime: 0
-    GameEvent: {fileID: 0}
-    BlackBoardProperty:
-      name: 
-      guid: 
-      comparisonTyp: 0
-      iVal: 0
-    audioAsset: {fileID: 0}
-    emotion: 12
-    editTyp: 0
   - Guid: 7c19e1a6-dcb5-4e4a-94d8-bf66ec749cd4
     DialogTitle: NpcNode
     Position: {x: 13799.2, y: 683.2}
@@ -2350,6 +2352,118 @@ MonoBehaviour:
     Position: {x: 1214.4, y: 1266.3999}
     Type: 0
     DialogText: hello world
+    Image: {fileID: 0}
+    customRespondTime: 0
+    GameEvent: {fileID: 0}
+    BlackBoardProperty:
+      name: 
+      guid: 
+      comparisonTyp: 0
+      iVal: 0
+    audioAsset: {fileID: 0}
+    emotion: 12
+    editTyp: 0
+  - Guid: a4fab036-effa-4be0-9e4b-733d23933093
+    DialogTitle: NpcNode
+    Position: {x: 12408.8, y: 950.4}
+    Type: 1
+    DialogText: I am glad we can still trust each other.
+    Image: {fileID: 0}
+    customRespondTime: 0
+    GameEvent: {fileID: 0}
+    BlackBoardProperty:
+      name: 
+      guid: 
+      comparisonTyp: 0
+      iVal: 0
+    audioAsset: {fileID: 0}
+    emotion: 12
+    editTyp: 0
+  - Guid: 5123de53-efff-4643-a833-4811887497db
+    DialogTitle: NpcNode
+    Position: {x: 12408.8, y: 1124}
+    Type: 1
+    DialogText: I am so sad we cannot trust each other anymore.
+    Image: {fileID: 0}
+    customRespondTime: 0
+    GameEvent: {fileID: 0}
+    BlackBoardProperty:
+      name: 
+      guid: 
+      comparisonTyp: 0
+      iVal: 0
+    audioAsset: {fileID: 0}
+    emotion: 12
+    editTyp: 0
+  - Guid: fd7c2b54-465f-4c76-9e3b-601b14e8c073
+    DialogTitle: NpcNode
+    Position: {x: 12720, y: 1124}
+    Type: 1
+    DialogText: But every relationship needs work.
+    Image: {fileID: 0}
+    customRespondTime: 0
+    GameEvent: {fileID: 0}
+    BlackBoardProperty:
+      name: 
+      guid: 
+      comparisonTyp: 0
+      iVal: 0
+    audioAsset: {fileID: 0}
+    emotion: 12
+    editTyp: 0
+  - Guid: 20ea594b-279f-4826-addb-986fa4cc8b68
+    DialogTitle: NpcNode
+    Position: {x: 12992.8, y: 1124}
+    Type: 1
+    DialogText: And you will see that we will be able to trust each other.
+    Image: {fileID: 0}
+    customRespondTime: 0
+    GameEvent: {fileID: 0}
+    BlackBoardProperty:
+      name: 
+      guid: 
+      comparisonTyp: 0
+      iVal: 0
+    audioAsset: {fileID: 0}
+    emotion: 12
+    editTyp: 0
+  - Guid: 66c9a495-d61a-477d-b18c-1e88dd0a93e2
+    DialogTitle: NpcNode
+    Position: {x: 13304, y: 1124}
+    Type: 1
+    DialogText: 'But we have time. '
+    Image: {fileID: 0}
+    customRespondTime: 0
+    GameEvent: {fileID: 0}
+    BlackBoardProperty:
+      name: 
+      guid: 
+      comparisonTyp: 0
+      iVal: 0
+    audioAsset: {fileID: 0}
+    emotion: 12
+    editTyp: 0
+  - Guid: dc540677-645b-4cbe-92b2-0cb86b05d01a
+    DialogTitle: NpcNode
+    Position: {x: 13568, y: 1124}
+    Type: 1
+    DialogText: :)
+    Image: {fileID: 0}
+    customRespondTime: 0
+    GameEvent: {fileID: 0}
+    BlackBoardProperty:
+      name: 
+      guid: 
+      comparisonTyp: 0
+      iVal: 0
+    audioAsset: {fileID: 0}
+    emotion: 12
+    editTyp: 0
+  - Guid: 69ebfd4b-688d-44e6-a7ff-735ecb58ca51
+    DialogTitle: NpcNode
+    Position: {x: 13799.2, y: 910.4}
+    Type: 1
+    DialogText: How have you been enjoying the journey so far?
     Image: {fileID: 0}
     customRespondTime: 0
     GameEvent: {fileID: 0}
