@@ -611,6 +611,10 @@ PrefabInstance:
       propertyPath: stage2.forceGoodEnding
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3743584279308914771, guid: cbc17c2b942c75242850f0bbb7667649, type: 3}
+      propertyPath: m_TagString
+      value: Night
+      objectReference: {fileID: 0}
     - target: {fileID: 3842818914751115492, guid: cbc17c2b942c75242850f0bbb7667649, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
@@ -915,6 +919,10 @@ PrefabInstance:
       propertyPath: m_TagString
       value: EnterCryo
       objectReference: {fileID: 0}
+    - target: {fileID: 7510370675989056179, guid: cbc17c2b942c75242850f0bbb7667649, type: 3}
+      propertyPath: m_TagString
+      value: Night
+      objectReference: {fileID: 0}
     - target: {fileID: 7746420725820511147, guid: cbc17c2b942c75242850f0bbb7667649, type: 3}
       propertyPath: m_LocalPosition.x
       value: 3.612
@@ -1074,6 +1082,10 @@ PrefabInstance:
     - target: {fileID: 8129480523428790044, guid: cbc17c2b942c75242850f0bbb7667649, type: 3}
       propertyPath: m_LocalPosition.z
       value: -1.56
+      objectReference: {fileID: 0}
+    - target: {fileID: 8129480523428790045, guid: cbc17c2b942c75242850f0bbb7667649, type: 3}
+      propertyPath: m_TagString
+      value: Night
       objectReference: {fileID: 0}
     - target: {fileID: 8129480523428790047, guid: cbc17c2b942c75242850f0bbb7667649, type: 3}
       propertyPath: img
