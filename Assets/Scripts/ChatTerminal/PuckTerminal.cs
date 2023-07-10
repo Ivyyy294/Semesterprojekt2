@@ -69,9 +69,13 @@ public class PuckTerminal : MonoBehaviour
 			if (buttonObjList[index].available)
 			{
 				if (currentIndex != -1)
+				{
+					buttonObjList[currentIndex].IsSelected (false);
 					buttonObjList[currentIndex].ShowChat (false);
+				}
 				
 				buttonObjList[index].ShowChat (true);
+				buttonObjList[index].IsSelected (true);
 				currentIndex = index;
 			}
 		}

@@ -13,6 +13,7 @@ public class ChatButton : MonoBehaviour
 	[SerializeField] TextMeshProUGUI ChatNameObj;
 	[SerializeField] string chatName;
 	[HideInInspector] public Button button;
+	bool isSelected = false;
 
 	public Chat GetChat() { return chat;}
 
@@ -21,6 +22,8 @@ public class ChatButton : MonoBehaviour
 		notificationIcon.SetActive (anz > 0);
 		notificationText.text = anz.ToString();
 	}
+
+	public void IsSelected(bool val) {isSelected = val;}
 
 	public void ShowChat (bool val)
 	{
@@ -43,7 +46,7 @@ public class ChatButton : MonoBehaviour
 		if (button.interactable != available)
 			button.interactable = available;
 
-		if (chat.gameObject.activeInHierarchy)
+		if (isSelected)
 			button.Select();
 
 		if (available && !chat.gameObject.activeInHierarchy)
