@@ -8255,6 +8255,10 @@ PrefabInstance:
       propertyPath: img
       value: 
       objectReference: {fileID: 8887352609928016420}
+    - target: {fileID: 8493677151923273970, guid: c5c13dec66008bb428826608ea54e1ee, type: 3}
+      propertyPath: m_TagString
+      value: Night
+      objectReference: {fileID: 0}
     - target: {fileID: 9073308653675637984, guid: c5c13dec66008bb428826608ea54e1ee, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 

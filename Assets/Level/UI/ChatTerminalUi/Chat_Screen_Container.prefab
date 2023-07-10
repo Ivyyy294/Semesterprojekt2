@@ -4221,6 +4221,20 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 6937339527886923913}
     m_Modifications:
+    - target: {fileID: 90690438726340277, guid: e96d3a039ee5ca9418cbd6ce65369eb2, type: 3}
+      propertyPath: m_text
+      value: best friends in childhood
+      objectReference: {fileID: 0}
+    - target: {fileID: 841214924102305115, guid: e96d3a039ee5ca9418cbd6ce65369eb2, type: 3}
+      propertyPath: m_text
+      value: Hermia
+      objectReference: {fileID: 0}
+    - target: {fileID: 1382101923531217664, guid: e96d3a039ee5ca9418cbd6ce65369eb2, type: 3}
+      propertyPath: m_text
+      value: 'Demetrius
+
+'
+      objectReference: {fileID: 0}
     - target: {fileID: 1511880150094470246, guid: e96d3a039ee5ca9418cbd6ce65369eb2, type: 3}
       propertyPath: m_IsActive
       value: 0
@@ -4258,6 +4272,38 @@ PrefabInstance:
       propertyPath: m_text
       value: 24
       objectReference: {fileID: 0}
+    - target: {fileID: 3875464561763316460, guid: e96d3a039ee5ca9418cbd6ce65369eb2, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3875464561763316460, guid: e96d3a039ee5ca9418cbd6ce65369eb2, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3875464561763316460, guid: e96d3a039ee5ca9418cbd6ce65369eb2, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 123.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3875464561763316460, guid: e96d3a039ee5ca9418cbd6ce65369eb2, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -55
+      objectReference: {fileID: 0}
+    - target: {fileID: 3903794216609130027, guid: e96d3a039ee5ca9418cbd6ce65369eb2, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3903794216609130027, guid: e96d3a039ee5ca9418cbd6ce65369eb2, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3903794216609130027, guid: e96d3a039ee5ca9418cbd6ce65369eb2, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 123.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3903794216609130027, guid: e96d3a039ee5ca9418cbd6ce65369eb2, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -87
+      objectReference: {fileID: 0}
     - target: {fileID: 5204747510717072537, guid: e96d3a039ee5ca9418cbd6ce65369eb2, type: 3}
       propertyPath: m_Sprite
       value: 
@@ -4274,25 +4320,17 @@ PrefabInstance:
       propertyPath: m_Color.r
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 5766153770382020294, guid: e96d3a039ee5ca9418cbd6ce65369eb2, type: 3}
+      propertyPath: m_text
+      value: ex-boyfriend / good friends
+      objectReference: {fileID: 0}
     - target: {fileID: 5769245777149156675, guid: e96d3a039ee5ca9418cbd6ce65369eb2, type: 3}
       propertyPath: m_text
-      value: 'Lysander
-
-
-        Hermia
-
-
-        Demetrius'
+      value: Lysander
       objectReference: {fileID: 0}
     - target: {fileID: 6052513306028927257, guid: e96d3a039ee5ca9418cbd6ce65369eb2, type: 3}
       propertyPath: m_text
-      value: 'x
-
-
-        x
-
-
-        x'
+      value: good friends through family buisness
       objectReference: {fileID: 0}
     - target: {fileID: 6771733537438223760, guid: e96d3a039ee5ca9418cbd6ce65369eb2, type: 3}
       propertyPath: m_IsActive
@@ -4385,6 +4423,22 @@ PrefabInstance:
     - target: {fileID: 8120375777671783128, guid: e96d3a039ee5ca9418cbd6ce65369eb2, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8923231391551579793, guid: e96d3a039ee5ca9418cbd6ce65369eb2, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8923231391551579793, guid: e96d3a039ee5ca9418cbd6ce65369eb2, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8923231391551579793, guid: e96d3a039ee5ca9418cbd6ce65369eb2, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 123.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8923231391551579793, guid: e96d3a039ee5ca9418cbd6ce65369eb2, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -119
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e96d3a039ee5ca9418cbd6ce65369eb2, type: 3}
