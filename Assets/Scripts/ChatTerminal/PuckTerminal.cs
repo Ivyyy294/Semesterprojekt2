@@ -33,7 +33,8 @@ public class PuckTerminal : MonoBehaviour
 
 	public void ShowAboutPage()
 	{
-		if (currentIndex != -1)
+		//Dont show About for Puck
+		if (currentIndex != -1 && currentIndex != 3)
 		{
 			aboutObjList[currentIndex].SetActive(true);
 			buttonObjList[currentIndex].ShowChat (false);

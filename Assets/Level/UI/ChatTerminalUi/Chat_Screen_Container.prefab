@@ -1781,7 +1781,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 273500147839785947, guid: 682409253ecf4fb4fb03ae738519a88a, type: 3}
       propertyPath: m_Name
-      value: Chat_Helena
+      value: Chat_Puck
       objectReference: {fileID: 0}
     - target: {fileID: 273500147839785947, guid: 682409253ecf4fb4fb03ae738519a88a, type: 3}
       propertyPath: m_Layer
@@ -1907,6 +1907,10 @@ PrefabInstance:
       propertyPath: messagePlayerTemplate
       value: 
       objectReference: {fileID: 7577303488300203282, guid: 9589fbed519bcdb4abae3fde6c713d30, type: 3}
+    - target: {fileID: 5089038799910411011, guid: 682409253ecf4fb4fb03ae738519a88a, type: 3}
+      propertyPath: npcNodeState.msgPrefab
+      value: 
+      objectReference: {fileID: 1075436441059836512, guid: 48fd1056fe598c1429b4b43f4a40df0f, type: 3}
     - target: {fileID: 5374607403448132863, guid: 682409253ecf4fb4fb03ae738519a88a, type: 3}
       propertyPath: m_Layer
       value: 6
@@ -2997,6 +3001,10 @@ PrefabInstance:
       propertyPath: messagePlayerTemplate
       value: 
       objectReference: {fileID: 7577303488300203282, guid: 9589fbed519bcdb4abae3fde6c713d30, type: 3}
+    - target: {fileID: 5089038799910411011, guid: 682409253ecf4fb4fb03ae738519a88a, type: 3}
+      propertyPath: npcNodeState.msgPrefab
+      value: 
+      objectReference: {fileID: 1075436441059836512, guid: 04cef76d19ed36642ae534f4af90a9d7, type: 3}
     - target: {fileID: 5374607403448132863, guid: 682409253ecf4fb4fb03ae738519a88a, type: 3}
       propertyPath: m_Layer
       value: 6
@@ -3335,6 +3343,10 @@ PrefabInstance:
       propertyPath: messagePlayerTemplate
       value: 
       objectReference: {fileID: 7577303488300203282, guid: 9589fbed519bcdb4abae3fde6c713d30, type: 3}
+    - target: {fileID: 5089038799910411011, guid: 682409253ecf4fb4fb03ae738519a88a, type: 3}
+      propertyPath: npcNodeState.msgPrefab
+      value: 
+      objectReference: {fileID: 1075436441059836512, guid: 6c85666e41a26454c9d63636fa1b37f6, type: 3}
     - target: {fileID: 5374607403448132863, guid: 682409253ecf4fb4fb03ae738519a88a, type: 3}
       propertyPath: m_Layer
       value: 6
@@ -3392,9 +3404,49 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1688911549722093811, guid: e96d3a039ee5ca9418cbd6ce65369eb2, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3269718217500527515, guid: e96d3a039ee5ca9418cbd6ce65369eb2, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3287508334736476698, guid: e96d3a039ee5ca9418cbd6ce65369eb2, type: 3}
       propertyPath: m_text
       value: Hermia
+      objectReference: {fileID: 0}
+    - target: {fileID: 3441617744120906538, guid: e96d3a039ee5ca9418cbd6ce65369eb2, type: 3}
+      propertyPath: m_text
+      value: Australia
+      objectReference: {fileID: 0}
+    - target: {fileID: 3788983363293563429, guid: e96d3a039ee5ca9418cbd6ce65369eb2, type: 3}
+      propertyPath: m_text
+      value: 22
+      objectReference: {fileID: 0}
+    - target: {fileID: 5204747510717072537, guid: e96d3a039ee5ca9418cbd6ce65369eb2, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: e10e3e8dd732d9d4b817e818648a0ec7, type: 3}
+    - target: {fileID: 5204747510717072537, guid: e96d3a039ee5ca9418cbd6ce65369eb2, type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5204747510717072537, guid: e96d3a039ee5ca9418cbd6ce65369eb2, type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5204747510717072537, guid: e96d3a039ee5ca9418cbd6ce65369eb2, type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6771733537438223760, guid: e96d3a039ee5ca9418cbd6ce65369eb2, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7327860134895155326, guid: e96d3a039ee5ca9418cbd6ce65369eb2, type: 3}
+      propertyPath: m_text
+      value: F
       objectReference: {fileID: 0}
     - target: {fileID: 8120375777671783128, guid: e96d3a039ee5ca9418cbd6ce65369eb2, type: 3}
       propertyPath: m_Pivot.x
@@ -3610,6 +3662,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 6937339527886923913}
     m_Modifications:
+    - target: {fileID: 1511880150094470246, guid: e96d3a039ee5ca9418cbd6ce65369eb2, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1551807995891571525, guid: e96d3a039ee5ca9418cbd6ce65369eb2, type: 3}
       propertyPath: m_text
       value: "Lysander never felt like he fit into his family\u2019s company. He
@@ -3629,11 +3685,47 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1648873377759016051, guid: e96d3a039ee5ca9418cbd6ce65369eb2, type: 3}
       propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1688911549722093811, guid: e96d3a039ee5ca9418cbd6ce65369eb2, type: 3}
+      propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3287508334736476698, guid: e96d3a039ee5ca9418cbd6ce65369eb2, type: 3}
       propertyPath: m_text
       value: Lysander
+      objectReference: {fileID: 0}
+    - target: {fileID: 3441617744120906538, guid: e96d3a039ee5ca9418cbd6ce65369eb2, type: 3}
+      propertyPath: m_text
+      value: Japan
+      objectReference: {fileID: 0}
+    - target: {fileID: 3788983363293563429, guid: e96d3a039ee5ca9418cbd6ce65369eb2, type: 3}
+      propertyPath: m_text
+      value: 22
+      objectReference: {fileID: 0}
+    - target: {fileID: 5204747510717072537, guid: e96d3a039ee5ca9418cbd6ce65369eb2, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 6c8aa27aed073474299b7a06f8f03e46, type: 3}
+    - target: {fileID: 5204747510717072537, guid: e96d3a039ee5ca9418cbd6ce65369eb2, type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5204747510717072537, guid: e96d3a039ee5ca9418cbd6ce65369eb2, type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5204747510717072537, guid: e96d3a039ee5ca9418cbd6ce65369eb2, type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6771733537438223760, guid: e96d3a039ee5ca9418cbd6ce65369eb2, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7327860134895155326, guid: e96d3a039ee5ca9418cbd6ce65369eb2, type: 3}
+      propertyPath: m_text
+      value: M
       objectReference: {fileID: 0}
     - target: {fileID: 8120375777671783128, guid: e96d3a039ee5ca9418cbd6ce65369eb2, type: 3}
       propertyPath: m_Pivot.x
@@ -3733,6 +3825,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 6937339527886923913}
     m_Modifications:
+    - target: {fileID: 1511880150094470246, guid: e96d3a039ee5ca9418cbd6ce65369eb2, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1551807995891571525, guid: e96d3a039ee5ca9418cbd6ce65369eb2, type: 3}
       propertyPath: m_text
       value: "Demetrius was always someone who took his fate into his own hands.
@@ -3755,9 +3851,45 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1688911549722093811, guid: e96d3a039ee5ca9418cbd6ce65369eb2, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3269718217500527515, guid: e96d3a039ee5ca9418cbd6ce65369eb2, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3287508334736476698, guid: e96d3a039ee5ca9418cbd6ce65369eb2, type: 3}
       propertyPath: m_text
       value: Demetrius
+      objectReference: {fileID: 0}
+    - target: {fileID: 3441617744120906538, guid: e96d3a039ee5ca9418cbd6ce65369eb2, type: 3}
+      propertyPath: m_text
+      value: France
+      objectReference: {fileID: 0}
+    - target: {fileID: 3788983363293563429, guid: e96d3a039ee5ca9418cbd6ce65369eb2, type: 3}
+      propertyPath: m_text
+      value: 26
+      objectReference: {fileID: 0}
+    - target: {fileID: 5204747510717072537, guid: e96d3a039ee5ca9418cbd6ce65369eb2, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: ba111603f5f136b47b10237afc24070e, type: 3}
+    - target: {fileID: 5204747510717072537, guid: e96d3a039ee5ca9418cbd6ce65369eb2, type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5204747510717072537, guid: e96d3a039ee5ca9418cbd6ce65369eb2, type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5204747510717072537, guid: e96d3a039ee5ca9418cbd6ce65369eb2, type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7327860134895155326, guid: e96d3a039ee5ca9418cbd6ce65369eb2, type: 3}
+      propertyPath: m_text
+      value: M
       objectReference: {fileID: 0}
     - target: {fileID: 8120375777671783128, guid: e96d3a039ee5ca9418cbd6ce65369eb2, type: 3}
       propertyPath: m_Pivot.x
@@ -3857,6 +3989,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 6937339527886923913}
     m_Modifications:
+    - target: {fileID: 1511880150094470246, guid: e96d3a039ee5ca9418cbd6ce65369eb2, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1551807995891571525, guid: e96d3a039ee5ca9418cbd6ce65369eb2, type: 3}
       propertyPath: m_text
       value: "Born into a wealthy politician family, Helena\u2019s life was the opposite
@@ -3874,9 +4010,65 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3269718217500527515, guid: e96d3a039ee5ca9418cbd6ce65369eb2, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3287508334736476698, guid: e96d3a039ee5ca9418cbd6ce65369eb2, type: 3}
       propertyPath: m_text
       value: Helena
+      objectReference: {fileID: 0}
+    - target: {fileID: 3441617744120906538, guid: e96d3a039ee5ca9418cbd6ce65369eb2, type: 3}
+      propertyPath: m_text
+      value: India
+      objectReference: {fileID: 0}
+    - target: {fileID: 3788983363293563429, guid: e96d3a039ee5ca9418cbd6ce65369eb2, type: 3}
+      propertyPath: m_text
+      value: 24
+      objectReference: {fileID: 0}
+    - target: {fileID: 5204747510717072537, guid: e96d3a039ee5ca9418cbd6ce65369eb2, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: e404cfa046e5d3f4fbf00a15ce5402b5, type: 3}
+    - target: {fileID: 5204747510717072537, guid: e96d3a039ee5ca9418cbd6ce65369eb2, type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5204747510717072537, guid: e96d3a039ee5ca9418cbd6ce65369eb2, type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5204747510717072537, guid: e96d3a039ee5ca9418cbd6ce65369eb2, type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5769245777149156675, guid: e96d3a039ee5ca9418cbd6ce65369eb2, type: 3}
+      propertyPath: m_text
+      value: 'Lysander
+
+
+        Hermia
+
+
+        Demetrius'
+      objectReference: {fileID: 0}
+    - target: {fileID: 6052513306028927257, guid: e96d3a039ee5ca9418cbd6ce65369eb2, type: 3}
+      propertyPath: m_text
+      value: 'x
+
+
+        x
+
+
+        x'
+      objectReference: {fileID: 0}
+    - target: {fileID: 6771733537438223760, guid: e96d3a039ee5ca9418cbd6ce65369eb2, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7327860134895155326, guid: e96d3a039ee5ca9418cbd6ce65369eb2, type: 3}
+      propertyPath: m_text
+      value: F
       objectReference: {fileID: 0}
     - target: {fileID: 8120375777671783128, guid: e96d3a039ee5ca9418cbd6ce65369eb2, type: 3}
       propertyPath: m_Pivot.x

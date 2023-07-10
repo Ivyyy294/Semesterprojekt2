@@ -274,7 +274,6 @@ MonoBehaviour:
   closeEvent: {fileID: 11400000, guid: 7829666ef44af2a4588008d9cc30d898, type: 2}
   settingsEvent: {fileID: 11400000, guid: 95f3ac4f80c962943bc010a45dcad792, type: 2}
   loginScreen: {fileID: 8760920538416114211}
-  chatScreen: {fileID: 3334679440050363336}
   buttonContainer: {fileID: 6085631417229248679}
   chatContainer: {fileID: 6601941161537598293}
   buttonObjList:
@@ -734,11 +733,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 92367ff93fe6fd747a7cdf305abfe10f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!1 &3334679440050363336 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 7273221757274980605, guid: ab32cb3c5ba8a2343a152cc3c7c592b8, type: 3}
-  m_PrefabInstance: {fileID: 5379697017629219637}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &3770952935742020312 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 9150637523500401133, guid: ab32cb3c5ba8a2343a152cc3c7c592b8, type: 3}
