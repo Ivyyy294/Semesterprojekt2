@@ -17,7 +17,8 @@ public class AudioPlayer : MonoBehaviour
 		if (!audioSource.isPlaying)
 		{
 			audioAsset?.Play(audioSource);
-			baseVolume = audioSource.volume;
+			audioSource.volume = baseVolume;
+			fadeOut = false;
 		}
 	}
 
@@ -50,6 +51,7 @@ public class AudioPlayer : MonoBehaviour
 	private void Start()
 	{
 		audioSource = gameObject.AddComponent (typeof (AudioSource)) as AudioSource;
+		baseVolume = audioSource.volume;
 		audioSource.playOnAwake = false;
 		audioSource.Stop();
 

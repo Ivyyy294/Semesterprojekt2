@@ -23,6 +23,7 @@ public class CutSceneEvent : MonoBehaviour
 	{
 		currentIndex = 0;
 		timer = 0f;
+		videoPlayer.targetTexture.Release();
 		videoPlayer.Play();
 		Cursor.lockState = CursorLockMode.Locked;
 	}

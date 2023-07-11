@@ -17,7 +17,7 @@ MonoBehaviour:
     subtitle: Suite No. 3 in D Major
   playStyle: 0
   audioTyp: 1
-  loop: 0
+  loop: 1
   volume: {x: 0.5, y: 0.5}
   pitch: {x: 1, y: 1}
   spatial: 0
