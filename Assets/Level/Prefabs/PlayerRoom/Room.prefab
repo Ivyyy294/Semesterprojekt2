@@ -8532,6 +8532,70 @@ PrefabInstance:
       propertyPath: creditEvent
       value: 
       objectReference: {fileID: 11400000, guid: adc27c0f6f18f3a4eb6aeb8a6b82e111, type: 2}
+    - target: {fileID: 3018820768982587219, guid: 9af4ae5ec8d373047809bf6e727e4809, type: 3}
+      propertyPath: m_VideoClip
+      value: 
+      objectReference: {fileID: 32900000, guid: e60d1f97e9913c44894b7234439f7f19, type: 3}
+    - target: {fileID: 3018820768982587219, guid: 9af4ae5ec8d373047809bf6e727e4809, type: 3}
+      propertyPath: m_ControlledAudioTrackCount
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3018820768982587219, guid: 9af4ae5ec8d373047809bf6e727e4809, type: 3}
+      propertyPath: m_DirectAudioMutes.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3018820768982587219, guid: 9af4ae5ec8d373047809bf6e727e4809, type: 3}
+      propertyPath: m_DirectAudioVolumes.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3018820768982587219, guid: 9af4ae5ec8d373047809bf6e727e4809, type: 3}
+      propertyPath: m_EnabledAudioTracks.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3018820768982587219, guid: 9af4ae5ec8d373047809bf6e727e4809, type: 3}
+      propertyPath: m_TargetAudioSources.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3018820768982587219, guid: 9af4ae5ec8d373047809bf6e727e4809, type: 3}
+      propertyPath: m_DirectAudioVolumes.Array.data[0]
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3018820768982587219, guid: 9af4ae5ec8d373047809bf6e727e4809, type: 3}
+      propertyPath: m_EnabledAudioTracks.Array.data[0]
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6056966494659582933, guid: 9af4ae5ec8d373047809bf6e727e4809, type: 3}
+      propertyPath: m_VideoClip
+      value: 
+      objectReference: {fileID: 32900000, guid: c0c71accbbd5e2142ac1c4e849eb250f, type: 3}
+    - target: {fileID: 6056966494659582933, guid: 9af4ae5ec8d373047809bf6e727e4809, type: 3}
+      propertyPath: m_ControlledAudioTrackCount
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6056966494659582933, guid: 9af4ae5ec8d373047809bf6e727e4809, type: 3}
+      propertyPath: m_DirectAudioMutes.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6056966494659582933, guid: 9af4ae5ec8d373047809bf6e727e4809, type: 3}
+      propertyPath: m_DirectAudioVolumes.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6056966494659582933, guid: 9af4ae5ec8d373047809bf6e727e4809, type: 3}
+      propertyPath: m_EnabledAudioTracks.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6056966494659582933, guid: 9af4ae5ec8d373047809bf6e727e4809, type: 3}
+      propertyPath: m_TargetAudioSources.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6056966494659582933, guid: 9af4ae5ec8d373047809bf6e727e4809, type: 3}
+      propertyPath: m_DirectAudioVolumes.Array.data[0]
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6056966494659582933, guid: 9af4ae5ec8d373047809bf6e727e4809, type: 3}
+      propertyPath: m_EnabledAudioTracks.Array.data[0]
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6711429182734714325, guid: 9af4ae5ec8d373047809bf6e727e4809, type: 3}
       propertyPath: m_RootOrder
       value: 3
