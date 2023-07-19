@@ -6,19 +6,48 @@ using TMPro;
 public class PasswordScreen : MonoBehaviour
 {
 	[SerializeField] string password;
-	[SerializeField] float enterTime;
 	[SerializeField] AudioAsset audioAssetClick;
 	[SerializeField] AudioAsset audioAssetAcessDenied;
-	[SerializeField] GameObject chatScreen;
-	[SerializeField] GameObject img;
-	[SerializeField] GameObject parent;
-	[SerializeField] TextMeshProUGUI textObj;
+	
+	[Header ("Enter Animation")]
+	[SerializeField] float enterTime;
 
+	[Header ("Passwort clue")]
+	[SerializeField] GameObject puck;
+	[SerializeField] int attempts;
+
+	[Header ("Lara values")]
+	[SerializeField] GameObject chatScreen;
+	[SerializeField] GameObject parent;
+	[SerializeField] TMP_InputField inputField;
+
+	int wrongPasswordCounter;
 	float timer = 0f;
 	bool passwordAvailable = true;
-	bool playAnimation = false;
-	bool firstTime = true;
-	
+
+	public void CheckPassword()
+	{
+		if (inputField.text == password)
+		{
+			passwordAvailable = true;
+			inputField.text = "";
+			ShowTerminal();
+		}
+		else if (!passwordAvailable)
+		{
+			audioAssetAcessDenied.PlayAtPos (Camera.main.transform.position);
+			inputField.text = "";
+			++wrongPasswordCounter;
+		}
+	}
+
+	void ShowTerminal()
+	{
+		audioAssetClick.Play();
+		chatScreen.SetActive(true);
+		parent.SetActive(false);
+	}
+
 	public void SetPasswordAvailable(bool val)
 	{
 		passwordAvailable = val;
@@ -27,50 +56,31 @@ public class PasswordScreen : MonoBehaviour
 	private void OnEnable()
 	{
 		timer = 0f;
-		chatScreen.SetActive (false);
-
-		if (passwordAvailable && !firstTime)
-			StartAnimation();
-		else
-			img.SetActive(false);
-	}
-
-	public void Interact()
-	{
-		if (!passwordAvailable)
-			audioAssetAcessDenied.Play();
-		else if (firstTime)
-			StartAnimation();
-	}
-
-	private void StartAnimation()
-	{
-		textObj.text = "";
-		playAnimation = true;
-		img.SetActive (true);
+		chatScreen.SetActive(false);
+		inputField.readOnly = passwordAvailable;
+		inputField.text = "";
 	}
 
 	private void Update()
 	{
-		if (playAnimation)
+		if (passwordAvailable)
 		{
-			if (firstTime)
-				firstTime = false;
-
 			if (timer <= enterTime)
 			{
 				float timePerChar = enterTime / password.Length;
-				int index = (int) (timer / timePerChar);
-				textObj.text = password.Substring (0, index);
+				int index = (int)(timer / timePerChar);
+				string tmpPassword = "";
+
+				for (int i = 0; i < index + 1; ++i)
+					tmpPassword += "*";
+
+				inputField.text = tmpPassword;
 				timer += Time.deltaTime;
 			}
 			else
-			{
-				playAnimation = false;
-				audioAssetClick.Play();
-				chatScreen.SetActive(true);
-				parent.SetActive(false);
-			}
+				ShowTerminal();
 		}
+
+		puck.SetActive (!passwordAvailable && wrongPasswordCounter >= attempts);
 	}
 }

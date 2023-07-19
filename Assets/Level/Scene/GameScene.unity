@@ -1468,6 +1468,10 @@ PrefabInstance:
       propertyPath: m_AnchorMin.y
       value: 0.16565235
       objectReference: {fileID: 0}
+    - target: {fileID: 4614142052520522605, guid: ae46210e68ea0974fb795edade1a5d7a, type: 3}
+      propertyPath: password
+      value: chilisincarne
+      objectReference: {fileID: 0}
     - target: {fileID: 6004618870404990885, guid: ae46210e68ea0974fb795edade1a5d7a, type: 3}
       propertyPath: dialogList.Array.data[1].available
       value: 0
