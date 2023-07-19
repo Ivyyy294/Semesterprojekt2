@@ -61,6 +61,11 @@ public class PasswordScreen : MonoBehaviour
 		inputField.text = "";
 	}
 
+	private void OnDisable()
+	{
+		puck.SetActive (!passwordAvailable && wrongPasswordCounter >= attempts);
+	}
+
 	private void Update()
 	{
 		if (passwordAvailable)
