@@ -18,8 +18,8 @@ MonoBehaviour:
   playStyle: 0
   audioTyp: 0
   loop: 0
-  volume: {x: 0.24546722, y: 0.24546722}
-  pitch: {x: 0.8953975, y: 0.8953975}
+  volume: {x: 0.09948182, y: 0.09948182}
+  pitch: {x: 1.0048865, y: 1.0048865}
   spatial: 0
   minDistance: 0.5
   maxDistance: 500

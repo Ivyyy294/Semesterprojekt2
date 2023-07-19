@@ -366,6 +366,7 @@ public class Room : PushdownAutomata
 		[SerializeField] float delayTxt3;
 		[SerializeField] AudioAsset audioAsset;
 		[SerializeField] float delayTotal;
+		[SerializeField] float endingBuffer;
 		float timer;
 
 		public override void Enter(GameObject obj)
@@ -394,7 +395,10 @@ public class Room : PushdownAutomata
 				txt3.SetActive(true);
 			}
 
-			if (timer >= delayTotal)
+			if (timer > delayTotal)
+				IntroObj.gameObject.SetActive (false);
+
+			if (timer >= delayTotal + endingBuffer)
 				room.SwapState(room.wakeUpCryo);
 			
 			timer += Time.deltaTime;
@@ -436,11 +440,7 @@ public class Room : PushdownAutomata
 			Puck.SetEmotion(Puck.Emotion.HAPPY);
 			
 			//Disables Intro for Testing
-			#if UNITY_EDITOR
-				room.PushState (room.wakeUpCryo);
-			#else
-				room.PushState(room.puckIntroState);
-			#endif
+			room.PushState(room.puckIntroState);
 
 			terminalUI.SetPasswordAvailable (false);
 			terminalUI.SetChatVisible (3, false);
