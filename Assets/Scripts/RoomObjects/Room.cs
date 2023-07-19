@@ -122,6 +122,7 @@ public class Room : PushdownAutomata
 	[System.Serializable]
 	public class FadeIceState : BaseFadeState
 	{
+		[SerializeField] AudioAsset audioIce;
 		[SerializeField] protected Image image;
 		float timer;
 
@@ -131,6 +132,7 @@ public class Room : PushdownAutomata
 			timer = 0f;
 			image.gameObject.SetActive(true);
 			ChangeImgAlpha (image, animationCurve.Evaluate(timer));
+			audioIce?.Play();
 		}
 
 		public override void Update(GameObject obj)

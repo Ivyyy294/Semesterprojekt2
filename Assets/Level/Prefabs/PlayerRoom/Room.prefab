@@ -6720,6 +6720,7 @@ MonoBehaviour:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
+    audioIce: {fileID: 11400000, guid: e4807cc5b0f91b34f84362a505c2dcdd, type: 2}
     image: {fileID: 1225174499826938730}
   fadeOutIceState:
     animationCurve:
@@ -6746,6 +6747,7 @@ MonoBehaviour:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
+    audioIce: {fileID: 11400000, guid: e4807cc5b0f91b34f84362a505c2dcdd, type: 2}
     image: {fileID: 1225174499826938730}
   wakeUpCryo:
     PlayerSpawnPos: {fileID: 5523221964214666887}
