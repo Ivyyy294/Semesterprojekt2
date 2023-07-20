@@ -267,7 +267,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_SizeDelta: {x: 2, y: 2}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &4780430645127444500
 CanvasRenderer:
@@ -319,7 +319,6 @@ GameObject:
   - component: {fileID: 4780430645155774238}
   - component: {fileID: 4780430645155774239}
   - component: {fileID: 4780430645155774236}
-  - component: {fileID: 4780430645155774224}
   - component: {fileID: 296473294377864775}
   m_Layer: 5
   m_Name: Credits_UI
@@ -410,26 +409,6 @@ MonoBehaviour:
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 4294967295
---- !u!95 &4780430645155774224
-Animator:
-  serializedVersion: 4
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4780430645155774237}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 496b7698684afd541b56981d75ee1225, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!114 &296473294377864775
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -442,6 +421,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: befed0898499945468a2ba10d3972140, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  rectTransform: {fileID: 4780430646519140028}
+  offset: {x: 0, y: -6080}
+  speed: 16
   menuEvent: {fileID: 11400000, guid: edc833ab6630c9b43bbf56dfb180dfbf, type: 2}
 --- !u!1 &4780430645367119523
 GameObject:

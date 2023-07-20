@@ -28,6 +28,7 @@ public class PauseMenu : MonoBehaviour
 
 	public void OnMenu()
 	{
+		Time.timeScale = 1f;
 		loadMenu?.Raise();
 	}
 
