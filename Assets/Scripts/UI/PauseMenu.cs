@@ -8,19 +8,22 @@ using Ivyyy.SaveGameSystem;
 public class PauseMenu : MonoBehaviour
 {
 	[Header ("Lara Values")]
-	[SerializeField] GameEvent showSettings;
+	[SerializeField] GameObject settings;
 	[SerializeField] GameEvent closeEvent;
 	[SerializeField] GameEvent loadMenu;
 	[SerializeField] GameEvent closeGame;
 
 	public void OnSettings()
 	{
-		showSettings?.Raise();
+		settings.SetActive(true);
 	}
 
 	public void OnContinue()
 	{
-		closeEvent?.Raise();
+		settings.SetActive(false);
+		Cursor.lockState = CursorLockMode.Locked;
+		Time.timeScale = 1f;
+		gameObject.SetActive(false);
 	}
 
 	public void OnMenu()
@@ -37,12 +40,6 @@ public class PauseMenu : MonoBehaviour
 	{
 		Time.timeScale = 0f;
 		Cursor.lockState = CursorLockMode.Confined;
-	}
-
-	private void OnDisable()
-	{
-		Time.timeScale = 1f;
-		Cursor.lockState = CursorLockMode.Locked;
 	}
 
 	private void Update()

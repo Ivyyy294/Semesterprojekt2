@@ -1740,7 +1740,10 @@ PrefabInstance:
       propertyPath: uniqueId
       value: a6740b8a-c65f-47d9-88ea-91b5a1d94550
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 6798909482242033742, guid: ae46210e68ea0974fb795edade1a5d7a, type: 3}
+    - {fileID: 4214543498305052487, guid: ae46210e68ea0974fb795edade1a5d7a, type: 3}
+    - {fileID: 8333726890100300083, guid: ae46210e68ea0974fb795edade1a5d7a, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: ae46210e68ea0974fb795edade1a5d7a, type: 3}
 --- !u!114 &1267065489 stripped
 MonoBehaviour:
