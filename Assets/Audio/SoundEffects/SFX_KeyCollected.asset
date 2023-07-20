@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   clipData:
   - clip: {fileID: 8300000, guid: ed443e3a78fbcc5439d2009f23462b40, type: 3}
-    subtitle: Passwort collected
+    subtitle: Password collected
   playStyle: 0
   audioTyp: 0
   loop: 0

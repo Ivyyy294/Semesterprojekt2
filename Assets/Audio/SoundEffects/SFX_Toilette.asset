@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   clipData:
   - clip: {fileID: 8300000, guid: 519231af8d474eb42aa36f5a33caa0b2, type: 3}
-    subtitle: Toilette
+    subtitle: Toilet
   playStyle: 0
   audioTyp: 0
   loop: 0
