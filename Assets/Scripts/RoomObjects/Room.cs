@@ -368,6 +368,7 @@ public class Room : PushdownAutomata
 		[SerializeField] float delayTotal;
 		[SerializeField] float endingBuffer;
 		float timer;
+		AudioSource audioSource;
 
 		public override void Enter(GameObject obj)
 		{
@@ -378,7 +379,7 @@ public class Room : PushdownAutomata
 			blackScreen.SetActive(true);
 			ice.SetActive (true);
 			txt1.SetActive (true);
-			audioAsset?.Play();
+			audioSource = audioAsset?.Play();
 		}
 
 		public override void Update(GameObject obj)
@@ -398,9 +399,16 @@ public class Room : PushdownAutomata
 			if (timer > delayTotal)
 				IntroObj.gameObject.SetActive (false);
 
-			if (timer >= delayTotal + endingBuffer || Input.GetKeyDown(KeyCode.Escape))
+			if (timer >= delayTotal + endingBuffer)
 				room.SwapState(room.wakeUpCryo);
 			
+			if (Input.GetKeyDown(KeyCode.Escape))
+			{
+				audioSource.Stop();
+				Subtitle.Clear();
+				room.SwapState(room.wakeUpCryo);
+			}
+
 			timer += Time.deltaTime;
 		}
 

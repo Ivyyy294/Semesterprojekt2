@@ -51,6 +51,7 @@ public class CutSceneEvent : MonoBehaviour
 	void Done()
 	{
 		videoPlayer.Stop();
+		Subtitle.Clear();
 		creditEvent.Raise();
 	}
 }

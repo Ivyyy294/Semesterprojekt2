@@ -18,6 +18,11 @@ public class Subtitle : MonoBehaviour
 	[SerializeField] TextMeshProUGUI textObj;
 	private SubtitleData dataQueue;
 
+	public static void Clear()
+	{
+		me.dataQueue = null;
+	}
+
 	public static void Add (string text, float _displayTime = 0.5f, int priority = 0)
 	{
 		if (me != null)
