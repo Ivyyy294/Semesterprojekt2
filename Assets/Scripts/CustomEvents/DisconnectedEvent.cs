@@ -11,12 +11,12 @@ public class DisconnectedEvent : MonoBehaviour
 	[SerializeField] GameEvent eventCredits;
 	[SerializeField] Image img;
 	[SerializeField] AudioAsset audioAsset;
+	[SerializeField] GameObject terminalUi;
 	float timer = 0f;
 
 	private void OnEnable()
 	{
 		timer = 0f;
-		img.gameObject.SetActive(true);
 		audioAsset.PlayAtPos(transform.position);
 		Player.Me().BlockInteractions (true, "Disconnected");
 	}
@@ -24,15 +24,20 @@ public class DisconnectedEvent : MonoBehaviour
 	// Update is called once per frame
 	void Update()
     {
-		if (timer <= fadeTime)
+		if (!terminalUi.activeInHierarchy)
 		{
-			ChangeAlpha (timer / fadeTime);
-			timer += Time.deltaTime;
-		}
-		else
-		{
-			eventCredits?.Raise();
-			gameObject.SetActive(false);
+			img.gameObject.SetActive(true);
+
+			if (timer <= fadeTime)
+			{
+				ChangeAlpha (timer / fadeTime);
+				timer += Time.deltaTime;
+			}
+			else
+			{
+				eventCredits?.Raise();
+				gameObject.SetActive(false);
+			}
 		}
     }
 

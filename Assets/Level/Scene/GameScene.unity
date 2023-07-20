@@ -955,6 +955,14 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 8005235130843293810, guid: cbc17c2b942c75242850f0bbb7667649, type: 3}
+      propertyPath: fadeTime
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 8005235130843293810, guid: cbc17c2b942c75242850f0bbb7667649, type: 3}
+      propertyPath: terminalUi
+      value: 
+      objectReference: {fileID: 1375707209}
     - target: {fileID: 8034031482252708542, guid: cbc17c2b942c75242850f0bbb7667649, type: 3}
       propertyPath: letter
       value: 
@@ -1838,6 +1846,11 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1375707209 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2869877031089535341, guid: ae46210e68ea0974fb795edade1a5d7a, type: 3}
+  m_PrefabInstance: {fileID: 1267065488}
+  m_PrefabAsset: {fileID: 0}
 --- !u!114 &1377420902 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 4793543703543644874, guid: bcecf68e23d4cfb43bdb02c73daaa06f, type: 3}
@@ -2024,7 +2037,7 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 6004618870404990885, guid: ae46210e68ea0974fb795edade1a5d7a, type: 3}
   m_PrefabInstance: {fileID: 1267065488}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 1375707209}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 00b3cce10fb5d434ebc2973785e8be3f, type: 3}
