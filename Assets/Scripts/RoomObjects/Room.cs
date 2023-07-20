@@ -398,7 +398,7 @@ public class Room : PushdownAutomata
 			if (timer > delayTotal)
 				IntroObj.gameObject.SetActive (false);
 
-			if (timer >= delayTotal + endingBuffer)
+			if (timer >= delayTotal + endingBuffer || Input.GetKeyDown(KeyCode.Escape))
 				room.SwapState(room.wakeUpCryo);
 			
 			timer += Time.deltaTime;

@@ -11,4 +11,10 @@ public class Credits : MonoBehaviour
 	{
 		menuEvent?.Raise();
 	}
+
+	private void Update()
+	{
+		if (Input.GetKeyDown(KeyCode.Escape))
+			ShowMenu();
+	}
 }

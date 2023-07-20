@@ -31,6 +31,9 @@ public class CutSceneEvent : MonoBehaviour
 	// Update is called once per frame
 	void Update()
     {
+		if (Input.GetKeyDown(KeyCode.Escape))
+			Done();
+
 		if (timer < videoPlayer.length)
 		{
 			if (currentIndex < subtitles.Length)
@@ -42,10 +45,12 @@ public class CutSceneEvent : MonoBehaviour
 			timer += Time.deltaTime;
 		}
 		else if (!videoPlayer.isPlaying)
-		{
-			creditEvent.Raise();
-			videoPlayer.Stop();
-			//gameObject.SetActive (false);
-		}
+			Done();
     }
+
+	void Done()
+	{
+		videoPlayer.Stop();
+		creditEvent.Raise();
+	}
 }
